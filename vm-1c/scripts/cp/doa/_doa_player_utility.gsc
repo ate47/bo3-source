@@ -1,26 +1,26 @@
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_fate;
-#using scripts/cp/doa/_doa_tesla_pickup;
-#using scripts/cp/doa/_doa_turret_pickup;
-#using scripts/cp/doa/_doa_shield_pickup;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_utility;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/gametypes/_globallogic_score;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 #using scripts/cp/_util;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_fate;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_shield_pickup;
+#using scripts/cp/doa/_doa_tesla_pickup;
+#using scripts/cp/doa/_doa_turret_pickup;
+#using scripts/cp/doa/_doa_utility;
+#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_831a4a7c;
 
@@ -446,7 +446,7 @@ function function_e6711e4e(player, var_c1ff53d9, thresh) {
     self thread function_ab9cf24b(player);
     self.player = player;
     while (isdefined(player)) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (!isdefined(guy)) {
             continue;
         }
@@ -574,7 +574,7 @@ function function_1a86a494(bonusroom) {
         }
     } else if (self.doa.fate == 11) {
         if (!bonusroom && !isdefined(self.doa.var_3df27425)) {
-            self thread namespace_6df66aa5::magnet_update(10);
+            self thread namespace_6df66aa5::function_2016b381(10);
         }
     } else if (self.doa.fate == 10) {
         if (self.doa.bombs < 1) {
@@ -827,7 +827,7 @@ function function_6e1ed82() {
 function function_a36ffe73() {
     self notify(#"hash_a36ffe73");
     self endon(#"hash_a36ffe73");
-    attacker = self waittill(#"hash_89b28ec");
+    self waittill(#"hash_89b28ec", attacker);
     self thread function_6e1ed82();
     self thread function_3840375a(0);
     self thread function_a36ffe73();
@@ -840,7 +840,7 @@ function function_a36ffe73() {
 function function_d7c57981() {
     self notify(#"hash_d7c57981");
     self endon(#"hash_d7c57981");
-    attacker = self waittill(#"hash_9132a424");
+    self waittill(#"hash_9132a424", attacker);
     self thread function_3840375a();
     self thread function_d7c57981();
 }
@@ -864,7 +864,7 @@ function function_e5fa8e6a() {
 function function_e6b2517f() {
     self notify(#"hash_e6b2517f");
     self endon(#"hash_e6b2517f");
-    attacker = self waittill(#"poisoned");
+    self waittill(#"poisoned", attacker);
     self thread function_e5fa8e6a();
     self thread function_e6b2517f();
 }
@@ -970,7 +970,7 @@ function function_7d7a7fde() {
 // Checksum 0xbb818606, Offset: 0x4198
 // Size: 0x4c
 function private function_9fc6e261() {
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     wait 0.05;
     if (isdefined(corpse)) {
         corpse clientfield::increment("burnCorpse");
@@ -1111,8 +1111,8 @@ function function_4eabae51() {
             self.doa.var_f30b49ec = 1;
             if (isdefined(self.doa.bombs) && self.doa.bombs > 0) {
                 self.doa.bombs--;
-                var_fade182d = self.origin;
-                origin = var_fade182d + (20, 0, 800);
+                player_org = self.origin;
+                origin = player_org + (20, 0, 800);
                 self clientfield::set("bombDrop", 1);
                 self thread turnplayershieldon();
                 namespace_49107f3a::clearallcorpses();
@@ -1122,7 +1122,7 @@ function function_4eabae51() {
                 level notify(#"hash_8817f58");
                 enemies = namespace_49107f3a::function_fb2ad2fb();
                 camerapos = namespace_3ca3c537::function_5147636f();
-                updir = vectornormalize(camerapos - var_fade182d);
+                updir = vectornormalize(camerapos - player_org);
                 var_adc420e5 = 0.3;
                 foreach (guy in enemies) {
                     if (isdefined(guy)) {
@@ -1131,9 +1131,9 @@ function function_4eabae51() {
                             continue;
                         }
                         if (isvehicle(guy)) {
-                            guy dodamage(guy.health + 1, var_fade182d, self, self, "none", "MOD_EXPLOSIVE", 0, getweapon("none"));
+                            guy dodamage(guy.health + 1, player_org, self, self, "none", "MOD_EXPLOSIVE", 0, getweapon("none"));
                         }
-                        guy thread function_d392db04(var_adc420e5, var_fade182d, self, updir);
+                        guy thread function_d392db04(var_adc420e5, player_org, self, updir);
                     }
                 }
                 foreach (hazard in level.doa.var_7817fe3c) {
@@ -1143,7 +1143,7 @@ function function_4eabae51() {
                 }
                 util::wait_network_frame();
                 self clientfield::set("bombDrop", 0);
-                physicsexplosionsphere(var_fade182d, 1024, 1024, 3);
+                physicsexplosionsphere(player_org, 1024, 1024, 3);
             }
         }
     }
@@ -1158,7 +1158,7 @@ function function_350f42fa(weaponpack) {
     self notify(#"hash_42ae3dd7");
     self endon(#"hash_42ae3dd7");
     while (true) {
-        projectile, weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", projectile, weapon);
         if (weapon == level.doa.var_e30c10ec) {
             projectile thread function_48b5439d(self);
             projectile thread function_62c5034a(self);
@@ -1179,7 +1179,7 @@ function function_62c5034a(owner) {
     owner endon(#"hash_42ae3dd7");
     owner endon(#"disconnect");
     while (true) {
-        pos, normal, ent, surface = self waittill(#"grenade_bounce");
+        self waittill(#"grenade_bounce", pos, normal, ent, surface);
         physicsexplosionsphere(pos, getdvarint("scr_doa_secondary_explo_rad", 64), getdvarint("scr_doa_secondary_explo_rad", 64), 3);
         radiusdamage(pos, getdvarint("scr_doa_secondary_explo_rad", 64), getdvarint("scr_doa_secondary_explo_dmg", 2000), getdvarint("scr_doa_secondary_explo_dmg", 2000), owner);
         playfx(level._effect["impact_raygun"], pos);
@@ -1197,7 +1197,7 @@ function function_48b5439d(owner) {
     owner endon(#"disconnect");
     owner.doa.var_cdd906a9 = 0;
     while (true) {
-        victim = owner waittill(#"hash_21f7a743");
+        owner waittill(#"hash_21f7a743", victim);
         time = gettime();
         if (owner.doa.var_cdd906a9 > time) {
             continue;
@@ -1212,7 +1212,7 @@ function function_48b5439d(owner) {
 // Checksum 0xe1658125, Offset: 0x4fc0
 // Size: 0x54
 function missile_logic(target) {
-    missile, weap = self waittill(#"missile_fire");
+    self waittill(#"missile_fire", missile, weap);
     if (isdefined(target)) {
         missile missile_settarget(target);
     }
@@ -1450,7 +1450,7 @@ function function_1318d1e4() {
     self notify(#"hash_1318d1e4");
     self endon(#"hash_1318d1e4");
     self endon(#"disconnect");
-    weapon = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", weapon);
     /#
         namespace_49107f3a::debugmsg("<dev string:xab>" + weapon.name);
     #/
@@ -1809,7 +1809,7 @@ function private function_ad1d5fcb(var_243f32c0) {
     self setplayercollision(1);
     self freezecontrols(0);
     self.dead = undefined;
-    self notify(#"hash_c274fd90");
+    self notify(#"player_respawned");
 }
 
 // Namespace namespace_831a4a7c
@@ -1818,7 +1818,7 @@ function private function_ad1d5fcb(var_243f32c0) {
 // Size: 0xc2
 function private function_bbdc9bc0() {
     self endon(#"disconnect");
-    self endon(#"hash_c274fd90");
+    self endon(#"player_respawned");
     level endon(#"doa_game_is_over");
     while (!level flag::get("doa_game_is_over")) {
         if (self.doa.lives > 0) {
@@ -1861,7 +1861,7 @@ function function_2b1d321f(player, downedplayer) {
     downedplayer endon(#"disconnect");
     player endon(#"disconnect");
     level endon(#"doa_game_is_over");
-    downedplayer endon(#"hash_c274fd90");
+    downedplayer endon(#"player_respawned");
     while (true) {
         wait 0.05;
         if (!isdefined(player.doa)) {
@@ -1917,7 +1917,7 @@ function function_2b1d321f(player, downedplayer) {
 function function_b1958e58() {
     self endon(#"disconnect");
     level endon(#"doa_game_is_over");
-    self endon(#"hash_c274fd90");
+    self endon(#"player_respawned");
     self thread function_285fe1ad();
     foreach (player in getplayers()) {
         if (player == self) {
@@ -1963,7 +1963,7 @@ function function_b1958e58() {
 function function_285fe1ad() {
     self endon(#"disconnect");
     level endon(#"doa_game_is_over");
-    self waittill(#"hash_c274fd90");
+    self waittill(#"player_respawned");
     if (mayspawnentity()) {
         self playsound("evt_revived_respawn");
     }
@@ -1976,7 +1976,7 @@ function function_285fe1ad() {
 function function_27202201() {
     self endon(#"disconnect");
     level endon(#"doa_game_is_over");
-    self endon(#"hash_c274fd90");
+    self endon(#"player_respawned");
     self.doa.respawning = 1;
     self.var_9ea856f6 = level.doa.rules.var_575e919f;
     if (self.doa.fate == 2 || self.doa.fate == 11) {

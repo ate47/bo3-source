@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace ball;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace ball
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10de5810, Offset: 0x408
 // Size: 0x2ba
 function __init__() {
@@ -38,7 +38,7 @@ function __init__() {
 }
 
 // Namespace ball
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xff2f5b2f, Offset: 0x6d0
 // Size: 0x17c
 function on_localclient_connect(localclientnum) {
@@ -57,7 +57,7 @@ function on_localclient_connect(localclientnum) {
 }
 
 // Namespace ball
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x86417dcc, Offset: 0x858
 // Size: 0xe2
 function on_player_spawned(localclientnum) {
@@ -70,7 +70,7 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace ball
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3da0fb73, Offset: 0x948
 // Size: 0xc0
 function function_b22de10a(localclientnum, goal) {
@@ -83,7 +83,7 @@ function function_b22de10a(localclientnum, goal) {
 }
 
 // Namespace ball
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xca107740, Offset: 0xa10
 // Size: 0xc4
 function function_2182aedf(localclientnum, goal, effects) {
@@ -95,7 +95,7 @@ function function_2182aedf(localclientnum, goal, effects) {
 }
 
 // Namespace ball
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x95b9d2e1, Offset: 0xae0
 // Size: 0xd4
 function function_45876c81(localclientnum) {
@@ -108,7 +108,7 @@ function function_45876c81(localclientnum) {
 }
 
 // Namespace ball
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x509a5365, Offset: 0xbc0
 // Size: 0xbc
 function function_ea2fff95(localclientnum, goal) {
@@ -120,7 +120,7 @@ function function_ea2fff95(localclientnum, goal) {
 }
 
 // Namespace ball
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x18c62b62, Offset: 0xc88
 // Size: 0x7c
 function function_85e74fc9(localclientnum, team, oldval, newval, binitialsnap, bwastimejump) {
@@ -130,7 +130,7 @@ function function_85e74fc9(localclientnum, team, oldval, newval, binitialsnap, b
 }
 
 // Namespace ball
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc6e145f, Offset: 0xd10
 // Size: 0x6c
 function function_fe891abf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -138,7 +138,7 @@ function function_fe891abf(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace ball
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x30743b6d, Offset: 0xd88
 // Size: 0x6c
 function function_7d1a6e7e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -146,7 +146,7 @@ function function_7d1a6e7e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace ball
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2a21c751, Offset: 0xe00
 // Size: 0x18c
 function function_5354f213(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -206,7 +206,7 @@ function clear_hud(localclientnum) {
 }
 
 // Namespace ball
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x67116bd0, Offset: 0x12a8
 // Size: 0x24
 function watch_for_death(localclientnum) {
@@ -215,7 +215,7 @@ function watch_for_death(localclientnum) {
 }
 
 // Namespace ball
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x41442339, Offset: 0x12d8
 // Size: 0xf4
 function function_8dc589c8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -228,7 +228,7 @@ function function_8dc589c8(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace ball
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfe63ea6f, Offset: 0x13d8
 // Size: 0x84
 function function_c27acbbf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -236,7 +236,7 @@ function function_c27acbbf(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace ball
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5e082203, Offset: 0x1468
 // Size: 0x3c
 function function_235fe967(localclientnum, on_off) {
@@ -263,7 +263,7 @@ function resetondemojump(localclientnum, goal, effects) {
 }
 
 // Namespace ball
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e6236c7, Offset: 0x1550
 // Size: 0x4c
 function watch_for_team_change(localclientnum) {
@@ -274,7 +274,7 @@ function watch_for_team_change(localclientnum) {
 }
 
 // Namespace ball
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd1e2cb69, Offset: 0x15a8
 // Size: 0x20e
 function ball_on_ground_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

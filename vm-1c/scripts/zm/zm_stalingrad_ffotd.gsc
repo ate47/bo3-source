@@ -1,19 +1,19 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_stalingrad_ffotd;
 
 // Namespace zm_stalingrad_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x932ba43e, Offset: 0x230
 // Size: 0x104
 function main_start() {
@@ -24,7 +24,7 @@ function main_start() {
 }
 
 // Namespace zm_stalingrad_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7c00023, Offset: 0x340
 // Size: 0x1c
 function main_end() {
@@ -32,7 +32,7 @@ function main_end() {
 }
 
 // Namespace zm_stalingrad_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6fd428df, Offset: 0x368
 // Size: 0xdc
 function function_30409839() {

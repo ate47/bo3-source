@@ -1,28 +1,28 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_powerup_double_points;
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x2
-// Checksum 0x768014ed, Offset: 0x2f8
+// Checksum 0x6285745, Offset: 0x2f8
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_powerup_double_points", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_double_points
-// Params 0, eflags: 0x1 linked
-// Checksum 0x6cb17b5f, Offset: 0x338
+// Params 0, eflags: 0x0
+// Checksum 0x1a4e6c2, Offset: 0x338
 // Size: 0xbc
 function __init__() {
     zm_powerups::register_powerup("double_points", &grab_double_points);
@@ -32,8 +32,8 @@ function __init__() {
 }
 
 // Namespace zm_powerup_double_points
-// Params 1, eflags: 0x1 linked
-// Checksum 0x936785bb, Offset: 0x400
+// Params 1, eflags: 0x0
+// Checksum 0xfa86b451, Offset: 0x400
 // Size: 0x44
 function grab_double_points(player) {
     level thread double_points_powerup(self, player);
@@ -41,8 +41,8 @@ function grab_double_points(player) {
 }
 
 // Namespace zm_powerup_double_points
-// Params 2, eflags: 0x1 linked
-// Checksum 0x376db927, Offset: 0x450
+// Params 2, eflags: 0x0
+// Checksum 0x75519471, Offset: 0x450
 // Size: 0x2a6
 function double_points_powerup(drop_item, player) {
     level notify("powerup points scaled_" + player.team);

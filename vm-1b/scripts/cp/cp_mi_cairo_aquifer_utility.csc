@@ -1,17 +1,17 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/enemy_highlight;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/postfx_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/enemy_highlight;
-#using scripts/shared/array_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/cp/_load;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #using_animtree("generic");
 
@@ -89,7 +89,7 @@ function on_player_spawned(localclientnum) {
         if (!isdefined(veh)) {
             umbra_setdistancescale(localclientnum, 1);
             umbra_setminimumcontributionthreshold(localclientnum, 0);
-            veh = self waittill(#"enter_vehicle");
+            self waittill(#"enter_vehicle", veh);
             if (!isdefined(veh)) {
                 continue;
             }
@@ -580,10 +580,10 @@ function function_791c5d3e(localclientnum, oldval, newval, bnewent, binitialsnap
     local_player.var_4c67c5eb = [];
     indices = [];
     for (i = 3; i >= 0; i--) {
-        var_8e34c2ec = pow(2, i);
-        if (newval >= var_8e34c2ec) {
+        bit_value = pow(2, i);
+        if (newval >= bit_value) {
             indices[indices.size] = i + 1;
-            newval -= var_8e34c2ec;
+            newval -= bit_value;
         }
     }
     var_dda84f1a = getentarray(localclientnum, "landing_zone", "targetname");
@@ -874,8 +874,8 @@ function function_21e63f39(localclientnum) {
     self endon(#"disconnect");
     max_radius = 162.5;
     locked = 0;
-    var_beb0eb1e = 0.6;
-    var_e64062c8 = 0.3;
+    max_scale = 0.6;
+    min_scale = 0.3;
     var_bcd414e9 = 540;
     var_428be7c0 = -64;
     var_9f14e241 = viewaspect(localclientnum);
@@ -894,7 +894,7 @@ function function_21e63f39(localclientnum) {
                     entpos = self.missile_target.origin;
                 }
                 self.missile_target.var_e7323f20 = project3dto2d(localclientnum, entpos);
-                scale = var_e64062c8 + (var_beb0eb1e - var_e64062c8) * (1 - self.var_14351725);
+                scale = min_scale + (max_scale - min_scale) * (1 - self.var_14351725);
                 offset = (self.missile_target.var_e7323f20[0] - width, self.missile_target.var_e7323f20[1] - height, 0);
                 dist = length(offset);
                 if (dist > max_radius - var_428be7c0 * 0.5 * scale) {
@@ -908,7 +908,7 @@ function function_21e63f39(localclientnum) {
                     setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetRotZ", self getclienttime() % 1000 / 1000 * var_bcd414e9);
                     setluimenudata(localclientnum, self.var_58eaeac1, "material", "uie_t7_cp_hud_vehicle_vtol_lockoncircle");
                     setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetAlpha", 1);
-                    setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetScale", var_e64062c8);
+                    setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetScale", min_scale);
                     setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetRed", 1);
                     setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetGreen", 0);
                     setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetBlue", 0);
@@ -924,7 +924,7 @@ function function_21e63f39(localclientnum) {
             } else {
                 setluimenudata(localclientnum, self.var_58eaeac1, "material", "uie_t7_cp_hud_vehicle_vtol_lockoncircle");
                 setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetAlpha", 0.33);
-                setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetScale", var_beb0eb1e);
+                setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetScale", max_scale);
                 setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetLerpTime", -6);
                 setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetX", width);
                 setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetY", height);
@@ -940,7 +940,7 @@ function function_21e63f39(localclientnum) {
         self function_3b907fc(localclientnum);
         setluimenudata(localclientnum, self.var_58eaeac1, "material", "uie_t7_cp_hud_vehicle_vtol_lockoncircle");
         setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetAlpha", 0);
-        setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetScale", var_beb0eb1e);
+        setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetScale", max_scale);
         setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetRotZ", 0);
         setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetLerpTime", -6);
         setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetX", width);
@@ -1274,11 +1274,11 @@ function function_5e259b76(localclientnum) {
     self function_88a10e85(localclientnum, "running_lights", "vehicle/fx_vtol_taileron_lights_l", "tag_taileron_l_animate", 0, 0);
     self function_88a10e85(localclientnum, "running_lights", "vehicle/fx_vtol_taileron_lights_r", "tag_taileron_r_animate", 0, 0);
     self.var_58f8ead2 = 1;
-    var_f9fab1b1 = self gettagangles("tag_body_animate");
-    var_80d8531 = var_f9fab1b1;
+    anim_angles = self gettagangles("tag_body_animate");
+    var_80d8531 = anim_angles;
     while (isdefined(self.var_58f8ead2) && isdefined(self) && isalive(self) && self.var_58f8ead2) {
-        var_f9fab1b1 = self gettagangles("tag_body_animate");
-        self.var_786fcc03 = (var_f9fab1b1 - var_80d8531) / 0.016;
+        anim_angles = self gettagangles("tag_body_animate");
+        self.var_786fcc03 = (anim_angles - var_80d8531) / 0.016;
         if (abs(self.var_786fcc03[0]) <= 5 && var_a2c58ba3 != "off") {
             self function_400e6e82(localclientnum, "vtol_pitch_fx");
             var_a2c58ba3 = "off";
@@ -1291,10 +1291,10 @@ function function_5e259b76(localclientnum) {
             self function_88a10e85(localclientnum, "vtol_pitch_fx", "vehicle/fx_vtol_vapor_extreme", "tag_body_animate");
             var_a2c58ba3 = "high";
         }
-        if (absangleclamp180(var_f9fab1b1[2]) < 30 && var_14386bda != "off") {
+        if (absangleclamp180(anim_angles[2]) < 30 && var_14386bda != "off") {
             self function_400e6e82(localclientnum, "vtol_roll_fx");
             var_14386bda = "off";
-        } else if (absangleclamp180(var_f9fab1b1[2]) >= 30 && var_14386bda != "on") {
+        } else if (absangleclamp180(anim_angles[2]) >= 30 && var_14386bda != "on") {
             self function_88a10e85(localclientnum, "vtol_roll_fx", "vehicle/fx_vtol_contrail", "tag_body_animate");
             var_14386bda = "on";
         }
@@ -1307,7 +1307,7 @@ function function_5e259b76(localclientnum) {
             self function_88a10e85(localclientnum, "vtol_afterburn_fx", "vehicle/fx_vtol_thruster_afterburn", "tag_fx_engine_right", 0, 0);
             var_80cad4ec = "on";
         }
-        var_80d8531 = var_f9fab1b1;
+        var_80d8531 = anim_angles;
         wait 0.016;
     }
     if (isdefined(self)) {
@@ -1454,7 +1454,7 @@ function function_3e82b262() {
     smodelanimcmd("boss_tree", "pause", "unloop", "goto_start");
     smodelanimcmd("boss_hallucinate_glass", "pause", "unloop", "goto_start");
     smodelanimcmd("boss_room_glass", "pause", "unloop", "goto_start");
-    level waittill(#"hash_4fd5d268");
+    level waittill(#"start_boss_tree");
     smodelanimcmd("boss_tree", "unpause");
     smodelanimcmd("boss_hallucinate_glass", "unpause");
     level waittill(#"hash_e830ddcf");

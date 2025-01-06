@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_util;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_perks;
 
 #namespace zm_playerhealth;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_playerhealth
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e9db964, Offset: 0x328
 // Size: 0x33c
 function __init__() {
@@ -71,7 +71,7 @@ function __init__() {
 }
 
 // Namespace zm_playerhealth
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc7762652, Offset: 0x670
 // Size: 0x44
 function on_player_spawned() {
@@ -90,14 +90,14 @@ function function_8f07d3ea() {
 }
 
 // Namespace zm_playerhealth
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8af64608, Offset: 0x720
 // Size: 0xcc
 function function_fabc32f() {
     self endon(#"noHealthOverlay");
     self.var_1428596a = 0;
     for (;;) {
-        amount, attacker, dir, point, mod = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, dir, point, mod);
         if (isdefined(attacker) && isplayer(attacker) && attacker.team == self.team) {
             continue;
         }
@@ -108,7 +108,7 @@ function function_fabc32f() {
 }
 
 // Namespace zm_playerhealth
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8d589359, Offset: 0x7f8
 // Size: 0x730
 function playerhealthregen() {
@@ -165,8 +165,8 @@ function playerhealthregen() {
             return;
         }
         wasveryhurt = veryhurt;
-        var_55ed49d3 = self.health / self.maxhealth;
-        if (var_55ed49d3 <= level.healthoverlaycutoff) {
+        health_ratio = self.health / self.maxhealth;
+        if (health_ratio <= level.healthoverlaycutoff) {
             veryhurt = 1;
             if (!wasveryhurt) {
                 hurttime = gettime();
@@ -180,13 +180,13 @@ function playerhealthregen() {
             hurttime = gettime();
             self.var_1428596a = 0;
         }
-        if (var_55ed49d3 >= var_3d0925a9) {
+        if (health_ratio >= var_3d0925a9) {
             if (gettime() - hurttime < level.playerhealth_regularregendelay) {
                 continue;
             }
             if (veryhurt) {
                 self.veryhurt = 1;
-                newhealth = var_55ed49d3;
+                newhealth = health_ratio;
                 if (gettime() > hurttime + level.longregentime) {
                     newhealth += regenrate;
                 }
@@ -201,7 +201,7 @@ function playerhealthregen() {
                 return;
             }
             /#
-                if (newhealth > var_55ed49d3) {
+                if (newhealth > health_ratio) {
                     function_895a501c(newhealth);
                 }
             #/
@@ -209,7 +209,7 @@ function playerhealthregen() {
             var_3d0925a9 = self.health / self.maxhealth;
             continue;
         }
-        var_7a2a169 = var_d80fbb0e - var_55ed49d3 > level.worthydamageratio;
+        var_7a2a169 = var_d80fbb0e - health_ratio > level.worthydamageratio;
         if (self.health <= 1) {
             self setnormalhealth(2 / self.maxhealth);
             var_7a2a169 = 1;
@@ -223,7 +223,7 @@ function playerhealthregen() {
             #/
         }
         var_3d0925a9 = self.health / self.maxhealth;
-        level notify(#"hash_4bd1d9d5");
+        level notify(#"hit_again");
         var_4d2b26fb = 0;
         hurttime = gettime();
         self startfadingblur(3, 0.8);
@@ -256,7 +256,7 @@ function playerhealthregen() {
 }
 
 // Namespace zm_playerhealth
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7c3c6426, Offset: 0xf30
 // Size: 0x6c
 function function_bd76f2fc(timer) {
@@ -272,7 +272,7 @@ function function_bd76f2fc(timer) {
 }
 
 // Namespace zm_playerhealth
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5bb3085f, Offset: 0xfa8
 // Size: 0x1e0
 function healthoverlay() {
@@ -304,7 +304,7 @@ function healthoverlay() {
 }
 
 // Namespace zm_playerhealth
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x7e454e0b, Offset: 0x1190
 // Size: 0x240
 function function_bbe24e91(overlay, severity, mult, var_7170800d) {
@@ -334,7 +334,7 @@ function function_bbe24e91(overlay, severity, mult, var_7170800d) {
 }
 
 // Namespace zm_playerhealth
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x58cbcec4, Offset: 0x13d8
 // Size: 0xae
 function function_129bb55f(overlay) {
@@ -345,16 +345,16 @@ function function_129bb55f(overlay) {
         self flag::clear("player_has_red_flashing_overlay");
         overlay fadeovertime(0.05);
         overlay.alpha = 0;
-        self notify(#"hash_4bd1d9d5");
+        self notify(#"hit_again");
     }
 }
 
 // Namespace zm_playerhealth
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaa59a084, Offset: 0x1490
 // Size: 0x24a
 function function_131503b4(overlay) {
-    self endon(#"hash_4bd1d9d5");
+    self endon(#"hit_again");
     self endon(#"damage");
     self endon(#"death");
     self endon(#"disconnect");
@@ -377,11 +377,11 @@ function function_131503b4(overlay) {
     self flag::clear("player_has_red_flashing_overlay");
     self clientfield::set_to_player("sndZombieHealth", 0);
     wait 0.5;
-    self notify(#"hash_4bd1d9d5");
+    self notify(#"hit_again");
 }
 
 // Namespace zm_playerhealth
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x15591e96, Offset: 0x16e8
 // Size: 0x6c
 function function_2d8009b8(overlay) {
@@ -392,7 +392,7 @@ function function_2d8009b8(overlay) {
 }
 
 // Namespace zm_playerhealth
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xb17f6bcb, Offset: 0x1760
 // Size: 0x2c
 function function_79977f70(type, loc, point, attacker, amount) {
@@ -402,7 +402,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
 /#
 
     // Namespace zm_playerhealth
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x59f3e9d, Offset: 0x1798
     // Size: 0x18
     function function_2055ee00(newhealth, var_2ce8450a) {
@@ -410,7 +410,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
     }
 
     // Namespace zm_playerhealth
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x1acf3c81, Offset: 0x17b8
     // Size: 0x10
     function function_895a501c(newhealth) {
@@ -418,7 +418,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
     }
 
     // Namespace zm_playerhealth
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1c49d3a3, Offset: 0x17d0
     // Size: 0x8
     function function_adec9ac9() {
@@ -426,7 +426,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
     }
 
     // Namespace zm_playerhealth
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x13442feb, Offset: 0x17e0
     // Size: 0x110
     function function_610dfe1() {
@@ -454,7 +454,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
     }
 
     // Namespace zm_playerhealth
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x28e276b8, Offset: 0x18f8
     // Size: 0x66e
     function function_6227a919() {
@@ -536,7 +536,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
     }
 
     // Namespace zm_playerhealth
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x96689f7b, Offset: 0x1f70
     // Size: 0xce
     function function_b75a45fc() {

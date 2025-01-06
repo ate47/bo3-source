@@ -1,38 +1,38 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/cp_prologue_security_camera;
-#using scripts/cp/cp_prologue_enter_base;
-#using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_prologue_apc;
-#using scripts/cp/cp_prologue_robot_reveal;
-#using scripts/cp/cp_prologue_hangars;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_eth_prologue;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/cp_prologue_enter_base;
+#using scripts/cp/cp_prologue_hangars;
+#using scripts/cp/cp_prologue_robot_reveal;
+#using scripts/cp/cp_prologue_security_camera;
+#using scripts/cp/cp_prologue_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/gametypes/_spawning;
+#using scripts/cp/voice/voice_prologue;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/doors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/doors_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/voice/voice_prologue;
-#using scripts/cp/gametypes/_spawning;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_prologue_enter_base;
 
@@ -62,9 +62,9 @@ function function_69685279() {
     if (isdefined(level.var_f22c67b)) {
         level thread [[ level.var_f22c67b ]]();
     }
-    foreach (var_e4463170 in level.var_681ad194) {
-        var_e4463170.goalradius = 16;
-        var_e4463170 setgoal(getnode("ally0" + var_e4463170.var_a89679b6 + "_start_node", "targetname"));
+    foreach (ai_ally in level.var_681ad194) {
+        ai_ally.goalradius = 16;
+        ai_ally setgoal(getnode("ally0" + ai_ally.var_a89679b6 + "_start_node", "targetname"));
     }
     battlechatter::function_d9f49fba(0);
     cp_prologue_util::function_47a62798(1);
@@ -176,9 +176,9 @@ function function_f2908b1c() {
 // Size: 0x18a
 function function_b3440908() {
     level cp_prologue_util::function_6a5f89cb("skipto_blend_in");
-    foreach (var_e4463170 in level.var_681ad194) {
-        var_e4463170 ai::set_ignoreme(1);
-        var_e4463170 ai::set_pacifist(1);
+    foreach (ai_ally in level.var_681ad194) {
+        ai_ally ai::set_ignoreme(1);
+        ai_ally ai::set_pacifist(1);
     }
     level thread function_be42a33f();
     if (isdefined(level.var_4d823ef7)) {
@@ -302,9 +302,9 @@ function function_f9be6553(var_97fbbd0a, var_1a7dfed0, var_61ae76d5, var_9e3b0b6
     for (i = 0; i < var_1a7dfed0.size; i++) {
         var_79cf4848 = getentarray(var_61ae76d5[i], "targetname");
         if (isdefined(var_79cf4848) && var_79cf4848.size > 0) {
-            var_58c5eb41 = arraygetclosest(var_97fbbd0a, var_79cf4848);
+            ai_speaker = arraygetclosest(var_97fbbd0a, var_79cf4848);
             wait var_9e3b0b67[i];
-            var_58c5eb41 notify(#"hash_2605e152", var_1a7dfed0[i]);
+            ai_speaker notify(#"hash_2605e152", var_1a7dfed0[i]);
         }
     }
 }
@@ -456,8 +456,8 @@ function function_cdc39276(a_ents) {
     if (!scene::is_playing("cin_pro_03_02_blendin_vign_destruction_putoutfire")) {
         level thread scene::play("cin_pro_03_02_blendin_vign_destruction_putoutfire");
     }
-    var_22752fde = getnode("hendricks_tunnel_goal", "targetname");
-    a_ents["hendricks"] setgoal(var_22752fde, 1);
+    nd_node = getnode("hendricks_tunnel_goal", "targetname");
+    a_ents["hendricks"] setgoal(nd_node, 1);
 }
 
 // Namespace cp_prologue_enter_base
@@ -479,14 +479,14 @@ function function_a7dec0e7() {
     level thread function_a87bddf2();
     level.var_2fd26037.pacifist = 1;
     level.var_2fd26037.ignoreme = 1;
-    foreach (var_e4463170 in level.var_681ad194) {
-        var_e4463170 ai::set_ignoreme(1);
-        var_e4463170 ai::set_pacifist(1);
+    foreach (ai_ally in level.var_681ad194) {
+        ai_ally ai::set_ignoreme(1);
+        ai_ally ai::set_pacifist(1);
     }
     level flag::wait_till("tower_doors_open");
     level.var_2fd26037 ai::set_behavior_attribute("cqb", 0);
-    var_3ced446f = cp_prologue_util::function_6ee0e1a5();
-    array::thread_all(var_3ced446f, &ai::set_behavior_attribute, "cqb", 0);
+    a_allies = cp_prologue_util::function_6ee0e1a5();
+    array::thread_all(a_allies, &ai::set_behavior_attribute, "cqb", 0);
     array::run_all(level.players, &util::function_16c71b8, 1);
     array::thread_all(level.players, &cp_mi_eth_prologue::function_7072c5d8);
 }
@@ -510,8 +510,8 @@ function function_a87bddf2() {
 // Size: 0x9b
 function function_be42a33f() {
     trigger::wait_till("tarmac_move_friendies");
-    foreach (var_e4463170 in level.var_681ad194) {
-        var_e4463170 thread function_15dea196("ally0" + var_e4463170.var_a89679b6 + "_tunnel_goal", "security_cam_active");
+    foreach (ai_ally in level.var_681ad194) {
+        ai_ally thread function_15dea196("ally0" + ai_ally.var_a89679b6 + "_tunnel_goal", "security_cam_active");
     }
 }
 
@@ -718,12 +718,12 @@ function function_12fd44e1() {
 // Params 2, eflags: 0x0
 // Checksum 0xbeafaee5, Offset: 0x3908
 // Size: 0x9a
-function function_1a72a604(var_6c5c89e1, var_5e550f5) {
+function function_1a72a604(str_node, var_5e550f5) {
     if (!isdefined(var_5e550f5)) {
         var_5e550f5 = 1;
     }
     self notsolid();
-    var_51a35d76 = getvehiclenode(var_6c5c89e1, "targetname");
+    var_51a35d76 = getvehiclenode(str_node, "targetname");
     self.drivepath = var_5e550f5;
     self.angles = var_51a35d76.angles;
     self thread vehicle::get_on_and_go_path(var_51a35d76);
@@ -1277,23 +1277,23 @@ function function_21dd3be1() {
     e_left_door = getent("tunnel_vault_upperdoor_L", "targetname");
     v_side = anglestoright(e_left_door.angles);
     e_right_door = getent("tunnel_vault_upperdoor_R", "targetname");
-    var_cbe6253d = 52;
-    var_33219fd6 = e_left_door.origin + v_side * var_cbe6253d * -1;
+    move_amount = 52;
+    var_33219fd6 = e_left_door.origin + v_side * move_amount * -1;
     e_left_door moveto(var_33219fd6, 0.1);
-    var_dac99ad = e_right_door.origin + v_side * var_cbe6253d;
+    var_dac99ad = e_right_door.origin + v_side * move_amount;
     e_right_door moveto(var_dac99ad, 0.1);
     level waittill(#"hash_2170cc63");
     playsoundatposition("evt_tunnel_upper_door", e_left_door.origin);
-    var_33219fd6 = e_left_door.origin + v_side * var_cbe6253d;
+    var_33219fd6 = e_left_door.origin + v_side * move_amount;
     e_left_door moveto(var_33219fd6, 1.5);
-    var_dac99ad = e_right_door.origin + v_side * var_cbe6253d * -1;
+    var_dac99ad = e_right_door.origin + v_side * move_amount * -1;
     e_right_door moveto(var_dac99ad, 1.5);
     while (!cp_prologue_util::function_cdd726fb("keycard_doors")) {
         wait 0.5;
     }
-    var_33219fd6 = e_left_door.origin + v_side * var_cbe6253d * -1;
+    var_33219fd6 = e_left_door.origin + v_side * move_amount * -1;
     e_left_door moveto(var_33219fd6, 0.1);
-    var_dac99ad = e_right_door.origin + v_side * var_cbe6253d;
+    var_dac99ad = e_right_door.origin + v_side * move_amount;
     e_right_door moveto(var_dac99ad, 0.1);
 }
 

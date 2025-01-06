@@ -1,13 +1,13 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_tomb_ee_lights;
 
 // Namespace zm_tomb_ee_lights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6aeb2afb, Offset: 0x130
 // Size: 0x4c
 function main() {
@@ -15,7 +15,7 @@ function main() {
 }
 
 // Namespace zm_tomb_ee_lights
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x57188c94, Offset: 0x188
 // Size: 0x13a
 function function_b6f5f7f5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

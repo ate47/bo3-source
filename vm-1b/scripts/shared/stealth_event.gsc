@@ -1,10 +1,10 @@
-#using scripts/shared/stealth_vo;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
 #using scripts/shared/stealth_behavior;
 #using scripts/shared/stealth_debug;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_event;
 
@@ -123,7 +123,7 @@ function function_44782a56(eventname) {
 function function_6a7aa4bf(eventname) {
     self endon(#"hash_2bbc4f84");
     while (true) {
-        arg1 = self waittill(eventname);
+        self waittill(eventname, arg1);
         self thread function_5b52d0d9(eventname, arg1);
     }
 }
@@ -135,7 +135,7 @@ function function_6a7aa4bf(eventname) {
 function function_f8733584(eventname) {
     self endon(#"hash_2bbc4f84");
     while (true) {
-        arg1, arg2 = self waittill(eventname);
+        self waittill(eventname, arg1, arg2);
         self thread function_5b52d0d9(eventname, arg1, arg2);
     }
 }
@@ -146,7 +146,7 @@ function function_f8733584(eventname) {
 // Size: 0x42
 function function_551bd4f3() {
     self endon(#"stop_stealth");
-    arg1, arg2 = self waittill(#"death");
+    self waittill(#"death", arg1, arg2);
     self thread function_5b52d0d9("death", arg1, arg2);
 }
 
@@ -157,7 +157,7 @@ function function_551bd4f3() {
 function function_1e75afed(eventname) {
     self endon(#"hash_2bbc4f84");
     while (true) {
-        arg1, arg2, arg3 = self waittill(eventname);
+        self waittill(eventname, arg1, arg2, arg3);
         self thread function_5b52d0d9(eventname, arg1, arg2, arg3);
     }
 }

@@ -1,7 +1,7 @@
 #using scripts/shared/bots/_bot;
 #using scripts/shared/bots/_bot_combat;
-#using scripts/shared/system_shared;
 #using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
 
 #namespace bot;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33f6b130, Offset: 0x138
 // Size: 0x94
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 /#
 
     // Namespace bot
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3f4002b6, Offset: 0x1d8
     // Size: 0x68
     function on_bot_connect() {

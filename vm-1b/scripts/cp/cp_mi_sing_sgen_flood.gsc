@@ -1,28 +1,28 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
 #using scripts/cp/cp_mi_sing_sgen_accolades;
 #using scripts/cp/cp_mi_sing_sgen_pallas;
+#using scripts/cp/cp_mi_sing_sgen_sound;
 #using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_sgen_flood;
 
@@ -297,7 +297,7 @@ function function_b9f4384b(str_key, str_val, n_delay) {
     var_bdf5e96c = getent(str_key, str_val);
     var_bdf5e96c endon(#"death");
     do {
-        e_triggerer = var_bdf5e96c waittill(#"trigger");
+        var_bdf5e96c waittill(#"trigger", e_triggerer);
         if (isplayer(e_triggerer)) {
             break;
         }
@@ -408,7 +408,7 @@ function function_ef6ea5f9() {
     level endon(#"hash_d55f5f70");
     t_exit = getent("flood_combat_flood_hall_cleanup_trig", "targetname");
     while (true) {
-        var_67440414 = t_exit waittill(#"trigger");
+        t_exit waittill(#"trigger", var_67440414);
         level flag::set("flood_runner_escaped");
         var_67440414 delete();
         wait 0.05;
@@ -471,9 +471,9 @@ function function_cf14779(v_origin, n_min, n_max, b_reverse) {
     if (b_reverse && var_ea52a6de.size > 1) {
         var_ea52a6de = array::reverse(var_ea52a6de);
     }
-    foreach (var_974cc07 in var_ea52a6de) {
-        if (!isnodeoccupied(var_974cc07) && isalive(self)) {
-            self setgoal(var_974cc07);
+    foreach (nd_cover in var_ea52a6de) {
+        if (!isnodeoccupied(nd_cover) && isalive(self)) {
+            self setgoal(nd_cover);
             return;
         }
     }
@@ -492,7 +492,7 @@ function function_e45d59cc() {
     var_33dce9d8 endon(#"death");
     var_40f8cd43 setinvisibletoall();
     while (true) {
-        e_triggerer = var_40f8cd43 waittill(#"trigger");
+        var_40f8cd43 waittill(#"trigger", e_triggerer);
         if (isalive(e_triggerer) && e_triggerer.script_noteworthy !== "ignore_last_stand") {
             e_triggerer notify(#"cancel_fallback");
             e_triggerer setgoal(var_33dce9d8);
@@ -723,7 +723,7 @@ function function_80012633() {
     v_length = -128;
     array::thread_all(var_3b889aff, &function_d4c5fb8e, self);
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (!player isonground() && isdefined(player.var_fca98bd1) && gettime() - player.var_fca98bd1 < 1000) {
             continue;
         }

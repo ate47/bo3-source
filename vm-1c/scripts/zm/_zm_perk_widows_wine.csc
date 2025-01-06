@@ -1,23 +1,23 @@
-#using scripts/zm/_zm_powerup_ww_grenade;
-#using scripts/zm/_zm_perks;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerup_ww_grenade;
 
 #namespace zm_perk_widows_wine;
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x2
-// Checksum 0x95c9efcf, Offset: 0x2d8
+// Checksum 0xd666c4aa, Offset: 0x2d8
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_perk_widows_wine", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x42b776b7, Offset: 0x318
+// Params 0, eflags: 0x0
+// Checksum 0x84597b28, Offset: 0x318
 // Size: 0xcc
 function __init__() {
     zm_perks::register_perk_clientfields("specialty_widowswine", &widows_wine_client_field_func, &widows_wine_code_callback_func);
@@ -27,8 +27,8 @@ function __init__() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x6d7c4be6, Offset: 0x3f0
+// Params 0, eflags: 0x0
+// Checksum 0x6a7e7c02, Offset: 0x3f0
 // Size: 0x52
 function init_widows_wine() {
     if (isdefined(level.enable_magic) && level.enable_magic) {
@@ -38,8 +38,8 @@ function init_widows_wine() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0xfc8467a9, Offset: 0x450
+// Params 0, eflags: 0x0
+// Checksum 0x3cb4e66d, Offset: 0x450
 // Size: 0xcc
 function widows_wine_client_field_func() {
     clientfield::register("clientuimodel", "hudItems.perks.widows_wine", 1, 2, "int", undefined, 0, 1);
@@ -48,7 +48,7 @@ function widows_wine_client_field_func() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x528
 // Size: 0x4
 function widows_wine_code_callback_func() {
@@ -56,8 +56,8 @@ function widows_wine_code_callback_func() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 7, eflags: 0x1 linked
-// Checksum 0x9f6e86a5, Offset: 0x538
+// Params 7, eflags: 0x0
+// Checksum 0xd4216fc4, Offset: 0x538
 // Size: 0x194
 function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -83,8 +83,8 @@ function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_perk_widows_wine
-// Params 7, eflags: 0x1 linked
-// Checksum 0x6b737327, Offset: 0x6d8
+// Params 7, eflags: 0x0
+// Checksum 0xb25d1288, Offset: 0x6d8
 // Size: 0x9c
 function widows_wine_1p_contact_explosion(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     owner = self getowner(localclientnum);
@@ -94,8 +94,8 @@ function widows_wine_1p_contact_explosion(localclientnum, oldval, newval, bnewen
 }
 
 // Namespace zm_perk_widows_wine
-// Params 1, eflags: 0x1 linked
-// Checksum 0x2c27dd78, Offset: 0x780
+// Params 1, eflags: 0x0
+// Checksum 0xfbb3e994, Offset: 0x780
 // Size: 0xbc
 function function_617a36aa(localclientnum) {
     tag = "tag_flash";

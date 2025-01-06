@@ -1,27 +1,27 @@
-#using scripts/cp/cp_mi_cairo_lotus_patch;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/cp/voice/voice_lotus1;
-#using scripts/cp/lotus_util;
-#using scripts/cp/lotus_start_riot;
-#using scripts/cp/lotus_security_station;
-#using scripts/cp/lotus_accolades;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cp_mi_cairo_lotus_sound;
-#using scripts/cp/cp_mi_cairo_lotus_fx;
-#using scripts/cp/cp_mi_cairo_lotus_anim;
-#using scripts/cp/_vehicle_platform;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_elevator;
-#using scripts/cp/_collectibles;
 #using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_elevator;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/_vehicle_platform;
+#using scripts/cp/cp_mi_cairo_lotus_anim;
+#using scripts/cp/cp_mi_cairo_lotus_fx;
+#using scripts/cp/cp_mi_cairo_lotus_patch;
+#using scripts/cp/cp_mi_cairo_lotus_sound;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/lotus_accolades;
+#using scripts/cp/lotus_security_station;
+#using scripts/cp/lotus_start_riot;
+#using scripts/cp/lotus_util;
+#using scripts/cp/voice/voice_lotus1;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_cairo_lotus;
 
@@ -35,7 +35,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7c23907, Offset: 0x6f0
 // Size: 0x10c
 function function_70a1a72e() {
@@ -51,7 +51,7 @@ function function_70a1a72e() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89f00c47, Offset: 0x808
 // Size: 0x2dc
 function main() {
@@ -95,7 +95,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xaf0
 // Size: 0x4
 function precache() {
@@ -103,7 +103,7 @@ function precache() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84e2a78c, Offset: 0xb00
 // Size: 0x84
 function init_flags() {
@@ -114,7 +114,7 @@ function init_flags() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc90e1d55, Offset: 0xb90
 // Size: 0x24
 function function_e8474b63() {
@@ -122,7 +122,7 @@ function function_e8474b63() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x35906219, Offset: 0xbc0
 // Size: 0x334
 function init_clientfields() {
@@ -146,7 +146,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7fba356f, Offset: 0xf00
 // Size: 0x25c
 function function_673254cc() {
@@ -155,7 +155,7 @@ function function_673254cc() {
     skipto::function_d68e678e("general_hakim", &lotus_start_riot::function_92206070, undefined, &lotus_start_riot::function_14166bcb);
     skipto::function_d68e678e("apartments", &lotus_security_station::function_cd269efc, undefined, &lotus_security_station::function_46593e07);
     skipto::function_d68e678e("atrium_battle", &lotus_security_station::atrium_battle, undefined, &lotus_security_station::function_57b2d9ef);
-    skipto::function_d68e678e("to_security_station", &lotus_security_station::to_security_station, undefined, &lotus_security_station::function_2d424c3d);
+    skipto::function_d68e678e("to_security_station", &lotus_security_station::to_security_station, undefined, &lotus_security_station::to_security_station_done);
     skipto::function_d68e678e("hack_the_system", &lotus_security_station::function_f5f5e18e, undefined, &lotus_security_station::function_2f8e8d25);
     /#
         skipto::add_dev("<dev string:x28>", &function_a56ed2d0);
@@ -169,7 +169,7 @@ function function_673254cc() {
 /#
 
     // Namespace cp_mi_cairo_lotus
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x176dcd81, Offset: 0x1168
     // Size: 0x4c
     function function_a56ed2d0(str_objective, var_74cd64bc) {
@@ -179,7 +179,7 @@ function function_673254cc() {
     }
 
     // Namespace cp_mi_cairo_lotus
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x464b35, Offset: 0x11c0
     // Size: 0x4c
     function function_cb714d39(str_objective, var_74cd64bc) {
@@ -189,7 +189,7 @@ function function_673254cc() {
     }
 
     // Namespace cp_mi_cairo_lotus
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xb4fc3e77, Offset: 0x1218
     // Size: 0x34
     function function_50499b8(str_objective, var_74cd64bc) {
@@ -197,7 +197,7 @@ function function_673254cc() {
     }
 
     // Namespace cp_mi_cairo_lotus
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x3ecabd1c, Offset: 0x1258
     // Size: 0x34
     function function_770c08f3(str_objective, var_74cd64bc) {
@@ -205,7 +205,7 @@ function function_673254cc() {
     }
 
     // Namespace cp_mi_cairo_lotus
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x15f684e1, Offset: 0x1298
     // Size: 0x34
     function function_51098e8a(str_objective, var_74cd64bc) {
@@ -213,7 +213,7 @@ function function_673254cc() {
     }
 
     // Namespace cp_mi_cairo_lotus
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xd7a2bd42, Offset: 0x12d8
     // Size: 0x44
     function function_3330eab6(str_anim) {
@@ -224,7 +224,7 @@ function function_673254cc() {
 #/
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1328
 // Size: 0x4
 function on_player_spawned() {

@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace art;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace art
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23317b66, Offset: 0x210
 // Size: 0x26c
 function __init__() {
@@ -64,7 +64,7 @@ function __init__() {
 #/
 
 // Namespace art
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc7a63654, Offset: 0x4d8
 // Size: 0xd4
 function strtok_loc(string, par1) {
@@ -110,7 +110,7 @@ function setfogsliders() {
 /#
 
     // Namespace art
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf1af3530, Offset: 0x778
     // Size: 0x960
     function tweakart() {
@@ -204,7 +204,7 @@ function setfogsliders() {
 #/
 
 // Namespace art
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x106eb74a, Offset: 0x10e0
 // Size: 0x2d4
 function fovslidercheck() {
@@ -237,7 +237,7 @@ function fovslidercheck() {
 /#
 
     // Namespace art
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8d4d7218, Offset: 0x13c0
     // Size: 0x404
     function dumpsettings() {

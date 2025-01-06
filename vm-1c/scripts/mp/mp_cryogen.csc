@@ -1,15 +1,15 @@
-#using scripts/mp/mp_cryogen_sound;
-#using scripts/mp/mp_cryogen_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_cryogen_fx;
+#using scripts/mp/mp_cryogen_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_cryogen;
 
 // Namespace mp_cryogen
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3a3b4b09, Offset: 0x1b8
+// Params 0, eflags: 0x0
+// Checksum 0x1b19c2e6, Offset: 0x1b8
 // Size: 0x8c
 function main() {
     mp_cryogen_fx::main();
@@ -22,8 +22,8 @@ function main() {
 }
 
 // Namespace mp_cryogen
-// Params 2, eflags: 0x1 linked
-// Checksum 0xc9ae124d, Offset: 0x250
+// Params 2, eflags: 0x0
+// Checksum 0x65eb9eb9, Offset: 0x250
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -52,8 +52,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_cryogen
-// Params 2, eflags: 0x1 linked
-// Checksum 0x17db40ef, Offset: 0x320
+// Params 2, eflags: 0x0
+// Checksum 0x4dcf48ca, Offset: 0x320
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {

@@ -1,24 +1,24 @@
-#using scripts/zm/_zm_zonemgr;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/animation_state_machine_notetracks;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
 #using scripts/zm/_zm_laststand;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_zonemgr;
 #using scripts/zm/zm_remaster_zombie;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_notetracks;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_asylum_zombie;
 
@@ -37,7 +37,7 @@ function autoexec init() {
 }
 
 // Namespace zm_asylum_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xe71e7e3b, Offset: 0x460
 // Size: 0x1c
 function private function_87ff545e() {
@@ -45,7 +45,7 @@ function private function_87ff545e() {
 }
 
 // Namespace zm_asylum_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x48308429, Offset: 0x488
 // Size: 0x8c
 function private function_b271c3e6() {

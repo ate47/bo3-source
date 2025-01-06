@@ -1,24 +1,24 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_squad_control;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_biodomes_fx;
 #using scripts/cp/cp_mi_sing_biodomes_patch_c;
 #using scripts/cp/cp_mi_sing_biodomes_sound;
-#using scripts/cp/cp_mi_sing_biodomes_fx;
-#using scripts/shared/postfx_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_squad_control;
-#using scripts/cp/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_biodomes;
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf6711b1d, Offset: 0x768
 // Size: 0x94
 function main() {
     function_b37230e4();
-    util::function_57b966c8(&function_71f88fc, 2);
+    util::function_57b966c8(&force_streamer, 2);
     cp_mi_sing_biodomes_fx::main();
     cp_mi_sing_biodomes_sound::main();
     load::main();
@@ -27,7 +27,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7ada69b5, Offset: 0x808
 // Size: 0x4cc
 function function_b37230e4() {
@@ -74,7 +74,7 @@ function function_ab86121d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xae8c06d8, Offset: 0xe10
 // Size: 0x5c
 function umbra_tome_markets2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -82,7 +82,7 @@ function umbra_tome_markets2(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfd450113, Offset: 0xe78
 // Size: 0x3c
 function function_cf78dbd9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -90,7 +90,7 @@ function function_cf78dbd9(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd6509ba8, Offset: 0xf00
 // Size: 0x7c
 function function_89d42240(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -102,7 +102,7 @@ function function_89d42240(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x31b689d6, Offset: 0xf88
 // Size: 0x94
 function zipline_speed_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -114,7 +114,7 @@ function zipline_speed_blur(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x897e0ae2, Offset: 0x1028
 // Size: 0x130
 function function_81199318(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -135,7 +135,7 @@ function function_81199318(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x92ced728, Offset: 0x1160
 // Size: 0x64
 function party_house_shutter(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -145,7 +145,7 @@ function party_house_shutter(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6b4cd45d, Offset: 0x11d0
 // Size: 0xa4
 function party_house_destruction(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -157,7 +157,7 @@ function party_house_destruction(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2712e5c7, Offset: 0x1280
 // Size: 0x64
 function dome_glass_break(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -167,7 +167,7 @@ function dome_glass_break(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xeebf8efc, Offset: 0x12f0
 // Size: 0x64
 function warehouse_window_break(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -177,7 +177,7 @@ function warehouse_window_break(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7739d6b1, Offset: 0x1360
 // Size: 0x64
 function control_room_window_break(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -187,7 +187,7 @@ function control_room_window_break(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4e953b70, Offset: 0x13d0
 // Size: 0x94
 function cloud_mountain_crows(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -201,7 +201,7 @@ function cloud_mountain_crows(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x280c0abc, Offset: 0x1470
 // Size: 0x134
 function fighttothedome_exfil_rope(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -220,7 +220,7 @@ function fighttothedome_exfil_rope(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbfb6788, Offset: 0x15b0
 // Size: 0x2c
 function function_1f0ba50(a_ents) {
@@ -228,7 +228,7 @@ function function_1f0ba50(a_ents) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe7747c11, Offset: 0x15e8
 // Size: 0x94
 function fighttothedome_exfil_rope_sim_player(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -239,7 +239,7 @@ function fighttothedome_exfil_rope_sim_player(localclientnum, oldval, newval, bn
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64192f3f, Offset: 0x1688
 // Size: 0x2c
 function function_be7ae167(a_ents) {
@@ -247,7 +247,7 @@ function function_be7ae167(a_ents) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa745fe02, Offset: 0x16c0
 // Size: 0x21e
 function server_extra_cam(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -279,7 +279,7 @@ function server_extra_cam(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf3470e3b, Offset: 0x18e8
 // Size: 0x5c
 function server_interact_cam(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -287,10 +287,10 @@ function server_interact_cam(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf3d3da9e, Offset: 0x1ac0
 // Size: 0xde
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         streamtexturelist("cp_mi_sing_biodomes");
@@ -307,7 +307,7 @@ function function_71f88fc(n_zone) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x36424dfc, Offset: 0x1ba8
 // Size: 0x7c
 function set_exposure_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -319,7 +319,7 @@ function set_exposure_bank(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc1357463, Offset: 0x1c30
 // Size: 0xec
 function function_b33fd8cd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

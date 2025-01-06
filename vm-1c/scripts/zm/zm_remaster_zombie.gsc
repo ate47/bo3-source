@@ -1,23 +1,23 @@
-#using scripts/zm/_zm_zonemgr;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/animation_state_machine_notetracks;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
 #using scripts/zm/_zm_laststand;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_devgui;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_notetracks;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_remaster_zombie;
 
@@ -34,7 +34,7 @@ function autoexec init() {
 }
 
 // Namespace zm_remaster_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa9ce07cf, Offset: 0x460
 // Size: 0x84
 function private initzmbehaviorsandasm() {
@@ -44,7 +44,7 @@ function private initzmbehaviorsandasm() {
 }
 
 // Namespace zm_remaster_zombie
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xc22b2ffb, Offset: 0x4f0
 // Size: 0x19c
 function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -61,7 +61,7 @@ function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace zm_remaster_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x77b65ed8, Offset: 0x698
 // Size: 0x18a
 function shouldmove(entity) {
@@ -98,7 +98,7 @@ function shouldmove(entity) {
 }
 
 // Namespace zm_remaster_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xf1728ea8, Offset: 0x830
 // Size: 0x1c
 function private function_9fb7c76f() {
@@ -106,7 +106,7 @@ function private function_9fb7c76f() {
 }
 
 // Namespace zm_remaster_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x132162ae, Offset: 0x858
 // Size: 0x2c
 function private function_f05a4eb4() {
@@ -115,7 +115,7 @@ function private function_f05a4eb4() {
 }
 
 // Namespace zm_remaster_zombie
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf2ed28b9, Offset: 0x890
 // Size: 0xfa
 function private function_9b05f3fc(players) {

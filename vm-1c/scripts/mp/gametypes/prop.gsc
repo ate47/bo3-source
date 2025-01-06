@@ -1,40 +1,40 @@
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_prop_dev;
-#using scripts/mp/gametypes/_prop_controls;
-#using scripts/mp/gametypes/_loadout;
-#using scripts/mp/gametypes/_killcam;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_ui;
-#using scripts/mp/gametypes/_globallogic_spawn;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_defaults;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
-#using scripts/mp/gametypes/_dogtags;
-#using scripts/mp/gametypes/_deathicons;
-#using scripts/mp/gametypes/_battlechatter;
-#using scripts/mp/bots/_bot;
-#using scripts/mp/_util;
 #using scripts/mp/_teamops;
+#using scripts/mp/_util;
+#using scripts/mp/bots/_bot;
+#using scripts/mp/gametypes/_battlechatter;
+#using scripts/mp/gametypes/_deathicons;
+#using scripts/mp/gametypes/_dogtags;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_defaults;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_globallogic_ui;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_killcam;
+#using scripts/mp/gametypes/_loadout;
+#using scripts/mp/gametypes/_prop_controls;
+#using scripts/mp/gametypes/_prop_dev;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weapons;
 
 #namespace prop;
 
@@ -284,7 +284,7 @@ function onscoreclosemusic() {
 // Size: 0xa2
 function onplayerconnect() {
     while (true) {
-        player = level waittill(#"connected");
+        level waittill(#"connected", player);
         player.var_d1d70226 = 1;
         if (isdefined(level.allow_teamchange) && level.allow_teamchange == "0") {
             player.hasdonecombat = 1;
@@ -1008,7 +1008,7 @@ function function_500dc7d9(damagecallback) {
     level endon(#"game_ended");
     self endon(#"death");
     while (true) {
-        damage, attacker, direction_vec, point, meansofdeath, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, meansofdeath, modelname, tagname, partname, weapon, idflags);
         self thread [[ damagecallback ]](damage, attacker, direction_vec, point, meansofdeath, modelname, tagname, partname, weapon, idflags);
     }
 }
@@ -1150,29 +1150,29 @@ function organizeproplist(inarray) {
 // Checksum 0xcba70919, Offset: 0x5038
 // Size: 0x194
 function randgetpropsizetoallocate() {
-    var_77353f29 = 10 * isdefined(level.proplist[50]);
-    var_9c7a2639 = 30 * isdefined(level.proplist[100]);
-    var_ce32b3a9 = 40 * isdefined(level.proplist[-6]);
-    var_9e5e7c71 = 20 * isdefined(level.proplist[450]);
-    var_ff0ae5a1 = 10 * isdefined(level.proplist[550]);
-    randomrange = var_77353f29 + var_9c7a2639 + var_ce32b3a9 + var_9e5e7c71 + var_ff0ae5a1;
+    weight_xsmall = 10 * isdefined(level.proplist[50]);
+    weight_small = 30 * isdefined(level.proplist[100]);
+    weight_medium = 40 * isdefined(level.proplist[-6]);
+    weight_large = 20 * isdefined(level.proplist[450]);
+    weight_xlarge = 10 * isdefined(level.proplist[550]);
+    randomrange = weight_xsmall + weight_small + weight_medium + weight_large + weight_xlarge;
     randomval = randomint(randomrange);
-    if (randomval < var_77353f29) {
+    if (randomval < weight_xsmall) {
         return 50;
     }
-    randomval -= var_77353f29;
-    if (randomval < var_9c7a2639) {
+    randomval -= weight_xsmall;
+    if (randomval < weight_small) {
         return 100;
     }
-    randomval -= var_9c7a2639;
-    if (randomval < var_ce32b3a9) {
+    randomval -= weight_small;
+    if (randomval < weight_medium) {
         return -6;
     }
-    randomval -= var_ce32b3a9;
-    if (randomval < var_9e5e7c71) {
+    randomval -= weight_medium;
+    if (randomval < weight_large) {
         return 450;
     }
-    randomval -= var_9e5e7c71;
+    randomval -= weight_large;
     return 550;
 }
 
@@ -1695,7 +1695,7 @@ function function_a8e0199(team) {
     self endon(#"disconnect");
     self endon(#"showplayer");
     while (true) {
-        player = level waittill(#"connected");
+        level waittill(#"connected", player);
         self thread function_cb3d2d31(player, team);
     }
 }

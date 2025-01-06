@@ -1,12 +1,12 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_beacon;
 
 // Namespace _zm_weap_beacon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6fcd52f9, Offset: 0x358
 // Size: 0x204
 function init() {
@@ -24,7 +24,7 @@ function init() {
 }
 
 // Namespace _zm_weap_beacon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2310849f, Offset: 0x568
 // Size: 0x154
 function function_59491961(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -42,7 +42,7 @@ function function_59491961(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_beacon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xac61e5ef, Offset: 0x6c8
 // Size: 0x7e
 function function_d391c94e(origin) {
@@ -54,7 +54,7 @@ function function_d391c94e(origin) {
 }
 
 // Namespace _zm_weap_beacon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x59668049, Offset: 0x750
 // Size: 0xb0
 function function_dc4ed336(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -67,7 +67,7 @@ function function_dc4ed336(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_beacon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x58bce7c3, Offset: 0x808
 // Size: 0x2ba
 function play_artillery_barrage(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -118,7 +118,7 @@ function play_artillery_barrage(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace _zm_weap_beacon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6319ac46, Offset: 0xad0
 // Size: 0x88
 function function_2978ee2d() {
@@ -132,7 +132,7 @@ function function_2978ee2d() {
 }
 
 // Namespace _zm_weap_beacon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2d221072, Offset: 0xb60
 // Size: 0x96
 function function_14e104a0() {
@@ -146,7 +146,7 @@ function function_14e104a0() {
 }
 
 // Namespace _zm_weap_beacon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9c82acc5, Offset: 0xc00
 // Size: 0x178
 function function_8752cc8a() {
@@ -170,7 +170,7 @@ function function_8752cc8a() {
 }
 
 // Namespace _zm_weap_beacon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf9455fbb, Offset: 0xd80
 // Size: 0x19a
 function function_a6461985() {
@@ -194,7 +194,7 @@ function function_a6461985() {
 }
 
 // Namespace _zm_weap_beacon
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xa062f7ea, Offset: 0xf28
 // Size: 0x1d4
 function function_3700164e(model, index, v_start, localclientnum) {
@@ -216,7 +216,7 @@ function function_3700164e(model, index, v_start, localclientnum) {
 }
 
 // Namespace _zm_weap_beacon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc674da7, Offset: 0x1108
 // Size: 0x34
 function function_42cb41ec(origin) {

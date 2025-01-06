@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/archetype_human_riotshield;
+#using scripts/shared/ai/systems/ai_interface;
 
 #namespace namespace_cbd97d62;
 
 // Namespace namespace_cbd97d62
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb3adaaba, Offset: 0x188
 // Size: 0x1ec
 function function_8f5cbafa() {

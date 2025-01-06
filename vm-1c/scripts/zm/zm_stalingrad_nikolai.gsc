@@ -1,38 +1,38 @@
-#using scripts/zm/zm_stalingrad_vo;
-#using scripts/zm/zm_stalingrad_util;
-#using scripts/zm/zm_stalingrad_pap_quest;
-#using scripts/zm/zm_stalingrad_ee_main;
-#using scripts/zm/zm_stalingrad_drop_pods;
-#using scripts/zm/zm_stalingrad_dragon;
-#using scripts/zm/zm_stalingrad_audio;
-#using scripts/zm/zm_siegebot_nikolai;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_ai_raz;
-#using scripts/zm/_util;
-#using scripts/zm/_load;
-#using scripts/shared/vehicles/_sentinel_drone;
+#using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
 #using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/music_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_sentinel_drone;
+#using scripts/zm/_load;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_ai_raz;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_siegebot_nikolai;
+#using scripts/zm/zm_stalingrad_audio;
+#using scripts/zm/zm_stalingrad_dragon;
+#using scripts/zm/zm_stalingrad_drop_pods;
+#using scripts/zm/zm_stalingrad_ee_main;
+#using scripts/zm/zm_stalingrad_pap_quest;
+#using scripts/zm/zm_stalingrad_util;
+#using scripts/zm/zm_stalingrad_vo;
 
 #namespace zm_stalingrad_nikolai;
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59ff0770, Offset: 0x860
 // Size: 0xe4
 function main() {
@@ -47,7 +47,7 @@ function main() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdb8316f, Offset: 0x950
 // Size: 0x1d4
 function function_cf4e4fc1() {
@@ -71,7 +71,7 @@ function function_cf4e4fc1() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcae5356f, Offset: 0xb30
 // Size: 0x3a6
 function function_a21082e5() {
@@ -113,7 +113,7 @@ function function_a21082e5() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x13deb961, Offset: 0xee0
 // Size: 0x282
 function function_885ea49f() {
@@ -137,7 +137,7 @@ function function_885ea49f() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdce7651d, Offset: 0x1170
 // Size: 0x10a4
 function function_6afa5293() {
@@ -279,7 +279,7 @@ function function_6afa5293() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe3973fbd, Offset: 0x2220
 // Size: 0x36
 function function_f8190c14() {
@@ -291,7 +291,7 @@ function function_f8190c14() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3015cb32, Offset: 0x2260
 // Size: 0x28e
 function function_d9ffbd23() {
@@ -334,7 +334,7 @@ function function_d9ffbd23() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4529b19, Offset: 0x24f8
 // Size: 0x3cc
 function function_c291114d() {
@@ -393,7 +393,7 @@ function function_c291114d() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2d701073, Offset: 0x28d0
 // Size: 0x10e
 function function_57b59893() {
@@ -414,7 +414,7 @@ function function_57b59893() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5315c805, Offset: 0x29e8
 // Size: 0x96
 function function_b8f2ff49() {
@@ -429,7 +429,7 @@ function function_b8f2ff49() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4efcb69d, Offset: 0x2a88
 // Size: 0x250
 function function_f56920ff(var_d4d0fbf9) {
@@ -467,7 +467,7 @@ function function_f56920ff(var_d4d0fbf9) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdb6eff2b, Offset: 0x2ce0
 // Size: 0xec
 function function_29d15688() {
@@ -491,7 +491,7 @@ function function_29d15688() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaea7a2cf, Offset: 0x2dd8
 // Size: 0xd4
 function function_960cbfc1() {
@@ -514,7 +514,7 @@ function function_960cbfc1() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x556067e4, Offset: 0x2eb8
 // Size: 0xcc
 function function_8b21fdfe() {
@@ -537,7 +537,7 @@ function function_8b21fdfe() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x42b7437f, Offset: 0x2f90
 // Size: 0x1a4
 function function_39d2d4b6() {
@@ -563,7 +563,7 @@ function function_39d2d4b6() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x62828d55, Offset: 0x3140
 // Size: 0xf2
 function function_f75d4706(s_pos, str_pos) {
@@ -596,7 +596,7 @@ function function_f75d4706(s_pos, str_pos) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4aa06d27, Offset: 0x3240
 // Size: 0x32c
 function function_3c68f919(var_74557a8b) {
@@ -666,7 +666,7 @@ function function_3c68f919(var_74557a8b) {
     }
     var_b06830e5 = self siegebot_nikolai::jump_to(s_point.origin);
     if (var_b06830e5) {
-        self waittill(#"hash_48269e0e");
+        self waittill(#"jump_finished");
         self.var_64627ad6 = s_point.script_string;
         return;
     }
@@ -674,7 +674,7 @@ function function_3c68f919(var_74557a8b) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xed6d48e9, Offset: 0x3578
 // Size: 0x148
 function function_1d0e6184() {
@@ -700,7 +700,7 @@ function function_1d0e6184() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfaa536a8, Offset: 0x36c8
 // Size: 0x92
 function function_211641b9() {
@@ -711,7 +711,7 @@ function function_211641b9() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb5913637, Offset: 0x3768
 // Size: 0x3f4
 function function_1679e5f0() {
@@ -762,7 +762,7 @@ function function_1679e5f0() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4a09bb1e, Offset: 0x3b68
 // Size: 0x82
 function function_6e418eff(var_56d259ba) {
@@ -780,7 +780,7 @@ function function_6e418eff(var_56d259ba) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7772bf04, Offset: 0x3bf8
 // Size: 0xac
 function function_830cf1ca() {
@@ -795,7 +795,7 @@ function function_830cf1ca() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec3c78a6, Offset: 0x3cb0
 // Size: 0x14a
 function function_b79713c() {
@@ -814,7 +814,7 @@ function function_b79713c() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xecc0fff6, Offset: 0x3e08
 // Size: 0x24
 function function_dc342bfa(s_point) {
@@ -822,7 +822,7 @@ function function_dc342bfa(s_point) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xed95885a, Offset: 0x3e38
 // Size: 0x1c8
 function function_cb725ad1() {
@@ -854,7 +854,7 @@ function function_cb725ad1() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd15728f7, Offset: 0x4008
 // Size: 0x50
 function function_ec910337(var_663b2442) {
@@ -867,14 +867,14 @@ function function_ec910337(var_663b2442) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf6bc34ca, Offset: 0x4060
 // Size: 0x1c4
 function function_4fd3f4f9(var_8087702e) {
     self endon(#"death");
     var_6be58df = struct::get_array(var_8087702e, "targetname");
     var_6be58df = array::sort_by_script_int(var_6be58df, 1);
-    self waittill(#"hash_f07646c0");
+    self waittill(#"completed_spawning");
     self setspeed(10);
     while (true) {
         self function_716d82f6();
@@ -897,7 +897,7 @@ function function_4fd3f4f9(var_8087702e) {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9e688e0c, Offset: 0x4230
 // Size: 0x17e
 function function_716d82f6() {
@@ -915,7 +915,7 @@ function function_716d82f6() {
 }
 
 // Namespace zm_stalingrad_nikolai
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6db72bf8, Offset: 0x43b8
 // Size: 0x5a
 function function_934917cc(e_inflictor, str_mod, w_weapon) {

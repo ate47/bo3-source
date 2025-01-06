@@ -1,15 +1,15 @@
-#using scripts/shared/math_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/ai/archetype_zombie_dog_interface;
 #using scripts/shared/ai/archetype_mocomps_utility;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
 #using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/archetype_zombie_dog_interface;
+#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
 
 #namespace namespace_1db6d2c9;
 
@@ -29,7 +29,7 @@ function autoexec registerbehaviorscriptfunctions() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3f2bf9c1, Offset: 0x540
 // Size: 0x1b8
 function archetypezombiedogblackboardinit() {
@@ -62,7 +62,7 @@ function archetypezombiedogblackboardinit() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xa802fde6, Offset: 0x700
 // Size: 0x34
 function private archetypezombiedogonanimscriptedcallback(entity) {
@@ -71,7 +71,7 @@ function private archetypezombiedogonanimscriptedcallback(entity) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf20ce35d, Offset: 0x740
 // Size: 0x8e
 function bb_getshouldrunstatus() {
@@ -87,7 +87,7 @@ function bb_getshouldrunstatus() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ae64f5d, Offset: 0x7d8
 // Size: 0xbe
 function bb_getshouldhowlstatus() {
@@ -106,7 +106,7 @@ function bb_getshouldhowlstatus() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x620981f, Offset: 0x8a0
 // Size: 0x42
 function getyaw(org) {
@@ -115,7 +115,7 @@ function getyaw(org) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd4d00370, Offset: 0x8f0
 // Size: 0xa0
 function absyawtoenemy() {
@@ -129,7 +129,7 @@ function absyawtoenemy() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x51b27044, Offset: 0x998
 // Size: 0x234
 function need_to_run() {
@@ -166,7 +166,7 @@ function need_to_run() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x51d4d9a5, Offset: 0xbd8
 // Size: 0x1ec
 function private is_target_valid(dog, target) {
@@ -209,7 +209,7 @@ function private is_target_valid(dog, target) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x58636a97, Offset: 0xdd0
 // Size: 0x26e
 function private get_favorite_enemy(dog) {
@@ -249,7 +249,7 @@ function private get_favorite_enemy(dog) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf80434a, Offset: 0x1048
 // Size: 0x2e
 function get_last_valid_position() {
@@ -260,7 +260,7 @@ function get_last_valid_position() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe0f97c6e, Offset: 0x1080
 // Size: 0x280
 function get_locomotion_target(behaviortreeentity) {
@@ -289,7 +289,7 @@ function get_locomotion_target(behaviortreeentity) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xae29f58e, Offset: 0x1308
 // Size: 0x3c0
 function zombiedogtargetservice(behaviortreeentity) {
@@ -344,7 +344,7 @@ function zombiedogtargetservice(behaviortreeentity) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8c4c8c99, Offset: 0x16d0
 // Size: 0x1e8
 function zombiedogshouldmelee(behaviortreeentity) {
@@ -355,9 +355,9 @@ function zombiedogshouldmelee(behaviortreeentity) {
         meleedist = 72;
         if (distancesquared(behaviortreeentity.origin, behaviortreeentity.favoriteenemy.origin) < meleedist * meleedist && behaviortreeentity cansee(behaviortreeentity.favoriteenemy)) {
             var_28ae2267 = behaviortreeentity.origin + (0, 0, 40);
-            var_b6236d9d = behaviortreeentity.favoriteenemy geteye();
+            enemy_eye = behaviortreeentity.favoriteenemy geteye();
             clip_mask = 1 | 8;
-            trace = physicstrace(var_28ae2267, var_b6236d9d, (0, 0, 0), (0, 0, 0), self, clip_mask);
+            trace = physicstrace(var_28ae2267, enemy_eye, (0, 0, 0), (0, 0, 0), self, clip_mask);
             can_melee = isdefined(trace["entity"]) && (trace["fraction"] == 1 || trace["entity"] == behaviortreeentity.favoriteenemy);
             if (isdefined(can_melee) && can_melee) {
                 return true;
@@ -368,7 +368,7 @@ function zombiedogshouldmelee(behaviortreeentity) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3b6eac05, Offset: 0x18c0
 // Size: 0x24
 function zombiedogshouldwalk(behaviortreeentity) {
@@ -376,7 +376,7 @@ function zombiedogshouldwalk(behaviortreeentity) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa7ba0b7b, Offset: 0x18f0
 // Size: 0x24
 function zombiedogshouldrun(behaviortreeentity) {
@@ -384,7 +384,7 @@ function zombiedogshouldrun(behaviortreeentity) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x515f4316, Offset: 0x1920
 // Size: 0x166
 function use_low_attack() {
@@ -405,7 +405,7 @@ function use_low_attack() {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc19e23dd, Offset: 0x1a90
 // Size: 0xa0
 function zombiedogmeleeaction(behaviortreeentity, asmstatename) {
@@ -420,7 +420,7 @@ function zombiedogmeleeaction(behaviortreeentity, asmstatename) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe2f947dc, Offset: 0x1b38
 // Size: 0x38
 function zombiedogmeleeactionterminate(behaviortreeentity, asmstatename) {
@@ -429,7 +429,7 @@ function zombiedogmeleeactionterminate(behaviortreeentity, asmstatename) {
 }
 
 // Namespace namespace_1db6d2c9
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x217e011f, Offset: 0x1b78
 // Size: 0x44
 function zombiedoggravity(entity, attribute, oldvalue, value) {

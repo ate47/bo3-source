@@ -1,35 +1,35 @@
-#using scripts/cp/doa/_doa_player_challenge_room;
-#using scripts/cp/doa/_doa_outro;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_fate;
-#using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_tesla_pickup;
-#using scripts/cp/doa/_doa_vehicle_pickup;
-#using scripts/cp/doa/_doa_turret_pickup;
-#using scripts/cp/doa/_doa_audio;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy_boss;
-#using scripts/cp/doa/_doa_enemy;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_audio;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_enemy_boss;
+#using scripts/cp/doa/_doa_fate;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_hazard;
+#using scripts/cp/doa/_doa_outro;
 #using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_challenge_room;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_tesla_pickup;
+#using scripts/cp/doa/_doa_turret_pickup;
 #using scripts/cp/doa/_doa_utility;
+#using scripts/cp/doa/_doa_vehicle_pickup;
 #using scripts/cp/gametypes/_globallogic_score;
 #using scripts/shared/array_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_693feb87;
 
@@ -309,7 +309,7 @@ function function_437a340d(var_73419762) {
         self.ignoreme = 1;
         self freezecontrols(1);
         self thread namespace_49107f3a::function_d1686f4c("menuresponse", 2, "menuresponse", "notarealmenu", "notarealresponse");
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         /#
             namespace_49107f3a::debugmsg("<dev string:xa0>" + menu + "<dev string:xb0>" + response);
         #/
@@ -352,7 +352,7 @@ function on_player_spawned() {
     self namespace_831a4a7c::function_7d7a7fde();
     self namespace_831a4a7c::function_60123d1c();
     self util::set_lighting_state();
-    self notify(#"hash_52c9c74a", "CP_UNLOCK_DOA");
+    self notify(#"give_achievement", "CP_UNLOCK_DOA");
     var_9774756a = 0;
     if (isdefined(level.doa.var_e6653624)) {
         if (!isinarray(level.doa.var_e6653624, self.name)) {
@@ -603,7 +603,7 @@ function function_53bcdb30() {
     level.doa.rules.var_fd29bc1 = 9;
     level.doa.rules.var_42117843 = 9;
     level.doa.rules.var_376b21db = 9;
-    level.doa.rules.var_385b385d = 9;
+    level.doa.rules.max_multiplier = 9;
     level.doa.rules.default_weapon = "zombietron_lmg";
     level.doa.rules.var_61b88ecb = 200000;
     level.doa.rules.powerup_timeout = 10;

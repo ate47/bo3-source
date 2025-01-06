@@ -1,11 +1,11 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_fx;
 
 // Namespace zm_stalingrad_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xddd33384, Offset: 0x628
 // Size: 0x24
 function init() {
@@ -14,7 +14,7 @@ function init() {
 }
 
 // Namespace zm_stalingrad_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3e0c4437, Offset: 0x658
 // Size: 0x1fa
 function function_f45953c() {
@@ -39,7 +39,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_stalingrad_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x860
 // Size: 0x4
 function function_e6258024() {
@@ -47,7 +47,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_stalingrad_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd5ad6fbd, Offset: 0x870
 // Size: 0xaa
 function function_f205a5f1() {

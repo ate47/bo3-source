@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/exploder_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace fx;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a558064, Offset: 0x208
 // Size: 0x24
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x84565917, Offset: 0x238
 // Size: 0x258
 function player_init(clientnum) {
@@ -63,7 +63,7 @@ function player_init(clientnum) {
 }
 
 // Namespace fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9d50e50d, Offset: 0x498
 // Size: 0x5c
 function validate(fxid, origin) {
@@ -95,7 +95,7 @@ function create_loop_sound() {
 }
 
 // Namespace fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5933beff, Offset: 0x618
 // Size: 0xf4
 function create_effect(type, fxid) {
@@ -134,7 +134,7 @@ function create_loop_effect(fxid) {
 }
 
 // Namespace fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb2a3d3dd, Offset: 0x7e0
 // Size: 0x76
 function set_forward_and_up_vectors() {
@@ -143,7 +143,7 @@ function set_forward_and_up_vectors() {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xae8ebc44, Offset: 0x860
 // Size: 0x4c
 function oneshot_thread(clientnum) {
@@ -166,7 +166,7 @@ function oneshot_thread(clientnum) {
 #/
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4dcbe226, Offset: 0x8c8
 // Size: 0x10c
 function loop_sound(clientnum) {
@@ -184,7 +184,7 @@ function loop_sound(clientnum) {
 }
 
 // Namespace fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4b028e2c, Offset: 0x9e0
 // Size: 0x50
 function lightning(normalfunc, flashfunc) {
@@ -194,7 +194,7 @@ function lightning(normalfunc, flashfunc) {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b1c7f3e, Offset: 0xa38
 // Size: 0xf0
 function loop_thread(clientnum) {
@@ -223,7 +223,7 @@ function loop_thread(clientnum) {
 }
 
 // Namespace fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7638ace2, Offset: 0xb30
 // Size: 0x4c
 function loop_stop(clientnum, timeout) {
@@ -235,7 +235,7 @@ function loop_stop(clientnum, timeout) {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7c655db0, Offset: 0xb88
 // Size: 0x3c
 function create_looper(clientnum) {
@@ -244,7 +244,7 @@ function create_looper(clientnum) {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf1cd1aa5, Offset: 0xbd0
 // Size: 0x1d0
 function loop(clientnum) {
@@ -262,7 +262,7 @@ function loop(clientnum) {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x78622461, Offset: 0xda8
 // Size: 0x144
 function create_trigger(clientnum) {
@@ -303,7 +303,7 @@ function blinky_light(localclientnum, tagname, friendlyfx, enemyfx) {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfe4bad2e, Offset: 0x1050
 // Size: 0x4e
 function stop_blinky_light(localclientnum) {
@@ -316,7 +316,7 @@ function stop_blinky_light(localclientnum) {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x28bf7038, Offset: 0x10a8
 // Size: 0x4c
 function blinky_emp_wait(localclientnum) {

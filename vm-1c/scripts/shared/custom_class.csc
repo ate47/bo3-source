@@ -1,32 +1,32 @@
-#using scripts/shared/lui_shared;
+#using scripts/codescripts/struct;
+#using scripts/core/_multi_extracam;
 #using scripts/shared/_character_customization;
 #using scripts/shared/ai/archetype_damage_effects;
 #using scripts/shared/ai/systems/destructible_character;
 #using scripts/shared/ai/zombie;
-#using scripts/codescripts/struct;
-#using scripts/core/_multi_extracam;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/lui_shared;
 #using scripts/shared/postfx_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 
 #namespace customclass;
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9276f3ab, Offset: 0x580
+// Params 1, eflags: 0x0
+// Checksum 0x720b1a9b, Offset: 0x580
 // Size: 0x24
 function localclientconnect(localclientnum) {
     level thread custom_class_init(localclientnum);
 }
 
 // Namespace customclass
-// Params 0, eflags: 0x1 linked
-// Checksum 0x86d13e10, Offset: 0x5b0
+// Params 0, eflags: 0x0
+// Checksum 0xc0e6b4e0, Offset: 0x5b0
 // Size: 0x124
 function init() {
     level.weapon_script_model = [];
@@ -49,8 +49,8 @@ function init() {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x6b4b9546, Offset: 0x6e0
+// Params 1, eflags: 0x0
+// Checksum 0xf40860b7, Offset: 0x6e0
 // Size: 0x64
 function custom_class_init(localclientnum) {
     level.last_weapon_name[localclientnum] = "";
@@ -60,8 +60,8 @@ function custom_class_init(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x94eaac47, Offset: 0x750
+// Params 1, eflags: 0x0
+// Checksum 0x49b34392, Offset: 0x750
 // Size: 0xc8
 function custom_class_start_threads(localclientnum) {
     level endon(#"disconnect");
@@ -75,8 +75,8 @@ function custom_class_start_threads(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa92b3143, Offset: 0x820
+// Params 1, eflags: 0x0
+// Checksum 0xe39064d7, Offset: 0x820
 // Size: 0xba
 function handle_cac_customization(localclientnum) {
     level endon(#"disconnect");
@@ -93,15 +93,15 @@ function handle_cac_customization(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa5071951, Offset: 0x8e8
+// Params 1, eflags: 0x0
+// Checksum 0x21da7034, Offset: 0x8e8
 // Size: 0x3d4
 function custom_class_update(localclientnum) {
     level endon(#"disconnect");
     level endon("CustomClass_focus" + localclientnum);
     level endon("CustomClass_remove" + localclientnum);
     level endon("CustomClass_closed" + localclientnum);
-    param1, param2, param3, param4, param5, param6, param7 = level waittill("CustomClass_update" + localclientnum);
+    level waittill("CustomClass_update" + localclientnum, param1, param2, param3, param4, param5, param6, param7);
     base_weapon_slot = param1;
     var_dacb3c7 = param2;
     camera = param3;
@@ -144,8 +144,8 @@ function custom_class_update(localclientnum) {
 }
 
 // Namespace customclass
-// Params 2, eflags: 0x1 linked
-// Checksum 0xe6833470, Offset: 0xcc8
+// Params 2, eflags: 0x0
+// Checksum 0xd0f575e7, Offset: 0xcc8
 // Size: 0x84
 function toggle_locked_weapon_shader(localclientnum, is_item_unlocked) {
     if (!isdefined(is_item_unlocked)) {
@@ -162,8 +162,8 @@ function toggle_locked_weapon_shader(localclientnum, is_item_unlocked) {
 }
 
 // Namespace customclass
-// Params 2, eflags: 0x1 linked
-// Checksum 0xe05208a5, Offset: 0xd58
+// Params 2, eflags: 0x0
+// Checksum 0x788404d1, Offset: 0xd58
 // Size: 0x7c
 function function_db89bd0c(localclientnum, var_40e5de05) {
     if (!isdefined(var_40e5de05)) {
@@ -180,8 +180,8 @@ function function_db89bd0c(localclientnum, var_40e5de05) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xb71f6687, Offset: 0xde0
+// Params 1, eflags: 0x0
+// Checksum 0xe5f0dfef, Offset: 0xde0
 // Size: 0x90
 function is_optic(attachmentname) {
     csv_filename = "gamedata/weapons/common/attachmentTable.csv";
@@ -194,15 +194,15 @@ function is_optic(attachmentname) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x43c1d25a, Offset: 0xe78
+// Params 1, eflags: 0x0
+// Checksum 0xa8a0cde6, Offset: 0xe78
 // Size: 0x344
 function custom_class_attachment_select_focus(localclientnum) {
     level endon(#"disconnect");
     level endon("CustomClass_update" + localclientnum);
     level endon("CustomClass_remove" + localclientnum);
     level endon("CustomClass_closed" + localclientnum);
-    param1, param2, param3, param4, param5, param6 = level waittill("CustomClass_focus" + localclientnum);
+    level waittill("CustomClass_focus" + localclientnum, param1, param2, param3, param4, param5, param6);
     level endon("CustomClass_focus" + localclientnum);
     base_weapon_slot = param1;
     var_dacb3c7 = param2;
@@ -243,15 +243,15 @@ function custom_class_attachment_select_focus(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x648093a7, Offset: 0x11c8
+// Params 1, eflags: 0x0
+// Checksum 0xbee02904, Offset: 0x11c8
 // Size: 0x1d2
 function custom_class_remove(localclientnum) {
     level endon(#"disconnect");
     level endon("CustomClass_update" + localclientnum);
     level endon("CustomClass_focus" + localclientnum);
     level endon("CustomClass_closed" + localclientnum);
-    param1, param2, param3, param4, param5, param6 = level waittill("CustomClass_remove" + localclientnum);
+    level waittill("CustomClass_remove" + localclientnum, param1, param2, param3, param4, param5, param6);
     postfx::setfrontendstreamingoverlay(localclientnum, "cac", 0);
     enablefrontendlockedweaponoverlay(localclientnum, 0);
     enablefrontendtokenlockedweaponoverlay(localclientnum, 0);
@@ -267,15 +267,15 @@ function custom_class_remove(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1a54d780, Offset: 0x13a8
+// Params 1, eflags: 0x0
+// Checksum 0xfd2074fd, Offset: 0x13a8
 // Size: 0x13a
 function custom_class_closed(localclientnum) {
     level endon(#"disconnect");
     level endon("CustomClass_update" + localclientnum);
     level endon("CustomClass_focus" + localclientnum);
     level endon("CustomClass_remove" + localclientnum);
-    param1, param2, param3, param4, param5, param6 = level waittill("CustomClass_closed" + localclientnum);
+    level waittill("CustomClass_closed" + localclientnum, param1, param2, param3, param4, param5, param6);
     if (isdefined(level.weapon_script_model[localclientnum])) {
         level.weapon_script_model[localclientnum] forcedelete();
     }
@@ -286,8 +286,8 @@ function custom_class_closed(localclientnum) {
 }
 
 // Namespace customclass
-// Params 3, eflags: 0x1 linked
-// Checksum 0xeedd8dab, Offset: 0x14f0
+// Params 3, eflags: 0x0
+// Checksum 0x10703eb, Offset: 0x14f0
 // Size: 0x84
 function spawn_weapon_model(localclientnum, origin, angles) {
     weapon_model = spawn(localclientnum, origin, "script_model");
@@ -299,8 +299,8 @@ function spawn_weapon_model(localclientnum, origin, angles) {
 }
 
 // Namespace customclass
-// Params 2, eflags: 0x1 linked
-// Checksum 0xb2ef07ee, Offset: 0x1580
+// Params 2, eflags: 0x0
+// Checksum 0xe1ffd642, Offset: 0x1580
 // Size: 0x108
 function function_2632634e(localclientnum, var_cf4497db) {
     var_5a183cc0 = strtok(var_cf4497db, ",");
@@ -313,8 +313,8 @@ function function_2632634e(localclientnum, var_cf4497db) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5f20b684, Offset: 0x1690
+// Params 1, eflags: 0x0
+// Checksum 0xdc31e644, Offset: 0x1690
 // Size: 0xc4
 function hide_paintshop_bg(localclientnum) {
     paintshop_bg = getent(localclientnum, "paintshop_black", "targetname");
@@ -328,8 +328,8 @@ function hide_paintshop_bg(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9b49ef47, Offset: 0x1760
+// Params 1, eflags: 0x0
+// Checksum 0x874c035d, Offset: 0x1760
 // Size: 0x9c
 function show_paintshop_bg(localclientnum) {
     paintshop_bg = getent(localclientnum, "paintshop_black", "targetname");
@@ -340,8 +340,8 @@ function show_paintshop_bg(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1446350e, Offset: 0x1808
+// Params 1, eflags: 0x0
+// Checksum 0x2f6a6b82, Offset: 0x1808
 // Size: 0x3c
 function get_camo_index(localclientnum) {
     if (!isdefined(level.camo_index[localclientnum])) {
@@ -351,8 +351,8 @@ function get_camo_index(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xcfd735d9, Offset: 0x1850
+// Params 1, eflags: 0x0
+// Checksum 0x267c934e, Offset: 0x1850
 // Size: 0x3c
 function get_reticle_index(localclientnum) {
     if (!isdefined(level.reticle_index[localclientnum])) {
@@ -362,8 +362,8 @@ function get_reticle_index(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9e65d4b5, Offset: 0x1898
+// Params 1, eflags: 0x0
+// Checksum 0x3edcf972, Offset: 0x1898
 // Size: 0x3c
 function function_bcfb8776(localclientnum) {
     if (!isdefined(level.show_player_tag[localclientnum])) {
@@ -373,8 +373,8 @@ function function_bcfb8776(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x2f13a37, Offset: 0x18e0
+// Params 1, eflags: 0x0
+// Checksum 0x5da5de55, Offset: 0x18e0
 // Size: 0x3c
 function get_show_emblem(localclientnum) {
     if (!isdefined(level.show_emblem[localclientnum])) {
@@ -384,8 +384,8 @@ function get_show_emblem(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf03abbd5, Offset: 0x1928
+// Params 1, eflags: 0x0
+// Checksum 0x64337382, Offset: 0x1928
 // Size: 0x3c
 function get_show_paintshop(localclientnum) {
     if (!isdefined(level.show_paintshop[localclientnum])) {
@@ -395,8 +395,8 @@ function get_show_paintshop(localclientnum) {
 }
 
 // Namespace customclass
-// Params 2, eflags: 0x1 linked
-// Checksum 0x3cd10e22, Offset: 0x1970
+// Params 2, eflags: 0x0
+// Checksum 0x3ac6ad71, Offset: 0x1970
 // Size: 0x18c
 function function_f3037b75(localclientnum, weapon_options_param) {
     weapon_options = strtok(weapon_options_param, ",");
@@ -411,8 +411,8 @@ function function_f3037b75(localclientnum, weapon_options_param) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7b9a907f, Offset: 0x1b08
+// Params 1, eflags: 0x0
+// Checksum 0xc619cede, Offset: 0x1b08
 // Size: 0xa8
 function get_lerp_duration(camera) {
     lerpduration = 0;
@@ -426,8 +426,8 @@ function get_lerp_duration(camera) {
 }
 
 // Namespace customclass
-// Params 2, eflags: 0x1 linked
-// Checksum 0x70878526, Offset: 0x1bb8
+// Params 2, eflags: 0x0
+// Checksum 0x46b16b5, Offset: 0x1bb8
 // Size: 0x19c
 function setup_paintshop_bg(localclientnum, camera) {
     if (isdefined(camera)) {
@@ -448,8 +448,8 @@ function setup_paintshop_bg(localclientnum, camera) {
 }
 
 // Namespace customclass
-// Params 6, eflags: 0x1 linked
-// Checksum 0xbb8ce4e7, Offset: 0x1d60
+// Params 6, eflags: 0x0
+// Checksum 0x8471ad4a, Offset: 0x1d60
 // Size: 0x28c
 function transition_camera_immediate(localclientnum, weapontype, camera, subxcam, lerpduration, notetrack) {
     xcam = getweaponxcam(level.current_weapon[localclientnum], camera);
@@ -478,8 +478,8 @@ function transition_camera_immediate(localclientnum, weapontype, camera, subxcam
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xff1d246d, Offset: 0x1ff8
+// Params 1, eflags: 0x0
+// Checksum 0x52802b2a, Offset: 0x1ff8
 // Size: 0x32
 function wait_preload_weapon(localclientnum) {
     if (level.preload_weapon_complete[localclientnum]) {
@@ -489,8 +489,8 @@ function wait_preload_weapon(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x37d959d2, Offset: 0x2038
+// Params 1, eflags: 0x0
+// Checksum 0x77c385eb, Offset: 0x2038
 // Size: 0x8c
 function preload_weapon_watcher(localclientnum) {
     level endon("preload_weapon_changing_" + localclientnum);
@@ -506,8 +506,8 @@ function preload_weapon_watcher(localclientnum) {
 }
 
 // Namespace customclass
-// Params 3, eflags: 0x1 linked
-// Checksum 0x5670f520, Offset: 0x20d0
+// Params 3, eflags: 0x0
+// Checksum 0x31d5848f, Offset: 0x20d0
 // Size: 0x2fc
 function preload_weapon_model(localclientnum, newweaponstring, should_update_weapon_options) {
     if (!isdefined(should_update_weapon_options)) {
@@ -542,8 +542,8 @@ function preload_weapon_model(localclientnum, newweaponstring, should_update_wea
 }
 
 // Namespace customclass
-// Params 5, eflags: 0x1 linked
-// Checksum 0xc490e1f1, Offset: 0x23d8
+// Params 5, eflags: 0x0
+// Checksum 0x6839cd58, Offset: 0x23d8
 // Size: 0x474
 function update_weapon_script_model(localclientnum, newweaponstring, should_update_weapon_options, is_item_unlocked, var_40e5de05) {
     if (!isdefined(should_update_weapon_options)) {
@@ -588,8 +588,8 @@ function update_weapon_script_model(localclientnum, newweaponstring, should_upda
 }
 
 // Namespace customclass
-// Params 9, eflags: 0x1 linked
-// Checksum 0x12e5e38, Offset: 0x2858
+// Params 9, eflags: 0x0
+// Checksum 0x8f7111f6, Offset: 0x2858
 // Size: 0x134
 function transition_camera(localclientnum, weapontype, camera, subxcam, initialdelay, lerpduration, notetrack, newweaponstring, should_update_weapon_options) {
     if (!isdefined(should_update_weapon_options)) {
@@ -612,8 +612,8 @@ function transition_camera(localclientnum, weapontype, camera, subxcam, initiald
 }
 
 // Namespace customclass
-// Params 2, eflags: 0x1 linked
-// Checksum 0x89325b4d, Offset: 0x2998
+// Params 2, eflags: 0x0
+// Checksum 0x67ee54fe, Offset: 0x2998
 // Size: 0x11c
 function get_attachments_intersection(oldweapon, newweapon) {
     if (!isdefined(oldweapon)) {
@@ -634,14 +634,14 @@ function get_attachments_intersection(oldweapon, newweapon) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0xd249ec2b, Offset: 0x2ac0
+// Params 1, eflags: 0x0
+// Checksum 0xb020740c, Offset: 0x2ac0
 // Size: 0xf8
 function handle_cac_customization_focus(localclientnum) {
     level endon(#"disconnect");
     level endon("cam_customization_closed" + localclientnum);
     while (true) {
-        param1, param2 = level waittill("cam_customization_focus" + localclientnum);
+        level waittill("cam_customization_focus" + localclientnum, param1, param2);
         base_weapon_slot = param1;
         notetrack = param2;
         if (isdefined(level.weapon_script_model[localclientnum])) {
@@ -652,14 +652,14 @@ function handle_cac_customization_focus(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1c1a08f1, Offset: 0x2bc0
+// Params 1, eflags: 0x0
+// Checksum 0xd32c4744, Offset: 0x2bc0
 // Size: 0x1e0
 function function_db76bfd5(localclientnum) {
     level endon(#"disconnect");
     level endon("cam_customization_closed" + localclientnum);
     while (true) {
-        var_d01f310b, var_f19f1a0d, var_a7708f26 = level waittill("cam_customization_wo" + localclientnum);
+        level waittill("cam_customization_wo" + localclientnum, var_d01f310b, var_f19f1a0d, var_a7708f26);
         if (isdefined(level.weapon_script_model[localclientnum])) {
             if (isdefined(var_a7708f26) && var_a7708f26) {
                 var_f19f1a0d = 0;
@@ -683,14 +683,14 @@ function function_db76bfd5(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x8f953d29, Offset: 0x2da8
+// Params 1, eflags: 0x0
+// Checksum 0x722245a2, Offset: 0x2da8
 // Size: 0x138
 function function_ade2f410(localclientnum) {
     level endon(#"disconnect");
     level endon("cam_customization_closed" + localclientnum);
     while (true) {
-        var_d1a9fc4f, var_73feac4c = level waittill("cam_customization_acv" + localclientnum);
+        level waittill("cam_customization_acv" + localclientnum, var_d1a9fc4f, var_73feac4c);
         for (i = 0; i < level.attachment_names[localclientnum].size; i++) {
             if (level.attachment_names[localclientnum][i] == var_d1a9fc4f) {
                 level.var_ac376924[localclientnum][i] = int(var_73feac4c);
@@ -704,12 +704,12 @@ function function_ade2f410(localclientnum) {
 }
 
 // Namespace customclass
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1b7053d2, Offset: 0x2ee8
+// Params 1, eflags: 0x0
+// Checksum 0x29d37208, Offset: 0x2ee8
 // Size: 0x1be
 function handle_cac_customization_closed(localclientnum) {
     level endon(#"disconnect");
-    param1, param2, param3, param4 = level waittill("cam_customization_closed" + localclientnum);
+    level waittill("cam_customization_closed" + localclientnum, param1, param2, param3, param4);
     if (isdefined(level.weapon_clientscript_cac_model[localclientnum]) && isdefined(level.weapon_clientscript_cac_model[localclientnum][level.var_26fcd0f0])) {
         level.weapon_clientscript_cac_model[localclientnum][level.var_26fcd0f0] setweaponrenderoptions(get_camo_index(localclientnum), get_reticle_index(localclientnum), function_bcfb8776(localclientnum), get_show_emblem(localclientnum), get_show_paintshop(localclientnum));
         for (i = 0; i < level.attachment_names[localclientnum].size; i++) {

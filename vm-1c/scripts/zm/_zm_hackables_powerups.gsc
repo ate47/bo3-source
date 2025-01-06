@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_equip_hacker;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_equip_hacker;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
 
 #namespace namespace_27e18f93;
 
 // Namespace namespace_27e18f93
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde066432, Offset: 0x1c0
 // Size: 0x66
 function function_a3cb1732(name) {
@@ -27,12 +27,12 @@ function function_a3cb1732(name) {
 }
 
 // Namespace namespace_27e18f93
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc54cb437, Offset: 0x230
 // Size: 0x128
 function function_5c836466() {
     while (true) {
-        powerup = level waittill(#"powerup_dropped");
+        level waittill(#"powerup_dropped", powerup);
         if (!function_a3cb1732(powerup.powerup_name)) {
             struct = spawnstruct();
             struct.origin = powerup.origin;
@@ -48,7 +48,7 @@ function function_5c836466() {
 }
 
 // Namespace namespace_27e18f93
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa3063f9c, Offset: 0x360
 // Size: 0x3c
 function function_6f4d246b(var_b8ec5af9) {
@@ -58,7 +58,7 @@ function function_6f4d246b(var_b8ec5af9) {
 }
 
 // Namespace namespace_27e18f93
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x586497cc, Offset: 0x3a8
 // Size: 0x1b4
 function function_2d16ef55(hacker) {

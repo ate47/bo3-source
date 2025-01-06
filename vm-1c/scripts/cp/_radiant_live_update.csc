@@ -13,7 +13,7 @@
     }
 
     // Namespace radiant_live_update
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x85ad79b0, Offset: 0xd8
     // Size: 0x1c
     function __init__() {
@@ -21,12 +21,12 @@
     }
 
     // Namespace radiant_live_update
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x82e7522d, Offset: 0x100
     // Size: 0x62
     function scriptstruct_debug_render() {
         while (true) {
-            selected_struct = level waittill(#"liveupdate");
+            level waittill(#"liveupdate", selected_struct);
             if (isdefined(selected_struct)) {
                 level thread render_struct(selected_struct);
                 continue;
@@ -36,7 +36,7 @@
     }
 
     // Namespace radiant_live_update
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2fffcd7e, Offset: 0x170
     // Size: 0x98
     function render_struct(selected_struct) {

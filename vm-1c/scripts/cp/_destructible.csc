@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace destructible;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace destructible
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5fc646db, Offset: 0x140
 // Size: 0x4c
 function __init__() {
@@ -20,7 +20,7 @@ function __init__() {
 }
 
 // Namespace destructible
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x69261b71, Offset: 0x198
 // Size: 0x74
 function playgrenaderumble(localclientnum, position) {
@@ -29,7 +29,7 @@ function playgrenaderumble(localclientnum, position) {
 }
 
 // Namespace destructible
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x38a4089c, Offset: 0x218
 // Size: 0x1a4
 function doexplosion(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

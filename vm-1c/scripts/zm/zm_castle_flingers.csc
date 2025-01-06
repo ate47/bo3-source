@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/postfx_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_castle_flingers;
 
 // Namespace zm_castle_flingers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd587833e, Offset: 0x258
 // Size: 0x82
 function main() {
@@ -17,7 +17,7 @@ function main() {
 }
 
 // Namespace zm_castle_flingers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8529c12, Offset: 0x2e8
 // Size: 0x16c
 function register_clientfields() {
@@ -29,7 +29,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_castle_flingers
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1d14ee41, Offset: 0x460
 // Size: 0x15c
 function flinger_flying_postfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -51,7 +51,7 @@ function flinger_flying_postfx(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_castle_flingers
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa4697bcc, Offset: 0x5c8
 // Size: 0xbe
 function flinger_pad_active_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -66,7 +66,7 @@ function flinger_pad_active_fx(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_castle_flingers
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x820ab1a5, Offset: 0x690
 // Size: 0x6c
 function flinger_land_smash(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -74,7 +74,7 @@ function flinger_land_smash(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_castle_flingers
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xab67d2d3, Offset: 0x708
 // Size: 0x6c
 function function_3762396c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -82,7 +82,7 @@ function function_3762396c(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_flingers
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1a25c659, Offset: 0x780
 // Size: 0x84
 function function_a0a5829(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -94,7 +94,7 @@ function function_a0a5829(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_castle_flingers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb55a6aa8, Offset: 0x810
 // Size: 0x9c
 function function_7bd5b92f(localclientnum) {

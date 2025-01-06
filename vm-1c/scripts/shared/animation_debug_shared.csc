@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/animation_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #namespace animation;
 
@@ -24,7 +24,7 @@
     }
 
     // Namespace animation
-    // Params 7, eflags: 0x1 linked
+    // Params 7, eflags: 0x0
     // Checksum 0x4ce08cad, Offset: 0x1b8
     // Size: 0x4c0
     function anim_info_render_thread(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, n_blend_out, n_lerp) {
@@ -75,7 +75,7 @@
     }
 
     // Namespace animation
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf464e42, Offset: 0x680
     // Size: 0x3a
     function get_ent_type() {
@@ -83,7 +83,7 @@
     }
 
     // Namespace animation
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3eda4064, Offset: 0x6c8
     // Size: 0x8
     function _init_frame() {
@@ -91,7 +91,7 @@
     }
 
     // Namespace animation
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa115834f, Offset: 0x6d8
     // Size: 0x12
     function _reset_frame() {
@@ -99,7 +99,7 @@
     }
 
     // Namespace animation
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xba824c8c, Offset: 0x6f8
     // Size: 0xe4
     function render_tag(str_tag, str_label) {
@@ -117,7 +117,7 @@
     }
 
     // Namespace animation
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x9d5e1456, Offset: 0x7e8
     // Size: 0x18c
     function anim_origin_render(org, angles, line_length, str_label) {

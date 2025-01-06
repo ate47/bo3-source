@@ -1,13 +1,13 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace multi_extracam;
 
 // Namespace multi_extracam
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x20db4b53, Offset: 0x130
 // Size: 0xb6
 function extracam_reset_index(localclientnum, index) {
@@ -22,7 +22,7 @@ function extracam_reset_index(localclientnum, index) {
 }
 
 // Namespace multi_extracam
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1edafe9a, Offset: 0x1f0
 // Size: 0x62
 function extracam_init_index(localclientnum, target, index) {
@@ -31,7 +31,7 @@ function extracam_init_index(localclientnum, target, index) {
 }
 
 // Namespace multi_extracam
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x5e84865c, Offset: 0x260
 // Size: 0x182
 function extracam_init_item(localclientnum, copy_ent, index) {

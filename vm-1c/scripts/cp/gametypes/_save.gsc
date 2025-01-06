@@ -1,16 +1,16 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
 #using scripts/shared/_oob;
-#using scripts/shared/player_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/load_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/load_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace savegame;
 
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7f8efea, Offset: 0x388
 // Size: 0x11c
 function __init__() {
@@ -37,7 +37,7 @@ function __init__() {
         world.playerdata = [];
     }
     foreach (trig in trigger::get_all()) {
-        if (isdefined(trig.var_d981bb2d) && trig.var_d981bb2d) {
+        if (isdefined(trig.script_checkpoint) && trig.script_checkpoint) {
             trig thread checkpoint_trigger();
         }
     }
@@ -45,7 +45,7 @@ function __init__() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10f70fc8, Offset: 0x4b0
 // Size: 0x20
 function save() {
@@ -55,7 +55,7 @@ function save() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x4d8
 // Size: 0x4
 function load() {
@@ -63,7 +63,7 @@ function load() {
 }
 
 // Namespace savegame
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xffaad58a, Offset: 0x4e8
 // Size: 0x78
 function function_8c0c4b3a(name) {
@@ -74,7 +74,7 @@ function function_8c0c4b3a(name) {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6af5884b, Offset: 0x568
 // Size: 0x32
 function function_1bfdd60e() {
@@ -123,7 +123,7 @@ function function_18a1a0fe() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x40514082, Offset: 0x740
 // Size: 0xa
 function private function_1f201c0b() {
@@ -131,7 +131,7 @@ function private function_1f201c0b() {
 }
 
 // Namespace savegame
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaad627ec, Offset: 0x758
 // Size: 0x142
 function set_player_data(name, value) {
@@ -158,7 +158,7 @@ function set_player_data(name, value) {
 }
 
 // Namespace savegame
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc99594fe, Offset: 0x8a8
 // Size: 0x12a
 function function_36adbb9c(name, defval) {
@@ -199,7 +199,7 @@ function function_cd9b21ef() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8cb05ba6, Offset: 0xac0
 // Size: 0x24a
 function function_37ae30c6() {
@@ -236,7 +236,7 @@ function function_37ae30c6() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89b48c00, Offset: 0xd18
 // Size: 0x26
 function function_f6ab8f28() {
@@ -255,7 +255,7 @@ function function_fb150717() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x7b915531, Offset: 0xda0
 // Size: 0x8c
 function private function_74fcb9ca() {
@@ -271,7 +271,7 @@ function private function_74fcb9ca() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc87fda4f, Offset: 0xe38
 // Size: 0x2c
 function checkpoint_trigger() {
@@ -281,18 +281,18 @@ function checkpoint_trigger() {
 }
 
 // Namespace savegame
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x82f1b4c4, Offset: 0xe70
 // Size: 0x34
 function checkpoint_save(var_c36855a9) {
     if (!isdefined(var_c36855a9)) {
         var_c36855a9 = 0;
     }
-    level thread function_1add9d4a(var_c36855a9);
+    level thread _checkpoint_save_safe(var_c36855a9);
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xeb0
 // Size: 0x4
 function function_d5bb3a54() {
@@ -300,7 +300,7 @@ function function_d5bb3a54() {
 }
 
 // Namespace savegame
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3a937828, Offset: 0xec0
 // Size: 0x29c
 function function_152fdd8c(delay) {
@@ -331,7 +331,7 @@ function function_152fdd8c(delay) {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x856b9d76, Offset: 0x1168
 // Size: 0x16c
 function function_319d38eb() {
@@ -366,13 +366,13 @@ function function_319d38eb() {
 }
 
 // Namespace savegame
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x46adfa6b, Offset: 0x12e0
 // Size: 0x13c
-function private function_1add9d4a(var_c36855a9) {
-    level notify(#"hash_1add9d4a");
-    level endon(#"hash_1add9d4a");
-    level endon(#"hash_7be398c7");
+function private _checkpoint_save_safe(var_c36855a9) {
+    level notify(#"_checkpoint_save_safe");
+    level endon(#"_checkpoint_save_safe");
+    level endon(#"kill_save");
     level endon(#"save_restore");
     wait 0.1;
     while (true) {
@@ -401,7 +401,7 @@ function private function_1add9d4a(var_c36855a9) {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf03359c1, Offset: 0x1428
 // Size: 0x1f0
 function function_147f4ca3() {
@@ -441,7 +441,7 @@ function function_147f4ca3() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xf56b5c4e, Offset: 0x1620
 // Size: 0x266
 function private function_2c89c30c() {
@@ -499,7 +499,7 @@ function private function_2c89c30c() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x640ece73, Offset: 0x1890
 // Size: 0x184
 function private function_a3a9b003() {
@@ -554,7 +554,7 @@ function private function_f70dd749() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3d97fdb9, Offset: 0x1b50
 // Size: 0xde
 function function_2808d83d() {
@@ -569,7 +569,7 @@ function function_2808d83d() {
 }
 
 // Namespace savegame
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xde2a5e1f, Offset: 0x1c38
 // Size: 0x182
 function private function_8dc86b60() {

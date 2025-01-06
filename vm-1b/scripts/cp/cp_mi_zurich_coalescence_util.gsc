@@ -1,38 +1,38 @@
-#using scripts/cp/_hacking;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_hazard;
-#using scripts/cp/_dialog;
+#using scripts/codescripts/struct;
 #using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_hazard;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/_spawnlogic;
-#using scripts/shared/ai/robot_phalanx;
 #using scripts/shared/ai/archetype_locomotion_utility;
-#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/ai/robot_phalanx;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_shared;
 #using scripts/shared/lui_shared;
-#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/gametypes/_save;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace zurich_util;
 
@@ -318,7 +318,7 @@ function function_be06d646() {
 // Size: 0x6d
 function function_c8049804() {
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         if (isplayer(who) && !(isdefined(who.var_e7c2cbb4) && who.var_e7c2cbb4)) {
             who thread function_2f645114();
         }
@@ -453,9 +453,9 @@ function function_b2c5d91c() {
 // Params 2, eflags: 0x0
 // Checksum 0x6ee1b3e7, Offset: 0x2f68
 // Size: 0x1c2
-function function_c90e23b6(str_objective, var_d29f1d08) {
+function function_c90e23b6(str_objective, str_end) {
     level.var_1c26230b = util::function_740f8516("taylor_hero");
-    level.var_1c26230b thread function_f5f0fcce(str_objective, var_d29f1d08);
+    level.var_1c26230b thread function_f5f0fcce(str_objective, str_end);
     if (issubstr(str_objective, "_vortex")) {
         level.var_1c26230b thread function_11726ad(str_objective);
         return;
@@ -491,13 +491,13 @@ function function_53fd6e96(str_objective) {
         if (isdefined(e_player)) {
             self.var_b6fdfd82 = undefined;
             while (isalive(e_player)) {
-                var_974cc07 = self function_843d0ed6(e_player);
+                nd_cover = self function_843d0ed6(e_player);
                 if (self.ignoreall) {
                     self.var_b6fdfd82 = undefined;
-                } else if (isdefined(var_974cc07)) {
-                    setenablenode(var_974cc07, 1);
-                    self setgoal(var_974cc07, 1);
-                    var_974cc07 function_47f5a8d2(e_player);
+                } else if (isdefined(nd_cover)) {
+                    setenablenode(nd_cover, 1);
+                    self setgoal(nd_cover, 1);
+                    nd_cover function_47f5a8d2(e_player);
                     self.var_b6fdfd82 = undefined;
                 } else if (ispointonnavmesh(e_player.origin, self)) {
                     self setgoal(e_player, 0, 256);
@@ -546,13 +546,13 @@ function function_f7f909b0(str_objective) {
 // Params 2, eflags: 0x0
 // Checksum 0xf0294327, Offset: 0x3468
 // Size: 0x1ba
-function function_f5f0fcce(str_objective, var_d29f1d08) {
+function function_f5f0fcce(str_objective, str_end) {
     level endon(#"root_scene_completed");
     if (issubstr(str_objective, "_start")) {
         level waittill(str_objective + "enter_vortex");
     }
-    if (isdefined(var_d29f1d08)) {
-        s_end = struct::get(var_d29f1d08, "targetname");
+    if (isdefined(str_end)) {
+        s_end = struct::get(str_end, "targetname");
     }
     if (issubstr(str_objective, "root_cairo")) {
         var_8839ea8c = "root_cairo_vortex";
@@ -622,8 +622,8 @@ function function_843d0ed6(e_player) {
     if (!isdefined(level.var_6b5304af)) {
         return undefined;
     }
-    foreach (var_974cc07 in level.var_6b5304af) {
-        setenablenode(var_974cc07, 0);
+    foreach (nd_cover in level.var_6b5304af) {
+        setenablenode(nd_cover, 0);
     }
     var_a8a64a67 = arraysortclosest(level.var_6b5304af, e_player.origin, 8, 90, 512);
     for (i = 0; i < var_a8a64a67.size; i++) {
@@ -806,7 +806,7 @@ function function_99af4b5d() {
 // Size: 0x7f
 function function_1f77a211() {
     self endon(#"hash_b1975c04");
-    e_corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", e_corpse);
     function_151fb8bf();
     if (isdefined(e_corpse)) {
         e_corpse clientfield::set("exploding_ai_deaths", 1);
@@ -980,21 +980,21 @@ function function_90de3a76() {
             n_move_time = 3;
             while (true) {
                 self waittill(#"new_cover");
-                for (var_974cc07 = self.node; !isdefined(var_974cc07); var_974cc07 = self.node) {
+                for (nd_cover = self.node; !isdefined(nd_cover); nd_cover = self.node) {
                     wait 1.5;
                 }
                 b_close = undefined;
                 foreach (e_player in level.activeplayers) {
-                    if (distance(e_player.origin, var_974cc07.origin) < -128) {
+                    if (distance(e_player.origin, nd_cover.origin) < -128) {
                         b_close = 1;
                     }
                 }
-                if (distance(self.origin, var_974cc07.origin) < -128) {
+                if (distance(self.origin, nd_cover.origin) < -128) {
                     b_close = 1;
                 }
-                if (randomint(10) > 4 && var_974cc07 !== var_8fb5e5da && !(isdefined(self.var_de36196f) && self.var_de36196f) && !(isdefined(b_close) && b_close)) {
-                    var_8fb5e5da = var_974cc07;
-                    self thread function_bfc7e6a6(var_974cc07.origin);
+                if (randomint(10) > 4 && nd_cover !== var_8fb5e5da && !(isdefined(self.var_de36196f) && self.var_de36196f) && !(isdefined(b_close) && b_close)) {
+                    var_8fb5e5da = nd_cover;
+                    self thread function_bfc7e6a6(nd_cover.origin);
                 }
                 wait 2;
             }
@@ -1301,10 +1301,10 @@ function function_2361541e(str_location) {
         foreach (s_oneshot in var_cf560aad) {
             var_5db4d3e4 = getentarray("zurich_ambient_civ", "targetname");
             var_d10a8335 = array::random(var_5db4d3e4);
-            var_14c918e8 = spawner::simple_spawn_single(var_d10a8335);
-            var_14c918e8 ai::set_ignoreme(1);
-            var_14c918e8 forceteleport(s_oneshot.origin, s_oneshot.angles);
-            var_14c918e8 thread scene::init(s_oneshot.scriptbundlename, var_14c918e8);
+            ai_civ = spawner::simple_spawn_single(var_d10a8335);
+            ai_civ ai::set_ignoreme(1);
+            ai_civ forceteleport(s_oneshot.origin, s_oneshot.angles);
+            ai_civ thread scene::init(s_oneshot.scriptbundlename, ai_civ);
         }
     }
     var_f201bfb1 = struct::get_array(str_location + "_dead_bodies", "targetname");
@@ -1360,7 +1360,7 @@ function function_6a0676d9(a_ents) {
 function function_16f4964d() {
     self endon(#"death");
     while (isdefined(self)) {
-        n_damage, e_attacker = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker);
         if (isplayer(e_attacker)) {
             level.var_71aac273++;
         }
@@ -1398,7 +1398,7 @@ function function_4e396e71() {
 // Size: 0x6d
 function function_ca33eb60() {
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         if (isplayer(who)) {
             str_objective = self.script_objective;
             if (!isdefined(str_objective)) {
@@ -1493,7 +1493,7 @@ function function_dd842585(str_objective, var_ed1d0e16, str_trig) {
     level endon(var_ed1d0e16 + "_done");
     var_50f524fe = getent(str_trig, "targetname");
     while (true) {
-        who = var_50f524fe waittill(#"trigger");
+        var_50f524fe waittill(#"trigger", who);
         if (isplayer(who) && !(isdefined(who.teleporting) && who.teleporting)) {
             who thread function_c51939f4(str_objective, var_ed1d0e16);
             who player_weather(0);
@@ -1816,7 +1816,7 @@ function function_deebcec2(var_51d0e2ea) {
 // Size: 0x72
 function function_c000269f(var_51d0e2ea) {
     self endon(#"hash_65af34bc");
-    e_attacker = var_51d0e2ea waittill(#"death");
+    var_51d0e2ea waittill(#"death", e_attacker);
     if (self === e_attacker) {
         if (isdefined(var_51d0e2ea.scriptvehicletype)) {
             switch (var_51d0e2ea.scriptvehicletype) {
@@ -1951,13 +1951,13 @@ function function_2153e0ef(s_start, s_next, n_multiplier, var_bd62ea22) {
     if (!isdefined(var_bd62ea22)) {
         var_bd62ea22 = 1;
     }
-    var_387f863 = distance(s_next.origin, s_start.origin) / 72 / n_multiplier;
-    self moveto(s_next.origin, var_387f863);
+    n_move = distance(s_next.origin, s_start.origin) / 72 / n_multiplier;
+    self moveto(s_next.origin, n_move);
     if (var_bd62ea22) {
         var_d9f4bdfd = s_next.origin - s_start.origin;
         self.angles = vectortoangles(var_d9f4bdfd);
     }
-    wait var_387f863;
+    wait n_move;
 }
 
 // Namespace zurich_util
@@ -2001,7 +2001,7 @@ function function_3adbd846(str_val, str_key, b_once) {
     if (isdefined(t_trig)) {
         t_trig endon(#"death");
         while (true) {
-            e_triggerer = t_trig waittill(#"trigger");
+            t_trig waittill(#"trigger", e_triggerer);
             var_ccf2685a = isdefined(e_triggerer.owner) && isplayer(e_triggerer.owner);
             if (isplayer(e_triggerer) || var_ccf2685a) {
                 break;
@@ -2773,7 +2773,7 @@ function function_5b0d9c63(var_c7d3f5b3) {
 function function_6d571441() {
     self endon(#"death");
     while (true) {
-        n_damage, e_attacker, _, _, str_damage_type = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker, _, _, str_damage_type);
         self.health = self.health + n_damage;
         var_a4a673a9 = str_damage_type == "MOD_PROJECTILE" || str_damage_type === "MOD_EXPLOSIVE";
         if (isplayer(e_attacker) && var_a4a673a9) {
@@ -3098,7 +3098,7 @@ function function_3f4f84e(str_key, str_val, b_enable) {
     function function_c118d07d() {
         self endon(#"death");
         while (true) {
-            n_damage, e_attacker, v_direction, v_point, str_type, str_tagname, str_modelname, var_2be8aff, w_weapon = self waittill(#"damage");
+            self waittill(#"damage", n_damage, e_attacker, v_direction, v_point, str_type, str_tagname, str_modelname, var_2be8aff, w_weapon);
             var_e548f607 = "<dev string:x1f1>";
             if (!isdefined(str_type)) {
                 str_type = "<dev string:x1f1>";

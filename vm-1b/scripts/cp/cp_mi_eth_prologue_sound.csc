@@ -1,5 +1,5 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace cp_mi_eth_prologue_sound;
 
@@ -38,9 +38,9 @@ function function_4b8b96fe() {
 function function_aca4761() {
     level audio::playloopat("amb_firetruck_distant_alarm", (-1287, -1872, 535));
     level audio::playloopat("evt_firehose", (581, -857, -126));
-    level waittill(#"hash_cfcc0f30");
+    level waittill(#"sndCloseFT");
     level audio::playloopat("amb_firetruck_close_alarm", (-169, -585, -95));
-    level waittill(#"hash_da4c530f");
+    level waittill(#"sndStopFiretruck");
     level audio::stoploopat("amb_firetruck_distant_alarm", (-1287, -1872, 535));
     level audio::stoploopat("amb_firetruck_close_alarm", (-169, -585, -95));
     level audio::stoploopat("evt_firehose", (-169, -585, -95));
@@ -68,9 +68,9 @@ function function_6ce0e63() {
 // Checksum 0x9e10f440, Offset: 0x4c0
 // Size: 0x42
 function function_eddf6028() {
-    level waittill(#"hash_6e2fd964");
+    level waittill(#"sndAPC");
     audio::snd_set_snapshot("cp_prologue_exit_apc");
-    level waittill(#"hash_36f74bd3");
+    level waittill(#"sndAPCend");
     audio::snd_set_snapshot("default");
 }
 
@@ -87,8 +87,8 @@ function function_35acdae6() {
 // Checksum 0x8ec9f7ed, Offset: 0x520
 // Size: 0xbb
 function function_9806d032() {
-    level waittill(#"hash_ef5b1f55");
-    level endon(#"hash_73c9d58d");
+    level waittill(#"sndStartGarage");
+    level endon(#"sndStopGarage");
     location1 = (15816, -749, 454);
     location2 = (15248, -749, 463);
     var_c291c0f3 = (15807, -1927, 478);
@@ -130,10 +130,10 @@ function function_c943c5e5() {
 // Checksum 0xcf3db763, Offset: 0x698
 // Size: 0x6a
 function function_7ec0e1ae() {
-    level waittill(#"hash_dade54fb");
+    level waittill(#"sndBW");
     audio::playloopat("amb_distant_soldier_walla", (8160, 756, 270));
-    level waittill(#"hash_d1ef0d27");
-    level waittill(#"hash_d1ef0d27");
+    level waittill(#"sndStartFakeBattle");
+    level waittill(#"sndStartFakeBattle");
     audio::stoploopat("amb_distant_soldier_walla", (8160, 756, 270));
 }
 
@@ -142,7 +142,7 @@ function function_7ec0e1ae() {
 // Checksum 0x924a7bac, Offset: 0x710
 // Size: 0x62
 function function_eb4e50fb() {
-    level waittill(#"hash_caebb0ab");
+    level waittill(#"sndDBW");
     audio::playloopat("amb_distant_soldier_walla", (12604, 1857, 357));
     level waittill(#"hash_f8c8ddf6");
     audio::stoploopat("amb_distant_soldier_walla", (12604, 1857, 357));
@@ -153,7 +153,7 @@ function function_eb4e50fb() {
 // Checksum 0xc29f3fd8, Offset: 0x780
 // Size: 0x212
 function function_889a9ace() {
-    level waittill(#"hash_dccb7956");
+    level waittill(#"sndDBB");
     audio::playloopat("amb_darkbattle_battery_beep", (13849, 2832, -30));
     audio::playloopat("amb_darkbattle_battery_beep", (13521, 3259, -27));
     audio::playloopat("amb_darkbattle_battery_beep", (13287, 3267, -30));
@@ -162,7 +162,7 @@ function function_889a9ace() {
     audio::playloopat("amb_darkbattle_battery_beep", (13008, 2549, -7));
     audio::playloopat("amb_darkbattle_battery_beep", (13147, 2544, -11));
     audio::playloopat("amb_darkbattle_battery_beep", (13870, 2403, -14));
-    level waittill(#"hash_e94a4dcf");
+    level waittill(#"sndDBBe");
     audio::stoploopat("amb_darkbattle_battery_beep", (13849, 2832, -30));
     audio::stoploopat("amb_darkbattle_battery_beep", (13521, 3259, -27));
     audio::stoploopat("amb_darkbattle_battery_beep", (13287, 3267, -30));

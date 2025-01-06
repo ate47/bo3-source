@@ -3,7 +3,7 @@
 #namespace voice_infection1;
 
 // Namespace voice_infection1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a6da443, Offset: 0x1250
 // Size: 0xd44
 function init_voice() {

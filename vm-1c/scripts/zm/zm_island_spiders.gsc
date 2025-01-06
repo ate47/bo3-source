@@ -1,30 +1,30 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_ai_spiders;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_spiders;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_island_spiders;
 
 // Namespace zm_island_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7cca825, Offset: 0x3e0
 // Size: 0x3c
 function function_8e89793a() {
@@ -34,7 +34,7 @@ function function_8e89793a() {
 }
 
 // Namespace zm_island_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89bdfc37, Offset: 0x428
 // Size: 0x17a
 function function_c102a998() {
@@ -57,7 +57,7 @@ function function_c102a998() {
 }
 
 // Namespace zm_island_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89677d46, Offset: 0x5b0
 // Size: 0x398
 function function_33aa4940() {
@@ -102,10 +102,10 @@ function function_33aa4940() {
                     var_901f5ace[var_901f5ace.size] = s_spawner;
                 }
             }
-            namespace_27f8b154::function_f4bd92a2(1, array::random(var_901f5ace));
+            zm_ai_spiders::function_f4bd92a2(1, array::random(var_901f5ace));
             level.var_ab7eb3d4++;
         } else {
-            namespace_27f8b154::function_f4bd92a2(1);
+            zm_ai_spiders::function_f4bd92a2(1);
         }
         level.zombie_total--;
     }
@@ -113,7 +113,7 @@ function function_33aa4940() {
 }
 
 // Namespace zm_island_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc786d21, Offset: 0x950
 // Size: 0x34
 function function_419bf2ad() {

@@ -1,33 +1,33 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_blackstation_cross_debris;
 #using scripts/cp/cp_mi_sing_blackstation_sound;
 #using scripts/cp/cp_mi_sing_blackstation_utility;
-#using scripts/cp/cp_mi_sing_blackstation_cross_debris;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/array_shared;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/ai_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_hacking;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_blackstation_comm_relay;
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x93376447, Offset: 0xd68
 // Size: 0x1dc
 function function_c9040e7d(str_objective, var_74cd64bc) {
@@ -51,7 +51,7 @@ function function_c9040e7d(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc239680, Offset: 0xf50
 // Size: 0x24
 function function_311be427(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -59,7 +59,7 @@ function function_311be427(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7cc7780, Offset: 0xf80
 // Size: 0xcc
 function function_d04ca07c() {
@@ -76,7 +76,7 @@ function function_d04ca07c() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd76c9afd, Offset: 0x1058
 // Size: 0x17c
 function function_a2073f94(str_objective, var_74cd64bc) {
@@ -100,7 +100,7 @@ function function_a2073f94(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6f48e20, Offset: 0x11e0
 // Size: 0x15c
 function function_6c97cd4() {
@@ -116,7 +116,7 @@ function function_6c97cd4() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x149387cb, Offset: 0x1348
 // Size: 0x84
 function function_7e7b796a(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -127,7 +127,7 @@ function function_7e7b796a(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25971162, Offset: 0x13d8
 // Size: 0x1f8
 function function_20386e5d() {
@@ -150,7 +150,7 @@ function function_20386e5d() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92ea9b6b, Offset: 0x15d8
 // Size: 0x6c
 function function_76732cae() {
@@ -169,7 +169,7 @@ function function_7b57f76b() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4662b43, Offset: 0x1678
 // Size: 0xac
 function function_3cd30cbd() {
@@ -181,7 +181,7 @@ function function_3cd30cbd() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa433413, Offset: 0x1730
 // Size: 0x44
 function function_9e1e35a() {
@@ -190,7 +190,7 @@ function function_9e1e35a() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde404bda, Offset: 0x1780
 // Size: 0x114
 function function_e312f792() {
@@ -206,7 +206,7 @@ function function_e312f792() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7f9a525e, Offset: 0x18a0
 // Size: 0xcc
 function function_9520d9e4(var_74cd64bc) {
@@ -222,7 +222,7 @@ function function_9520d9e4(var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f899c57, Offset: 0x1978
 // Size: 0x5c
 function function_8f139027() {
@@ -234,7 +234,7 @@ function function_8f139027() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7c5c7773, Offset: 0x19e0
 // Size: 0x30c
 function function_6d389c01() {
@@ -272,7 +272,7 @@ function function_6d389c01() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18ea4246, Offset: 0x1cf8
 // Size: 0x20c
 function function_af9d4545(e_player) {
@@ -292,13 +292,13 @@ function function_af9d4545(e_player) {
     level scene::play("cin_bla_11_01_comm_vign_scramble_player_start", array(e_player, var_f6c5842));
     level thread scene::play("cin_bla_11_01_comm_vign_scramble_hendricks_end");
     level scene::play("cin_bla_11_01_comm_vign_scramble_player_end", array(e_player));
-    e_player thread namespace_79e1cd97::function_2c33b48e();
+    e_player thread namespace_79e1cd97::player_anchor();
     level flag::set("comm_relay_hacked");
     level thread function_7b8a2da8();
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa6ae2274, Offset: 0x1f10
 // Size: 0xa0
 function function_77ccb9da(a_ents) {
@@ -312,7 +312,7 @@ function function_77ccb9da(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ac500e8, Offset: 0x1fb8
 // Size: 0x2c
 function function_53f20e51() {
@@ -321,7 +321,7 @@ function function_53f20e51() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8dfd64e, Offset: 0x1ff0
 // Size: 0x26c
 function function_5be784f3() {
@@ -342,7 +342,7 @@ function function_5be784f3() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x989a4a3a, Offset: 0x2268
 // Size: 0x84
 function function_104ecb4b(a_ents) {
@@ -356,7 +356,7 @@ function function_104ecb4b(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5edd15fc, Offset: 0x22f8
 // Size: 0x54
 function function_4c16ca2b() {
@@ -376,7 +376,7 @@ function function_6c35b4f3() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xee52cbf3, Offset: 0x23a0
 // Size: 0x14c
 function function_9ead7187() {
@@ -395,7 +395,7 @@ function function_9ead7187() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ebf5854, Offset: 0x24f8
 // Size: 0xea
 function function_6eaf20ba(a_ents) {
@@ -411,7 +411,7 @@ function function_6eaf20ba(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x607b1afb, Offset: 0x25f0
 // Size: 0xd4
 function function_7b8a2da8() {
@@ -427,7 +427,7 @@ function function_7b8a2da8() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89ccff96, Offset: 0x26d0
 // Size: 0x4c
 function function_aadd72bd() {
@@ -437,7 +437,7 @@ function function_aadd72bd() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x213bb742, Offset: 0x2728
 // Size: 0x154
 function function_8d47a6e7() {
@@ -456,7 +456,7 @@ function function_8d47a6e7() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x851a966a, Offset: 0x2888
 // Size: 0x3a
 function function_862c1664() {
@@ -466,7 +466,7 @@ function function_862c1664() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd95b8fa1, Offset: 0x28d0
 // Size: 0x34
 function function_3245f6e9() {
@@ -475,7 +475,7 @@ function function_3245f6e9() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc5f1703, Offset: 0x2910
 // Size: 0x132
 function function_e3e0028() {
@@ -494,7 +494,7 @@ function function_e3e0028() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc5843702, Offset: 0x2a50
 // Size: 0x64
 function function_70643fc() {
@@ -504,7 +504,7 @@ function function_70643fc() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6652e9a, Offset: 0x2ac0
 // Size: 0x24c
 function function_1cf52369() {
@@ -528,7 +528,7 @@ function function_1cf52369() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x939c8323, Offset: 0x2d18
 // Size: 0x8e
 function function_48aa6d93(a_ents) {
@@ -538,7 +538,7 @@ function function_48aa6d93(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8cfc1d61, Offset: 0x2db0
 // Size: 0x11c
 function function_5c3fb5af() {
@@ -557,7 +557,7 @@ function function_5c3fb5af() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x53287a9e, Offset: 0x2ed8
 // Size: 0x52
 function function_66606bc7() {
@@ -567,7 +567,7 @@ function function_66606bc7() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd17a345, Offset: 0x2f38
 // Size: 0xa0
 function function_5458238e() {
@@ -584,7 +584,7 @@ function function_5458238e() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3192663b, Offset: 0x2fe0
 // Size: 0x5c
 function function_5470e1dd() {
@@ -593,7 +593,7 @@ function function_5470e1dd() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x488c1ec3, Offset: 0x3048
 // Size: 0xc8
 function function_48e2699d(var_27fbdccf) {
@@ -610,7 +610,7 @@ function function_48e2699d(var_27fbdccf) {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7d13f44, Offset: 0x3118
 // Size: 0x4c
 function function_e011018() {
@@ -619,7 +619,7 @@ function function_e011018() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x545b53c8, Offset: 0x3170
 // Size: 0x8c
 function function_34bb534a() {
@@ -633,7 +633,7 @@ function function_34bb534a() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1294eb9, Offset: 0x3208
 // Size: 0x16c
 function table_flip() {
@@ -650,7 +650,7 @@ function table_flip() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a0ead7e, Offset: 0x3380
 // Size: 0x44
 function function_e762f0f7() {
@@ -658,7 +658,7 @@ function function_e762f0f7() {
 }
 
 // Namespace cp_mi_sing_blackstation_comm_relay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e5af84c, Offset: 0x33d0
 // Size: 0x9c
 function function_be761c1() {

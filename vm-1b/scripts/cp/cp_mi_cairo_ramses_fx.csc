@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/fx_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_ramses_fx;
 

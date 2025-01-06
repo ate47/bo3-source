@@ -1,31 +1,31 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/ai/archetype_thrasher_interface;
-#using scripts/shared/ai/archetype_mocomps_utility;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/archetype_locomotion_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/archetype_mocomps_utility;
+#using scripts/shared/ai/archetype_thrasher_interface;
 #using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace namespace_dffbdcc8;
 
@@ -38,7 +38,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5a1dc12, Offset: 0x9e0
 // Size: 0x24c
 function __init__() {
@@ -59,7 +59,7 @@ function __init__() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd3f9fa18, Offset: 0xc38
 // Size: 0x374
 function private function_d83c7355() {
@@ -88,7 +88,7 @@ function private function_d83c7355() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x678177c, Offset: 0xfb8
 // Size: 0x1ec
 function private function_66ddd4b8() {
@@ -125,7 +125,7 @@ function private function_66ddd4b8() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x87e960e4, Offset: 0x11b0
 // Size: 0x34
 function private function_5215214e(entity) {
@@ -134,7 +134,7 @@ function private function_5215214e(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xf825ea8, Offset: 0x11f0
 // Size: 0x164
 function private function_44ca600a() {
@@ -159,7 +159,7 @@ function private function_44ca600a() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xe46124ef, Offset: 0x1360
 // Size: 0x4a
 function private bb_getshouldturn() {
@@ -171,7 +171,7 @@ function private bb_getshouldturn() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x8127ba64, Offset: 0x13b8
 // Size: 0x218
 function private function_a035ff2a() {
@@ -194,7 +194,7 @@ function private function_a035ff2a() {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe71fad1, Offset: 0x15d8
 // Size: 0xd4
 function private function_cb3596fd(entity) {
@@ -213,7 +213,7 @@ function private function_cb3596fd(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf48c2413, Offset: 0x16b8
 // Size: 0x212
 function private function_62caf126(entity) {
@@ -244,7 +244,7 @@ function private function_62caf126(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xdf486965, Offset: 0x18d8
 // Size: 0x74
 function private thrasherRageService(entity) {
@@ -255,7 +255,7 @@ function private thrasherRageService(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x1302c530, Offset: 0x1958
 // Size: 0x428
 function private thrasherTargetService(entity) {
@@ -314,7 +314,7 @@ function private thrasherTargetService(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4cc09f9, Offset: 0x1d88
 // Size: 0x3a
 function private thrasherAttackableObjectService(entity) {
@@ -325,7 +325,7 @@ function private thrasherAttackableObjectService(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf8674b3f, Offset: 0x1dd0
 // Size: 0x1ba
 function private thrasherKnockdownService(entity) {
@@ -346,7 +346,7 @@ function private thrasherKnockdownService(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x1ff6c4d4, Offset: 0x1f98
 // Size: 0x1ac
 function private function_ae899104(zombie, thrasher, predicted_pos) {
@@ -373,7 +373,7 @@ function private function_ae899104(zombie, thrasher, predicted_pos) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4693d96a, Offset: 0x2150
 // Size: 0xee
 function thrasherShouldMelee(entity) {
@@ -397,7 +397,7 @@ function thrasherShouldMelee(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x231b7965, Offset: 0x2248
 // Size: 0xe
 function private thrasherShouldShowPain(entity) {
@@ -405,7 +405,7 @@ function private thrasherShouldShowPain(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc3065116, Offset: 0x2260
 // Size: 0x2c
 function private thrasherShouldTurnBerserk(entity) {
@@ -413,7 +413,7 @@ function private thrasherShouldTurnBerserk(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfc1b23e8, Offset: 0x2298
 // Size: 0xec
 function private thrasherShouldTeleport(entity) {
@@ -434,7 +434,7 @@ function private thrasherShouldTeleport(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xbcd705a9, Offset: 0x2390
 // Size: 0x124
 function private thrasherShouldConsumePlayer(entity) {
@@ -461,7 +461,7 @@ function private thrasherShouldConsumePlayer(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd09001f7, Offset: 0x24c0
 // Size: 0x12a
 function private thrasherShouldConsumeZombie(entity) {
@@ -488,7 +488,7 @@ function private thrasherShouldConsumeZombie(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x11dc2b78, Offset: 0x25f8
 // Size: 0x54
 function private thrasherConsumePlayer(entity) {
@@ -498,7 +498,7 @@ function private thrasherConsumePlayer(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x1720b8f9, Offset: 0x2658
 // Size: 0x24
 function private thrasherDeath(entity) {
@@ -506,7 +506,7 @@ function private thrasherDeath(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb2b27cf3, Offset: 0x2688
 // Size: 0x58
 function private thrasherConsumeZombie(entity) {
@@ -519,7 +519,7 @@ function private thrasherConsumeZombie(entity) {
 }
 
 // Namespace namespace_dffbdcc8
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe89546dc, Offset: 0x26e8
 // Size: 0x2a
 function private thrasherShouldBeStunned(entity) {
@@ -529,7 +529,7 @@ function private thrasherShouldBeStunned(entity) {
 #namespace namespace_5d6075c6;
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x99d29b4d, Offset: 0x2720
 // Size: 0x2b4
 function function_6f5adf20(entity, zombie) {
@@ -567,7 +567,7 @@ function function_6f5adf20(entity, zombie) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6826ba18, Offset: 0x29e0
 // Size: 0xac
 function function_6c2bbf66(entity) {
@@ -581,7 +581,7 @@ function function_6c2bbf66(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x1fb02543, Offset: 0x2a98
 // Size: 0xc4
 function private thrasherPlayedBerserkIntro(entity) {
@@ -594,7 +594,7 @@ function private thrasherPlayedBerserkIntro(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0x2a04f810, Offset: 0x2b68
 // Size: 0x2b4
 function function_55ee3ac(inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -615,7 +615,7 @@ function function_55ee3ac(inflictor, attacker, damage, dflags, mod, weapon, poin
         if (entity.var_ef0082a4 <= 0) {
             entity ai::set_behavior_attribute("stunned", 1);
             if (isdefined(attacker)) {
-                attacker notify(#"hash_451c2882");
+                attacker notify(#"player_stunned_thrasher");
             }
         }
     }
@@ -623,7 +623,7 @@ function function_55ee3ac(inflictor, attacker, damage, dflags, mod, weapon, poin
     if (entity.var_1bb31a5a >= -56) {
         function_6c2bbf66(entity);
         if (isdefined(attacker)) {
-            attacker notify(#"hash_979c1edb");
+            attacker notify(#"player_enraged_thrasher");
         }
     }
     if (isdefined(entity.var_ba462582) && entity.var_ba462582) {
@@ -634,7 +634,7 @@ function function_55ee3ac(inflictor, attacker, damage, dflags, mod, weapon, poin
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x87ec0de0, Offset: 0x2e28
 // Size: 0x7c
 function private function_5aaa10f7(n_time) {
@@ -647,7 +647,7 @@ function private function_5aaa10f7(n_time) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0x5d463412, Offset: 0x2eb0
 // Size: 0x404
 function function_c411135f(inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -695,7 +695,7 @@ function function_c411135f(inflictor, attacker, damage, dflags, mod, weapon, poi
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x2935c7b9, Offset: 0x32c0
 // Size: 0x3c
 function private thrasherTeleportOut(entity) {
@@ -705,7 +705,7 @@ function private thrasherTeleportOut(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc024d678, Offset: 0x3308
 // Size: 0x54
 function thrasherStartTraverse(entity) {
@@ -716,7 +716,7 @@ function thrasherStartTraverse(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf8b7153, Offset: 0x3368
 // Size: 0x3c
 function thrasherTerminateTraverse(entity) {
@@ -726,7 +726,7 @@ function thrasherTerminateTraverse(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5043328d, Offset: 0x33b0
 // Size: 0x32c
 function thrasherTeleport(entity) {
@@ -736,11 +736,11 @@ function thrasherTeleport(entity) {
     }
     points = util::positionquery_pointarray(entity.favoriteenemy.origin, -128, 256, 32, 64, entity);
     filteredpoints = [];
-    var_81b7a825 = getaiarchetypearray("thrasher");
+    thrashers = getaiarchetypearray("thrasher");
     var_95ef5d1c = -16 * -16;
     foreach (point in points) {
         valid = 1;
-        foreach (thrasher in var_81b7a825) {
+        foreach (thrasher in thrashers) {
             if (distancesquared(point, thrasher.origin) <= var_95ef5d1c) {
                 valid = 0;
                 break;
@@ -765,7 +765,7 @@ function thrasherTeleport(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4e326dad, Offset: 0x36e8
 // Size: 0x1c
 function private thrasherStunInitialize(entity) {
@@ -773,7 +773,7 @@ function private thrasherStunInitialize(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x666e896e, Offset: 0x3710
 // Size: 0x58
 function private thrasherStunUpdate(entity) {
@@ -784,7 +784,7 @@ function private thrasherStunUpdate(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x8c74bc8, Offset: 0x3770
 // Size: 0xde
 function private function_7c8ed1a3(entity, hide) {
@@ -803,7 +803,7 @@ function private function_7c8ed1a3(entity, hide) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9e5e9434, Offset: 0x3858
 // Size: 0xe4
 function function_6291f979(thrasher, player, hide) {
@@ -820,7 +820,7 @@ function function_6291f979(thrasher, player, hide) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x27b6a563, Offset: 0x3948
 // Size: 0xde
 function function_1e849801(entity) {
@@ -835,7 +835,7 @@ function function_1e849801(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d0617a0, Offset: 0x3a30
 // Size: 0x194
 function function_15256ff0(entity) {
@@ -854,7 +854,7 @@ function function_15256ff0(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xded70fae, Offset: 0x3bd0
 // Size: 0x190
 function function_3c72ff88(player) {
@@ -879,7 +879,7 @@ function function_3c72ff88(player) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x95733bbd, Offset: 0x3d68
 // Size: 0x44
 function function_fc5c5afd(thrasher, player) {
@@ -889,7 +889,7 @@ function function_fc5c5afd(thrasher, player) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd3ea8f13, Offset: 0x3db8
 // Size: 0x3a
 function function_8259f2c4(revivee) {
@@ -900,7 +900,7 @@ function function_8259f2c4(revivee) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xf65daaf4, Offset: 0x3e00
 // Size: 0x74
 function private function_1db90449(thrasher, playerclone) {
@@ -915,7 +915,7 @@ function private function_1db90449(thrasher, playerclone) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x581a335c, Offset: 0x3e80
 // Size: 0xdc
 function private function_cf9a26c1(thrasher, playerclone) {
@@ -930,7 +930,7 @@ function private function_cf9a26c1(thrasher, playerclone) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x187ac39e, Offset: 0x3f68
 // Size: 0x5d4
 function function_aaaf7923(thrasher, player) {
@@ -986,14 +986,14 @@ function function_aaaf7923(thrasher, player) {
     if (isdefined(playerclone)) {
         thrasher thread function_cf9a26c1(thrasher, playerclone);
         playerclone thread function_fc5c5afd(thrasher, playerclone);
-        player notify(#"hash_89eb445c");
+        player notify(#"player_eaten_by_thrasher");
     }
     thrasher waittill(#"death");
     function_9e2a4fa2(thrasher, player);
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x82132d62, Offset: 0x4548
 // Size: 0x6c
 function function_3a5a0044(thrasher, player) {
@@ -1006,7 +1006,7 @@ function function_3a5a0044(thrasher, player) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6698408e, Offset: 0x45c0
 // Size: 0x4b4
 function function_9e2a4fa2(thrasher, player) {
@@ -1068,7 +1068,7 @@ function function_9e2a4fa2(thrasher, player) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3501fe8, Offset: 0x4a80
 // Size: 0x2a
 function function_5304fc0b() {
@@ -1078,7 +1078,7 @@ function function_5304fc0b() {
 }
 
 // Namespace namespace_5d6075c6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1f92872f, Offset: 0x4ab8
 // Size: 0x12c
 function function_384a5701(thrasher, player) {
@@ -1088,7 +1088,7 @@ function function_384a5701(thrasher, player) {
     if (!isdefined(characterindex)) {
         return;
     }
-    characterindex = level waittill(#"bleed_out");
+    level waittill(#"bleed_out", characterindex);
     if (isdefined(thrasher.var_5e066a4e)) {
         [[ thrasher.var_5e066a4e ]](thrasher, player);
     }
@@ -1103,7 +1103,7 @@ function function_384a5701(thrasher, player) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x10a803af, Offset: 0x4bf0
 // Size: 0x70
 function function_91b1c35d(entity, attribute, oldvalue, value) {

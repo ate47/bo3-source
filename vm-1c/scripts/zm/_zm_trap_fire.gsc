@@ -1,30 +1,30 @@
-#using scripts/shared/ai/zombie_death;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_traps;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_audio;
+#using scripts/codescripts/struct;
 #using scripts/shared/_burnplayer;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_traps;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_trap_fire;
 
 // Namespace zm_trap_fire
 // Params 0, eflags: 0x2
-// Checksum 0x52089e20, Offset: 0x3a0
+// Checksum 0x73a57475, Offset: 0x3a0
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_trap_fire", &__init__, undefined, undefined);
 }
 
 // Namespace zm_trap_fire
-// Params 0, eflags: 0x1 linked
-// Checksum 0x14cdc0aa, Offset: 0x3e0
+// Params 0, eflags: 0x0
+// Checksum 0xe77b709a, Offset: 0x3e0
 // Size: 0x142
 function __init__() {
     zm_traps::register_trap_basic_info("fire", &trap_activate_fire, &trap_audio);
@@ -36,8 +36,8 @@ function __init__() {
 }
 
 // Namespace zm_trap_fire
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc3fd4487, Offset: 0x530
+// Params 0, eflags: 0x0
+// Checksum 0xa53739e1, Offset: 0x530
 // Size: 0x174
 function trap_activate_fire() {
     self._trap_duration = 40;
@@ -60,8 +60,8 @@ function trap_activate_fire() {
 }
 
 // Namespace zm_trap_fire
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9a5a6d3d, Offset: 0x6b0
+// Params 1, eflags: 0x0
+// Checksum 0x4e86aa87, Offset: 0x6b0
 // Size: 0x144
 function trap_audio(trap) {
     sound_origin = spawn("script_origin", self.origin);
@@ -79,8 +79,8 @@ function trap_audio(trap) {
 }
 
 // Namespace zm_trap_fire
-// Params 1, eflags: 0x1 linked
-// Checksum 0x32d66219, Offset: 0x800
+// Params 1, eflags: 0x0
+// Checksum 0xeaaaa180, Offset: 0x800
 // Size: 0x68
 function function_c5d41372(trap) {
     trap endon(#"trap_done");
@@ -91,8 +91,8 @@ function function_c5d41372(trap) {
 }
 
 // Namespace zm_trap_fire
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd8fe54af, Offset: 0x870
+// Params 0, eflags: 0x0
+// Checksum 0x3d78484b, Offset: 0x870
 // Size: 0x1a6
 function player_damage() {
     self endon(#"death");
@@ -118,8 +118,8 @@ function player_damage() {
 }
 
 // Namespace zm_trap_fire
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf5259486, Offset: 0xa20
+// Params 1, eflags: 0x0
+// Checksum 0x8b1a9103, Offset: 0xa20
 // Size: 0x2a4
 function damage(trap) {
     self endon(#"death");

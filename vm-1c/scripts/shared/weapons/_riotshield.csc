@@ -1,14 +1,14 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("mp_riotshield");
 
 #namespace riotshield;
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19d90bed, Offset: 0x260
 // Size: 0x82
 function init_shared() {
@@ -18,7 +18,7 @@ function init_shared() {
 }
 
 // Namespace riotshield
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4150614b, Offset: 0x2f0
 // Size: 0xbe
 function shield_state_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -35,7 +35,7 @@ function shield_state_change(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace riotshield
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8d16bac6, Offset: 0x3b8
 // Size: 0x154
 function riotshield_deploy_anim(localclientnum, instant) {
@@ -56,13 +56,13 @@ function riotshield_deploy_anim(localclientnum, instant) {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d0e80e, Offset: 0x518
 // Size: 0x108
 function watch_riotshield_damage() {
     self endon(#"entityshutdown");
     while (true) {
-        var_e63dbf6d, damage_type = self waittill(#"damage");
+        self waittill(#"damage", var_e63dbf6d, damage_type);
         self useanimtree(#mp_riotshield);
         if (damage_type == "MOD_MELEE" || damage_type == "MOD_MELEE_WEAPON_BUTT" || damage_type == "MOD_MELEE_ASSASSINATE") {
             self setanim(mp_riotshield%o_riot_stand_melee_front, 1, 0, 1);
@@ -73,7 +73,7 @@ function watch_riotshield_damage() {
 }
 
 // Namespace riotshield
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x63bd9418, Offset: 0x628
 // Size: 0xe4
 function riotshield_destroy_anim(localclientnum) {

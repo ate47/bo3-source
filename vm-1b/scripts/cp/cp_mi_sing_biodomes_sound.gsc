@@ -1,6 +1,6 @@
-#using scripts/shared/music_shared;
-#using scripts/cp/voice/voice_biodomes;
 #using scripts/codescripts/struct;
+#using scripts/cp/voice/voice_biodomes;
+#using scripts/shared/music_shared;
 
 #namespace cp_mi_sing_biodomes_sound;
 
@@ -19,8 +19,8 @@ function main() {
 // Size: 0x42
 function function_ced15c18() {
     wait 2;
-    var_a66f2065 = spawn("script_origin", (15049, 15030, -120));
-    var_a66f2065 playloopsound("mus_bar_background");
+    sound_org = spawn("script_origin", (15049, 15030, -120));
+    sound_org playloopsound("mus_bar_background");
 }
 
 #namespace namespace_f1b4cbbc;

@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace rotating_object;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace rotating_object
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x94e63483, Offset: 0x180
 // Size: 0x24
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace rotating_object
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x395c8c0a, Offset: 0x1b0
 // Size: 0x64
 function main(localclientnum) {
@@ -32,7 +32,7 @@ function main(localclientnum) {
 }
 
 // Namespace rotating_object
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa7a09e2, Offset: 0x220
 // Size: 0x1dc
 function rotating_object_think() {

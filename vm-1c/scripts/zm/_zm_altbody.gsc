@@ -1,24 +1,24 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_altbody;
 
@@ -415,7 +415,7 @@ function kiosk_trigger_visibility(player) {
 // Size: 0xd0
 function kiosk_trigger_think() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (isdefined(self.stub.usable) && self.stub.usable) {
             self.stub.usable = 0;
             name = self.stub.altbody_name;
@@ -456,7 +456,7 @@ function private trigger_watch_kiosk(name, trigger_name, trigger_hint, whenvisib
             self.kiosk = target;
         }
         while (isdefined(self)) {
-            player = self waittill(#"trigger");
+            self waittill(#"trigger", player);
             if (isdefined(player.custom_altbody_callback)) {
                 player thread [[ player.custom_altbody_callback ]](self, name);
                 continue;

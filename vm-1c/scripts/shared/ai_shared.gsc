@@ -1,21 +1,21 @@
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai/systems/weaponlist;
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/ai/systems/init;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/init;
+#using scripts/shared/ai/systems/shared;
+#using scripts/shared/ai/systems/weaponlist;
+#using scripts/shared/array_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
 
 #namespace ai;
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb59fc317, Offset: 0x3f0
 // Size: 0x48
 function set_ignoreme(val) {
@@ -24,7 +24,7 @@ function set_ignoreme(val) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3a6658f7, Offset: 0x440
 // Size: 0x48
 function set_ignoreall(val) {
@@ -33,7 +33,7 @@ function set_ignoreall(val) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x27a29b78, Offset: 0x490
 // Size: 0x48
 function set_pacifist(val) {
@@ -42,7 +42,7 @@ function set_pacifist(val) {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa458b23a, Offset: 0x4e0
 // Size: 0x40
 function disable_pain() {
@@ -51,7 +51,7 @@ function disable_pain() {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55d9eaf7, Offset: 0x528
 // Size: 0x40
 function enable_pain() {
@@ -60,7 +60,7 @@ function enable_pain() {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe1849af1, Offset: 0x570
 // Size: 0x38
 function gun_remove() {
@@ -69,7 +69,7 @@ function gun_remove() {
 }
 
 // Namespace ai
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa28c8fb1, Offset: 0x5b0
 // Size: 0x34
 function gun_switchto(weapon, whichhand) {
@@ -77,7 +77,7 @@ function gun_switchto(weapon, whichhand) {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d87aee2, Offset: 0x5f0
 // Size: 0x36
 function gun_recall() {
@@ -86,7 +86,7 @@ function gun_recall() {
 }
 
 // Namespace ai
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdfe647d, Offset: 0x630
 // Size: 0x7c
 function set_behavior_attribute(attribute, value) {
@@ -100,7 +100,7 @@ function set_behavior_attribute(attribute, value) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x68741a61, Offset: 0x6b8
 // Size: 0x22
 function get_behavior_attribute(attribute) {
@@ -108,7 +108,7 @@ function get_behavior_attribute(attribute) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4f212da3, Offset: 0x6e8
 // Size: 0x22
 function has_behavior_attribute(attribute) {
@@ -116,7 +116,7 @@ function has_behavior_attribute(attribute) {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1b6c6eb, Offset: 0x718
 // Size: 0x46
 function is_dead_sentient() {
@@ -127,7 +127,7 @@ function is_dead_sentient() {
 }
 
 // Namespace ai
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x21fa2768, Offset: 0x768
 // Size: 0x216
 function waittill_dead(guys, num, timeoutlength) {
@@ -192,7 +192,7 @@ function waittill_dead_or_dying(guys, num, timeoutlength) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x65e47ebf, Offset: 0xb30
 // Size: 0x38
 function private waittill_dead_thread(ent) {
@@ -202,7 +202,7 @@ function private waittill_dead_thread(ent) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9213aec0, Offset: 0xb70
 // Size: 0x54
 function waittill_dead_or_dying_thread(ent) {
@@ -212,7 +212,7 @@ function waittill_dead_or_dying_thread(ent) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5be3679a, Offset: 0xbd0
 // Size: 0x1e
 function waittill_dead_timeout(timeoutlength) {
@@ -221,7 +221,7 @@ function waittill_dead_timeout(timeoutlength) {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x4e000238, Offset: 0xbf8
 // Size: 0x50
 function private wait_for_shoot() {
@@ -235,7 +235,7 @@ function private wait_for_shoot() {
 }
 
 // Namespace ai
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xe0beb50a, Offset: 0xc50
 // Size: 0x3e4
 function shoot_at_target(mode, target, tag, duration, sethealth, ignorefirstshotwait) {
@@ -304,7 +304,7 @@ function shoot_at_target(mode, target, tag, duration, sethealth, ignorefirstshot
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc83ac2c7, Offset: 0x1040
 // Size: 0x62
 function stop_shoot_at_target() {
@@ -329,7 +329,7 @@ function wait_until_done_speaking() {
 }
 
 // Namespace ai
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6cd958a, Offset: 0x10e0
 // Size: 0x138
 function set_goal(value, key, b_force) {
@@ -357,7 +357,7 @@ function set_goal(value, key, b_force) {
 }
 
 // Namespace ai
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x4eac0295, Offset: 0x1220
 // Size: 0xda
 function force_goal(goto, n_radius, b_shoot, str_end_on, b_keep_colors, b_should_sprint) {
@@ -377,7 +377,7 @@ function force_goal(goto, n_radius, b_shoot, str_end_on, b_keep_colors, b_should
 }
 
 // Namespace ai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x70f76ae7, Offset: 0x1308
 // Size: 0x454
 function _force_goal(s_tracker, goto, n_radius, b_shoot, str_end_on, b_keep_colors, b_should_sprint) {
@@ -458,7 +458,7 @@ function stoppainwaitinterval() {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x68c5c59e, Offset: 0x1788
 // Size: 0x40
 function private _allowpainrestore() {
@@ -489,7 +489,7 @@ function painwaitinterval(msec) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaca329f4, Offset: 0x1898
 // Size: 0x4f8
 function patrol(start_path_node) {
@@ -552,7 +552,7 @@ function patrol(start_path_node) {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa3a4449, Offset: 0x1d98
 // Size: 0x11c
 function patrol_next_node() {
@@ -574,7 +574,7 @@ function patrol_next_node() {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8c65fe9, Offset: 0x1ec0
 // Size: 0x60
 function end_patrol_on_enemy_targetting() {
@@ -589,7 +589,7 @@ function end_patrol_on_enemy_targetting() {
 }
 
 // Namespace ai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6c35951, Offset: 0x1f28
 // Size: 0xd2
 function end_and_clean_patrol_behaviors() {
@@ -608,7 +608,7 @@ function end_and_clean_patrol_behaviors() {
 }
 
 // Namespace ai
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbc818625, Offset: 0x2008
 // Size: 0x2c4
 function bloody_death(n_delay, hit_loc) {
@@ -637,7 +637,7 @@ function bloody_death(n_delay, hit_loc) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x31ff0920, Offset: 0x22d8
 // Size: 0x48
 function shouldregisterclientfieldforarchetype(archetype) {

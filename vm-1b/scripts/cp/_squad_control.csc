@@ -1,12 +1,12 @@
-#using scripts/shared/audio_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace squad_control;
 

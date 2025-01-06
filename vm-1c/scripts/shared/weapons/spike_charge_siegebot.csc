@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace spike_charge_siegebot;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace spike_charge_siegebot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe9fe437f, Offset: 0x250
 // Size: 0xe4
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace spike_charge_siegebot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2589692d, Offset: 0x340
 // Size: 0x24
 function spawned(localclientnum) {
@@ -36,7 +36,7 @@ function spawned(localclientnum) {
 }
 
 // Namespace spike_charge_siegebot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x52ff7fb3, Offset: 0x370
 // Size: 0x12c
 function fx_think(localclientnum) {
@@ -54,7 +54,7 @@ function fx_think(localclientnum) {
 }
 
 // Namespace spike_charge_siegebot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb2adaa4c, Offset: 0x4a8
 // Size: 0x6c
 function start_light_fx(localclientnum) {
@@ -63,7 +63,7 @@ function start_light_fx(localclientnum) {
 }
 
 // Namespace spike_charge_siegebot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8bfb3149, Offset: 0x520
 // Size: 0x4e
 function stop_light_fx(localclientnum) {

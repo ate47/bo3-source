@@ -1,39 +1,39 @@
-#using scripts/mp/killstreaks/_remote_weapons;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_emp;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_shellshock;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/_util;
+#using scripts/codescripts/struct;
 #using scripts/mp/_challenges;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_shellshock;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/killstreaks/_emp;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/killstreaks/_remote_weapons;
+#using scripts/shared/_oob;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_death_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/weapons/_weaponobjects;
 #using scripts/shared/weapons/_flashgrenades;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/_oob;
-#using scripts/codescripts/struct;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace rcbomb;
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x51077698, Offset: 0x810
 // Size: 0x1e4
 function init() {
@@ -50,7 +50,7 @@ function init() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69b8a4c5, Offset: 0xa00
 // Size: 0x14c
 function function_b97521ae() {
@@ -72,7 +72,7 @@ function function_b97521ae() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4ee7aec8, Offset: 0xb58
 // Size: 0xb4
 function waitremotecontrol() {
@@ -103,7 +103,7 @@ function function_36195336(time) {
 }
 
 // Namespace rcbomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x153d2437, Offset: 0xc90
 // Size: 0xb4
 function hackedprefunction(hacker) {
@@ -116,7 +116,7 @@ function hackedprefunction(hacker) {
 }
 
 // Namespace rcbomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf5a35b29, Offset: 0xd50
 // Size: 0x94
 function hackedpostfunction(hacker) {
@@ -128,7 +128,7 @@ function hackedpostfunction(hacker) {
 }
 
 // Namespace rcbomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf638d7ab, Offset: 0xdf0
 // Size: 0x3c
 function configureteampost(owner, ishacked) {
@@ -137,7 +137,7 @@ function configureteampost(owner, ishacked) {
 }
 
 // Namespace rcbomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfc9d7c05, Offset: 0xe38
 // Size: 0x4e8
 function function_67f918a7(hardpointtype) {
@@ -190,7 +190,7 @@ function function_67f918a7(hardpointtype) {
 }
 
 // Namespace rcbomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe455a0fb, Offset: 0x1328
 // Size: 0x58
 function function_1d459c80(hacker) {
@@ -201,7 +201,7 @@ function function_1d459c80(hacker) {
 }
 
 // Namespace rcbomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8a71fc4b, Offset: 0x1388
 // Size: 0xf4
 function function_c821591c(rcbomb) {
@@ -217,7 +217,7 @@ function function_c821591c(rcbomb) {
 }
 
 // Namespace rcbomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd040101d, Offset: 0x1488
 // Size: 0x6c
 function function_28a576cd(rcbomb, exitrequestedbyowner) {
@@ -229,7 +229,7 @@ function function_28a576cd(rcbomb, exitrequestedbyowner) {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7c4106e7, Offset: 0x1500
 // Size: 0x6c
 function function_80579239() {
@@ -243,7 +243,7 @@ function function_80579239() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d08fce1, Offset: 0x1578
 // Size: 0xd2
 function watchwater() {
@@ -257,7 +257,7 @@ function watchwater() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd57bb4e5, Offset: 0x1658
 // Size: 0x98
 function watchownergameevents() {
@@ -271,7 +271,7 @@ function watchownergameevents() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9271964, Offset: 0x16f8
 // Size: 0x4c
 function function_f07bb203() {
@@ -280,7 +280,7 @@ function function_f07bb203() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x80fd2d37, Offset: 0x1750
 // Size: 0x24
 function function_bc26dfed() {
@@ -289,7 +289,7 @@ function function_bc26dfed() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7bfe67cf, Offset: 0x1780
 // Size: 0x144
 function watchshutdown() {
@@ -307,14 +307,14 @@ function watchshutdown() {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa07f65a, Offset: 0x18d0
 // Size: 0xa0
 function function_e973aa66() {
     rcbomb = self;
     rcbomb endon(#"rcbomb_shutdown");
     while (true) {
-        ent = rcbomb waittill(#"touch");
+        rcbomb waittill(#"touch", ent);
         if (ent.classname == "trigger_hurt" || isdefined(ent.classname) && ent.classname == "trigger_out_of_bounds") {
             rcbomb notify(#"rcbomb_shutdown");
         }
@@ -322,7 +322,7 @@ function function_e973aa66() {
 }
 
 // Namespace rcbomb
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0xdacabbbd, Offset: 0x1978
 // Size: 0x1ba
 function ondamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -346,7 +346,7 @@ function ondamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon
 }
 
 // Namespace rcbomb
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x387d8ef0, Offset: 0x1b40
 // Size: 0x1d4
 function ondeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -373,7 +373,7 @@ function ondeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, sh
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1efc175e, Offset: 0x1d20
 // Size: 0x64
 function watchgameended() {
@@ -386,7 +386,7 @@ function watchgameended() {
 }
 
 // Namespace rcbomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7fa2da64, Offset: 0x1d90
 // Size: 0x34
 function function_1637172a(waittime) {
@@ -396,7 +396,7 @@ function function_1637172a(waittime) {
 }
 
 // Namespace rcbomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7c78d3dd, Offset: 0x1dd0
 // Size: 0x2c4
 function explode(attacker, weapon) {
@@ -431,7 +431,7 @@ function explode(attacker, weapon) {
 }
 
 // Namespace rcbomb
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x53d55994, Offset: 0x20a0
 // Size: 0x76
 function function_59e927a3(einflictor, eattacker, smeansofdeath, weapon) {
@@ -445,7 +445,7 @@ function function_59e927a3(einflictor, eattacker, smeansofdeath, weapon) {
 }
 
 // Namespace rcbomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4468eab8, Offset: 0x2120
 // Size: 0x6a
 function function_c8500421() {
@@ -462,7 +462,7 @@ function function_c8500421() {
 }
 
 // Namespace rcbomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xff089ca0, Offset: 0x2198
 // Size: 0x4ca
 function function_cc23883e(origin, angles) {
@@ -529,7 +529,7 @@ function function_cc23883e(origin, angles) {
 }
 
 // Namespace rcbomb
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x51ac7f92, Offset: 0x2670
 // Size: 0x202
 function function_3c8ae65a(origin, angles, heightoffset) {
@@ -557,7 +557,7 @@ function function_3c8ae65a(origin, angles, heightoffset) {
 }
 
 // Namespace rcbomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaf896409, Offset: 0x2880
 // Size: 0x22e
 function function_15df7138(origin, angles) {

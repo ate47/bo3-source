@@ -1,7 +1,7 @@
-#using scripts/cp/gametypes/_globallogic_score;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/hostmigration_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_message_shared;
 
 #namespace globallogic_utils;
 
@@ -68,7 +68,7 @@ function timeuntilroundend() {
 }
 
 // Namespace globallogic_utils
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ba9a328, Offset: 0x530
 // Size: 0x3c
 function gettimeremaining() {
@@ -79,7 +79,7 @@ function gettimeremaining() {
 }
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3563218, Offset: 0x578
 // Size: 0x3a
 function registerpostroundevent(eventfunc) {
@@ -90,7 +90,7 @@ function registerpostroundevent(eventfunc) {
 }
 
 // Namespace globallogic_utils
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd24cae61, Offset: 0x5c0
 // Size: 0x54
 function executepostroundevents() {
@@ -119,7 +119,7 @@ function getvalueinrange(value, minvalue, maxvalue) {
 /#
 
     // Namespace globallogic_utils
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa739726b, Offset: 0x680
     // Size: 0x2c2
     function assertproperplacement() {
@@ -154,7 +154,7 @@ function getvalueinrange(value, minvalue, maxvalue) {
 #/
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbc8ade09, Offset: 0x950
 // Size: 0x68
 function isvalidclass(c) {
@@ -202,7 +202,7 @@ function stoptickingsound() {
 }
 
 // Namespace globallogic_utils
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb7ec2ca0, Offset: 0xb08
 // Size: 0xd4
 function gametimer() {
@@ -225,7 +225,7 @@ function gametimer() {
 }
 
 // Namespace globallogic_utils
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6a05cab, Offset: 0xbe8
 // Size: 0x52
 function gettimepassed() {
@@ -263,7 +263,7 @@ function resumetimer() {
 }
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x457e681b, Offset: 0xcb8
 // Size: 0x9e
 function getscoreremaining(team) {
@@ -276,7 +276,7 @@ function getscoreremaining(team) {
 }
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xebe4d54d, Offset: 0xd60
 // Size: 0x6a
 function getteamscoreforround(team) {
@@ -287,7 +287,7 @@ function getteamscoreforround(team) {
 }
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7bc6649b, Offset: 0xdd8
 // Size: 0xe2
 function getscoreperminute(team) {
@@ -302,7 +302,7 @@ function getscoreperminute(team) {
 }
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9013ec7, Offset: 0xec8
 // Size: 0xa2
 function getestimatedtimeuntilscorelimit(team) {
@@ -328,7 +328,7 @@ function rumbler() {
 }
 
 // Namespace globallogic_utils
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7cc6dd55, Offset: 0xfc0
 // Size: 0x22
 function waitfortimeornotify(time, notifyname) {
@@ -350,7 +350,7 @@ function waitfortimeornotifynoartillery(time, notifyname) {
 }
 
 // Namespace globallogic_utils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xb2365b75, Offset: 0x1050
 // Size: 0x96
 function isheadshot(weapon, shitloc, smeansofdeath, einflictor) {
@@ -372,7 +372,7 @@ function isheadshot(weapon, shitloc, smeansofdeath, einflictor) {
 }
 
 // Namespace globallogic_utils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7c895ed6, Offset: 0x10f0
 // Size: 0xd6
 function gethitlocheight(shitloc) {
@@ -448,7 +448,7 @@ function function_b59d6fa4(var_be260a2e) {
 }
 
 // Namespace globallogic_utils
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4b2e0ec1, Offset: 0x1318
 // Size: 0x10c
 function logteamwinstring(wintype, winner) {

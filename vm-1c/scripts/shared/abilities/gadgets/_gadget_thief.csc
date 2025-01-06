@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace gadget_thief;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace gadget_thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x35cb5c53, Offset: 0x300
 // Size: 0x1a4
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace gadget_thief
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x35ca392e, Offset: 0x4b0
 // Size: 0xac
 function function_9f84f28b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -40,7 +40,7 @@ function function_9f84f28b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace gadget_thief
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x20ca9e20, Offset: 0x568
 // Size: 0x54
 function function_5215beb4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -48,7 +48,7 @@ function function_5215beb4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace gadget_thief
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x972c15d5, Offset: 0x5c8
 // Size: 0x54
 function function_11b5ab11(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -56,7 +56,7 @@ function function_11b5ab11(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace gadget_thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x13a18e5e, Offset: 0x628
 // Size: 0x8c
 function function_2f9da783(localclientnum, newval) {
@@ -70,7 +70,7 @@ function function_2f9da783(localclientnum, newval) {
 }
 
 // Namespace gadget_thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa47497fb, Offset: 0x6c0
 // Size: 0x8c
 function function_403d3d3e(localclientnum, newval) {
@@ -84,7 +84,7 @@ function function_403d3d3e(localclientnum, newval) {
 }
 
 // Namespace gadget_thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb162c55c, Offset: 0x758
 // Size: 0xbc
 function on_localplayer_spawned(localclientnum) {

@@ -1,9 +1,9 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_eye_beam_trap;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x736fe9cd, Offset: 0x268
 // Size: 0xdc
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc918714a, Offset: 0x350
 // Size: 0x7c
 function function_822dbe7f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -38,7 +38,7 @@ function function_822dbe7f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x133b4d5a, Offset: 0x3d8
 // Size: 0xf4
 function function_3d1860f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -54,7 +54,7 @@ function function_3d1860f(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xccd8526, Offset: 0x4d8
 // Size: 0xf4
 function function_ea1e41d4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -70,7 +70,7 @@ function function_ea1e41d4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9b6fd2a6, Offset: 0x5d8
 // Size: 0xa8
 function function_3975127(localclientnum, str_location) {

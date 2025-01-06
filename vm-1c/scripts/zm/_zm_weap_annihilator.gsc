@@ -1,17 +1,17 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_hero_weapon;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_hero_weapon;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_weap_annihilator;
 
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_annihilator
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6ae0438f, Offset: 0x2a0
 // Size: 0x5c
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_annihilator
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x660b6305, Offset: 0x308
 // Size: 0x74
 function function_4ac019bc(attacker) {

@@ -1,6 +1,6 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace zm_traps;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_traps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1c521a67, Offset: 0x128
 // Size: 0xf4
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace zm_traps
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x883cae0, Offset: 0x228
 // Size: 0x1a
 function is_trap_registered(a_registered_traps) {

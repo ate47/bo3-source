@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_utility;
 #using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_puppet;
 
 /#
 
     // Namespace zm_puppet
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2f419328, Offset: 0xa0
     // Size: 0x20c
     function wait_for_puppet_pickup() {
@@ -29,7 +29,7 @@
                 if (self.iscurrentlypuppet) {
                     if (zm_utility::check_point_in_playable_area(self.goalpos) && !zm_utility::check_point_in_playable_area(self.origin)) {
                         self.backedupgoal = self.goalpos;
-                        self thread zm_spawner::function_1352119c(self.backupnode, 0);
+                        self thread zm_spawner::zombie_goto_entrance(self.backupnode, 0);
                     }
                     if (!zm_utility::check_point_in_playable_area(self.goalpos) && isdefined(self.backupnode) && self.goalpos != self.backupnode.origin) {
                         self notify(#"stop_zombie_goto_entrance");

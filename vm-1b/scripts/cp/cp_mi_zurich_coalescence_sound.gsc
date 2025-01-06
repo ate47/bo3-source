@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/voice/voice_zurich;
 #using scripts/shared/music_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_zurich_coalescence_sound;
 

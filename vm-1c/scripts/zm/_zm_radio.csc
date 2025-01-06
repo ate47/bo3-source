@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_radio;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_radio
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x108
 // Size: 0x4
 function __init__() {
@@ -20,7 +20,7 @@ function __init__() {
 }
 
 // Namespace zm_radio
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x118
 // Size: 0x4
 function __main__() {
@@ -28,7 +28,7 @@ function __main__() {
 }
 
 // Namespace zm_radio
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x43ab63f0, Offset: 0x128
 // Size: 0x204
 function function_3d58bdce(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -82,7 +82,7 @@ function function_2b7f281d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_radio
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf6aafab2, Offset: 0x3f0
 // Size: 0x9c
 function fade(n_id, n_time) {

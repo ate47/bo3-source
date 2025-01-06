@@ -1,9 +1,9 @@
-#using scripts/mp/_util;
-#using scripts/shared/weapons/_acousticsensor;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_acousticsensor;
 
 #namespace acousticsensor;
 

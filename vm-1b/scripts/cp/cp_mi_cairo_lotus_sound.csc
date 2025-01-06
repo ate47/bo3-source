@@ -1,8 +1,8 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/trigger_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/trigger_shared;
 
 #namespace cp_mi_cairo_lotus_sound;
 
@@ -31,7 +31,7 @@ function function_a0c5a719() {
 // Checksum 0x976a9ce1, Offset: 0x2d0
 // Size: 0x92
 function function_759e7aaa() {
-    level waittill(#"hash_51e4b2c0");
+    level waittill(#"sndLRstart");
     level thread function_60df3271();
     target_origin = (-5922, -70, 1813);
     player = getlocalplayer(0);
@@ -44,7 +44,7 @@ function function_759e7aaa() {
 // Checksum 0xb915a850, Offset: 0x370
 // Size: 0x1f
 function function_60df3271() {
-    level waittill(#"hash_8409b4c");
+    level waittill(#"sndLRstop");
     wait 3;
     level.var_69a1bedf = 0;
     level notify(#"hash_1842ee53");

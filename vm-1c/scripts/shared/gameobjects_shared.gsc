@@ -1,14 +1,14 @@
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/objpoints_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/objpoints_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace gameobjects;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf6dd918e, Offset: 0x480
 // Size: 0x7c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf49f0968, Offset: 0x508
 // Size: 0x186
 function main() {
@@ -63,7 +63,7 @@ function main() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb6046714, Offset: 0x698
 // Size: 0x3a
 function register_allowed_gameobject(gameobject) {
@@ -82,7 +82,7 @@ function clear_allowed_gameobjects() {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7955c27c, Offset: 0x6f8
 // Size: 0x118
 function entity_is_allowed(entity, allowed_game_modes) {
@@ -130,7 +130,7 @@ function location_is_allowed(entity, location) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x13452d51, Offset: 0x950
 // Size: 0x206
 function filter_script_vehicles_from_vehicle_descriptors(allowed_game_modes) {
@@ -161,7 +161,7 @@ function filter_script_vehicles_from_vehicle_descriptors(allowed_game_modes) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47ecdb6f, Offset: 0xb60
 // Size: 0x86
 function on_player_spawned() {
@@ -179,7 +179,7 @@ function on_player_spawned() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9a49462, Offset: 0xbf0
 // Size: 0x3c
 function on_death() {
@@ -190,7 +190,7 @@ function on_death() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe9b3fae, Offset: 0xc38
 // Size: 0x24
 function on_disconnect() {
@@ -199,7 +199,7 @@ function on_disconnect() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1cac77bd, Offset: 0xc68
 // Size: 0x1c
 function on_player_last_stand() {
@@ -207,7 +207,7 @@ function on_player_last_stand() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9a70d5c0, Offset: 0xc90
 // Size: 0xd2
 function gameobjects_dropped() {
@@ -222,7 +222,7 @@ function gameobjects_dropped() {
 }
 
 // Namespace gameobjects
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xd4a5d341, Offset: 0xd70
 // Size: 0xa28
 function create_carry_object(ownerteam, trigger, visuals, offset, objectivename, hitsound) {
@@ -343,14 +343,14 @@ function create_carry_object(ownerteam, trigger, visuals, offset, objectivename,
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa56c3042, Offset: 0x17a0
 // Size: 0x1d0
 function function_cdf51461() {
     level endon(#"game_ended");
     self.trigger endon(#"destroyed");
     while (true) {
-        player = self.trigger waittill(#"trigger");
+        self.trigger waittill(#"trigger", player);
         if (self.isresetting) {
             continue;
         }
@@ -399,7 +399,7 @@ function function_8b825b5d() {
     level endon(#"game_ended");
     self.trigger endon(#"destroyed");
     while (true) {
-        player = self.trigger waittill(#"trigger");
+        self.trigger waittill(#"trigger", player);
         if (self.isresetting) {
             continue;
         }
@@ -441,7 +441,7 @@ function function_8b825b5d() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4669bf18, Offset: 0x1b50
 // Size: 0x78
 function pickup_object_delay(origin) {
@@ -459,7 +459,7 @@ function pickup_object_delay(origin) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x58f59212, Offset: 0x1bd0
 // Size: 0x234
 function set_picked_up(player) {
@@ -500,7 +500,7 @@ function set_picked_up(player) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0d425a, Offset: 0x1e10
 // Size: 0x212
 function unlink_grenades() {
@@ -524,7 +524,7 @@ function unlink_grenades() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8bccd6bd, Offset: 0x2030
 // Size: 0xa2
 function ghost_visuals() {
@@ -535,7 +535,7 @@ function ghost_visuals() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf48c4938, Offset: 0x20e0
 // Size: 0x560
 function function_27369edd() {
@@ -595,7 +595,7 @@ function function_27369edd() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf3a909d6, Offset: 0x2648
 // Size: 0xe0
 function update_carry_object_objective_origin() {
@@ -618,7 +618,7 @@ function update_carry_object_objective_origin() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf589352c, Offset: 0x2730
 // Size: 0x3e0
 function give_object(object) {
@@ -676,7 +676,7 @@ function give_object(object) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1708d5e, Offset: 0x2b18
 // Size: 0xda
 function move_visuals_to_base() {
@@ -689,7 +689,7 @@ function move_visuals_to_base() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0ab47, Offset: 0x2c00
 // Size: 0xf8
 function return_home() {
@@ -710,7 +710,7 @@ function return_home() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x116d6b0e, Offset: 0x2d00
 // Size: 0x54
 function is_object_away_from_home() {
@@ -745,7 +745,7 @@ function set_position(origin, angles) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5c7c1d06, Offset: 0x2ec8
 // Size: 0x18
 function set_drop_offset(height) {
@@ -753,7 +753,7 @@ function set_drop_offset(height) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60e9cd05, Offset: 0x2ee8
 // Size: 0x6d8
 function set_dropped() {
@@ -835,7 +835,7 @@ function set_dropped() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xef9fd5a1, Offset: 0x35c8
 // Size: 0x4c
 function function_983a9443() {
@@ -845,7 +845,7 @@ function function_983a9443() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8282edc, Offset: 0x3620
 // Size: 0x4c
 function set_carrier(carrier) {
@@ -855,7 +855,7 @@ function set_carrier(carrier) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9311f34, Offset: 0x3678
 // Size: 0xa
 function get_carrier() {
@@ -863,7 +863,7 @@ function get_carrier() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a8ea0ff, Offset: 0x3690
 // Size: 0x62
 function clear_carrier() {
@@ -877,7 +877,7 @@ function clear_carrier() {
 }
 
 // Namespace gameobjects
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x366ed7f8, Offset: 0x3700
 // Size: 0xb4
 function is_touching_any_trigger(triggers, minz, maxz) {
@@ -890,7 +890,7 @@ function is_touching_any_trigger(triggers, minz, maxz) {
 }
 
 // Namespace gameobjects
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf343e613, Offset: 0x37c0
 // Size: 0x5a
 function is_touching_any_trigger_key_value(value, key, minz, maxz) {
@@ -898,7 +898,7 @@ function is_touching_any_trigger_key_value(value, key, minz, maxz) {
 }
 
 // Namespace gameobjects
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x48f7c1d6, Offset: 0x3828
 // Size: 0x1dc
 function should_be_reset(minz, maxz, var_5a190e09) {
@@ -922,7 +922,7 @@ function should_be_reset(minz, maxz, var_5a190e09) {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x66c66250, Offset: 0x3a10
 // Size: 0xc4
 function pickup_timeout(minz, maxz) {
@@ -946,7 +946,7 @@ function pickup_timeout(minz, maxz) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xba743f52, Offset: 0x3ae0
 // Size: 0x2ec
 function take_object(object) {
@@ -995,7 +995,7 @@ function take_object(object) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9a848935, Offset: 0x3dd8
 // Size: 0x64
 function wait_take_carry_weapon(weapon) {
@@ -1005,7 +1005,7 @@ function wait_take_carry_weapon(weapon) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3ae8e9e1, Offset: 0x3e48
 // Size: 0x3c
 function take_carry_weapon_on_death(weapon) {
@@ -1015,7 +1015,7 @@ function take_carry_weapon_on_death(weapon) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb34b1225, Offset: 0x3e90
 // Size: 0x11c
 function take_carry_weapon(weapon) {
@@ -1036,7 +1036,7 @@ function take_carry_weapon(weapon) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf55419a1, Offset: 0x3fb8
 // Size: 0x130
 function track_carrier(object) {
@@ -1057,7 +1057,7 @@ function track_carrier(object) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xefe86245, Offset: 0x40f0
 // Size: 0x150
 function manual_drop_think() {
@@ -1079,7 +1079,7 @@ function manual_drop_think() {
 }
 
 // Namespace gameobjects
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4ed5b286, Offset: 0x4248
 // Size: 0x9f0
 function create_use_object(ownerteam, trigger, visuals, offset, objectivename, allowinitialholddelay, allowweaponcyclingduringhold) {
@@ -1196,7 +1196,7 @@ function create_use_object(ownerteam, trigger, visuals, offset, objectivename, a
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf09c09d6, Offset: 0x4c40
 // Size: 0x4e
 function set_key_object(object) {
@@ -1211,7 +1211,7 @@ function set_key_object(object) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaa7e2951, Offset: 0x4c98
 // Size: 0xf6
 function has_key_object(use) {
@@ -1234,7 +1234,7 @@ function has_key_object(use) {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9eb2e901, Offset: 0x4d98
 // Size: 0x2e8
 function use_object_use_think(disableinitialholddelay, disableweaponcyclingduringhold) {
@@ -1243,7 +1243,7 @@ function use_object_use_think(disableinitialholddelay, disableweaponcyclingdurin
         self.trigger usetriggerignoreuseholdtime();
     }
     while (true) {
-        player = self.trigger waittill(#"trigger");
+        self.trigger waittill(#"trigger", player);
         if (level.gameended) {
             continue;
         }
@@ -1297,7 +1297,7 @@ function use_object_use_think(disableinitialholddelay, disableweaponcyclingdurin
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4a7250b8, Offset: 0x5088
 // Size: 0x64
 function use_object_onuse(player) {
@@ -1311,7 +1311,7 @@ function use_object_onuse(player) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa1c05ed9, Offset: 0x50f8
 // Size: 0x14a
 function get_earliest_claim_player() {
@@ -1333,7 +1333,7 @@ function get_earliest_claim_player() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa4218bc3, Offset: 0x5250
 // Size: 0x740
 function use_object_prox_think() {
@@ -1448,7 +1448,7 @@ function use_object_prox_think() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18d12f08, Offset: 0x5998
 // Size: 0x3c
 function use_object_locked_for_team(team) {
@@ -1459,7 +1459,7 @@ function use_object_locked_for_team(team) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x306555c3, Offset: 0x59e0
 // Size: 0x96
 function can_claim(player) {
@@ -1479,7 +1479,7 @@ function can_claim(player) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b3af5b6, Offset: 0x5a80
 // Size: 0x3d0
 function prox_trigger_think() {
@@ -1490,7 +1490,7 @@ function prox_trigger_think() {
         self.trigger.var_f52dc901 = 0;
     }
     while (true) {
-        player = self.trigger waittill(#"trigger");
+        self.trigger waittill(#"trigger", player);
         if (!isplayer(player)) {
             continue;
         }
@@ -1547,7 +1547,7 @@ function prox_trigger_think() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c360bb0, Offset: 0x5e58
 // Size: 0xb4
 function is_excluded(player) {
@@ -1563,7 +1563,7 @@ function is_excluded(player) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd6be9694, Offset: 0x5f18
 // Size: 0x40
 function clear_progress() {
@@ -1575,7 +1575,7 @@ function clear_progress() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96d0b689, Offset: 0x5f60
 // Size: 0xf4
 function set_claim_team(newteam) {
@@ -1592,7 +1592,7 @@ function set_claim_team(newteam) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x986dd103, Offset: 0x6060
 // Size: 0xa
 function get_claim_team() {
@@ -1600,7 +1600,7 @@ function get_claim_team() {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x61e7e3a1, Offset: 0x6078
 // Size: 0x226
 function continue_trigger_touch_think(team, object) {
@@ -1639,7 +1639,7 @@ function continue_trigger_touch_think(team, object) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8e0f267f, Offset: 0x62a8
 // Size: 0x3a4
 function trigger_touch_think(object) {
@@ -1693,7 +1693,7 @@ function trigger_touch_think(object) {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xea1e0a98, Offset: 0x6658
 // Size: 0x5ac
 function function_968ffa3c(object, forceremove) {
@@ -1778,7 +1778,7 @@ function function_968ffa3c(object, forceremove) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb3ebe4da, Offset: 0x6c10
 // Size: 0xba
 function get_num_touching_except_team(ignoreteam) {
@@ -1793,7 +1793,7 @@ function get_num_touching_except_team(ignoreteam) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x21899a96, Offset: 0x6cd8
 // Size: 0x10c
 function update_use_rate() {
@@ -1818,7 +1818,7 @@ function update_use_rate() {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x27b8f339, Offset: 0x6df0
 // Size: 0x498
 function use_hold_think(player, disableweaponcyclingduringhold) {
@@ -1892,7 +1892,7 @@ function use_hold_think(player, disableweaponcyclingduringhold) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1b80441b, Offset: 0x7290
 // Size: 0x6c
 function waitthenfreezeplayercontrolsifgameendedstill(wait_time) {
@@ -1907,7 +1907,7 @@ function waitthenfreezeplayercontrolsifgameendedstill(wait_time) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2cdf079b, Offset: 0x7308
 // Size: 0x84
 function take_use_weapon(useweapon) {
@@ -1922,7 +1922,7 @@ function take_use_weapon(useweapon) {
 }
 
 // Namespace gameobjects
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xa69dace4, Offset: 0x7398
 // Size: 0x206
 function continue_hold_think_loop(player, waitforweapon, timedout, usetime) {
@@ -1975,7 +1975,7 @@ function continue_hold_think_loop(player, waitforweapon, timedout, usetime) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c34a39, Offset: 0x75a8
 // Size: 0x8c
 function update_current_progress() {
@@ -1990,7 +1990,7 @@ function update_current_progress() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa6f94669, Offset: 0x7640
 // Size: 0x1aa
 function use_hold_think_loop(player) {
@@ -2027,7 +2027,7 @@ function use_hold_think_loop(player) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c7598e6, Offset: 0x77f8
 // Size: 0x384
 function function_2229ae63(object) {
@@ -2083,7 +2083,7 @@ function function_2229ae63(object) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x747ab918, Offset: 0x7b88
 // Size: 0x194
 function update_trigger() {
@@ -2115,7 +2115,7 @@ function update_trigger() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb553aff6, Offset: 0x7d28
 // Size: 0x28c
 function update_objective() {
@@ -2150,7 +2150,7 @@ function update_objective() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8dce9b5a, Offset: 0x7fc0
 // Size: 0x12c
 function function_a45fe1cc() {
@@ -2174,7 +2174,7 @@ function function_a45fe1cc() {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x23e69f8d, Offset: 0x80f8
 // Size: 0x32e
 function function_85576d4d(relativeteam, showicon) {
@@ -2224,7 +2224,7 @@ function function_85576d4d(relativeteam, showicon) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3427e21b, Offset: 0x8430
 // Size: 0x12c
 function function_2158302c() {
@@ -2248,7 +2248,7 @@ function function_2158302c() {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcb4bb31a, Offset: 0x8568
 // Size: 0x26e
 function function_700c62d(relativeteam, showicon) {
@@ -2290,7 +2290,7 @@ function function_700c62d(relativeteam, showicon) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x599f0506, Offset: 0x87e0
 // Size: 0x8c
 function hide_waypoint(e_player) {
@@ -2303,7 +2303,7 @@ function hide_waypoint(e_player) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcc2ea3b4, Offset: 0x8878
 // Size: 0x8c
 function show_waypoint(e_player) {
@@ -2316,7 +2316,7 @@ function show_waypoint(e_player) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x458b775b, Offset: 0x8910
 // Size: 0x52
 function should_ping_object(relativeteam) {
@@ -2329,7 +2329,7 @@ function should_ping_object(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x26e67958, Offset: 0x8970
 // Size: 0x1c4
 function get_update_teams(relativeteam) {
@@ -2357,7 +2357,7 @@ function get_update_teams(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6cf7b265, Offset: 0x8b40
 // Size: 0x9c
 function should_show_compass_due_to_radar(team) {
@@ -2377,7 +2377,7 @@ function should_show_compass_due_to_radar(team) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2083056, Offset: 0x8be8
 // Size: 0x48
 function function_c4eb1d69() {
@@ -2390,7 +2390,7 @@ function function_c4eb1d69() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xcfff5854, Offset: 0x8c38
 // Size: 0xb6
 function private _set_team(team) {
@@ -2404,7 +2404,7 @@ function private _set_team(team) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6d78f2ef, Offset: 0x8cf8
 // Size: 0x54
 function set_owner_team(team) {
@@ -2414,7 +2414,7 @@ function set_owner_team(team) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x98db38c3, Offset: 0x8d58
 // Size: 0xa
 function get_owner_team() {
@@ -2430,7 +2430,7 @@ function set_decay_time(time) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64b08f18, Offset: 0x8db0
 // Size: 0x34
 function set_use_time(time) {
@@ -2438,7 +2438,7 @@ function set_use_time(time) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd4182d6c, Offset: 0x8df0
 // Size: 0x18
 function set_use_text(text) {
@@ -2446,7 +2446,7 @@ function set_use_text(text) {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc2ae9c23, Offset: 0x8e10
 // Size: 0x42
 function set_team_use_time(relativeteam, time) {
@@ -2462,7 +2462,7 @@ function set_team_use_text(relativeteam, text) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2af8ea43, Offset: 0x8e90
 // Size: 0x2c
 function set_use_hint_text(text) {
@@ -2470,7 +2470,7 @@ function set_use_hint_text(text) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa826fcb4, Offset: 0x8ec8
 // Size: 0x24
 function allow_carry(relativeteam) {
@@ -2478,7 +2478,7 @@ function allow_carry(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6075bac7, Offset: 0x8ef8
 // Size: 0x2c
 function allow_use(relativeteam) {
@@ -2487,7 +2487,7 @@ function allow_use(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x316ffdf0, Offset: 0x8f30
 // Size: 0x64
 function set_visible_team(relativeteam) {
@@ -2499,7 +2499,7 @@ function set_visible_team(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfc5f6e90, Offset: 0x8fa0
 // Size: 0x18e
 function set_model_visibility(visibility) {
@@ -2522,7 +2522,7 @@ function set_model_visibility(visibility) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb3ae3db2, Offset: 0x9138
 // Size: 0xbc
 function make_solid() {
@@ -2560,7 +2560,7 @@ function set_can_use(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbe4e1343, Offset: 0x9240
 // Size: 0x3c
 function set_2d_icon(relativeteam, shader) {
@@ -2569,7 +2569,7 @@ function set_2d_icon(relativeteam, shader) {
 }
 
 // Namespace gameobjects
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd4a1135c, Offset: 0x9288
 // Size: 0x6c
 function set_3d_icon(relativeteam, shader) {
@@ -2583,7 +2583,7 @@ function set_3d_icon(relativeteam, shader) {
 }
 
 // Namespace gameobjects
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1f70a2df, Offset: 0x9300
 // Size: 0x12e
 function function_53c833e5(relativeteam, v_color, alpha) {
@@ -2627,7 +2627,7 @@ function function_73ca9fb7(relativeteam, v_color, alpha) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x475aefbc, Offset: 0x9570
 // Size: 0x102
 function set_objective_entity(entity) {
@@ -2679,7 +2679,7 @@ function get_objective_ids(str_team) {
 }
 
 // Namespace gameobjects
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe4955daa, Offset: 0x9858
 // Size: 0x1f8
 function function_e0e2d0fe(v_color, var_ea9602c1, var_9c1499b4, ignore_ent) {
@@ -2718,7 +2718,7 @@ function function_e0e2d0fe(v_color, var_ea9602c1, var_9c1499b4, ignore_ent) {
 }
 
 // Namespace gameobjects
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xd8e0aebf, Offset: 0x9a58
 // Size: 0x240
 function gameobject_is_player_looking_at(origin, dot, do_trace, ignore_ent, ignore_trace_distance) {
@@ -2821,7 +2821,7 @@ function set_carry_icon(shader) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdee4dc23, Offset: 0x9f70
 // Size: 0x18
 function set_visible_carrier_model(visiblemodel) {
@@ -2829,7 +2829,7 @@ function set_visible_carrier_model(visiblemodel) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb71cc207, Offset: 0x9f90
 // Size: 0xa
 function get_visible_carrier_model() {
@@ -2837,7 +2837,7 @@ function get_visible_carrier_model() {
 }
 
 // Namespace gameobjects
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x50039fd8, Offset: 0x9fa8
 // Size: 0x18a
 function destroy_object(deletetrigger, forcehide, b_connect_paths) {
@@ -2867,7 +2867,7 @@ function destroy_object(deletetrigger, forcehide, b_connect_paths) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa6b26050, Offset: 0xa140
 // Size: 0x144
 function disable_object(forcehide) {
@@ -2890,7 +2890,7 @@ function disable_object(forcehide) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97d77f34, Offset: 0xa290
 // Size: 0xfc
 function enable_object(forceshow) {
@@ -2907,7 +2907,7 @@ function enable_object(forceshow) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc284422, Offset: 0xa398
 // Size: 0x7c
 function get_relative_team(team) {
@@ -2924,7 +2924,7 @@ function get_relative_team(team) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x74fde2af, Offset: 0xa420
 // Size: 0x50
 function is_friendly_team(team) {
@@ -2941,7 +2941,7 @@ function is_friendly_team(team) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64a9a256, Offset: 0xa478
 // Size: 0x176
 function can_interact_with(player) {
@@ -3022,7 +3022,7 @@ function is_relative_team(relativeteam) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3ce61800, Offset: 0xa6f0
 // Size: 0x5a
 function get_enemy_team(team) {
@@ -3037,7 +3037,7 @@ function get_enemy_team(team) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xefc1c87c, Offset: 0xa758
 // Size: 0xb8
 function get_next_obj_id() {
@@ -3061,7 +3061,7 @@ function get_next_obj_id() {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xda1d62c, Offset: 0xa818
 // Size: 0x114
 function release_obj_id(objid) {
@@ -3094,7 +3094,7 @@ function release_all_objective_ids() {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18e84ba2, Offset: 0xa9f0
 // Size: 0x66
 function get_label() {
@@ -3126,7 +3126,7 @@ function can_contest_claim(enabled) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e6917b7, Offset: 0xaaa0
 // Size: 0x2c
 function set_flags(flags) {
@@ -3134,7 +3134,7 @@ function set_flags(flags) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e6d636c, Offset: 0xaad8
 // Size: 0x22
 function get_flags(flags) {
@@ -3257,7 +3257,7 @@ function create_pack_object(ownerteam, trigger, visuals, offset, objectivename) 
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8bf9a107, Offset: 0xb4a8
 // Size: 0x1e6
 function give_pack_object(object) {
@@ -3287,7 +3287,7 @@ function give_pack_object(object) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfe5e94a4, Offset: 0xb698
 // Size: 0x94
 function get_packicon_offset(index) {
@@ -3306,7 +3306,7 @@ function get_packicon_offset(index) {
 }
 
 // Namespace gameobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x77b319a0, Offset: 0xb738
 // Size: 0x7e
 function adjust_remaining_packicons() {

@@ -1,8 +1,8 @@
-#using scripts/mp/teams/_teams;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace arena;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace arena
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x50926aa4, Offset: 0x1e8
 // Size: 0x24
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace arena
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbe742470, Offset: 0x218
 // Size: 0xca
 function on_connect() {
@@ -39,7 +39,7 @@ function on_connect() {
 }
 
 // Namespace arena
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33afbee2, Offset: 0x2f0
 // Size: 0x172
 function update_arena_challenge_seasons() {
@@ -62,7 +62,7 @@ function update_arena_challenge_seasons() {
 }
 
 // Namespace arena
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x90b2b63a, Offset: 0x470
 // Size: 0x136
 function match_end(winner) {

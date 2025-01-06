@@ -3,7 +3,7 @@
 #namespace voice_zurich;
 
 // Namespace voice_zurich
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x98fb219b, Offset: 0x4150
 // Size: 0x2f44
 function init_voice() {

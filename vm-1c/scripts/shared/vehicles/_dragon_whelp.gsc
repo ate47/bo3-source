@@ -1,18 +1,18 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/animation_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/blackboard_vehicle;
 #using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_death_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -27,7 +27,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19735ddb, Offset: 0x370
 // Size: 0x2c
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e1fc824, Offset: 0x3a8
 // Size: 0x23c
 function function_20bd34e1() {
@@ -68,7 +68,7 @@ function function_20bd34e1() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb07a22bd, Offset: 0x5f0
 // Size: 0x178
 function defaultrole() {
@@ -89,7 +89,7 @@ function defaultrole() {
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x301a319a, Offset: 0x770
 // Size: 0x1be
 function private function_cb8b2163(target) {
@@ -127,7 +127,7 @@ function private function_cb8b2163(target) {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xc3db2b33, Offset: 0x938
 // Size: 0x29c
 function private function_e2991906() {
@@ -157,7 +157,7 @@ function private function_e2991906() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x9ce7bf64, Offset: 0xbe0
 // Size: 0x100
 function private function_cd3112cf() {
@@ -189,7 +189,7 @@ function private function_cd3112cf() {
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ac2c56b, Offset: 0xce8
 // Size: 0x264
 function function_b9f1655e(params) {
@@ -224,7 +224,7 @@ function function_b9f1655e(params) {
 }
 
 // Namespace dragon
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x5c589533, Offset: 0xf58
 // Size: 0x5a
 function function_1d2da0bd(from_state, to_state, connection) {
@@ -241,7 +241,7 @@ function function_1d2da0bd(from_state, to_state, connection) {
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x170a7e76, Offset: 0xfc0
 // Size: 0x850
 function state_combat_update(params) {
@@ -349,7 +349,7 @@ function state_combat_update(params) {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x36fdcf4, Offset: 0x1818
 // Size: 0x250
 function function_a7242558() {
@@ -387,7 +387,7 @@ function function_a7242558() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43d208c4, Offset: 0x1a70
 // Size: 0x2ac
 function function_3f19103d() {
@@ -419,7 +419,7 @@ function function_3f19103d() {
 }
 
 // Namespace dragon
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf44b4151, Offset: 0x1d28
 // Size: 0x26
 function function_cce3e8b4(einflictor, eattacker, smeansofdeath, weapon) {
@@ -427,7 +427,7 @@ function function_cce3e8b4(einflictor, eattacker, smeansofdeath, weapon) {
 }
 
 // Namespace dragon
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x5610bcb2, Offset: 0x1d58
 // Size: 0x94
 function function_110bfc7e(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -438,7 +438,7 @@ function function_110bfc7e(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb059842e, Offset: 0x1df8
 // Size: 0xfc
 function state_death_update(params) {

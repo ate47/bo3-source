@@ -1,26 +1,26 @@
-#using scripts/zm/zm_island_planting;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_melee_weapon;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_blockers;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_melee_weapon;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_island_planting;
 
 #namespace zm_powerup_island_seed;
 
@@ -33,7 +33,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcc4d1b10, Offset: 0x4a8
 // Size: 0x154
 function __init__() {
@@ -54,7 +54,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86fe3bc0, Offset: 0x608
 // Size: 0xf4
 function register_clientfields() {
@@ -66,7 +66,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x41946a61, Offset: 0x708
 // Size: 0xa4
 function function_6adb5862(player) {
@@ -80,7 +80,7 @@ function function_6adb5862(player) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x351dfc28, Offset: 0x7b8
 // Size: 0xcc
 function function_58b6724f(player) {
@@ -97,7 +97,7 @@ function function_58b6724f(player) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa485fad, Offset: 0x890
 // Size: 0x2a
 function function_735cfef2(player) {
@@ -105,7 +105,7 @@ function function_735cfef2(player) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9f0c26e8, Offset: 0x8c8
 // Size: 0x44
 function function_aeda54f6(var_f65b973) {
@@ -114,7 +114,7 @@ function function_aeda54f6(var_f65b973) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa2610a2e, Offset: 0x918
 // Size: 0x234
 function function_3968a493(var_b89973c8) {
@@ -150,7 +150,7 @@ function function_3968a493(var_b89973c8) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3db0a595, Offset: 0xb58
 // Size: 0xe8
 function function_f766ae15() {
@@ -168,7 +168,7 @@ function function_f766ae15() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2a0da4fa, Offset: 0xc48
 // Size: 0x28
 function function_68329bc5() {
@@ -179,7 +179,7 @@ function function_68329bc5() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x88a92149, Offset: 0xc78
 // Size: 0x9c
 function function_b2cb89c1() {
@@ -193,7 +193,7 @@ function function_b2cb89c1() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd1998637, Offset: 0xd20
 // Size: 0xea
 function function_7a25b639(drop_point) {
@@ -213,7 +213,7 @@ function function_7a25b639(drop_point) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6e529111, Offset: 0xe18
 // Size: 0x124
 function function_1f5d3f75(drop_point) {
@@ -240,7 +240,7 @@ function function_1f5d3f75(drop_point) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x974d9271, Offset: 0xf48
 // Size: 0x14c
 function function_af95a19e() {
@@ -266,7 +266,7 @@ function function_af95a19e() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe86ac9f5, Offset: 0x10a0
 // Size: 0x40
 function function_ca5485fa(e_powerup) {
@@ -308,7 +308,7 @@ function function_ea405166(var_1d640f59, var_86a3391a, var_18bfcc38) {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1218
 // Size: 0x4
 function on_player_connect() {
@@ -316,7 +316,7 @@ function on_player_connect() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcf44f907, Offset: 0x1228
 // Size: 0x24
 function on_player_spawned() {
@@ -326,7 +326,7 @@ function on_player_spawned() {
 /#
 
     // Namespace zm_powerup_island_seed
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xcc347dcb, Offset: 0x1258
     // Size: 0x7c
     function function_7b74396f() {
@@ -338,7 +338,7 @@ function on_player_spawned() {
     }
 
     // Namespace zm_powerup_island_seed
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x18f95d4e, Offset: 0x12e0
     // Size: 0xc0
     function function_903fbe7(cmd) {

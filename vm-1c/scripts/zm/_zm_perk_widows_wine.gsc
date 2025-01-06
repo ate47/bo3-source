@@ -1,52 +1,52 @@
-#using scripts/zm/_zm_powerup_ww_grenade;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_system;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_melee_weapon;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_melee_weapon;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_pers_upgrades_system;
+#using scripts/zm/_zm_powerup_ww_grenade;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_perk_widows_wine;
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x2
-// Checksum 0x5ba4d10f, Offset: 0x680
+// Checksum 0x4c2e276a, Offset: 0x680
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_perk_widows_wine", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0xa3f493aa, Offset: 0x6c0
+// Params 0, eflags: 0x0
+// Checksum 0xa9cf0ff3, Offset: 0x6c0
 // Size: 0x14
 function __init__() {
     enable_widows_wine_perk_for_level();
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd716aed5, Offset: 0x6e0
+// Params 0, eflags: 0x0
+// Checksum 0x864f480f, Offset: 0x6e0
 // Size: 0x194
 function enable_widows_wine_perk_for_level() {
     zm_perks::register_perk_basic_info("specialty_widowswine", "widows_wine", 4000, %ZOMBIE_PERK_WIDOWSWINE, getweapon("zombie_perk_bottle_widows_wine"));
@@ -63,8 +63,8 @@ function enable_widows_wine_perk_for_level() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x772fd362, Offset: 0x880
+// Params 0, eflags: 0x0
+// Checksum 0xe2369441, Offset: 0x880
 // Size: 0xf8
 function widows_wine_precache() {
     if (isdefined(level.var_5eedae98)) {
@@ -80,8 +80,8 @@ function widows_wine_precache() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x41d50848, Offset: 0x980
+// Params 0, eflags: 0x0
+// Checksum 0xa17358d7, Offset: 0x980
 // Size: 0x94
 function widows_wine_register_clientfield() {
     clientfield::register("clientuimodel", "hudItems.perks.widows_wine", 1, 2, "int");
@@ -90,16 +90,16 @@ function widows_wine_register_clientfield() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 1, eflags: 0x1 linked
-// Checksum 0x28255f82, Offset: 0xa20
+// Params 1, eflags: 0x0
+// Checksum 0x8c825795, Offset: 0xa20
 // Size: 0x2c
 function widows_wine_set_clientfield(state) {
     self clientfield::set_player_uimodel("hudItems.perks.widows_wine", state);
 }
 
 // Namespace zm_perk_widows_wine
-// Params 4, eflags: 0x1 linked
-// Checksum 0x1f6a9d8c, Offset: 0xa58
+// Params 4, eflags: 0x0
+// Checksum 0x8f4af229, Offset: 0xa58
 // Size: 0xbc
 function widows_wine_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_widow_jingle";
@@ -114,8 +114,8 @@ function widows_wine_perk_machine_setup(use_trigger, perk_machine, bump_trigger,
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x832f7ab, Offset: 0xb20
+// Params 0, eflags: 0x0
+// Checksum 0x367f478a, Offset: 0xb20
 // Size: 0x164
 function init_widows_wine() {
     zm_utility::register_lethal_grenade_for_level("sticky_grenade_widows_wine");
@@ -133,8 +133,8 @@ function init_widows_wine() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x78727f82, Offset: 0xc90
+// Params 0, eflags: 0x0
+// Checksum 0xc29b542d, Offset: 0xc90
 // Size: 0x2bc
 function widows_wine_perk_activate() {
     if (level.w_widows_wine_grenade == self zm_utility::get_player_lethal_grenade()) {
@@ -168,8 +168,8 @@ function widows_wine_perk_activate() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc808322, Offset: 0xf58
+// Params 0, eflags: 0x0
+// Checksum 0x8fdb79d8, Offset: 0xf58
 // Size: 0xa4
 function widows_wine_contact_explosion() {
     self magicgrenadetype(self.var_8980476, self.origin + (0, 0, 48), (0, 0, 0), 0);
@@ -178,8 +178,8 @@ function widows_wine_contact_explosion() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 13, eflags: 0x1 linked
-// Checksum 0x563d7ea2, Offset: 0x1008
+// Params 13, eflags: 0x0
+// Checksum 0x130c0c7a, Offset: 0x1008
 // Size: 0x20c
 function function_cbe4e863(str_mod, var_5afff096, var_7c5a4ee4, e_player, n_amount, w_weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
     if (str_mod === "MOD_MELEE" && isdefined(e_player) && isplayer(e_player) && e_player hasperk("specialty_widowswine") && (isdefined(self.damageweapon) && self.damageweapon == level.w_widows_wine_grenade || randomfloat(1) <= 0.5)) {
@@ -202,8 +202,8 @@ function function_cbe4e863(str_mod, var_5afff096, var_7c5a4ee4, e_player, n_amou
 }
 
 // Namespace zm_perk_widows_wine
-// Params 15, eflags: 0x1 linked
-// Checksum 0x9566775f, Offset: 0x1220
+// Params 15, eflags: 0x0
+// Checksum 0x81fcf018, Offset: 0x1220
 // Size: 0x164
 function widows_wine_vehicle_damage_response(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
     if (isdefined(weapon) && weapon == level.w_widows_wine_grenade && !(isdefined(self.b_widows_wine_cocoon) && self.b_widows_wine_cocoon)) {
@@ -221,8 +221,8 @@ function widows_wine_vehicle_damage_response(einflictor, eattacker, idamage, idf
 }
 
 // Namespace zm_perk_widows_wine
-// Params 10, eflags: 0x1 linked
-// Checksum 0x7b715809, Offset: 0x1390
+// Params 10, eflags: 0x0
+// Checksum 0xd85cbe8f, Offset: 0x1390
 // Size: 0x12a
 function widows_wine_damage_callback(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime) {
     if (sweapon == level.w_widows_wine_grenade) {
@@ -237,8 +237,8 @@ function widows_wine_damage_callback(einflictor, eattacker, idamage, idflags, sm
 }
 
 // Namespace zm_perk_widows_wine
-// Params 1, eflags: 0x1 linked
-// Checksum 0x4789dae1, Offset: 0x14c8
+// Params 1, eflags: 0x0
+// Checksum 0x2ef179bc, Offset: 0x14c8
 // Size: 0x1b6
 function function_adf37a5e(attacker) {
     if (isdefined(self.b_widows_wine_slow) && (isdefined(self.b_widows_wine_cocoon) && self.b_widows_wine_cocoon || self.b_widows_wine_slow) && !(isdefined(self.var_b6ccbfe2) && self.var_b6ccbfe2)) {
@@ -260,8 +260,8 @@ function function_adf37a5e(attacker) {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x46f072a5, Offset: 0x1688
+// Params 0, eflags: 0x0
+// Checksum 0x2c3fa0a2, Offset: 0x1688
 // Size: 0x17c
 function function_74d493f9() {
     self endon(#"powerup_grabbed");
@@ -301,10 +301,10 @@ function function_74d493f9() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 3, eflags: 0x1 linked
-// Checksum 0x9b857fc4, Offset: 0x1810
+// Params 3, eflags: 0x0
+// Checksum 0x166f266e, Offset: 0x1810
 // Size: 0xd4
-function function_125ad71e(e_player, duration, var_192262ee) {
+function function_125ad71e(e_player, duration, max_score) {
     self notify(#"hash_125ad71e");
     self endon(#"hash_125ad71e");
     self endon(#"death");
@@ -313,15 +313,15 @@ function function_125ad71e(e_player, duration, var_192262ee) {
     }
     start_time = gettime();
     end_time = start_time + duration * 1000;
-    while (gettime() < end_time && self.var_53d35c55 < var_192262ee) {
+    while (gettime() < end_time && self.var_53d35c55 < max_score) {
         e_player zm_score::add_to_player_score(10);
-        wait duration / var_192262ee;
+        wait duration / max_score;
     }
 }
 
 // Namespace zm_perk_widows_wine
-// Params 1, eflags: 0x1 linked
-// Checksum 0x2cc2b6eb, Offset: 0x18f0
+// Params 1, eflags: 0x0
+// Checksum 0x7d319063, Offset: 0x18f0
 // Size: 0x1b8
 function function_80eae695(e_player) {
     self notify(#"widows_wine_cocoon");
@@ -355,8 +355,8 @@ function function_80eae695(e_player) {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa0e74523, Offset: 0x1ab0
+// Params 1, eflags: 0x0
+// Checksum 0xd8d2d9f2, Offset: 0x1ab0
 // Size: 0x1b0
 function widows_wine_slow_zombie(e_player) {
     self notify(#"widows_wine_slow");
@@ -390,35 +390,35 @@ function widows_wine_slow_zombie(e_player) {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x31177ff2, Offset: 0x1c68
+// Params 0, eflags: 0x0
+// Checksum 0x39571478, Offset: 0x1c68
 // Size: 0x3c
 function function_facf6212() {
     self endon(#"death");
-    e_grenade = self waittill(#"grenade_stuck");
+    self waittill(#"grenade_stuck", e_grenade);
     e_grenade detonate();
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0x7462c44e, Offset: 0x1cb0
+// Params 0, eflags: 0x0
+// Checksum 0xf80be930, Offset: 0x1cb0
 // Size: 0x58
 function function_1652a72b() {
     self endon(#"disconnect");
     self endon(#"stop_widows_wine");
     while (true) {
-        e_grenade = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", e_grenade);
         e_grenade thread function_c9dccc13();
     }
 }
 
 // Namespace zm_perk_widows_wine
-// Params 0, eflags: 0x1 linked
-// Checksum 0xeb500d49, Offset: 0x1d10
+// Params 0, eflags: 0x0
+// Checksum 0x4ddd6088, Offset: 0x1d10
 // Size: 0x94
 function function_c9dccc13() {
     self endon(#"explode");
-    pos, normal, e_target = self waittill(#"grenade_bounce");
+    self waittill(#"grenade_bounce", pos, normal, e_target);
     if (isdefined(e_target)) {
         if (e_target.archetype === "parasite" || e_target.archetype === "raps") {
             self detonate();
@@ -427,8 +427,8 @@ function function_c9dccc13() {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 2, eflags: 0x1 linked
-// Checksum 0x66246d5e, Offset: 0x1db0
+// Params 2, eflags: 0x0
+// Checksum 0xcbf68945, Offset: 0x1db0
 // Size: 0x10c
 function widows_wine_vehicle_behavior(attacker, weapon) {
     self endon(#"death");
@@ -449,8 +449,8 @@ function widows_wine_vehicle_behavior(attacker, weapon) {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 3, eflags: 0x1 linked
-// Checksum 0xdd26221d, Offset: 0x1ec8
+// Params 3, eflags: 0x0
+// Checksum 0xfde69a07, Offset: 0x1ec8
 // Size: 0x29c
 function widows_wine_perk_lost(b_pause, str_perk, str_result) {
     self notify(#"stop_widows_wine");
@@ -490,8 +490,8 @@ function widows_wine_perk_lost(b_pause, str_perk, str_result) {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 2, eflags: 0x1 linked
-// Checksum 0x4f1d1247, Offset: 0x2170
+// Params 2, eflags: 0x0
+// Checksum 0xb8cbb01, Offset: 0x2170
 // Size: 0x9c
 function function_de1aa818(weapon, wallbuy) {
     if (zm_utility::is_lethal_grenade(weapon)) {
@@ -507,8 +507,8 @@ function function_de1aa818(weapon, wallbuy) {
 }
 
 // Namespace zm_perk_widows_wine
-// Params 7, eflags: 0x1 linked
-// Checksum 0x95130ebf, Offset: 0x2218
+// Params 7, eflags: 0x0
+// Checksum 0x76ff6479, Offset: 0x2218
 // Size: 0x2ec
 function function_f10d5de3(vo_dialog_id, flourish_weapon, weapon, var_834ec52d, var_499da020, flourish_fn, wallbuy) {
     if (zm_utility::is_melee_weapon(weapon)) {

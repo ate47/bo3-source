@@ -3,7 +3,7 @@
 #namespace zm_sumpf_fx;
 
 // Namespace zm_sumpf_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1d6c74c, Offset: 0xdc8
 // Size: 0xc4
 function main() {
@@ -16,7 +16,7 @@ function main() {
 }
 
 // Namespace zm_sumpf_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f3d1f97, Offset: 0xe98
 // Size: 0x232
 function function_f45953c() {
@@ -43,7 +43,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_sumpf_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0a4e329, Offset: 0x10d8
 // Size: 0x42a
 function function_e6258024() {
@@ -88,7 +88,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_sumpf_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9a367dc5, Offset: 0x1510
 // Size: 0xa2
 function trap_fx_monitor(name, side) {
@@ -102,7 +102,7 @@ function trap_fx_monitor(name, side) {
 }
 
 // Namespace zm_sumpf_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb1f683a5, Offset: 0x15c0
 // Size: 0x1f0
 function function_1fc3f4ef(name, side) {

@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_game_module;
 
@@ -57,7 +57,7 @@ function set_current_game_module(game_module_index) {
 }
 
 // Namespace zm_game_module
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa9200637, Offset: 0x508
 // Size: 0x1a
 function get_current_game_module() {
@@ -65,7 +65,7 @@ function get_current_game_module() {
 }
 
 // Namespace zm_game_module
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc5d0d66, Offset: 0x530
 // Size: 0x7a
 function get_game_module(game_module_index) {
@@ -105,7 +105,7 @@ function game_module_post_zombie_spawn_init() {
 }
 
 // Namespace zm_game_module
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf2433d7e, Offset: 0x688
 // Size: 0x76
 function function_e3c73203(freeze) {
@@ -150,7 +150,7 @@ function damage_callback_no_pvp_damage(einflictor, eattacker, idamage, idflags, 
 }
 
 // Namespace zm_game_module
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf83d6d4c, Offset: 0x8f0
 // Size: 0xba
 function respawn_players() {
@@ -252,7 +252,7 @@ function create_fireworks(launch_spots, min_wait, max_wait, randomize) {
 }
 
 // Namespace zm_game_module
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xac5616a1, Offset: 0xfb8
 // Size: 0x2bc
 function fireworks_launch(launch_spot) {

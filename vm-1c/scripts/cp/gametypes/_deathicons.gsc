@@ -1,8 +1,8 @@
-#using scripts/cp/gametypes/_globallogic_utils;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/gametypes/_globallogic_utils;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace deathicons;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace deathicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc44f2bc0, Offset: 0x1a8
 // Size: 0x44
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace deathicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2df4678d, Offset: 0x1f8
 // Size: 0x30
 function init() {
@@ -37,7 +37,7 @@ function init() {
 }
 
 // Namespace deathicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a8fd029, Offset: 0x230
 // Size: 0x10
 function on_player_connect() {
@@ -53,7 +53,7 @@ function update_enabled() {
 }
 
 // Namespace deathicons
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf2244b14, Offset: 0x258
 // Size: 0x244
 function add(entity, dyingplayer, team, timeout) {
@@ -92,7 +92,7 @@ function add(entity, dyingplayer, team, timeout) {
 }
 
 // Namespace deathicons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf81ce849, Offset: 0x4a8
 // Size: 0x64
 function destroy_slowly(timeout) {
@@ -105,7 +105,7 @@ function destroy_slowly(timeout) {
 }
 
 // Namespace deathicons
-// Params 10, eflags: 0x1 linked
+// Params 10, eflags: 0x0
 // Checksum 0xf1653f6c, Offset: 0x518
 // Size: 0xdc
 function ragdoll_override(idamage, smeansofdeath, sweapon, shitloc, vdir, vattackerorigin, deathanimduration, einflictor, ragdoll_jib, body) {

@@ -1,7 +1,7 @@
 #namespace shaderanim;
 
 // Namespace shaderanim
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x959b0108, Offset: 0x88
 // Size: 0x1dc
 function animate_crack(localclientnum, vectorname, delay, duration, start, end) {

@@ -1,12 +1,12 @@
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
 
 #namespace mp_city_sound;
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x9b33e655, Offset: 0x1e0
+// Params 0, eflags: 0x0
+// Checksum 0xa0cf8ebf, Offset: 0x1e0
 // Size: 0x64
 function main() {
     function_d5fdab67();
@@ -17,8 +17,8 @@ function main() {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x171ecd6b, Offset: 0x250
+// Params 0, eflags: 0x0
+// Checksum 0xdedb13c, Offset: 0x250
 // Size: 0x94
 function function_56481761() {
     if (!isdefined(self.var_6250a5f2)) {
@@ -34,8 +34,8 @@ function function_56481761() {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x5d1c0839, Offset: 0x2f0
+// Params 0, eflags: 0x0
+// Checksum 0xb8bf4df2, Offset: 0x2f0
 // Size: 0x40
 function function_435ae334() {
     for (i = 0; i < 5; i++) {
@@ -44,8 +44,8 @@ function function_435ae334() {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x10018308, Offset: 0x338
+// Params 0, eflags: 0x0
+// Checksum 0xa0e1c72, Offset: 0x338
 // Size: 0x570
 function function_d5fdab67() {
     level.var_a439908d = [];
@@ -94,8 +94,8 @@ function function_d5fdab67() {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x2147682d, Offset: 0x8b0
+// Params 0, eflags: 0x0
+// Checksum 0x34e15589, Offset: 0x8b0
 // Size: 0xf4
 function function_f321b162() {
     level.var_fbe4da77 = array(20, 20, 20, 20, 10);
@@ -107,8 +107,8 @@ function function_f321b162() {
 }
 
 // Namespace mp_city_sound
-// Params 1, eflags: 0x1 linked
-// Checksum 0xba489071, Offset: 0x9b0
+// Params 1, eflags: 0x0
+// Checksum 0xad8f4b86, Offset: 0x9b0
 // Size: 0x56
 function function_23038cdd(var_e9d60ada) {
     for (i = 0; i < level.var_fbe4da77[var_e9d60ada]; i++) {
@@ -117,8 +117,8 @@ function function_23038cdd(var_e9d60ada) {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x7d64df87, Offset: 0xa10
+// Params 0, eflags: 0x0
+// Checksum 0x87f6b789, Offset: 0xa10
 // Size: 0x208
 function function_16ed034f() {
     while (true) {
@@ -146,8 +146,8 @@ function function_16ed034f() {
 }
 
 // Namespace mp_city_sound
-// Params 1, eflags: 0x1 linked
-// Checksum 0xb8047433, Offset: 0xc20
+// Params 1, eflags: 0x0
+// Checksum 0x9a06cdbd, Offset: 0xc20
 // Size: 0xa2
 function function_7c5e2d56(var_e9d60ada) {
     switch (var_e9d60ada) {
@@ -171,8 +171,8 @@ function function_7c5e2d56(var_e9d60ada) {
 }
 
 // Namespace mp_city_sound
-// Params 1, eflags: 0x1 linked
-// Checksum 0x86c5c968, Offset: 0xcd0
+// Params 1, eflags: 0x0
+// Checksum 0xfe420af4, Offset: 0xcd0
 // Size: 0x124
 function function_5e102426(var_e9d60ada) {
     switch (var_e9d60ada) {
@@ -203,8 +203,8 @@ function function_5e102426(var_e9d60ada) {
 }
 
 // Namespace mp_city_sound
-// Params 1, eflags: 0x1 linked
-// Checksum 0x8d2c51c9, Offset: 0xe00
+// Params 1, eflags: 0x0
+// Checksum 0x3c823cce, Offset: 0xe00
 // Size: 0x9e
 function function_21679d94(var_e9d60ada) {
     if (level.var_4ee0b380[var_e9d60ada].size == 0) {
@@ -216,8 +216,8 @@ function function_21679d94(var_e9d60ada) {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0xf60cc656, Offset: 0xea8
+// Params 0, eflags: 0x0
+// Checksum 0x776182, Offset: 0xea8
 // Size: 0xbc
 function function_fedfe893() {
     var_5a08b0ed = struct::get_array("snd_emergency", "targetname");
@@ -232,8 +232,8 @@ function function_fedfe893() {
 }
 
 // Namespace mp_city_sound
-// Params 2, eflags: 0x1 linked
-// Checksum 0xed93436b, Offset: 0xf70
+// Params 2, eflags: 0x0
+// Checksum 0x4bd7a664, Offset: 0xf70
 // Size: 0x110
 function function_61448a1f(var_5a08b0ed, var_f044f889) {
     level endon(#"disconnect");
@@ -252,8 +252,8 @@ function function_61448a1f(var_5a08b0ed, var_f044f889) {
 }
 
 // Namespace mp_city_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x84039c3b, Offset: 0x1088
+// Params 0, eflags: 0x0
+// Checksum 0x6de11b29, Offset: 0x1088
 // Size: 0x4e
 function function_4969995f() {
     level endon(#"disconnect");

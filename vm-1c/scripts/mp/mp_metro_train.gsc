@@ -1,13 +1,13 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
-#using scripts/mp/killstreaks/_supplydrop;
-#using scripts/mp/gametypes/ctf;
-#using scripts/mp/_util;
 #using scripts/mp/_events;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/ctf;
+#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace mp_metro_train;
 
@@ -18,14 +18,14 @@
 function init() {
     level.var_a3275b98 = [];
     level.var_86638a28 = [];
-    var_cfe91694 = getvehiclenode("train_start_1", "targetname");
-    var_41f085cf = getvehiclenode("train_start_2", "targetname");
+    start1 = getvehiclenode("train_start_1", "targetname");
+    start2 = getvehiclenode("train_start_2", "targetname");
     var_702434a5 = [];
     var_9626af0e = [];
     var_db3e7a5c = [];
     var_4d45e997 = [];
-    function_c5b797fc(var_702434a5, var_db3e7a5c, var_cfe91694, "train1");
-    function_c5b797fc(var_9626af0e, var_4d45e997, var_41f085cf, "train2");
+    function_c5b797fc(var_702434a5, var_db3e7a5c, start1, "train1");
+    function_c5b797fc(var_9626af0e, var_4d45e997, start2, "train2");
     var_c7297b2b = getentarray("metro_doors_inside_left", "targetname");
     var_fe680264 = getentarray("metro_doors_outside_left", "targetname");
     var_c3f0dd82 = getentarray("metro_doors_end_left", "targetname");
@@ -58,8 +58,8 @@ function init() {
     if (level.gametype == "escort") {
         return;
     }
-    level thread function_91ce410(var_702434a5, var_db3e7a5c, "train_start_1", var_cfe91694, var_c7297b2b, var_fe680264, var_c3f0dd82, var_e91b1c22, var_7d375500, var_fe18c116, var_f66166da, "right");
-    level thread function_91ce410(var_9626af0e, var_4d45e997, "train_start_2", var_41f085cf, var_7ce6af9e, var_5159825b, var_e1604af1, var_c318a1b9, var_d1439c1d, var_fe600fa3, var_1ec2db3f, "left");
+    level thread function_91ce410(var_702434a5, var_db3e7a5c, "train_start_1", start1, var_c7297b2b, var_fe680264, var_c3f0dd82, var_e91b1c22, var_7d375500, var_fe18c116, var_f66166da, "right");
+    level thread function_91ce410(var_9626af0e, var_4d45e997, "train_start_2", start2, var_7ce6af9e, var_5159825b, var_e1604af1, var_c318a1b9, var_d1439c1d, var_fe600fa3, var_1ec2db3f, "left");
 }
 
 // Namespace mp_metro_train
@@ -316,7 +316,7 @@ function function_ac1ac4d2() {
     self endon(#"death");
     self.disablefinalkillcam = 1;
     for (;;) {
-        entity = self waittill(#"touch");
+        self waittill(#"touch", entity);
         if (isplayer(entity)) {
             entity dodamage(entity.health * 2, self.origin + (0, 0, 1), self, self, 0, "MOD_CRUSH");
         }

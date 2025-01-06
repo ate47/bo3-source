@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
 
 #namespace mp_arena_sound;
 
 // Namespace mp_arena_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdac53549, Offset: 0x2f8
+// Params 0, eflags: 0x0
+// Checksum 0x550e7693, Offset: 0x2f8
 // Size: 0x312
 function main() {
     clientfield::register("world", "arena_announcer_line", 12000, 4, "int", &function_8cf0b2, 0, 0);
@@ -43,32 +43,32 @@ function main() {
 }
 
 // Namespace mp_arena_sound
-// Params 7, eflags: 0x1 linked
-// Checksum 0x1e8bee69, Offset: 0x618
+// Params 7, eflags: 0x0
+// Checksum 0x4a3178a9, Offset: 0x618
 // Size: 0x48
 function function_8cf0b2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.var_4655dffd = newval;
 }
 
 // Namespace mp_arena_sound
-// Params 7, eflags: 0x1 linked
-// Checksum 0x52f97342, Offset: 0x668
+// Params 7, eflags: 0x0
+// Checksum 0xc3605ded, Offset: 0x668
 // Size: 0x48
 function function_a7d453ed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.var_7bb6ffcd = newval;
 }
 
 // Namespace mp_arena_sound
-// Params 7, eflags: 0x1 linked
-// Checksum 0x27efeccd, Offset: 0x6b8
+// Params 7, eflags: 0x0
+// Checksum 0x9dbae98c, Offset: 0x6b8
 // Size: 0x48
 function function_234a7ab8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.var_74b8c7 = newval;
 }
 
 // Namespace mp_arena_sound
-// Params 7, eflags: 0x1 linked
-// Checksum 0x3e26bd49, Offset: 0x708
+// Params 7, eflags: 0x0
+// Checksum 0xfa34677b, Offset: 0x708
 // Size: 0x1fe
 function function_2ed4e576(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval <= oldval) {
@@ -98,8 +98,8 @@ function function_2ed4e576(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace mp_arena_sound
-// Params 3, eflags: 0x1 linked
-// Checksum 0x4152ca9b, Offset: 0x910
+// Params 3, eflags: 0x0
+// Checksum 0xa36f3c0b, Offset: 0x910
 // Size: 0x178
 function function_aea157a4(localclientnum, alias, line) {
     var_cfdadf12 = alias + "_" + line;
@@ -118,8 +118,8 @@ function function_aea157a4(localclientnum, alias, line) {
 }
 
 // Namespace mp_arena_sound
-// Params 2, eflags: 0x1 linked
-// Checksum 0x98e4b52a, Offset: 0xa90
+// Params 2, eflags: 0x0
+// Checksum 0xd0ab0fc, Offset: 0xa90
 // Size: 0x24c
 function function_22fabb0b(var_cfdadf12, localclientnum) {
     var_42b2155b[0] = spawn(localclientnum, (3100, 1000, 934));

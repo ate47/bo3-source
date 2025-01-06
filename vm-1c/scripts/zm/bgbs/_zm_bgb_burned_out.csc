@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_burned_out;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_burned_out
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ba5cfba, Offset: 0x288
 // Size: 0x206
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_burned_out
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcd973b6d, Offset: 0x498
 // Size: 0x8c
 function function_9c2ec371(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -45,7 +45,7 @@ function function_9c2ec371(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_bgb_burned_out
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbcab3e15, Offset: 0x530
 // Size: 0xc4
 function function_c8cfe3c0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +55,7 @@ function function_c8cfe3c0(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_bgb_burned_out
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9aeb5676, Offset: 0x600
 // Size: 0xb4
 function function_34caa903(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -67,7 +67,7 @@ function function_34caa903(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_bgb_burned_out
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xef5091d4, Offset: 0x6c0
 // Size: 0xb4
 function function_69abda16(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,18 +1,18 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_placeable_mine;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_placeable_mine;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_claymore;
 
@@ -69,7 +69,7 @@ function claymore_detonation(e_planter) {
     }
     self.owner.placeable_mines[self.owner.placeable_mines.size] = self;
     while (true) {
-        ent = damagearea waittill(#"trigger");
+        damagearea waittill(#"trigger", ent);
         if (isdefined(self.owner) && ent == self.owner) {
             continue;
         }

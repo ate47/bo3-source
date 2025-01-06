@@ -1,26 +1,26 @@
-#using scripts/mp/killstreaks/_supplydrop;
-#using scripts/mp/killstreaks/_rcbomb;
-#using scripts/mp/_util;
 #using scripts/mp/_challenges;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/_util;
 #using scripts/mp/gametypes/_battlechatter;
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/medals_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/challenges_shared;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/killstreaks/_rcbomb;
+#using scripts/mp/killstreaks/_supplydrop;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/medals_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weapons;
 
 #namespace hq;
 
@@ -260,7 +260,7 @@ function hqmainloop() {
         radius = 75;
         for (index = 0; index < var_9621cb67.size; index++) {
             if (distancesquared(var_9621cb67[index], level.radio.origin) < radius * radius) {
-                var_9621cb67[index] notify(#"hash_dc4432bd");
+                var_9621cb67[index] notify(#"rcbomb_shutdown");
             }
         }
         if (level.var_bee57ade) {
@@ -293,7 +293,7 @@ function hqmainloop() {
         level.radio.gameobject.onuse = &onradiocapture;
         level.radio.gameobject.onbeginuse = &onbeginuse;
         level.radio.gameobject.onenduse = &onenduse;
-        level waittill(#"hash_d0dd3669");
+        level waittill(#"hq_captured");
         ownerteam = level.radio.gameobject gameobjects::get_owner_team();
         if (level.hqautodestroytime) {
             thread destroyhqaftertime(level.hqautodestroytime, ownerteam);
@@ -324,7 +324,7 @@ function hqmainloop() {
                 }
             }
             level thread function_78bd77f5();
-            destroy_team = level waittill(#"hq_destroyed");
+            level waittill(#"hq_destroyed", destroy_team);
             level.radio spawning::enable_influencers(0);
             if (!level.kothmode || level.hqdestroyedbytimer) {
                 break;
@@ -426,7 +426,7 @@ function onradiocapture(player) {
         thread sound::play_on_players("mp_war_objective_lost", team);
     }
     level thread awardhqpoints(capture_team);
-    level notify(#"hash_d0dd3669");
+    level notify(#"hq_captured");
     player notify(#"event_ended");
 }
 

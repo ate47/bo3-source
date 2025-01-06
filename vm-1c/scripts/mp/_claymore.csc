@@ -1,8 +1,8 @@
-#using scripts/mp/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace claymore;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace claymore
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbbfe6f3f, Offset: 0x190
 // Size: 0x4c
 function __init__(localclientnum) {
@@ -24,7 +24,7 @@ function __init__(localclientnum) {
 }
 
 // Namespace claymore
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe5f36bda, Offset: 0x1e8
 // Size: 0xc0
 function spawned(localclientnum) {

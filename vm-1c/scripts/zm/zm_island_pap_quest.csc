@@ -1,14 +1,14 @@
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
 
 #namespace zm_island_pap_quest;
 
 // Namespace zm_island_pap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa54e5072, Offset: 0x1b0
 // Size: 0xdc
 function init() {
@@ -18,7 +18,7 @@ function init() {
 }
 
 // Namespace zm_island_pap_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa569e8b2, Offset: 0x298
 // Size: 0x6c
 function function_97bd83a7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -26,7 +26,7 @@ function function_97bd83a7(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_pap_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4533eec, Offset: 0x310
 // Size: 0x7c
 function function_b2ce2a08(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -34,7 +34,7 @@ function function_b2ce2a08(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_pap_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x37068f87, Offset: 0x398
 // Size: 0xdc
 function lower_pap_water(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,7 +52,7 @@ function lower_pap_water(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm_island_pap_quest
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x787062fd, Offset: 0x480
 // Size: 0xe4
 function function_cc69986f(var_55fa7b94, var_e1344a83, n_time) {

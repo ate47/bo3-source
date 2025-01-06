@@ -1,10 +1,10 @@
-#using scripts/mp/gametypes/_dev;
-#using scripts/mp/bots/_bot;
 #using scripts/mp/_util;
+#using scripts/mp/bots/_bot;
+#using scripts/mp/gametypes/_dev;
 #using scripts/shared/array_shared;
 #using scripts/shared/rat_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace rat;
 
@@ -19,7 +19,7 @@
     }
 
     // Namespace rat
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa2e1d915, Offset: 0x170
     // Size: 0x9c
     function __init__() {
@@ -31,7 +31,7 @@
     }
 
     // Namespace rat
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xae3e113b, Offset: 0x218
     // Size: 0x284
     function rscaddenemy(params) {
@@ -59,7 +59,7 @@
     }
 
     // Namespace rat
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xe170273f, Offset: 0x4a8
     // Size: 0x66
     function testenemy(team) {
@@ -73,7 +73,7 @@
     }
 
     // Namespace rat
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6e23e87, Offset: 0x518
     // Size: 0x4c
     function deathcounter() {

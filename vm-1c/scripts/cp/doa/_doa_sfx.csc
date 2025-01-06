@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/fx_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_1a381543;
 

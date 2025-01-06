@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/voice/voice_infection1;
 #using scripts/shared/music_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_infection_sound;
 

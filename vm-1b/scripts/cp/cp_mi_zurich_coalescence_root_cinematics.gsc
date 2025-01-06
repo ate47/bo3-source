@@ -1,19 +1,19 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_zurich_coalescence_sound;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_bbb4ee72;
 
@@ -37,9 +37,9 @@ function init_clientfields() {
 // Params 2, eflags: 0x0
 // Checksum 0xf5f430f7, Offset: 0x7c0
 // Size: 0x17a
-function function_b319df2(str_objective, e_player) {
+function play_scene(str_objective, e_player) {
     a_ai = getaiteamarray("axis");
-    array::thread_all(a_ai, &namespace_8e9083ff::function_48463818);
+    array::thread_all(a_ai, &zurich_util::function_48463818);
     if (isdefined(level.var_65070634)) {
         level.var_65070634 notify(#"hash_11a8c313");
     }
@@ -220,7 +220,7 @@ function function_6cc3b883() {
 // Size: 0x183
 function function_33367f39() {
     level.overrideplayerdamage = &function_6255dfdc;
-    level thread namespace_8e9083ff::function_674ecd85();
+    level thread zurich_util::function_674ecd85();
     foreach (player in level.players) {
         player.var_b1a4293e = util::spawn_model("tag_origin", player.origin, player.angles);
         player playerlinktodelta(player.var_b1a4293e, "tag_origin", 1, 15, 15, 0, 15);
@@ -262,7 +262,7 @@ function function_32b529d8(str_objective, e_player) {
         break;
     }
     scene::add_scene_func(var_470af250, &function_2fbd0bea, "play");
-    scene::add_scene_func(var_470af250, &namespace_8e9083ff::function_9f90bc0f, "done", "root_scene_completed");
+    scene::add_scene_func(var_470af250, &zurich_util::function_9f90bc0f, "done", "root_scene_completed");
     level scene::init(var_470af250);
     level thread function_98192f84(var_f9202c4e, var_470af250, str_exploder);
     level thread scene::play(str_player_scene, e_player);

@@ -1,10 +1,10 @@
-#using scripts/cp/_util;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_globallogic;
-#using scripts/shared/system_shared;
-#using scripts/shared/rank_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/gametypes/_globallogic;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/rank_shared;
+#using scripts/shared/system_shared;
 
 #namespace menus;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49684029, Offset: 0x450
 // Size: 0x44
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbbb85017, Offset: 0x4a0
 // Size: 0x130
 function init() {
@@ -44,7 +44,7 @@ function init() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa40a712, Offset: 0x5d8
 // Size: 0x3c
 function on_player_connect() {
@@ -53,7 +53,7 @@ function on_player_connect() {
 }
 
 // Namespace menus
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbe16ea21, Offset: 0x620
 // Size: 0xc4
 function function_521a4b1f(player) {
@@ -70,13 +70,13 @@ function function_521a4b1f(player) {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52465265, Offset: 0x6f0
 // Size: 0x928
 function on_menu_response() {
     self endon(#"disconnect");
     for (;;) {
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         if (response == "back") {
             self closeingamemenu();
             if (level.console) {

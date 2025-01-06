@@ -1,43 +1,43 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld;
+#using scripts/cp/cp_mi_zurich_newworld_accolades;
 #using scripts/cp/cp_mi_zurich_newworld_sound;
 #using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld_accolades;
-#using scripts/cp/cp_mi_zurich_newworld;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_globallogic_ui;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/cybercom/_cybercom_gadget;
 #using scripts/cp/cybercom/_cybercom_gadget_firefly;
 #using scripts/cp/cybercom/_cybercom_gadget_security_breach;
-#using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_globallogic_ui;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
 #using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_f8b9e1f8;
 
@@ -883,8 +883,8 @@ function function_b085bdaf() {
 // Checksum 0xf5acd751, Offset: 0x5860
 // Size: 0x83
 function function_10ecac98() {
-    var_3ced446f = spawner::get_ai_group_ai("factory_intro_allies");
-    foreach (ai in var_3ced446f) {
+    a_allies = spawner::get_ai_group_ai("factory_intro_allies");
+    foreach (ai in a_allies) {
         ai thread function_90d66dc7();
     }
 }
@@ -1317,10 +1317,10 @@ function function_40c6f0a4() {
     self endon(#"player_entering_foundry_on_foot");
     self util::hide_hint_text(1);
     while (!self flag::get("player_hijacked_vehicle")) {
-        ent, e_player = level waittill(#"hash_92698df4");
+        level waittill(#"ccom_locked_on", ent, e_player);
         if (e_player == self) {
             self thread util::show_hint_text(%CP_MI_ZURICH_NEWWORLD_REMOTE_HIJACK_DRONE_RELEASE, 0, undefined, -1);
-            ent, e_player = level waittill(#"ccom_lost_lock");
+            level waittill(#"ccom_lost_lock", ent, e_player);
             if (e_player == self) {
                 self util::hide_hint_text(1);
                 continue;
@@ -1363,7 +1363,7 @@ function function_3460d45c() {
         return;
     }
     while (true) {
-        var_52b4a338 = self waittill(#"clonedentity");
+        self waittill(#"clonedentity", var_52b4a338);
         if (var_52b4a338.targetname === "foundry_hackable_vehicle_ai") {
             self namespace_7cb6cd95::function_6c745562(getent("hijacked_vehicle_range", "targetname"));
             var_52b4a338.overridevehicledamage = &function_54e29111;
@@ -1655,7 +1655,7 @@ function function_83d084fe(str_targetname) {
     var_b5b0f408 = getent(str_targetname, "targetname");
     var_b5b0f408 endon(#"death");
     while (true) {
-        var_4161ad80 = var_b5b0f408 waittill(#"trigger");
+        var_b5b0f408 waittill(#"trigger", var_4161ad80);
         if (isplayer(var_4161ad80) || isdefined(var_4161ad80.owner)) {
             if (isdefined(var_4161ad80.owner)) {
                 var_b5b0f408 trigger::use(undefined, var_4161ad80.owner);
@@ -1672,7 +1672,7 @@ function function_83d084fe(str_targetname) {
 function function_8df847d() {
     self endon(#"death");
     while (true) {
-        var_4161ad80 = self waittill(#"trigger");
+        self waittill(#"trigger", var_4161ad80);
         if (isplayer(var_4161ad80) || isdefined(var_4161ad80.owner)) {
             if (isdefined(var_4161ad80.owner)) {
                 self useby(var_4161ad80.owner);
@@ -1781,7 +1781,7 @@ function function_d1055ea4() {
     e_generator globallogic_ui::function_8ee5a301(%tag_weakpoint, 2600, 5000);
     e_generator setcandamage(1);
     while (n_damage < 1000) {
-        idamage, var_96133235, var_d3ca3e9c, vpoint, stype, smodelname, var_581b856d, stagname = e_generator waittill(#"damage");
+        e_generator waittill(#"damage", idamage, var_96133235, var_d3ca3e9c, vpoint, stype, smodelname, var_581b856d, stagname);
         if (isplayer(var_96133235)) {
             if (stype === "MOD_PROJECTILE_SPLASH") {
                 idamage *= 2;
@@ -2037,7 +2037,7 @@ function function_5e3e5d06() {
         return;
     }
     while (true) {
-        var_52b4a338 = self waittill(#"clonedentity");
+        self waittill(#"clonedentity", var_52b4a338);
         if (var_52b4a338.targetname === "vat_room_auto_turret_ai") {
             self flag::set("vat_room_turret_hijacked");
         }
@@ -2142,63 +2142,63 @@ function function_1a0c61bc(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 // Checksum 0xef89d61c, Offset: 0x9978
 // Size: 0x54a
 function function_6ca75594() {
-    newworld_util::function_bbd12ed2("cin_new_02_01_pallasintro_vign_appear");
-    newworld_util::function_bbd12ed2("cin_new_02_01_pallasintro_vign_appear_player");
-    newworld_util::function_bbd12ed2("cin_new_03_01_factoryraid_aie_break_glass");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_alley_pipes_bundle");
-    newworld_util::function_bbd12ed2("cin_new_03_03_factoryraid_vign_wallrunright_diaz");
-    newworld_util::function_bbd12ed2("cin_new_03_03_factoryraid_vign_wallrunright_diaz_pt2");
-    newworld_util::function_bbd12ed2("cin_new_03_01_factoryraid_vign_wallrun_attack_attack");
-    newworld_util::function_bbd12ed2("cin_new_03_01_factoryraid_vign_wallrun_attack_landing");
-    newworld_util::function_bbd12ed2("cin_new_03_03_factoryraid_vign_startup_flee");
-    newworld_util::function_bbd12ed2("cin_new_03_03_factoryraid_vign_startup");
-    newworld_util::function_bbd12ed2("cin_new_03_02_factoryraid_vign_explaindrones");
-    newworld_util::function_bbd12ed2("cin_new_03_02_factoryraid_vign_explaindrones_open_door");
-    newworld_util::function_bbd12ed2("cin_new_03_03_factoryraid_vign_junkyard");
-    newworld_util::function_bbd12ed2("cin_new_03_03_factoryraid_vign_pry_open");
+    newworld_util::scene_cleanup("cin_new_02_01_pallasintro_vign_appear");
+    newworld_util::scene_cleanup("cin_new_02_01_pallasintro_vign_appear_player");
+    newworld_util::scene_cleanup("cin_new_03_01_factoryraid_aie_break_glass");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_alley_pipes_bundle");
+    newworld_util::scene_cleanup("cin_new_03_03_factoryraid_vign_wallrunright_diaz");
+    newworld_util::scene_cleanup("cin_new_03_03_factoryraid_vign_wallrunright_diaz_pt2");
+    newworld_util::scene_cleanup("cin_new_03_01_factoryraid_vign_wallrun_attack_attack");
+    newworld_util::scene_cleanup("cin_new_03_01_factoryraid_vign_wallrun_attack_landing");
+    newworld_util::scene_cleanup("cin_new_03_03_factoryraid_vign_startup_flee");
+    newworld_util::scene_cleanup("cin_new_03_03_factoryraid_vign_startup");
+    newworld_util::scene_cleanup("cin_new_03_02_factoryraid_vign_explaindrones");
+    newworld_util::scene_cleanup("cin_new_03_02_factoryraid_vign_explaindrones_open_door");
+    newworld_util::scene_cleanup("cin_new_03_03_factoryraid_vign_junkyard");
+    newworld_util::scene_cleanup("cin_new_03_03_factoryraid_vign_pry_open");
     wait 3;
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh010");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh020");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh030");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh040");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh050");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh060");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh070");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh080");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh090");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh100");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh110");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh120");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh130");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh140");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh150");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh160");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh170");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh180");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh190");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh200");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh210");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh220");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh230");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh240");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh250");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh260");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh270");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh280");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh290");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh300");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh310");
-    newworld_util::function_bbd12ed2("cin_new_04_01_insideman_1st_hack_sh320");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_sgen_charging_station_break_02_bundle");
-    newworld_util::function_bbd12ed2("cin_sgen_16_01_charging_station_aie_awaken_robot03");
-    newworld_util::function_bbd12ed2("cin_sgen_16_01_charging_station_aie_awaken_robot04");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_cauldron_fall_01_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_cauldron_fall_02_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_cauldron_bridge_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_gp_cauldron_hit_s3_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_cauldron_fall_s1_01_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_cauldron_fall_s1_02_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_cauldron_bridge_s1_bundle");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh010");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh020");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh030");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh040");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh050");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh060");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh070");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh080");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh090");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh100");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh110");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh120");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh130");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh140");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh150");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh160");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh170");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh180");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh190");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh200");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh210");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh220");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh230");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh240");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh250");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh260");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh270");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh280");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh290");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh300");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh310");
+    newworld_util::scene_cleanup("cin_new_04_01_insideman_1st_hack_sh320");
+    newworld_util::scene_cleanup("p7_fxanim_cp_sgen_charging_station_break_02_bundle");
+    newworld_util::scene_cleanup("cin_sgen_16_01_charging_station_aie_awaken_robot03");
+    newworld_util::scene_cleanup("cin_sgen_16_01_charging_station_aie_awaken_robot04");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_cauldron_fall_01_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_cauldron_fall_02_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_cauldron_bridge_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_gp_cauldron_hit_s3_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_cauldron_fall_s1_01_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_cauldron_fall_s1_02_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_cauldron_bridge_s1_bundle");
 }
 
 // Namespace namespace_f8b9e1f8
@@ -2211,7 +2211,7 @@ function function_61a9d0c7() {
     objectives::set("cp_level_newworld_vat_room_subobj_hack_door");
     thread newworld_util::function_16dd8c5f("vat_room_exit_door_trigger", %cp_level_newworld_access_door, %CP_MI_ZURICH_NEWWORLD_HACK, "vat_room_door_panel", "vat_room_door_hacked");
     objectives::complete("cp_level_newworld_vat_room_subobj_hack_door");
-    e_player = level waittill(#"vat_room_door_hacked");
+    level waittill(#"vat_room_door_hacked", e_player);
     return e_player;
 }
 
@@ -2622,7 +2622,7 @@ function function_3c0b8c41() {
     }
     self fx::play("smk_idle_cauldron", undefined, undefined, "stop_static_fx", 1, "fx_spill_middle_jnt");
     while (true) {
-        idamage, var_96133235, var_d3ca3e9c, vpoint, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", idamage, var_96133235, var_d3ca3e9c, vpoint, type, modelname, tagname, partname, weapon, idflags);
         self.health = 10000;
         if (weapon === level.var_e4124849 || weapon === level.var_7e8adada || weapon === level.var_3e8a5e10) {
             idamage = 350;
@@ -2732,7 +2732,7 @@ function function_528ae2fd(var_96133235) {
 function function_91f1c249() {
     self endon(#"death");
     while (true) {
-        e_victim = self waittill(#"trigger");
+        self waittill(#"trigger", e_victim);
         if (e_victim.var_6ce47035 === 1) {
             continue;
         }
@@ -2805,7 +2805,7 @@ function function_9e51be07(min_duration, max_duration) {
 // Checksum 0x37c47e5, Offset: 0xbff0
 // Size: 0x32
 function private function_48516b3d() {
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     corpse clientfield::set("arch_actor_fire_fx", 2);
 }
 
@@ -2896,7 +2896,7 @@ function function_e8db2799(var_46100e43, var_c11c02b4) {
     self endon(#"death");
     level endon(#"hash_e8db2799");
     while (true) {
-        ent = var_46100e43 waittill(#"trigger");
+        var_46100e43 waittill(#"trigger", ent);
         if (isplayer(ent) && isalive(ent)) {
             switch (var_c11c02b4) {
             case "left":

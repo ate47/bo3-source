@@ -1,15 +1,15 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_genesis_mechz;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_mechz
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcf13c96e, Offset: 0x2f0
 // Size: 0xc4
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_mechz
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6328da43, Offset: 0x3c0
 // Size: 0x124
 function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +55,7 @@ function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_genesis_mechz
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf53bc5ba, Offset: 0x4f0
 // Size: 0x4c
 function function_7772592b(localclientnum) {
@@ -66,7 +66,7 @@ function function_7772592b(localclientnum) {
 }
 
 // Namespace zm_genesis_mechz
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb537c374, Offset: 0x548
 // Size: 0x52
 function function_51adc559(localclientnum) {
@@ -78,7 +78,7 @@ function function_51adc559(localclientnum) {
 }
 
 // Namespace zm_genesis_mechz
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xedc769c0, Offset: 0x5a8
 // Size: 0xa4
 function function_4b9cfd4c(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

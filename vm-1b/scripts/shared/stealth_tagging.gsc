@@ -1,8 +1,8 @@
 #using scripts/cp/_oed;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/stealth;
-#using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_tagging;
 

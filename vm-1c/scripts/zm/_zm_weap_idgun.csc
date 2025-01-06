@@ -1,26 +1,26 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_vortex;
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace idgun;
 
 // Namespace idgun
 // Params 0, eflags: 0x2
-// Checksum 0xf095ae55, Offset: 0x240
+// Checksum 0xcf1414b7, Offset: 0x240
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("idgun", &init, undefined, undefined);
 }
 
 // Namespace idgun
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb8ff88de, Offset: 0x280
+// Params 0, eflags: 0x0
+// Checksum 0xb082ec8b, Offset: 0x280
 // Size: 0x94
 function init() {
     level.weaponnone = getweapon("none");
@@ -31,16 +31,16 @@ function init() {
 }
 
 // Namespace idgun
-// Params 1, eflags: 0x1 linked
-// Checksum 0x37a76aeb, Offset: 0x320
+// Params 1, eflags: 0x0
+// Checksum 0xdafb843a, Offset: 0x320
 // Size: 0xc
 function function_50ee0a95(localclientnum) {
     
 }
 
 // Namespace idgun
-// Params 1, eflags: 0x1 linked
-// Checksum 0xbe04984c, Offset: 0x338
+// Params 1, eflags: 0x0
+// Checksum 0xa6f9628d, Offset: 0x338
 // Size: 0x8a
 function function_e1efbc50(var_9727e47e) {
     if (var_9727e47e != level.weaponnone) {
@@ -54,8 +54,8 @@ function function_e1efbc50(var_9727e47e) {
 }
 
 // Namespace idgun
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3f9201a2, Offset: 0x3d0
+// Params 0, eflags: 0x0
+// Checksum 0x52357579, Offset: 0x3d0
 // Size: 0x154
 function function_436486f7() {
     level.idgun_weapons = [];
@@ -71,7 +71,7 @@ function function_436486f7() {
 
 // Namespace idgun
 // Params 1, eflags: 0x0
-// Checksum 0xb93c7c99, Offset: 0x530
+// Checksum 0xd667d9a7, Offset: 0x530
 // Size: 0x98
 function function_9b7ac6a9(weapon) {
     if (weapon === getweapon("idgun_upgraded_0") || weapon === getweapon("idgun_upgraded_1") || weapon === getweapon("idgun_upgraded_2") || weapon === getweapon("idgun_upgraded_3")) {
@@ -82,7 +82,7 @@ function function_9b7ac6a9(weapon) {
 
 // Namespace idgun
 // Params 1, eflags: 0x0
-// Checksum 0x97dea99a, Offset: 0x5d0
+// Checksum 0xa7233ab0, Offset: 0x5d0
 // Size: 0x3e
 function is_idgun_damage(weapon) {
     if (isdefined(level.idgun_weapons)) {

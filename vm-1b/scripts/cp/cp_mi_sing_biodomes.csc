@@ -1,13 +1,13 @@
-#using scripts/cp/cp_mi_sing_biodomes_sound;
-#using scripts/cp/cp_mi_sing_biodomes_fx;
-#using scripts/shared/postfx_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_squad_control;
-#using scripts/cp/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_squad_control;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_biodomes_fx;
+#using scripts/cp/cp_mi_sing_biodomes_sound;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_biodomes;
 
@@ -17,7 +17,7 @@
 // Size: 0x72
 function main() {
     function_b37230e4();
-    util::function_57b966c8(&function_71f88fc, 2);
+    util::function_57b966c8(&force_streamer, 2);
     cp_mi_sing_biodomes_fx::main();
     cp_mi_sing_biodomes_sound::main();
     load::main();
@@ -279,7 +279,7 @@ function server_interact_cam(localclientnum, oldval, newval, bnewent, binitialsn
 // Params 1, eflags: 0x0
 // Checksum 0x3affbf18, Offset: 0x1690
 // Size: 0xd5
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         streamtexturelist("cp_mi_sing_biodomes");

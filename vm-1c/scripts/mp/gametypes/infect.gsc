@@ -1,28 +1,28 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/_util;
 #using scripts/mp/_teamops;
+#using scripts/mp/_util;
 #using scripts/mp/bots/_bot;
-#using scripts/mp/gametypes/_wager;
-#using scripts/mp/gametypes/_spectating;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_loadout;
-#using scripts/mp/gametypes/_globallogic_ui;
-#using scripts/mp/gametypes/_globallogic_spawn;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
 #using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_globallogic_ui;
+#using scripts/mp/gametypes/_loadout;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/gametypes/_spectating;
+#using scripts/mp/gametypes/_wager;
+#using scripts/mp/teams/_teams;
 #using scripts/shared/abilities/_ability_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/util_shared;
 
 #namespace infect;
 
@@ -733,15 +733,15 @@ function function_bce75136() {
     overallocation = allocationspent > level.maxallocation;
     if (!overallocation) {
         giveperks();
-        loadout::function_86d76f45();
-        loadout::function_af9cf7d0();
+        loadout::giveWeapons();
+        loadout::givePrimaryOffhand();
     } else {
         loadout::function_a6ea9349();
     }
-    loadout::function_76b01f20();
+    loadout::giveSecondaryOffhand();
     if (getdvarint("tu11_enableClassicMode") == 0) {
-        loadout::function_e193f5c5();
-        loadout::function_4ddd42ba();
+        loadout::giveSpecialOffhand();
+        loadout::giveHeroWeapon();
     }
     loadout::function_66234473();
 }

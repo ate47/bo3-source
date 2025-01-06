@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_slaughter_slide;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_slaughter_slide
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3822a92, Offset: 0x1b0
 // Size: 0xc4
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_slaughter_slide
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xecf54b59, Offset: 0x280
 // Size: 0xb8
 function event() {
@@ -39,7 +39,7 @@ function event() {
     self endon(#"bgb_update");
     self.var_abd23dd0 = 6;
     while (self.var_abd23dd0 > 0) {
-        var_2a23ce90 = self function_40d43ce(2);
+        var_2a23ce90 = self is_sliding(2);
         if (var_2a23ce90) {
             self thread function_42722ac4();
             while (self issliding()) {
@@ -51,10 +51,10 @@ function event() {
 }
 
 // Namespace zm_bgb_slaughter_slide
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbc1fb679, Offset: 0x340
 // Size: 0x66
-function function_40d43ce(n_count) {
+function is_sliding(n_count) {
     var_2a23ce90 = 0;
     for (x = 0; x < n_count; x++) {
         var_2a23ce90 = self issliding();
@@ -64,7 +64,7 @@ function function_40d43ce(n_count) {
 }
 
 // Namespace zm_bgb_slaughter_slide
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85313658, Offset: 0x3b0
 // Size: 0x164
 function function_42722ac4() {
@@ -80,7 +80,7 @@ function function_42722ac4() {
 }
 
 // Namespace zm_bgb_slaughter_slide
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0x4be7629a, Offset: 0x520
 // Size: 0xce
 function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
@@ -94,7 +94,7 @@ function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath,
 }
 
 // Namespace zm_bgb_slaughter_slide
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x5428ec4d, Offset: 0x5f8
 // Size: 0xe6
 function vehicle_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

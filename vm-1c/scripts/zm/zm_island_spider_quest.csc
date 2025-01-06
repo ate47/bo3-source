@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #using_animtree("generic");
 
 #namespace zm_island_spider_quest;
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0f65dd8, Offset: 0x250
 // Size: 0x164
 function init() {
@@ -23,7 +23,7 @@ function init() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7974707b, Offset: 0x3c0
 // Size: 0xfc
 function spider_queen_mouth_weakspot(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -41,7 +41,7 @@ function spider_queen_mouth_weakspot(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace zm_island_spider_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa74fc48e, Offset: 0x4c8
 // Size: 0x6c
 function spider_queen_bleed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -49,7 +49,7 @@ function spider_queen_bleed(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_island_spider_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xaaf8e76e, Offset: 0x540
 // Size: 0x14e
 function spider_queen_stage_bleed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -70,7 +70,7 @@ function spider_queen_stage_bleed(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_island_spider_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x18df7cf9, Offset: 0x698
 // Size: 0xac
 function spider_queen_emissive_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

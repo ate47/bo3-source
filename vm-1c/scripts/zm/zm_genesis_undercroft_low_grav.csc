@@ -1,13 +1,13 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_genesis_undercroft_low_grav;
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55165d48, Offset: 0x3d0
 // Size: 0x84
 function main() {
@@ -20,7 +20,7 @@ function main() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9bd418cb, Offset: 0x460
 // Size: 0x1fc
 function register_clientfields() {
@@ -34,7 +34,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc34b220a, Offset: 0x668
 // Size: 0xdc
 function function_554db684() {
@@ -48,7 +48,7 @@ function function_554db684() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa940c708, Offset: 0x750
 // Size: 0x64
 function function_69e96b4d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -64,7 +64,7 @@ function wall_dust(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa4d3ac17, Offset: 0x838
 // Size: 0xfc
 function player_screen_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +81,7 @@ function player_screen_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x98a634b3, Offset: 0x940
 // Size: 0xbc
 function function_df81c23d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -95,7 +95,7 @@ function function_df81c23d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4676c72c, Offset: 0xa08
 // Size: 0x278
 function function_9a8a19ab(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -136,7 +136,7 @@ function function_9a8a19ab(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9d69e366, Offset: 0xc88
 // Size: 0x188
 function mm_katana_male_runjump_land_1f_l(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -160,7 +160,7 @@ function mm_katana_male_runjump_land_1f_l(localclientnum, oldval, newval, bnewen
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xeec7c234, Offset: 0xe18
 // Size: 0x288
 function function_23861dfe(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -215,7 +215,7 @@ function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x8a9829e4, Offset: 0x1158
 // Size: 0x54
 function private function_10dcbf51(localclientnum, var_e6ddb5de) {
@@ -225,7 +225,7 @@ function private function_10dcbf51(localclientnum, var_e6ddb5de) {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x80d3479, Offset: 0x11b8
 // Size: 0x14c
 function snd_low_gravity_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

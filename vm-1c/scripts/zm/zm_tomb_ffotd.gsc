@@ -1,18 +1,18 @@
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
 
 #namespace zm_tomb_ffotd;
 
 // Namespace zm_tomb_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc534ac31, Offset: 0x288
 // Size: 0x5c
 function main_start() {
@@ -23,7 +23,7 @@ function main_start() {
 }
 
 // Namespace zm_tomb_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb037e1, Offset: 0x2f0
 // Size: 0x2c8
 function main_end() {
@@ -44,7 +44,7 @@ function main_end() {
 }
 
 // Namespace zm_tomb_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe185e6d1, Offset: 0x5c0
 // Size: 0x6c
 function function_3fd88dcb() {
@@ -56,7 +56,7 @@ function function_3fd88dcb() {
 }
 
 // Namespace zm_tomb_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec082254, Offset: 0x638
 // Size: 0x3a
 function function_b620b1d6() {
@@ -66,7 +66,7 @@ function function_b620b1d6() {
 }
 
 // Namespace zm_tomb_ffotd
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa526d938, Offset: 0x680
 // Size: 0xec
 function function_acf1c4da(machine) {
@@ -82,7 +82,7 @@ function function_acf1c4da(machine) {
 }
 
 // Namespace zm_tomb_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa658742c, Offset: 0x778
 // Size: 0xb0
 function function_af29034() {

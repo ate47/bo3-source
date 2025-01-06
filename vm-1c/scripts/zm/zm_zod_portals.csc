@@ -1,18 +1,18 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #using_animtree("generic");
 
@@ -20,7 +20,7 @@
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x2
-// Checksum 0x92f345a3, Offset: 0x6c8
+// Checksum 0xdf0b9bb6, Offset: 0x6c8
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_zod_portals", &__init__, undefined, undefined);
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x0
-// Checksum 0xd35fa7b8, Offset: 0x708
+// Checksum 0x82d2d98f, Offset: 0x708
 // Size: 0x424
 function __init__() {
     visionset_mgr::register_overlay_info_style_transported("zm_zod", 1, 15, 2);
@@ -55,7 +55,7 @@ function __init__() {
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0x40ec73ea, Offset: 0xb38
+// Checksum 0x584e3d2f, Offset: 0xb38
 // Size: 0xde
 function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self notify(#"player_stargate_fx");
@@ -73,7 +73,7 @@ function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsna
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0x40a309d, Offset: 0xc20
+// Checksum 0x13ca61a2, Offset: 0xc20
 // Size: 0x4c
 function function_e7a8756e(localclientnum) {
     self util::waittill_any("player_stargate_fx", "player_portal_complete");
@@ -82,7 +82,7 @@ function function_e7a8756e(localclientnum) {
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0x7f005dc4, Offset: 0xc78
+// Checksum 0x3b5ec4ad, Offset: 0xc78
 // Size: 0xac
 function portal_3p(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"death");
@@ -95,7 +95,7 @@ function portal_3p(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0xef329b2d, Offset: 0xd30
+// Checksum 0x4b357997, Offset: 0xd30
 // Size: 0x5c
 function portal_state_canal(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_35d5bf67(localclientnum, "canal", newval);
@@ -103,7 +103,7 @@ function portal_state_canal(localclientnum, oldval, newval, bnewent, binitialsna
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0x53303e56, Offset: 0xd98
+// Checksum 0x8244dd64, Offset: 0xd98
 // Size: 0x5c
 function portal_state_slums(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_35d5bf67(localclientnum, "slums", newval);
@@ -111,7 +111,7 @@ function portal_state_slums(localclientnum, oldval, newval, bnewent, binitialsna
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0xc7e76287, Offset: 0xe00
+// Checksum 0xb3b5ef43, Offset: 0xe00
 // Size: 0x5c
 function portal_state_theater(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_35d5bf67(localclientnum, "theater", newval);
@@ -119,7 +119,7 @@ function portal_state_theater(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace zm_zod_portals
 // Params 3, eflags: 0x0
-// Checksum 0x55790fd6, Offset: 0xe68
+// Checksum 0x241e96ef, Offset: 0xe68
 // Size: 0x2ae
 function function_35d5bf67(localclientnum, var_d42f02cf, newval) {
     var_eed93042 = function_227344a6("teleport_effect_origin", var_d42f02cf, 1);
@@ -148,7 +148,7 @@ function function_35d5bf67(localclientnum, var_d42f02cf, newval) {
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0xe3f5e50a, Offset: 0x1120
+// Checksum 0x5665c2d9, Offset: 0x1120
 // Size: 0x334
 function portal_state_ending(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     s_loc = struct::get("ending_igc_portal", "targetname");
@@ -180,7 +180,7 @@ function portal_state_ending(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0x4bf9ca9a, Offset: 0x1460
+// Checksum 0x7c78ef5c, Offset: 0x1460
 // Size: 0x5c
 function function_4bc7c0a1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_11ac3c33(localclientnum, "canal", 1);
@@ -188,7 +188,7 @@ function function_4bc7c0a1(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0x5f4f27f5, Offset: 0x14c8
+// Checksum 0xede0996a, Offset: 0x14c8
 // Size: 0x5c
 function function_bd6fa919(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_11ac3c33(localclientnum, "canal", 0);
@@ -196,7 +196,7 @@ function function_bd6fa919(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0xf05ed988, Offset: 0x1530
+// Checksum 0x6366097d, Offset: 0x1530
 // Size: 0x5c
 function function_e66eb44e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_11ac3c33(localclientnum, "slums", 1);
@@ -204,7 +204,7 @@ function function_e66eb44e(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0xc61c7511, Offset: 0x1598
+// Checksum 0x6fff9f4f, Offset: 0x1598
 // Size: 0x5c
 function function_9be42b84(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_11ac3c33(localclientnum, "slums", 0);
@@ -212,7 +212,7 @@ function function_9be42b84(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0xf06ef5d0, Offset: 0x1600
+// Checksum 0x2db0b5a, Offset: 0x1600
 // Size: 0x5c
 function function_7acc82f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_11ac3c33(localclientnum, "theater", 1);
@@ -220,7 +220,7 @@ function function_7acc82f(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace zm_zod_portals
 // Params 7, eflags: 0x0
-// Checksum 0x70b01f5f, Offset: 0x1668
+// Checksum 0x62b501c8, Offset: 0x1668
 // Size: 0x5c
 function function_8fbd3c13(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_11ac3c33(localclientnum, "theater", 0);
@@ -228,7 +228,7 @@ function function_8fbd3c13(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_zod_portals
 // Params 3, eflags: 0x0
-// Checksum 0x433aa3ac, Offset: 0x16d0
+// Checksum 0xe0374e4e, Offset: 0x16d0
 // Size: 0xe6
 function function_11ac3c33(localclientnum, var_d42f02cf, var_a5e295bc) {
     s_loc = function_227344a6("teleport_effect_origin", var_d42f02cf, var_a5e295bc);
@@ -242,7 +242,7 @@ function function_11ac3c33(localclientnum, var_d42f02cf, var_a5e295bc) {
 
 // Namespace zm_zod_portals
 // Params 4, eflags: 0x0
-// Checksum 0xf11f38ce, Offset: 0x17c0
+// Checksum 0x86ad7e6d, Offset: 0x17c0
 // Size: 0x3c6
 function function_c0c1771a(localclientnum, s_loc, b_open, var_9c9cfb54) {
     if (!isdefined(var_9c9cfb54)) {
@@ -288,7 +288,7 @@ function function_c0c1771a(localclientnum, s_loc, b_open, var_9c9cfb54) {
 
 // Namespace zm_zod_portals
 // Params 2, eflags: 0x0
-// Checksum 0xd73fd268, Offset: 0x1b90
+// Checksum 0xaf1f3b38, Offset: 0x1b90
 // Size: 0x24e
 function function_86743484(localclientnum, s_loc) {
     if (!isdefined(level.var_ef51ee6d)) {
@@ -313,7 +313,7 @@ function function_86743484(localclientnum, s_loc) {
 
 // Namespace zm_zod_portals
 // Params 3, eflags: 0x0
-// Checksum 0x55b9ddd4, Offset: 0x1de8
+// Checksum 0x904fdaef, Offset: 0x1de8
 // Size: 0x13c
 function function_227344a6(str_targetname, var_d42f02cf, var_a5e295bc) {
     var_3842f06d = struct::get_array(str_targetname, "targetname");
@@ -334,7 +334,7 @@ function function_227344a6(str_targetname, var_d42f02cf, var_a5e295bc) {
 
 // Namespace zm_zod_portals
 // Params 2, eflags: 0x0
-// Checksum 0x5be78a7a, Offset: 0x1f30
+// Checksum 0xf0426a88, Offset: 0x1f30
 // Size: 0x3c
 function function_f9eb885e(localclientnum, var_55518655) {
     if (isdefined(var_55518655)) {
@@ -344,7 +344,7 @@ function function_f9eb885e(localclientnum, var_55518655) {
 
 // Namespace zm_zod_portals
 // Params 5, eflags: 0x0
-// Checksum 0x985783ee, Offset: 0x1f78
+// Checksum 0x703bcbc, Offset: 0x1f78
 // Size: 0xe4
 function function_a2d0d0e4(origin1, origin2, var_4358f968, var_2978dbc6, activation) {
     audio::playloopat(var_4358f968, origin1);
@@ -362,7 +362,7 @@ function function_a2d0d0e4(origin1, origin2, var_4358f968, var_2978dbc6, activat
 
 // Namespace zm_zod_portals
 // Params 4, eflags: 0x0
-// Checksum 0xb0537fc8, Offset: 0x2068
+// Checksum 0xde250584, Offset: 0x2068
 // Size: 0xa4
 function function_c968dcbc(origin1, var_4358f968, oneshot, activate) {
     if (!isdefined(activate)) {

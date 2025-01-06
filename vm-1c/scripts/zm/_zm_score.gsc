@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_bgb_token;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_bgb_token;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_score;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x783f4106, Offset: 0x718
 // Size: 0x1ec
 function __init__() {
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace zm_score
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x91648eb7, Offset: 0x910
 // Size: 0x26
 function register_score_event(str_event, func_callback) {
@@ -51,7 +51,7 @@ function register_score_event(str_event, func_callback) {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3a8e937, Offset: 0x940
 // Size: 0x24
 function reset_doublexp_timer() {
@@ -60,7 +60,7 @@ function reset_doublexp_timer() {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x485763c5, Offset: 0x970
 // Size: 0xac
 function doublexp_timer() {
@@ -83,7 +83,7 @@ function doublexp_timer() {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1800b87, Offset: 0xa28
 // Size: 0x40
 function player_on_spawned() {
@@ -95,7 +95,7 @@ function player_on_spawned() {
 }
 
 // Namespace zm_score
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4f9dcff8, Offset: 0xa70
 // Size: 0x9e
 function score_cf_register_info(name, version, max_count) {
@@ -105,7 +105,7 @@ function score_cf_register_info(name, version, max_count) {
 }
 
 // Namespace zm_score
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xda6fb307, Offset: 0xb18
 // Size: 0xb2
 function score_cf_increment_info(name) {
@@ -115,7 +115,7 @@ function score_cf_increment_info(name) {
 }
 
 // Namespace zm_score
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb5f8f17c, Offset: 0xbd8
 // Size: 0x5c
 function function_4ef6f494(player, cf) {
@@ -125,7 +125,7 @@ function function_4ef6f494(player, cf) {
 }
 
 // Namespace zm_score
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xa56108ca, Offset: 0xc40
 // Size: 0x890
 function player_add_points(event, mod, hit_location, var_ebd2ffea, zombie_team, damage_weapon) {
@@ -267,7 +267,7 @@ function player_add_points(event, mod, hit_location, var_ebd2ffea, zombie_team, 
 }
 
 // Namespace zm_score
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7e9fece7, Offset: 0x14d8
 // Size: 0x8c
 function get_points_multiplier(player) {
@@ -283,7 +283,7 @@ function get_points_multiplier(player) {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x61ee3752, Offset: 0x1570
 // Size: 0xc6
 function function_b2baf1b5() {
@@ -301,7 +301,7 @@ function function_b2baf1b5() {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1c06fda4, Offset: 0x1640
 // Size: 0x6
 function function_2400b2c5() {
@@ -309,7 +309,7 @@ function function_2400b2c5() {
 }
 
 // Namespace zm_score
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xa7c39cda, Offset: 0x1650
 // Size: 0x2ca
 function player_add_points_kill_bonus(mod, hit_location, weapon, player_points) {
@@ -364,7 +364,7 @@ function player_add_points_kill_bonus(mod, hit_location, weapon, player_points) 
 }
 
 // Namespace zm_score
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x99c33277, Offset: 0x1928
 // Size: 0x214
 function player_reduce_points(event, n_amount) {
@@ -408,7 +408,7 @@ function player_reduce_points(event, n_amount) {
 }
 
 // Namespace zm_score
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6ac0d6a6, Offset: 0x1b48
 // Size: 0x138
 function add_to_player_score(points, b_add_to_total, str_awarded_by) {
@@ -434,7 +434,7 @@ function add_to_player_score(points, b_add_to_total, str_awarded_by) {
 }
 
 // Namespace zm_score
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9b24402b, Offset: 0x1c88
 // Size: 0x11c
 function minus_to_player_score(points) {
@@ -472,7 +472,7 @@ function minus_to_team_score(points) {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe69d43f9, Offset: 0x1de0
 // Size: 0xa6
 function player_died_penalty() {
@@ -485,7 +485,7 @@ function player_died_penalty() {
 }
 
 // Namespace zm_score
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2586a463, Offset: 0x1e90
 // Size: 0x44
 function player_downed_penalty() {
@@ -494,7 +494,7 @@ function player_downed_penalty() {
 }
 
 // Namespace zm_score
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x77a3bee6, Offset: 0x1ee0
 // Size: 0x46
 function can_player_purchase(n_cost) {

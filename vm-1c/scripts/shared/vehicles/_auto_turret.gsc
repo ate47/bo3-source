@@ -1,16 +1,16 @@
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace auto_turret;
 
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace auto_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52836a5, Offset: 0x3c0
 // Size: 0x2c
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace auto_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e56ba89, Offset: 0x3f8
 // Size: 0x25c
 function function_a5dc0bd1() {
@@ -74,7 +74,7 @@ function function_a5dc0bd1() {
 }
 
 // Namespace auto_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86ca40f3, Offset: 0x660
 // Size: 0x30c
 function defaultrole() {
@@ -99,7 +99,7 @@ function defaultrole() {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb45631d2, Offset: 0x978
 // Size: 0x10c
 function state_death_update(params) {
@@ -119,7 +119,7 @@ function state_death_update(params) {
 }
 
 // Namespace auto_turret
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6731b2cf, Offset: 0xa90
 // Size: 0x58
 function should_switch_to_unaware(current_state, to_state, connection) {
@@ -130,7 +130,7 @@ function should_switch_to_unaware(current_state, to_state, connection) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcf7c0e7a, Offset: 0xaf0
 // Size: 0x280
 function state_unaware_update(params) {
@@ -181,7 +181,7 @@ function state_unaware_update(params) {
 }
 
 // Namespace auto_turret
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x525f8355, Offset: 0xd78
 // Size: 0x6e
 function should_switch_to_combat(current_state, to_state, connection) {
@@ -192,7 +192,7 @@ function should_switch_to_combat(current_state, to_state, connection) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x74dd4153, Offset: 0xdf0
 // Size: 0x358
 function state_combat_update(params) {
@@ -242,7 +242,7 @@ function state_combat_update(params) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x327f244, Offset: 0x1150
 // Size: 0x24
 function state_combat_exit(params) {
@@ -250,7 +250,7 @@ function state_combat_exit(params) {
 }
 
 // Namespace auto_turret
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb8a1785b, Offset: 0x1180
 // Size: 0x15c
 function sentry_turret_fire_for_time(totalfiretime, enemy) {
@@ -278,7 +278,7 @@ function sentry_turret_fire_for_time(totalfiretime, enemy) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x20072808, Offset: 0x12e8
 // Size: 0x54
 function state_off_enter(params) {
@@ -288,7 +288,7 @@ function state_off_enter(params) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf7de4d69, Offset: 0x1348
 // Size: 0x54
 function state_off_exit(params) {
@@ -298,7 +298,7 @@ function state_off_exit(params) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf80e3876, Offset: 0x13a8
 // Size: 0x9c
 function rest_turret(resting_pitch) {
@@ -313,7 +313,7 @@ function rest_turret(resting_pitch) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf16681bc, Offset: 0x1450
 // Size: 0x164
 function state_emped_enter(params) {
@@ -334,7 +334,7 @@ function state_emped_enter(params) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6fb30bbb, Offset: 0x15c0
 // Size: 0x14c
 function state_emped_update(params) {
@@ -356,7 +356,7 @@ function state_emped_update(params) {
 }
 
 // Namespace auto_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x37681f44, Offset: 0x1718
 // Size: 0x54
 function state_emped_exit(params) {
@@ -374,7 +374,7 @@ function state_scripted_update(params) {
 }
 
 // Namespace auto_turret
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x50cd8a70, Offset: 0x1798
 // Size: 0x50
 function turretallowfriendlyfiredamage(einflictor, eattacker, smeansofdeath, weapon) {
@@ -385,7 +385,7 @@ function turretallowfriendlyfiredamage(einflictor, eattacker, smeansofdeath, wea
 }
 
 // Namespace auto_turret
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0xcf0b9240, Offset: 0x17f0
 // Size: 0xd4
 function turretcallback_vehicledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -394,7 +394,7 @@ function turretcallback_vehicledamage(einflictor, eattacker, idamage, idflags, s
 }
 
 // Namespace auto_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x783ab026, Offset: 0x18d0
 // Size: 0x24
 function sentry_turret_alert_sound() {
@@ -402,7 +402,7 @@ function sentry_turret_alert_sound() {
 }
 
 // Namespace auto_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x447553a, Offset: 0x1900
 // Size: 0x74
 function turret_idle_sound() {
@@ -414,7 +414,7 @@ function turret_idle_sound() {
 }
 
 // Namespace auto_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd66f029d, Offset: 0x1980
 // Size: 0x5c
 function turret_idle_sound_stop() {

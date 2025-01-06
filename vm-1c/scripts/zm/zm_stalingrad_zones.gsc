@@ -1,22 +1,22 @@
-#using scripts/zm/zm_stalingrad;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_load;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_stalingrad;
 
 #namespace zm_stalingrad_zones;
 
 // Namespace zm_stalingrad_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x386efe02, Offset: 0x740
 // Size: 0x2424
 function init() {

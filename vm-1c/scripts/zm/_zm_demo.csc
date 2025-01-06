@@ -1,9 +1,9 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace _zm_demo;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_demo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9c3bdfb, Offset: 0x1a8
 // Size: 0x54
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace _zm_demo
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x838493f1, Offset: 0x208
 // Size: 0x24
 function player_on_connect(localclientnum) {
@@ -37,7 +37,7 @@ function player_on_connect(localclientnum) {
 }
 
 // Namespace _zm_demo
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3af5d63d, Offset: 0x238
 // Size: 0x214
 function watch_predicted_player_changes(localclientnum) {

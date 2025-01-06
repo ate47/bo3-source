@@ -1,6 +1,6 @@
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_powerups;
 
 #namespace zm_powerup_bonus_points_player;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_bonus_points_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2932e133, Offset: 0x150
 // Size: 0x34
 function __init__() {

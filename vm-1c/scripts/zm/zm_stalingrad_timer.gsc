@@ -1,19 +1,19 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_stalingrad_timer;
 
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x3a8
 // Size: 0x4
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfec4a344, Offset: 0x3b8
 // Size: 0x14c
 function __main__() {
@@ -52,7 +52,7 @@ function __main__() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x54e521e1, Offset: 0x510
 // Size: 0xf0
 function function_6ac3689a(player) {
@@ -67,7 +67,7 @@ function function_6ac3689a(player) {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3be65786, Offset: 0x608
 // Size: 0x3bc
 function function_86419da() {
@@ -178,7 +178,7 @@ function function_86419da() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6b3e463, Offset: 0x9d0
 // Size: 0x26c
 function function_cc8ae246(str_reward) {
@@ -220,7 +220,7 @@ function function_cc8ae246(str_reward) {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2a28f06, Offset: 0xc48
 // Size: 0xe4
 function function_3d5b5002() {
@@ -246,7 +246,7 @@ function function_3d5b5002() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x88ccf2d6, Offset: 0xd38
 // Size: 0x1c
 function on_player_spawned() {
@@ -254,7 +254,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6217008d, Offset: 0xd60
 // Size: 0x2c
 function function_88b9bf27() {
@@ -265,7 +265,7 @@ function function_88b9bf27() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x75b3ce55, Offset: 0xd98
 // Size: 0x60
 function function_959f59b8() {

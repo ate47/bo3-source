@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_equip_hacker;
-#using scripts/zm/_zm_blockers;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_equip_hacker;
 
 #namespace namespace_65fac977;
 
@@ -31,7 +31,7 @@ function function_b58c2757() {
 }
 
 // Namespace namespace_65fac977
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2f1921bd, Offset: 0x280
 // Size: 0x206
 function function_96d11a0c(targetname, var_4706f85c) {
@@ -53,7 +53,7 @@ function function_96d11a0c(targetname, var_4706f85c) {
         struct.door = door;
         struct.var_39787651 = 1;
         struct.var_4706f85c = var_4706f85c;
-        var_576f2bd7 = 0;
+        trace_passed = 0;
         door thread function_587a65c2(struct);
         zm_equip_hacker::function_66764564(struct, &function_db628e13);
         door thread function_1f3000dc(struct);
@@ -61,10 +61,10 @@ function function_96d11a0c(targetname, var_4706f85c) {
 }
 
 // Namespace namespace_65fac977
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89ea7117, Offset: 0x490
 // Size: 0x44
-function function_587a65c2(var_3d380693) {
+function function_587a65c2(door_struct) {
     self endon(#"death");
     self endon(#"hash_5b86d8c8");
     self endon(#"door_opened");
@@ -72,17 +72,17 @@ function function_587a65c2(var_3d380693) {
 }
 
 // Namespace namespace_65fac977
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d13b7ef, Offset: 0x4e0
 // Size: 0x44
-function function_1f3000dc(var_3d380693) {
+function function_1f3000dc(door_struct) {
     self waittill(#"door_opened");
     self endon(#"hash_5b86d8c8");
-    function_be5f5b6e(var_3d380693.door);
+    function_be5f5b6e(door_struct.door);
 }
 
 // Namespace namespace_65fac977
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x29ce261a, Offset: 0x530
 // Size: 0x78
 function function_db628e13(hacker) {
@@ -94,7 +94,7 @@ function function_db628e13(hacker) {
 }
 
 // Namespace namespace_65fac977
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x660d7ad6, Offset: 0x5b0
 // Size: 0xee
 function function_be5f5b6e(door) {

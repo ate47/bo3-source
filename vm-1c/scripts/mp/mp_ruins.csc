@@ -1,15 +1,15 @@
-#using scripts/mp/mp_ruins_sound;
-#using scripts/mp/mp_ruins_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_ruins_fx;
+#using scripts/mp/mp_ruins_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_ruins;
 
 // Namespace mp_ruins
-// Params 0, eflags: 0x1 linked
-// Checksum 0xaabf7215, Offset: 0x1b0
+// Params 0, eflags: 0x0
+// Checksum 0x358d9432, Offset: 0x1b0
 // Size: 0x8c
 function main() {
     mp_ruins_fx::main();
@@ -22,8 +22,8 @@ function main() {
 }
 
 // Namespace mp_ruins
-// Params 2, eflags: 0x1 linked
-// Checksum 0xe41f347b, Offset: 0x248
+// Params 2, eflags: 0x0
+// Checksum 0x8b6e28d7, Offset: 0x248
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -52,8 +52,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_ruins
-// Params 2, eflags: 0x1 linked
-// Checksum 0x994436d4, Offset: 0x318
+// Params 2, eflags: 0x0
+// Checksum 0x49201d9e, Offset: 0x318
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {

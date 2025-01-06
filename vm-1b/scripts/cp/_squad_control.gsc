@@ -1,28 +1,28 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_dialog;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
 #using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_biodomes;
 #using scripts/cp/cp_mi_sing_biodomes_util;
 #using scripts/cp/cp_mi_sing_biodomes_warehouse;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/objpoints_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/objpoints_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
 
 #namespace squad_control;
 
@@ -220,7 +220,7 @@ function squad_init() {
 function function_66e5311c(var_f6c5842, player) {
     var_f6c5842.b_moving = 0;
     var_f6c5842.var_24cf4025 = 1;
-    var_f6c5842.var_99ebba13 = 0;
+    var_f6c5842.b_target = 0;
     var_f6c5842.str_action = "Standard";
     var_f6c5842.var_6648858 = 0;
     var_f6c5842.goalradius = -56;
@@ -576,11 +576,11 @@ function function_cbb9d101() {
     }
     if (self.a_targets.size) {
         foreach (var_f6c5842 in self.var_61a19dc6) {
-            if (var_f6c5842.var_99ebba13) {
+            if (var_f6c5842.b_target) {
                 var_f6c5842 notify(#"hash_606e31a3");
                 var_f6c5842.str_action = "Standard";
                 var_f6c5842 notify(#"action");
-                var_f6c5842.var_99ebba13 = 0;
+                var_f6c5842.b_target = 0;
                 var_f6c5842 clearentitytarget();
             }
         }
@@ -784,7 +784,7 @@ function function_5646c025() {
                 self.var_61a19dc6 = arraysortclosest(self.var_61a19dc6, self.origin);
                 for (i = 0; i < self.var_61a19dc6.size; i++) {
                     if (distance2dsquared(self.origin, self.var_61a19dc6[i].origin) > 40000) {
-                        if (!self.var_61a19dc6[i].b_moving && !self.var_61a19dc6[i].var_99ebba13 && self.var_61a19dc6[i].var_24cf4025) {
+                        if (!self.var_61a19dc6[i].b_moving && !self.var_61a19dc6[i].b_target && self.var_61a19dc6[i].var_24cf4025) {
                             self.var_61a19dc6[i] setgoal(a_v_points[i], 1);
                             wait randomfloatrange(0.1, 0.3);
                         }
@@ -794,7 +794,7 @@ function function_5646c025() {
                 var_cfd95255 = [];
                 for (i = 0; i < self.var_61a19dc6.size; i++) {
                     if (distance2dsquared(self.origin, self.var_61a19dc6[i].origin) > 40000) {
-                        if (!self.var_61a19dc6[i].b_moving && !self.var_61a19dc6[i].var_99ebba13 && self.var_61a19dc6[i].var_24cf4025) {
+                        if (!self.var_61a19dc6[i].b_moving && !self.var_61a19dc6[i].b_target && self.var_61a19dc6[i].var_24cf4025) {
                             var_cfd95255[i] = getclosestpointonnavmesh(self.origin + (i * 50, i * 50, 0), 82, 32);
                             if (isdefined(var_cfd95255[i])) {
                                 self.var_61a19dc6[i] setgoal(var_cfd95255[i], 1);
@@ -822,7 +822,7 @@ function function_475fb2a8() {
         for (i = 0; i < self.var_61a19dc6.size; i++) {
             if (isalive(self.var_61a19dc6[i])) {
                 self.var_61a19dc6[i] notify(#"hash_606e31a3");
-                self.var_61a19dc6[i].var_99ebba13 = 0;
+                self.var_61a19dc6[i].b_target = 0;
                 self.var_61a19dc6[i].b_moving = 0;
                 self.var_61a19dc6[i].str_action = "Standard";
                 self.var_61a19dc6[i] notify(#"action");
@@ -1018,7 +1018,7 @@ function function_32091ff6(var_f6c5842) {
                 var_f6c5842 thread ai::shoot_at_target("shoot_until_target_dead", self.a_targets[i], undefined, 0.05, 100);
             }
             self.a_targets[i].var_d29e35d1 = 1;
-            var_f6c5842.var_99ebba13 = 1;
+            var_f6c5842.b_target = 1;
             var_f6c5842.str_action = "Attacking";
             var_f6c5842 notify(#"action");
             /#
@@ -1033,7 +1033,7 @@ function function_32091ff6(var_f6c5842) {
     var_f6c5842 clearforcedgoal();
     var_f6c5842 thread function_ee0e002(0, self);
     var_f6c5842 ai::set_behavior_attribute("move_mode", "escort");
-    var_f6c5842.var_99ebba13 = 0;
+    var_f6c5842.b_target = 0;
     var_f6c5842.str_action = "Standard";
     var_f6c5842 notify(#"action");
 }

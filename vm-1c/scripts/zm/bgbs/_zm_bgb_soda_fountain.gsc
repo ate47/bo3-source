@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
 #using scripts/zm/_zm_perks;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_bgb_soda_fountain;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_soda_fountain
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3f0c8e30, Offset: 0x1c8
 // Size: 0x54
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_soda_fountain
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5a131a5, Offset: 0x228
 // Size: 0x178
 function event() {
@@ -37,7 +37,7 @@ function event() {
     self endon(#"bgb_update");
     self.var_76382430 = 5;
     while (self.var_76382430 > 0) {
-        str_perk = self waittill(#"perk_purchased");
+        self waittill(#"perk_purchased", str_perk);
         self bgb::do_one_shot_use();
         a_str_perks = getarraykeys(level._custom_perks);
         if (isinarray(a_str_perks, str_perk)) {

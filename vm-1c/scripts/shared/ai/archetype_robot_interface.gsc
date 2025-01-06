@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/archetype_robot;
+#using scripts/shared/ai/systems/ai_interface;
 
 #namespace robotinterface;
 
 // Namespace robotinterface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x90f18da3, Offset: 0x318
 // Size: 0x69c
 function registerrobotinterfaceattributes() {

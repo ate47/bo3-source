@@ -3,7 +3,7 @@
 #namespace zm_temple_fx;
 
 // Namespace zm_temple_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdfa613f8, Offset: 0x1948
 // Size: 0x84
 function main() {
@@ -17,7 +17,7 @@ function main() {
 }
 
 // Namespace zm_temple_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc26523b8, Offset: 0x19d8
 // Size: 0xc6
 function function_8d0ec42e() {
@@ -31,7 +31,7 @@ function function_8d0ec42e() {
 }
 
 // Namespace zm_temple_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56d1d50a, Offset: 0x1aa8
 // Size: 0x18a
 function function_f45953c() {
@@ -52,7 +52,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_temple_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x66f6eb8e, Offset: 0x1c40
 // Size: 0x96a
 function function_e6258024() {
@@ -145,7 +145,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_temple_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60bd856c, Offset: 0x25b8
 // Size: 0x3a
 function function_65b58e84() {

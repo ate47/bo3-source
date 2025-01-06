@@ -1,24 +1,24 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/ai/zombie_death;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace dragon_strike;
 
 // Namespace dragon_strike
 // Params 0, eflags: 0x2
-// Checksum 0x85945c75, Offset: 0x490
+// Checksum 0x3b620db8, Offset: 0x490
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_weap_dragon_strike", &__init__, undefined, undefined);
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0xeb709240, Offset: 0x4d0
+// Params 0, eflags: 0x0
+// Checksum 0x356358dd, Offset: 0x4d0
 // Size: 0x416
 function __init__() {
     clientfield::register("scriptmover", "dragon_strike_spawn_fx", 12000, 1, "int", &dragon_strike_spawn_fx, 0, 0);
@@ -42,8 +42,8 @@ function __init__() {
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0xf7191940, Offset: 0x8f0
+// Params 7, eflags: 0x0
+// Checksum 0x4c679876, Offset: 0x8f0
 // Size: 0xd4
 function dragon_strike_spawn_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -54,8 +54,8 @@ function dragon_strike_spawn_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0xb2f88330, Offset: 0x9d0
+// Params 7, eflags: 0x0
+// Checksum 0x3f7b2534, Offset: 0x9d0
 // Size: 0x9c
 function dragon_strike_marker_on(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -68,8 +68,8 @@ function dragon_strike_marker_on(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa1162ba9, Offset: 0xa78
+// Params 1, eflags: 0x0
+// Checksum 0x79d6d7c0, Offset: 0xa78
 // Size: 0x50
 function function_778495b0(localclientnum) {
     self endon(#"hash_e98f7ec4");
@@ -81,40 +81,40 @@ function function_778495b0(localclientnum) {
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0x587ac41, Offset: 0xad0
+// Params 7, eflags: 0x0
+// Checksum 0x222cec20, Offset: 0xad0
 // Size: 0x7c
 function dragon_strike_marker_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self dragonstrike_setcolorradiusspinpulse(0.25, 3, 0.25, 128, 0.5, 0);
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0x883118c2, Offset: 0xb58
+// Params 7, eflags: 0x0
+// Checksum 0xa0f6a8c8, Offset: 0xb58
 // Size: 0x7c
 function dragon_strike_marker_upgraded_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self dragonstrike_setcolorradiusspinpulse(0.15, 3, 0.15, 128, 0.75, 0);
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0xe7c651ac, Offset: 0xbe0
+// Params 7, eflags: 0x0
+// Checksum 0xabbf7e1f, Offset: 0xbe0
 // Size: 0x7c
 function dragon_strike_marker_invalid_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self dragonstrike_setcolorradiusspinpulse(4, 0.5, 0.25, 128, 0.5, 0);
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0x31ea806e, Offset: 0xc68
+// Params 7, eflags: 0x0
+// Checksum 0xef0e6351, Offset: 0xc68
 // Size: 0x7c
 function dragon_strike_marker_upgraded_invalid_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self dragonstrike_setcolorradiusspinpulse(4, 0.5, 0.25, 128, 0.75, 0);
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0x907f069b, Offset: 0xcf0
+// Params 7, eflags: 0x0
+// Checksum 0xc8e7ea1a, Offset: 0xcf0
 // Size: 0xb6
 function dragon_strike_flare_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -128,24 +128,24 @@ function dragon_strike_flare_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0x6bff3cee, Offset: 0xdb0
+// Params 7, eflags: 0x0
+// Checksum 0x235de35d, Offset: 0xdb0
 // Size: 0x74
 function dragon_strike_marker_fx_fadeout(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self thread function_1ba92b11(0.25, 3, 0.25, 0.5);
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0x8dda959, Offset: 0xe30
+// Params 7, eflags: 0x0
+// Checksum 0x45c02ec4, Offset: 0xe30
 // Size: 0x74
 function dragon_strike_marker_upgraded_fx_fadeout(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self thread function_1ba92b11(0.15, 3, 0.15, 0.75);
 }
 
 // Namespace dragon_strike
-// Params 4, eflags: 0x1 linked
-// Checksum 0x6d30c0fa, Offset: 0xeb0
+// Params 4, eflags: 0x0
+// Checksum 0x2189f563, Offset: 0xeb0
 // Size: 0xfe
 function function_1ba92b11(var_6d056a0e, var_9ad65443, var_cddc37e, var_76d07324) {
     var_e0a873d1 = var_6d056a0e / 16;
@@ -161,8 +161,8 @@ function function_1ba92b11(var_6d056a0e, var_9ad65443, var_cddc37e, var_76d07324
 }
 
 // Namespace dragon_strike
-// Params 7, eflags: 0x1 linked
-// Checksum 0xdf4d5eff, Offset: 0xfb8
+// Params 7, eflags: 0x0
+// Checksum 0x98e285c, Offset: 0xfb8
 // Size: 0x11c
 function dragon_strike_zombie_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 2) {
@@ -182,8 +182,8 @@ function dragon_strike_zombie_fire(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x805c8365, Offset: 0x10e0
+// Params 1, eflags: 0x0
+// Checksum 0x271d424, Offset: 0x10e0
 // Size: 0x68
 function function_3cc1555d(localclientnum) {
     self endon(#"entityshutdown");

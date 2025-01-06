@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_quantum_bomb;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_quantum_bomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23d6b394, Offset: 0x218
 // Size: 0x84
 function __init__() {
@@ -25,12 +25,12 @@ function __init__() {
 }
 
 // Namespace zm_weap_quantum_bomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8d1f7953, Offset: 0x2a8
 // Size: 0xba
 function function_1173d2d2() {
     for (;;) {
-        localclientnum, note = level waittill(#"notetrack");
+        level waittill(#"notetrack", localclientnum, note);
         switch (note) {
         case "quantum_bomb_twist":
             playviewmodelfx(localclientnum, level._effect["quantum_bomb_viewmodel_twist"], "tag_weapon");
@@ -43,10 +43,10 @@ function function_1173d2d2() {
 }
 
 // Namespace zm_weap_quantum_bomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc30f72d7, Offset: 0x370
 // Size: 0xac
-function function_846d53b4(localclientnum, var_1778230f) {
+function function_846d53b4(localclientnum, play_sound) {
     temp_ent = spawn(0, self.origin, "script_origin");
     temp_ent playloopsound("wpn_quantum_rise", 0.5);
     while (isdefined(self)) {

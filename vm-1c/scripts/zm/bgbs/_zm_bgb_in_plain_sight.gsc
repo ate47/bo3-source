@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_in_plain_sight;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_in_plain_sight
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa5aba10a, Offset: 0x258
 // Size: 0x144
 function __init__() {
@@ -38,7 +38,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_in_plain_sight
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3249e9b2, Offset: 0x3a8
 // Size: 0x34
 function validation() {
@@ -46,7 +46,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_in_plain_sight
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x40e53e86, Offset: 0x3e8
 // Size: 0x1ee
 function activation() {

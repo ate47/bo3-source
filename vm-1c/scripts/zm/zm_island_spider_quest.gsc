@@ -1,39 +1,39 @@
-#using scripts/zm/zm_island_ww_quest;
-#using scripts/zm/zm_island_util;
-#using scripts/zm/_zm_weap_mirg2000;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_ai_spiders;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_spiders;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_mirg2000;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_island_util;
+#using scripts/zm/zm_island_ww_quest;
 
 #namespace zm_island_spider_quest;
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85729da2, Offset: 0x1228
 // Size: 0x104
 function init() {
@@ -51,7 +51,7 @@ function init() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87b28b31, Offset: 0x1338
 // Size: 0x454
 function function_83b9f02b() {
@@ -100,7 +100,7 @@ function function_83b9f02b() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeaaf8c27, Offset: 0x1798
 // Size: 0x24
 function function_2a9d57ae() {
@@ -108,7 +108,7 @@ function function_2a9d57ae() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb92233f0, Offset: 0x17c8
 // Size: 0x74
 function function_9c86c1bb() {
@@ -118,7 +118,7 @@ function function_9c86c1bb() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e155d2d, Offset: 0x1848
 // Size: 0xc4
 function spider_lair_entrance_webs() {
@@ -133,15 +133,15 @@ function spider_lair_entrance_webs() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2eb7ea77, Offset: 0x1918
 // Size: 0x158
 function function_83953ff7() {
     level endon(#"spider_lair_webs_destroyed");
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
-        if (namespace_7cee2b44::is_wonder_weapon(weapon)) {
-            if (namespace_7cee2b44::is_wonder_weapon(weapon, "upgraded")) {
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
+        if (mirg2000::is_wonder_weapon(weapon)) {
+            if (mirg2000::is_wonder_weapon(weapon, "upgraded")) {
                 self thread fx::play("special_web_dissolve_ug", self.origin, self.angles);
             } else {
                 self thread fx::play("special_web_dissolve", self.origin, self.angles);
@@ -152,7 +152,7 @@ function function_83953ff7() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43cd6359, Offset: 0x1a78
 // Size: 0xf4
 function function_c225d3aa() {
@@ -167,7 +167,7 @@ function function_c225d3aa() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8853e1e5, Offset: 0x1b78
 // Size: 0x162
 function function_f7244a06(n_index) {
@@ -188,7 +188,7 @@ function function_f7244a06(n_index) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e12b9f9, Offset: 0x1ce8
 // Size: 0x54
 function function_65c52965() {
@@ -202,7 +202,7 @@ function function_65c52965() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb213480c, Offset: 0x1d48
 // Size: 0xf8
 function function_4af05c8a() {
@@ -226,7 +226,7 @@ function function_4af05c8a() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85384662, Offset: 0x1e48
 // Size: 0xf8
 function function_24ede221() {
@@ -250,7 +250,7 @@ function function_24ede221() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x885fd846, Offset: 0x1f48
 // Size: 0x128
 function function_feeb67b8() {
@@ -277,7 +277,7 @@ function function_feeb67b8() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85dcbba4, Offset: 0x2078
 // Size: 0x54
 function function_f033c56a() {
@@ -287,7 +287,7 @@ function function_f033c56a() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xff8c9094, Offset: 0x20d8
 // Size: 0x54
 function function_3f6b6cb4() {
@@ -297,7 +297,7 @@ function function_3f6b6cb4() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b7b1fb7, Offset: 0x2138
 // Size: 0x64
 function function_57b6770a() {
@@ -309,7 +309,7 @@ function function_57b6770a() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33527da0, Offset: 0x21a8
 // Size: 0x64
 function function_2152712c() {
@@ -319,7 +319,7 @@ function function_2152712c() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b418d08, Offset: 0x2218
 // Size: 0x164
 function function_7b31e716() {
@@ -344,7 +344,7 @@ function function_7b31e716() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x22e4f2d8, Offset: 0x2388
 // Size: 0x1b6
 function function_e949d1d7() {
@@ -370,7 +370,7 @@ function function_e949d1d7() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7b975dc0, Offset: 0x2548
 // Size: 0x2ec
 function function_82ae321c(n_stage) {
@@ -414,7 +414,7 @@ function function_82ae321c(n_stage) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf9ff3fbe, Offset: 0x2840
 // Size: 0x254
 function function_f0c6c167() {
@@ -444,7 +444,7 @@ function function_f0c6c167() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b45ee2e, Offset: 0x2aa0
 // Size: 0x150
 function function_a38800f6() {
@@ -462,7 +462,7 @@ function function_a38800f6() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf2829744, Offset: 0x2bf8
 // Size: 0x5c
 function function_7ed6256d() {
@@ -472,19 +472,19 @@ function function_7ed6256d() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x706a2a70, Offset: 0x2c60
 // Size: 0x184
 function function_5a50e7f() {
     level endon(#"hash_2dc546da");
     self setcandamage(1);
     while (true) {
-        n_damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", n_damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (partname == "tag_mouth_hit") {
             if (level flag::get("spider_queen_weak_spot_exposed")) {
-                if (namespace_7cee2b44::is_wonder_weapon(weapon, "upgraded")) {
+                if (mirg2000::is_wonder_weapon(weapon, "upgraded")) {
                     n_damage = 750;
-                } else if (namespace_7cee2b44::is_wonder_weapon(weapon, "default")) {
+                } else if (mirg2000::is_wonder_weapon(weapon, "default")) {
                     n_damage = 500;
                 }
                 self clientfield::increment("spider_queen_bleed");
@@ -496,7 +496,7 @@ function function_5a50e7f() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb69e6143, Offset: 0x2df0
 // Size: 0x64
 function spider_queen_weakspot() {
@@ -506,7 +506,7 @@ function spider_queen_weakspot() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b92ffb9, Offset: 0x2e60
 // Size: 0xd4
 function function_9b964659() {
@@ -521,7 +521,7 @@ function function_9b964659() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x962500ae, Offset: 0x2f40
 // Size: 0x420
 function function_291b262e(var_a857d88e, var_27730eaa) {
@@ -569,7 +569,7 @@ function function_291b262e(var_a857d88e, var_27730eaa) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2b4eebe0, Offset: 0x3368
 // Size: 0x98
 function function_9d6e8018() {
@@ -583,7 +583,7 @@ function function_9d6e8018() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x513ac9e, Offset: 0x3408
 // Size: 0xec
 function function_9d331ff6() {
@@ -596,7 +596,7 @@ function function_9d331ff6() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb3a3048d, Offset: 0x3500
 // Size: 0x54
 function function_8e1549bd() {
@@ -605,7 +605,7 @@ function function_8e1549bd() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf749f29, Offset: 0x3560
 // Size: 0x1e0
 function function_e2b5f12f() {
@@ -631,7 +631,7 @@ function function_e2b5f12f() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3d03abc, Offset: 0x3748
 // Size: 0x54
 function function_29454161(var_e2556d9e) {
@@ -642,7 +642,7 @@ function function_29454161(var_e2556d9e) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x247d0c1, Offset: 0x37a8
 // Size: 0xd2
 function function_1b11ad0() {
@@ -661,7 +661,7 @@ function function_1b11ad0() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x81528e51, Offset: 0x3888
 // Size: 0x188
 function function_9ee2204c(var_85683d05) {
@@ -689,7 +689,7 @@ function function_9ee2204c(var_85683d05) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x20014c46, Offset: 0x3a18
 // Size: 0x1b4
 function function_bcafc53d(var_85683d05) {
@@ -707,7 +707,7 @@ function function_bcafc53d(var_85683d05) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x410d765d, Offset: 0x3bd8
 // Size: 0x2c
 function function_fcb8aed2(var_e70fce50) {
@@ -716,7 +716,7 @@ function function_fcb8aed2(var_e70fce50) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f9f1de1, Offset: 0x3c10
 // Size: 0x7c
 function function_ae6c3ac5() {
@@ -726,7 +726,7 @@ function function_ae6c3ac5() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d47804, Offset: 0x3c98
 // Size: 0x408
 function function_b6ea5d0d() {
@@ -779,7 +779,7 @@ function function_b6ea5d0d() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb328ca70, Offset: 0x40a8
 // Size: 0x38
 function function_9a7e7358() {
@@ -792,7 +792,7 @@ function function_9a7e7358() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1334d729, Offset: 0x40e8
 // Size: 0x80
 function function_dd902934() {
@@ -809,7 +809,7 @@ function function_dd902934() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x427e05c, Offset: 0x4170
 // Size: 0x7c
 function function_fb907799(n_count) {
@@ -822,7 +822,7 @@ function function_fb907799(n_count) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x943ca725, Offset: 0x41f8
 // Size: 0x54
 function spider_baby_round_timeout(n_count) {
@@ -836,22 +836,22 @@ function spider_baby_round_timeout(n_count) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x75b1024e, Offset: 0x4258
 // Size: 0xcc
 function function_3d4c345d() {
     level endon(#"hash_2dc546da");
     var_c79d3f71 = zombie_utility::spawn_zombie(level.var_c38a4fee[0], "spider_baby", self);
     var_c79d3f71 thread function_5d1bd65f();
-    var_c79d3f71.favoriteenemy = namespace_27f8b154::get_favorite_enemy();
-    self thread namespace_27f8b154::function_49e57a3b(var_c79d3f71, self);
+    var_c79d3f71.favoriteenemy = zm_ai_spiders::get_favorite_enemy();
+    self thread zm_ai_spiders::function_49e57a3b(var_c79d3f71, self);
     var_c79d3f71 thread function_46c109d1();
     playsoundatposition("zmb_foley_squeen_birth_spider", self.origin);
     level.var_e18ab0f2++;
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb992eb78, Offset: 0x4330
 // Size: 0x2a
 function function_5d1bd65f() {
@@ -861,7 +861,7 @@ function function_5d1bd65f() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd949a390, Offset: 0x4368
 // Size: 0xb4
 function function_46c109d1() {
@@ -879,7 +879,7 @@ function function_46c109d1() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x63d36067, Offset: 0x4428
 // Size: 0x28
 function function_81898ad7() {
@@ -890,7 +890,7 @@ function function_81898ad7() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16ef3013, Offset: 0x4458
 // Size: 0xc8
 function function_2ff7183() {
@@ -900,7 +900,7 @@ function function_2ff7183() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (isdefined(who) && isplayer(who)) {
             if (zm_audio::sndmusicsystem_isabletoplay()) {
                 who playsoundtoplayer("mus_island_lair_entry_oneshot", who);
@@ -911,7 +911,7 @@ function function_2ff7183() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9bd8cb65, Offset: 0x4528
 // Size: 0x444
 function function_199d01b5() {
@@ -954,7 +954,7 @@ function function_199d01b5() {
 /#
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4918da50, Offset: 0x4978
     // Size: 0x104
     function function_4f46a12() {
@@ -971,7 +971,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x23312076, Offset: 0x4a88
     // Size: 0x1ae
     function function_a4e9dacc(cmd) {
@@ -1012,7 +1012,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2ba3cd53, Offset: 0x4c40
     // Size: 0x40
     function function_bd62f75b() {
@@ -1024,7 +1024,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x29aa6348, Offset: 0x4c88
     // Size: 0x40
     function function_11d7e2b1() {
@@ -1036,7 +1036,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xcb679e5e, Offset: 0x4cd0
     // Size: 0x40
     function function_31e22463() {
@@ -1048,7 +1048,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1313f2b9, Offset: 0x4d18
     // Size: 0x60
     function function_14f05ea8() {
@@ -1062,7 +1062,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x54bc5ece, Offset: 0x4d80
     // Size: 0x7c
     function function_10abb15e() {
@@ -1075,7 +1075,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x3f8e138e, Offset: 0x4e08
     // Size: 0x154
     function swap_weapon(var_9f85aad5) {
@@ -1102,7 +1102,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x18824c74, Offset: 0x4f68
     // Size: 0xd4
     function function_dcfc8bde(current_weapon, weapon) {
@@ -1116,7 +1116,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x27880c63, Offset: 0x5048
     // Size: 0x11c
     function function_3420bc2f(var_9f85aad5) {
@@ -1132,7 +1132,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8b9c4d7a, Offset: 0x5170
     // Size: 0x10c
     function upgrade_weapon() {
@@ -1147,7 +1147,7 @@ function function_199d01b5() {
     }
 
     // Namespace zm_island_spider_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4232f756, Offset: 0x5288
     // Size: 0xd4
     function function_f77f0da9() {
@@ -1163,7 +1163,7 @@ function function_199d01b5() {
 #/
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1feb6d6e, Offset: 0x5368
 // Size: 0x6c
 function function_bccbf63c() {
@@ -1172,7 +1172,7 @@ function function_bccbf63c() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x592199d1, Offset: 0x53e0
 // Size: 0x10a
 function function_65f4b50(player) {
@@ -1191,12 +1191,12 @@ function function_65f4b50(player) {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf108ffdb, Offset: 0x54f8
 // Size: 0x86
 function function_3039a61d() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (zm_utility::is_player_valid(player)) {
             player thread function_25762e4();
             player notify(#"hash_6c020c33");
@@ -1207,7 +1207,7 @@ function function_3039a61d() {
 }
 
 // Namespace zm_island_spider_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7d5a283, Offset: 0x5588
 // Size: 0x10c
 function function_25762e4() {

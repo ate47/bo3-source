@@ -1,37 +1,37 @@
 #using scripts/mp/_util;
-#using scripts/mp/teams/_teams;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
 #using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
 #using scripts/mp/gametypes/ctf;
-#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/mp/killstreaks/_airsupport;
 #using scripts/mp/killstreaks/_killstreak_bundles;
 #using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_airsupport;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_heatseekingmissile;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/archetype_utility;
+#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/mp/teams/_teams;
 #using scripts/shared/ai/archetype_robot;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicleriders_shared;
+#using scripts/shared/weapons/_heatseekingmissile;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace escort;
 
@@ -1319,7 +1319,7 @@ function explode_robot() {
 // Size: 0x54
 function wait_robot_corpse() {
     archetype = self.archetype;
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     corpse clientfield::set("escort_robot_burn", 1);
 }
 

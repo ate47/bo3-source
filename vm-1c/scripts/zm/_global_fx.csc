@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
 
 #namespace global_fx;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace global_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87812e0b, Offset: 0x180
 // Size: 0x14
 function __init__() {
@@ -20,7 +20,7 @@ function __init__() {
 }
 
 // Namespace global_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c072555, Offset: 0x1a0
 // Size: 0x14
 function main() {
@@ -28,7 +28,7 @@ function main() {
 }
 
 // Namespace global_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6795a472, Offset: 0x1c0
 // Size: 0x94
 function function_26ae781b() {
@@ -40,7 +40,7 @@ function function_26ae781b() {
 }
 
 // Namespace global_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xedbefb1e, Offset: 0x260
 // Size: 0x20
 function check_for_wind_override() {

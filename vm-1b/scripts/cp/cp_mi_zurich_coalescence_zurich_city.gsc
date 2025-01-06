@@ -1,33 +1,33 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_coalescence_root_singapore;
 #using scripts/cp/cp_mi_zurich_coalescence_sound;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
-#using scripts/cp/cp_mi_zurich_coalescence_root_singapore;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_plaza_battle;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_street;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/cp/cybercom/_cybercom_tactical_rig;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_f815059a;
 
@@ -120,7 +120,7 @@ function function_40b9b738(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 // Checksum 0xf8625225, Offset: 0x1280
 // Size: 0x2d3
 function function_ab4451a1() {
-    level endon(#"hash_e0d14dc8");
+    level endon(#"garage_completed");
     n_count = 0;
     a_mdl_doors = [];
     var_ae75b4be = struct::get_array("skybar_rollup_door");
@@ -165,7 +165,7 @@ function function_52073baf() {
     while (true) {
         self setcandamage(1);
         self.health = 999999;
-        n_damage, e_attacker, _, _, str_damage_type = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker, _, _, str_damage_type);
         if (isplayer(e_attacker)) {
             level notify(#"hash_443f3c33");
             self setcandamage(0);
@@ -541,13 +541,13 @@ function function_19017cb9() {
     self endon(#"death");
     self ai::set_ignoreme(1);
     nd_start = getnode("intro_street_front_siegebot_start_node", "targetname");
-    var_a8015c01 = getnode(nd_start.target, "targetname");
+    nd_end = getnode(nd_start.target, "targetname");
     s_rpg = struct::get("intro_magic_rpg_spot");
     var_2d4ab0e6 = struct::get("intro_magic_rpg_spot2");
     var_9faa0c88 = getweapon("launcher_standard");
     self setvehgoalpos(nd_start.origin, 1, 1);
     wait 3.5;
-    self setvehgoalpos(var_a8015c01.origin, 1, 1);
+    self setvehgoalpos(nd_end.origin, 1, 1);
     wait 1.3;
     magicbullet(var_9faa0c88, s_rpg.origin, self geteye());
     wait 1.5;

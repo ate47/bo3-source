@@ -1,30 +1,30 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_zurich_coalescence_sound;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_city;
 #using scripts/cp/gametypes/_save;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/vehicleriders_shared;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace namespace_1beb9396;
 
@@ -1597,7 +1597,7 @@ function function_b7d40ae() {
 // Size: 0x5a
 function function_b09dbdde() {
     self endon(#"death");
-    var_26c7381f = self waittill(#"trigger");
+    self waittill(#"trigger", var_26c7381f);
     glassradiusdamage(var_26c7381f.origin, 64, 700, 500, "MOD_HIT_BY_OBJECT");
     self delete();
 }

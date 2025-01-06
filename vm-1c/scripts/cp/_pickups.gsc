@@ -1,22 +1,22 @@
-#using scripts/cp/_scoreevents;
+#using scripts/codescripts/struct;
 #using scripts/cp/_laststand;
 #using scripts/cp/_pickups;
+#using scripts/cp/_scoreevents;
 #using scripts/cp/_util;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_util_shared;
+#using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/flag_shared;
 #using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace pickups;
 
@@ -89,7 +89,7 @@ class class_9ae542c5 : class_d63e16f5 {
     // Checksum 0x27912ab0, Offset: 0x988
     // Size: 0x9e
     function function_ac20c633() {
-        self endon(#"hash_2f46dd38");
+        self endon(#"cancel_despawn");
         for (n_time_remaining = self.var_dcf4479e; n_time_remaining >= 0 && isdefined(self.var_a6c557b4); n_time_remaining -= 1) {
             /#
                 print3d(self.var_a6c557b4.origin + (0, 0, 15), n_time_remaining, (1, 0, 0), 1, 1, 20);
@@ -103,7 +103,7 @@ class class_9ae542c5 : class_d63e16f5 {
     // Checksum 0x356dd499, Offset: 0x910
     // Size: 0x6c
     function function_107b02f9() {
-        self endon(#"hash_2f46dd38");
+        self endon(#"cancel_despawn");
         if (self.var_dcf4479e <= 0) {
             return;
         }
@@ -224,7 +224,7 @@ class class_d63e16f5 {
         self.var_2269b061 = -128;
         self.var_bc6dcf34 = 72;
         self.var_c665189f = -128;
-        self.var_352ef9 = &function_4cf916cc;
+        self.var_352ef9 = &repair_completed;
         self.var_1c709f79 = "Item";
     }
 
@@ -467,7 +467,7 @@ class class_d63e16f5 {
         e_triggerer.var_11120dca = self;
         self.var_cc8132d = e_triggerer;
         self.var_52e14d7c notify(#"hash_4e236be4", 0);
-        self notify(#"hash_2f46dd38");
+        self notify(#"cancel_despawn");
         e_triggerer disableweapons();
         wait 0.5;
         if (isdefined(self.var_5c6e11a4)) {
@@ -495,7 +495,7 @@ class class_d63e16f5 {
             if (!isdefined(self.var_52e14d7c)) {
                 return;
             }
-            e_triggerer = self.var_52e14d7c waittill(#"trigger");
+            self.var_52e14d7c waittill(#"trigger", e_triggerer);
             if (isdefined(e_triggerer.var_ca526183) && e_triggerer.var_ca526183) {
                 self.var_52e14d7c sethintstringforplayer(e_triggerer, "");
                 continue;
@@ -564,7 +564,7 @@ class class_d63e16f5 {
     function function_b718b73f() {
         self endon(#"unmake");
         while (true) {
-            player = self.var_52e14d7c waittill(#"trigger");
+            self.var_52e14d7c waittill(#"trigger", player);
             if (isdefined(player.var_ca526183) && player.var_ca526183 && player.var_11120dca.var_1c709f79 == "Toolbox") {
                 [[ player.var_11120dca ]]->remove(player);
                 [[ self.var_352ef9 ]](player);
@@ -577,8 +577,8 @@ class class_d63e16f5 {
     // Params 1, eflags: 0x0
     // Checksum 0x602ac1cf, Offset: 0x13d0
     // Size: 0x3c
-    function function_4cf916cc(player) {
-        self notify(#"hash_4cf916cc");
+    function repair_completed(player) {
+        self notify(#"repair_completed");
         if (isdefined(self.var_9c969a83)) {
             self thread [[ self.var_9c969a83 ]](player);
         }

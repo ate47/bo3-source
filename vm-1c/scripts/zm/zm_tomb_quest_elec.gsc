@@ -1,21 +1,21 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_quest_elec;
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92b02ee3, Offset: 0x4a0
 // Size: 0x22c
 function main() {
@@ -40,7 +40,7 @@ function main() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16ee5889, Offset: 0x6d8
 // Size: 0x1c
 function onplayerconnect() {
@@ -48,7 +48,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x456293c8, Offset: 0x700
 // Size: 0x200
 function function_3dcfa4d8() {
@@ -56,7 +56,7 @@ function function_3dcfa4d8() {
     var_4446253b = struct::get_array("piano_key", "script_noteworthy");
     var_dc8ace48 = level.var_b0d8f1fe["staff_lightning"].w_weapon;
     while (true) {
-        w_weapon, var_836ef144, n_radius, e_projectile, var_94351942 = self waittill(#"projectile_impact");
+        self waittill(#"projectile_impact", w_weapon, var_836ef144, n_radius, e_projectile, var_94351942);
         if (w_weapon == var_dc8ace48) {
             if (!level flag::get("electric_puzzle_1_complete") && zm_tomb_chamber::function_55f62409()) {
                 n_index = zm_utility::get_closest_index(var_836ef144, var_4446253b, 20);
@@ -75,7 +75,7 @@ function function_3dcfa4d8() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31e294e3, Offset: 0x908
 // Size: 0x24
 function function_9ab612a8() {
@@ -83,7 +83,7 @@ function function_9ab612a8() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78a802e9, Offset: 0x938
 // Size: 0x74
 function function_69295049() {
@@ -94,7 +94,7 @@ function function_69295049() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47ca3d0f, Offset: 0x9b8
 // Size: 0x1c
 function function_434bc0fe() {
@@ -105,7 +105,7 @@ function function_434bc0fe() {
 /#
 
     // Namespace zm_tomb_quest_elec
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6ebe0578, Offset: 0x9e0
     // Size: 0x16c
     function function_745dff15(var_9204b76f) {
@@ -127,7 +127,7 @@ function function_434bc0fe() {
 #/
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe591d5d6, Offset: 0xb58
 // Size: 0x5dc
 function function_6132b1a8() {
@@ -188,7 +188,7 @@ function function_6132b1a8() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93db79ba, Offset: 0x1140
 // Size: 0x188
 function function_96e839a6() {
@@ -213,7 +213,7 @@ function function_96e839a6() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6404b8c3, Offset: 0x12d0
 // Size: 0x4ec
 function function_1fe92091() {
@@ -252,7 +252,7 @@ function function_1fe92091() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17a3a64, Offset: 0x17c8
 // Size: 0x14
 function function_4d80ac56() {
@@ -260,7 +260,7 @@ function function_4d80ac56() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41296cd6, Offset: 0x17e8
 // Size: 0x10a
 function function_c2723d51() {
@@ -278,7 +278,7 @@ function function_c2723d51() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1ed839f6, Offset: 0x1900
 // Size: 0x96
 function function_fdc6c20d() {
@@ -289,7 +289,7 @@ function function_fdc6c20d() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x364effea, Offset: 0x19a0
 // Size: 0x15c
 function function_cddd4212(var_42b04582) {
@@ -316,7 +316,7 @@ function function_cddd4212(var_42b04582) {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2c9364ad, Offset: 0x1b08
 // Size: 0x2c2
 function function_a7ecedb7() {
@@ -350,7 +350,7 @@ function function_a7ecedb7() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31a39bc7, Offset: 0x1dd8
 // Size: 0x96
 function function_e17ece2d() {
@@ -360,7 +360,7 @@ function function_e17ece2d() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x602c0544, Offset: 0x1e78
 // Size: 0x24
 function function_8edc43() {
@@ -369,7 +369,7 @@ function function_8edc43() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x403b30d6, Offset: 0x1ea8
 // Size: 0x250
 function function_b15cfb65() {
@@ -386,7 +386,7 @@ function function_b15cfb65() {
     self thread function_e17ece2d();
     n_tries = 0;
     while (true) {
-        e_user = self.trigger_stub waittill(#"trigger");
+        self.trigger_stub waittill(#"trigger", e_user);
         n_tries++;
         level notify(#"vo_try_puzzle_lightning2", e_user);
         self.position = (self.position + 1) % 4;
@@ -406,13 +406,13 @@ function function_b15cfb65() {
 }
 
 // Namespace zm_tomb_quest_elec
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe07869e8, Offset: 0x2100
 // Size: 0x4c
 function function_20d54c0c() {
     self endon(#"kill_trigger");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         self.stub notify(#"trigger", player);
     }
 }

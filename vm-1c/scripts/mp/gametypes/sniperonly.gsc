@@ -1,22 +1,22 @@
 #using scripts/mp/_util;
-#using scripts/mp/gametypes/tdm;
-#using scripts/mp/gametypes/_weapons;
-#using scripts/mp/gametypes/_wager;
-#using scripts/mp/gametypes/_loadout;
-#using scripts/mp/gametypes/_globallogic_spawn;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_player;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
-#using scripts/mp/gametypes/_dogtags;
 #using scripts/mp/gametypes/_deathicons;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/loadout_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/mp/gametypes/_dogtags;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_loadout;
+#using scripts/mp/gametypes/_wager;
+#using scripts/mp/gametypes/_weapons;
+#using scripts/mp/gametypes/tdm;
 #using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/loadout_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace sniperonly;
 
@@ -88,7 +88,7 @@ function givecustomloadout() {
     self.grenadetypesecondary = secondaryoffhand;
     self.grenadetypesecondarycount = secondaryoffhandcount;
     self function_e6707d5e();
-    loadout::function_4ddd42ba();
+    loadout::giveHeroWeapon();
     self allowmelee(0);
     return primaryweapon;
 }
@@ -99,7 +99,7 @@ function givecustomloadout() {
 // Size: 0x2ac
 function function_e6707d5e() {
     self.var_66cb8722 = undefined;
-    loadout::function_e193f5c5();
+    loadout::giveSpecialOffhand();
     if (!isdefined(self.var_66cb8722)) {
         bodyindex = self getcharacterbodytype();
         var_3eeea260 = "none";
@@ -160,8 +160,8 @@ function function_e6707d5e() {
 function function_b41dbb1d(primaryweapon, var_d5801c8a) {
     if (var_d5801c8a) {
         primaryweaponoptions = self calcweaponoptions(self.class_num, 0);
-        var_65ce895e = self getattachmentcosmeticvariantforweapon(self.class_num, "primary");
-        self giveweapon(primaryweapon, primaryweaponoptions, var_65ce895e);
+        acvi = self getattachmentcosmeticvariantforweapon(self.class_num, "primary");
+        self giveweapon(primaryweapon, primaryweaponoptions, acvi);
     } else {
         self giveweapon(primaryweapon);
     }
@@ -188,8 +188,8 @@ function function_b41dbb1d(primaryweapon, var_d5801c8a) {
 // Size: 0x114
 function function_f0582641(sidearm) {
     secondaryweaponoptions = self calcweaponoptions(self.class_num, 1);
-    var_65ce895e = self getattachmentcosmeticvariantforweapon(self.class_num, "secondary");
-    self giveweapon(sidearm, secondaryweaponoptions, var_65ce895e);
+    acvi = self getattachmentcosmeticvariantforweapon(self.class_num, "secondary");
+    self giveweapon(sidearm, secondaryweaponoptions, acvi);
     self.secondaryloadoutweapon = sidearm;
     self.var_f8a642e8 = sidearm.altweapon;
     self.secondaryloadoutgunsmithvariantindex = self getloadoutgunsmithvariantindex(self.class_num, 1);

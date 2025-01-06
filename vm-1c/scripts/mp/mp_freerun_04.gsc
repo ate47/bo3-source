@@ -1,9 +1,9 @@
-#using scripts/mp/mp_freerun_04_sound;
-#using scripts/mp/mp_freerun_04_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_freerun_04_fx;
+#using scripts/mp/mp_freerun_04_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_freerun_04;
 

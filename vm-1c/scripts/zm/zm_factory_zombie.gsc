@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_behavior;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_behavior;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_factory_zombie;
 
@@ -29,7 +29,7 @@ function autoexec init() {
 }
 
 // Namespace zm_factory_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x7bfdec8c, Offset: 0x398
 // Size: 0x64
 function private function_46f62f6f() {
@@ -38,7 +38,7 @@ function private function_46f62f6f() {
 }
 
 // Namespace zm_factory_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa49e322c, Offset: 0x408
 // Size: 0x44
 function ZmFactoryTraversalService(entity) {
@@ -50,7 +50,7 @@ function ZmFactoryTraversalService(entity) {
 }
 
 // Namespace zm_factory_zombie
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x31de441a, Offset: 0x458
 // Size: 0x104
 function private function_a9009b71(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -64,7 +64,7 @@ function private function_a9009b71(entity, mocompanim, mocompanimblendouttime, m
 }
 
 // Namespace zm_factory_zombie
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x1fd3e9e8, Offset: 0x568
 // Size: 0x2c
 function private function_3574d810(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -72,7 +72,7 @@ function private function_3574d810(entity, mocompanim, mocompanimblendouttime, m
 }
 
 // Namespace zm_factory_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c30432e, Offset: 0x5a0
 // Size: 0x1c
 function function_f06eec12() {
@@ -80,7 +80,7 @@ function function_f06eec12() {
 }
 
 // Namespace zm_factory_zombie
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc6405d0a, Offset: 0x5c8
 // Size: 0xfa
 function private function_f20cbe8b(players) {
@@ -98,7 +98,7 @@ function private function_f20cbe8b(players) {
 }
 
 // Namespace zm_factory_zombie
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xe248ceef, Offset: 0x6d0
 // Size: 0x262
 function private function_1daba8b7(origin, players) {
@@ -154,7 +154,7 @@ function private function_1daba8b7(origin, players) {
 }
 
 // Namespace zm_factory_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd4e0ad5c, Offset: 0x940
 // Size: 0x18c
 function private function_72e6c1d6() {

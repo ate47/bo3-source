@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_equipment;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/filter_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_equipment;
 
 #namespace zm_equip_gasmask;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb327cc4b, Offset: 0x218
 // Size: 0xcc
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb643961, Offset: 0x2f0
 // Size: 0x146
 function function_9cee2510(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

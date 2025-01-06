@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_respin_cycle;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_respin_cycle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9cff218c, Offset: 0x240
 // Size: 0x94
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_respin_cycle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x98b25939, Offset: 0x2e0
 // Size: 0x96
 function validation() {
@@ -45,7 +45,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_respin_cycle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb4e0655, Offset: 0x380
 // Size: 0xb6
 function activation() {
@@ -59,7 +59,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_respin_cycle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x898a9edb, Offset: 0x440
 // Size: 0x1cc
 function function_7a5dc39b(player) {

@@ -3,7 +3,7 @@
 #namespace voice_z_newworld;
 
 // Namespace voice_z_newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6136470a, Offset: 0x1430
 // Size: 0xca4
 function init_voice() {

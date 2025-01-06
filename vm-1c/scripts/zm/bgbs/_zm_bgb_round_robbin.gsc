@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
 #using scripts/zm/_zm_powerups;
 #using scripts/zm/_zm_score;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_round_robbin;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_round_robbin
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25faec89, Offset: 0x208
 // Size: 0x64
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_round_robbin
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b874073, Offset: 0x278
 // Size: 0xb2
 function validation() {
@@ -53,7 +53,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_round_robbin
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa8fa683, Offset: 0x338
 // Size: 0x102
 function activation() {
@@ -68,7 +68,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_round_robbin
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5ade134f, Offset: 0x448
 // Size: 0x86
 function function_b10a9b0c(zombie) {
@@ -82,7 +82,7 @@ function function_b10a9b0c(zombie) {
 }
 
 // Namespace zm_bgb_round_robbin
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4adbd36b, Offset: 0x4d8
 // Size: 0x2e2
 function function_8824774d(target_round) {
@@ -110,7 +110,7 @@ function function_8824774d(target_round) {
         }
         if (isdefined(var_30af5449)) {
             level.var_1414f4e7 = var_30af5449.origin;
-            level notify(#"hash_ddc0a71d", var_30af5449);
+            level notify(#"last_ai_down", var_30af5449);
         }
     }
     util::wait_network_frame();

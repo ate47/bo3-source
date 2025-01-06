@@ -1,17 +1,17 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/cp/doa/_doa_camera;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/cp/_util;
-#using scripts/shared/math_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_camera;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_64c6b720;
 
@@ -196,11 +196,11 @@ function function_4d819138() {
             var_9c4a2a35 = doa.player.score + doa.var_db3637c0 * int(4e+06);
             delta = var_9c4a2a35 - doa.score;
             if (delta > 0) {
-                var_75a4790f = 1;
+                inc = 1;
                 frac = int(0.01 * delta);
-                units = int(frac / var_75a4790f);
-                var_75a4790f += units * var_75a4790f;
-                doa.score += var_75a4790f;
+                units = int(frac / inc);
+                inc += units * inc;
+                doa.score += inc;
                 if (doa.score > var_9c4a2a35) {
                     doa.score = var_9c4a2a35;
                 }

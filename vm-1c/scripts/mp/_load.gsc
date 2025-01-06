@@ -1,92 +1,92 @@
-#using scripts/mp/_contracts;
-#using scripts/mp/_blackjack_challenges;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/mp/gametypes/_weaponobjects;
-#using scripts/mp/_trophy_system;
-#using scripts/mp/_tacticalinsertion;
-#using scripts/mp/_smokegrenade;
-#using scripts/mp/_threat_detector;
-#using scripts/mp/_sensor_grenade;
-#using scripts/mp/_satchel_charge;
-#using scripts/mp/_riotshield;
-#using scripts/mp/_proximity_grenade;
-#using scripts/mp/_lightninggun;
+#using scripts/codescripts/struct;
+#using scripts/mp/_arena;
 #using scripts/mp/_armblade;
-#using scripts/mp/_incendiary;
-#using scripts/mp/_heatseekingmissile;
-#using scripts/mp/_hacker_tool;
-#using scripts/mp/_flashgrenades;
-#using scripts/mp/_explosive_bolt;
-#using scripts/mp/_hive_gun;
-#using scripts/mp/_bouncingbetty;
+#using scripts/mp/_art;
 #using scripts/mp/_ballistic_knife;
-#using scripts/shared/weapons/_sticky_grenade;
-#using scripts/shared/weapons/_pineapple_gun;
+#using scripts/mp/_bb;
+#using scripts/mp/_blackjack_challenges;
+#using scripts/mp/_bouncingbetty;
+#using scripts/mp/_callbacks;
+#using scripts/mp/_contracts;
+#using scripts/mp/_destructible;
+#using scripts/mp/_devgui;
+#using scripts/mp/_explosive_bolt;
+#using scripts/mp/_flashgrenades;
+#using scripts/mp/_hacker_tool;
+#using scripts/mp/_heatseekingmissile;
+#using scripts/mp/_hive_gun;
+#using scripts/mp/_incendiary;
+#using scripts/mp/_lightninggun;
+#using scripts/mp/_load;
+#using scripts/mp/_perks;
+#using scripts/mp/_pickup_items;
+#using scripts/mp/_proximity_grenade;
+#using scripts/mp/_riotshield;
+#using scripts/mp/_satchel_charge;
+#using scripts/mp/_sensor_grenade;
+#using scripts/mp/_smokegrenade;
+#using scripts/mp/_tacticalinsertion;
+#using scripts/mp/_threat_detector;
+#using scripts/mp/_trophy_system;
+#using scripts/mp/_util;
+#using scripts/mp/_vehicle;
+#using scripts/mp/gametypes/_classicmode;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_weaponobjects;
+#using scripts/mp/killstreaks/_ai_tank;
+#using scripts/mp/killstreaks/_counteruav;
+#using scripts/mp/killstreaks/_dogs;
+#using scripts/mp/killstreaks/_drone_strike;
 #using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_uav;
-#using scripts/mp/killstreaks/_satellite;
 #using scripts/mp/killstreaks/_placeables;
 #using scripts/mp/killstreaks/_rcbomb;
-#using scripts/mp/killstreaks/_drone_strike;
-#using scripts/mp/killstreaks/_dogs;
-#using scripts/mp/killstreaks/_counteruav;
-#using scripts/mp/killstreaks/_ai_tank;
-#using scripts/mp/gametypes/_classicmode;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/_pickup_items;
-#using scripts/mp/_vehicle;
-#using scripts/mp/_perks;
-#using scripts/mp/_devgui;
-#using scripts/mp/_callbacks;
+#using scripts/mp/killstreaks/_satellite;
+#using scripts/mp/killstreaks/_uav;
 #using scripts/shared/_burnplayer;
-#using scripts/mp/_bb;
-#using scripts/mp/_arena;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/mp/_destructible;
-#using scripts/mp/_art;
-#using scripts/shared/weapons/multilockapguidance;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_sensor_grenade;
-#using scripts/shared/weapons/_satchel_charge;
-#using scripts/shared/weapons/_riotshield;
-#using scripts/shared/weapons/_proximity_grenade;
-#using scripts/shared/weapons/_lightninggun;
-#using scripts/shared/weapons/_flashgrenades;
-#using scripts/shared/weapons/_trophy_system;
-#using scripts/shared/weapons/_tacticalinsertion;
-#using scripts/shared/weapons/_hive_gun;
-#using scripts/shared/weapons/_bouncingbetty;
-#using scripts/shared/weapons/_ballistic_knife;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/serverfaceanim_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/popups_shared;
 #using scripts/shared/_oob;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/archetype_shared/archetype_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/entityheadicons_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/load_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/medals_shared;
+#using scripts/shared/music_shared;
 #using scripts/shared/objpoints_shared;
 #using scripts/shared/player_shared;
-#using scripts/shared/music_shared;
-#using scripts/shared/medals_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/load_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/entityheadicons_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/archetype_shared/archetype_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/popups_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/serverfaceanim_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_ballistic_knife;
+#using scripts/shared/weapons/_bouncingbetty;
+#using scripts/shared/weapons/_flashgrenades;
+#using scripts/shared/weapons/_hive_gun;
+#using scripts/shared/weapons/_lightninggun;
+#using scripts/shared/weapons/_pineapple_gun;
+#using scripts/shared/weapons/_proximity_grenade;
+#using scripts/shared/weapons/_riotshield;
+#using scripts/shared/weapons/_satchel_charge;
+#using scripts/shared/weapons/_sensor_grenade;
+#using scripts/shared/weapons/_sticky_grenade;
+#using scripts/shared/weapons/_tacticalinsertion;
+#using scripts/shared/weapons/_trophy_system;
+#using scripts/shared/weapons/_weaponobjects;
+#using scripts/shared/weapons/multilockapguidance;
 
 #namespace load;
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d2c6807, Offset: 0xce0
 // Size: 0x104
 function main() {
@@ -104,7 +104,7 @@ function main() {
 }
 
 // Namespace load
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x71cace33, Offset: 0xdf0
 // Size: 0xba
 function setfootstepeffect(name, fx) {
@@ -142,7 +142,7 @@ function footsteps() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17992b6f, Offset: 0x10e8
 // Size: 0xbc
 function init_traverse() {
@@ -159,7 +159,7 @@ function init_traverse() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x408cbe5e, Offset: 0x11b0
 // Size: 0x96
 function setup_traversals() {
@@ -173,7 +173,7 @@ function setup_traversals() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4a8ae350, Offset: 0x1250
 // Size: 0x94
 function register_clientfields() {

@@ -1,13 +1,13 @@
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace _gadget_flashback;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_flashback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d4d7917, Offset: 0x3e0
 // Size: 0x144
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace _gadget_flashback
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x271cc57e, Offset: 0x530
 // Size: 0x134
 function flashback_activated(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,7 +52,7 @@ function flashback_activated(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace _gadget_flashback
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x293d556b, Offset: 0x670
 // Size: 0x174
 function function_e7b19c85(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -72,7 +72,7 @@ function function_e7b19c85(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _gadget_flashback
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd2c1efea, Offset: 0x7f0
 // Size: 0x64
 function function_20ec14bf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -82,7 +82,7 @@ function function_20ec14bf(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _gadget_flashback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd789a522, Offset: 0x860
 // Size: 0x13c
 function function_ed40d5dd(localclientnum) {
@@ -104,7 +104,7 @@ function function_ed40d5dd(localclientnum) {
 }
 
 // Namespace _gadget_flashback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x35d10ce2, Offset: 0x9a8
 // Size: 0x6c
 function function_846f9a6e(localclientnum, var_57594972) {

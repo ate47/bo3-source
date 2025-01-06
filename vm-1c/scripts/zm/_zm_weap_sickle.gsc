@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_melee_weapon;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_melee_weapon;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_sickle;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_sickle
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x99ec1590, Offset: 0x1e8
 // Size: 0x4
 function private __init__() {
@@ -22,7 +22,7 @@ function private __init__() {
 }
 
 // Namespace _zm_weap_sickle
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xaa07ea7f, Offset: 0x1f8
 // Size: 0x104
 function private __main__() {

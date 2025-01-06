@@ -1,7 +1,7 @@
 #namespace delete;
 
 // Namespace delete
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb5ab1af4, Offset: 0x70
 // Size: 0xfc
 function main() {

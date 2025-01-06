@@ -1,7 +1,7 @@
 #using scripts/cp/doa/_doa_arena;
+#using scripts/shared/array_shared;
 #using scripts/shared/math_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
 
 #namespace namespace_ad544aeb;
 
@@ -15,7 +15,7 @@ function function_d22ceb57(angles, min_dist, max_dist) {
     }
     if (isdefined(angles)) {
         vectornormalize(angles);
-        level.doa.var_7bfaac9b = angles;
+        level.doa.camera_angles = angles;
         level.var_eb70931a = anglestoforward(angles) * -1;
         level.var_7a2e3b7d = anglestoup(angles);
     }
@@ -25,7 +25,7 @@ function function_d22ceb57(angles, min_dist, max_dist) {
     level.var_8e0085fe = min_dist;
     level.var_3e96d0bc = max_dist;
     if (!isdefined(level.var_a32fbbc0)) {
-        level.var_a32fbbc0 = level.doa.var_7bfaac9b;
+        level.var_a32fbbc0 = level.doa.camera_angles;
     }
 }
 
@@ -95,7 +95,7 @@ function function_d207ecc1(localclientnum, delta_time) {
         cameramode = level.var_81528e19;
     }
     players = [];
-    angles = level.doa.var_7bfaac9b;
+    angles = level.doa.camera_angles;
     if (cameramode == 4) {
         cameramode = 0;
     }
@@ -157,7 +157,7 @@ function function_d207ecc1(localclientnum, delta_time) {
                 if (!isdefined(player)) {
                     continue;
                 }
-                player camerasetlookat(level.doa.var_7bfaac9b);
+                player camerasetlookat(level.doa.camera_angles);
             }
         }
         level.var_6383030e = var_2fda52e5;

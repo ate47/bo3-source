@@ -1,5 +1,5 @@
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
 
 #namespace zm_game_module_utility;
 

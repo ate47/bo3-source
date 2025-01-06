@@ -1,20 +1,20 @@
-#using scripts/zm/zm_genesis_util;
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_genesis_util;
 
 #using_animtree("generic");
 
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe1133cc0, Offset: 0x530
 // Size: 0x116
 function __init__() {
@@ -42,7 +42,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x45d99c80, Offset: 0x650
 // Size: 0xbc
 function function_cb47574e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -54,7 +54,7 @@ function function_cb47574e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x34e936a2, Offset: 0x718
 // Size: 0xa4
 function power_cables_shader(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -66,7 +66,7 @@ function power_cables_shader(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_genesis_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd3048bf4, Offset: 0x7c8
 // Size: 0x5fc
 function corruption_tower(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
@@ -129,7 +129,7 @@ function corruption_tower(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138
 }
 
 // Namespace zm_genesis_power
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x253433ea, Offset: 0xdd0
 // Size: 0x2e4
 function function_1292b31d(var_6575414d, var_47d9b5f4, str_tag, str_fx, str_alias) {

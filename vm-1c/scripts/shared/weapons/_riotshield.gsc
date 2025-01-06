@@ -1,17 +1,17 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("mp_riotshield");
 
 #namespace riotshield;
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xabc8fb53, Offset: 0x540
 // Size: 0x144
 function init_shared() {
@@ -34,7 +34,7 @@ function init_shared() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x77681d8f, Offset: 0x690
 // Size: 0x34
 function register() {
@@ -42,7 +42,7 @@ function register() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa1a2f67b, Offset: 0x6d0
 // Size: 0x94
 function watchpregameclasschange() {
@@ -58,7 +58,7 @@ function watchpregameclasschange() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b435af6, Offset: 0x770
 // Size: 0x10c
 function watchriotshieldpickup() {
@@ -79,7 +79,7 @@ function watchriotshieldpickup() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49ebdaf, Offset: 0x888
 // Size: 0x258
 function trackriotshield() {
@@ -88,7 +88,7 @@ function trackriotshield() {
     self notify(#"track_riot_shield");
     self endon(#"track_riot_shield");
     self thread watchpregameclasschange();
-    newweapon = self waittill(#"weapon_change");
+    self waittill(#"weapon_change", newweapon);
     self refreshshieldattachment();
     currentweapon = self getcurrentweapon();
     self.hasriotshield = self hasriotshield();
@@ -101,7 +101,7 @@ function trackriotshield() {
         self.hasriotshield = self hasriotshield();
         self.hasriotshieldequipped = currentweapon.isriotshield;
         refresh_attach = 0;
-        newweapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", newweapon);
         if (newweapon.isriotshield) {
             refresh_attach = 1;
             if (isdefined(self.riotshieldentity)) {
@@ -124,7 +124,7 @@ function trackriotshield() {
 }
 
 // Namespace riotshield
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaaaa4193, Offset: 0xae8
 // Size: 0x82
 function isvalidnonshieldweapon(weapon) {
@@ -147,7 +147,7 @@ function isvalidnonshieldweapon(weapon) {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9bbf2c0, Offset: 0xb78
 // Size: 0x24
 function startriotshielddeploy() {
@@ -156,7 +156,7 @@ function startriotshielddeploy() {
 }
 
 // Namespace riotshield
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x814fa445, Offset: 0xba8
 // Size: 0x16e
 function resetreconmodelvisibility(owner) {
@@ -189,13 +189,13 @@ function resetreconmodelvisibility(owner) {
 }
 
 // Namespace riotshield
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x267c6cbb, Offset: 0xd20
 // Size: 0x68
 function resetreconmodelonevent(eventname, owner) {
     self endon(#"death");
     for (;;) {
-        newowner = level waittill(eventname);
+        level waittill(eventname, newowner);
         if (isdefined(newowner)) {
             owner = newowner;
         }
@@ -204,7 +204,7 @@ function resetreconmodelonevent(eventname, owner) {
 }
 
 // Namespace riotshield
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x51daaaf9, Offset: 0xd90
 // Size: 0x120
 function attachreconmodel(modelname, owner) {
@@ -224,7 +224,7 @@ function attachreconmodel(modelname, owner) {
 }
 
 // Namespace riotshield
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x19b6fe81, Offset: 0xeb8
 // Size: 0x150
 function spawnriotshieldcover(origin, angles) {
@@ -244,14 +244,14 @@ function spawnriotshieldcover(origin, angles) {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2c70e987, Offset: 0x1010
 // Size: 0x424
 function watchriotshielddeploy() {
     self endon(#"death");
     self endon(#"disconnect");
     self endon(#"start_riotshield_deploy");
-    deploy_attempt, weapon = self waittill(#"deploy_riotshield");
+    self waittill(#"deploy_riotshield", deploy_attempt, weapon);
     self setplacementhint(1);
     placement_hint = 0;
     if (deploy_attempt) {
@@ -324,7 +324,7 @@ function riotshielddistancetest(origin) {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25742695, Offset: 0x1568
 // Size: 0xec
 function watchdeployedriotshieldents() {
@@ -346,7 +346,7 @@ function watchdeployedriotshieldents() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x37061f2a, Offset: 0x1660
 // Size: 0x33c
 function watchdeployedriotshielddamage() {
@@ -356,7 +356,7 @@ function watchdeployedriotshielddamage() {
     while (true) {
         self.maxhealth = 100000;
         self.health = self.maxhealth;
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags);
         if (!isdefined(attacker)) {
             continue;
         }
@@ -386,7 +386,7 @@ function watchdeployedriotshielddamage() {
 }
 
 // Namespace riotshield
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x22736a25, Offset: 0x19a8
 // Size: 0x16c
 function damagethendestroyriotshield(attacker, weapon) {
@@ -410,7 +410,7 @@ function damagethendestroyriotshield(attacker, weapon) {
 }
 
 // Namespace riotshield
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2176b6ce, Offset: 0x1b20
 // Size: 0x42
 function deleteshieldontriggerdeath(shield_trigger) {
@@ -419,7 +419,7 @@ function deleteshieldontriggerdeath(shield_trigger) {
 }
 
 // Namespace riotshield
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8b35e804, Offset: 0x1b70
 // Size: 0x6c
 function deleteshieldonplayerdeathordisconnect(shield_ent) {
@@ -430,7 +430,7 @@ function deleteshieldonplayerdeathordisconnect(shield_ent) {
 }
 
 // Namespace riotshield
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7e4ab3eb, Offset: 0x1be8
 // Size: 0x74
 function watchriotshieldstuckentitydeath(grenade, owner) {
@@ -440,7 +440,7 @@ function watchriotshieldstuckentitydeath(grenade, owner) {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa762d4c4, Offset: 0x1c68
 // Size: 0x34
 function on_player_spawned() {
@@ -449,7 +449,7 @@ function on_player_spawned() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17cf46a0, Offset: 0x1ca8
 // Size: 0x50
 function watch_riot_shield_use() {
@@ -463,7 +463,7 @@ function watch_riot_shield_use() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78b77817, Offset: 0x1d00
 // Size: 0xd2
 function begin_other_grenade_tracking() {
@@ -472,7 +472,7 @@ function begin_other_grenade_tracking() {
     self notify(#"hash_7fac4805");
     self endon(#"hash_7fac4805");
     for (;;) {
-        grenade, weapon, cooktime = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon, cooktime);
         if (grenade util::ishacked()) {
             continue;
         }
@@ -487,12 +487,12 @@ function begin_other_grenade_tracking() {
 }
 
 // Namespace riotshield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc37a4a67, Offset: 0x1de0
 // Size: 0x54
 function check_stuck_to_shield() {
     self endon(#"death");
-    other, owner = self waittill(#"stuck_to_shield");
+    self waittill(#"stuck_to_shield", other, owner);
     other watchriotshieldstuckentitydeath(self, owner);
 }
 

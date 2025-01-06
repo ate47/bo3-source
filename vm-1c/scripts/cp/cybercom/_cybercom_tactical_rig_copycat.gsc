@@ -1,21 +1,21 @@
-#using scripts/shared/weapons_shared;
-#using scripts/cp/cybercom/_cybercom_tactical_rig;
-#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/codescripts/struct;
 #using scripts/cp/cybercom/_cybercom;
 #using scripts/cp/cybercom/_cybercom_dev;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flagsys_shared;
+#using scripts/cp/cybercom/_cybercom_tactical_rig;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_util_shared;
 #using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace namespace_b854c5d0;
 
 // Namespace namespace_b854c5d0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x268
 // Size: 0x4
 function init() {
@@ -23,7 +23,7 @@ function init() {
 }
 
 // Namespace namespace_b854c5d0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82dfc26c, Offset: 0x278
 // Size: 0x9c
 function main() {
@@ -34,7 +34,7 @@ function main() {
 }
 
 // Namespace namespace_b854c5d0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x320
 // Size: 0x4
 function on_player_connect() {
@@ -42,7 +42,7 @@ function on_player_connect() {
 }
 
 // Namespace namespace_b854c5d0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x330
 // Size: 0x4
 function on_player_spawned() {
@@ -50,7 +50,7 @@ function on_player_spawned() {
 }
 
 // Namespace namespace_b854c5d0
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2aa30e24, Offset: 0x340
 // Size: 0x24
 function function_f32160f1(type) {
@@ -58,7 +58,7 @@ function function_f32160f1(type) {
 }
 
 // Namespace namespace_b854c5d0
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6c97d0a7, Offset: 0x370
 // Size: 0x32
 function function_6cdcecbb(type) {

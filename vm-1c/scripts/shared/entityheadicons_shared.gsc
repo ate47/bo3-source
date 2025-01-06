@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace entityheadicons;
 
@@ -15,7 +15,7 @@ function init_shared() {
 }
 
 // Namespace entityheadicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3748abf, Offset: 0x190
 // Size: 0xb8
 function start_gametype() {
@@ -35,7 +35,7 @@ function start_gametype() {
 }
 
 // Namespace entityheadicons
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x349b1bc6, Offset: 0x250
 // Size: 0x384
 function setentityheadicon(team, owner, offset, objective, var_cc32611f) {
@@ -105,7 +105,7 @@ function setentityheadicon(team, owner, offset, objective, var_cc32611f) {
 }
 
 // Namespace entityheadicons
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc517f71f, Offset: 0x5e0
 // Size: 0x1aa
 function function_49af735d(entity, team, icon, var_cc32611f) {
@@ -124,7 +124,7 @@ function function_49af735d(entity, team, icon, var_cc32611f) {
 }
 
 // Namespace entityheadicons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x971bf79f, Offset: 0x798
 // Size: 0x14a
 function function_a7801f67(entity, icon, var_cc32611f) {
@@ -141,7 +141,7 @@ function function_a7801f67(entity, icon, var_cc32611f) {
 }
 
 // Namespace entityheadicons
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1ad8570c, Offset: 0x8f0
 // Size: 0xc2
 function updateentityheadteamobjective(entity, team, objective, var_cc32611f) {
@@ -153,7 +153,7 @@ function updateentityheadteamobjective(entity, team, objective, var_cc32611f) {
 }
 
 // Namespace entityheadicons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xaa858299, Offset: 0x9c0
 // Size: 0xd2
 function updateentityheadclientobjective(entity, objective, var_cc32611f) {
@@ -166,7 +166,7 @@ function updateentityheadclientobjective(entity, objective, var_cc32611f) {
 }
 
 // Namespace entityheadicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5451607, Offset: 0xaa0
 // Size: 0x11e
 function destroyheadiconsondeath() {
@@ -187,7 +187,7 @@ function destroyheadiconsondeath() {
 }
 
 // Namespace entityheadicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x65aff947, Offset: 0xbc8
 // Size: 0x100
 function destroyentityheadicons() {

@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_vortex;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_vortex;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_black_hole_bomb;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_black_hole_bomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59e6f1eb, Offset: 0x3d0
 // Size: 0x1bc
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_black_hole_bomb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xff77edf9, Offset: 0x598
 // Size: 0xa4
 function bhb_viewlights(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -51,7 +51,7 @@ function bhb_viewlights(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_weap_black_hole_bomb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x933466e6, Offset: 0x648
 // Size: 0xae
 function function_437a4164(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -65,7 +65,7 @@ function function_437a4164(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_weap_black_hole_bomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaf4a9b68, Offset: 0x700
 // Size: 0x224
 function function_65616fbd(local_client_num, var_d89c34cf) {
@@ -102,7 +102,7 @@ function function_2aac6f7b(ent_model, var_26cba5b) {
 }
 
 // Namespace zm_weap_black_hole_bomb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xab804352, Offset: 0x9e0
 // Size: 0x1e4
 function function_13471301(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -131,7 +131,7 @@ function function_13471301(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_weap_black_hole_bomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x675d8ea9, Offset: 0xbd0
 // Size: 0x5c
 function function_aedc4b92(var_3df01f81, var_be0a9746) {

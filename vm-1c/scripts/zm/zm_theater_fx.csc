@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_perks;
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_perks;
 
 #namespace zm_theater_fx;
 
 // Namespace zm_theater_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd7417bc, Offset: 0x15d0
 // Size: 0x18c
 function main() {
@@ -21,12 +21,12 @@ function main() {
     level thread function_30e2d0b9("smodel_light_electric", "lights_indlight_on");
     level thread function_54ae2c5f();
     level thread function_9c6ed203();
-    level notify(#"hash_d3c06010");
+    level notify(#"dog_stop");
     level thread function_d0afe567();
 }
 
 // Namespace zm_theater_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x779924ef, Offset: 0x1768
 // Size: 0x286
 function function_f45953c() {
@@ -56,7 +56,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_theater_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2504200, Offset: 0x19f8
 // Size: 0x6e6
 function function_e6258024() {
@@ -126,7 +126,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_theater_fx
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7f2c747a, Offset: 0x20e8
 // Size: 0x11a
 function trap_fx_monitor(name, loc, trap_type) {
@@ -146,7 +146,7 @@ function trap_fx_monitor(name, loc, trap_type) {
 }
 
 // Namespace zm_theater_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdc301033, Offset: 0x2210
 // Size: 0x260
 function function_68c9b7de(loc, trap_type) {
@@ -188,7 +188,7 @@ function function_68c9b7de(loc, trap_type) {
 }
 
 // Namespace zm_theater_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x11bb608b, Offset: 0x2478
 // Size: 0xe8
 function function_30e2d0b9(name, model) {
@@ -203,7 +203,7 @@ function function_30e2d0b9(name, model) {
 }
 
 // Namespace zm_theater_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2051bed1, Offset: 0x2568
 // Size: 0x374
 function function_d0afe567() {
@@ -222,7 +222,7 @@ function function_d0afe567() {
     }
     wait 0.016;
     if (!level clientfield::get("zm_theater_screen_in_place")) {
-        level waittill(#"hash_503bca4f");
+        level waittill(#"sip");
     }
     players = getlocalplayers();
     for (i = 0; i < players.size; i++) {
@@ -241,7 +241,7 @@ function function_d0afe567() {
 }
 
 // Namespace zm_theater_fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4fef4caa, Offset: 0x28e8
 // Size: 0x6c
 function function_4c75814e(var_37708867) {
@@ -251,7 +251,7 @@ function function_4c75814e(var_37708867) {
 }
 
 // Namespace zm_theater_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9be687e2, Offset: 0x2960
 // Size: 0x118
 function function_66aca41c(var_72515d6d, var_47653dff) {
@@ -269,7 +269,7 @@ function function_66aca41c(var_72515d6d, var_47653dff) {
 }
 
 // Namespace zm_theater_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x57412156, Offset: 0x2a80
 // Size: 0x96
 function function_e4b3e1ca(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -287,7 +287,7 @@ function function_e4b3e1ca(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe4d4a6d6, Offset: 0x2b20
 // Size: 0x82
 function function_54ae2c5f() {
@@ -301,12 +301,12 @@ function function_54ae2c5f() {
 }
 
 // Namespace zm_theater_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78281ab3, Offset: 0x2bb0
 // Size: 0x82
 function function_9c6ed203() {
     while (true) {
-        level waittill(#"hash_d3c06010");
+        level waittill(#"dog_stop");
         players = getlocalplayers();
         for (i = 0; i < players.size; i++) {
             setworldfogactivebank(i, 1);

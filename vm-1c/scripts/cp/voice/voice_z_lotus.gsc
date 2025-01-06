@@ -3,7 +3,7 @@
 #namespace voice_z_lotus;
 
 // Namespace voice_z_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2355bc8e, Offset: 0xe10
 // Size: 0x8a4
 function init_voice() {

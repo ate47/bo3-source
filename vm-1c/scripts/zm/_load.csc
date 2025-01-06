@@ -1,39 +1,39 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/gametypes/_weaponobjects;
-#using scripts/zm/_zm_playerhealth;
-#using scripts/zm/_zm_traps;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_radiant_live_update;
-#using scripts/zm/_global_fx;
-#using scripts/zm/_ambient;
-#using scripts/zm/_sticky_grenade;
-#using scripts/zm/_callbacks;
-#using scripts/zm/_destructible;
+#using scripts/codescripts/struct;
+#using scripts/shared/_oob;
 #using scripts/shared/abilities/_ability_player;
 #using scripts/shared/archetype_shared/archetype_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/_oob;
-#using scripts/shared/music_shared;
-#using scripts/shared/load_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfaceanim_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/footsteps_shared;
 #using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/clientfaceanim_shared;
-#using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/load_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/zm/_ambient;
+#using scripts/zm/_callbacks;
+#using scripts/zm/_destructible;
+#using scripts/zm/_global_fx;
+#using scripts/zm/_radiant_live_update;
+#using scripts/zm/_sticky_grenade;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_playerhealth;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_traps;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/gametypes/_weaponobjects;
 
 #namespace load;
 
 // Namespace load
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xeea521ca, Offset: 0x4f0
 // Size: 0x3a
 function levelnotifyhandler(clientnum, state, oldstate) {
@@ -67,7 +67,7 @@ function warnmissilefired(localclientnum, set) {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x12999f87, Offset: 0x598
 // Size: 0x14c
 function main() {
@@ -87,7 +87,7 @@ function main() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d016e91, Offset: 0x6f0
 // Size: 0x30
 function server_time() {
@@ -98,7 +98,7 @@ function server_time() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd69ff95c, Offset: 0x728
 // Size: 0xf4
 function register_clientfields() {

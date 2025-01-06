@@ -1,29 +1,29 @@
-#using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
-#using scripts/cp/cp_mi_cairo_ramses_utility;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/cp_mi_cairo_ramses_level_start;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
 #using scripts/cp/_load;
 #using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_level_start;
+#using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
+#using scripts/cp/cp_mi_cairo_ramses_utility;
+#using scripts/shared/ai_shared;
 #using scripts/shared/array_shared;
 #using scripts/shared/compass;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_cairo_ramses_station_walk;
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe358714b, Offset: 0x1aa0
 // Size: 0x11c
 function main() {
@@ -32,7 +32,7 @@ function main() {
     level thread function_6b91ca4();
     level thread function_3a8a502();
     level thread function_e9be9fb3();
-    level thread function_bbd12ed2();
+    level thread scene_cleanup();
     level thread function_78528b3d();
     level thread function_a99e5acb();
     level thread function_dd2cc06c();
@@ -41,7 +41,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x61dc2edc, Offset: 0x1bc8
 // Size: 0x288
 function function_dd2cc06c() {
@@ -74,7 +74,7 @@ function function_dd2cc06c() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8e77a065, Offset: 0x1e58
 // Size: 0x84
 function function_e29f0dd6(str_objective) {
@@ -93,7 +93,7 @@ function function_93d2e417() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe15e9a55, Offset: 0x1ef8
 // Size: 0x3ac
 function function_eef5b755() {
@@ -129,7 +129,7 @@ function function_eef5b755() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5d817720, Offset: 0x22b0
 // Size: 0x2c
 function function_4c91219b(a_ents) {
@@ -137,7 +137,7 @@ function function_4c91219b(a_ents) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdae63ae3, Offset: 0x22e8
 // Size: 0x4c
 function function_1ec9cc48(a_ents) {
@@ -147,7 +147,7 @@ function function_1ec9cc48(a_ents) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe768de80, Offset: 0x2340
 // Size: 0x34
 function function_fa1c2163(a_ents) {
@@ -156,7 +156,7 @@ function function_fa1c2163(a_ents) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x996893c1, Offset: 0x2380
 // Size: 0x174
 function function_bc43c2f8(var_c4db808e) {
@@ -177,7 +177,7 @@ function function_bc43c2f8(var_c4db808e) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbfb8fa97, Offset: 0x2500
 // Size: 0x34
 function function_19a13445(a_ents) {
@@ -186,7 +186,7 @@ function function_19a13445(a_ents) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdfb60c2b, Offset: 0x2540
 // Size: 0x602
 function function_317364f4() {
@@ -240,7 +240,7 @@ function function_317364f4() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba8363cc, Offset: 0x2b50
 // Size: 0x3da
 function function_3a8a502() {
@@ -284,7 +284,7 @@ function function_3a8a502() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x90da3486, Offset: 0x2f38
 // Size: 0x162
 function function_e9be9fb3() {
@@ -320,7 +320,7 @@ function function_2badd8cd() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ca6c806, Offset: 0x3110
 // Size: 0x234
 function function_a99e5acb() {
@@ -346,7 +346,7 @@ function function_a99e5acb() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa76528ed, Offset: 0x3350
 // Size: 0x144
 function function_51f408f1() {
@@ -362,7 +362,7 @@ function function_51f408f1() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31c933a4, Offset: 0x34a0
 // Size: 0x100
 function function_7768c0ae() {
@@ -378,10 +378,10 @@ function function_7768c0ae() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1a1b8115, Offset: 0x35a8
 // Size: 0x23c6
-function function_bbd12ed2(var_6dc777dc) {
+function scene_cleanup(var_6dc777dc) {
     if (!isdefined(var_6dc777dc)) {
         var_6dc777dc = 1;
     }
@@ -958,7 +958,7 @@ function function_bbd12ed2(var_6dc777dc) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25567b60, Offset: 0x5978
 // Size: 0x198
 function function_6b91ca4() {
@@ -980,7 +980,7 @@ function function_6b91ca4() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7dca82b2, Offset: 0x5b18
 // Size: 0x4c
 function function_4fec5052(v_end_pos) {
@@ -990,7 +990,7 @@ function function_4fec5052(v_end_pos) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x24d04157, Offset: 0x5b70
 // Size: 0x1b4
 function function_78528b3d() {
@@ -1005,7 +1005,7 @@ function function_78528b3d() {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xc3befe76, Offset: 0x5d30
 // Size: 0x134
 function function_54d1b8f8(var_562e5771, sndorigin, alias1, alias2, alias3, alias4) {
@@ -1027,7 +1027,7 @@ function function_54d1b8f8(var_562e5771, sndorigin, alias1, alias2, alias3, alia
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4432ede8, Offset: 0x5e70
 // Size: 0x68
 function function_e43e1d61(soundalias) {
@@ -1041,7 +1041,7 @@ function function_e43e1d61(soundalias) {
 }
 
 // Namespace cp_mi_cairo_ramses_station_walk
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa56110c0, Offset: 0x5ee0
 // Size: 0x70
 function function_671a7a61() {

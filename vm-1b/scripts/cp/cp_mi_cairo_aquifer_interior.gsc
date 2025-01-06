@@ -1,27 +1,27 @@
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_aquifer_objectives;
-#using scripts/cp/cp_mi_cairo_aquifer_utility;
 #using scripts/cp/cp_mi_cairo_aquifer_sound;
+#using scripts/cp/cp_mi_cairo_aquifer_utility;
+#using scripts/cp/gametypes/_battlechatter;
 #using scripts/cp/gametypes/_save;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/scene_shared;
 #using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai_shared;
 #using scripts/shared/animation_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/cp/_debug;
-#using scripts/cp/_skipto;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_aquifer_interior;
 
@@ -30,7 +30,7 @@
 // Checksum 0x9c5ecb5a, Offset: 0x9f8
 // Size: 0xd2
 function function_608c4683() {
-    namespace_786319bb::function_75ab4ede(1);
+    aquifer_util::function_75ab4ede(1);
     guy = namespace_84eb777e::function_eb16c4f5("hendricks_hangar");
     guy util::magic_bullet_shield();
     guy.script_ignoreme = 1;
@@ -53,8 +53,8 @@ function function_afb6fe67() {
     spawn_manager::wait_till_complete("main_hangar_enemies");
     guys = spawn_manager::function_423eae50("main_hangar_enemies");
     spawn_manager::function_27bf2e8("main_hangar_enemies", int(max(2, int(guys.size / 3))));
-    thread namespace_786319bb::function_9f296d9f("extras_exposed");
-    thread namespace_786319bb::function_9f296d9f("hendricks_move_up_hangar");
+    thread aquifer_util::function_9f296d9f("extras_exposed");
+    thread aquifer_util::function_9f296d9f("hendricks_move_up_hangar");
     util::delay(1, undefined, &trigger::use, "hangar_enemies_exposed", "targetname");
     spawn_manager::wait_till_cleared("main_hangar_enemies");
     level.hendricks.baseaccuracy = 10;
@@ -124,15 +124,15 @@ function function_3a330f78() {
         level thread [[ level.var_d08c6690 ]]();
     }
     exploder::exploder("amb_int_tank_room");
-    array::thread_all(level.activeplayers, &namespace_786319bb::function_89eaa1b3, 1);
+    array::thread_all(level.activeplayers, &aquifer_util::function_89eaa1b3, 1);
     wait 1;
-    array::thread_all(level.activeplayers, &namespace_786319bb::function_716b5d66, 1);
+    array::thread_all(level.activeplayers, &aquifer_util::function_716b5d66, 1);
     wait 5;
     level flag::wait_till_clear("flag_snow_room");
     exploder::exploder_stop("amb_int_tank_room");
-    array::thread_all(level.activeplayers, &namespace_786319bb::function_89eaa1b3, 1);
+    array::thread_all(level.activeplayers, &aquifer_util::function_89eaa1b3, 1);
     wait 1;
-    array::thread_all(level.activeplayers, &namespace_786319bb::function_716b5d66, 0);
+    array::thread_all(level.activeplayers, &aquifer_util::function_716b5d66, 0);
     level.hendricks battlechatter::function_d9f49fba(1);
     level flag::wait_till("exit_round_room");
     level.hendricks battlechatter::function_d9f49fba(0);
@@ -140,7 +140,7 @@ function function_3a330f78() {
     var_e27965fa = spawn_manager::function_423eae50("roundroom_allies");
     var_bc76eb91 = spawn_manager::function_423eae50("roundroom_enemies");
     guys = arraycombine(var_e27965fa, var_bc76eb91, 1, 1);
-    array::thread_all(guys, &namespace_786319bb::delete_me);
+    array::thread_all(guys, &aquifer_util::delete_me);
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
@@ -152,8 +152,8 @@ function function_1d5b05a(var_74cd64bc) {
         var_74cd64bc = 0;
     }
     if (!var_74cd64bc) {
-        namespace_786319bb::function_2085bf94("hideout_door", 1);
-        namespace_786319bb::function_2085bf94("hideout_doors_closed", 1);
+        aquifer_util::function_2085bf94("hideout_door", 1);
+        aquifer_util::function_2085bf94("hideout_doors_closed", 1);
     }
     if (isdefined(level.var_5bfe1c70)) {
         level thread [[ level.var_5bfe1c70 ]]();
@@ -170,8 +170,8 @@ function function_1d5b05a(var_74cd64bc) {
 // Checksum 0x4ff687c7, Offset: 0x11d0
 // Size: 0x219
 function function_ff024877() {
-    thread namespace_786319bb::function_2085bf94("hideout_door", 0);
-    thread namespace_786319bb::function_2085bf94("hideout_doors_closed", 0);
+    thread aquifer_util::function_2085bf94("hideout_door", 0);
+    thread aquifer_util::function_2085bf94("hideout_doors_closed", 0);
     thread namespace_84eb777e::function_e2d8799f(1);
     thread namespace_84eb777e::function_5d32874c(1);
     thread function_397e963e();
@@ -180,14 +180,14 @@ function function_ff024877() {
     array::run_all(level.activeplayers, &setmovespeedscale, 0.7);
     thread function_291b34c9();
     thread function_c48c4f99();
-    thread function_25357c2e();
+    thread escape_vo();
     thread function_3a77d1bf();
-    var_8a6d11 = function_246476fd(0, "cin_aqu_07_10_escape_vign_run_hendricks_a", "cin_aqu_07_10_escape_vign_wait_hendricks_a", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_a");
-    var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_b", "cin_aqu_07_10_escape_vign_wait_hendricks_b", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_b");
-    var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_c", "cin_aqu_07_10_escape_vign_wait_hendricks_c", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_c");
-    var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_d", "cin_aqu_07_10_escape_vign_wait_hendricks_d", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic2", 1, "hend_runout_d");
-    if (var_8a6d11) {
-        var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_e", undefined, undefined, "run_out_cinematic2", 0, undefined);
+    do_intro = function_246476fd(0, "cin_aqu_07_10_escape_vign_run_hendricks_a", "cin_aqu_07_10_escape_vign_wait_hendricks_a", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_a");
+    do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_b", "cin_aqu_07_10_escape_vign_wait_hendricks_b", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_b");
+    do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_c", "cin_aqu_07_10_escape_vign_wait_hendricks_c", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_c");
+    do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_d", "cin_aqu_07_10_escape_vign_wait_hendricks_d", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic2", 1, "hend_runout_d");
+    if (do_intro) {
+        do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_e", undefined, undefined, "run_out_cinematic2", 0, undefined);
     }
     level.hendricks.n_script_anim_rate = undefined;
 }
@@ -200,7 +200,7 @@ function function_3a77d1bf() {
     struct = getent("run_out_cinematic2", "targetname");
     struct scene::init("cin_aqu_07_10_escape_vign_crush_death_ally");
     level waittill(#"collapse");
-    thread namespace_786319bb::function_2085bf94("ceiling_ac_unit", 1);
+    thread aquifer_util::function_2085bf94("ceiling_ac_unit", 1);
     struct scene::play("cin_aqu_07_10_escape_vign_crush_death_ally");
 }
 
@@ -288,11 +288,11 @@ function function_397e963e() {
 // Params 7, eflags: 0x0
 // Checksum 0xc7893b2d, Offset: 0x1950
 // Size: 0x207
-function function_246476fd(var_8a6d11, var_f17304b7, var_75422735, var_b6b983f4, var_426bda58, var_2d3b4a98, var_6bf6eac8) {
-    struct = getent(var_426bda58, "targetname");
+function function_246476fd(do_intro, var_f17304b7, var_75422735, var_b6b983f4, struct_name, var_2d3b4a98, var_6bf6eac8) {
+    struct = getent(struct_name, "targetname");
     var_482ba61c = 1.2;
     level.hendricks.n_script_anim_rate = var_482ba61c;
-    if (var_8a6d11) {
+    if (do_intro) {
         struct scene::init(var_f17304b7, level.hendricks);
         level waittill(#"hash_20aa8e12");
     }
@@ -344,7 +344,7 @@ function function_a8f7f041() {
 // Params 0, eflags: 0x0
 // Checksum 0x6e5a7f22, Offset: 0x1c70
 // Size: 0x271
-function function_25357c2e() {
+function escape_vo() {
     var_296988d3 = [];
     if (!isdefined(var_296988d3)) {
         var_296988d3 = [];

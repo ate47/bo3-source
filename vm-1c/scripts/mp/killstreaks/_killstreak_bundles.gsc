@@ -1,16 +1,16 @@
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace killstreak_bundles;
 
 // Namespace killstreak_bundles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe77fa818, Offset: 0x3c8
 // Size: 0xa4
 function register_killstreak_bundle(killstreaktype) {
@@ -21,7 +21,7 @@ function register_killstreak_bundle(killstreaktype) {
 }
 
 // Namespace killstreak_bundles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x31a63280, Offset: 0x478
 // Size: 0x56
 function get_bundle(killstreak) {
@@ -32,7 +32,7 @@ function get_bundle(killstreak) {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92799069, Offset: 0x4d8
 // Size: 0x46
 function get_hack_timeout() {
@@ -42,7 +42,7 @@ function get_hack_timeout() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x64038185, Offset: 0x528
 // Size: 0x74
 function get_hack_protection() {
@@ -56,7 +56,7 @@ function get_hack_protection() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xced87196, Offset: 0x5a8
 // Size: 0x74
 function get_hack_tool_inner_time() {
@@ -70,7 +70,7 @@ function get_hack_tool_inner_time() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0a46e66, Offset: 0x628
 // Size: 0x74
 function get_hack_tool_outer_time() {
@@ -84,7 +84,7 @@ function get_hack_tool_outer_time() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf60136ad, Offset: 0x6a8
 // Size: 0x74
 function get_hack_tool_inner_radius() {
@@ -98,7 +98,7 @@ function get_hack_tool_inner_radius() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9a296c2c, Offset: 0x728
 // Size: 0x74
 function get_hack_tool_outer_radius() {
@@ -112,7 +112,7 @@ function get_hack_tool_outer_radius() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1e267e9, Offset: 0x7a8
 // Size: 0x74
 function get_lost_line_of_sight_limit_msec() {
@@ -126,7 +126,7 @@ function get_lost_line_of_sight_limit_msec() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59d2a89e, Offset: 0x828
 // Size: 0x74
 function get_hack_tool_no_line_of_sight_time() {
@@ -140,7 +140,7 @@ function get_hack_tool_no_line_of_sight_time() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4b1e05bb, Offset: 0x8a8
 // Size: 0x74
 function get_hack_scoreevent() {
@@ -154,7 +154,7 @@ function get_hack_scoreevent() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1cd81413, Offset: 0x928
 // Size: 0x74
 function get_hack_fx() {
@@ -168,7 +168,7 @@ function get_hack_fx() {
 }
 
 // Namespace killstreak_bundles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb6392611, Offset: 0x9a8
 // Size: 0x74
 function get_hack_loop_fx() {
@@ -182,7 +182,7 @@ function get_hack_loop_fx() {
 }
 
 // Namespace killstreak_bundles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7f2b1fc4, Offset: 0xa28
 // Size: 0x32
 function get_max_health(killstreaktype) {
@@ -191,7 +191,7 @@ function get_max_health(killstreaktype) {
 }
 
 // Namespace killstreak_bundles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5e9c3cf5, Offset: 0xa68
 // Size: 0x32
 function get_low_health(killstreaktype) {
@@ -200,7 +200,7 @@ function get_low_health(killstreaktype) {
 }
 
 // Namespace killstreak_bundles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf15071d7, Offset: 0xaa8
 // Size: 0x32
 function get_hacked_health(killstreaktype) {
@@ -209,7 +209,7 @@ function get_hacked_health(killstreaktype) {
 }
 
 // Namespace killstreak_bundles
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd349528a, Offset: 0xae8
 // Size: 0x236
 function get_shots_to_kill(weapon, meansofdeath, bundle) {
@@ -262,7 +262,7 @@ function get_shots_to_kill(weapon, meansofdeath, bundle) {
 }
 
 // Namespace killstreak_bundles
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe69a35e2, Offset: 0xd28
 // Size: 0xc8
 function get_emp_grenade_damage(killstreaktype, maxhealth) {
@@ -281,7 +281,7 @@ function get_emp_grenade_damage(killstreaktype, maxhealth) {
 }
 
 // Namespace killstreak_bundles
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x6098faa7, Offset: 0xdf8
 // Size: 0x6ca
 function get_weapon_damage(killstreaktype, maxhealth, attacker, weapon, type, damage, flags, chargeshotlevel) {

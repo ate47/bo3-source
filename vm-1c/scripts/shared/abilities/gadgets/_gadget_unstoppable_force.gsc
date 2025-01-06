@@ -1,12 +1,12 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace _gadget_unstoppable_force;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1fe5976a, Offset: 0x270
 // Size: 0x114
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8b370a0d, Offset: 0x390
 // Size: 0x2a
 function function_ae33369(slot) {
@@ -41,7 +41,7 @@ function function_ae33369(slot) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5269cb30, Offset: 0x3c8
 // Size: 0x52
 function function_e70192cd(slot) {
@@ -52,7 +52,7 @@ function function_e70192cd(slot) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xed6d25cc, Offset: 0x428
 // Size: 0x5c
 function function_c6dc2378(slot, weapon) {
@@ -62,7 +62,7 @@ function function_c6dc2378(slot, weapon) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8be54724, Offset: 0x490
 // Size: 0x5c
 function function_b94ad56f(slot, weapon) {
@@ -72,7 +72,7 @@ function function_b94ad56f(slot, weapon) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8f8ed0df, Offset: 0x4f8
 // Size: 0x5c
 function function_4f4c1f25(slot, weapon) {
@@ -82,7 +82,7 @@ function function_4f4c1f25(slot, weapon) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9033941a, Offset: 0x560
 // Size: 0x44
 function function_23dd24ee() {
@@ -92,7 +92,7 @@ function function_23dd24ee() {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xeac59acb, Offset: 0x5b0
 // Size: 0x7c
 function gadget_unstoppable_force_on(slot, weapon) {
@@ -103,7 +103,7 @@ function gadget_unstoppable_force_on(slot, weapon) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2be1b544, Offset: 0x638
 // Size: 0x7c
 function function_f5f70c55(slot, weapon) {

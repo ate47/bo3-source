@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_weap_elemental_bow;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weap_elemental_bow;
 
 #namespace _zm_weap_elemental_bow_storm;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0c12582, Offset: 0x578
 // Size: 0x372
 function __init__() {
@@ -44,7 +44,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6825c11e, Offset: 0x8f8
 // Size: 0x64
 function function_e73829fb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,7 +52,7 @@ function function_e73829fb(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x58223664, Offset: 0x968
 // Size: 0x74
 function function_93740776(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -62,7 +62,7 @@ function function_93740776(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf325da09, Offset: 0x9e8
 // Size: 0x74
 function function_c50a03db(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -72,7 +72,7 @@ function function_c50a03db(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3c0431d5, Offset: 0xa68
 // Size: 0xfc
 function elem_storm_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -90,7 +90,7 @@ function elem_storm_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb5894b1, Offset: 0xb70
 // Size: 0x6e
 function elem_storm_whirlwind_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -102,7 +102,7 @@ function elem_storm_whirlwind_rumble(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe46d7c5b, Offset: 0xbe8
 // Size: 0x60
 function function_4d18057(localclientnum) {
@@ -116,7 +116,7 @@ function function_4d18057(localclientnum) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x542b354b, Offset: 0xc50
 // Size: 0xfc
 function elem_storm_bolt_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -132,7 +132,7 @@ function elem_storm_bolt_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf60246dd, Offset: 0xd58
 // Size: 0xa6
 function elem_storm_zap_ambient(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -145,7 +145,7 @@ function elem_storm_zap_ambient(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x44f5a072, Offset: 0xe08
 // Size: 0x25e
 function elem_storm_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

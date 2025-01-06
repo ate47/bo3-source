@@ -1,16 +1,16 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #using_animtree("bouncing_betty");
 
 #namespace bouncingbetty;
 
 // Namespace bouncingbetty
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3073727, Offset: 0x2e0
 // Size: 0x144
 function init_shared(localclientnum) {
@@ -27,7 +27,7 @@ function init_shared(localclientnum) {
 }
 
 // Namespace bouncingbetty
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4670da60, Offset: 0x430
 // Size: 0xc6
 function bouncingbetty_state_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -47,7 +47,7 @@ function bouncingbetty_state_change(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace bouncingbetty
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x98d16b11, Offset: 0x500
 // Size: 0x6c
 function bouncingbetty_deploying(localclientnum) {
@@ -57,7 +57,7 @@ function bouncingbetty_deploying(localclientnum) {
 }
 
 // Namespace bouncingbetty
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x72050a31, Offset: 0x578
 // Size: 0x134
 function bouncingbetty_detonating(localclientnum) {
@@ -72,7 +72,7 @@ function bouncingbetty_detonating(localclientnum) {
 }
 
 // Namespace bouncingbetty
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9a05c0dd, Offset: 0x6b8
 // Size: 0x1ce
 function watchforexplosionnotetracks(localclientnum, up, forward) {

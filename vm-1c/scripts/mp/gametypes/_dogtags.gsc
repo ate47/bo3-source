@@ -1,22 +1,22 @@
-#using scripts/mp/gametypes/_spectating;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/objpoints_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_spectating;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/objpoints_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace dogtags;
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbb7d614, Offset: 0x3d0
 // Size: 0x30
 function init() {
@@ -25,7 +25,7 @@ function init() {
 }
 
 // Namespace dogtags
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x47172174, Offset: 0x408
 // Size: 0xa42
 function spawn_dog_tag(victim, attacker, on_use_function, objectives_for_attacker_and_victim_only) {
@@ -92,7 +92,7 @@ function spawn_dog_tag(victim, attacker, on_use_function, objectives_for_attacke
 }
 
 // Namespace dogtags
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8317dfcd, Offset: 0xe58
 // Size: 0xcc
 function show_to_team(gameobject, show_team) {
@@ -104,7 +104,7 @@ function show_to_team(gameobject, show_team) {
 }
 
 // Namespace dogtags
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4dab9581, Offset: 0xf30
 // Size: 0xcc
 function show_to_enemy_teams(gameobject, friend_team) {
@@ -116,7 +116,7 @@ function show_to_enemy_teams(gameobject, friend_team) {
 }
 
 // Namespace dogtags
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x51914709, Offset: 0x1008
 // Size: 0x224
 function onuse(player) {
@@ -154,7 +154,7 @@ function onuse(player) {
 }
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde9ef2c0, Offset: 0x1238
 // Size: 0x19a
 function reset_tags() {
@@ -175,7 +175,7 @@ function reset_tags() {
 }
 
 // Namespace dogtags
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x951d25cb, Offset: 0x13e0
 // Size: 0x24
 function onpickup(event) {
@@ -183,7 +183,7 @@ function onpickup(event) {
 }
 
 // Namespace dogtags
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x10b97abe, Offset: 0x1410
 // Size: 0x23c
 function clear_on_victim_disconnect(victim) {
@@ -210,7 +210,7 @@ function clear_on_victim_disconnect(victim) {
 }
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa88f5ec8, Offset: 0x1658
 // Size: 0xd8
 function on_spawn_player() {
@@ -227,7 +227,7 @@ function on_spawn_player() {
 }
 
 // Namespace dogtags
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c0599af, Offset: 0x1738
 // Size: 0x68
 function team_updater(tags) {
@@ -261,7 +261,7 @@ function time_out(victim) {
 }
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5507278d, Offset: 0x18f0
 // Size: 0x210
 function bounce() {
@@ -284,7 +284,7 @@ function bounce() {
 }
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2c8d1e11, Offset: 0x1b08
 // Size: 0x2c
 function checkallowspectating() {
@@ -294,7 +294,7 @@ function checkallowspectating() {
 }
 
 // Namespace dogtags
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0x4d66e993, Offset: 0x1b40
 // Size: 0x158
 function should_spawn_tags(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -317,7 +317,7 @@ function should_spawn_tags(einflictor, attacker, idamage, smeansofdeath, sweapon
 }
 
 // Namespace dogtags
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa7000a0e, Offset: 0x1ca0
 // Size: 0x94
 function onusedogtag(player) {
@@ -333,7 +333,7 @@ function onusedogtag(player) {
 }
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6782a6f, Offset: 0x1d40
 // Size: 0x1c
 function dt_respawn() {
@@ -341,7 +341,7 @@ function dt_respawn() {
 }
 
 // Namespace dogtags
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81ed23b3, Offset: 0x1d68
 // Size: 0x72
 function waittillcanspawnclient() {

@@ -1,5 +1,5 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace mp_spire_amb;
 

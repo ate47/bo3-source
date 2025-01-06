@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_prototype_achievements;
 
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb19a3f5c, Offset: 0x2b0
 // Size: 0x5c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2747d07e, Offset: 0x318
 // Size: 0xac
 function achievement_sound_func(var_43e4662) {
@@ -48,7 +48,7 @@ function achievement_sound_func(var_43e4662) {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5af04496, Offset: 0x3d0
 // Size: 0xac
 function onplayerconnect() {
@@ -62,7 +62,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcbca027d, Offset: 0x488
 // Size: 0x84
 function function_2eb61ef5() {
@@ -81,7 +81,7 @@ function function_2eb61ef5() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4dbb7beb, Offset: 0x518
 // Size: 0x7a
 function function_94fa04f0() {
@@ -100,7 +100,7 @@ function function_94fa04f0() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3e06af20, Offset: 0x5a0
 // Size: 0x7a
 function function_a634891() {
@@ -117,7 +117,7 @@ function function_a634891() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6079b6bd, Offset: 0x628
 // Size: 0x50
 function function_a2ee1b6c() {
@@ -131,7 +131,7 @@ function function_a2ee1b6c() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2777e7f6, Offset: 0x680
 // Size: 0x40
 function function_47ae7759() {
@@ -143,7 +143,7 @@ function function_47ae7759() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd401f07, Offset: 0x6c8
 // Size: 0x74
 function function_2a1b645a() {
@@ -161,7 +161,7 @@ function function_2a1b645a() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb6b9e5ad, Offset: 0x748
 // Size: 0x74
 function function_b44fefa1() {
@@ -197,7 +197,7 @@ function function_f67810a2() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc9aecdaa, Offset: 0x850
 // Size: 0x76
 function function_25062f55() {
@@ -214,7 +214,7 @@ function function_25062f55() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59dfc8b4, Offset: 0x8d0
 // Size: 0x8a
 function function_32909149() {
@@ -231,7 +231,7 @@ function function_32909149() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57cfa358, Offset: 0x968
 // Size: 0x62
 function function_f8c272e8() {
@@ -246,7 +246,7 @@ function function_f8c272e8() {
 }
 
 // Namespace zm_prototype_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x520290a2, Offset: 0x9d8
 // Size: 0x2dc
 function function_1abfde35(e_attacker) {

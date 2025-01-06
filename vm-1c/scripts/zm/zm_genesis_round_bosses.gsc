@@ -1,40 +1,40 @@
-#using scripts/zm/zm_genesis_wasp;
-#using scripts/zm/zm_genesis_vo;
-#using scripts/zm/zm_genesis_util;
-#using scripts/zm/zm_genesis_spiders;
-#using scripts/zm/zm_genesis_shadowman;
-#using scripts/zm/zm_genesis_power;
-#using scripts/zm/zm_genesis_mechz;
-#using scripts/zm/zm_genesis_keeper;
-#using scripts/zm/zm_genesis_fx;
-#using scripts/zm/zm_genesis_cleanup_mgr;
-#using scripts/zm/zm_genesis_apothicon_fury;
-#using scripts/zm/zm_genesis;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_shadow_zombie;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_light_zombie;
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/zm/_zm_genesis_spiders;
-#using scripts/zm/_zm_ai_mechz;
-#using scripts/zm/_zm_ai_margwa_no_idgun;
-#using scripts/zm/_zm_ai_margwa_elemental;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/margwa;
 #using scripts/shared/ai/systems/behavior_tree_utility;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/margwa;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_ai_margwa_elemental;
+#using scripts/zm/_zm_ai_margwa_no_idgun;
+#using scripts/zm/_zm_ai_mechz;
+#using scripts/zm/_zm_elemental_zombies;
+#using scripts/zm/_zm_genesis_spiders;
+#using scripts/zm/_zm_light_zombie;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_shadow_zombie;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_genesis;
+#using scripts/zm/zm_genesis_apothicon_fury;
+#using scripts/zm/zm_genesis_cleanup_mgr;
+#using scripts/zm/zm_genesis_fx;
+#using scripts/zm/zm_genesis_keeper;
+#using scripts/zm/zm_genesis_mechz;
+#using scripts/zm/zm_genesis_power;
+#using scripts/zm/zm_genesis_shadowman;
+#using scripts/zm/zm_genesis_spiders;
+#using scripts/zm/zm_genesis_util;
+#using scripts/zm/zm_genesis_vo;
+#using scripts/zm/zm_genesis_wasp;
 
 #namespace zm_genesis_round_bosses;
 
@@ -47,7 +47,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_round_bosses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0124328, Offset: 0x5b8
 // Size: 0x3c
 function __init__() {
@@ -56,7 +56,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_round_bosses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81f48886, Offset: 0x600
 // Size: 0xf0
 function function_755b4548() {
@@ -78,7 +78,7 @@ function function_755b4548() {
 }
 
 // Namespace zm_genesis_round_bosses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e4a799, Offset: 0x6f8
 // Size: 0x36e
 function function_c68599fd() {
@@ -151,7 +151,7 @@ function function_c68599fd() {
 }
 
 // Namespace zm_genesis_round_bosses
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x27a5f2dc, Offset: 0xa70
 // Size: 0x244
 function spawn_boss(str_enemy, v_pos) {
@@ -176,9 +176,9 @@ function spawn_boss(str_enemy, v_pos) {
         }
     } else if (str_enemy == "mechz") {
         if (isdefined(s_loc.script_string) && s_loc.script_string == "exterior") {
-            e_boss = namespace_ef567265::function_53c37648(s_loc, 1);
+            e_boss = zm_ai_mechz::function_53c37648(s_loc, 1);
         } else {
-            e_boss = namespace_ef567265::function_53c37648(s_loc, 0);
+            e_boss = zm_ai_mechz::function_53c37648(s_loc, 0);
         }
     }
     if (!isdefined(e_boss.maxhealth)) {
@@ -192,7 +192,7 @@ function spawn_boss(str_enemy, v_pos) {
 }
 
 // Namespace zm_genesis_round_bosses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2cb723a, Offset: 0xcc0
 // Size: 0x1ba
 function function_830cdf99() {
@@ -222,7 +222,7 @@ function function_830cdf99() {
 }
 
 // Namespace zm_genesis_round_bosses
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x814b8784, Offset: 0xe88
 // Size: 0x2e
 function function_26f9f957(var_9c967ca3, e_attacker) {

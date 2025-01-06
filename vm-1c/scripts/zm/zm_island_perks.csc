@@ -1,28 +1,28 @@
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_perk_widows_wine;
-#using scripts/zm/_zm_perk_deadshot;
-#using scripts/zm/_zm_perk_electric_cherry;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_filter;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_filter;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
+#using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_electric_cherry;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_perk_widows_wine;
+#using scripts/zm/_zm_perks;
 
 #namespace zm_island_perks;
 
 // Namespace zm_island_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93a98cde, Offset: 0x408
 // Size: 0x1b4
 function init() {
@@ -35,7 +35,7 @@ function init() {
 }
 
 // Namespace zm_island_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc551649f, Offset: 0x5c8
 // Size: 0x9c
 function perk_light_speed_cola(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,7 +50,7 @@ function perk_light_speed_cola(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_island_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa140f3a3, Offset: 0x670
 // Size: 0x9c
 function perk_light_doubletap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -65,7 +65,7 @@ function perk_light_doubletap(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd38c1140, Offset: 0x718
 // Size: 0x9c
 function perk_light_quick_revive(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -80,7 +80,7 @@ function perk_light_quick_revive(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_island_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbaaf4844, Offset: 0x7c0
 // Size: 0x9c
 function perk_light_staminup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -95,7 +95,7 @@ function perk_light_staminup(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_island_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x92ce3ed7, Offset: 0x868
 // Size: 0x9c
 function perk_light_juggernog(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -110,7 +110,7 @@ function perk_light_juggernog(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xeb8f6421, Offset: 0x910
 // Size: 0x7c
 function perk_light_mule_kick(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

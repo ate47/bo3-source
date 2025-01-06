@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/music_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_audio_zhd;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8bf5f3cb, Offset: 0x768
 // Size: 0x114
 function __init__() {
@@ -48,7 +48,7 @@ function __init__() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c5df029, Offset: 0x888
 // Size: 0x114
 function snd_zhdegg_activate() {
@@ -75,7 +75,7 @@ function snd_zhdegg_activate() {
 }
 
 // Namespace zm_audio_zhd
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc36e9b5f, Offset: 0x9a8
 // Size: 0x24c
 function function_513f51e1(restart) {
@@ -106,7 +106,7 @@ function function_513f51e1(restart) {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa51385ea, Offset: 0xc00
 // Size: 0x114
 function function_cf1b154() {
@@ -129,7 +129,7 @@ function function_cf1b154() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52b033e6, Offset: 0xd20
 // Size: 0x19a
 function function_3cf3ba48() {
@@ -154,7 +154,7 @@ function function_3cf3ba48() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x70b5d7ba, Offset: 0xec8
 // Size: 0x66
 function function_9d55fd08() {
@@ -169,7 +169,7 @@ function function_9d55fd08() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xedf5438d, Offset: 0xf38
 // Size: 0x1a4
 function function_2fdaabf3() {
@@ -177,7 +177,7 @@ function function_2fdaabf3() {
     self.var_ac086ffb setcandamage(1);
     self.var_ac086ffb.health = 1000000;
     while (true) {
-        damage, attacker, dir, loc, type, model, tag, part, weapon, flags = self.var_ac086ffb waittill(#"damage");
+        self.var_ac086ffb waittill(#"damage", damage, attacker, dir, loc, type, model, tag, part, weapon, flags);
         if (isdefined(level.var_252a085b) && level.var_252a085b) {
             continue;
         }
@@ -197,7 +197,7 @@ function function_2fdaabf3() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f53d85, Offset: 0x10e8
 // Size: 0x52
 function function_a9a34039() {
@@ -211,7 +211,7 @@ function function_a9a34039() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa2ae58c, Offset: 0x1148
 // Size: 0x554
 function function_5b2770da() {
@@ -255,7 +255,7 @@ function function_5b2770da() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b686ba6, Offset: 0x16a8
 // Size: 0xac
 function function_e753d4f() {
@@ -272,7 +272,7 @@ function function_e753d4f() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7aed8638, Offset: 0x1760
 // Size: 0x174
 function function_929c4dba() {
@@ -283,7 +283,7 @@ function function_929c4dba() {
         e_origin thread zm_utility::print3d_ent("<dev string:x2a>", (1, 1, 0), 3, (0, 0, 24));
     #/
     while (!(isdefined(e_origin.b_activated) && e_origin.b_activated)) {
-        who = e_origin waittill(#"trigger_activated");
+        e_origin waittill(#"trigger_activated", who);
         if (!function_8090042c()) {
             continue;
         }
@@ -298,7 +298,7 @@ function function_929c4dba() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc1d08ec, Offset: 0x18e0
 // Size: 0x4e
 function function_8090042c() {
@@ -309,7 +309,7 @@ function function_8090042c() {
 }
 
 // Namespace zm_audio_zhd
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3e61f717, Offset: 0x1938
 // Size: 0x84
 function function_bd90259b(e_player) {
@@ -323,11 +323,11 @@ function function_bd90259b(e_player) {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x795419, Offset: 0x19c8
 // Size: 0xc4
 function snd_monty_radio() {
-    player = level waittill(#"connected");
+    level waittill(#"connected", player);
     s_radio = struct::get("snd_monty_radio", "targetname");
     if (!isdefined(s_radio)) {
         return;
@@ -339,7 +339,7 @@ function snd_monty_radio() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8eb30a4c, Offset: 0x1a98
 // Size: 0x622
 function setup_personality_character_exerts() {

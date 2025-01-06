@@ -1,10 +1,10 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_f25bd8c8;
 
@@ -121,7 +121,7 @@ function function_ad15914d() {
 // Size: 0x32
 function function_6427aa57() {
     self endon(#"death");
-    level waittill(#"hash_1d7591db");
+    level waittill(#"sarah_defeated");
     if (self.var_6385535e) {
         function_5a97e5bd("ch04_theia_battle_no_damage_completed", self);
     }
@@ -132,9 +132,9 @@ function function_6427aa57() {
 // Checksum 0x33d22381, Offset: 0xa30
 // Size: 0x3e
 function function_9d23c86c() {
-    level endon(#"hash_1d7591db");
+    level endon(#"sarah_defeated");
     self endon(#"death");
-    damage, attacker = self waittill(#"damage");
+    self waittill(#"damage", damage, attacker);
     if (isdefined(attacker)) {
         self.var_6385535e = 0;
     }
@@ -355,7 +355,7 @@ function function_d9aaed7d() {
     self endon(#"hash_f07948a5");
     self endon(#"ch11_wolf_bite_granted");
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (attacker.archetype === "direwolf") {
             if (isplayer(self)) {
                 self.var_1bece4df = 0;
@@ -498,7 +498,7 @@ function function_7eac16b1() {
 // Checksum 0x8d161564, Offset: 0x16f8
 // Size: 0x72
 function function_98c5c5a1(params) {
-    if (self.archetype === "zombie" && isplayer(params.eattacker) && self.var_e069c441 === 1) {
+    if (self.archetype === "zombie" && isplayer(params.eattacker) && self.on_fire === 1) {
         params.eattacker.var_abed6924 += 1;
     }
 }

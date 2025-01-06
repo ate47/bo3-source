@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/util_shared;
 
 #namespace mp_veiled_heyday_fx;
 
 // Namespace mp_veiled_heyday_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0a3f37f, Offset: 0x118
 // Size: 0x24
 function main() {
@@ -14,7 +14,7 @@ function main() {
 }
 
 // Namespace mp_veiled_heyday_fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x480cae72, Offset: 0x148
 // Size: 0x24
 function on_player_spawned(localclientnum) {
@@ -22,7 +22,7 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace mp_veiled_heyday_fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa7ca0f6, Offset: 0x178
 // Size: 0xea
 function function_ac25f220(localclientnum) {
@@ -34,7 +34,7 @@ function function_ac25f220(localclientnum) {
 }
 
 // Namespace mp_veiled_heyday_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbd02b06a, Offset: 0x270
 // Size: 0x160
 function function_549815fe(localclientnum, localplayer) {
@@ -43,7 +43,7 @@ function function_549815fe(localclientnum, localplayer) {
     string = isdefined(self.script_exploder_radiant) ? self.script_exploder_radiant : self.script_stop_exploder_radiant;
     while (true) {
         while (true) {
-            client = self waittill(#"trigger");
+            self waittill(#"trigger", client);
             if (client == localplayer) {
                 break;
             }
@@ -61,7 +61,7 @@ function function_549815fe(localclientnum, localplayer) {
 }
 
 // Namespace mp_veiled_heyday_fx
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xcc1a0fee, Offset: 0x3d8
 // Size: 0x54
 function function_a2845863(localclientnum, localplayer, string) {

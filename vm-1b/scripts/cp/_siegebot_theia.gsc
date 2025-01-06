@@ -1,24 +1,24 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/vehicles/_siegebot;
-#using scripts/shared/weapons/_spike_charge_siegebot;
-#using scripts/shared/turret_shared;
 #using scripts/shared/ai/blackboard_vehicle;
 #using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/gameskill_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_death_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameskill_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_siegebot;
+#using scripts/shared/weapons/_spike_charge_siegebot;
 
 #using_animtree("generic");
 
@@ -284,7 +284,7 @@ function function_5a6e3cac() {
     }
     self.jump = spawnstruct();
     self.jump.linkent = spawn("script_origin", self.origin);
-    self.jump.var_425f84b1 = 0;
+    self.jump.in_air = 0;
     self.jump.var_6829bbf7 = struct::get_array("balcony_point");
     self.jump.groundpoints = struct::get_array("ground_point");
     self.arena_center = struct::get("arena_center").origin;
@@ -435,7 +435,7 @@ function function_911f1aa5(params) {
     self.jump.linkent.angles = self.angles;
     wait 0.05;
     self linkto(self.jump.linkent);
-    self.jump.var_425f84b1 = 1;
+    self.jump.in_air = 1;
     if (false) {
         /#
             debugstar(goal, 60000, (0, 1, 0));
@@ -455,9 +455,9 @@ function function_911f1aa5(params) {
     var_e6651399 = forward * params.var_bc1a4954 * mapfloat(500, 2000, 0.8, 1, totaldistance);
     velocity = var_f1e5d209 + var_e6651399;
     self asmrequestsubstate("inair@jump");
-    self waittill(#"hash_34a180dd");
+    self waittill(#"engine_startup");
     self vehicle::impact_fx(self.settings.var_2ba72ce7);
-    self waittill(#"hash_f1a0ad10");
+    self waittill(#"leave_ground");
     self vehicle::impact_fx(self.settings.var_f209c6c6);
     var_d3ef7ffb = gettime();
     while (true) {
@@ -490,7 +490,7 @@ function function_911f1aa5(params) {
         var_55f62e61 = self.jump.linkent.origin[2];
         self.jump.linkent.origin += velocity;
         if (var_588fc985 > 0 && (var_55f62e61 > var_f44f4d9 || self.jump.linkent.origin[2] < var_f44f4d9 && velocity[2] < 0)) {
-            self notify(#"hash_7c145c4b");
+            self notify(#"start_landing");
             self asmrequestsubstate(params.var_fb532e19);
         }
         if (false) {
@@ -501,7 +501,7 @@ function function_911f1aa5(params) {
         wait 0.05;
     }
     self.jump.linkent.origin = (self.jump.linkent.origin[0], self.jump.linkent.origin[1], 0) + (0, 0, goal[2]);
-    self notify(#"hash_12789372");
+    self notify(#"land_crush");
     foreach (player in level.players) {
         player.var_31d70948 = player.takedamage;
         player.takedamage = 0;
@@ -531,8 +531,8 @@ function function_911f1aa5(params) {
     wait 0.3;
     self unlink();
     wait 0.05;
-    self.jump.var_425f84b1 = 0;
-    self notify(#"hash_48269e0e");
+    self.jump.in_air = 0;
+    self notify(#"jump_finished");
     vehicle_ai::cooldown("jump", 11);
     vehicle_ai::cooldown("ignore_player", 12);
     self vehicle_ai::waittill_asm_complete(params.var_fb532e19, 3);
@@ -579,12 +579,12 @@ function function_5151f00b(params) {
         var_35e1c37a = self.damagelevel * 0.15;
         if (randomfloat(1) < var_35e1c37a) {
             function_5e2157f5();
-            level notify(#"hash_38559d8c");
+            level notify(#"theia_finished_platform_attack");
             self vehicle_ai::evaluate_connections();
             wait 0.8;
         }
         function_6909a1a4();
-        level notify(#"hash_38559d8c");
+        level notify(#"theia_finished_platform_attack");
         self vehicle_ai::evaluate_connections();
         if (randomfloat(1) > 0.4 && self.var_12c7e390 !== 1) {
             wait 0.2;
@@ -592,7 +592,7 @@ function function_5151f00b(params) {
         }
         wait 0.8;
         function_42fa8354();
-        level notify(#"hash_38559d8c");
+        level notify(#"theia_finished_platform_attack");
         self vehicle_ai::evaluate_connections();
         wait 0.8;
     }
@@ -604,9 +604,9 @@ function function_5151f00b(params) {
 // Size: 0x21e
 function function_e5af3b61() {
     step_size = -76;
-    var_e2d09319 = anglestoright(self.angles);
+    right_dir = anglestoright(self.angles);
     start = self.origin + (0, 0, 10);
-    tracedir = var_e2d09319;
+    tracedir = right_dir;
     var_11b475f9 = "juke_r@movement";
     var_b274fc28 = "juke_l@movement";
     if (math::cointoss()) {
@@ -986,8 +986,8 @@ function function_30ecb08(delay) {
     self endon(#"death");
     wait delay;
     for (i = 0; i < 3 && i < self.var_b66afa28.size; i++) {
-        var_41ae2fa1 = self.var_b66afa28[i];
-        var_41ae2fa1 function_d9cdf83c();
+        spike = self.var_b66afa28[i];
+        spike function_d9cdf83c();
         wait 0.15;
     }
 }
@@ -1111,26 +1111,26 @@ function function_76333d5f() {
             var_810d699b = math::clamp(disttoenemy * 0.35, 100, 350);
             points = generatepointsaroundcenter(enemy.origin + (0, 0, var_810d699b), 300, 80, 50);
             var_3e2886cb = mapfloat(300, 700, 0.1, 1, disttoenemy);
-            var_41ae2fa1 = self.var_b66afa28[0];
-            var_41ae2fa1.origin = points[0];
-            self function_9af49228(var_41ae2fa1, (0, 0, 0), 1);
+            spike = self.var_b66afa28[0];
+            spike.origin = points[0];
+            self function_9af49228(spike, (0, 0, 0), 1);
             var_7aa511a9 = gettime();
             while (!self.gunner2ontarget && vehicle_ai::timesince(var_7aa511a9) < 2) {
                 wait 0.4;
             }
             self thread function_30ecb08(var_3e2886cb);
             for (i = 0; i < 3 && i < self.var_b66afa28.size && i < points.size; i++) {
-                var_41ae2fa1 = self.var_b66afa28[i];
-                var_41ae2fa1.origin = points[i];
-                self function_9af49228(var_41ae2fa1, (0, 0, 0), 1);
+                spike = self.var_b66afa28[i];
+                spike.origin = points[i];
+                self function_9af49228(spike, (0, 0, 0), 1);
                 self fireweapon(2, enemy);
                 vehicle_ai::cooldown("spike_on_ground", randomfloatrange(6, 10));
                 if (false) {
                     /#
-                        debugstar(var_41ae2fa1.origin, -56, (1, 0, 0));
+                        debugstar(spike.origin, -56, (1, 0, 0));
                     #/
                     /#
-                        circle(var_41ae2fa1.origin, -106, (1, 0, 0), 0, 1, -56);
+                        circle(spike.origin, -106, (1, 0, 0), 0, 1, -56);
                     #/
                 }
                 wait 0.1;
@@ -1581,7 +1581,7 @@ function function_5e2157f5() {
     shootpos = self.origin + forward * -56 + (0, 0, 500);
     self asmrequestsubstate("javelin@stationary");
     self waittill(#"hash_91162229");
-    level notify(#"hash_380ae1f4", enemy);
+    level notify(#"theia_preparing_javelin_attack", enemy);
     current_weapon = self seatgetweapon(0);
     weapon = getweapon("siegebot_javelin_turret");
     self thread function_c73f719e(weapon);
@@ -1611,7 +1611,7 @@ function function_5e2157f5() {
 function function_c73f719e(projectile) {
     self endon(#"entityshutdown");
     self endon(#"death");
-    projectile = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", projectile);
     distance = 1400;
     alias = "prj_javelin_incoming";
     wait 3;
@@ -1679,12 +1679,12 @@ function function_ab984a0f() {
         wait randomfloatrange(0.05, 0.1);
     }
     if (false) {
-        foreach (var_41ae2fa1 in var_c07ddbf5) {
+        foreach (spike in var_c07ddbf5) {
             /#
-                debugstar(var_41ae2fa1.origin, -56, (1, 0, 0));
+                debugstar(spike.origin, -56, (1, 0, 0));
             #/
             /#
-                circle(var_41ae2fa1.origin, -106, (1, 0, 0), 0, 1, -56);
+                circle(spike.origin, -106, (1, 0, 0), 0, 1, -56);
             #/
         }
     }
@@ -1773,15 +1773,15 @@ function function_6909a1a4() {
     targetpoints = generatepointsaroundcenter(targetorigin, 1200, 120);
     var_e4ca448a = 0;
     for (i = 0; i < self.var_b66afa28.size && i < targetpoints.size; i++) {
-        var_41ae2fa1 = self.var_b66afa28[i];
-        var_41ae2fa1.origin = targetpoints[i];
+        spike = self.var_b66afa28[i];
+        spike.origin = targetpoints[i];
         var_e4ca448a++;
     }
     self asmrequestsubstate("arm_rocket@stationary");
     self waittill(#"hash_e5fb1439");
     for (i = 0; i < var_e4ca448a; i++) {
-        var_41ae2fa1 = self.var_b66afa28[i];
-        self function_9af49228(var_41ae2fa1, (0, 0, 0), 1);
+        spike = self.var_b66afa28[i];
+        self function_9af49228(spike, (0, 0, 0), 1);
         self fireweapon(2);
         wait 0.05;
     }

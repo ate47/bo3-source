@@ -1,23 +1,23 @@
-#using scripts/zm/zm_castle_vo;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/exploder_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/shared/math_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/hud_util_shared;
 #using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_castle_vo;
 
 #namespace zm_castle_flingers;
 
@@ -77,7 +77,7 @@ function function_5ecbd7cb() {
     while (true) {
         var_845e036a setmodel("p7_zm_ctl_jumpsphere_combined_snow_blue");
         var_845e036a thread function_cc3a384b(1);
-        e_who = s_unitrigger_stub waittill(#"trigger");
+        s_unitrigger_stub waittill(#"trigger", e_who);
         if (level flag::get("rocket_firing") && s_unitrigger_stub.in_zone === "zone_rooftop") {
             continue;
         }
@@ -179,7 +179,7 @@ function function_c54cd556() {
     self endon(#"kill_trigger");
     self.stub thread function_c1947ff7();
     while (true) {
-        var_4161ad80 = self waittill(#"trigger");
+        self waittill(#"trigger", var_4161ad80);
         self.stub notify(#"trigger", var_4161ad80);
     }
 }
@@ -304,7 +304,7 @@ function function_f7842163(var_ca34f349, v_fling, nd_start, var_173065cc, var_df
 // Checksum 0x23fce788, Offset: 0x1ab0
 // Size: 0x28
 function function_149a5187() {
-    self endon(#"hash_13bf4db7");
+    self endon(#"flinger_landed");
     level waittill(#"end_game");
     self.var_3048ac6d = 1;
 }
@@ -385,7 +385,7 @@ function function_e9d3c391(var_ca34f349, v_fling, nd_start, var_173065cc, var_df
         util::wait_network_frame();
         var_6a7beeb2 delete();
         self.is_flung = undefined;
-        self notify(#"hash_13bf4db7");
+        self notify(#"flinger_landed");
         var_413ea50f delete();
         self zm_utility::clear_streamer_hint();
         self thread function_d1736cb5();
@@ -473,7 +473,7 @@ function function_74d2bb99(nd_start) {
     self endon(#"reached_end_node");
     var_5f7e3f41 = nd_start;
     while (isdefined(var_5f7e3f41)) {
-        var_5f7e3f41 = self waittill(#"reached_node");
+        self waittill(#"reached_node", var_5f7e3f41);
         var_5576dc56 = var_5f7e3f41;
         var_5f7e3f41 = undefined;
         var_5f7e3f41 = getvehiclenode(var_5576dc56.target, "targetname");
@@ -703,7 +703,7 @@ function function_4029cf56() {
     self endon(#"kill_trigger");
     self.stub thread zm_unitrigger::run_visibility_function_for_all_triggers();
     while (true) {
-        var_4161ad80 = self waittill(#"trigger");
+        self waittill(#"trigger", var_4161ad80);
         self.stub notify(#"trigger", var_4161ad80);
     }
 }
@@ -726,7 +726,7 @@ function function_cc8f94df() {
     s_unitrigger_stub.prompt_and_visibility_func = &function_485001bf;
     zm_unitrigger::register_static_unitrigger(s_unitrigger_stub, &function_4029cf56);
     s_unitrigger_stub function_e2ae5aa6(%ZM_CASTLE_ENABLE_LANDING_PAD);
-    e_who = s_unitrigger_stub waittill(#"trigger");
+    s_unitrigger_stub waittill(#"trigger", e_who);
     var_1143aa58 playsound("evt_launchpad_on");
     if (level zm_utility::is_player_valid(e_who)) {
         playsoundatposition("vox_maxis_pad_pa_activate_0", e_who.origin);
@@ -745,7 +745,7 @@ function function_979004a() {
     level waittill(#"start_zombie_round_logic");
     var_7d3b9ef4 = getent("trig_115_lift", "targetname");
     while (true) {
-        e_player = var_7d3b9ef4 waittill(#"trigger");
+        var_7d3b9ef4 waittill(#"trigger", e_player);
         if (zm_utility::is_player_valid(e_player)) {
             e_player thread function_ab3112dc(var_7d3b9ef4);
         }

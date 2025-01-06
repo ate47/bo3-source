@@ -1,36 +1,36 @@
-#using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_vengeance_accolades;
+#using scripts/cp/cp_mi_sing_vengeance_sound;
 #using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/ai/archetype_warlord_interface;
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/animation_shared;
 #using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai_shared;
 #using scripts/shared/ai_sniper_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/shared/stealth;
-#using scripts/shared/stealth_vo;
 #using scripts/shared/stealth_aware;
 #using scripts/shared/stealth_status;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/audio_shared;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_628b256b;
 
@@ -767,7 +767,7 @@ function function_f1d8ca4c() {
     self setcandamage(1);
     self.health = 10;
     while (true) {
-        damage, attacker = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker);
         if (isdefined(attacker) && isplayer(attacker) && isdefined(damage)) {
             self.health = self.health - damage;
             if (self.health <= 0) {
@@ -973,7 +973,7 @@ function function_8f9d056c() {
     self endon(#"death");
     level endon(#"stealth_discovered");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (isplayer(player)) {
             self function_a1a65fdc(player);
         }

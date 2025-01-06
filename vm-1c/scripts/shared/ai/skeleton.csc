@@ -1,7 +1,7 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/ai/systems/gib;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace skeleton;
 
@@ -22,7 +22,7 @@ function autoexec precache() {
 }
 
 // Namespace skeleton
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x90eda43c, Offset: 0x188
 // Size: 0x64
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 #namespace zombieclientutils;
 
 // Namespace zombieclientutils
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcdfb6200, Offset: 0x1f8
 // Size: 0x184
 function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -53,7 +53,7 @@ function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap
 }
 
 // Namespace zombieclientutils
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x3ac2300a, Offset: 0x388
 // Size: 0xa6
 function private _gibcallback(localclientnum, entity, gibflag) {

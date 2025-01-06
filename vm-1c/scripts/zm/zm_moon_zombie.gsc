@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_weap_black_hole_bomb;
-#using scripts/zm/_zm_zonemgr;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/animation_state_machine_notetracks;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
 #using scripts/zm/_zm_laststand;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_weap_black_hole_bomb;
+#using scripts/zm/_zm_zonemgr;
 #using scripts/zm/zm_remaster_zombie;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_notetracks;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_moon_zombie;
 
@@ -34,7 +34,7 @@ function autoexec init() {
 }
 
 // Namespace zm_moon_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x5eb80163, Offset: 0x470
 // Size: 0xa4
 function private initzmbehaviorsandasm() {
@@ -99,7 +99,7 @@ function zodShouldMove(entity) {
 }
 
 // Namespace zm_moon_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xfc1ea588, Offset: 0x860
 // Size: 0x34
 function private function_7a726580() {
@@ -108,7 +108,7 @@ function private function_7a726580() {
 }
 
 // Namespace zm_moon_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x437a67e1, Offset: 0x8a0
 // Size: 0x2c
 function private function_2a29252b() {
@@ -117,7 +117,7 @@ function private function_2a29252b() {
 }
 
 // Namespace zm_moon_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb0447e76, Offset: 0x8d8
 // Size: 0x2e
 function function_3679b8f9(entity) {
@@ -125,7 +125,7 @@ function function_3679b8f9(entity) {
 }
 
 // Namespace zm_moon_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x35df044e, Offset: 0x910
 // Size: 0x2e
 function function_8defac52(entity) {
@@ -133,7 +133,7 @@ function function_8defac52(entity) {
 }
 
 // Namespace zm_moon_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x58c9938f, Offset: 0x948
 // Size: 0x2e
 function moonShouldMoveLowg(entity) {
@@ -141,7 +141,7 @@ function moonShouldMoveLowg(entity) {
 }
 
 // Namespace zm_moon_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x486b431e, Offset: 0x980
 // Size: 0xd4
 function function_2df3c740() {

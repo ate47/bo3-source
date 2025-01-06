@@ -3,7 +3,7 @@
 #namespace voice_prologue;
 
 // Namespace voice_prologue
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe44fc052, Offset: 0x4dd0
 // Size: 0x3324
 function init_voice() {

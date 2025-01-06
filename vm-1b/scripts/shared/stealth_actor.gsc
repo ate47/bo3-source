@@ -1,17 +1,17 @@
 #using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
 #using scripts/shared/flag_shared;
-#using scripts/shared/stealth_vo;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth_event;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_debug;
-#using scripts/shared/stealth_behavior;
-#using scripts/shared/stealth;
 #using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_behavior;
+#using scripts/shared/stealth_debug;
+#using scripts/shared/stealth_event;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_tagging;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_actor;
 
@@ -158,7 +158,7 @@ function function_39fb9593() {
     self thread function_517ba9d2();
     self thread function_56e538df();
     while (true) {
-        var_12131b3c = self waittill(#"hash_3dce0f1d");
+        self waittill(#"hash_3dce0f1d", var_12131b3c);
         if (!self enabled() || !isdefined(level.stealth) || !isdefined(level.stealth.seek)) {
             return;
         }
@@ -203,7 +203,7 @@ function function_517ba9d2() {
     self endon(#"hash_39fb9593");
     self endon(#"death");
     while (true) {
-        var_12131b3c = self waittill(#"awareness");
+        self waittill(#"awareness", var_12131b3c);
         self notify(#"hash_3dce0f1d", var_12131b3c);
     }
 }

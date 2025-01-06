@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_temple_achievement;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_temple_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce12fe37, Offset: 0x1e8
 // Size: 0x3c
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace zm_temple_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29faf7cc, Offset: 0x230
 // Size: 0x1c
 function onplayerconnect() {
@@ -32,7 +32,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_temple_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfad500d5, Offset: 0x258
 // Size: 0x4c
 function function_464ab62e() {
@@ -69,7 +69,7 @@ function function_7a21a2b2() {
 }
 
 // Namespace zm_temple_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8bcd3c81, Offset: 0x320
 // Size: 0x174
 function function_6c8ceb12() {

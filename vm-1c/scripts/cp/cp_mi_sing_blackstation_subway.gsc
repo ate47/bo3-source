@@ -1,30 +1,30 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_blackstation_police_station;
 #using scripts/cp/cp_mi_sing_blackstation_sound;
 #using scripts/cp/cp_mi_sing_blackstation_utility;
-#using scripts/cp/cp_mi_sing_blackstation_police_station;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/shared/ai_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_blackstation_subway;
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x550ec314, Offset: 0x760
 // Size: 0x284
 function function_822cae8a() {
@@ -54,7 +54,7 @@ function function_822cae8a() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97bdf95f, Offset: 0x9f0
 // Size: 0x7c
 function function_eb060258() {
@@ -65,7 +65,7 @@ function function_eb060258() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdaa60392, Offset: 0xa78
 // Size: 0xf4
 function function_27e6ca54() {
@@ -78,7 +78,7 @@ function function_27e6ca54() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f8773fb, Offset: 0xb78
 // Size: 0x24
 function function_62437267() {
@@ -86,7 +86,7 @@ function function_62437267() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x40491f38, Offset: 0xba8
 // Size: 0x3c
 function function_c7ea2242() {
@@ -95,7 +95,7 @@ function function_c7ea2242() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47f17581, Offset: 0xbf0
 // Size: 0x182
 function function_99f304f0() {
@@ -123,7 +123,7 @@ function function_99f304f0() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeff535e7, Offset: 0xd80
 // Size: 0x6c
 function function_d721f6c3() {
@@ -133,7 +133,7 @@ function function_d721f6c3() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x32e30d4, Offset: 0xdf8
 // Size: 0x5c
 function function_5c54db13() {
@@ -144,7 +144,7 @@ function function_5c54db13() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85de0b4d, Offset: 0xe60
 // Size: 0x4c
 function function_4ad8a5f1() {
@@ -154,7 +154,7 @@ function function_4ad8a5f1() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5371479c, Offset: 0xeb8
 // Size: 0x1f4
 function function_95e21012() {
@@ -177,7 +177,7 @@ function function_95e21012() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa520390d, Offset: 0x10b8
 // Size: 0x5c
 function function_561cae8a(a_ents) {
@@ -186,7 +186,7 @@ function function_561cae8a(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x47df79d8, Offset: 0x1120
 // Size: 0x20
 function function_5f8ce82c(a_ents) {
@@ -194,7 +194,7 @@ function function_5f8ce82c(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33e2b795, Offset: 0x1148
 // Size: 0x5c
 function function_9d32ab8e() {
@@ -204,7 +204,7 @@ function function_9d32ab8e() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4ffc240, Offset: 0x11b0
 // Size: 0x70
 function function_f9af1ae2() {
@@ -219,7 +219,7 @@ function function_f9af1ae2() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2b438832, Offset: 0x1228
 // Size: 0x1f4
 function function_70ff0b50() {
@@ -230,7 +230,7 @@ function function_70ff0b50() {
     e_corpse linkto(e_linkto);
     e_corpse thread scene::play("cin_bla_08_02_subway_vign_dead_body_scare", e_corpse);
     t_trigger = getent("trig_subway_scare", "targetname");
-    player = t_trigger waittill(#"trigger");
+    t_trigger waittill(#"trigger", player);
     playsoundatposition("mus_subway_scare", (0, 0, 0));
     level notify(#"hash_e5172ffd");
     level thread function_5ba79988(player);
@@ -242,7 +242,7 @@ function function_70ff0b50() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x83f5abe5, Offset: 0x1428
 // Size: 0x124
 function function_e3067a8b() {
@@ -251,7 +251,7 @@ function function_e3067a8b() {
     e_corpse = getent("subway_corpse_2", "targetname");
     level waittill(#"hash_e5172ffd");
     e_corpse endon(#"death");
-    player = t_trigger waittill(#"trigger");
+    t_trigger waittill(#"trigger", player);
     e_corpse movex(-80, 2);
     e_corpse rotatepitch(60, 5);
     e_corpse waittill(#"movedone");
@@ -259,7 +259,7 @@ function function_e3067a8b() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46210b46, Offset: 0x1558
 // Size: 0x114
 function function_bd040022() {
@@ -267,7 +267,7 @@ function function_bd040022() {
     t_trigger = getent("trig_subway_scare_3", "targetname");
     e_corpse = getent("subway_corpse_3", "targetname");
     e_corpse endon(#"death");
-    player = t_trigger waittill(#"trigger");
+    t_trigger waittill(#"trigger", player);
     e_corpse movez(-24, 0.75);
     e_corpse rotateroll(60, 5);
     e_corpse waittill(#"movedone");
@@ -275,7 +275,7 @@ function function_bd040022() {
 }
 
 // Namespace cp_mi_sing_blackstation_subway
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x57b50964, Offset: 0x1678
 // Size: 0x16
 function function_5ba79988(player) {

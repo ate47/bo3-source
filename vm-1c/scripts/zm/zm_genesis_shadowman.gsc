@@ -1,27 +1,27 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_zonemgr;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_pack_a_punch_util;
+#using scripts/zm/_zm_spawner;
 #using scripts/zm/_zm_unitrigger;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_pack_a_punch_util;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/craftables/_zm_craftables;
 
 #using_animtree("zm_genesis");
 
@@ -36,7 +36,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_shadowman
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a15fb5e, Offset: 0x490
 // Size: 0x6c
 function __init__() {
@@ -46,7 +46,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_shadowman
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x508
 // Size: 0x4
 function __main__() {
@@ -54,7 +54,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_shadowman
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x113788f1, Offset: 0x518
 // Size: 0x1cc
 function function_8888a532(var_5b35973a, var_d250bd20, var_2c1a0d8f, var_32a5629a) {

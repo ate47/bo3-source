@@ -1,23 +1,23 @@
-#using scripts/cp/doa/_doa_enemy_boss;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_player_challenge_room;
-#using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_fate;
-#using scripts/cp/doa/_doa_enemy;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_enemy_boss;
+#using scripts/cp/doa/_doa_fate;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_hazard;
 #using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_challenge_room;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/shared/math_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_3ca3c537;
 
@@ -1033,7 +1033,7 @@ function function_f64e4b70(specific) {
     level clientfield::set("numexits", level.doa.var_53d0f8a7.size);
     if (level.doa.var_53d0f8a7.size > 1) {
     }
-    var_43605624 = level waittill(#"exit_taken");
+    level waittill(#"exit_taken", var_43605624);
     level.doa.var_161fb2a1 = undefined;
     level.doa.var_94073ca5 = undefined;
     level notify(#"hash_b96c96ac");
@@ -1065,7 +1065,7 @@ function function_a8b0c139(trigger, objective_id) {
         blocker.origin -= (0, 0, 5000);
     }
     while (true) {
-        guy = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", guy);
         if (isdefined(guy) && !isplayer(guy)) {
             continue;
         }
@@ -1155,7 +1155,7 @@ function function_4586479a(var_57e102cb) {
             level.doa.teleporter.trigger thread namespace_49107f3a::function_a4d1f25e("<dev string:x179>", randomfloatrange(0.1, 1));
         }
     #/
-    player = level.doa.teleporter.trigger waittill(#"trigger");
+    level.doa.teleporter.trigger waittill(#"trigger", player);
     level notify(#"teleporter_triggered");
     level notify(#"hash_3b432f18");
     foreach (player in getplayers()) {

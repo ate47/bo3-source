@@ -1,45 +1,45 @@
-#using scripts/zm/zm_theater_teleporter;
-#using scripts/zm/zm_theater_fx;
-#using scripts/zm/zm_theater_ffotd;
-#using scripts/zm/zm_theater_amb;
-#using scripts/zm/_zm_audio_zhd;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_dogs;
+#using scripts/zm/_zm_ai_quad;
 #using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_trap_fire;
-#using scripts/zm/_zm_trap_electric;
-#using scripts/zm/_zm_weap_thundergun;
-#using scripts/zm/_zm_weap_cymbal_monkey;
-#using scripts/zm/_zm_weap_bouncingbetty;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_fire_sale;
-#using scripts/zm/_zm_powerup_carpenter;
-#using scripts/zm/_zm_powerup_double_points;
+#using scripts/zm/_zm_audio_zhd;
+#using scripts/zm/_zm_pack_a_punch;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
 #using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
 #using scripts/zm/_zm_perk_staminup;
 #using scripts/zm/_zm_perk_widows_wine;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_pack_a_punch;
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_powerup_carpenter;
+#using scripts/zm/_zm_powerup_double_points;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
 #using scripts/zm/_zm_sidequests;
-#using scripts/zm/_zm_ai_quad;
-#using scripts/zm/_zm_ai_dogs;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_trap_electric;
+#using scripts/zm/_zm_trap_fire;
+#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_weap_cymbal_monkey;
+#using scripts/zm/_zm_weap_thundergun;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_theater_amb;
+#using scripts/zm/zm_theater_ffotd;
+#using scripts/zm/zm_theater_fx;
+#using scripts/zm/zm_theater_teleporter;
 
 #namespace zm_theater;
 
@@ -53,7 +53,7 @@ function autoexec opt_in() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x795593a6, Offset: 0x948
 // Size: 0x22c
 function main() {
@@ -84,7 +84,7 @@ function main() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x248fcae, Offset: 0xb80
 // Size: 0xd4
 function function_6ac83719() {
@@ -98,7 +98,7 @@ function function_6ac83719() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5cc94bdc, Offset: 0xc60
 // Size: 0xe2
 function function_d87a7dcc() {
@@ -119,7 +119,7 @@ function function_d87a7dcc() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb0a4e944, Offset: 0xd50
 // Size: 0x24
 function include_weapons() {
@@ -127,7 +127,7 @@ function include_weapons() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18683985, Offset: 0xd80
 // Size: 0x9c
 function function_4362fcc1() {
@@ -137,7 +137,7 @@ function function_4362fcc1() {
 }
 
 // Namespace zm_theater
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x872138a, Offset: 0xe28
 // Size: 0x1a8
 function function_eff8a342(clientnum) {
@@ -176,7 +176,7 @@ function function_ac2087dd(clientnum, name) {
 }
 
 // Namespace zm_theater
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4351c4a7, Offset: 0x10d8
 // Size: 0x66
 function function_cd14d250(clientnum) {
@@ -187,7 +187,7 @@ function function_cd14d250(clientnum) {
 }
 
 // Namespace zm_theater
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa118788a, Offset: 0x1148
 // Size: 0xda
 function function_df3c225f(clientnum, period) {
@@ -206,7 +206,7 @@ function function_df3c225f(clientnum, period) {
 }
 
 // Namespace zm_theater
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xcb63c5, Offset: 0x1230
 // Size: 0x7c
 function function_e2275c1d(clientnum, var_307e89fe, play_fx) {
@@ -221,7 +221,7 @@ function function_e2275c1d(clientnum, var_307e89fe, play_fx) {
 }
 
 // Namespace zm_theater
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdc3fb92a, Offset: 0x12b8
 // Size: 0x84
 function function_e2daf77(clientnum, var_307e89fe, var_a5e484fd) {
@@ -236,7 +236,7 @@ function function_e2daf77(clientnum, var_307e89fe, var_a5e484fd) {
 }
 
 // Namespace zm_theater
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xea5b77c0, Offset: 0x1348
 // Size: 0x16c
 function function_5cd605a9(clientnum, state, oldstate) {
@@ -265,7 +265,7 @@ function function_5cd605a9(clientnum, state, oldstate) {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x735b9afc, Offset: 0x14c0
 // Size: 0xe0
 function function_3825d415() {
@@ -287,7 +287,7 @@ function function_3825d415() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd275f47, Offset: 0x15a8
 // Size: 0xbe
 function function_dcf14adc() {
@@ -302,7 +302,7 @@ function function_dcf14adc() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23d312ce, Offset: 0x1670
 // Size: 0xa4
 function function_7414b0df() {
@@ -320,7 +320,7 @@ function function_7414b0df() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x218c80ba, Offset: 0x1720
 // Size: 0xfc
 function register_clientfields() {
@@ -339,7 +339,7 @@ function function_ce6ee03b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe04babdf, Offset: 0x1870
 // Size: 0x3c
 function function_17e9c62f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -347,7 +347,7 @@ function function_17e9c62f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84187b56, Offset: 0x18b8
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -376,7 +376,7 @@ function startzmbspawnersoundloops() {
 }
 
 // Namespace zm_theater
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1cfd44db, Offset: 0x1a20
 // Size: 0x16c
 function soundloopthink() {

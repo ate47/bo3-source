@@ -1,10 +1,10 @@
+#using scripts/shared/ai/behavior_zombie_dog;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai/behavior_zombie_dog;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/ai_shared;
 
 #namespace namespace_46de4034;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace namespace_46de4034
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf11774c0, Offset: 0x260
 // Size: 0x1cc
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace namespace_46de4034
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x61639958, Offset: 0x438
 // Size: 0xe4
 function private function_722f5b6f() {

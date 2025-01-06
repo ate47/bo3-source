@@ -1,9 +1,9 @@
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/system_shared;
 #using scripts/cp/_util;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace _pda_hack;
 
@@ -111,7 +111,7 @@ class class_d86d3a6 {
         self.var_a2d77bbb sethintstring("");
         self.var_a2d77bbb sethintlowpriority(1);
         while (true) {
-            e_triggerer = self.var_a2d77bbb waittill(#"trigger");
+            self.var_a2d77bbb waittill(#"trigger", e_triggerer);
             if (!self.var_6ba6041f) {
                 continue;
             }

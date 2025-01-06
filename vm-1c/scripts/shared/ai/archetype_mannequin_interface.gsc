@@ -4,7 +4,7 @@
 #namespace mannequininterface;
 
 // Namespace mannequininterface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe164e6d, Offset: 0x100
 // Size: 0xac
 function registermannequininterfaceattributes() {

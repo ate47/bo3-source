@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/array_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_elemental_zombies;
 
 #namespace zm_light_zombie;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57c1363b, Offset: 0x330
 // Size: 0x24
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x40a47149, Offset: 0x360
 // Size: 0x56
 function init_fx() {
@@ -37,7 +37,7 @@ function init_fx() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd5b8fd5, Offset: 0x3c0
 // Size: 0xdc
 function register_clientfields() {
@@ -47,7 +47,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_light_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd3c8763, Offset: 0x4a8
 // Size: 0x98
 function function_9127e2f8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -57,7 +57,7 @@ function function_9127e2f8(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_light_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x19e4adf, Offset: 0x548
 // Size: 0x144
 function function_ad4789b4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -77,7 +77,7 @@ function function_ad4789b4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_light_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x577939d8, Offset: 0x698
 // Size: 0xac
 function function_98e8bc87(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

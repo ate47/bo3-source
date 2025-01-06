@@ -1,23 +1,23 @@
-#using scripts/shared/trigger_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
 #using scripts/codescripts/struct;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_util;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace lotus_util;
 
@@ -183,7 +183,7 @@ function function_bc5f7909(str_weapon) {
 function function_d2eba93d(var_1c023cce, str_weapon) {
     self endon(#"death");
     self thread function_951a5eb();
-    player = var_1c023cce waittill(#"trigger");
+    var_1c023cce waittill(#"trigger", player);
     w_weapon = getweapon(str_weapon);
     n_ammo_total = w_weapon.clipsize + w_weapon.maxammo;
     n_ammo = player getammocount(w_weapon);
@@ -326,7 +326,7 @@ function function_c7b0a169(var_e4075f18, var_1e2eebb8) {
 function function_e0fd159d(var_409f4c83, var_e4075f18, var_1e2eebb8) {
     self endon(#"death");
     self thread function_28a4f84e(var_e4075f18, var_1e2eebb8);
-    player = var_409f4c83 waittill(#"trigger");
+    var_409f4c83 waittill(#"trigger", player);
     w_minigun = getweapon("minigun_lotus");
     if (player hasweapon(w_minigun)) {
         self thread function_e0fd159d(var_409f4c83, var_e4075f18, var_1e2eebb8);
@@ -512,7 +512,7 @@ function function_5f5b1e5f() {
     self endon(#"death");
     var_b17e7b20 = getweapon("shotgun_pump_taser");
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!e_player hasweapon(var_b17e7b20)) {
             e_player giveweapon(var_b17e7b20);
         }
@@ -572,7 +572,7 @@ function function_cdf9cde7(var_e6795c86) {
     }
     b_destroyed = 0;
     while (!b_destroyed) {
-        n_damage, e_attacker, var_a3382de1, v_point, str_means_of_death, var_c4fe462, var_e64d69f9, var_c04aef90, w_weapon = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker, var_a3382de1, v_point, str_means_of_death, var_c4fe462, var_e64d69f9, var_c04aef90, w_weapon);
         if (str_means_of_death == "MOD_PROJECTILE" || e_attacker.vehicletype === "veh_bo3_mil_gunship_nrc" && str_means_of_death == "MOD_PROJECTILE_SPLASH") {
             self function_aabc561a(var_e6795c86);
             b_destroyed = 1;
@@ -858,7 +858,7 @@ function function_5da90c71(a_ents) {
 // Params 2, eflags: 0x0
 // Checksum 0x2a3797e2, Offset: 0x3410
 // Size: 0x141
-function function_36a6e271(var_a9fa335a, a_ai) {
+function function_36a6e271(should_delete, a_ai) {
     if (!isdefined(a_ai)) {
         a_ai = [];
     }
@@ -876,7 +876,7 @@ function function_36a6e271(var_a9fa335a, a_ai) {
             }
         }
         if (var_790129b == level.players.size && var_6c4dd462 == a_ai.size) {
-            if (isdefined(var_a9fa335a) && var_a9fa335a) {
+            if (isdefined(should_delete) && should_delete) {
                 self util::self_delete();
             }
             break;
@@ -1045,8 +1045,8 @@ function function_c7cc24f8(var_3c3195e7, var_18dfedfa, var_8556dacc, n_delay) {
             }
         }
         var_7d90afcb = 1;
-        foreach (var_3a90b959 in var_8060ff07) {
-            if (!isalive(var_3a90b959)) {
+        foreach (ai_actor in var_8060ff07) {
+            if (!isalive(ai_actor)) {
                 var_7d90afcb = 0;
             }
         }
@@ -1253,7 +1253,7 @@ function function_986d0100(var_9bed3c76, b_sprint) {
 // Params 5, eflags: 0x0
 // Checksum 0x47a63cc9, Offset: 0x46a8
 // Size: 0x25a
-function function_df89b05b(var_e5a5bdaf, var_177a81e1, str_flag, n_delay, str_endon) {
+function function_df89b05b(str_basename, var_177a81e1, str_flag, n_delay, str_endon) {
     if (!isdefined(var_177a81e1)) {
         var_177a81e1 = undefined;
     }
@@ -1266,12 +1266,12 @@ function function_df89b05b(var_e5a5bdaf, var_177a81e1, str_flag, n_delay, str_en
     if (isdefined(str_endon)) {
         self endon(str_endon);
     }
-    var_f6c5842 = spawner::simple_spawn_single(var_e5a5bdaf + "_robot", &function_986d0100, var_177a81e1);
-    var_3f3a4339 = spawner::simple_spawn_single(var_e5a5bdaf + "_human");
+    var_f6c5842 = spawner::simple_spawn_single(str_basename + "_robot", &function_986d0100, var_177a81e1);
+    var_3f3a4339 = spawner::simple_spawn_single(str_basename + "_human");
     var_3f3a4339 ai::set_ignoreme(1);
     var_f6c5842 ai::set_ignoreme(1);
     var_8060ff07 = array(var_f6c5842, var_3f3a4339);
-    s_scene = struct::get(var_e5a5bdaf, "targetname");
+    s_scene = struct::get(str_basename, "targetname");
     s_scene thread function_c37d1015(var_f6c5842, var_3f3a4339);
     if (function_91986f4b(var_8060ff07)) {
         s_scene scene::init(var_8060ff07);
@@ -1308,8 +1308,8 @@ function function_df89b05b(var_e5a5bdaf, var_177a81e1, str_flag, n_delay, str_en
 // Size: 0x83
 function function_91986f4b(var_8060ff07) {
     var_7d90afcb = 1;
-    foreach (var_3a90b959 in var_8060ff07) {
-        if (!isdefined(var_3a90b959) || !isalive(var_3a90b959)) {
+    foreach (ai_actor in var_8060ff07) {
+        if (!isdefined(ai_actor) || !isalive(ai_actor)) {
             var_7d90afcb = 0;
         }
     }
@@ -1349,8 +1349,8 @@ function function_e3b58585(var_8060ff07) {
     self endon(#"done");
     var_cde0e1c7 = 1;
     while (var_cde0e1c7) {
-        foreach (var_3a90b959 in var_8060ff07) {
-            if (!isalive(var_3a90b959)) {
+        foreach (ai_actor in var_8060ff07) {
+            if (!isalive(ai_actor)) {
                 var_cde0e1c7 = 0;
             }
         }
@@ -1472,7 +1472,7 @@ function function_3e9f1592() {
 // Size: 0x7a
 function function_5b57004a() {
     self endon(#"death");
-    n_damage, e_attacker = self waittill(#"damage");
+    self waittill(#"damage", n_damage, e_attacker);
     wait 0.05;
     self util::stop_magic_bullet_shield();
     self notsolid();
@@ -1612,7 +1612,7 @@ function function_a516f0de(str_targetname, var_f2ce48d2, var_9fd93917) {
         videostart(var_983e0b02);
         function_67212ab4(var_50042eb8, 1);
         var_522ce6c6++;
-        var_90bf3c0b = level waittill(#"hash_c087d549");
+        level waittill(#"hash_c087d549", var_90bf3c0b);
         if (var_90bf3c0b === 1 || var_522ce6c6 >= var_9fd93917) {
             videostop(var_983e0b02);
             function_67212ab4(var_50042eb8, 1);

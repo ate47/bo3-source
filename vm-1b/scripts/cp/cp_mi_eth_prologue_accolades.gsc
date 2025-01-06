@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_accolades;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_61c634f2;
 

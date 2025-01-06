@@ -1,14 +1,14 @@
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
 
 #namespace namespace_2e795785;
 
 /#
 
     // Namespace namespace_2e795785
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2218b5b3, Offset: 0x100
     // Size: 0x54
     function function_6f199738() {
@@ -18,7 +18,7 @@
     }
 
     // Namespace namespace_2e795785
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x9b383309, Offset: 0x160
     // Size: 0x758
     function function_17186302() {
@@ -62,7 +62,7 @@
     }
 
     // Namespace namespace_2e795785
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x81f50a35, Offset: 0x8c0
     // Size: 0x248
     function function_10489e30() {

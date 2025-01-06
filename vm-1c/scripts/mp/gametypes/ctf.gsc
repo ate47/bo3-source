@@ -1,27 +1,27 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/_util;
 #using scripts/mp/_challenges;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hud_message;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_defaults;
-#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/_util;
 #using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/rank_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_defaults;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_hud_message;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/teams/_teams;
 #using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/rank_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace ctf;
 
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x872e2a9e, Offset: 0xe00
 // Size: 0x34
 function __init__() {
@@ -89,7 +89,7 @@ function main() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd45d760, Offset: 0x1230
 // Size: 0x4a
 function onprecachegametype() {
@@ -99,7 +99,7 @@ function onprecachegametype() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ed468a2, Offset: 0x1288
 // Size: 0x654
 function onstartgametype() {
@@ -168,7 +168,7 @@ function onstartgametype() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7d332bf, Offset: 0x18e8
 // Size: 0x17c
 function shouldplayovertimeround() {
@@ -196,7 +196,7 @@ function shouldplayovertimeround() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa27fd30f, Offset: 0x1a70
 // Size: 0xb4
 function minutesandsecondsstring(milliseconds) {
@@ -210,7 +210,7 @@ function minutesandsecondsstring(milliseconds) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x13825688, Offset: 0x1b30
 // Size: 0x104
 function function_d6911678(team) {
@@ -230,7 +230,7 @@ function function_d6911678(team) {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf07c697, Offset: 0x1c40
 // Size: 0x4c
 function onroundswitch() {
@@ -242,7 +242,7 @@ function onroundswitch() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe4f19988, Offset: 0x1c98
 // Size: 0xa8
 function onendgame(winningteam) {
@@ -260,7 +260,7 @@ function onendgame(winningteam) {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x11eb461b, Offset: 0x1d48
 // Size: 0xa2
 function updateteamscorebyroundswon() {
@@ -272,7 +272,7 @@ function updateteamscorebyroundswon() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x975d7a77, Offset: 0x1df8
 // Size: 0xba
 function updateteamscorebyflagscaptured() {
@@ -285,7 +285,7 @@ function updateteamscorebyflagscaptured() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2e99e5d9, Offset: 0x1ec0
 // Size: 0x254
 function onroundendgame(winningteam) {
@@ -332,7 +332,7 @@ function onroundendgame(winningteam) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x55f5d8a9, Offset: 0x2120
 // Size: 0x5c
 function onspawnplayer(predictedspawn) {
@@ -343,7 +343,7 @@ function onspawnplayer(predictedspawn) {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82b24fc6, Offset: 0x2188
 // Size: 0x160
 function updategametypedvars() {
@@ -364,7 +364,7 @@ function updategametypedvars() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf59f2a7, Offset: 0x22f0
 // Size: 0x3ba
 function createflag(trigger) {
@@ -407,7 +407,7 @@ function createflag(trigger) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2ec9b328, Offset: 0x26b8
 // Size: 0x1e8
 function createflagzone(trigger) {
@@ -432,7 +432,7 @@ function createflagzone(trigger) {
 }
 
 // Namespace ctf
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xacb8e8c8, Offset: 0x28a8
 // Size: 0xd0
 function createflaghint(team, origin) {
@@ -447,7 +447,7 @@ function createflaghint(team, origin) {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x170796c3, Offset: 0x2980
 // Size: 0x304
 function ctf() {
@@ -490,7 +490,7 @@ function ctf() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x80a5c1a5, Offset: 0x2c90
 // Size: 0x6c
 function ctf_icon_hide() {
@@ -500,7 +500,7 @@ function ctf_icon_hide() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2a814fe7, Offset: 0x2d08
 // Size: 0xa6
 function removeinfluencers() {
@@ -519,7 +519,7 @@ function removeinfluencers() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7a5b67d2, Offset: 0x2db8
 // Size: 0x554
 function ondrop(player) {
@@ -585,7 +585,7 @@ function ondrop(player) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96f0e0ef, Offset: 0x3318
 // Size: 0x838
 function onpickup(player) {
@@ -698,7 +698,7 @@ function ishome() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa57cc9f9, Offset: 0x3be0
 // Size: 0x234
 function returnflag() {
@@ -723,7 +723,7 @@ function returnflag() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46b6711b, Offset: 0x3e20
 // Size: 0x4c4
 function oncapture(player) {
@@ -775,7 +775,7 @@ function oncapture(player) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x95ebc87, Offset: 0x42f0
 // Size: 0x4c
 function giveflagcapturexp(player) {
@@ -784,7 +784,7 @@ function giveflagcapturexp(player) {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e87b808, Offset: 0x4348
 // Size: 0x1bc
 function onreset() {
@@ -817,7 +817,7 @@ function getotherflag(flag) {
 }
 
 // Namespace ctf
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0x68a4c20b, Offset: 0x4558
 // Size: 0x884
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -926,7 +926,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa0ef27bb, Offset: 0x4de8
 // Size: 0x430
 function function_2c0ba61c() {
@@ -954,7 +954,7 @@ function function_2c0ba61c() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1aae35a1, Offset: 0x5220
 // Size: 0xa0
 function function_2afd3059(time) {
@@ -972,7 +972,7 @@ function function_2afd3059(time) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbbae85d9, Offset: 0x52c8
 // Size: 0x172
 function function_5badced4(time) {
@@ -994,7 +994,7 @@ function function_5badced4(time) {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce43d142, Offset: 0x5448
 // Size: 0x70
 function function_34d1619d() {
@@ -1004,7 +1004,7 @@ function function_34d1619d() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba78765b, Offset: 0x54c0
 // Size: 0x20
 function turn_on() {
@@ -1015,7 +1015,7 @@ function turn_on() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99c5b95e, Offset: 0x54e8
 // Size: 0x3c
 function turn_off() {
@@ -1023,7 +1023,7 @@ function turn_off() {
 }
 
 // Namespace ctf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9e455d93, Offset: 0x5530
 // Size: 0x144
 function update_hints() {
@@ -1045,7 +1045,7 @@ function update_hints() {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x655a3aac, Offset: 0x5680
 // Size: 0x54
 function claim_trigger(trigger) {
@@ -1056,7 +1056,7 @@ function claim_trigger(trigger) {
 }
 
 // Namespace ctf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7de0980e, Offset: 0x56e0
 // Size: 0xe4
 function createflagspawninfluencer(entityteam) {
@@ -1068,7 +1068,7 @@ function createflagspawninfluencer(entityteam) {
 }
 
 // Namespace ctf
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x4d9198f, Offset: 0x57d0
 // Size: 0x7e
 function ctf_getteamkillpenalty(einflictor, attacker, smeansofdeath, weapon) {
@@ -1080,7 +1080,7 @@ function ctf_getteamkillpenalty(einflictor, attacker, smeansofdeath, weapon) {
 }
 
 // Namespace ctf
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x78675d57, Offset: 0x5858
 // Size: 0x8a
 function ctf_getteamkillscore(einflictor, attacker, smeansofdeath, weapon) {

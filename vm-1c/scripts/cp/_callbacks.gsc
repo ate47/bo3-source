@@ -1,15 +1,15 @@
-#using scripts/cp/_challenges;
-#using scripts/shared/bots/bot_traversals;
-#using scripts/cp/gametypes/_hostmigration;
-#using scripts/cp/gametypes/_globallogic_vehicle;
-#using scripts/cp/gametypes/_globallogic_player;
-#using scripts/cp/gametypes/_globallogic_actor;
-#using scripts/cp/gametypes/_globallogic;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/ai/systems/blackboard;
 #using scripts/codescripts/struct;
+#using scripts/cp/_challenges;
+#using scripts/cp/gametypes/_globallogic;
+#using scripts/cp/gametypes/_globallogic_actor;
+#using scripts/cp/gametypes/_globallogic_player;
+#using scripts/cp/gametypes/_globallogic_vehicle;
+#using scripts/cp/gametypes/_hostmigration;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/audio_shared;
+#using scripts/shared/bots/bot_traversals;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace callback;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfdd26222, Offset: 0x280
 // Size: 0x14
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb374937, Offset: 0x2a0
 // Size: 0x20c
 function set_default_callbacks() {

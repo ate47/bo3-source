@@ -1,8 +1,8 @@
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/weapons/_weaponobjects;
 #using scripts/shared/ai/systems/shared;
-#using scripts/shared/throttle_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/throttle_shared;
+#using scripts/shared/weapons/_weaponobjects;
+#using scripts/shared/weapons/_weapons;
 
 #namespace ammo;
 
@@ -16,7 +16,7 @@ function autoexec main() {
 }
 
 // Namespace ammo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29cfca2d, Offset: 0x1c0
 // Size: 0xf4
 function dropaiammo() {
@@ -36,12 +36,12 @@ function dropaiammo() {
 }
 
 // Namespace ammo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5fb5f96, Offset: 0x2c0
 // Size: 0x5f6
 function ammo_pouch_think() {
     self endon(#"death");
-    player = self waittill(#"scavenger");
+    self waittill(#"scavenger", player);
     primary_weapons = player getweaponslistprimaries();
     offhand_weapons_and_alts = array::exclude(player getweaponslist(1), primary_weapons);
     arrayremovevalue(offhand_weapons_and_alts, level.weaponbasemelee);

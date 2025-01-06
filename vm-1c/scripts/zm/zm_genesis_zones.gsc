@@ -1,22 +1,22 @@
-#using scripts/zm/zm_genesis_util;
-#using scripts/zm/zm_genesis_ffotd;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_genesis_ffotd;
+#using scripts/zm/zm_genesis_util;
 
 #namespace zm_island_zones;
 
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8edd9d66, Offset: 0xc10
 // Size: 0x44
 function __init__() {
@@ -38,7 +38,7 @@ function __init__() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd4886b20, Offset: 0xc60
 // Size: 0x9c
 function __main__() {
@@ -52,7 +52,7 @@ function __main__() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x578ae467, Offset: 0xd08
 // Size: 0x98
 function player_out_of_playable_area_override() {
@@ -67,7 +67,7 @@ function player_out_of_playable_area_override() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23dcab82, Offset: 0xda8
 // Size: 0xf1c
 function function_19a0be33() {
@@ -180,7 +180,7 @@ function function_19a0be33() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4b0f402, Offset: 0x1cd0
 // Size: 0x54
 function function_6b91d71() {
@@ -189,7 +189,7 @@ function function_6b91d71() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29ef9fbb, Offset: 0x1d30
 // Size: 0xc4
 function function_9ce5da3b() {
@@ -206,7 +206,7 @@ function function_9ce5da3b() {
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa3c85703, Offset: 0x1e00
 // Size: 0xb0
 function function_fb8b5806() {

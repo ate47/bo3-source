@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_weap_elemental_bow;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weap_elemental_bow;
 
 #namespace _zm_weap_elemental_bow_wolf_howl;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8820190, Offset: 0x678
 // Size: 0x47c
 function __init__() {
@@ -50,7 +50,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc42ec1d, Offset: 0xb00
 // Size: 0x64
 function function_cb5344d7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +58,7 @@ function function_cb5344d7(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x45ca7b3e, Offset: 0xb70
 // Size: 0x74
 function function_6974030a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -68,7 +68,7 @@ function function_6974030a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xac6d83e5, Offset: 0xbf0
 // Size: 0x74
 function function_644da66f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -78,7 +78,7 @@ function function_644da66f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x62313211, Offset: 0xc70
 // Size: 0x74
 function wolf_howl_muzzle_flash(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,7 +88,7 @@ function wolf_howl_muzzle_flash(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa136f6bf, Offset: 0xcf0
 // Size: 0x9c
 function function_76bb77a6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -100,7 +100,7 @@ function function_76bb77a6(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb71196f6, Offset: 0xd98
 // Size: 0x9c
 function function_714aa0e1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -112,7 +112,7 @@ function function_714aa0e1(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb01afcde, Offset: 0xe40
 // Size: 0xc6
 function wolf_howl_slow_snow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -129,7 +129,7 @@ function wolf_howl_slow_snow_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x51d8be91, Offset: 0xf10
 // Size: 0xb4
 function zombie_hit_by_wolf_howl_charge(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -142,7 +142,7 @@ function zombie_hit_by_wolf_howl_charge(localclientnum, oldval, newval, bnewent,
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x292c7829, Offset: 0xfd0
 // Size: 0x8c
 function wolf_howl_zombie_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

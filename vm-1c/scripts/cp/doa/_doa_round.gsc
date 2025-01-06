@@ -1,22 +1,22 @@
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_gibs;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_hazard;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_utility;
 #using scripts/cp/gametypes/_globallogic_score;
-#using scripts/shared/lui_shared;
 #using scripts/shared/ai/zombie_utility;
 #using scripts/shared/array_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/lui_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_cdb9a8fe;
 
@@ -192,9 +192,9 @@ function main() {
                 namespace_49107f3a::debugmsg("<dev string:x28>" + level.doa.round_number + "<dev string:x4e>" + level.doa.var_5cd9f23f);
             #/
             flag::clear("doa_round_active");
-            level notify(#"hash_e9dfbb22");
+            level notify(#"doa_round_is_over");
             foreach (player in getplayers()) {
-                player notify(#"hash_e9dfbb22");
+                player notify(#"doa_round_is_over");
             }
             if (level flag::get("doa_game_is_over")) {
                 break;
@@ -207,7 +207,7 @@ function main() {
             level thread namespace_a7e6beb5::function_22d0e830(0, 3);
             var_d2d5db8a = namespace_3ca3c537::function_78c7b56e();
         } else {
-            level waittill(#"hash_593b80cb");
+            level waittill(#"bossEventComplete");
             level.doa.var_677d1262 = 0;
         }
         if (level flag::get("doa_game_is_over")) {
@@ -339,7 +339,7 @@ function function_fe0946ac(spawn_origin, var_97887a95) {
     self notify(#"hash_75f413cb");
     if (var_97887a95) {
         self thread namespace_831a4a7c::function_b5843d4f(level.doa.var_458c27d == 3);
-        self thread namespace_831a4a7c::function_f2507519(level.doa.var_458c27d == 3);
+        self thread namespace_831a4a7c::turnOnFlashlight(level.doa.var_458c27d == 3);
     }
 }
 
@@ -372,15 +372,15 @@ function private function_ff7f941a(def) {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3191e0f8, Offset: 0x1b18
 // Size: 0x694
-function function_21a582ff(var_6808cc14, endnote) {
+function function_21a582ff(current_wave, endnote) {
     if (isdefined(endnote)) {
         level endon(endnote);
     }
-    level.doa.var_3706f843[level.doa.var_3706f843.size] = var_6808cc14;
-    spawn_locations = level.doa.var_c984ad24[var_6808cc14.spawn_side];
-    time = var_6808cc14.var_b051bab1;
+    level.doa.var_3706f843[level.doa.var_3706f843.size] = current_wave;
+    spawn_locations = level.doa.var_c984ad24[current_wave.spawn_side];
+    time = current_wave.var_b051bab1;
     time = time * 1000 + gettime();
-    while (level.players.size == 1 && level.doa.var_9a1cbf58 && (gettime() < time || var_6808cc14.var_3f7b0d81 > 0)) {
+    while (level.players.size == 1 && level.doa.var_9a1cbf58 && (gettime() < time || current_wave.var_3f7b0d81 > 0)) {
         if (level flag::get("doa_game_is_over") || level flag::get("doa_round_abort")) {
             break;
         }
@@ -391,7 +391,7 @@ function function_21a582ff(var_6808cc14, endnote) {
             var_48be25f5 = level.doa.var_d0cde02c.spawner;
             ai = [[ level.doa.var_d0cde02c.spawnfunc ]](var_48be25f5, spawnpoint, level.doa.var_d0cde02c);
             if (isdefined(ai)) {
-                var_6808cc14.var_3f7b0d81--;
+                current_wave.var_3f7b0d81--;
                 ai.var_d3c93fe9 = 1;
                 var_48be25f5 = undefined;
             }
@@ -427,13 +427,13 @@ function function_21a582ff(var_6808cc14, endnote) {
         if (isdefined(level.doa.arenas[level.doa.var_90873830].var_f06f27e8)) {
             ai = [[ level.doa.arenas[level.doa.var_90873830].var_f06f27e8 ]]();
             if (isdefined(ai)) {
-                var_6808cc14.var_3f7b0d81--;
+                current_wave.var_3f7b0d81--;
             }
         }
         if (isdefined(var_48be25f5)) {
             ai = doa_enemy::function_a4e16560(var_48be25f5, spawnpoint);
             if (isdefined(ai)) {
-                var_6808cc14.var_3f7b0d81--;
+                current_wave.var_3f7b0d81--;
                 ai notify(#"hash_48b8c577");
                 if (!isvehicle(ai) && !(isdefined(ai.var_ad61c13d) && ai.var_ad61c13d)) {
                     ai thread zombie_utility::zombie_gib_on_damage();
@@ -445,7 +445,7 @@ function function_21a582ff(var_6808cc14, endnote) {
             }
         }
     }
-    arrayremovevalue(level.doa.var_3706f843, var_6808cc14);
+    arrayremovevalue(level.doa.var_3706f843, current_wave);
 }
 
 // Namespace namespace_cdb9a8fe
@@ -464,8 +464,8 @@ function function_87703158(bossRound) {
     level.doa.round_start_time = gettime();
     level.doa.var_5cd9f23f = undefined;
     level.doa.var_e0d67a74 = struct::get_array(namespace_3ca3c537::function_d2d75f5d() + "_rise_spot");
-    var_a47b1f6f = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
-    level.doa.var_c984ad24 = level.doa.spawners[var_a47b1f6f];
+    spawn_set = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
+    level.doa.var_c984ad24 = level.doa.spawners[spawn_set];
     level.doa.var_3706f843 = [];
     var_81b4b863 = 0;
     var_9805ff33 = 0;
@@ -481,12 +481,12 @@ function function_87703158(bossRound) {
             if (!var_81b4b863 && !level flag::get("doa_round_active")) {
                 break;
             }
-            level.doa.var_6808cc14 = level.doa.var_d9933f22[wave];
-            level thread function_21a582ff(level.doa.var_6808cc14);
+            level.doa.current_wave = level.doa.var_d9933f22[wave];
+            level thread function_21a582ff(level.doa.current_wave);
             /#
-                namespace_49107f3a::debugmsg("<dev string:x7c>" + level.doa.var_6808cc14.wavenumber + "<dev string:x8a>" + level.doa.var_6808cc14.spawn_side);
+                namespace_49107f3a::debugmsg("<dev string:x7c>" + level.doa.current_wave.wavenumber + "<dev string:x8a>" + level.doa.current_wave.spawn_side);
             #/
-            wait level.doa.var_6808cc14.var_1112b648;
+            wait level.doa.current_wave.var_1112b648;
             while (level.players.size == 1 && level.doa.var_9a1cbf58 && level.doa.var_3706f843.size > 10) {
                 /#
                     namespace_49107f3a::debugmsg("<dev string:x94>");

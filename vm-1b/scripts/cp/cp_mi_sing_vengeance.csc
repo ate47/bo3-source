@@ -1,20 +1,20 @@
-#using scripts/cp/_util;
-#using scripts/cp/cp_mi_sing_vengeance_sound;
-#using scripts/cp/cp_mi_sing_vengeance_fx;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/cp/_load;
-#using scripts/shared/audio_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/enemy_highlight;
-#using scripts/shared/stealth_client;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_vengeance_fx;
+#using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/enemy_highlight;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/stealth_client;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_sing_vengeance;
 
@@ -23,7 +23,7 @@
 // Checksum 0xc1b44fe9, Offset: 0xbc0
 // Size: 0x1c2
 function main() {
-    util::function_57b966c8(&function_71f88fc, 8);
+    util::function_57b966c8(&force_streamer, 8);
     clientfield::register("toplayer", "enemy_highlight", 1, 1, "int", &function_93ef80c, 0, 0);
     init_clientfields();
     setsaveddvar("enable_global_wind", 1);
@@ -234,7 +234,7 @@ function function_93ef80c(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Params 1, eflags: 0x0
 // Checksum 0x4bc4c5d5, Offset: 0x1788
 // Size: 0x519
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     stopforcingstreamer();
     switch (n_zone) {
     case 0:
@@ -324,12 +324,12 @@ function function_5d084d45(localclientnum, oldval, newval, bnewent, binitialsnap
 // Checksum 0x41c92c1b, Offset: 0x1d30
 // Size: 0x95
 function function_23953002() {
-    level endon(#"hash_524d1cbf");
-    level waittill(#"hash_7f1f9f3c");
+    level endon(#"qt_alley_done");
+    level waittill(#"qt_fire_missile");
     var_569bb3f4 = struct::get("quadteaser_org", "targetname");
     ropepulse(var_569bb3f4.origin, 550, 500, 40, 35);
     while (true) {
-        level waittill(#"hash_71984294");
+        level waittill(#"qt_fire_mg");
         ropepulse(var_569bb3f4.origin, 550, 500, 30, 25);
     }
 }
@@ -418,7 +418,7 @@ function function_5bd50680(wait_notify) {
 // Checksum 0xc3797d26, Offset: 0x2288
 // Size: 0x16a
 function function_6f79b65d() {
-    level waittill(#"hash_82cbfe2b");
+    level waittill(#"start_qt_stomp");
     var_ac0ac802 = struct::get_array("qt_trex_stomp", "targetname");
     for (i = 0; i < 3; i++) {
         foreach (var_569bb3f4 in var_ac0ac802) {
@@ -442,7 +442,7 @@ function function_d8ca2a96() {
     smodelanimcmd("backdraft_1a_blinds", "pause", "unloop", "goto_start");
     smodelanimcmd("backdraft_1b_blinds", "pause", "unloop", "goto_start");
     smodelanimcmd("backdraft_1c_blinds", "pause", "unloop", "goto_start");
-    level waittill(#"hash_704aebad");
+    level waittill(#"backdraft_1_siege");
     smodelanimcmd("backdraft_1a_blinds", "unpause");
     smodelanimcmd("backdraft_1b_blinds", "unpause");
     smodelanimcmd("backdraft_1c_blinds", "unpause");
@@ -454,7 +454,7 @@ function function_d8ca2a96() {
 // Size: 0x5a
 function function_b2c7b02d() {
     smodelanimcmd("backdraft_2_blinds", "pause", "unloop", "goto_start");
-    level waittill(#"hash_2a99eaf6");
+    level waittill(#"backdraft_2_siege");
     smodelanimcmd("backdraft_2_blinds", "unpause");
 }
 
@@ -465,7 +465,7 @@ function function_b2c7b02d() {
 function function_8cc535c4() {
     smodelanimcmd("backdraft_3a_blinds", "pause", "unloop", "goto_start");
     smodelanimcmd("backdraft_3b_blinds", "pause", "unloop", "goto_start");
-    level waittill(#"hash_9013621b");
+    level waittill(#"backdraft_3_siege");
     smodelanimcmd("backdraft_3a_blinds", "unpause");
     smodelanimcmd("backdraft_3b_blinds", "unpause");
 }
@@ -477,7 +477,7 @@ function function_8cc535c4() {
 function function_6c85145c() {
     smodelanimcmd("safehouse_falling_debris", "pause", "unloop", "goto_start");
     smodelanimcmd("safehouse_falling_debris_rail", "pause", "unloop", "goto_start");
-    level waittill(#"hash_d41345fd");
+    level waittill(#"start_debris_fall");
     smodelanimcmd("safehouse_falling_debris", "unpause");
     smodelanimcmd("safehouse_falling_debris_rail", "unpause");
 }

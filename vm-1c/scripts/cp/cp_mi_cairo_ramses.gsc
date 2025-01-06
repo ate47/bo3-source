@@ -1,37 +1,37 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_accolades;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_level_start;
+#using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
 #using scripts/cp/cp_mi_cairo_ramses_patch;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
+#using scripts/cp/cp_mi_cairo_ramses_station_fight;
+#using scripts/cp/cp_mi_cairo_ramses_station_walk;
 #using scripts/cp/cp_mi_cairo_ramses_utility;
 #using scripts/cp/cp_mi_cairo_ramses_vtol_ride;
-#using scripts/cp/cp_mi_cairo_ramses_station_fight;
-#using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
-#using scripts/cp/cp_mi_cairo_ramses_station_walk;
-#using scripts/cp/cp_mi_cairo_ramses_level_start;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/cp_mi_cairo_ramses_accolades;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_collectibles;
-#using scripts/shared/vehicles/_quadtank;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/compass;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/lui_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
 #using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/compass;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/gametypes/_save;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_cairo_ramses;
 
@@ -45,7 +45,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a57b5b8, Offset: 0x9c0
 // Size: 0x23c
 function main() {
@@ -82,7 +82,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xc08
 // Size: 0x4
 function precache() {
@@ -90,7 +90,7 @@ function precache() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x368b3596, Offset: 0xc18
 // Size: 0x1b4
 function init_clientfields() {
@@ -106,7 +106,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcfbc5f8e, Offset: 0xdd8
 // Size: 0x204
 function init_flags() {
@@ -129,7 +129,7 @@ function init_flags() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8cf3ca, Offset: 0xfe8
 // Size: 0xcc
 function init_level() {
@@ -143,7 +143,7 @@ function init_level() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa8a6a400, Offset: 0x10c0
 // Size: 0x14
 function function_66f28952() {
@@ -151,7 +151,7 @@ function function_66f28952() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1f861082, Offset: 0x10e0
 // Size: 0x194
 function function_673254cc() {
@@ -164,7 +164,7 @@ function function_673254cc() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe367e22c, Offset: 0x1280
 // Size: 0x24
 function on_player_connect() {
@@ -172,15 +172,15 @@ function on_player_connect() {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd200b48a, Offset: 0x12b0
 // Size: 0x1c
 function on_player_spawned() {
-    self namespace_391e4301::function_ff06e7ac();
+    self ramses_util::function_ff06e7ac();
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa6c1e55c, Offset: 0x12d8
 // Size: 0x164
 function function_e4f36ca2(str_objective, var_74cd64bc) {
@@ -188,7 +188,7 @@ function function_e4f36ca2(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
         level_start::function_e29f0dd6(str_objective);
-        namespace_391e4301::function_75734d29();
+        ramses_util::function_75734d29();
     }
     objectives::set("cp_level_ramses_determine_what_salim_knows");
     objectives::set("cp_level_ramses_meet_with_khalil");
@@ -202,7 +202,7 @@ function function_e4f36ca2(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x10485df1, Offset: 0x1448
 // Size: 0xcc
 function function_781ed89c(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -212,13 +212,13 @@ function function_781ed89c(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     }
     namespace_bedc6a60::function_f7abd273();
     namespace_bedc6a60::function_f21c9162("_combat");
-    namespace_391e4301::function_75734d29();
+    ramses_util::function_75734d29();
     level scene::init("cin_ram_04_02_easterncheck_vign_jumpdirect");
-    level thread namespace_391e4301::function_a0a9f927();
+    level thread ramses_util::function_a0a9f927();
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xec8335c9, Offset: 0x1520
 // Size: 0x184
 function function_4513d788(str_objective, var_74cd64bc) {
@@ -234,12 +234,12 @@ function function_4513d788(str_objective, var_74cd64bc) {
         util::delay(1, undefined, &util::screen_fade_in, 1, "black", "skipto_fade");
     }
     cp_mi_cairo_ramses_nasser_interview::function_c99967dc(0);
-    namespace_391e4301::function_7255e66(0);
+    ramses_util::function_7255e66(0);
     cp_mi_cairo_ramses_station_walk::main();
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xefb488d2, Offset: 0x16b0
 // Size: 0x54
 function function_86fc3d2e(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -248,7 +248,7 @@ function function_86fc3d2e(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8786490d, Offset: 0x1710
 // Size: 0x12c
 function function_ac4ae5cc(str_objective, var_74cd64bc) {
@@ -262,12 +262,12 @@ function function_ac4ae5cc(str_objective, var_74cd64bc) {
         level.var_2fd26037 sethighdetail(1);
     }
     objectives::set("cp_level_ramses_interrogate_salim");
-    namespace_391e4301::function_7255e66(1);
+    ramses_util::function_7255e66(1);
     cp_mi_cairo_ramses_nasser_interview::main(var_74cd64bc);
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xb918aee8, Offset: 0x1848
 // Size: 0x144
 function function_5b5ae0d2(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -281,13 +281,13 @@ function function_5b5ae0d2(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     level util::clientnotify("walla_off");
     oed::function_f0f40bb5();
     oed::function_b3c589a6();
-    namespace_391e4301::function_eabc6e2f();
-    namespace_391e4301::function_d4a0bb54();
-    namespace_391e4301::function_e7ebe596(0);
+    ramses_util::function_eabc6e2f();
+    ramses_util::function_d4a0bb54();
+    ramses_util::function_e7ebe596(0);
 }
 
 // Namespace cp_mi_cairo_ramses
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e5e2da, Offset: 0x1998
 // Size: 0x2c
 function function_2b543535() {

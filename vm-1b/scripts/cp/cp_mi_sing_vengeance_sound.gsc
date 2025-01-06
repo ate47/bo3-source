@@ -1,11 +1,11 @@
-#using scripts/shared/music_shared;
-#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
+#using scripts/cp/voice/voice_vengeance;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/flag_shared;
-#using scripts/shared/stealth_vo;
+#using scripts/shared/music_shared;
 #using scripts/shared/stealth;
-#using scripts/cp/voice/voice_vengeance;
-#using scripts/codescripts/struct;
+#using scripts/shared/stealth_vo;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_vengeance_sound;
 
@@ -454,8 +454,8 @@ function function_47d9d5db() {
 // Params 3, eflags: 0x0
 // Checksum 0x38923d65, Offset: 0x1d28
 // Size: 0xc3
-function function_9d83fdd3(alias, var_37004b6e, var_aa56a49b) {
-    if (var_37004b6e) {
+function function_9d83fdd3(alias, is_loop, var_aa56a49b) {
+    if (is_loop) {
         fade = 0;
         if (isdefined(var_aa56a49b)) {
             fade = var_aa56a49b;

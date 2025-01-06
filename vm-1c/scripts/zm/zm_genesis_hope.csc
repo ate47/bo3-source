@@ -1,18 +1,18 @@
-#using scripts/zm/zm_genesis_util;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_genesis_util;
 
 #namespace zm_genesis_hope;
 
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_hope
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xef1fa365, Offset: 0x398
 // Size: 0x13c
 function __init__() {
@@ -37,7 +37,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_hope
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4ec202b2, Offset: 0x4e0
 // Size: 0x156
 function function_7341c96b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -62,7 +62,7 @@ function function_7341c96b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_hope
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd1103e4d, Offset: 0x640
 // Size: 0x106
 function function_2e70599d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +81,7 @@ function function_2e70599d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_hope
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5007424c, Offset: 0x750
 // Size: 0xec
 function function_5f968055(localclientnum, b_on) {

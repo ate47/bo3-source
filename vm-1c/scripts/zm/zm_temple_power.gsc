@@ -1,18 +1,18 @@
-#using scripts/zm/_zm_power;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_power;
 
 #namespace zm_temple_power;
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc89b75f, Offset: 0x430
 // Size: 0x204
 function function_4323754a() {
@@ -34,7 +34,7 @@ function function_4323754a() {
 }
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5c45ca1, Offset: 0x640
 // Size: 0x94
 function function_d89f08d3() {
@@ -45,7 +45,7 @@ function function_d89f08d3() {
 }
 
 // Namespace zm_temple_power
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbd726961, Offset: 0x6e0
 // Size: 0x104
 function power_switch(trigger_name, var_1e1fc126) {
@@ -53,7 +53,7 @@ function power_switch(trigger_name, var_1e1fc126) {
     var_31353764 sethintstring(%ZM_TEMPLE_RELEASE_WATER);
     var_31353764 setcursorhint("HINT_NOICON");
     while (true) {
-        player = var_31353764 waittill(#"trigger");
+        var_31353764 waittill(#"trigger", player);
         if (isplayer(player)) {
             level flag::set(var_1e1fc126);
             break;
@@ -64,7 +64,7 @@ function power_switch(trigger_name, var_1e1fc126) {
 }
 
 // Namespace zm_temple_power
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a776816, Offset: 0x7f0
 // Size: 0x7c
 function function_4ebc92cc(player) {
@@ -77,7 +77,7 @@ function function_4ebc92cc(player) {
 }
 
 // Namespace zm_temple_power
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x30f51cce, Offset: 0x878
 // Size: 0x13c
 function function_3046fbc7(var_1e1fc126, var_91c79b1d) {
@@ -95,7 +95,7 @@ function function_3046fbc7(var_1e1fc126, var_91c79b1d) {
 }
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xff34737e, Offset: 0x9c0
 // Size: 0x5c
 function wait_for_power() {
@@ -106,7 +106,7 @@ function wait_for_power() {
 }
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29b3bcd9, Offset: 0xa28
 // Size: 0x174
 function function_7ea2ce8() {
@@ -127,7 +127,7 @@ function function_7ea2ce8() {
 }
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b931b40, Offset: 0xba8
 // Size: 0xf2
 function function_f8d52bb6() {
@@ -160,15 +160,15 @@ function function_fb70e1ed(var_68f7eb77) {
 }
 
 // Namespace zm_temple_power
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x62125e92, Offset: 0xd50
 // Size: 0x4c
-function function_d57d875f(var_2ac38233, time, acceleration_time, var_cff30a24) {
-    self movez(var_2ac38233, time, acceleration_time, var_cff30a24);
+function function_d57d875f(z_value, time, acceleration_time, var_cff30a24) {
+    self movez(z_value, time, acceleration_time, var_cff30a24);
 }
 
 // Namespace zm_temple_power
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x960574f1, Offset: 0xda8
 // Size: 0x10c
 function function_e9d25b3(var_91c79b1d, var_57b77c66, var_b8c57a38, isright, sound) {
@@ -185,7 +185,7 @@ function function_e9d25b3(var_91c79b1d, var_57b77c66, var_b8c57a38, isright, sou
 }
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67fe4648, Offset: 0xec0
 // Size: 0x12c
 function function_2507931f() {
@@ -196,16 +196,16 @@ function function_2507931f() {
         level thread sound::play_in_space("evt_water_spout01", start_struct.origin);
     }
     wait 1;
-    var_388f2981 = struct::get("water_pour_01", "targetname");
-    if (isdefined(var_388f2981)) {
+    loop_struct = struct::get("water_pour_01", "targetname");
+    if (isdefined(loop_struct)) {
         sound_entity = spawn("script_origin", (0, 0, 1));
-        sound_entity.origin = var_388f2981.origin;
+        sound_entity.origin = loop_struct.origin;
         sound_entity playloopsound("evt_water_pour01");
     }
 }
 
 // Namespace zm_temple_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb47b2116, Offset: 0xff8
 // Size: 0x12c
 function function_ee647c3a() {
@@ -216,16 +216,16 @@ function function_ee647c3a() {
         level thread sound::play_in_space("evt_water_spout02", start_struct.origin);
     }
     wait 1;
-    var_388f2981 = struct::get("water_pour_02", "targetname");
-    if (isdefined(var_388f2981)) {
+    loop_struct = struct::get("water_pour_02", "targetname");
+    if (isdefined(loop_struct)) {
         sound_entity = spawn("script_origin", (0, 0, 1));
-        sound_entity.origin = var_388f2981.origin;
+        sound_entity.origin = loop_struct.origin;
         sound_entity playloopsound("evt_water_pour02");
     }
 }
 
 // Namespace zm_temple_power
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f5bbffb, Offset: 0x1130
 // Size: 0x5c
 function function_2a5dbecb(isright) {

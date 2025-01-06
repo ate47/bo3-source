@@ -1,14 +1,14 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/abilities/gadgets/_gadget_camo_render;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/abilities/gadgets/_gadget_camo_render;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace _gadget_camo;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_camo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c915674, Offset: 0x300
 // Size: 0x4c
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace _gadget_camo
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x689d464d, Offset: 0x358
 // Size: 0x274
 function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

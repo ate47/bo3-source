@@ -1,7 +1,7 @@
-#using scripts/shared/flag_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/system_shared;
 
 #namespace doors;
 
@@ -10,7 +10,7 @@
 class cdoor {
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x9f3f54b6, Offset: 0x230
     // Size: 0x34
     function constructor() {
@@ -21,7 +21,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8da9aea7, Offset: 0x270
     // Size: 0x2c
     function destructor() {
@@ -31,7 +31,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x4509ff20, Offset: 0x1958
     // Size: 0x18
     function function_4facda28(delay_time) {
@@ -39,7 +39,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4659aa50, Offset: 0x1910
     // Size: 0x40
     function function_ad665f20() {
@@ -52,7 +52,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x743ee8a4, Offset: 0x18f0
     // Size: 0x18
     function function_207f7798(angle) {
@@ -60,7 +60,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x6da45de7, Offset: 0x17d0
     // Size: 0x118
     function calculate_offset_position(v_origin, v_angles, v_offset) {
@@ -81,7 +81,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x53ebb206, Offset: 0x17b0
     // Size: 0x18
     function set_door_paths(n_door_connect_paths) {
@@ -89,7 +89,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x483a0bae, Offset: 0x16e8
     // Size: 0xbc
     function init_movement(var_fad8628d, n_slide_amount) {
@@ -105,7 +105,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x9be49c60, Offset: 0x15e0
     // Size: 0xfa
     function set_script_flags(b_set) {
@@ -122,7 +122,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xbb002632, Offset: 0x13c8
     // Size: 0x20c
     function init_trigger(v_offset, n_radius) {
@@ -147,7 +147,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xad8cdf04, Offset: 0x1240
     // Size: 0x180
     function function_34d8f8a5() {
@@ -174,7 +174,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x27951f73, Offset: 0x1000
     // Size: 0x238
     function run_lock_fx() {
@@ -211,7 +211,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x80e55f01, Offset: 0xed0
     // Size: 0x122
     function update_use_message() {
@@ -237,7 +237,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd665cd3, Offset: 0xb70
     // Size: 0x354
     function open_internal() {
@@ -274,7 +274,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xffd4001c, Offset: 0xb40
     // Size: 0x24
     function close() {
@@ -282,7 +282,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x28aefd97, Offset: 0x7d8
     // Size: 0x35c
     function close_internal() {
@@ -317,7 +317,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1735149a, Offset: 0x7a8
     // Size: 0x24
     function open() {
@@ -325,7 +325,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1aac9c86, Offset: 0x748
     // Size: 0x58
     function delete_door() {
@@ -338,7 +338,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2a5369bb, Offset: 0x718
     // Size: 0x24
     function unlock() {
@@ -346,7 +346,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb234477b, Offset: 0x6d8
     // Size: 0x34
     function lock() {
@@ -355,7 +355,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xef60c3c9, Offset: 0x4e0
     // Size: 0x1ec
     function init_hint_trigger() {
@@ -380,7 +380,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x57820e12, Offset: 0x460
     // Size: 0x74
     function get_hack_angles() {
@@ -395,7 +395,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x46e8e6c9, Offset: 0x370
     // Size: 0xe4
     function get_hack_pos() {
@@ -412,7 +412,7 @@ class cdoor {
     }
 
     // Namespace cdoor
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x69916ea7, Offset: 0x2a8
     // Size: 0xbc
     function init_xmodel(str_xmodel, connect_paths, v_origin, v_angles) {
@@ -438,7 +438,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace doors
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9ae5757f, Offset: 0x1e68
 // Size: 0xda
 function __init__() {
@@ -452,7 +452,7 @@ function __init__() {
 }
 
 // Namespace doors
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbde7e972, Offset: 0x1f50
 // Size: 0x5a
 function init() {
@@ -464,7 +464,7 @@ function init() {
 }
 
 // Namespace doors
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd682492c, Offset: 0x1fb8
 // Size: 0x768
 function function_5c37f26b(s_door_bundle, s_door_instance) {
@@ -553,7 +553,7 @@ function function_5c37f26b(s_door_bundle, s_door_instance) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8243f2c9, Offset: 0x2728
 // Size: 0x3c8
 function door_open_update(c_door) {
@@ -565,7 +565,7 @@ function door_open_update(c_door) {
     b_hold_open = isdefined(c_door.m_s_bundle.door_use_hold) && c_door.m_s_bundle.door_use_hold;
     b_manual_close = isdefined(c_door.m_s_bundle.door_closes) && isdefined(c_door.m_s_bundle.door_use_trigger) && c_door.m_s_bundle.door_use_trigger && c_door.m_s_bundle.door_closes;
     while (true) {
-        e_who = c_door.m_e_trigger waittill(#"trigger");
+        c_door.m_e_trigger waittill(#"trigger", e_who);
         c_door.m_e_trigger_player = e_who;
         if (!c_door flag::get("open")) {
             if (!c_door flag::get("locked")) {
@@ -605,7 +605,7 @@ function door_open_update(c_door) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb03fb4df, Offset: 0x2af8
 // Size: 0x272
 function door_update(c_door) {
@@ -643,7 +643,7 @@ function door_update(c_door) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd1a569cd, Offset: 0x2d78
 // Size: 0x80
 function door_update_lock_scripted(c_door) {
@@ -656,7 +656,7 @@ function door_update_lock_scripted(c_door) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfe6c3b34, Offset: 0x2e00
 // Size: 0x11c
 function player_freeze_in_place(b_do_freeze) {
@@ -677,7 +677,7 @@ function player_freeze_in_place(b_do_freeze) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcd587d65, Offset: 0x2f28
 // Size: 0xea
 function trigger_wait_until_clear(c_door) {
@@ -702,7 +702,7 @@ function trigger_wait_until_clear(c_door) {
 }
 
 // Namespace doors
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6954bd70, Offset: 0x3020
 // Size: 0xf6
 function door_wait_until_user_release(c_door, e_triggerer, str_kill_on_door_notify) {
@@ -721,7 +721,7 @@ function door_wait_until_user_release(c_door, e_triggerer, str_kill_on_door_noti
 }
 
 // Namespace doors
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4f1d9dc3, Offset: 0x3120
 // Size: 0x214
 function door_wait_until_clear(c_door, e_triggerer) {
@@ -746,14 +746,14 @@ function door_wait_until_clear(c_door, e_triggerer) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee1affa2, Offset: 0x3340
 // Size: 0x50
 function trigger_check_for_ents_touching(str_kill_trigger_notify) {
     self endon(#"death");
     self endon(str_kill_trigger_notify);
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         self.ents_in_trigger = 1;
     }
 }
@@ -776,7 +776,7 @@ function door_debug_line(v_origin) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa3e29db3, Offset: 0x3430
 // Size: 0x4e
 function function_8aa55a3b(var_b48f50dd) {
@@ -786,26 +786,26 @@ function function_8aa55a3b(var_b48f50dd) {
     if (!isdefined(self.var_1166c5fc[var_b48f50dd])) {
         return false;
     }
-    return self.var_1166c5fc[var_b48f50dd].var_31048c6e > 0;
+    return self.var_1166c5fc[var_b48f50dd].num_keys > 0;
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xff21ef6d, Offset: 0x3488
 // Size: 0xba
 function function_1835b0fc(var_b48f50dd) {
     if (!function_8aa55a3b(var_b48f50dd)) {
         return;
     }
-    self.var_1166c5fc[var_b48f50dd].var_31048c6e--;
-    if (self.var_1166c5fc[var_b48f50dd].var_31048c6e <= 0 && isdefined(self.var_1166c5fc[var_b48f50dd].hudelem)) {
+    self.var_1166c5fc[var_b48f50dd].num_keys--;
+    if (self.var_1166c5fc[var_b48f50dd].num_keys <= 0 && isdefined(self.var_1166c5fc[var_b48f50dd].hudelem)) {
         self.var_1166c5fc[var_b48f50dd].hudelem destroy();
         self.var_1166c5fc[var_b48f50dd].hudelem = undefined;
     }
 }
 
 // Namespace doors
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8f7b543, Offset: 0x3550
 // Size: 0x40
 function function_522fd170() {
@@ -817,7 +817,7 @@ function function_522fd170() {
 }
 
 // Namespace doors
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4a64825a, Offset: 0x3598
 // Size: 0x174
 function function_a7e476f0(var_3501c4df, e_trigger, e_model) {
@@ -846,7 +846,7 @@ function function_a7e476f0(var_3501c4df, e_trigger, e_model) {
 }
 
 // Namespace doors
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x40e6ea88, Offset: 0x3718
 // Size: 0x29c
 function function_380dd131(var_3501c4df, var_b48f50dd) {
@@ -871,7 +871,7 @@ function function_380dd131(var_3501c4df, var_b48f50dd) {
     }
     e_trigger endon(#"death");
     while (true) {
-        e_who = e_trigger waittill(#"trigger");
+        e_trigger waittill(#"trigger", e_who);
         if (isplayer(e_who)) {
             e_who function_fc201a7a(var_b48f50dd);
             break;
@@ -897,7 +897,7 @@ function function_4c16e397(var_3501c4df, var_b48f50dd) {
 }
 
 // Namespace doors
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x230f1ad7, Offset: 0x3a50
 // Size: 0x210
 function function_fc201a7a(var_b48f50dd) {
@@ -910,7 +910,7 @@ function function_fc201a7a(var_b48f50dd) {
     }
     if (!isdefined(self.var_1166c5fc[var_b48f50dd])) {
         self.var_1166c5fc[var_b48f50dd] = spawnstruct();
-        self.var_1166c5fc[var_b48f50dd].var_31048c6e = 0;
+        self.var_1166c5fc[var_b48f50dd].num_keys = 0;
         self.var_1166c5fc[var_b48f50dd].type = var_b48f50dd;
     }
     hudelem = self.var_1166c5fc[var_b48f50dd].hudelem;
@@ -927,7 +927,7 @@ function function_fc201a7a(var_b48f50dd) {
     hudelem.x = -25;
     hudelem setshader(level.var_10ac440b, 16, 16);
     self.var_1166c5fc[var_b48f50dd].hudelem = hudelem;
-    self.var_1166c5fc[var_b48f50dd].var_31048c6e++;
+    self.var_1166c5fc[var_b48f50dd].num_keys++;
 }
 
 // Namespace doors

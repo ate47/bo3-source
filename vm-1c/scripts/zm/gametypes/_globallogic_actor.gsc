@@ -1,19 +1,19 @@
-#using scripts/zm/_challenges;
-#using scripts/zm/gametypes/_weapons;
-#using scripts/zm/gametypes/_globallogic_utils;
-#using scripts/zm/gametypes/_globallogic_player;
-#using scripts/zm/gametypes/_damagefeedback;
-#using scripts/zm/_bb;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/challenges_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/zm/_bb;
+#using scripts/zm/_challenges;
+#using scripts/zm/gametypes/_damagefeedback;
+#using scripts/zm/gametypes/_globallogic_player;
+#using scripts/zm/gametypes/_globallogic_utils;
+#using scripts/zm/gametypes/_weapons;
 
 #namespace globallogic_actor;
 
 // Namespace globallogic_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x991275da, Offset: 0x2d8
 // Size: 0x3c
 function callback_actorspawned(spawner) {
@@ -22,7 +22,7 @@ function callback_actorspawned(spawner) {
 }
 
 // Namespace globallogic_actor
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x92aa45a9, Offset: 0x320
 // Size: 0xabc
 function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, modelindex, surfacetype, vsurfacenormal) {
@@ -153,7 +153,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
 }
 
 // Namespace globallogic_actor
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x538ebcb2, Offset: 0xde8
 // Size: 0x1ac
 function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -178,7 +178,7 @@ function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weap
 }
 
 // Namespace globallogic_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x399f3fb7, Offset: 0xfa0
 // Size: 0x3c
 function callback_actorcloned(original) {

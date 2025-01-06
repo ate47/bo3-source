@@ -1,10 +1,10 @@
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_player;
-#using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
 
 #namespace classicmode;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace classicmode
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6f31eee9, Offset: 0x348
 // Size: 0x44
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace classicmode
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x838af735, Offset: 0x398
 // Size: 0x1d4
 function enableclassicmode() {

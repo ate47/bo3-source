@@ -1,26 +1,26 @@
-#using scripts/cp/cybercom/_cybercom_tactical_rig_multicore;
-#using scripts/cp/cybercom/_cybercom_tactical_rig_copycat;
-#using scripts/cp/cybercom/_cybercom_tactical_rig_playermovement;
-#using scripts/cp/cybercom/_cybercom_tactical_rig_sensorybuffer;
-#using scripts/cp/cybercom/_cybercom_tactical_rig_repulsorarmor;
-#using scripts/cp/cybercom/_cybercom_tactical_rig_emergencyreserve;
-#using scripts/cp/cybercom/_cybercom_tactical_rig_proximitydeterrent;
-#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/codescripts/struct;
 #using scripts/cp/cybercom/_cybercom;
 #using scripts/cp/cybercom/_cybercom_dev;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flagsys_shared;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_copycat;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_emergencyreserve;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_multicore;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_playermovement;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_proximitydeterrent;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_repulsorarmor;
+#using scripts/cp/cybercom/_cybercom_tactical_rig_sensorybuffer;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_util_shared;
 #using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace cybercom_tacrig;
 
 // Namespace cybercom_tacrig
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc26c7ec8, Offset: 0x3b8
 // Size: 0x74
 function init() {
@@ -34,7 +34,7 @@ function init() {
 }
 
 // Namespace cybercom_tacrig
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4c1d185, Offset: 0x438
 // Size: 0xb4
 function main() {
@@ -50,7 +50,7 @@ function main() {
 }
 
 // Namespace cybercom_tacrig
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x4f8
 // Size: 0x4
 function on_player_connect() {
@@ -58,7 +58,7 @@ function on_player_connect() {
 }
 
 // Namespace cybercom_tacrig
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x508
 // Size: 0x4
 function on_player_spawned() {
@@ -66,7 +66,7 @@ function on_player_spawned() {
 }
 
 // Namespace cybercom_tacrig
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe35b2a5c, Offset: 0x518
 // Size: 0x9c
 function function_8cb15f87(name, type) {
@@ -81,7 +81,7 @@ function function_8cb15f87(name, type) {
 }
 
 // Namespace cybercom_tacrig
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x442ede7, Offset: 0x5c0
 // Size: 0x282
 function function_8b4ef058(name, on_give, on_take) {
@@ -111,7 +111,7 @@ function function_8b4ef058(name, on_give, on_take) {
 }
 
 // Namespace cybercom_tacrig
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfd823f8c, Offset: 0x850
 // Size: 0x282
 function function_37a33686(name, turn_on, turn_off) {
@@ -141,7 +141,7 @@ function function_37a33686(name, turn_on, turn_off) {
 }
 
 // Namespace cybercom_tacrig
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x75067220, Offset: 0xae0
 // Size: 0xd6
 function function_fea5c2ac(type, upgraded) {
@@ -156,7 +156,7 @@ function function_fea5c2ac(type, upgraded) {
 }
 
 // Namespace cybercom_tacrig
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x642f9668, Offset: 0xbc0
 // Size: 0xf0
 function function_8ffa26e2(type, upgraded, slot, var_9ab0ec54) {
@@ -194,7 +194,7 @@ function function_ccca7010(type) {
 }
 
 // Namespace cybercom_tacrig
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd9625089, Offset: 0xd00
 // Size: 0x130
 function private function_45ce30b1(type) {
@@ -213,7 +213,7 @@ function private function_45ce30b1(type) {
 }
 
 // Namespace cybercom_tacrig
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9fb48b37, Offset: 0xe38
 // Size: 0xd4
 function function_78908229() {
@@ -240,7 +240,7 @@ function function_a07bf2cb() {
 }
 
 // Namespace cybercom_tacrig
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdf2d2562, Offset: 0x1018
 // Size: 0x102
 function function_de82b8b4(type) {
@@ -256,7 +256,7 @@ function function_de82b8b4(type) {
 }
 
 // Namespace cybercom_tacrig
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x80a4c4ff, Offset: 0x1128
 // Size: 0x102
 function function_e7e75042(type) {

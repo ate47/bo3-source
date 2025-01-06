@@ -1,26 +1,26 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/archetype_mocomps_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
 #using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace namespace_1aa2e27a;
 
@@ -35,7 +35,7 @@ function autoexec init() {
 }
 
 // Namespace namespace_1aa2e27a
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x99ec1590, Offset: 0x4a0
 // Size: 0x4
 function private function_d83c7355() {
@@ -43,7 +43,7 @@ function private function_d83c7355() {
 }
 
 // Namespace namespace_1aa2e27a
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xe5aaea65, Offset: 0x4b0
 // Size: 0x94
 function private function_41b5516c() {
@@ -58,7 +58,7 @@ function private function_41b5516c() {
 }
 
 // Namespace namespace_1aa2e27a
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xdf1c244, Offset: 0x550
 // Size: 0x34
 function private function_3be187c2(entity) {
@@ -67,7 +67,7 @@ function private function_3be187c2(entity) {
 }
 
 // Namespace namespace_1aa2e27a
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x825610f3, Offset: 0x590
 // Size: 0x70
 function private function_8d660ab4() {
@@ -82,7 +82,7 @@ function private function_8d660ab4() {
 }
 
 // Namespace namespace_1aa2e27a
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xcf81c61d, Offset: 0x608
 // Size: 0xa4
 function private function_8a466c() {
@@ -98,7 +98,7 @@ function private function_8a466c() {
 #namespace namespace_16383e98;
 
 // Namespace namespace_16383e98
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x977ddce7, Offset: 0x6b8
 // Size: 0x244
 function function_c80742de(clone, cloneplayer, targetplayer) {

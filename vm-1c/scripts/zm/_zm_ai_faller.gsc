@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_laststand;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_notetracks;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/animation_state_machine_notetracks;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_ai_faller;
 
@@ -25,7 +25,7 @@ function autoexec init() {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xf8cc7c68, Offset: 0x5e8
 // Size: 0x124
 function private function_42a584ba() {
@@ -38,7 +38,7 @@ function private function_42a584ba() {
 }
 
 // Namespace zm_ai_faller
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xca56724b, Offset: 0x718
 // Size: 0x30
 function fallerDropAction(entity, asmstatename) {
@@ -47,7 +47,7 @@ function fallerDropAction(entity, asmstatename) {
 }
 
 // Namespace zm_ai_faller
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa4416119, Offset: 0x750
 // Size: 0x74
 function function_c8069639(entity, asmstatename) {
@@ -59,7 +59,7 @@ function function_c8069639(entity, asmstatename) {
 }
 
 // Namespace zm_ai_faller
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaa4040c8, Offset: 0x7d0
 // Size: 0x28
 function function_847e3d27(entity, asmstatename) {
@@ -68,7 +68,7 @@ function function_847e3d27(entity, asmstatename) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe233545e, Offset: 0x800
 // Size: 0x3a
 function shouldFallerDrop(entity) {
@@ -79,7 +79,7 @@ function shouldFallerDrop(entity) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x513c4537, Offset: 0x848
 // Size: 0x60
 function isFallerInCeiling(entity) {
@@ -90,7 +90,7 @@ function isFallerInCeiling(entity) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x61f297d1, Offset: 0x8b0
 // Size: 0xc
 function fallerCeilingDeath(entity) {
@@ -98,7 +98,7 @@ function fallerCeilingDeath(entity) {
 }
 
 // Namespace zm_ai_faller
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xa7cbe30, Offset: 0x8c8
 // Size: 0x4c
 function private function_dcaa5c5d(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -106,7 +106,7 @@ function private function_dcaa5c5d(entity, mocompanim, mocompanimblendouttime, m
 }
 
 // Namespace zm_ai_faller
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x3da83c5c, Offset: 0x920
 // Size: 0x4c
 function private function_1cdd0ab1(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -114,7 +114,7 @@ function private function_1cdd0ab1(entity, mocompanim, mocompanimblendouttime, m
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ce509a6, Offset: 0x978
 // Size: 0x64
 function zombie_faller_delete() {
@@ -128,7 +128,7 @@ function zombie_faller_delete() {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67a401f2, Offset: 0x9e8
 // Size: 0x112
 function faller_script_parameters() {
@@ -154,7 +154,7 @@ function faller_script_parameters() {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3ad4a001, Offset: 0xb08
 // Size: 0x9c
 function setup_deathfunc(func_name) {
@@ -174,7 +174,7 @@ function setup_deathfunc(func_name) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9ca4d436, Offset: 0xbb0
 // Size: 0x4ba
 function do_zombie_fall(spot) {
@@ -231,7 +231,7 @@ function do_zombie_fall(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1fd59106, Offset: 0x1078
 // Size: 0x470
 function zombie_faller_do_fall() {
@@ -326,7 +326,7 @@ function zombie_land() {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb5405e42, Offset: 0x15e8
 // Size: 0x32
 function zombie_faller_always_drop() {
@@ -337,7 +337,7 @@ function zombie_faller_always_drop() {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4cbf7802, Offset: 0x1628
 // Size: 0x70
 function zombie_faller_drop_not_occupied() {
@@ -350,7 +350,7 @@ function zombie_faller_drop_not_occupied() {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7ad7e060, Offset: 0x16a0
 // Size: 0x66
 function zombie_faller_watch_all_players() {
@@ -361,7 +361,7 @@ function zombie_faller_watch_all_players() {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd09be2a, Offset: 0x1710
 // Size: 0x298
 function zombie_faller_watch_player(player) {
@@ -416,7 +416,7 @@ function zombie_faller_watch_player(player) {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1920c2c8, Offset: 0x19b0
 // Size: 0x104
 function zombie_fall_wait() {
@@ -444,7 +444,7 @@ function zombie_fall_wait() {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde7b74d6, Offset: 0x1ac0
 // Size: 0x3a
 function zombie_fall_should_attack(spot) {
@@ -453,7 +453,7 @@ function zombie_fall_should_attack(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe7bc0dac, Offset: 0x1b08
 // Size: 0x1ae
 function zombie_fall_get_vicitims(spot) {
@@ -491,7 +491,7 @@ function get_fall_anim(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb23e972, Offset: 0x1cf0
 // Size: 0x2e
 function zombie_faller_enable_location() {
@@ -502,7 +502,7 @@ function zombie_faller_enable_location() {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3274533, Offset: 0x1d28
 // Size: 0x4c
 function zombie_faller_death_wait(endon_notify) {
@@ -515,7 +515,7 @@ function zombie_faller_death_wait(endon_notify) {
 }
 
 // Namespace zm_ai_faller
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x8c496c28, Offset: 0x1d80
 // Size: 0x8a
 function zombie_fall_death_func(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -525,13 +525,13 @@ function zombie_fall_death_func(einflictor, attacker, idamage, smeansofdeath, we
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe99c5569, Offset: 0x1e18
 // Size: 0x9c
 function zombie_fall_death(spot) {
     self endon(#"fall_anim_finished");
     while (self.health > 1) {
-        amount, attacker, dir, p, type = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, dir, p, type);
     }
     self stopanimscripted();
     spot notify(#"stop_zombie_fall_fx");
@@ -555,7 +555,7 @@ function _damage_mod_to_damage_type(type) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x261fdf1a, Offset: 0x1f90
 // Size: 0x9e
 function zombie_fall_fx(spot) {
@@ -571,7 +571,7 @@ function zombie_fall_fx(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda8a2ce2, Offset: 0x2038
 // Size: 0xec
 function zombie_fall_burst_fx() {
@@ -583,7 +583,7 @@ function zombie_fall_burst_fx() {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x369db453, Offset: 0x2130
 // Size: 0xce
 function zombie_fall_dust_fx(zombie) {
@@ -599,7 +599,7 @@ function zombie_fall_dust_fx(zombie) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3e2cbd5e, Offset: 0x2208
 // Size: 0x26
 function stop_zombie_fall_dust_fx(zombie) {
@@ -608,7 +608,7 @@ function stop_zombie_fall_dust_fx(zombie) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x42acdb67, Offset: 0x2238
 // Size: 0x18
 function function_ed7cd46d(entity) {
@@ -616,7 +616,7 @@ function function_ed7cd46d(entity) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x68d7655f, Offset: 0x2258
 // Size: 0xc2
 function handle_fall_notetracks(entity) {
@@ -628,7 +628,7 @@ function handle_fall_notetracks(entity) {
 }
 
 // Namespace zm_ai_faller
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xf3e64135, Offset: 0x2328
 // Size: 0x8a
 function faller_death_ragdoll(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -638,7 +638,7 @@ function faller_death_ragdoll(einflictor, attacker, idamage, smeansofdeath, weap
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f7fcf10, Offset: 0x23c0
 // Size: 0x1c0
 function in_player_fov(player) {
@@ -661,7 +661,7 @@ function in_player_fov(player) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x57e9a328, Offset: 0x2588
 // Size: 0x104
 function potentially_visible(how_close) {
@@ -684,7 +684,7 @@ function potentially_visible(how_close) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb9414a6, Offset: 0x2698
 // Size: 0x134
 function do_zombie_emerge(spot) {
@@ -707,7 +707,7 @@ function do_zombie_emerge(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe181ae95, Offset: 0x27d8
 // Size: 0x11c
 function zombie_faller_emerge(spot) {
@@ -724,7 +724,7 @@ function zombie_faller_emerge(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x56f15670, Offset: 0x2900
 // Size: 0x6a
 function zombie_emerge_fx(spot) {
@@ -736,7 +736,7 @@ function zombie_emerge_fx(spot) {
 }
 
 // Namespace zm_ai_faller
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x66e0bade, Offset: 0x2978
 // Size: 0xce
 function zombie_emerge_dust_fx(zombie) {

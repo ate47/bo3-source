@@ -1,8 +1,8 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #using_animtree("mp_emp_power_core");
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace emp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1773b161, Offset: 0x220
 // Size: 0xa4
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace emp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xacc5acd2, Offset: 0x2d0
 // Size: 0x1b4
 function monitor_emp_killstreaks() {
@@ -55,7 +55,7 @@ function monitor_emp_killstreaks() {
 }
 
 // Namespace emp
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8441b57b, Offset: 0x490
 // Size: 0x134
 function get_closest_enemy_emp_killstreak(local_player) {
@@ -75,7 +75,7 @@ function get_closest_enemy_emp_killstreak(local_player) {
 }
 
 // Namespace emp
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x999f39b9, Offset: 0x5d0
 // Size: 0x84
 function update_distance_to_closest_emp(localclientnum, new_value) {
@@ -89,7 +89,7 @@ function update_distance_to_closest_emp(localclientnum, new_value) {
 }
 
 // Namespace emp
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x42132b16, Offset: 0x660
 // Size: 0xcc
 function emp_turret_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -103,7 +103,7 @@ function emp_turret_init(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace emp
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x335d503f, Offset: 0x738
 // Size: 0x44
 function cleanup_fx_on_shutdown(localclientnum, handle) {
@@ -113,7 +113,7 @@ function cleanup_fx_on_shutdown(localclientnum, handle) {
 }
 
 // Namespace emp
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc434f4ee, Offset: 0x788
 // Size: 0xce
 function emp_turret_deploy_start(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -134,7 +134,7 @@ function emp_turret_deploy_start(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace emp
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a3bf7ab, Offset: 0x860
 // Size: 0x174
 function emp_turret_deploy(localclientnum) {

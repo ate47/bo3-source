@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_in_plain_sight;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_in_plain_sight
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f8da022, Offset: 0x1d0
 // Size: 0x8c
 function __init__() {

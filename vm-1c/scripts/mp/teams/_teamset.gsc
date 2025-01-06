@@ -3,7 +3,7 @@
 #namespace _teamset;
 
 // Namespace _teamset
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2dc6ed52, Offset: 0x120
 // Size: 0x82
 function init() {
@@ -20,7 +20,7 @@ function init() {
 }
 
 // Namespace _teamset
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6aa0c88e, Offset: 0x1b0
 // Size: 0xb4
 function customteam_init() {

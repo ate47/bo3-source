@@ -1,10 +1,10 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace quadtank;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2119266f, Offset: 0x270
 // Size: 0xbc
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xacfa3892, Offset: 0x338
 // Size: 0x88
 function _setup_(localclientnum) {
@@ -41,7 +41,7 @@ function _setup_(localclientnum) {
 }
 
 // Namespace quadtank
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x23d8a926, Offset: 0x3c8
 // Size: 0x6c
 function function_fde81ec3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -51,7 +51,7 @@ function function_fde81ec3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace quadtank
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x28397f6f, Offset: 0x440
 // Size: 0x164
 function function_48b14d9d(localclientnum, amount, fadeouttime) {
@@ -74,7 +74,7 @@ function function_48b14d9d(localclientnum, amount, fadeouttime) {
 }
 
 // Namespace quadtank
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb278d423, Offset: 0x5b0
 // Size: 0x5c
 function function_f6cc6e97(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -82,7 +82,7 @@ function function_f6cc6e97(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace quadtank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x309740ba, Offset: 0x618
 // Size: 0x44c
 function function_e9d5fa52(localclientnum, ison) {
@@ -140,7 +140,7 @@ function function_e9d5fa52(localclientnum, ison) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa8819a65, Offset: 0xa70
 // Size: 0x170
 function function_3502da52(localclientnum) {
@@ -151,7 +151,7 @@ function function_3502da52(localclientnum) {
         return;
     }
     while (true) {
-        attacker, impactpos, effectdir, partname = self waittill(#"damage");
+        self waittill(#"damage", attacker, impactpos, effectdir, partname);
         if (partname == "tag_target_lower" || partname == "tag_target_upper" || partname == "tag_defense_active" || partname == "tag_body_animate") {
             if (self.var_628020e1) {
                 if (isdefined(attacker) && attacker isplayer() && attacker.team != self.team) {

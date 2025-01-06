@@ -3,7 +3,7 @@
 #namespace sound;
 
 // Namespace sound
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x58245982, Offset: 0xb8
 // Size: 0xa4
 function loop_fx_sound(alias, origin, ender) {
@@ -17,7 +17,7 @@ function loop_fx_sound(alias, origin, ender) {
 }
 
 // Namespace sound
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd927be59, Offset: 0x168
 // Size: 0x44
 function loop_delete(ender, ent) {
@@ -27,7 +27,7 @@ function loop_delete(ender, ent) {
 }
 
 // Namespace sound
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x5b6206dd, Offset: 0x1b8
 // Size: 0xc4
 function play_in_space(alias, origin, master) {
@@ -44,7 +44,7 @@ function play_in_space(alias, origin, master) {
 }
 
 // Namespace sound
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xe6c1c665, Offset: 0x288
 // Size: 0x15c
 function loop_on_tag(alias, tag, bstopsoundondeath) {
@@ -70,7 +70,7 @@ function loop_on_tag(alias, tag, bstopsoundondeath) {
 }
 
 // Namespace sound
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4b1702d3, Offset: 0x3f0
 // Size: 0x19c
 function play_on_tag(alias, tag, ends_on_death) {
@@ -105,7 +105,7 @@ function play_on_entity(alias) {
 }
 
 // Namespace sound
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32ae8974, Offset: 0x5c8
 // Size: 0x26
 function wait_for_sounddone_or_death(org) {
@@ -145,7 +145,7 @@ function loop_on_entity(alias, offset) {
 }
 
 // Namespace sound
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x43cf5034, Offset: 0x790
 // Size: 0xcc
 function loop_in_space(alias, origin, ender) {
@@ -162,7 +162,7 @@ function loop_in_space(alias, origin, ender) {
 }
 
 // Namespace sound
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5e68983, Offset: 0x868
 // Size: 0x4c
 function delete_on_death_wait(ent, sounddone) {
@@ -174,7 +174,7 @@ function delete_on_death_wait(ent, sounddone) {
 }
 
 // Namespace sound
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe2110bab, Offset: 0x8c0
 // Size: 0x176
 function play_on_players(sound, team) {

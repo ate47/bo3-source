@@ -1,17 +1,17 @@
-#using scripts/zm/zm_tomb_quest_crypt;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/zm_tomb_quest_crypt;
 
 #namespace zm_tomb_ee_lights;
 
 // Namespace zm_tomb_ee_lights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb7b91082, Offset: 0x388
 // Size: 0x3de
 function main() {
@@ -24,9 +24,9 @@ function main() {
     level flag::wait_till("start_zombie_round_logic");
     var_c0617dfa = getentarray("crypt_puzzle_disc", "script_noteworthy");
     var_9e71f2a3 = [];
-    foreach (var_5868c432 in var_c0617dfa) {
-        if (isdefined(var_5868c432.script_int)) {
-            var_9e71f2a3[var_5868c432.script_int - 1] = var_5868c432;
+    foreach (disc in var_c0617dfa) {
+        if (isdefined(disc.script_int)) {
+            var_9e71f2a3[disc.script_int - 1] = disc;
         }
     }
     level flag::wait_till_any(array("ee_all_staffs_upgraded", "show_morse_code"));
@@ -54,7 +54,7 @@ function main() {
 }
 
 // Namespace zm_tomb_ee_lights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf88a798, Offset: 0x770
 // Size: 0x3bc
 function function_d4d827dc() {
@@ -98,27 +98,27 @@ function function_d4d827dc() {
 }
 
 // Namespace zm_tomb_ee_lights
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8b90e740, Offset: 0xb38
 // Size: 0x92
 function turn_all_lights_off(var_8cbb315d) {
-    foreach (var_5868c432 in var_8cbb315d) {
-        var_5868c432 zm_tomb_quest_crypt::function_f78a1a6c(0);
+    foreach (disc in var_8cbb315d) {
+        disc zm_tomb_quest_crypt::function_f78a1a6c(0);
     }
 }
 
 // Namespace zm_tomb_ee_lights
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf8128bc9, Offset: 0xbd8
 // Size: 0x92
 function function_d0b291ec(var_8cbb315d) {
-    foreach (var_5868c432 in var_8cbb315d) {
-        var_5868c432 zm_tomb_quest_crypt::function_f78a1a6c(1);
+    foreach (disc in var_8cbb315d) {
+        disc zm_tomb_quest_crypt::function_f78a1a6c(1);
     }
 }
 
 // Namespace zm_tomb_ee_lights
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa8cec5f8, Offset: 0xc78
 // Size: 0x1ac
 function function_bd0e42fc(var_cc38a712, str_key) {
@@ -149,7 +149,7 @@ function function_bd0e42fc(var_cc38a712, str_key) {
 }
 
 // Namespace zm_tomb_ee_lights
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb4e90173, Offset: 0xe30
 // Size: 0x12e
 function function_8859f58a(var_8cbb315d, message) {

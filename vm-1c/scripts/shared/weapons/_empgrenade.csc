@@ -1,13 +1,13 @@
-#using scripts/shared/math_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/weapons/_flashgrenades;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_flashgrenades;
 
 #namespace empgrenade;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6af1ce46, Offset: 0x338
 // Size: 0xb4
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace empgrenade
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x49592e32, Offset: 0x3f8
 // Size: 0xdc
 function onempchanged(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -46,7 +46,7 @@ function onempchanged(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace empgrenade
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc136734f, Offset: 0x4e0
 // Size: 0xbc
 function startempeffects(localplayer, bwastimejump) {
@@ -63,7 +63,7 @@ function startempeffects(localplayer, bwastimejump) {
 }
 
 // Namespace empgrenade
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x62d0955, Offset: 0x5a8
 // Size: 0xb4
 function stopempeffects(localplayer, oldval, bwastimejump) {
@@ -79,7 +79,7 @@ function stopempeffects(localplayer, oldval, bwastimejump) {
 }
 
 // Namespace empgrenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8bbcb603, Offset: 0x668
 // Size: 0x11c
 function on_player_spawned(localclientnum) {
@@ -100,7 +100,7 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace empgrenade
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x53c80090, Offset: 0x790
 // Size: 0xd4
 function onempmonitordistancechanged(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -115,7 +115,7 @@ function onempmonitordistancechanged(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace empgrenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfc778972, Offset: 0x870
 // Size: 0x2e8
 function monitordistance(localclientnum) {

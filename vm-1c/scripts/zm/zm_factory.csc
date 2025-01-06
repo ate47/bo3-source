@@ -1,39 +1,39 @@
-#using scripts/zm/_zm_trap_electric;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_fire_sale;
-#using scripts/zm/_zm_powerup_carpenter;
-#using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_dogs;
+#using scripts/zm/_zm_pack_a_punch;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
 #using scripts/zm/_zm_perk_deadshot;
 #using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_pack_a_punch;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_weap_tesla;
-#using scripts/zm/_zm_weap_cymbal_monkey;
-#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_powerup_carpenter;
+#using scripts/zm/_zm_powerup_double_points;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_trap_electric;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_ai_dogs;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/zm/zm_factory_teleporter;
-#using scripts/zm/zm_factory_fx;
-#using scripts/zm/zm_factory_ffotd;
+#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_weap_cymbal_monkey;
+#using scripts/zm/_zm_weap_tesla;
+#using scripts/zm/_zm_weapons;
 #using scripts/zm/zm_factory_amb;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/zm_factory_ffotd;
+#using scripts/zm/zm_factory_fx;
+#using scripts/zm/zm_factory_teleporter;
 
 #namespace zm_factory;
 
@@ -61,7 +61,7 @@ function autoexec opt_in() {
 }
 
 // Namespace zm_factory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa7111d3, Offset: 0x12e8
 // Size: 0x254
 function main() {
@@ -95,7 +95,7 @@ function main() {
 }
 
 // Namespace zm_factory
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd0255da8, Offset: 0x1548
 // Size: 0xd6
 function on_player_connected(localclientnum) {
@@ -111,7 +111,7 @@ function on_player_connected(localclientnum) {
 }
 
 // Namespace zm_factory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa66efad, Offset: 0x1628
 // Size: 0x24
 function include_weapons() {
@@ -119,7 +119,7 @@ function include_weapons() {
 }
 
 // Namespace zm_factory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1658
 // Size: 0x4
 function function_50a4ff91() {
@@ -127,7 +127,7 @@ function function_50a4ff91() {
 }
 
 // Namespace zm_factory
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8474b4c7, Offset: 0x1668
 // Size: 0x24
 function on_player_spawned(localclientnum) {
@@ -135,7 +135,7 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace zm_factory
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe38efa3c, Offset: 0x1698
 // Size: 0x108
 function function_9788e0f3(localclientnum) {
@@ -158,7 +158,7 @@ function function_9788e0f3(localclientnum) {
 }
 
 // Namespace zm_factory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69a14ff, Offset: 0x17a8
 // Size: 0x2c
 function function_dba1e8f1() {
@@ -167,7 +167,7 @@ function function_dba1e8f1() {
 }
 
 // Namespace zm_factory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52d9862f, Offset: 0x17e0
 // Size: 0x622
 function setup_personality_character_exerts() {
@@ -228,7 +228,7 @@ function function_f205a5f1() {
 }
 
 // Namespace zm_factory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x24030f8f, Offset: 0x1ee0
 // Size: 0x64
 function function_e0500062() {
@@ -238,7 +238,7 @@ function function_e0500062() {
 }
 
 // Namespace zm_factory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x757639e8, Offset: 0x1f50
 // Size: 0x104
 function console_blue(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -255,7 +255,7 @@ function console_blue(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace zm_factory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2d090ec0, Offset: 0x2060
 // Size: 0x104
 function console_green(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -272,7 +272,7 @@ function console_green(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_factory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcfb23f84, Offset: 0x2170
 // Size: 0x104
 function console_red(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -289,7 +289,7 @@ function console_red(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_factory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd687f83d, Offset: 0x2280
 // Size: 0x8c
 function console_start(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -301,7 +301,7 @@ function console_start(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_factory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1b21d663, Offset: 0x2318
 // Size: 0x194
 function lightning_strike(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

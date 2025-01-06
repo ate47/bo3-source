@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/cp/voice/voice_sgen;
-#using scripts/shared/music_shared;
-#using scripts/cp/_util;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/voice/voice_sgen;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_sgen_sound;
 
@@ -232,9 +232,9 @@ function function_232d9e54() {
 // Size: 0x52
 function function_4f035629() {
     level waittill(#"hash_7336a7fd");
-    var_a66f2065 = getent("amb_dni_chamber_origin", "targetname");
-    if (isdefined(var_a66f2065)) {
-        var_a66f2065 playloopsound("amb_dni_chamber_hum", 0);
+    sound_org = getent("amb_dni_chamber_origin", "targetname");
+    if (isdefined(sound_org)) {
+        sound_org playloopsound("amb_dni_chamber_hum", 0);
     }
 }
 
@@ -243,7 +243,7 @@ function function_4f035629() {
 // Checksum 0xa996cfb2, Offset: 0xcc8
 // Size: 0x2a
 function function_2b89e6e8() {
-    level waittill(#"hash_6d5c2e76");
+    level waittill(#"debris_hit");
     playsoundatposition("fly_hendricks_kick_debris_beam_b", (-562, -326, -135));
 }
 

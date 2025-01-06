@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_weap_elemental_bow;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weap_elemental_bow;
 
 #using_animtree("generic");
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4848905a, Offset: 0x670
 // Size: 0x39e
 function __init__() {
@@ -47,7 +47,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe3b3815b, Offset: 0xa18
 // Size: 0x64
 function function_da7a9948(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +55,7 @@ function function_da7a9948(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe3a53729, Offset: 0xa88
 // Size: 0x74
 function function_f514bd4b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -65,7 +65,7 @@ function function_f514bd4b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7deab41f, Offset: 0xb08
 // Size: 0x74
 function function_3e42c666(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -75,7 +75,7 @@ function function_3e42c666(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd0ae3df6, Offset: 0xb88
 // Size: 0x1a4
 function demongate_portal_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -94,7 +94,7 @@ function demongate_portal_fx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x55e92d05, Offset: 0xd38
 // Size: 0x6e
 function demongate_portal_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -106,7 +106,7 @@ function demongate_portal_rumble(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x10d6567b, Offset: 0xdb0
 // Size: 0x60
 function function_35e3ef91(localclientnum) {
@@ -120,7 +120,7 @@ function function_35e3ef91(localclientnum) {
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x13859d7e, Offset: 0xe18
 // Size: 0x9c
 function demongate_wander_locomotion_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -133,7 +133,7 @@ function demongate_wander_locomotion_anim(localclientnum, oldval, newval, bnewen
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6fa9c9e1, Offset: 0xec0
 // Size: 0x9c
 function demongate_attack_locomotion_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -146,7 +146,7 @@ function demongate_attack_locomotion_anim(localclientnum, oldval, newval, bnewen
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8060380d, Offset: 0xf68
 // Size: 0x15c
 function demongate_chomper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -169,7 +169,7 @@ function demongate_chomper_fx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x95c5f1c, Offset: 0x10d0
 // Size: 0xfc
 function demongate_chomper_bite_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

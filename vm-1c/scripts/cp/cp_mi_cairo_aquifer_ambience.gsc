@@ -1,18 +1,18 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
-#using scripts/cp/_util;
-#using scripts/shared/fx_shared;
 #using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/vehicles/_hunter;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/vehicles/_hunter;
 
 #namespace aquifer_ambience;
 
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8605dda, Offset: 0x458
 // Size: 0x124
 function __init__() {
@@ -38,7 +38,7 @@ function __init__() {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f6ac514, Offset: 0x588
 // Size: 0x94
 function main() {
@@ -51,7 +51,7 @@ function main() {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b94703f, Offset: 0x628
 // Size: 0x1fc
 function function_9f32fed2() {
@@ -77,7 +77,7 @@ function function_9f32fed2() {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5f2ce85, Offset: 0x830
 // Size: 0x9c
 function function_4b099a44() {
@@ -91,7 +91,7 @@ function function_4b099a44() {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18028a, Offset: 0x8d8
 // Size: 0x1b8
 function function_febb5e1e() {
@@ -118,7 +118,7 @@ function function_febb5e1e() {
 }
 
 // Namespace aquifer_ambience
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9182eeed, Offset: 0xa98
 // Size: 0x222
 function function_8f28e703(tname, start_flag, interval) {
@@ -146,7 +146,7 @@ function function_8f28e703(tname, start_flag, interval) {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7123127a, Offset: 0xcc8
 // Size: 0x8c
 function function_bf52f93f() {

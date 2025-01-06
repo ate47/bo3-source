@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/aat_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_aat_blast_furnace;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcc7fffcc, Offset: 0x248
 // Size: 0x19e
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcd864aef, Offset: 0x3f0
 // Size: 0xc4
 function function_c0b26b7b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -41,7 +41,7 @@ function function_c0b26b7b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x94a81634, Offset: 0x4c0
 // Size: 0xc4
 function function_76a1734a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -53,7 +53,7 @@ function function_76a1734a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x24f5845d, Offset: 0x590
 // Size: 0xae
 function function_a2e115ca(localclientnum) {
@@ -68,7 +68,7 @@ function function_a2e115ca(localclientnum) {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc1cce69, Offset: 0x648
 // Size: 0xac
 function function_354949d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +81,7 @@ function function_354949d(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa860803b, Offset: 0x700
 // Size: 0xac
 function function_1ea0a980(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -94,7 +94,7 @@ function function_1ea0a980(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x590d4a43, Offset: 0x7b8
 // Size: 0xcc
 function function_ff63e348(localclientnum, e_zombie, tag) {

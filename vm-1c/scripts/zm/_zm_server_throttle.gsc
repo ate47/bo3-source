@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
 #using scripts/codescripts/struct;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_server_throttle;
 
 // Namespace zm_server_throttle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7bc7a003, Offset: 0xb0
 // Size: 0x74
 function server_choke_init(id, max) {
@@ -18,7 +18,7 @@ function server_choke_init(id, max) {
 }
 
 // Namespace zm_server_throttle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x638ef7d2, Offset: 0x130
 // Size: 0x32
 function server_choke_thread(id) {
@@ -29,7 +29,7 @@ function server_choke_thread(id) {
 }
 
 // Namespace zm_server_throttle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcef6e541, Offset: 0x170
 // Size: 0x26
 function server_choke_safe(id) {
@@ -37,7 +37,7 @@ function server_choke_safe(id) {
 }
 
 // Namespace zm_server_throttle
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xc82f66b4, Offset: 0x1a0
 // Size: 0xfe
 function server_choke_action(id, choke_action, arg1, arg2, arg3) {
@@ -70,7 +70,7 @@ function server_entity_valid(entity) {
 }
 
 // Namespace zm_server_throttle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb249da33, Offset: 0x2d0
 // Size: 0x7c
 function server_safe_init(id, max) {
@@ -81,7 +81,7 @@ function server_safe_init(id, max) {
 }
 
 // Namespace zm_server_throttle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe52c4f7c, Offset: 0x358
 // Size: 0x22
 function _server_safe_ground_trace(pos) {
@@ -89,7 +89,7 @@ function _server_safe_ground_trace(pos) {
 }
 
 // Namespace zm_server_throttle
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7060ee1c, Offset: 0x388
 // Size: 0x5a
 function server_safe_ground_trace(id, max, origin) {
@@ -98,7 +98,7 @@ function server_safe_ground_trace(id, max, origin) {
 }
 
 // Namespace zm_server_throttle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbea1832, Offset: 0x3f0
 // Size: 0x22
 function _server_safe_ground_trace_ignore_water(pos) {
@@ -106,7 +106,7 @@ function _server_safe_ground_trace_ignore_water(pos) {
 }
 
 // Namespace zm_server_throttle
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x924c085a, Offset: 0x420
 // Size: 0x5a
 function server_safe_ground_trace_ignore_water(id, max, origin) {

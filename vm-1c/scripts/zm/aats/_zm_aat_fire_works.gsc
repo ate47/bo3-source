@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_aat_fire_works;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_fire_works
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbb18de24, Offset: 0x2b8
 // Size: 0xe4
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_fire_works
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xb159b0ab, Offset: 0x3a8
 // Size: 0x44
 function result(death, attacker, mod, weapon) {
@@ -44,7 +44,7 @@ function result(death, attacker, mod, weapon) {
 }
 
 // Namespace zm_aat_fire_works
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e06d898, Offset: 0x3f8
 // Size: 0x86
 function function_5ae7061b() {
@@ -64,7 +64,7 @@ function function_5ae7061b() {
 }
 
 // Namespace zm_aat_fire_works
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc8ecfecc, Offset: 0x488
 // Size: 0x3e4
 function function_188d9054(e_player, w_weapon) {
@@ -108,7 +108,7 @@ function function_188d9054(e_player, w_weapon) {
 }
 
 // Namespace zm_aat_fire_works
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67fa111b, Offset: 0x878
 // Size: 0x128
 function function_5afeec5a() {
@@ -133,7 +133,7 @@ function function_5afeec5a() {
 }
 
 // Namespace zm_aat_fire_works
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0xb56be1fc, Offset: 0x9a8
 // Size: 0x11c
 function function_446fe502(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_amount, w_weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -148,7 +148,7 @@ function function_446fe502(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_am
 }
 
 // Namespace zm_aat_fire_works
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5c4dbb96, Offset: 0xad0
 // Size: 0x68
 function function_9b6b7072(attacker) {
@@ -162,7 +162,7 @@ function function_9b6b7072(attacker) {
 }
 
 // Namespace zm_aat_fire_works
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9d35d25f, Offset: 0xb40
 // Size: 0x104
 function zombie_death_gib(e_attacker, w_weapon, e_owner) {

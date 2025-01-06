@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_daily_challenges;
-#using scripts/zm/_zm_audio;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 #using scripts/zm/_bb;
 #using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_daily_challenges;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_blockers;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2fcfdc7, Offset: 0xa50
 // Size: 0x74
 function __init__() {
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a41c6db, Offset: 0xad0
 // Size: 0x48
 function __main__() {
@@ -53,7 +53,7 @@ function __main__() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8b74b61, Offset: 0xb20
 // Size: 0x164
 function init_blockers() {
@@ -71,7 +71,7 @@ function init_blockers() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa27cf78, Offset: 0xc90
 // Size: 0x434
 function door_init() {
@@ -137,7 +137,7 @@ function door_init() {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ad24ce6, Offset: 0x10d0
 // Size: 0x2b6
 function door_classify(parent_trig) {
@@ -189,11 +189,11 @@ function door_classify(parent_trig) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0d2ae10, Offset: 0x1390
 // Size: 0x3e8
 function door_buy() {
-    who, force = self waittill(#"trigger");
+    self waittill(#"trigger", who, force);
     if (isdefined(level.custom_door_buy_check)) {
         if (!who [[ level.custom_door_buy_check ]](self)) {
             return false;
@@ -252,7 +252,7 @@ function door_buy() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6ba2a4c7, Offset: 0x1780
 // Size: 0x134
 function blocker_update_prompt_visibility() {
@@ -278,7 +278,7 @@ function blocker_update_prompt_visibility() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7930561, Offset: 0x18c0
 // Size: 0x1ee
 function door_delay() {
@@ -310,7 +310,7 @@ function door_delay() {
 }
 
 // Namespace zm_blockers
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x95213b43, Offset: 0x1ab8
 // Size: 0x59c
 function door_activate(time, open, quick, use_blocker_clip_for_pathing) {
@@ -423,7 +423,7 @@ function door_activate(time, open, quick, use_blocker_clip_for_pathing) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x76f97894, Offset: 0x2060
 // Size: 0x156
 function kill_trapped_zombies(trigger) {
@@ -463,7 +463,7 @@ function any_player_touching(trigger) {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x79b60412, Offset: 0x2280
 // Size: 0x192
 function any_player_touching_any(trigger, more_triggers) {
@@ -485,7 +485,7 @@ function any_player_touching_any(trigger, more_triggers) {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe1ef82ab, Offset: 0x2420
 // Size: 0x18a
 function any_zombie_touching_any(trigger, more_triggers) {
@@ -506,7 +506,7 @@ function any_zombie_touching_any(trigger, more_triggers) {
 }
 
 // Namespace zm_blockers
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb2ba2388, Offset: 0x25b8
 // Size: 0x92
 function wait_trigger_clear(trigger, more_triggers, end_on) {
@@ -519,7 +519,7 @@ function wait_trigger_clear(trigger, more_triggers, end_on) {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe8be0c79, Offset: 0x2658
 // Size: 0x98
 function waittill_door_trigger_clear_local_power_off(trigger, var_302c97b6) {
@@ -534,7 +534,7 @@ function waittill_door_trigger_clear_local_power_off(trigger, var_302c97b6) {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc89a3d75, Offset: 0x26f8
 // Size: 0x98
 function waittill_door_trigger_clear_global_power_off(trigger, var_302c97b6) {
@@ -549,7 +549,7 @@ function waittill_door_trigger_clear_global_power_off(trigger, var_302c97b6) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x696e1d2e, Offset: 0x2798
 // Size: 0x186
 function waittill_door_can_close() {
@@ -585,7 +585,7 @@ function waittill_door_can_close() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87119aa0, Offset: 0x2928
 // Size: 0x4b6
 function door_think() {
@@ -695,7 +695,7 @@ function self_and_flag_wait(msg) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf066eaf7, Offset: 0x2e48
 // Size: 0xde
 function door_block() {
@@ -709,7 +709,7 @@ function door_block() {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x398bd78b, Offset: 0x2f30
 // Size: 0x75e
 function door_opened(cost, quick_close) {
@@ -801,7 +801,7 @@ function door_opened(cost, quick_close) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde11ce2, Offset: 0x3698
 // Size: 0xdc
 function physics_launch_door(door_trig) {
@@ -816,7 +816,7 @@ function physics_launch_door(door_trig) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d57aa36, Offset: 0x3780
 // Size: 0xf0
 function door_solid_thread() {
@@ -840,7 +840,7 @@ function door_solid_thread() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7fc7e268, Offset: 0x3878
 // Size: 0xd8
 function door_solid_thread_anim() {
@@ -864,7 +864,7 @@ function door_solid_thread_anim() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbdaa4c72, Offset: 0x3958
 // Size: 0x44
 function disconnect_paths_when_done() {
@@ -873,7 +873,7 @@ function disconnect_paths_when_done() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa72fba7b, Offset: 0x39a8
 // Size: 0x1c
 function self_disconnectpaths() {
@@ -881,7 +881,7 @@ function self_disconnectpaths() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b25e710, Offset: 0x39d0
 // Size: 0x2dc
 function debris_init() {
@@ -915,7 +915,7 @@ function debris_init() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x851e8e17, Offset: 0x3cb8
 // Size: 0x80e
 function debris_think() {
@@ -931,7 +931,7 @@ function debris_think() {
         }
     }
     while (true) {
-        who, force = self waittill(#"trigger");
+        self waittill(#"trigger", who, force);
         if (isdefined(force) && (getdvarint("zombie_unlock_all") > 0 || force)) {
         } else {
             if (!who usebuttonpressed()) {
@@ -1029,7 +1029,7 @@ function debris_think() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3054619, Offset: 0x44d0
 // Size: 0xa6
 function debris_zbarrier_move() {
@@ -1041,7 +1041,7 @@ function debris_zbarrier_move() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7314b695, Offset: 0x4580
 // Size: 0x56
 function door_zbarrier_move() {
@@ -1051,7 +1051,7 @@ function door_zbarrier_move() {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x11261679, Offset: 0x45e0
 // Size: 0x94
 function move_chunk(index, b_hide) {
@@ -1066,7 +1066,7 @@ function move_chunk(index, b_hide) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2cc9dd33, Offset: 0x4680
 // Size: 0x2f4
 function debris_move(struct) {
@@ -1104,7 +1104,7 @@ function debris_move(struct) {
 }
 
 // Namespace zm_blockers
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8d9da19, Offset: 0x4980
 // Size: 0x1c
 function blocker_disconnect_paths(start_node, end_node, two_way) {
@@ -1112,7 +1112,7 @@ function blocker_disconnect_paths(start_node, end_node, two_way) {
 }
 
 // Namespace zm_blockers
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7045c17a, Offset: 0x49a8
 // Size: 0x1c
 function blocker_connect_paths(start_node, end_node, two_way) {
@@ -1120,7 +1120,7 @@ function blocker_connect_paths(start_node, end_node, two_way) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa1169536, Offset: 0x49d0
 // Size: 0x87c
 function blocker_init() {
@@ -1219,7 +1219,7 @@ function blocker_init() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcf2aa762, Offset: 0x5258
 // Size: 0x70
 function should_delete_zbarriers() {
@@ -1231,13 +1231,13 @@ function should_delete_zbarriers() {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x840a7d05, Offset: 0x52d0
 // Size: 0x10c
 function destructible_glass_barricade(unbroken_section, node) {
     unbroken_section setcandamage(1);
     unbroken_section.health = 99999;
-    amount, who = unbroken_section waittill(#"damage");
+    unbroken_section waittill(#"damage", amount, who);
     if (zm_utility::is_player_valid(who) || who laststand::player_is_in_laststand()) {
         self thread zm_spawner::zombie_boardtear_offset_fx_horizontle(self, node);
         level thread remove_chunk(self, node, 1);
@@ -1248,7 +1248,7 @@ function destructible_glass_barricade(unbroken_section, node) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0ba3f46, Offset: 0x53e8
 // Size: 0x28c
 function blocker_attack_spots() {
@@ -1283,7 +1283,7 @@ function blocker_attack_spots() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8988ba94, Offset: 0x5680
 // Size: 0x3c
 function blocker_choke() {
@@ -1296,7 +1296,7 @@ function blocker_choke() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc078e8d9, Offset: 0x56c8
 // Size: 0x100
 function blocker_think() {
@@ -1327,7 +1327,7 @@ function blocker_think() {
 }
 
 // Namespace zm_blockers
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x62993391, Offset: 0x57d0
 // Size: 0x12a
 function player_fails_blocker_repair_trigger_preamble(player, players, trigger, hold_required) {
@@ -1356,7 +1356,7 @@ function player_fails_blocker_repair_trigger_preamble(player, players, trigger, 
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0cc700e, Offset: 0x5908
 // Size: 0x48
 function has_blocker_affecting_perk() {
@@ -1368,7 +1368,7 @@ function has_blocker_affecting_perk() {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9308b040, Offset: 0x5958
 // Size: 0x2c
 function do_post_chunk_repair_delay(has_perk) {
@@ -1378,7 +1378,7 @@ function do_post_chunk_repair_delay(has_perk) {
 }
 
 // Namespace zm_blockers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd7519d7c, Offset: 0x5990
 // Size: 0x154
 function handle_post_board_repair_rewards(cost, zbarrier) {
@@ -1399,19 +1399,19 @@ function handle_post_board_repair_rewards(cost, zbarrier) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdbb0b0de, Offset: 0x5af0
 // Size: 0x54
 function blocker_unitrigger_think() {
     self endon(#"kill_trigger");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         self.stub.trigger_target notify(#"trigger", player);
     }
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a7c8da2, Offset: 0x5b50
 // Size: 0xa3e
 function blocker_trigger_think() {
@@ -1466,7 +1466,7 @@ function blocker_trigger_think() {
         }
     #/
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         has_perk = player has_blocker_affecting_perk();
         if (zm_utility::all_chunks_intact(self, self.barrier_chunks)) {
             self notify(#"all_boards_repaired");
@@ -1553,7 +1553,7 @@ function blocker_trigger_think() {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcd92605e, Offset: 0x6598
 // Size: 0x64
 function increment_window_repaired(s_barrier) {
@@ -1563,7 +1563,7 @@ function increment_window_repaired(s_barrier) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6fa21fce, Offset: 0x6608
 // Size: 0x80
 function blockertrigger_update_prompt(player) {
@@ -1574,7 +1574,7 @@ function blockertrigger_update_prompt(player) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x756338f2, Offset: 0x6690
 // Size: 0x66
 function blockerstub_update_prompt(player) {
@@ -1615,7 +1615,7 @@ function door_repaired_rumble_n_sound() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd6eb5ff4, Offset: 0x67f8
 // Size: 0xe
 function board_completion() {
@@ -1623,7 +1623,7 @@ function board_completion() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x22c65212, Offset: 0x6810
 // Size: 0x54
 function trigger_delete_on_repair() {
@@ -1635,7 +1635,7 @@ function trigger_delete_on_repair() {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x42f8c4c9, Offset: 0x6870
 // Size: 0x10
 function rebuild_barrier_reward_reset() {
@@ -1643,7 +1643,7 @@ function rebuild_barrier_reward_reset() {
 }
 
 // Namespace zm_blockers
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1e03388f, Offset: 0x6888
 // Size: 0xe9c
 function remove_chunk(chunk, node, destroy_immediately, zomb) {
@@ -1812,7 +1812,7 @@ function remove_chunk_rotate_grate(chunk) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x131296ae, Offset: 0x77b8
 // Size: 0x360
 function zombie_boardtear_audio_offset(chunk) {
@@ -1857,7 +1857,7 @@ function zombie_boardtear_audio_offset(chunk) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa816d188, Offset: 0x7b20
 // Size: 0xac
 function zombie_bartear_audio_offset(chunk) {
@@ -1880,7 +1880,7 @@ function ensure_chunk_is_back_to_origin(chunk) {
 }
 
 // Namespace zm_blockers
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xc09a985a, Offset: 0x7c38
 // Size: 0x2b6
 function replace_chunk(barrier, chunk, perk, upgrade, via_powerup) {
@@ -2132,7 +2132,7 @@ function zombie_bartear_audio_plus_fx_offset_repair_verticle(chunk) {
 }
 
 // Namespace zm_blockers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf795bb75, Offset: 0x9308
 // Size: 0x19c
 function flag_blocker() {
@@ -2163,7 +2163,7 @@ function flag_blocker() {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x813a9a6a, Offset: 0x94b0
 // Size: 0x38
 function update_states(states) {
@@ -2172,7 +2172,7 @@ function update_states(states) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x145bd163, Offset: 0x94f0
 // Size: 0x1be
 function quantum_bomb_open_nearest_door_validation(position) {
@@ -2199,7 +2199,7 @@ function quantum_bomb_open_nearest_door_validation(position) {
 }
 
 // Namespace zm_blockers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x582c6ea, Offset: 0x96b8
 // Size: 0x2ac
 function quantum_bomb_open_nearest_door_result(position) {

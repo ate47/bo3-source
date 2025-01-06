@@ -1,37 +1,37 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue_accolades;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/cp_prologue_cyber_soldiers;
+#using scripts/cp/cp_prologue_hangars;
+#using scripts/cp/cp_prologue_util;
 #using scripts/cp/cybercom/_cybercom_gadget_firefly;
 #using scripts/cp/cybercom/_cybercom_gadget_sensory_overload;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/cp/cp_prologue_cyber_soldiers;
-#using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_prologue_hangars;
-#using scripts/cp/cp_prologue_apc;
-#using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace dark_battle;
 
@@ -159,7 +159,7 @@ function function_7cd37960() {
 // Size: 0x33
 function function_997d6fdc() {
     level endon(#"hash_7a9811b7");
-    grenade, weapon = self waittill(#"grenade_fire");
+    self waittill(#"grenade_fire", grenade, weapon);
     level notify(#"hash_9babf62");
 }
 
@@ -229,15 +229,15 @@ function function_4d2734fa() {
 // Checksum 0x3d7c23e6, Offset: 0x19a0
 // Size: 0x152
 function function_4e24163f() {
-    var_181a23a4 = getent("intelstation_bottom_door_l", "targetname");
-    var_5c50a8aa = getent("intelstation_bottom_door_r", "targetname");
+    door_l = getent("intelstation_bottom_door_l", "targetname");
+    door_r = getent("intelstation_bottom_door_r", "targetname");
     var_96ba651b = (54, 0, 0);
     move_time = 0.5;
-    var_ebf82f1 = var_181a23a4.origin + var_96ba651b;
-    var_181a23a4 moveto(var_ebf82f1, move_time);
-    var_ebf82f1 = var_5c50a8aa.origin - var_96ba651b;
-    var_5c50a8aa moveto(var_ebf82f1, move_time);
-    var_181a23a4 waittill(#"movedone");
+    var_ebf82f1 = door_l.origin + var_96ba651b;
+    door_l moveto(var_ebf82f1, move_time);
+    var_ebf82f1 = door_r.origin - var_96ba651b;
+    door_r moveto(var_ebf82f1, move_time);
+    door_l waittill(#"movedone");
     level.var_9db406db setgoal(getnode("khalil_dark_battle_final", "targetname"), 1);
     wait 1;
     level.var_4d5a4697 setgoal(getnode("minister_dark_battle_final", "targetname"), 1);
@@ -758,7 +758,7 @@ function function_e2b1615a(params) {
 // Checksum 0xbbfacc6f, Offset: 0x3490
 // Size: 0x3a
 function function_b12285b9() {
-    grenade, weapon = self waittill(#"grenade_fire");
+    self waittill(#"grenade_fire", grenade, weapon);
     self flag::clear("used_only_melee");
 }
 
@@ -801,9 +801,9 @@ function function_e9166d2d(var_74cd64bc) {
     level thread vtol_tackle_enemies();
     level waittill(#"hash_147f8c7");
     level cp_prologue_util::function_6a5f89cb("skipto_vtol_tackle_ai");
-    foreach (var_e4463170 in level.var_681ad194) {
-        var_e4463170 thread Hangar::function_f1dda14f("ally_0" + var_e4463170.var_a89679b6 + "_vtol_tackle_node");
-        var_e4463170 function_b243f34();
+    foreach (ai_ally in level.var_681ad194) {
+        ai_ally thread Hangar::function_f1dda14f("ally_0" + ai_ally.var_a89679b6 + "_vtol_tackle_node");
+        ai_ally function_b243f34();
     }
     level thread objectives::breadcrumb("dark_battle_breadcrumb_5");
     array::thread_all(var_6cf84815, &function_b243f34, 0);

@@ -1,22 +1,22 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_thundergun;
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x2
-// Checksum 0x21395030, Offset: 0x168
+// Checksum 0xce2f642e, Offset: 0x168
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("zm_weap_thundergun", &__init__, &__main__, undefined);
 }
 
 // Namespace zm_weap_thundergun
-// Params 0, eflags: 0x1 linked
-// Checksum 0x76eb7421, Offset: 0x1b0
+// Params 0, eflags: 0x0
+// Checksum 0xd307c89f, Offset: 0x1b0
 // Size: 0x44
 function __init__() {
     level.var_65cd3ef2 = getweapon("thundergun");
@@ -24,31 +24,31 @@ function __init__() {
 }
 
 // Namespace zm_weap_thundergun
-// Params 0, eflags: 0x1 linked
-// Checksum 0x87ca0449, Offset: 0x200
+// Params 0, eflags: 0x0
+// Checksum 0xe953a7f, Offset: 0x200
 // Size: 0x24
 function __main__() {
     callback::on_localplayer_spawned(&localplayer_spawned);
 }
 
 // Namespace zm_weap_thundergun
-// Params 1, eflags: 0x1 linked
-// Checksum 0xff77320e, Offset: 0x230
+// Params 1, eflags: 0x0
+// Checksum 0xf227c11c, Offset: 0x230
 // Size: 0x24
 function localplayer_spawned(localclientnum) {
     self thread function_c94bc3fc(localclientnum);
 }
 
 // Namespace zm_weap_thundergun
-// Params 1, eflags: 0x1 linked
-// Checksum 0xb3a14413, Offset: 0x260
+// Params 1, eflags: 0x0
+// Checksum 0xb74661f3, Offset: 0x260
 // Size: 0xa0
 function function_c94bc3fc(localclientnum) {
     self endon(#"disconnect");
     self notify(#"hash_c94bc3fc");
     self endon(#"hash_c94bc3fc");
     while (isdefined(self)) {
-        w_new_weapon, w_old_weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", w_new_weapon, w_old_weapon);
         if (w_new_weapon == level.var_65cd3ef2 || w_new_weapon == level.var_15a75be2) {
             self thread function_966c584f(localclientnum, w_new_weapon);
         }
@@ -56,8 +56,8 @@ function function_c94bc3fc(localclientnum) {
 }
 
 // Namespace zm_weap_thundergun
-// Params 2, eflags: 0x1 linked
-// Checksum 0x51d84b88, Offset: 0x308
+// Params 2, eflags: 0x0
+// Checksum 0x8200f40, Offset: 0x308
 // Size: 0x158
 function function_966c584f(localclientnum, w_weapon) {
     self endon(#"disconnect");
@@ -85,8 +85,8 @@ function function_966c584f(localclientnum, w_weapon) {
 }
 
 // Namespace zm_weap_thundergun
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf7f6709c, Offset: 0x468
+// Params 1, eflags: 0x0
+// Checksum 0x84760c27, Offset: 0x468
 // Size: 0x2c
 function thundergun_fx_fire(localclientnum) {
     playsound(localclientnum, "wpn_thunder_breath", (0, 0, 0));

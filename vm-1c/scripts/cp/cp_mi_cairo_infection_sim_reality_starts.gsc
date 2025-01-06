@@ -1,32 +1,32 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_infection_sgen_test_chamber;
 #using scripts/cp/cp_mi_cairo_infection_sound;
 #using scripts/cp/cp_mi_cairo_infection_util;
-#using scripts/cp/cp_mi_cairo_infection_sgen_test_chamber;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
+#using scripts/shared/array_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace sim_reality_starts;
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xef60bd49, Offset: 0x938
 // Size: 0x54
 function main() {
@@ -39,7 +39,7 @@ function main() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8c1fcbdc, Offset: 0x998
 // Size: 0x24
 function init_flags() {
@@ -47,7 +47,7 @@ function init_flags() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf76b91a9, Offset: 0x9c8
 // Size: 0x2d4
 function init_client_field_callback_funcs() {
@@ -69,7 +69,7 @@ function init_client_field_callback_funcs() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xca8
 // Size: 0x4
 function function_7b244c18() {
@@ -77,7 +77,7 @@ function function_7b244c18() {
 }
 
 // Namespace sim_reality_starts
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x89c87a8e, Offset: 0xcb8
 // Size: 0x30c
 function function_d78d6232(str_objective, var_74cd64bc) {
@@ -119,7 +119,7 @@ function function_d78d6232(str_objective, var_74cd64bc) {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e351a1a, Offset: 0xfd0
 // Size: 0x24
 function function_f6fce5f1() {
@@ -127,7 +127,7 @@ function function_f6fce5f1() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4312b987, Offset: 0x1000
 // Size: 0x24
 function function_e7b91ace() {
@@ -135,7 +135,7 @@ function function_e7b91ace() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdab2b0d9, Offset: 0x1030
 // Size: 0x92
 function function_c52039f4() {
@@ -145,7 +145,7 @@ function function_c52039f4() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67fc26b2, Offset: 0x10d0
 // Size: 0x1f4
 function function_30f163f9() {
@@ -169,7 +169,7 @@ function function_30f163f9() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce63c721, Offset: 0x12d0
 // Size: 0x4c
 function function_3b662fed() {
@@ -179,7 +179,7 @@ function function_3b662fed() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc4b72412, Offset: 0x1328
 // Size: 0x6c
 function function_e2a1f622() {
@@ -189,7 +189,7 @@ function function_e2a1f622() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfeb0a31d, Offset: 0x13a0
 // Size: 0x6c
 function function_3c6bbd12() {
@@ -199,7 +199,7 @@ function function_3c6bbd12() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2a8fe124, Offset: 0x1418
 // Size: 0x6c
 function function_12c0aa84() {
@@ -209,7 +209,7 @@ function function_12c0aa84() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb7976a7d, Offset: 0x1490
 // Size: 0x6c
 function function_f2e3184d() {
@@ -219,7 +219,7 @@ function function_f2e3184d() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26a86301, Offset: 0x1508
 // Size: 0x6c
 function function_2baf7f93() {
@@ -229,7 +229,7 @@ function function_2baf7f93() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x534e1516, Offset: 0x1580
 // Size: 0xac
 function function_96fb6d2b() {
@@ -242,7 +242,7 @@ function function_96fb6d2b() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c6f1dfb, Offset: 0x1638
 // Size: 0xac
 function function_bcfde794() {
@@ -255,7 +255,7 @@ function function_bcfde794() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4b6e387, Offset: 0x16f0
 // Size: 0xac
 function function_e30061fd() {
@@ -268,7 +268,7 @@ function function_e30061fd() {
 }
 
 // Namespace sim_reality_starts
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf3447889, Offset: 0x17a8
 // Size: 0x84
 function function_2d3d4bcc(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -279,7 +279,7 @@ function function_2d3d4bcc(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1db37acb, Offset: 0x1838
 // Size: 0xcc
 function function_43e9cbbf() {
@@ -292,7 +292,7 @@ function function_43e9cbbf() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x696782aa, Offset: 0x1910
 // Size: 0x24
 function function_cdf731ff() {
@@ -302,7 +302,7 @@ function function_cdf731ff() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x412149b2, Offset: 0x1940
 // Size: 0x28a
 function function_ca04578e() {
@@ -340,7 +340,7 @@ function function_ca04578e() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x37dc7360, Offset: 0x1bd8
 // Size: 0x18c
 function function_ed57c386() {
@@ -358,7 +358,7 @@ function function_ed57c386() {
 }
 
 // Namespace sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x680e68ab, Offset: 0x1d70
 // Size: 0x24c
 function function_8742cfd3() {
@@ -369,7 +369,7 @@ function function_8742cfd3() {
     t_baby_use.e_gameobject = util::function_14518e76(t_baby_use, %cp_level_infection_gather_baby, %CP_MI_CAIRO_INFECTION_T_BABY_USE, &function_b4750e7c);
     util::wait_network_frame();
     level thread sgen_test_chamber::function_a29f7cbd();
-    player = t_baby_use waittill(#"hash_2d864e11");
+    t_baby_use waittill(#"hash_2d864e11", player);
     objectives::complete("cp_level_infection_gather_baby");
     level clientfield::set("lgt_tree_glow_05_fade_out", 1);
     level thread namespace_eccdd5d1::function_582799a6();
@@ -387,7 +387,7 @@ function function_8742cfd3() {
 }
 
 // Namespace sim_reality_starts
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe143b707, Offset: 0x1fc8
 // Size: 0x24
 function function_b4750e7c(player) {
@@ -395,7 +395,7 @@ function function_b4750e7c(player) {
 }
 
 // Namespace sim_reality_starts
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1cb35681, Offset: 0x1ff8
 // Size: 0x20c
 function function_3372b3a(a_ents) {

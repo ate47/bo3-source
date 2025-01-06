@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
+#using scripts/mp/_challenges;
 #using scripts/mp/_util;
 #using scripts/mp/gametypes/_loadout;
-#using scripts/mp/_challenges;
-#using scripts/shared/weapons/_weapon_utils;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/drown;
-#using scripts/shared/challenges_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/drown;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weapon_utils;
 
 #namespace blackjack_challenges;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1116abe, Offset: 0x518
 // Size: 0x24
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf65c330a, Offset: 0x548
 // Size: 0xec
 function start_gametype() {
@@ -47,7 +47,7 @@ function start_gametype() {
 }
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5af21772, Offset: 0x640
 // Size: 0x19a
 function on_player_connect() {
@@ -75,7 +75,7 @@ function on_player_connect() {
 }
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2bcd7258, Offset: 0x7e8
 // Size: 0x1a
 function is_challenge_active() {
@@ -83,7 +83,7 @@ function is_challenge_active() {
 }
 
 // Namespace blackjack_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa91fbdb2, Offset: 0x810
 // Size: 0x164
 function on_hero_ability_kill(ability, victimability) {
@@ -110,7 +110,7 @@ function on_hero_ability_kill(ability, victimability) {
 /#
 
     // Namespace blackjack_challenges
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd8e576b2, Offset: 0x980
     // Size: 0x44
     function debug_print_already_earned() {
@@ -121,7 +121,7 @@ function on_hero_ability_kill(ability, victimability) {
     }
 
     // Namespace blackjack_challenges
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x24c67f26, Offset: 0x9d0
     // Size: 0x8c
     function debug_print_kill_info() {
@@ -133,7 +133,7 @@ function on_hero_ability_kill(ability, victimability) {
     }
 
     // Namespace blackjack_challenges
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x16f15520, Offset: 0xa68
     // Size: 0x44
     function debug_print_earned() {
@@ -146,7 +146,7 @@ function on_hero_ability_kill(ability, victimability) {
 #/
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x21829ff7, Offset: 0xab8
 // Size: 0x10c
 function check_blackjack_challenge() {
@@ -171,7 +171,7 @@ function check_blackjack_challenge() {
 }
 
 // Namespace blackjack_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9ae37cb, Offset: 0xbd0
 // Size: 0x234
 function challenge_kills(data) {
@@ -209,7 +209,7 @@ function challenge_kills(data) {
 }
 
 // Namespace blackjack_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x850211dd, Offset: 0xe10
 // Size: 0x2a
 function get_challenge_stat(stat_name) {
@@ -217,7 +217,7 @@ function get_challenge_stat(stat_name) {
 }
 
 // Namespace blackjack_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb8464184, Offset: 0xe48
 // Size: 0x3a
 function set_challenge_stat(stat_name, stat_value) {
@@ -225,7 +225,7 @@ function set_challenge_stat(stat_name, stat_value) {
 }
 
 // Namespace blackjack_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd6a558f2, Offset: 0xe90
 // Size: 0x14e
 function get_hero_weapon_mask(attacker, weapon) {
@@ -267,7 +267,7 @@ function get_hero_weapon_mask(attacker, weapon) {
 }
 
 // Namespace blackjack_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x22012578, Offset: 0xfe8
 // Size: 0xe2
 function get_hero_ability_mask(ability) {
@@ -299,7 +299,7 @@ function get_hero_ability_mask(ability) {
 }
 
 // Namespace blackjack_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdd4ca033, Offset: 0x10d8
 // Size: 0x9c
 function challenge_game_ended(data) {
@@ -323,7 +323,7 @@ function challenge_game_ended(data) {
 }
 
 // Namespace blackjack_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd4c7e9bd, Offset: 0x1180
 // Size: 0x9c
 function challenge_round_ended(data) {
@@ -347,7 +347,7 @@ function challenge_round_ended(data) {
 }
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x872bf806, Offset: 0x1228
 // Size: 0xd8
 function track_blackjack_consumable() {
@@ -367,7 +367,7 @@ function track_blackjack_consumable() {
 }
 
 // Namespace blackjack_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaecf943d, Offset: 0x1308
 // Size: 0x178
 function report_consumable() {

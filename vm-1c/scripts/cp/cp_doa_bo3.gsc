@@ -1,33 +1,33 @@
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
-#using scripts/cp/doa/_doa_player_utility;
-#using scripts/cp/doa/_doa_utility;
-#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_silverback_battle;
-#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/cp_doa_bo3_enemy;
 #using scripts/cp/cp_doa_bo3_fx;
 #using scripts/cp/cp_doa_bo3_player_challenge;
-#using scripts/cp/cp_doa_bo3_enemy;
-#using scripts/shared/vehicles/_spider;
-#using scripts/shared/math_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/ai/systems/blackboard;
+#using scripts/cp/cp_doa_bo3_silverback_battle;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_utility;
 #using scripts/shared/ai/systems/ai_blackboard;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/vehicles/_spider;
 
 #namespace cp_doa_bo3;
 
@@ -243,7 +243,7 @@ function function_75772673(player) {
 function function_e1cd643e(projectile, weapon, player) {
     self endon(#"death");
     while (isdefined(projectile)) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (!isdefined(guy.boss) && isalive(guy)) {
             guy dodamage(guy.health, self.origin, isdefined(player) ? player : undefined, isdefined(player) ? player : undefined, "torso_lower", "MOD_EXPLOSIVE", 0, weapon, -1, 1);
         }
@@ -258,7 +258,7 @@ function function_e1cd643e(projectile, weapon, player) {
 function function_8e619e60(player) {
     self endon(#"death");
     while (true) {
-        projectile, weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", projectile, weapon);
         trigger = spawn("trigger_radius", projectile.origin, 9, 16, 24);
         trigger.targetname = "sawBladeProjectile";
         trigger enablelinkto();

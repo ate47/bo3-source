@@ -1,12 +1,12 @@
-#using scripts/zm/zm_zod_train;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_zod_train;
 
 #namespace zod_cleanup;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zod_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2fc0cc9, Offset: 0x218
 // Size: 0x10
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zod_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb315d564, Offset: 0x230
 // Size: 0x1c
 function __main__() {
@@ -43,7 +43,7 @@ function force_check_now() {
 }
 
 // Namespace zod_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x4c31b495, Offset: 0x278
 // Size: 0x246
 function private cleanup_main() {
@@ -85,7 +85,7 @@ function private cleanup_main() {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x296f29ed, Offset: 0x4c8
 // Size: 0x274
 function do_cleanup_check(n_override_cleanup_dist) {
@@ -133,7 +133,7 @@ function do_cleanup_check(n_override_cleanup_dist) {
 }
 
 // Namespace zod_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x90b671f2, Offset: 0x748
 // Size: 0x324
 function private delete_zombie_noone_looking() {
@@ -149,10 +149,10 @@ function private delete_zombie_noone_looking() {
         }
     }
     if (self.archetype === "zombie") {
-        if (self.ai_state == "find_flesh" && namespace_835aa2f1::is_moving() && !namespace_835aa2f1::function_42f8a1ab() && namespace_835aa2f1::function_c3bc2ffd()) {
-            var_e98bb795 = namespace_835aa2f1::function_be4c98a3(1);
+        if (self.ai_state == "find_flesh" && zm_train::is_moving() && !zm_train::function_42f8a1ab() && zm_train::function_c3bc2ffd()) {
+            var_e98bb795 = zm_train::function_be4c98a3(1);
             if (var_e98bb795.size > 0) {
-                namespace_835aa2f1::function_26fcc525(self);
+                zm_train::function_26fcc525(self);
                 return;
             }
         }
@@ -184,7 +184,7 @@ function private delete_zombie_noone_looking() {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xffafe3ab, Offset: 0xa78
 // Size: 0xd8
 function private player_can_see_me(player) {
@@ -200,7 +200,7 @@ function private player_can_see_me(player) {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc893309f, Offset: 0xb58
 // Size: 0xb4
 function private player_ahead_of_me(player) {
@@ -215,7 +215,7 @@ function private player_ahead_of_me(player) {
 }
 
 // Namespace zod_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x795c4c03, Offset: 0xc18
 // Size: 0xb4
 function get_escape_position() {
@@ -233,7 +233,7 @@ function get_escape_position() {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x723b0ba4, Offset: 0xcd8
 // Size: 0x11e
 function get_adjacencies_to_zone(str_zone) {
@@ -254,7 +254,7 @@ function get_adjacencies_to_zone(str_zone) {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x64a2bb46, Offset: 0xe00
 // Size: 0xd2
 function private get_wait_locations_in_zones(a_zones) {
@@ -266,7 +266,7 @@ function private get_wait_locations_in_zones(a_zones) {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd5036f6e, Offset: 0xee0
 // Size: 0xd6
 function private get_farthest_wait_location(a_wait_locations) {
@@ -286,7 +286,7 @@ function private get_farthest_wait_location(a_wait_locations) {
 }
 
 // Namespace zod_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf31334e8, Offset: 0xfc0
 // Size: 0x88
 function private get_wait_locations_in_zone(zone) {
@@ -299,7 +299,7 @@ function private get_wait_locations_in_zone(zone) {
 }
 
 // Namespace zod_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a52bf88, Offset: 0x1050
 // Size: 0x9c
 function get_escape_position_in_current_zone() {

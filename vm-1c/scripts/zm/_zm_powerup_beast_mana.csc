@@ -1,6 +1,6 @@
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_powerups;
 
 #namespace zm_powerup_beast_mana;
 

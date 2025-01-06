@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_tomb_fx;
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1d68
 // Size: 0x4
 function function_8d0ec42e() {
@@ -14,7 +14,7 @@ function function_8d0ec42e() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3a0c32, Offset: 0x1d78
 // Size: 0xa12
 function function_f45953c() {
@@ -113,7 +113,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbabe1f6b, Offset: 0x2798
 // Size: 0x40e
 function function_e6258024() {
@@ -157,7 +157,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x51e2c202, Offset: 0x2bb0
 // Size: 0x9c
 function main() {
@@ -171,7 +171,7 @@ function main() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x205f1e3b, Offset: 0x2c58
 // Size: 0x34
 function function_75cc0fd3() {
@@ -180,7 +180,7 @@ function function_75cc0fd3() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb817ef89, Offset: 0x2c98
 // Size: 0x54
 function function_df3bdbab() {
@@ -189,7 +189,7 @@ function function_df3bdbab() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc466133c, Offset: 0x2cf8
 // Size: 0x80
 function function_1c1d65fb() {
@@ -202,7 +202,7 @@ function function_1c1d65fb() {
 }
 
 // Namespace zm_tomb_fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32e3d0b3, Offset: 0x2d80
 // Size: 0x92
 function function_b9b12551(a_ents) {
@@ -212,7 +212,7 @@ function function_b9b12551(a_ents) {
 }
 
 // Namespace zm_tomb_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2c283d7f, Offset: 0x2e20
 // Size: 0xb2
 function trap_fx_monitor(str_name, str_side) {
@@ -228,12 +228,12 @@ function trap_fx_monitor(str_name, str_side) {
 }
 
 // Namespace zm_tomb_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8654c2a5, Offset: 0x2ee0
 // Size: 0x280
 function function_ea3d061(str_name, str_side) {
     var_498b0d1c = self.angles;
-    var_7f39b8a3 = anglestoforward(var_498b0d1c);
+    vec_forward = anglestoforward(var_498b0d1c);
     if (isdefined(self.var_6d5392e9)) {
         for (i = 0; i < self.var_6d5392e9.size; i++) {
             stopfx(i, self.var_6d5392e9[i]);
@@ -245,15 +245,15 @@ function function_ea3d061(str_name, str_side) {
     }
     a_players = getlocalplayers();
     for (i = 0; i < a_players.size; i++) {
-        self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_start"], self.origin, var_7f39b8a3);
+        self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_start"], self.origin, vec_forward);
         wait 1;
         level.var_d9c7b303 = 1;
         level thread function_b8462abd();
         while (level.var_d9c7b303) {
-            self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_loop"], self.origin, var_7f39b8a3);
+            self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_loop"], self.origin, vec_forward);
             wait 1;
         }
-        self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_start"], self.origin, var_7f39b8a3);
+        self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_start"], self.origin, vec_forward);
         wait 1;
     }
     level waittill(str_side + "off");
@@ -264,7 +264,7 @@ function function_ea3d061(str_name, str_side) {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa91dad0f, Offset: 0x3168
 // Size: 0x14
 function function_b8462abd() {

@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_death_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/codescripts/struct;
 
 #namespace attack_drone;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace attack_drone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1e0
 // Size: 0x4
 function __init__() {

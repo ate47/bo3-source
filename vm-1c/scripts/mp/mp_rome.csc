@@ -1,15 +1,15 @@
-#using scripts/mp/mp_rome_sound;
-#using scripts/mp/mp_rome_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_rome_fx;
+#using scripts/mp/mp_rome_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_rome;
 
 // Namespace mp_rome
-// Params 0, eflags: 0x1 linked
-// Checksum 0x4e994fa, Offset: 0x1d0
+// Params 0, eflags: 0x0
+// Checksum 0x161b55cd, Offset: 0x1d0
 // Size: 0xcc
 function main() {
     mp_rome_fx::main();
@@ -24,8 +24,8 @@ function main() {
 }
 
 // Namespace mp_rome
-// Params 2, eflags: 0x1 linked
-// Checksum 0x3ef854a, Offset: 0x2a8
+// Params 2, eflags: 0x0
+// Checksum 0x98265d09, Offset: 0x2a8
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -54,8 +54,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_rome
-// Params 2, eflags: 0x1 linked
-// Checksum 0xd942e9fb, Offset: 0x378
+// Params 2, eflags: 0x0
+// Checksum 0x271f37a7, Offset: 0x378
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {

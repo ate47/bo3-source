@@ -1,11 +1,11 @@
-#using scripts/cp/_skipto;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_skipto;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace elevator;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace elevator
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x302ca9a0, Offset: 0x318
 // Size: 0x39c
 function __init__() {
@@ -79,7 +79,7 @@ function __init__() {
 }
 
 // Namespace elevator
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59508032, Offset: 0x6c0
 // Size: 0x584
 function function_685e3ca() {
@@ -145,7 +145,7 @@ function function_685e3ca() {
 }
 
 // Namespace elevator
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x90796d1c, Offset: 0xc50
 // Size: 0x134
 function function_dbaa007d(s_start_point) {
@@ -175,7 +175,7 @@ function function_dbaa007d(s_start_point) {
 }
 
 // Namespace elevator
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1bfc28c, Offset: 0xd90
 // Size: 0x150
 function trigger_think(var_8b70705a) {
@@ -201,7 +201,7 @@ function trigger_think(var_8b70705a) {
 }
 
 // Namespace elevator
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x16b19c8f, Offset: 0xee8
 // Size: 0x138
 function function_5eba01bd(var_8b70705a) {
@@ -224,7 +224,7 @@ function function_5eba01bd(var_8b70705a) {
 }
 
 // Namespace elevator
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe5dd8ec5, Offset: 0x1028
 // Size: 0x5c
 function function_f8c94c1b(var_544bc7c7, notify_stop) {
@@ -235,7 +235,7 @@ function function_f8c94c1b(var_544bc7c7, notify_stop) {
 }
 
 // Namespace elevator
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3a0bcd7b, Offset: 0x1090
 // Size: 0x2d4
 function function_9cdfa1cb(var_8b70705a, platform) {
@@ -276,7 +276,7 @@ function function_9cdfa1cb(var_8b70705a, platform) {
 }
 
 // Namespace elevator
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xfce5b524, Offset: 0x1370
 // Size: 0x108
 function function_f8655445(var_8b70705a, direction, platform, v_moveto, v_angles, n_time) {
@@ -293,7 +293,7 @@ function function_f8655445(var_8b70705a, direction, platform, v_moveto, v_angles
 }
 
 // Namespace elevator
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xba4ce7d2, Offset: 0x1480
 // Size: 0x504
 function move_platform(platform_start, var_8b70705a, n_start_delay) {
@@ -353,7 +353,7 @@ function move_platform(platform_start, var_8b70705a, n_start_delay) {
                     continue;
                 }
                 if (self.origin != org.origin) {
-                    speed = function_e9e4fc6f(org, speed);
+                    speed = get_speed(org, speed);
                     time = distance(self.origin, org.origin) / speed;
                     time = time <= 0 ? 1 : time;
                     self moveto(org.origin, time, time / 2, time / 2);
@@ -370,7 +370,7 @@ function move_platform(platform_start, var_8b70705a, n_start_delay) {
 }
 
 // Namespace elevator
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c5020c7, Offset: 0x1990
 // Size: 0x12c
 function stop() {
@@ -389,7 +389,7 @@ function stop() {
 }
 
 // Namespace elevator
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6c21270a, Offset: 0x1ac8
 // Size: 0x124
 function function_8a110bd3(node, var_8b70705a) {
@@ -409,15 +409,15 @@ function function_8a110bd3(node, var_8b70705a) {
 }
 
 // Namespace elevator
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf0f10bbc, Offset: 0x1bf8
 // Size: 0x54
-function function_e9e4fc6f(var_152c3913, speed) {
+function get_speed(path_point, speed) {
     if (speed <= 0) {
         speed = 100;
     }
-    if (isdefined(var_152c3913.speed)) {
-        speed = var_152c3913.speed;
+    if (isdefined(path_point.speed)) {
+        speed = path_point.speed;
     }
     return speed;
 }

@@ -1,5 +1,5 @@
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace cp_doa_bo3_sound;
 

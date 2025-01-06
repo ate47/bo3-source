@@ -1,11 +1,11 @@
-#using scripts/mp/_util;
-#using scripts/mp/_helicopter_sounds;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/music_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_helicopter_sounds;
+#using scripts/mp/_util;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace helicopter_sounds;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbbaec1f0, Offset: 0x690
 // Size: 0x5bc
 function __init__() {
@@ -65,7 +65,7 @@ function vehicle_is_firing_function(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace helicopter_sounds
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x2b9a059a, Offset: 0xcf0
 // Size: 0x28c
 function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, max_vol, max_speed_pitch, min_pitch, max_pitch) {
@@ -98,7 +98,7 @@ function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, ma
 /#
 
     // Namespace helicopter_sounds
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x42ca86df, Offset: 0xf88
     // Size: 0x558
     function command_parser() {
@@ -247,7 +247,7 @@ function init_heli_sounds_heli_guard() {
 }
 
 // Namespace helicopter_sounds
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x350fc11a, Offset: 0x1988
 // Size: 0x64
 function sound_linkto(parent, tag) {
@@ -259,7 +259,7 @@ function sound_linkto(parent, tag) {
 }
 
 // Namespace helicopter_sounds
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x198fc8cd, Offset: 0x19f8
 // Size: 0x38c
 function setup_heli_sounds(bone_location, type, tag, run, dmg1, dmg2, dmg3) {
@@ -290,7 +290,7 @@ function setup_heli_sounds(bone_location, type, tag, run, dmg1, dmg2, dmg3) {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57ed8b38, Offset: 0x1d90
 // Size: 0x234
 function init_terrain_sounds() {
@@ -317,7 +317,7 @@ function init_terrain_sounds() {
 }
 
 // Namespace helicopter_sounds
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x88c9a4ab, Offset: 0x1fd0
 // Size: 0x8c
 function setup_terrain_sounds(surface_type, alias) {
@@ -327,7 +327,7 @@ function setup_terrain_sounds(surface_type, alias) {
 }
 
 // Namespace helicopter_sounds
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6b84b8c3, Offset: 0x2068
 // Size: 0x8c
 function setup_terrain_brass_sounds(surface_type, alias) {
@@ -379,7 +379,7 @@ function start_helicopter_sounds(localclientnum) {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x721ddaab, Offset: 0x22b0
 // Size: 0x5c
 function heli_loop_sound_delete(real_ent) {
@@ -390,7 +390,7 @@ function heli_loop_sound_delete(real_ent) {
 }
 
 // Namespace helicopter_sounds
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x630aa80d, Offset: 0x2318
 // Size: 0x24
 function heli_linkto_sound_ents_delete(localclientnum, entity) {
@@ -398,7 +398,7 @@ function heli_linkto_sound_ents_delete(localclientnum, entity) {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc916a022, Offset: 0x2348
 // Size: 0xbe
 function heli_sound_play(heli_bone) {
@@ -479,7 +479,7 @@ function play_heli_guard_sounds() {
 }
 
 // Namespace helicopter_sounds
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x5ede8830, Offset: 0x27a8
 // Size: 0x45e
 function heli_idle_run_transition(heli_type, heli_part, wait_time, updown) {
@@ -527,7 +527,7 @@ function heli_idle_run_transition(heli_type, heli_part, wait_time, updown) {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92e49ff4, Offset: 0x2c10
 // Size: 0x398
 function terrain_trace_brass() {
@@ -589,7 +589,7 @@ function terrain_trace_brass() {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3424b5d7, Offset: 0x2fb0
 // Size: 0x310
 function terrain_trace() {
@@ -645,7 +645,7 @@ function terrain_trace() {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x26fbc07a, Offset: 0x32c8
 // Size: 0x3f0
 function aircraft_dustkick(localclientnum) {
@@ -719,7 +719,7 @@ function aircraft_dustkick(localclientnum) {
 }
 
 // Namespace helicopter_sounds
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8a7cc0c0, Offset: 0x36c0
 // Size: 0x88
 function play_targeting_sound(play, sound, handle) {
@@ -734,7 +734,7 @@ function play_targeting_sound(play, sound, handle) {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6253a50c, Offset: 0x3750
 // Size: 0x3c
 function play_targeted_sound(play) {
@@ -742,7 +742,7 @@ function play_targeted_sound(play) {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xad4e68af, Offset: 0x3798
 // Size: 0x3c
 function play_locked_sound(play) {
@@ -750,7 +750,7 @@ function play_locked_sound(play) {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x700bdaa3, Offset: 0x37e0
 // Size: 0x3c
 function play_fired_sound(play) {
@@ -773,7 +773,7 @@ function play_leaving_battlefield_alarm(play) {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6f6b505c, Offset: 0x38c0
 // Size: 0xb0
 function get_heli_sound_ent(sound_ent) {
@@ -790,7 +790,7 @@ function get_heli_sound_ent(sound_ent) {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb6034567, Offset: 0x3978
 // Size: 0x2a
 function get_lock_sound_ent() {
@@ -799,7 +799,7 @@ function get_lock_sound_ent() {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x61d55d23, Offset: 0x39b0
 // Size: 0x2a
 function get_leaving_sound_ent() {
@@ -808,7 +808,7 @@ function get_leaving_sound_ent() {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x309a20c3, Offset: 0x39e8
 // Size: 0x4c
 function heli_sound_ent_delete(real_ent) {
@@ -867,7 +867,7 @@ function drone_up_down_transition() {
 }
 
 // Namespace helicopter_sounds
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97e11ba4, Offset: 0x3f70
 // Size: 0x2c
 function qr_ent_cleanup(veh_ent) {
@@ -901,7 +901,7 @@ function drone_rotate_angle(heli_type, heli_part) {
 }
 
 // Namespace helicopter_sounds
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8193a39f, Offset: 0x41e0
 // Size: 0xe4
 function drone_button_watch() {

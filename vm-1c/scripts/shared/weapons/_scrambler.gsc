@@ -1,10 +1,10 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/damagefeedback_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/challenges_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace scrambler;
 
@@ -106,7 +106,7 @@ function function_b8f94770(watcher) {
     while (true) {
         self.maxhealth = 100000;
         self.health = self.maxhealth;
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags);
         if (!isdefined(attacker) || !isplayer(attacker)) {
             continue;
         }

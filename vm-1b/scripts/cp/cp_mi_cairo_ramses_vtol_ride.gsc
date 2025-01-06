@@ -1,35 +1,35 @@
-#using scripts/cp/cp_mi_cairo_ramses_utility;
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
 #using scripts/cp/cp_mi_cairo_ramses_station_fight;
 #using scripts/cp/cp_mi_cairo_ramses_station_walk;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_debug;
+#using scripts/cp/cp_mi_cairo_ramses_utility;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/turret_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/compass;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/compass;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace vtol_ride;
 
@@ -73,7 +73,7 @@ function function_51a2f97e() {
 function function_9520a3b9(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
-        level thread cp_mi_cairo_ramses_station_walk::function_bbd12ed2(0);
+        level thread cp_mi_cairo_ramses_station_walk::scene_cleanup(0);
         exploder::exploder("fx_exploder_vtol_crash");
         namespace_bedc6a60::function_6327cae3();
         level thread scene::play("p7_fxanim_cp_ramses_lotus_towers_hunters_swarm_bundle");
@@ -103,7 +103,7 @@ function main() {
     level thread objectives();
     level thread scenes();
     level thread vo();
-    function_e8e62f90();
+    staging_area();
     level notify(#"hash_f8453165");
     level.var_e32d239b = undefined;
     level.var_6b2d0ae6 = undefined;
@@ -163,7 +163,7 @@ function function_f87b2c29(var_74cd64bc) {
         namespace_bedc6a60::function_eede49df();
         namespace_bedc6a60::function_c5b9bd41("_combat");
         namespace_bedc6a60::function_14b2c542();
-        namespace_391e4301::function_e950228a();
+        ramses_util::function_e950228a();
         level flag::set("ceiling_collapse_complete");
         level notify(#"hash_eae489c0");
         level notify(#"hash_d758e82");
@@ -202,7 +202,7 @@ function function_d61ac79f() {
 // Params 0, eflags: 0x0
 // Checksum 0xc708459e, Offset: 0x22c8
 // Size: 0x1da
-function function_e8e62f90() {
+function staging_area() {
     level thread function_b7170f9e("staging_area_background_vtol", 3);
     function_4199310b();
     function_719a5145();
@@ -210,7 +210,7 @@ function function_e8e62f90() {
     objectives::set("cp_level_ramses_eastern_checkpoint");
     function_bb173a03();
     callback::on_spawned(&function_9778ae44);
-    callback::on_spawned(&namespace_391e4301::function_c3080ff8);
+    callback::on_spawned(&ramses_util::function_c3080ff8);
     level.players function_9778ae44();
     level thread function_8ec9bf83();
     level thread function_4e3398e0();
@@ -320,8 +320,8 @@ function function_bfaa9238(var_d9cd2a00) {
     self endon(#"stop_tether");
     self endon(#"death");
     trigger::wait_till("trig_start_station_exit_tether", "targetname", self);
-    self thread namespace_391e4301::function_24b86d60(level.var_9db406db, "stop_tether", 72, -112, var_d9cd2a00, 1, 66);
-    self thread namespace_391e4301::function_c3080ff8();
+    self thread ramses_util::function_24b86d60(level.var_9db406db, "stop_tether", 72, -112, var_d9cd2a00, 1, 66);
+    self thread ramses_util::function_c3080ff8();
 }
 
 // Namespace vtol_ride
@@ -497,7 +497,7 @@ function function_8ec9bf83() {
     level endon(#"hash_e99a85b4");
     var_c4a1b346 = getent("staging_area_ai_cleanup_aitrig", "targetname");
     while (true) {
-        ai_cleanup = var_c4a1b346 waittill(#"trigger");
+        var_c4a1b346 waittill(#"trigger", ai_cleanup);
         if (isai(ai_cleanup)) {
             ai_cleanup delete();
         }
@@ -542,8 +542,8 @@ function function_7f4396ab(var_4b5be224) {
 // Params 1, eflags: 0x0
 // Checksum 0x542714fa, Offset: 0x3230
 // Size: 0x5a
-function function_49a7f92a(var_6c5c89e1) {
-    var_9de10fe3 = getnode(var_6c5c89e1, "targetname");
+function function_49a7f92a(str_node) {
+    var_9de10fe3 = getnode(str_node, "targetname");
     self setgoal(var_9de10fe3, 1);
     self waittill(#"goal");
     self clearforcedgoal();
@@ -1154,7 +1154,7 @@ function function_8ebbac0d(e_player) {
 // Size: 0x28
 function function_3bc165a2(var_35a302af) {
     var_35a302af endon(#"hash_19304798");
-    e_player = self waittill(#"hash_9292e8f0");
+    self waittill(#"hash_9292e8f0", e_player);
     return e_player;
 }
 

@@ -1,16 +1,16 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_moon_ffotd;
 
 // Namespace zm_moon_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x79bc6f84, Offset: 0x220
 // Size: 0x1c
 function main_start() {
@@ -18,7 +18,7 @@ function main_start() {
 }
 
 // Namespace zm_moon_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xffc7c037, Offset: 0x248
 // Size: 0x43c
 function main_end() {
@@ -40,7 +40,7 @@ function main_end() {
 }
 
 // Namespace zm_moon_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7fe1b62, Offset: 0x690
 // Size: 0x3a
 function function_b620b1d6() {

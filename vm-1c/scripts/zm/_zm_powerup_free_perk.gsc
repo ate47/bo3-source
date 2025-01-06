@@ -1,33 +1,33 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_blockers;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_powerup_free_perk;
 
 // Namespace zm_powerup_free_perk
 // Params 0, eflags: 0x2
-// Checksum 0xff24fb40, Offset: 0x310
+// Checksum 0xe7d34556, Offset: 0x310
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_powerup_free_perk", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_free_perk
-// Params 0, eflags: 0x1 linked
-// Checksum 0xba19622e, Offset: 0x350
+// Params 0, eflags: 0x0
+// Checksum 0x8ca9df50, Offset: 0x350
 // Size: 0x9c
 function __init__() {
     zm_powerups::register_powerup("free_perk", &grab_free_perk);
@@ -37,16 +37,16 @@ function __init__() {
 }
 
 // Namespace zm_powerup_free_perk
-// Params 1, eflags: 0x1 linked
-// Checksum 0x96523314, Offset: 0x3f8
+// Params 1, eflags: 0x0
+// Checksum 0x1b7d60af, Offset: 0x3f8
 // Size: 0x24
 function grab_free_perk(player) {
     level thread function_bce49437(self);
 }
 
 // Namespace zm_powerup_free_perk
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf3252f3, Offset: 0x428
+// Params 1, eflags: 0x0
+// Checksum 0x322affb7, Offset: 0x428
 // Size: 0x196
 function function_bce49437(item) {
     players = getplayers();
@@ -70,8 +70,8 @@ function function_bce49437(item) {
 }
 
 // Namespace zm_powerup_free_perk
-// Params 1, eflags: 0x1 linked
-// Checksum 0xcdf32e41, Offset: 0x5c8
+// Params 1, eflags: 0x0
+// Checksum 0x6dad2831, Offset: 0x5c8
 // Size: 0xe4
 function function_6754a666(perk) {
     self endon(#"disconnect");

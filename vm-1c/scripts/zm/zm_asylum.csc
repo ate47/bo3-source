@@ -1,39 +1,39 @@
-#using scripts/zm/zm_asylum_fx;
-#using scripts/zm/zm_asylum_ffotd;
-#using scripts/zm/_zm_trap_electric;
-#using scripts/zm/_zm_audio_zhd;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_fire_sale;
-#using scripts/zm/_zm_powerup_carpenter;
-#using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_perk_deadshot;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_perk_widows_wine;
-#using scripts/zm/_zm_weap_tesla;
-#using scripts/zm/_zm_weap_cymbal_monkey;
-#using scripts/zm/_zm_weap_bouncingbetty;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_radio;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/visionset_mgr_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/music_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_audio_zhd;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
+#using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_perk_widows_wine;
+#using scripts/zm/_zm_powerup_carpenter;
+#using scripts/zm/_zm_powerup_double_points;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_radio;
+#using scripts/zm/_zm_trap_electric;
+#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_weap_cymbal_monkey;
+#using scripts/zm/_zm_weap_tesla;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_asylum_ffotd;
+#using scripts/zm/zm_asylum_fx;
 
 #namespace zm_asylum;
 
@@ -47,7 +47,7 @@ function autoexec function_d9af860b() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2eaa74fd, Offset: 0x6f8
 // Size: 0x1bc
 function main() {
@@ -73,7 +73,7 @@ function main() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x217b1330, Offset: 0x8c0
 // Size: 0xdc
 function init_clientfields() {
@@ -83,7 +83,7 @@ function init_clientfields() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7fd86da, Offset: 0x9a8
 // Size: 0x24
 function function_b211e563() {
@@ -92,7 +92,7 @@ function function_b211e563() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa780ea69, Offset: 0x9d8
 // Size: 0x24
 function include_weapons() {
@@ -100,7 +100,7 @@ function include_weapons() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbae1fc32, Offset: 0xa08
 // Size: 0xca
 function function_d87a7dcc() {
@@ -118,7 +118,7 @@ function function_d87a7dcc() {
 }
 
 // Namespace zm_asylum
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x61fe4a2c, Offset: 0xae0
 // Size: 0x88
 function function_d56a2c4b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -133,7 +133,7 @@ function function_d56a2c4b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43d15260, Offset: 0xb70
 // Size: 0x58
 function function_21212316() {
@@ -144,7 +144,7 @@ function function_21212316() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x697cab3f, Offset: 0xbd0
 // Size: 0x74
 function function_c9207335() {
@@ -155,12 +155,12 @@ function function_c9207335() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdab0934b, Offset: 0xc50
 // Size: 0x94
 function function_60a32834() {
     while (true) {
-        trigplayer = self waittill(#"trigger");
+        self waittill(#"trigger", trigplayer);
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
@@ -173,7 +173,7 @@ function function_60a32834() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84694b1b, Offset: 0xcf0
 // Size: 0xf8
 function function_d667714e() {
@@ -182,7 +182,7 @@ function function_d667714e() {
     level.var_eb526c90 = spawn(0, (0, 0, 0), "script_origin");
     level.var_9433cf5a = level.var_eb526c90 playloopsound(level.var_b6342abd, 2);
     while (true) {
-        location = level waittill(#"hash_51d7bc7c");
+        level waittill(#"hash_51d7bc7c", location);
         level.var_6d9d81aa = "mus_asylum_underscore_" + location;
         if (level.var_6d9d81aa != level.var_b6342abd) {
             level thread function_b234849(level.var_6d9d81aa);
@@ -192,7 +192,7 @@ function function_d667714e() {
 }
 
 // Namespace zm_asylum
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3a920e5b, Offset: 0xdf0
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
@@ -203,7 +203,7 @@ function function_b234849(var_6d9d81aa) {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcc7c49f1, Offset: 0xe60
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -232,7 +232,7 @@ function startzmbspawnersoundloops() {
 }
 
 // Namespace zm_asylum
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d058adc, Offset: 0xfc8
 // Size: 0x16c
 function soundloopthink() {

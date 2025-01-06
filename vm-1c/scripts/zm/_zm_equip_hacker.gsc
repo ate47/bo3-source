@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_equip_hacker;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7fd05cc3, Offset: 0x3d0
 // Size: 0x12c
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f76f0a5, Offset: 0x508
 // Size: 0x34
 function __main__() {
@@ -49,7 +49,7 @@ function __main__() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71e35195, Offset: 0x548
 // Size: 0x34
 function function_fa12cef4() {
@@ -58,7 +58,7 @@ function function_fa12cef4() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfbb38e7d, Offset: 0x588
 // Size: 0x1b6
 function function_c35fff84() {
@@ -87,7 +87,7 @@ function function_c35fff84() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x68f4a329, Offset: 0x748
 // Size: 0x18c
 function function_9049492b() {
@@ -119,7 +119,7 @@ function function_9049492b() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5c9cb870, Offset: 0x8e0
 // Size: 0xcc
 function function_7fae632a() {
@@ -144,7 +144,7 @@ function function_7fae632a() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8d88849f, Offset: 0x9b8
 // Size: 0x88
 function function_52f0c27c() {
@@ -157,7 +157,7 @@ function function_52f0c27c() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17107939, Offset: 0xa48
 // Size: 0xe8
 function function_cedb49a2() {
@@ -176,7 +176,7 @@ function function_cedb49a2() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce47b176, Offset: 0xb38
 // Size: 0x12c
 function function_eebaacb4() {
@@ -200,7 +200,7 @@ function function_eebaacb4() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x50de5e97, Offset: 0xc70
 // Size: 0x270
 function function_70b869d1() {
@@ -257,7 +257,7 @@ function function_c0b1504() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa42406a, Offset: 0xf88
 // Size: 0x70
 function function_acac2fc2() {
@@ -271,10 +271,10 @@ function function_acac2fc2() {
 }
 
 // Namespace zm_equip_hacker
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xe9cdd9ac, Offset: 0x1000
 // Size: 0x1ee
-function function_cf413d9a(name, var_7f647925, qualifier_func) {
+function function_cf413d9a(name, callback_func, qualifier_func) {
     structs = struct::get_array(name, "script_noteworthy");
     if (!isdefined(structs)) {
         println("<dev string:x2a>" + name + "<dev string:x61>");
@@ -282,7 +282,7 @@ function function_cf413d9a(name, var_7f647925, qualifier_func) {
     }
     for (i = 0; i < structs.size; i++) {
         if (!isinarray(level.var_c919fdca, structs[i])) {
-            structs[i].var_67f708a8 = var_7f647925;
+            structs[i].var_67f708a8 = callback_func;
             structs[i].var_73dfc737 = qualifier_func;
             structs[i].pooled = level.var_826a0c5c;
             if (isdefined(structs[i].targetname)) {
@@ -299,12 +299,12 @@ function function_cf413d9a(name, var_7f647925, qualifier_func) {
 }
 
 // Namespace zm_equip_hacker
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x86a188ed, Offset: 0x11f8
 // Size: 0x114
-function function_e6296c4e(struct, var_7f647925, qualifier_func) {
+function function_e6296c4e(struct, callback_func, qualifier_func) {
     if (!isinarray(level.var_c919fdca, struct)) {
-        struct.var_67f708a8 = var_7f647925;
+        struct.var_67f708a8 = callback_func;
         struct.var_73dfc737 = qualifier_func;
         struct.pooled = level.var_826a0c5c;
         if (isdefined(struct.targetname)) {
@@ -319,12 +319,12 @@ function function_e6296c4e(struct, var_7f647925, qualifier_func) {
 }
 
 // Namespace zm_equip_hacker
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x774f82ef, Offset: 0x1318
 // Size: 0x4e
-function function_66764564(struct, var_7f647925, qualifier_func) {
+function function_66764564(struct, callback_func, qualifier_func) {
     level.var_826a0c5c = 1;
-    function_e6296c4e(struct, var_7f647925, qualifier_func);
+    function_e6296c4e(struct, callback_func, qualifier_func);
     level.var_826a0c5c = undefined;
 }
 
@@ -332,14 +332,14 @@ function function_66764564(struct, var_7f647925, qualifier_func) {
 // Params 3, eflags: 0x0
 // Checksum 0xd7ed9cc1, Offset: 0x1370
 // Size: 0x4e
-function function_e1b92ee4(name, var_7f647925, qualifier_func) {
+function function_e1b92ee4(name, callback_func, qualifier_func) {
     level.var_826a0c5c = 1;
-    function_cf413d9a(name, var_7f647925, qualifier_func);
+    function_cf413d9a(name, callback_func, qualifier_func);
     level.var_826a0c5c = undefined;
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x691dd008, Offset: 0x13c8
 // Size: 0x194
 function function_fcbe2f17(struct) {
@@ -386,7 +386,7 @@ function function_ba04ea11(noteworthy) {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4fec3f9e, Offset: 0x16e0
 // Size: 0x19c
 function function_a7c3e09a() {
@@ -414,7 +414,7 @@ function function_a7c3e09a() {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbaf1c376, Offset: 0x1888
 // Size: 0x176
 function is_facing(facee) {
@@ -434,7 +434,7 @@ function is_facing(facee) {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1fea1f67, Offset: 0x1a08
 // Size: 0x2e8
 function function_a5a73067(hackable) {
@@ -496,7 +496,7 @@ function function_a5a73067(hackable) {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6fc165d5, Offset: 0x1cf8
 // Size: 0x3a
 function function_fccf6969(hackable) {
@@ -504,7 +504,7 @@ function function_fccf6969(hackable) {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9cad803, Offset: 0x1d40
 // Size: 0xac
 function function_6dc470f1() {
@@ -522,7 +522,7 @@ function function_6dc470f1() {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xafab32ac, Offset: 0x1df8
 // Size: 0x74
 function function_99286508(hackable) {
@@ -537,7 +537,7 @@ function function_99286508(hackable) {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1879c239, Offset: 0x1e78
 // Size: 0x41a
 function function_ff133197(hackable) {
@@ -604,7 +604,7 @@ function function_ff133197(hackable) {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x83e1d548, Offset: 0x22a0
 // Size: 0x4c
 function function_9fa8ae4a(player) {
@@ -615,7 +615,7 @@ function function_9fa8ae4a(player) {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2428e82a, Offset: 0x22f8
 // Size: 0x48a
 function function_ff2d4d2b() {
@@ -701,7 +701,7 @@ function function_ff2d4d2b() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1db0a2b4, Offset: 0x2790
 // Size: 0xfc
 function function_bba1feec() {
@@ -718,7 +718,7 @@ function function_bba1feec() {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x559c4d94, Offset: 0x2898
 // Size: 0x2c
 function function_d646d3ee(player) {
@@ -727,7 +727,7 @@ function function_d646d3ee(player) {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7403287, Offset: 0x28d0
 // Size: 0x80
 function function_b743c597() {
@@ -735,7 +735,7 @@ function function_b743c597() {
     self endon(#"hash_36caa6f");
     self endon(#"disconnect");
     while (true) {
-        equipment = self waittill(#"player_given");
+        self waittill(#"player_given", equipment);
         if (equipment == level.var_bbd4901d) {
             self clientfield::set_player_uimodel("hudItems.showDpadDown_HackTool", 1);
         }
@@ -743,7 +743,7 @@ function function_b743c597() {
 }
 
 // Namespace zm_equip_hacker
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1dde1074, Offset: 0x2958
 // Size: 0x60
 function function_778301bd() {
@@ -757,7 +757,7 @@ function function_778301bd() {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xacfb6cc, Offset: 0x29c0
 // Size: 0x6c
 function function_2d6b9312(hacker) {
@@ -770,7 +770,7 @@ function function_2d6b9312(hacker) {
 }
 
 // Namespace zm_equip_hacker
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xac40880d, Offset: 0x2a38
 // Size: 0xa8
 function function_945b65f3(player) {
@@ -790,7 +790,7 @@ function function_945b65f3(player) {
 }
 
 // Namespace zm_equip_hacker
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd7af7019, Offset: 0x2ae8
 // Size: 0x19c
 function function_4edfe9fb(var_70d18318, var_b98175e6) {

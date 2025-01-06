@@ -1,17 +1,17 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_heatseekingmissile;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_heatseekingmissile;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace hacker_tool;
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0b73156, Offset: 0x380
 // Size: 0x13c
 function init_shared() {
@@ -33,7 +33,7 @@ function init_shared() {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb3632ee1, Offset: 0x4c8
 // Size: 0x5c
 function on_player_spawned() {
@@ -44,7 +44,7 @@ function on_player_spawned() {
 }
 
 // Namespace hacker_tool
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x24382585, Offset: 0x530
 // Size: 0x244
 function clearhackertarget(weapon, successfulhack, spawned) {
@@ -87,7 +87,7 @@ function clearhackertarget(weapon, successfulhack, spawned) {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc00149a3, Offset: 0x780
 // Size: 0x690
 function watchhackertoolfired() {
@@ -95,7 +95,7 @@ function watchhackertoolfired() {
     self endon(#"death");
     self endon(#"killhackermonitor");
     while (true) {
-        hackertooltarget, weapon = self waittill(#"hacker_tool_fired");
+        self waittill(#"hacker_tool_fired", hackertooltarget, weapon);
         if (isdefined(hackertooltarget)) {
             if (isentityhackablecarepackage(hackertooltarget)) {
                 scoreevents::givecratecapturemedal(hackertooltarget, self);
@@ -166,14 +166,14 @@ function watchhackertoolfired() {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4b21a8e6, Offset: 0xe18
 // Size: 0x110
 function function_256a0863() {
     self endon(#"disconnect");
     self endon(#"death");
     for (;;) {
-        weapon = self waittill(#"grenade_pullback");
+        self waittill(#"grenade_pullback", weapon);
         if (weapon.rootweapon == level.weaponhackertool) {
             wait 0.05;
             currentoffhand = self getcurrentoffhand();
@@ -188,7 +188,7 @@ function function_256a0863() {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xac2d202d, Offset: 0xf30
 // Size: 0xa0
 function watchhackertoolinterrupt(weapon) {
@@ -198,7 +198,7 @@ function watchhackertoolinterrupt(weapon) {
     self endon(#"weapon_change");
     self endon(#"grenade_fire");
     while (true) {
-        var_65024d01 = level waittill(#"use_interrupt");
+        level waittill(#"use_interrupt", var_65024d01);
         if (self.hackertooltarget == var_65024d01) {
             clearhackertarget(weapon, 0, 0);
         }
@@ -207,7 +207,7 @@ function watchhackertoolinterrupt(weapon) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3969a75f, Offset: 0xfd8
 // Size: 0xb4
 function watchhackertoolend(weapon) {
@@ -220,7 +220,7 @@ function watchhackertoolend(weapon) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x65ebe9f8, Offset: 0x1098
 // Size: 0x11c
 function watchforgrenadefire(weapon) {
@@ -229,7 +229,7 @@ function watchforgrenadefire(weapon) {
     self endon(#"weapon_change");
     self endon(#"death");
     while (true) {
-        grenade_instance, grenade_weapon, respawnfromhack = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade_instance, grenade_weapon, respawnfromhack);
         if (isdefined(respawnfromhack) && respawnfromhack) {
             continue;
         }
@@ -245,7 +245,7 @@ function watchforgrenadefire(weapon) {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd1882420, Offset: 0x11c0
 // Size: 0x64
 function playhackertoolsoundloop() {
@@ -257,7 +257,7 @@ function playhackertoolsoundloop() {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3f039fc7, Offset: 0x1230
 // Size: 0x36
 function stophackertoolsoundloop() {
@@ -267,7 +267,7 @@ function stophackertoolsoundloop() {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x30b7c789, Offset: 0x1270
 // Size: 0x990
 function hackertooltargetloop(weapon) {
@@ -405,7 +405,7 @@ function hackertooltargetloop(weapon) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa9ad2c72, Offset: 0x1c08
 // Size: 0x90
 function watchtargetentityupdate(besttarget) {
@@ -415,13 +415,13 @@ function watchtargetentityupdate(besttarget) {
     self endon(#"watchtargetentityupdate");
     self endon(#"clearhackertarget");
     besttarget endon(#"death");
-    newentity = besttarget waittill(#"hackertool_update_ent");
+    besttarget waittill(#"hackertool_update_ent", newentity);
     heatseekingmissile::initlockfield(newentity);
     self.hackertooltarget = newentity;
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd5a06b74, Offset: 0x1ca0
 // Size: 0x39a
 function getbesthackertooltarget(weapon) {
@@ -483,7 +483,7 @@ function getbesthackertooltarget(weapon) {
 }
 
 // Namespace hacker_tool
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7f0cab, Offset: 0x2048
 // Size: 0x66
 function cantargetentity(target, weapon) {
@@ -497,7 +497,7 @@ function cantargetentity(target, weapon) {
 }
 
 // Namespace hacker_tool
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd900a690, Offset: 0x20b8
 // Size: 0xba
 function iswithinhackertoolreticle(target, weapon) {
@@ -510,7 +510,7 @@ function iswithinhackertoolreticle(target, weapon) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97dccd21, Offset: 0x2180
 // Size: 0x1f6
 function hackingtimescale(target) {
@@ -537,7 +537,7 @@ function hackingtimescale(target) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x69e6e6c7, Offset: 0x2380
 // Size: 0x92
 function hackingtimenolineofsightscale(target) {
@@ -550,7 +550,7 @@ function hackingtimenolineofsightscale(target) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6328526b, Offset: 0x2420
 // Size: 0xec
 function isentityhackableweaponobject(entity) {
@@ -572,7 +572,7 @@ function isentityhackableweaponobject(entity) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x60700721, Offset: 0x2518
 // Size: 0xe2
 function getweaponobjecthackerradius(entity) {
@@ -589,7 +589,7 @@ function getweaponobjecthackerradius(entity) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c257cd8, Offset: 0x2608
 // Size: 0xe2
 function getweaponobjecthacktimems(entity) {
@@ -606,7 +606,7 @@ function getweaponobjecthacktimems(entity) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7fa0d92d, Offset: 0x26f8
 // Size: 0x42
 function isentityhackablecarepackage(entity) {
@@ -617,7 +617,7 @@ function isentityhackablecarepackage(entity) {
 }
 
 // Namespace hacker_tool
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8536cd75, Offset: 0x2748
 // Size: 0x176
 function isvalidhackertooltarget(ent, weapon, allowhacked) {
@@ -645,7 +645,7 @@ function isvalidhackertooltarget(ent, weapon, allowhacked) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7be46e6a, Offset: 0x28c8
 // Size: 0x3a
 function isentitypreviouslyhacked(entity) {
@@ -656,7 +656,7 @@ function isentitypreviouslyhacked(entity) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa93fd6f3, Offset: 0x2910
 // Size: 0x1a0
 function hackersoftsighttest(weapon) {
@@ -688,7 +688,7 @@ function hackersoftsighttest(weapon) {
 }
 
 // Namespace hacker_tool
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfc192f06, Offset: 0x2ab8
 // Size: 0xa2
 function registerwithhackertool(radius, hacktimems) {
@@ -708,7 +708,7 @@ function registerwithhackertool(radius, hacktimems) {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x935fc665, Offset: 0x2b68
 // Size: 0x2c
 function watchhackableentitydeath() {
@@ -717,7 +717,7 @@ function watchhackableentitydeath() {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf309d80b, Offset: 0x2ba0
 // Size: 0x10c
 function gethackertoolinnerradius(target) {
@@ -736,7 +736,7 @@ function gethackertoolinnerradius(target) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6a8a3c79, Offset: 0x2cb8
 // Size: 0x10c
 function gethackertoolouterradius(target) {
@@ -755,7 +755,7 @@ function gethackertoolouterradius(target) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x995590c0, Offset: 0x2dd0
 // Size: 0x168
 function gethacktime(target) {
@@ -780,7 +780,7 @@ function gethacktime(target) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f16001f, Offset: 0x2f40
 // Size: 0x168
 function gethackoutertime(target) {
@@ -805,7 +805,7 @@ function gethackoutertime(target) {
 }
 
 // Namespace hacker_tool
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9e10ee08, Offset: 0x30b0
 // Size: 0x8c
 function getlockontime(target, weapon) {

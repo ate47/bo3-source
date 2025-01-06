@@ -1,25 +1,25 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_challenges;
-#using scripts/shared/ai_shared;
+#using scripts/cp/cybercom/_cybercom;
 #using scripts/cp/cybercom/_cybercom_gadget;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/ai_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/shared/statemachine_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_player;
 #using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
 #namespace namespace_9c3956fd;
 
 // Namespace namespace_9c3956fd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb36b509f, Offset: 0x528
 // Size: 0x34
 function init() {
@@ -27,7 +27,7 @@ function init() {
 }
 
 // Namespace namespace_9c3956fd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0ec5e2b, Offset: 0x568
 // Size: 0x17c
 function main() {
@@ -44,7 +44,7 @@ function main() {
 }
 
 // Namespace namespace_9c3956fd
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x15fd0bc9, Offset: 0x6f0
 // Size: 0xc
 function function_875da84b(slot) {
@@ -52,7 +52,7 @@ function function_875da84b(slot) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa557bc78, Offset: 0x708
 // Size: 0x14
 function function_8d01efb6(slot, weapon) {
@@ -60,7 +60,7 @@ function function_8d01efb6(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4053b4c, Offset: 0x728
 // Size: 0x154
 function function_bdb47551(slot, weapon) {
@@ -77,7 +77,7 @@ function function_bdb47551(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x56ebe727, Offset: 0x888
 // Size: 0x52
 function function_39ea6a1b(slot, weapon) {
@@ -87,7 +87,7 @@ function function_39ea6a1b(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x8e8
 // Size: 0x4
 function function_5d2fec30() {
@@ -95,7 +95,7 @@ function function_5d2fec30() {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc5b2ae50, Offset: 0x8f8
 // Size: 0x54
 function _on(slot, weapon) {
@@ -104,7 +104,7 @@ function _on(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x26fa9531, Offset: 0x958
 // Size: 0x3a
 function _off(slot, weapon) {
@@ -113,7 +113,7 @@ function _off(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc0a06d7e, Offset: 0x9a0
 // Size: 0xa8
 function function_4135a1c4(slot, weapon) {
@@ -125,7 +125,7 @@ function function_4135a1c4(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xeba66962, Offset: 0xa50
 // Size: 0x2bc
 function private function_602b28e9(target) {
@@ -163,7 +163,7 @@ function private function_602b28e9(target) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4ec68eaa, Offset: 0xd18
 // Size: 0x52
 function private function_8aac802c(weapon) {
@@ -171,7 +171,7 @@ function private function_8aac802c(weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xb9a64992, Offset: 0xd78
 // Size: 0x2a4
 function private function_da7fe5ea(slot, weapon) {
@@ -208,7 +208,7 @@ function private function_da7fe5ea(slot, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x34930fab, Offset: 0x1028
 // Size: 0xe4
 function private function_586fec95(attacker, var_8e113fac, weapon) {
@@ -222,7 +222,7 @@ function private function_586fec95(attacker, var_8e113fac, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x6ecf571a, Offset: 0x1118
 // Size: 0x1d0
 function private function_609fcb0a(attacker, var_8e113fac, weapon) {
@@ -233,15 +233,15 @@ function private function_609fcb0a(attacker, var_8e113fac, weapon) {
     }
     self clientfield::set("forced_malfunction", 1);
     self.is_disabled = 1;
-    var_c1972f81 = 100;
+    miss = 100;
     while (isalive(self) && gettime() < var_8e113fac) {
-        if (getdvarint("scr_malfunction_rate_of_failure", 25) + var_c1972f81 > randomint(100)) {
-            var_c1972f81 = 0;
+        if (getdvarint("scr_malfunction_rate_of_failure", 25) + miss > randomint(100)) {
+            miss = 0;
             self dodamage(5, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
             self waittillmatch(#"bhtn_action_terminate", "specialpain");
             continue;
         }
-        var_c1972f81 += 10;
+        miss += 10;
         wait randomintrange(1, 3);
     }
     self clientfield::set("forced_malfunction", 0);
@@ -249,7 +249,7 @@ function private function_609fcb0a(attacker, var_8e113fac, weapon) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xfa12ee08, Offset: 0x12f0
 // Size: 0x55c
 function private function_91adcf0e(attacker, var_ba115ce0) {
@@ -317,7 +317,7 @@ function private function_91adcf0e(attacker, var_ba115ce0) {
 }
 
 // Namespace namespace_9c3956fd
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x948cf286, Offset: 0x1858
 // Size: 0x2a2
 function function_638ad739(target, var_9bc2efcb) {

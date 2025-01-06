@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_projectile_vomiting;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcc0eaea8, Offset: 0x288
 // Size: 0xc4
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb59a22ba, Offset: 0x358
 // Size: 0x10c
 function function_6ac13208(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -49,7 +49,7 @@ function function_6ac13208(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3d371b8d, Offset: 0x470
 // Size: 0x1c
 function function_6d325051() {

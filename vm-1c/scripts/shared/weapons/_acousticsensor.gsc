@@ -1,11 +1,11 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace acousticsensor;
 
@@ -103,7 +103,7 @@ function function_1e59bb1a(watcher) {
     while (true) {
         self.maxhealth = 100000;
         self.health = self.maxhealth;
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags);
         if (!isdefined(attacker) || !isplayer(attacker)) {
             continue;
         }

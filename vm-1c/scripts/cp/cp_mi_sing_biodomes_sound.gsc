@@ -1,11 +1,11 @@
-#using scripts/shared/music_shared;
-#using scripts/cp/voice/voice_biodomes;
 #using scripts/codescripts/struct;
+#using scripts/cp/voice/voice_biodomes;
+#using scripts/shared/music_shared;
 
 #namespace cp_mi_sing_biodomes_sound;
 
 // Namespace cp_mi_sing_biodomes_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb654e7f9, Offset: 0x178
 // Size: 0x2c
 function main() {
@@ -14,19 +14,19 @@ function main() {
 }
 
 // Namespace cp_mi_sing_biodomes_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x763566bc, Offset: 0x1b0
 // Size: 0x5c
 function function_ced15c18() {
     wait 2;
-    var_a66f2065 = spawn("script_origin", (15049, 15030, -120));
-    var_a66f2065 playloopsound("mus_bar_background");
+    sound_org = spawn("script_origin", (15049, 15030, -120));
+    sound_org playloopsound("mus_bar_background");
 }
 
 #namespace namespace_f1b4cbbc;
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf8ed7d8d, Offset: 0x218
 // Size: 0x1c
 function function_973b77f9() {
@@ -34,7 +34,7 @@ function function_973b77f9() {
 }
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b7c4d9e, Offset: 0x240
 // Size: 0x1c
 function function_f936f64e() {
@@ -42,7 +42,7 @@ function function_f936f64e() {
 }
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xacbd6feb, Offset: 0x268
 // Size: 0x1c
 function function_fa2e45b8() {
@@ -50,7 +50,7 @@ function function_fa2e45b8() {
 }
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc53e4e01, Offset: 0x290
 // Size: 0x1c
 function function_6c35b4f3() {
@@ -66,7 +66,7 @@ function function_ac7f09b1() {
 }
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc357b09c, Offset: 0x2e0
 // Size: 0x1c
 function function_2e34977e() {
@@ -82,7 +82,7 @@ function function_ae96b33c() {
 }
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca5e675c, Offset: 0x330
 // Size: 0x1c
 function function_46333a8a() {
@@ -114,7 +114,7 @@ function function_11139d81() {
 }
 
 // Namespace namespace_f1b4cbbc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfdacb23a, Offset: 0x3d0
 // Size: 0x1c
 function function_3919d226() {

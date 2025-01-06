@@ -1,34 +1,34 @@
-#using scripts/zm/_zm_powerups;
+#using scripts/shared/ai/archetype_cover_utility;
+#using scripts/shared/ai/archetype_locomotion_utility;
+#using scripts/shared/ai/archetype_mocomps_utility;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/ai_blackboard;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/ai_squads;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/systems/shared;
 #using scripts/shared/ai/zombie_death;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_laststand;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameskill_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/zm/_zm;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
 #using scripts/zm/_zm_spawner;
 #using scripts/zm/archetype_zod_companion_interface;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/ai/systems/ai_squads;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai/systems/ai_blackboard;
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/archetype_mocomps_utility;
-#using scripts/shared/ai/archetype_locomotion_utility;
-#using scripts/shared/ai/archetype_cover_utility;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/gameskill_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/ai_shared;
 
 #namespace archetype_zod_companion;
 
@@ -47,7 +47,7 @@ function autoexec main() {
 #namespace zodcompanionbehavior;
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x436cef15, Offset: 0xab8
 // Size: 0x2ac
 function registerbehaviorscriptfunctions() {
@@ -89,7 +89,7 @@ function private mocompignorepainfaceenemyterminate(entity, mocompanim, mocompan
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x2becaace, Offset: 0xe40
 // Size: 0x1a4
 function private archetypezodcompanionblackboardinit() {
@@ -122,7 +122,7 @@ function private archetypezodcompanionblackboardinit() {
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x592af342, Offset: 0xff0
 // Size: 0xa6
 function private function_c82dd93c() {
@@ -140,7 +140,7 @@ function private function_c82dd93c() {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x81c474f3, Offset: 0x10a0
 // Size: 0x44
 function private zodcompaniondelaymovement(entity) {
@@ -148,7 +148,7 @@ function private zodcompaniondelaymovement(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x97ffad11, Offset: 0x10f0
 // Size: 0x5c
 function private zodcompanionmovement(entity) {
@@ -158,7 +158,7 @@ function private zodcompanionmovement(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d3ca24a, Offset: 0x1158
 // Size: 0x156
 function zodcompanioncanjuke(entity) {
@@ -176,7 +176,7 @@ function zodcompanioncanjuke(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18865039, Offset: 0x12b8
 // Size: 0x31e
 function zodcompanioncanpreemptivejuke(entity) {
@@ -217,7 +217,7 @@ function zodcompanioncanpreemptivejuke(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe9bbcb3d, Offset: 0x15e0
 // Size: 0xae
 function private _isvalidplayer(player) {
@@ -228,7 +228,7 @@ function private _isvalidplayer(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x84d9cf2a, Offset: 0x1698
 // Size: 0x142
 function private _findclosest(entity, entities) {
@@ -248,7 +248,7 @@ function private _findclosest(entity, entities) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x12b9842d, Offset: 0x17e8
 // Size: 0x434
 function private zodcompaniontargetservice(entity) {
@@ -303,7 +303,7 @@ function private zodcompaniontargetservice(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfd51892b, Offset: 0x1c28
 // Size: 0x2c
 function private zodcompaniontacticalwalkactionstart(entity) {
@@ -311,7 +311,7 @@ function private zodcompaniontacticalwalkactionstart(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xebfc955b, Offset: 0x1c60
 // Size: 0x54
 function private zodcompanionabletoshootcondition(entity) {
@@ -319,7 +319,7 @@ function private zodcompanionabletoshootcondition(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe4b8c005, Offset: 0x1cc0
 // Size: 0x2e
 function private zodcompanionshouldtacticalwalk(entity) {
@@ -330,7 +330,7 @@ function private zodcompanionshouldtacticalwalk(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfc2fb338, Offset: 0x1cf8
 // Size: 0xac
 function private zodcompanionjukeinitialize(entity) {
@@ -343,7 +343,7 @@ function private zodcompanionjukeinitialize(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xce04fbd1, Offset: 0x1db0
 // Size: 0x68
 function private zodcompanionpreemptivejuketerminate(entity) {
@@ -352,7 +352,7 @@ function private zodcompanionpreemptivejuketerminate(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x913ad5f5, Offset: 0x1e20
 // Size: 0x2f2
 function private zodcompaniontryreacquireservice(entity) {
@@ -407,7 +407,7 @@ function private zodcompaniontryreacquireservice(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x34c7f7bf, Offset: 0x2120
 // Size: 0x7a4
 function private manage_companion_movement(entity) {
@@ -497,7 +497,7 @@ function private manage_companion_movement(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf33e182, Offset: 0x28d0
 // Size: 0x1d6
 function private zodcompanioncollisionservice(entity) {
@@ -530,7 +530,7 @@ function private zodcompanioncollisionservice(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xf5317ee6, Offset: 0x2ab0
 // Size: 0x44
 function private function_d04291cf() {
@@ -563,7 +563,7 @@ function private function_f62bd05c(target_entity, max_distance) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4509f5f1, Offset: 0x2c48
 // Size: 0x50
 function private function_34117adf(var_5935e1b9) {
@@ -575,7 +575,7 @@ function private function_34117adf(var_5935e1b9) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9b0a229, Offset: 0x2ca0
 // Size: 0xb0
 function private function_3463b8c2(var_ee6ad78e) {
@@ -589,7 +589,7 @@ function private function_3463b8c2(var_ee6ad78e) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x55ff1ae9, Offset: 0x2d58
 // Size: 0x1cc
 function private pick_new_movement_point() {
@@ -614,7 +614,7 @@ function private pick_new_movement_point() {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9511e5c1, Offset: 0x2f30
 // Size: 0xb8
 function private function_ab299a53(parasite) {
@@ -625,7 +625,7 @@ function private function_ab299a53(parasite) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xaf0d314, Offset: 0x2ff0
 // Size: 0x6c
 function private zodcompanionsetdesiredstancetostand(behaviortreeentity) {
@@ -636,7 +636,7 @@ function private zodcompanionsetdesiredstancetostand(behaviortreeentity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x22d4e3c4, Offset: 0x3068
 // Size: 0x3e4
 function zod_companion_revive_player(player) {
@@ -686,7 +686,7 @@ function zod_companion_revive_player(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde5afc7a, Offset: 0x3458
 // Size: 0xd8
 function zod_companion_monitor_revive_attempt(player) {
@@ -703,7 +703,7 @@ function zod_companion_monitor_revive_attempt(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee5c154b, Offset: 0x3538
 // Size: 0x82
 function zod_companion_revive_cleanup(player) {
@@ -719,7 +719,7 @@ function zod_companion_revive_cleanup(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9eb06be3, Offset: 0x35c8
 // Size: 0xdc
 function private zodcompanionfinishedsprinttransition(behaviortreeentity) {
@@ -734,7 +734,7 @@ function private zodcompanionfinishedsprinttransition(behaviortreeentity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x587d468e, Offset: 0x36b0
 // Size: 0xe0
 function private zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
@@ -751,7 +751,7 @@ function private zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x5188172f, Offset: 0x3798
 // Size: 0x2c
 function private zodcompanionsprinttransitioning(behaviortreeentity) {
@@ -764,7 +764,7 @@ function private zodcompanionsprinttransitioning(behaviortreeentity) {
 #namespace zodcompanionserverutils;
 
 // Namespace zodcompanionserverutils
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x22882d2e, Offset: 0x37d0
 // Size: 0x134
 function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
@@ -782,7 +782,7 @@ function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0xd648e8bf, Offset: 0x3910
 // Size: 0x27c
 function private _trygibbinglimb(entity, damage, hitloc, isexplosive) {
@@ -815,7 +815,7 @@ function private _trygibbinglimb(entity, damage, hitloc, isexplosive) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xf06301e, Offset: 0x3b98
 // Size: 0x37c
 function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
@@ -853,7 +853,7 @@ function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) 
 }
 
 // Namespace zodcompanionserverutils
-// Params 12, eflags: 0x5 linked
+// Params 12, eflags: 0x4
 // Checksum 0xb8358657, Offset: 0x3f20
 // Size: 0x190
 function private zodcompaniongibdamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -897,7 +897,7 @@ function private zodcompaniondestructdeathoverride(inflictor, attacker, damage, 
 }
 
 // Namespace zodcompanionserverutils
-// Params 12, eflags: 0x5 linked
+// Params 12, eflags: 0x4
 // Checksum 0xfd7b7316, Offset: 0x42f0
 // Size: 0xcc
 function private zodcompaniondamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -924,7 +924,7 @@ function private findclosestnavmeshpositiontoenemy(enemy) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xdc58d726, Offset: 0x4458
 // Size: 0x254
 function private zodcompanionsoldierspawnsetup() {
@@ -958,7 +958,7 @@ function private zodcompanionsoldierspawnsetup() {
 #namespace zodcompanionutility;
 
 // Namespace zodcompanionutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xabe66e86, Offset: 0x46b8
 // Size: 0x68
 function manage_companion() {
@@ -974,7 +974,7 @@ function manage_companion() {
 }
 
 // Namespace zodcompanionutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x61d92885, Offset: 0x4728
 // Size: 0x9a
 function function_cbe73e3d() {
@@ -988,7 +988,7 @@ function function_cbe73e3d() {
 }
 
 // Namespace zodcompanionutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x957cfc4b, Offset: 0x47d0
 // Size: 0x166
 function define_new_leader() {
@@ -1013,7 +1013,7 @@ function define_new_leader() {
 }
 
 // Namespace zodcompanionutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x148dc9ba, Offset: 0x4940
 // Size: 0x122
 function get_potential_leaders(companion) {

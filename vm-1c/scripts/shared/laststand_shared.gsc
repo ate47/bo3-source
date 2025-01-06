@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/util_shared;
 
 #namespace laststand;
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf997efc, Offset: 0x190
 // Size: 0x40
 function player_is_in_laststand() {
@@ -17,7 +17,7 @@ function player_is_in_laststand() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x310e3175, Offset: 0x1d8
 // Size: 0x82
 function player_num_in_laststand() {
@@ -40,7 +40,7 @@ function player_all_players_in_laststand() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda614525, Offset: 0x298
 // Size: 0x16
 function player_any_player_in_laststand() {
@@ -59,7 +59,7 @@ function function_cd4ced7a(sweapon, smeansofdeath, shitloc) {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf977ffa6, Offset: 0x2f8
 // Size: 0x36
 function function_4a66f284() {
@@ -70,7 +70,7 @@ function function_4a66f284() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9c90e015, Offset: 0x338
 // Size: 0xbc
 function function_9a3e66fc() {
@@ -89,7 +89,7 @@ function function_9a3e66fc() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbe6acc14, Offset: 0x400
 // Size: 0xac
 function function_a5c40dbc() {
@@ -106,7 +106,7 @@ function function_a5c40dbc() {
 }
 
 // Namespace laststand
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdbf1bb69, Offset: 0x4b8
 // Size: 0x15a
 function is_facing(facee, requireddot) {
@@ -125,7 +125,7 @@ function is_facing(facee, requireddot) {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5cfc7d19, Offset: 0x620
 // Size: 0x138
 function revive_hud_create() {
@@ -145,7 +145,7 @@ function revive_hud_create() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcce6bb0d, Offset: 0x760
 // Size: 0x50
 function function_89c586ec() {
@@ -155,7 +155,7 @@ function function_89c586ec() {
 }
 
 // Namespace laststand
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfcd44f36, Offset: 0x7b8
 // Size: 0x50
 function revive_hud_show_n_fade(time) {
@@ -197,7 +197,7 @@ function function_fa369ede() {
 }
 
 // Namespace laststand
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8eab02c1, Offset: 0xb00
 // Size: 0xda
 function function_cd85ffaf(increment) {
@@ -219,7 +219,7 @@ function function_590a49b2() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a430a53, Offset: 0xc40
 // Size: 0x84
 function function_5d050fca() {
@@ -235,7 +235,7 @@ function function_5d050fca() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7210c0c0, Offset: 0xcd0
 // Size: 0x190
 function function_5006c91f() {
@@ -263,7 +263,7 @@ function function_5006c91f() {
 }
 
 // Namespace laststand
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd86b10f0, Offset: 0xe68
 // Size: 0x4c
 function function_fed0ee90(hudelem) {
@@ -272,7 +272,7 @@ function function_fed0ee90(hudelem) {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6344d42, Offset: 0xec0
 // Size: 0x6c
 function function_d4eb424f() {

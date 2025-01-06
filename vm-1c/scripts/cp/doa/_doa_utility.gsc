@@ -1,13 +1,13 @@
-#using scripts/cp/doa/_doa_player_utility;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/shared/lui_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_49107f3a;
 
@@ -1033,7 +1033,7 @@ function function_dbcf48a0(delay, width, height) {
     trigger thread function_981c685d(self);
     trigger endon(#"death");
     while (isdefined(self)) {
-        guy = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", guy);
         if (isdefined(guy)) {
             if (isdefined(guy.var_cb05ea19) && guy.var_cb05ea19) {
                 continue;
@@ -1163,13 +1163,13 @@ function function_fa8a86e8(ent, target) {
         end = gettime() + timesec * 1000;
         halfwidth = int(size / 2);
         var_a84bd888 = point + (halfwidth * -1, 0, 0);
-        var_1a5347c3 = point + (halfwidth, 0, 0);
+        l2 = point + (halfwidth, 0, 0);
         var_5e2b69e1 = point + (0, halfwidth * -1, 0);
         var_842de44a = point + (0, halfwidth, 0);
         var_e4d48d14 = point + (0, 0, halfwidth * -1);
         var_56dbfc4f = point + (0, 0, halfwidth);
         while (end > gettime()) {
-            line(var_a84bd888, var_1a5347c3, color, 1, 0, 1);
+            line(var_a84bd888, l2, color, 1, 0, 1);
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
             wait 0.05;
@@ -1187,12 +1187,12 @@ function function_fa8a86e8(ent, target) {
         while (end > gettime()) {
             point = self.origin;
             var_a84bd888 = point + (halfwidth * -1, 0, 0);
-            var_1a5347c3 = point + (halfwidth, 0, 0);
+            l2 = point + (halfwidth, 0, 0);
             var_5e2b69e1 = point + (0, halfwidth * -1, 0);
             var_842de44a = point + (0, halfwidth, 0);
             var_e4d48d14 = point + (0, 0, halfwidth * -1);
             var_56dbfc4f = point + (0, 0, halfwidth);
-            line(var_a84bd888, var_1a5347c3, color, 1, 0, 1);
+            line(var_a84bd888, l2, color, 1, 0, 1);
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
             wait 0.05;

@@ -1,10 +1,10 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_e9d9fb34;
 
@@ -157,7 +157,7 @@ function function_ce871b4e(params) {
 // Size: 0x92
 function function_793c2b3f() {
     self endon(#"hash_cf910502");
-    eattacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
+    self waittill(#"death", eattacker, damagefromunderneath, weapon, point, dir);
     if (isdefined(weapon) && isplayer(eattacker) && weapon.weapclass === "pistol") {
         function_c27610f9("hand_cannon");
     }
@@ -206,7 +206,7 @@ function function_d116d4ed() {
 // Checksum 0x240fbd13, Offset: 0xde8
 // Size: 0x2a
 function function_cdb4b3f7() {
-    level waittill(#"hash_52e251bc");
+    level waittill(#"hq_ambient_cleanup");
     callback::remove_on_actor_killed(&function_b6ef6322);
 }
 
@@ -319,7 +319,7 @@ function function_2c0e41ab() {
 // Checksum 0xa666bb2c, Offset: 0x1240
 // Size: 0x59
 function function_b6f90f() {
-    eattacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
+    self waittill(#"death", eattacker, damagefromunderneath, weapon, point, dir);
     level.var_e3b7af42--;
     if (level.var_e3b7af42 <= 0) {
         level.var_ebd2f83b = undefined;
@@ -341,7 +341,7 @@ function function_6b2c4236() {
 // Size: 0x6f
 function function_99009628() {
     self endon(#"death");
-    n_damage, eattacker, v_direction, v_point, var_4ae4f03b = self waittill(#"damage");
+    self waittill(#"damage", n_damage, eattacker, v_direction, v_point, var_4ae4f03b);
     if (eattacker.archetype === "raps") {
         level.var_aead8b98 = 1;
         level notify(#"friendly_raps_damaged");
@@ -407,7 +407,7 @@ function function_996c3f92() {
 // Checksum 0xd9c98b16, Offset: 0x1578
 // Size: 0x2a
 function function_1b5b3a2c() {
-    level waittill(#"hash_73b00182");
+    level waittill(#"singapore_root_completed");
     callback::remove_on_actor_killed(&function_fa041c17);
 }
 
@@ -456,8 +456,8 @@ function function_131f8d11() {
 // Checksum 0xcb442a05, Offset: 0x1830
 // Size: 0x5a
 function 32403965() {
-    level endon(#"hash_65fc298e");
-    n_damage, eattacker, v_direction, v_point, var_4ae4f03b = self waittill(#"damage");
+    level endon(#"accolade_11_complete");
+    self waittill(#"damage", n_damage, eattacker, v_direction, v_point, var_4ae4f03b);
     level accolades::increment("MISSION_ZURICH_CHALLENGE11");
 }
 
@@ -509,7 +509,7 @@ function function_baf56cfa(var_f37c20b3) {
     var_f37c20b3 endon(#"death");
     self endon(#"dodge_this");
     while (true) {
-        damage, eattacker = self waittill(#"damage");
+        self waittill(#"damage", damage, eattacker);
         if (eattacker === var_f37c20b3) {
             var_f37c20b3 notify(#"hash_700a2ace");
         }
@@ -522,7 +522,7 @@ function function_baf56cfa(var_f37c20b3) {
 // Size: 0x6f
 function function_b1f08628(var_f37c20b3) {
     var_f37c20b3 endon(#"hash_700a2ace");
-    eattacker, damagefromunderneath, weapon, point, dir = var_f37c20b3 waittill(#"death");
+    var_f37c20b3 waittill(#"death", eattacker, damagefromunderneath, weapon, point, dir);
     if (isplayer(eattacker)) {
         self notify(#"dodge_this");
     }

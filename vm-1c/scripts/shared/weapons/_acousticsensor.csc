@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace acousticsensor;
 

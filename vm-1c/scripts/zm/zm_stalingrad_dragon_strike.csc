@@ -1,9 +1,9 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_19e79ea1;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace namespace_19e79ea1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x58c0319b, Offset: 0x270
 // Size: 0x124
 function __init__() {
@@ -27,52 +27,52 @@ function __init__() {
 }
 
 // Namespace namespace_19e79ea1
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3ca1eda7, Offset: 0x3a0
 // Size: 0xec
 function lockbox_light_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (isdefined(self.var_fbe6c07a)) {
-        stopfx(localclientnum, self.var_fbe6c07a);
+    if (isdefined(self.fx_light_1)) {
+        stopfx(localclientnum, self.fx_light_1);
     }
     if (newval == 2) {
-        self.var_fbe6c07a = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_red_dragonstrike", self, "tag_nixie_red_" + "0");
+        self.fx_light_1 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_red_dragonstrike", self, "tag_nixie_red_" + "0");
         return;
     }
-    self.var_fbe6c07a = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_green_dragonstrike", self, "tag_nixie_green_" + "0");
+    self.fx_light_1 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_green_dragonstrike", self, "tag_nixie_green_" + "0");
 }
 
 // Namespace namespace_19e79ea1
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5c8654a, Offset: 0x498
 // Size: 0xec
 function lockbox_light_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (isdefined(self.var_d5e44611)) {
-        stopfx(localclientnum, self.var_d5e44611);
+    if (isdefined(self.fx_light_2)) {
+        stopfx(localclientnum, self.fx_light_2);
     }
     if (newval == 2) {
-        self.var_d5e44611 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_red_dragonstrike", self, "tag_nixie_red_" + "1");
+        self.fx_light_2 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_red_dragonstrike", self, "tag_nixie_red_" + "1");
         return;
     }
-    self.var_d5e44611 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_green_dragonstrike", self, "tag_nixie_green_" + "1");
+    self.fx_light_2 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_green_dragonstrike", self, "tag_nixie_green_" + "1");
 }
 
 // Namespace namespace_19e79ea1
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x582aae33, Offset: 0x590
 // Size: 0xec
 function lockbox_light_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (isdefined(self.var_afe1cba8)) {
-        stopfx(localclientnum, self.var_afe1cba8);
+    if (isdefined(self.fx_light_3)) {
+        stopfx(localclientnum, self.fx_light_3);
     }
     if (newval == 2) {
-        self.var_afe1cba8 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_red_dragonstrike", self, "tag_nixie_red_" + "2");
+        self.fx_light_3 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_red_dragonstrike", self, "tag_nixie_red_" + "2");
         return;
     }
-    self.var_afe1cba8 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_green_dragonstrike", self, "tag_nixie_green_" + "2");
+    self.fx_light_3 = playfxontag(localclientnum, "dlc3/stalingrad/fx_glow_green_dragonstrike", self, "tag_nixie_green_" + "2");
 }
 
 // Namespace namespace_19e79ea1
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1b5c4922, Offset: 0x688
 // Size: 0xec
 function lockbox_light_4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_powerups;
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_powerups;
 
 #namespace zm_powerup_demonic_rune;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_demonic_rune
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe4ced1f7, Offset: 0x210
 // Size: 0x16c
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_demonic_rune
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x50a77ded, Offset: 0x388
 // Size: 0x6c
 function function_4a94c040(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,36 +1,36 @@
-#using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_prologue_robot_reveal;
-#using scripts/cp/cp_prologue_hangars;
-#using scripts/cp/cp_prologue_apc;
-#using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/cp_mi_eth_prologue;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue;
+#using scripts/cp/cp_mi_eth_prologue_accolades;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/cp_prologue_hangars;
+#using scripts/cp/cp_prologue_robot_reveal;
+#using scripts/cp/cp_prologue_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace namespace_835fda7e;
 
@@ -81,7 +81,7 @@ function function_ae9ce6f0() {
     self endon(#"hash_99343b5f");
     level endon(#"rpg_done");
     while (true) {
-        wpn_current = self waittill(#"weapon_fired");
+        self waittill(#"weapon_fired", wpn_current);
         if (wpn_current.weapclass !== "pistol") {
             self.var_c34702c6 = 1;
             self notify(#"hash_99343b5f");
@@ -197,9 +197,9 @@ function function_a4e4e77d() {
 function function_8e9f8d38() {
     level.var_2fd26037 forceteleport(struct::get("skipto_robot_defend_hendricks").origin);
     level cp_prologue_util::function_12ce22ee();
-    foreach (var_e4463170 in level.a_ai_allies) {
-        var_e4463170.goalradius = 16;
-        var_e4463170 forceteleport(struct::get("skipto_robot_defend_" + var_e4463170.targetname).origin);
+    foreach (ai_ally in level.a_ai_allies) {
+        ai_ally.goalradius = 16;
+        ai_ally forceteleport(struct::get("skipto_robot_defend_" + ai_ally.targetname).origin);
     }
 }
 
@@ -735,7 +735,7 @@ function function_a950a3ec() {
 function function_cd56c2cf(player) {
     level endon(#"goto_pod");
     while (true) {
-        e_entity = self waittill(#"trigger");
+        self waittill(#"trigger", e_entity);
         if (e_entity == player) {
             level.var_fc71d8f++;
         }
@@ -1202,7 +1202,7 @@ function function_45756e82(var_1fd9b48b) {
     level endon(#"robot_defend_done");
     var_e512db80 = getent(var_1fd9b48b + "_trigger", "targetname");
     while (true) {
-        e_who = var_e512db80 waittill(#"trigger");
+        var_e512db80 waittill(#"trigger", e_who);
         e_who function_d311c75a(var_1fd9b48b);
     }
 }

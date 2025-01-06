@@ -1,15 +1,15 @@
-#using scripts/shared/_burnplayer;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/_burnplayer;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace _gadget_heat_wave;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_heat_wave
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16276cba, Offset: 0x3d0
 // Size: 0x164
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 /#
 
     // Namespace _gadget_heat_wave
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x58568507, Offset: 0x540
     // Size: 0x48
     function updatedvars() {
@@ -53,7 +53,7 @@ function __init__() {
 #/
 
 // Namespace _gadget_heat_wave
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x96781e0c, Offset: 0x590
 // Size: 0x64
 function function_4bf284ca(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +63,7 @@ function function_4bf284ca(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _gadget_heat_wave
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1e653eca, Offset: 0x600
 // Size: 0xa4
 function function_318dd491(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -76,7 +76,7 @@ function function_318dd491(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _gadget_heat_wave
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xba2be5e3, Offset: 0x6b0
 // Size: 0x84
 function function_35b42cb4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,7 +88,7 @@ function function_35b42cb4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _gadget_heat_wave
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5aa95cc7, Offset: 0x740
 // Size: 0xaa
 function function_45bc6290(localclientnum) {
@@ -101,7 +101,7 @@ function function_45bc6290(localclientnum) {
 }
 
 // Namespace _gadget_heat_wave
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2dcc08a7, Offset: 0x7f8
 // Size: 0x356
 function aoe_fx(localclientnum) {
@@ -144,7 +144,7 @@ function aoe_fx(localclientnum) {
 }
 
 // Namespace _gadget_heat_wave
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x2e0b8f5a, Offset: 0xb58
 // Size: 0x4c6
 function function_89e1d77b(localclientnum, center, yaw_count, pitch) {

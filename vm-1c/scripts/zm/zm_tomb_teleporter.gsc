@@ -1,26 +1,26 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/_zm_score;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #using_animtree("generic");
 
 #namespace zm_tomb_teleporter;
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd465d605, Offset: 0x760
 // Size: 0x4ec
 function teleporter_init() {
@@ -65,7 +65,7 @@ function teleporter_init() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b094424, Offset: 0xc58
 // Size: 0x54
 function main() {
@@ -74,7 +74,7 @@ function main() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdbc81494, Offset: 0xcb8
 // Size: 0x1c0
 function function_c5b0a85b() {
@@ -96,7 +96,7 @@ function function_c5b0a85b() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9255ff40, Offset: 0xe80
 // Size: 0xf4
 function function_d65163bc(e_player) {
@@ -114,7 +114,7 @@ function function_d65163bc(e_player) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9569b4a7, Offset: 0xf80
 // Size: 0x618
 function function_db713e86(var_abb52853) {
@@ -151,7 +151,7 @@ function function_db713e86(var_abb52853) {
     }
     level flag::wait_till("start_zombie_round_logic");
     while (true) {
-        e_player = var_ff43cb27.trigger_stub waittill(#"trigger");
+        var_ff43cb27.trigger_stub waittill(#"trigger", e_player);
         if (!zombie_utility::is_player_valid(e_player)) {
             continue;
         }
@@ -190,7 +190,7 @@ function function_db713e86(var_abb52853) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4daca049, Offset: 0x15a0
 // Size: 0x620
 function function_5d4ce9fb() {
@@ -272,7 +272,7 @@ function function_5d4ce9fb() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbead5eb0, Offset: 0x1bc8
 // Size: 0x1f8
 function function_7a009c17(radius) {
@@ -296,7 +296,7 @@ function function_7a009c17(radius) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x246970ba, Offset: 0x1dc8
 // Size: 0x148
 function function_5f30f5fb() {
@@ -304,7 +304,7 @@ function function_5f30f5fb() {
     level endon("disable_teleporter_" + self.script_int);
     var_4b827d1d = level.var_3722c981[self.script_int];
     while (true) {
-        e_player = self.trigger_stub waittill(#"trigger");
+        self.trigger_stub waittill(#"trigger", e_player);
         if (e_player getstance() != "prone" && !(isdefined(e_player.teleporting) && e_player.teleporting)) {
             playfx(level._effect["teleport_3p"], self.origin, (1, 0, 0), (0, 0, 1));
             playsoundatposition("zmb_teleporter_tele_3d", self.origin);
@@ -315,7 +315,7 @@ function function_5f30f5fb() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xff792546, Offset: 0x1f18
 // Size: 0x2c
 function function_b67726d8(n_index) {
@@ -323,7 +323,7 @@ function function_b67726d8(n_index) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7247448c, Offset: 0x1f50
 // Size: 0x2c
 function function_2e709a83(n_index) {
@@ -331,7 +331,7 @@ function function_2e709a83(n_index) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3dac4bb3, Offset: 0x1f88
 // Size: 0x5c
 function function_691aa432() {
@@ -341,7 +341,7 @@ function function_691aa432() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x21494f7e, Offset: 0x1ff0
 // Size: 0x17e
 function function_6a1abb61() {
@@ -355,7 +355,7 @@ function function_6a1abb61() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x3e21fba1, Offset: 0x2178
 // Size: 0x6ec
 function function_67bfec1a(var_395ce040, player, var_20fd5da9, show_fx) {
@@ -405,10 +405,10 @@ function function_67bfec1a(var_395ce040, player, var_20fd5da9, show_fx) {
         var_594457ea thread function_691aa432();
         visionset_mgr::activate("overlay", "zm_factory_teleport", player);
     }
-    var_c5af343b = 0.5;
-    wait var_20fd5da9 - var_c5af343b;
+    hide_time = 0.5;
+    wait var_20fd5da9 - hide_time;
     if (show_fx) {
-        player thread hud::fade_to_black_for_x_sec(0, var_c5af343b + 0.3, 0, 0.5, "white");
+        player thread hud::fade_to_black_for_x_sec(0, hide_time + 0.3, 0, 0.5, "white");
         util::wait_network_frame();
     }
     var_594457ea notify(#"hash_97e83cbe");
@@ -434,7 +434,7 @@ function function_67bfec1a(var_395ce040, player, var_20fd5da9, show_fx) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbc98ac65, Offset: 0x2870
 // Size: 0xf2
 function function_c2a1c70a(s_pos, n_radius) {
@@ -449,7 +449,7 @@ function function_c2a1c70a(s_pos, n_radius) {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x36c867a9, Offset: 0x2970
 // Size: 0xf0
 function function_a2355239(player, a_structs) {

@@ -1,29 +1,29 @@
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_mgturret;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_mgturret;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_auto_turret;
 
 // Namespace zm_auto_turret
 // Params 0, eflags: 0x2
-// Checksum 0xbca9ef29, Offset: 0x368
+// Checksum 0xf5b558f6, Offset: 0x368
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("zm_auto_turret", &__init__, &__main__, undefined);
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x26e38224, Offset: 0x3b0
+// Params 0, eflags: 0x0
+// Checksum 0xa60780de, Offset: 0x3b0
 // Size: 0x3c
 function __init__() {
     level._effect["auto_turret_light"] = "dlc4/genesis/fx_light_turret_auto";
@@ -31,8 +31,8 @@ function __init__() {
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xa1f67b7e, Offset: 0x3f8
+// Params 0, eflags: 0x0
+// Checksum 0x86485f0, Offset: 0x3f8
 // Size: 0x17e
 function __main__() {
     level.var_c261c043 = getentarray("auto_turret_trigger", "script_noteworthy");
@@ -60,8 +60,8 @@ function __main__() {
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x7717f804, Offset: 0x580
+// Params 0, eflags: 0x0
+// Checksum 0x68846215, Offset: 0x580
 // Size: 0x3f8
 function function_88738224() {
     if (!isdefined(self.target)) {
@@ -94,7 +94,7 @@ function function_88738224() {
     for (;;) {
         cost = level.var_64c3a5b3;
         self sethintstring(%ZOMBIE_AUTO_TURRET, cost);
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         index = zm_utility::get_player_index(player);
         if (player laststand::player_is_in_laststand()) {
             continue;
@@ -125,7 +125,7 @@ function function_88738224() {
 
 // Namespace zm_auto_turret
 // Params 0, eflags: 0x0
-// Checksum 0x1c8ec4b3, Offset: 0x980
+// Checksum 0xef9400c4, Offset: 0x980
 // Size: 0xa4
 function function_87d3b877() {
     if (isdefined(self.handle)) {
@@ -139,16 +139,16 @@ function function_87d3b877() {
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x66943774, Offset: 0xa30
+// Params 0, eflags: 0x0
+// Checksum 0x84560205, Offset: 0xa30
 // Size: 0x2c
 function function_f422b6a2() {
     self zm_audio::create_and_play_dialog("general", "outofmoney");
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x930e354, Offset: 0xa68
+// Params 0, eflags: 0x0
+// Checksum 0x859a9434, Offset: 0xa68
 // Size: 0x29c
 function function_7b9aea27() {
     self endon(#"hash_d7f84474");
@@ -190,8 +190,8 @@ function function_7b9aea27() {
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe2b63765, Offset: 0xd10
+// Params 0, eflags: 0x0
+// Checksum 0x743dca14, Offset: 0xd10
 // Size: 0x72
 function function_ea0dbe46() {
     self.turret_active = 0;
@@ -203,8 +203,8 @@ function function_ea0dbe46() {
 }
 
 // Namespace zm_auto_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8569ee95, Offset: 0xd90
+// Params 0, eflags: 0x0
+// Checksum 0x56462e8a, Offset: 0xd90
 // Size: 0x30
 function function_2eb14263() {
     self endon(#"hash_d7f84474");
@@ -215,8 +215,8 @@ function function_2eb14263() {
 }
 
 // Namespace zm_auto_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0xced52821, Offset: 0xdc8
+// Params 1, eflags: 0x0
+// Checksum 0x84a913ea, Offset: 0xdc8
 // Size: 0x6c
 function death_check_for_challenge_updates(e_attacker) {
     if (!isdefined(e_attacker)) {

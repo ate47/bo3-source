@@ -1,30 +1,30 @@
-#using scripts/mp/_util;
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_airsupport;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_heatseekingmissile;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/killstreaks/_airsupport;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_heatseekingmissile;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace uav;
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4e03fe8e, Offset: 0x678
 // Size: 0x264
 function init() {
@@ -51,7 +51,7 @@ function init() {
 }
 
 // Namespace uav
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1a315810, Offset: 0x8e8
 // Size: 0x34
 function hackedprefunction(hacker) {
@@ -60,7 +60,7 @@ function hackedprefunction(hacker) {
 }
 
 // Namespace uav
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd0896157, Offset: 0x928
 // Size: 0xcc
 function configureteampost(owner, ishacked) {
@@ -75,7 +75,7 @@ function configureteampost(owner, ishacked) {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xacf15c3d, Offset: 0xa00
 // Size: 0x650
 function activateuav() {
@@ -132,7 +132,7 @@ function activateuav() {
 }
 
 // Namespace uav
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1044be01, Offset: 0x1058
 // Size: 0x7c
 function onlowhealth(attacker, weapon) {
@@ -144,7 +144,7 @@ function onlowhealth(attacker, weapon) {
 }
 
 // Namespace uav
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x665b3f24, Offset: 0x10e0
 // Size: 0x2c
 function onteamchange(entnum, event) {
@@ -152,7 +152,7 @@ function onteamchange(entnum, event) {
 }
 
 // Namespace uav
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfab4abaa, Offset: 0x1118
 // Size: 0x26c
 function destroyuav(attacker, weapon) {
@@ -184,7 +184,7 @@ function destroyuav(attacker, weapon) {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x788f2114, Offset: 0x1390
 // Size: 0x56
 function onplayerconnect() {
@@ -196,7 +196,7 @@ function onplayerconnect() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18b45ed6, Offset: 0x13f0
 // Size: 0x3e
 function onplayerspawned() {
@@ -207,7 +207,7 @@ function onplayerspawned() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbbb20cd2, Offset: 0x1438
 // Size: 0x14
 function onplayerjoinedteam() {
@@ -215,7 +215,7 @@ function onplayerjoinedteam() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2eaf1ccd, Offset: 0x1458
 // Size: 0xf4
 function ontimeout() {
@@ -234,7 +234,7 @@ function ontimeout() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c48e2ae, Offset: 0x1558
 // Size: 0x34
 function ontimecheck() {
@@ -242,7 +242,7 @@ function ontimecheck() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0319ea2, Offset: 0x1598
 // Size: 0x84
 function startuavfx() {
@@ -256,7 +256,7 @@ function startuavfx() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86ee0bd0, Offset: 0x1628
 // Size: 0xa4
 function playafterburnerfx() {
@@ -271,7 +271,7 @@ function playafterburnerfx() {
 }
 
 // Namespace uav
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1d78bd95, Offset: 0x16d8
 // Size: 0x1c
 function hasuav(team_or_entnum) {
@@ -279,7 +279,7 @@ function hasuav(team_or_entnum) {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2765b2a, Offset: 0x1700
 // Size: 0xbe
 function addactiveuav() {
@@ -298,7 +298,7 @@ function addactiveuav() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcae8eff9, Offset: 0x17c8
 // Size: 0x5c
 function removeactiveuav() {
@@ -308,7 +308,7 @@ function removeactiveuav() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27ac3fa9, Offset: 0x1830
 // Size: 0x1ea
 function resetactiveuav() {
@@ -337,7 +337,7 @@ function resetactiveuav() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b0a7716, Offset: 0x1a28
 // Size: 0x2b6
 function uavtracker() {
@@ -368,7 +368,7 @@ function uavtracker() {
 }
 
 // Namespace uav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbae2ff1a, Offset: 0x1ce8
 // Size: 0x92
 function hidealluavstosameteam() {

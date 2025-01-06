@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_weap_staff_common;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weap_staff_common;
 
 #namespace zm_weap_staff_air;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_staff_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x53e9c14d, Offset: 0x268
 // Size: 0x13c
 function __init__() {
@@ -24,11 +24,11 @@ function __init__() {
     clientfield::register("allplayers", "air_staff_source", 21000, 1, "int", &function_869adfb, 0, 0);
     level.var_1e7d95e0 = (0, 0, 0);
     level.var_654c7116 = [];
-    namespace_c9806b9::function_4be5e665(getweapon("staff_air_upgraded"), "dlc5/zmb_weapon/fx_staff_charge_air_lv1");
+    zm_weap_staff::function_4be5e665(getweapon("staff_air_upgraded"), "dlc5/zmb_weapon/fx_staff_charge_air_lv1");
 }
 
 // Namespace zm_weap_staff_air
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2a8c6e2e, Offset: 0x3b0
 // Size: 0x4c
 function function_869adfb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -36,7 +36,7 @@ function function_869adfb(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_weap_staff_air
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x472e06ee, Offset: 0x408
 // Size: 0x20e
 function ragdoll_impact_watch(localclientnum) {
@@ -73,7 +73,7 @@ function ragdoll_impact_watch(localclientnum) {
 }
 
 // Namespace zm_weap_staff_air
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5dd287ad, Offset: 0x620
 // Size: 0x204
 function air_staff_launch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -97,7 +97,7 @@ function air_staff_launch(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_weap_staff_air
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc2de390e, Offset: 0x830
 // Size: 0x1ee
 function function_c6b66912(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -127,7 +127,7 @@ function function_c6b66912(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_weap_staff_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x76ca7cfe, Offset: 0xa28
 // Size: 0x34
 function function_3a4d4e97() {

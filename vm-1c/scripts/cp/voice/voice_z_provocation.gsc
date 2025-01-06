@@ -3,7 +3,7 @@
 #namespace voice_z_provocation;
 
 // Namespace voice_z_provocation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4cb72791, Offset: 0xb70
 // Size: 0x6e4
 function init_voice() {

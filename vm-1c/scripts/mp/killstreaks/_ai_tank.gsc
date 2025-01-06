@@ -1,42 +1,42 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/mp/killstreaks/_uav;
-#using scripts/mp/killstreaks/_supplydrop;
-#using scripts/mp/killstreaks/_satellite;
-#using scripts/mp/killstreaks/_remote_weapons;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_emp;
-#using scripts/mp/killstreaks/_dogs;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_dev;
-#using scripts/mp/_util;
-#using scripts/mp/_challenges;
-#using scripts/shared/vehicles/_amws;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/_oob;
 #using scripts/codescripts/struct;
+#using scripts/mp/_challenges;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_dev;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/killstreaks/_dogs;
+#using scripts/mp/killstreaks/_emp;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/killstreaks/_remote_weapons;
+#using scripts/mp/killstreaks/_satellite;
+#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/mp/killstreaks/_uav;
+#using scripts/shared/_oob;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_amws;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_weapons;
 
 #using_animtree("mp_vehicles");
 
 #namespace ai_tank;
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x374b2fd4, Offset: 0xcd0
 // Size: 0x444
 function init() {
@@ -80,7 +80,7 @@ function init() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86303678, Offset: 0x1120
 // Size: 0xc4
 function register() {
@@ -91,7 +91,7 @@ function register() {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeb0bee1, Offset: 0x11f0
 // Size: 0x2e0
 function usekillstreakaitankdrop(hardpointtype) {
@@ -133,7 +133,7 @@ function usekillstreakaitankdrop(hardpointtype) {
 }
 
 // Namespace ai_tank
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x2f56f40, Offset: 0x14d8
 // Size: 0x24c
 function crateland(crate, category, owner, team, context) {
@@ -160,7 +160,7 @@ function crateland(crate, category, owner, team, context) {
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbc61d07a, Offset: 0x1730
 // Size: 0x42
 function is_location_good(location, context) {
@@ -168,7 +168,7 @@ function is_location_good(location, context) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8b7b206b, Offset: 0x1780
 // Size: 0xee
 function function_150cbb51(location) {
@@ -190,7 +190,7 @@ function function_150cbb51(location) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb97972ad, Offset: 0x1878
 // Size: 0x14c
 function hackedcallbackpre(hacker) {
@@ -208,7 +208,7 @@ function hackedcallbackpre(hacker) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2dcdde62, Offset: 0x19d0
 // Size: 0x70
 function hackedcallbackpost(hacker) {
@@ -219,7 +219,7 @@ function hackedcallbackpost(hacker) {
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbf109e51, Offset: 0x1a48
 // Size: 0x3c
 function configureteampost(owner, ishacked) {
@@ -228,7 +228,7 @@ function configureteampost(owner, ishacked) {
 }
 
 // Namespace ai_tank
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xfb758726, Offset: 0x1a90
 // Size: 0x4f0
 function ai_tank_killstreak_start(owner, origin, killstreak_id, category) {
@@ -305,7 +305,7 @@ function function_89166848(var_ef327ae6) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb3d10147, Offset: 0x1fe0
 // Size: 0xac
 function setup_gameplay_think(category) {
@@ -319,7 +319,7 @@ function setup_gameplay_think(category) {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x73275696, Offset: 0x2098
 // Size: 0x638
 function function_9e843a04() {
@@ -412,7 +412,7 @@ function function_9e843a04() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3f65bcf, Offset: 0x26d8
 // Size: 0x2e
 function tank_team_kill() {
@@ -422,7 +422,7 @@ function tank_team_kill() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x687b8174, Offset: 0x2710
 // Size: 0x108
 function kill_monitor() {
@@ -430,7 +430,7 @@ function kill_monitor() {
     last_kill_vo = 0;
     kill_vo_spacing = 4000;
     while (true) {
-        victim = self waittill(#"killed");
+        self waittill(#"killed", victim);
         if (!isdefined(self.owner) || !isdefined(victim)) {
             continue;
         }
@@ -448,7 +448,7 @@ function kill_monitor() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f0cc8a5, Offset: 0x2820
 // Size: 0x54
 function tank_abort_think() {
@@ -457,7 +457,7 @@ function tank_abort_think() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb1859e4, Offset: 0x2880
 // Size: 0x46
 function tank_timeout_callback() {
@@ -467,7 +467,7 @@ function tank_timeout_callback() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd682fd17, Offset: 0x28d0
 // Size: 0x156
 function tank_watch_owner_events() {
@@ -491,7 +491,7 @@ function tank_watch_owner_events() {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf37741ef, Offset: 0x2a30
 // Size: 0x34
 function function_955831f9(drone) {
@@ -501,7 +501,7 @@ function function_955831f9(drone) {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0c8f2c2, Offset: 0x2a70
 // Size: 0x5c
 function stop_remote() {
@@ -514,7 +514,7 @@ function stop_remote() {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc5f31269, Offset: 0x2ad8
 // Size: 0x90
 function tank_hacked_health_update(hacker) {
@@ -527,7 +527,7 @@ function tank_hacked_health_update(hacker) {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcaaa38d5, Offset: 0x2b70
 // Size: 0x622
 function tank_damage_think() {
@@ -543,7 +543,7 @@ function tank_damage_think() {
     low_health = 0;
     self.damagetaken = 0;
     for (;;) {
-        damage, attacker, dir, point, mod, model, tag, part, weapon, flags, inflictor, chargelevel = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, dir, point, mod, model, tag, part, weapon, flags, inflictor, chargelevel);
         self.maxhealth = 999999;
         self.health = self.maxhealth;
         /#
@@ -610,7 +610,7 @@ function tank_damage_think() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8af86660, Offset: 0x31a0
 // Size: 0xec
 function tank_low_health_fx() {
@@ -626,7 +626,7 @@ function tank_low_health_fx() {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x59434629, Offset: 0x3298
 // Size: 0xcc
 function deleteonkillbrush(player) {
@@ -647,7 +647,7 @@ function deleteonkillbrush(player) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x378637f7, Offset: 0x3370
 // Size: 0x240
 function tank_stun(duration) {
@@ -714,13 +714,13 @@ function emp_crazy_death() {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x54c50b43, Offset: 0x37e0
 // Size: 0x62c
 function tank_death_think(hardpointname) {
     team = self.team;
     killstreak_id = self.killstreak_id;
-    attacker, damagefromunderneath, weapon = self waittill(#"death");
+    self waittill(#"death", attacker, damagefromunderneath, weapon);
     if (!isdefined(self)) {
         killstreak_stop_and_assert(hardpointname, team, killstreak_id, "Failed to handle death. A.");
         return;
@@ -791,7 +791,7 @@ function tank_death_think(hardpointname) {
 }
 
 // Namespace ai_tank
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc1ad44e9, Offset: 0x3e18
 // Size: 0x5c
 function killstreak_stop_and_assert(hardpoint_name, team, killstreak_id, assert_msg) {
@@ -800,7 +800,7 @@ function killstreak_stop_and_assert(hardpoint_name, team, killstreak_id, assert_
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe25a31cc, Offset: 0x3e80
 // Size: 0x7e
 function tank_too_far_from_nav_mesh_abort_think() {
@@ -816,7 +816,7 @@ function tank_too_far_from_nav_mesh_abort_think() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x496c51c2, Offset: 0x3f08
 // Size: 0x6a
 function function_83a8d785() {
@@ -827,7 +827,7 @@ function function_83a8d785() {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x52917d3b, Offset: 0x3f80
 // Size: 0x1ce
 function function_c975281(var_f9e0a43) {
@@ -882,7 +882,7 @@ function function_2efae724() {
 }
 
 // Namespace ai_tank
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf9d99e04, Offset: 0x42f0
 // Size: 0x250
 function valid_target(target, team, owner) {
@@ -934,7 +934,7 @@ function valid_target(target, team, owner) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xec7a2ec1, Offset: 0x4548
 // Size: 0x23c
 function starttankremotecontrol(drone) {
@@ -960,7 +960,7 @@ function starttankremotecontrol(drone) {
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5e9bf515, Offset: 0x4790
 // Size: 0x21c
 function endtankremotecontrol(drone, exitrequestedbyowner) {
@@ -992,7 +992,7 @@ function endtankremotecontrol(drone, exitrequestedbyowner) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4f51dbd, Offset: 0x49b8
 // Size: 0xe4
 function perform_recoil_missile_turret(player) {
@@ -1005,7 +1005,7 @@ function perform_recoil_missile_turret(player) {
 }
 
 // Namespace ai_tank
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x29de3f74, Offset: 0x4aa8
 // Size: 0x94
 function perform_recoil(recoil_tag, force_scale_factor, force_z_offset) {
@@ -1015,7 +1015,7 @@ function perform_recoil(recoil_tag, force_scale_factor, force_z_offset) {
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xca77c55b, Offset: 0x4b48
 // Size: 0x7c
 function update_client_ammo(ammo_count, driver_only_update) {
@@ -1031,7 +1031,7 @@ function update_client_ammo(ammo_count, driver_only_update) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbdbe79cb, Offset: 0x4bd0
 // Size: 0x110
 function tank_rocket_watch(player) {
@@ -1044,7 +1044,7 @@ function tank_rocket_watch(player) {
         self disabledriverfiring(0);
     }
     while (true) {
-        missile = player waittill(#"missile_fire");
+        player waittill(#"missile_fire", missile);
         missile.ignore_team_kills = self.ignore_team_kills;
         self.numberrockets--;
         self update_client_ammo(self.numberrockets);
@@ -1056,20 +1056,20 @@ function tank_rocket_watch(player) {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a74a70b, Offset: 0x4ce8
 // Size: 0x58
 function tank_rocket_watch_ai() {
     self endon(#"death");
     while (true) {
-        missile = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", missile);
         missile.ignore_team_kills = self.ignore_team_kills;
         missile.killcament = self;
     }
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x29a4a5b9, Offset: 0x4d48
 // Size: 0x114
 function reload_rockets(player) {
@@ -1088,7 +1088,7 @@ function reload_rockets(player) {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46a9f2e4, Offset: 0x4e68
 // Size: 0x1be
 function watchwater() {
@@ -1113,7 +1113,7 @@ function watchwater() {
 /#
 
     // Namespace ai_tank
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8e0ebc57, Offset: 0x5030
     // Size: 0xa8
     function function_56aef0f() {
@@ -1129,7 +1129,7 @@ function watchwater() {
     }
 
     // Namespace ai_tank
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xfb2c6ee6, Offset: 0x50e0
     // Size: 0xa2
     function function_a06e2866(node1, node2) {
@@ -1146,7 +1146,7 @@ function watchwater() {
     }
 
     // Namespace ai_tank
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8f8fedae, Offset: 0x5190
     // Size: 0x152
     function function_d20cb955() {

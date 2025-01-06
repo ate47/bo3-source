@@ -1,13 +1,13 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_impatient;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_impatient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf31290cf, Offset: 0x1f0
 // Size: 0x54
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_impatient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47ed6a2e, Offset: 0x250
 // Size: 0x3c
 function event() {
@@ -42,7 +42,7 @@ function event() {
 }
 
 // Namespace zm_bgb_impatient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0c33368, Offset: 0x298
 // Size: 0x5c
 function special_revive() {

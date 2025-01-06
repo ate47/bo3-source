@@ -1,11 +1,11 @@
-#using scripts/shared/music_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_zod_amb;
 
@@ -33,7 +33,7 @@ function function_bab3ea62() {
 // Size: 0x94
 function sndMusicTrig() {
     while (true) {
-        trigplayer = self waittill(#"trigger");
+        self waittill(#"trigger", trigplayer);
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
@@ -55,7 +55,7 @@ function function_53b9afad() {
     level.var_eb526c90 = spawn(0, (0, 0, 0), "script_origin");
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_b6342abd, 2);
     while (true) {
-        location = level waittill(#"hash_51d7bc7c");
+        level waittill(#"hash_51d7bc7c", location);
         var_6d9d81aa = "mus_zod_underscore_" + location;
         if (var_6d9d81aa != var_b6342abd) {
             level thread function_51d7bc7c(var_6d9d81aa);

@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_alchemical_antithesis;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_alchemical_antithesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7a937ed, Offset: 0x1f8
 // Size: 0xa4
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_alchemical_antithesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7310812, Offset: 0x2a8
 // Size: 0x34
 function validation() {
@@ -38,7 +38,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_alchemical_antithesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfe1733be, Offset: 0x2e8
 // Size: 0x38
 function activation() {
@@ -48,7 +48,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_alchemical_antithesis
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4f116cab, Offset: 0x328
 // Size: 0x156
 function add_to_player_score_override(points, str_awarded_by, var_1ed9bd9b) {
@@ -75,7 +75,7 @@ function add_to_player_score_override(points, str_awarded_by, var_1ed9bd9b) {
 }
 
 // Namespace zm_bgb_alchemical_antithesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c1e26fe, Offset: 0x488
 // Size: 0x70
 function function_a6bf711f() {

@@ -1,6 +1,6 @@
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_elemental_zombies;
 
 #namespace zm_ai_mechz;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_mechz
-// Params 0, eflags: 0x3 linked
+// Params 0, eflags: 0x2
 // Checksum 0x99ec1590, Offset: 0x140
 // Size: 0x4
 function autoexec __init__() {
@@ -21,7 +21,7 @@ function autoexec __init__() {
 }
 
 // Namespace zm_ai_mechz
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf2af64d0, Offset: 0x150
 // Size: 0x2c
 function __main__() {

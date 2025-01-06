@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_island_side_ee_good_thrasher;
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbd4be237, Offset: 0x2d8
 // Size: 0x1ac
 function init() {
@@ -22,7 +22,7 @@ function init() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x87eea4de, Offset: 0x490
 // Size: 0x116
 function side_ee_gt_spore_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -40,7 +40,7 @@ function side_ee_gt_spore_glow_fx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5ecc3137, Offset: 0x5b0
 // Size: 0x19e
 function side_ee_gt_spore_cloud_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -60,7 +60,7 @@ function side_ee_gt_spore_cloud_fx(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb0becb6b, Offset: 0x758
 // Size: 0xee
 function function_f68bb4e3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -79,7 +79,7 @@ function function_f68bb4e3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x960bc75, Offset: 0x850
 // Size: 0x28a
 function good_thrasher_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

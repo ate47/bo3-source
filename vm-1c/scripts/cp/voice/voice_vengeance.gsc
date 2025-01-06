@@ -3,7 +3,7 @@
 #namespace voice_vengeance;
 
 // Namespace voice_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x681b03ed, Offset: 0x4a00
 // Size: 0x3144
 function init_voice() {

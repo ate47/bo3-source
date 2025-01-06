@@ -3,7 +3,7 @@
 #namespace voice_ramses1;
 
 // Namespace voice_ramses1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa701263, Offset: 0x1bd8
 // Size: 0x1144
 function init_voice() {

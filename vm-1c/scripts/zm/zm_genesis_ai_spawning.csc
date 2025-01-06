@@ -1,21 +1,21 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/ai_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #using_animtree("generic");
 
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_ai_spawning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc08fb0de, Offset: 0x4e0
 // Size: 0x178
 function __init__() {
@@ -47,7 +47,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_ai_spawning
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb6629f7d, Offset: 0x660
 // Size: 0xfc
 function chaos_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -65,7 +65,7 @@ function chaos_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_genesis_ai_spawning
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9d968c9c, Offset: 0x768
 // Size: 0xdc
 function function_3c75e14b(localclientnum, onoff) {
@@ -85,7 +85,7 @@ function function_3c75e14b(localclientnum, onoff) {
 }
 
 // Namespace zm_genesis_ai_spawning
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc6157a9, Offset: 0x850
 // Size: 0x140
 function chaos_fog_bank_switch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -111,7 +111,7 @@ function chaos_fog_bank_switch(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_genesis_ai_spawning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x45c16de3, Offset: 0x998
 // Size: 0x104
 function function_5ea6033e(localclientnum) {
@@ -125,7 +125,7 @@ function function_5ea6033e(localclientnum) {
 }
 
 // Namespace zm_genesis_ai_spawning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f7795df, Offset: 0xaa8
 // Size: 0x17c
 function function_4dc56cc7(localclientnum) {

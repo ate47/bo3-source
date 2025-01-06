@@ -1,29 +1,29 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_hazard;
-#using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hazard;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_sgen_water_ride;
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x690b9846, Offset: 0x710
 // Size: 0x484
 function function_b2f17f19(str_objective, var_74cd64bc) {
@@ -66,7 +66,7 @@ function function_b2f17f19(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc14ad3d4, Offset: 0xba0
 // Size: 0x24
 function function_88fd81d3(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -74,7 +74,7 @@ function function_88fd81d3(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa483068b, Offset: 0xbd0
 // Size: 0x26a
 function function_1cbc58b8() {
@@ -99,7 +99,7 @@ function function_1cbc58b8() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69686709, Offset: 0xe48
 // Size: 0x84
 function vo() {
@@ -111,7 +111,7 @@ function vo() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcc02534e, Offset: 0xed8
 // Size: 0x24c
 function function_e5dfd798(n_index) {
@@ -140,7 +140,7 @@ function function_e5dfd798(n_index) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x30cd35b4, Offset: 0x1130
 // Size: 0x12c
 function function_6a35acee(n_index) {
@@ -157,7 +157,7 @@ function function_6a35acee(n_index) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca4be3cc, Offset: 0x1268
 // Size: 0x264
 function function_c1262746() {
@@ -189,14 +189,14 @@ function function_c1262746() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd1fd6421, Offset: 0x14d8
 // Size: 0xf8
 function function_136b871d() {
     self endon(#"stop");
     var_36665ed7 = [];
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!isinarray(var_36665ed7, e_player) && isplayer(e_player)) {
             if (!isdefined(var_36665ed7)) {
                 var_36665ed7 = [];
@@ -210,13 +210,13 @@ function function_136b871d() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x588bb071, Offset: 0x15d8
 // Size: 0xb0
 function function_29a04809() {
     level endon(#"hash_4a593615");
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!isdefined(e_player.var_9d9e6741) || isplayer(e_player) && gettime() - e_player.var_9d9e6741 > 2000) {
             e_player.var_9d9e6741 = gettime();
             e_player thread function_5f1793f0(1, 0.75);
@@ -225,7 +225,7 @@ function function_29a04809() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7dc2ff2f, Offset: 0x1690
 // Size: 0x50
 function function_13629b3a() {
@@ -237,13 +237,13 @@ function function_13629b3a() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb5788f6, Offset: 0x16e8
 // Size: 0x154
 function function_a6779dd4() {
     path_start = getvehiclenode(self.target, "targetname");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (!(isdefined(player.var_36cc7e41.var_7df4171f) && player.var_36cc7e41.var_7df4171f)) {
             player notify(#"switch_rail");
             player.var_36cc7e41 vehicle::get_on_and_go_path(path_start);
@@ -258,7 +258,7 @@ function function_a6779dd4() {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdb28849, Offset: 0x1848
 // Size: 0x10c
 function function_79c98cb(n_index) {
@@ -278,7 +278,7 @@ function function_79c98cb(n_index) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4863097c, Offset: 0x1960
 // Size: 0xd6
 function function_4f28280b(player) {
@@ -292,7 +292,7 @@ function function_4f28280b(player) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x10d51d72, Offset: 0x1a40
 // Size: 0x260
 function function_fcbee82b(player) {
@@ -335,7 +335,7 @@ function function_fcbee82b(player) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe3d86440, Offset: 0x1ca8
 // Size: 0x104
 function function_5f1793f0(var_1db83aef, n_time) {
@@ -351,7 +351,7 @@ function function_5f1793f0(var_1db83aef, n_time) {
 }
 
 // Namespace cp_mi_sing_sgen_water_ride
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2d7343b4, Offset: 0x1db8
 // Size: 0x14
 function function_d1342558() {

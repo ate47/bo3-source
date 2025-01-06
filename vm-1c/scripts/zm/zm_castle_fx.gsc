@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_castle_fx;
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x70c5bafe, Offset: 0x550
 // Size: 0x24
 function main() {
@@ -15,7 +15,7 @@ function main() {
 }
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfb88ca4c, Offset: 0x580
 // Size: 0x26a
 function function_f45953c() {
@@ -44,7 +44,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x7f8
 // Size: 0x4
 function function_e6258024() {

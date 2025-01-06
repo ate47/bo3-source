@@ -1,28 +1,28 @@
-#using scripts/zm/bgbs/_zm_bgb_anywhere_but_here;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_weapons;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_pack_a_punch_util;
+#using scripts/zm/_zm_spawner;
 #using scripts/zm/_zm_unitrigger;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_pack_a_punch_util;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/bgbs/_zm_bgb_anywhere_but_here;
 
 #namespace zm_island_bgb;
 
 // Namespace zm_island_bgb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3fd3aaf, Offset: 0x3a8
 // Size: 0x34
 function init() {
@@ -31,7 +31,7 @@ function init() {
 }
 
 // Namespace zm_island_bgb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19c8ce9d, Offset: 0x3e8
 // Size: 0x144
 function function_fa778ca4() {
@@ -49,7 +49,7 @@ function function_fa778ca4() {
 }
 
 // Namespace zm_island_bgb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2510803, Offset: 0x538
 // Size: 0x1d4
 function function_2d0e5eb6() {

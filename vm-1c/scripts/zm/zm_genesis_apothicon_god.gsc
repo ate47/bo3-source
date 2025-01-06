@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_blockers;
-#using scripts/zm/zm_genesis_pap_quest;
-#using scripts/zm/zm_genesis_util;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/shared/vehicle_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/spawner_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicle_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_genesis_pap_quest;
+#using scripts/zm/zm_genesis_util;
 
 #namespace zm_genesis_apothicon_god;
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd27640a5, Offset: 0x550
 // Size: 0x7c
 function main() {
@@ -30,7 +30,7 @@ function main() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49463e, Offset: 0x5d8
 // Size: 0xbc
 function function_6dd507bc() {
@@ -50,7 +50,7 @@ function function_6dd507bc() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28b39e5d, Offset: 0x6a0
 // Size: 0xb0
 function function_16364bba() {
@@ -66,7 +66,7 @@ function function_16364bba() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa89a3415, Offset: 0x758
 // Size: 0x10a
 function function_3dd4e95e(str_rumble) {
@@ -82,7 +82,7 @@ function function_3dd4e95e(str_rumble) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x306ae56a, Offset: 0x870
 // Size: 0xec
 function function_e30ec73e() {
@@ -97,7 +97,7 @@ function function_e30ec73e() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x35cd083c, Offset: 0x968
 // Size: 0x3c
 function function_860971ff(a_ents) {
@@ -106,7 +106,7 @@ function function_860971ff(a_ents) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcc3ddaba, Offset: 0x9b0
 // Size: 0x2c
 function function_a2294b99(a_ents) {
@@ -114,7 +114,7 @@ function function_a2294b99(a_ents) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d72e5e1, Offset: 0x9e8
 // Size: 0x124
 function function_4fa16b52() {
@@ -129,7 +129,7 @@ function function_4fa16b52() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfaa8d5d, Offset: 0xb18
 // Size: 0x21a
 function function_d5419c08() {
@@ -145,14 +145,14 @@ function function_d5419c08() {
     }
     self thread function_a15e0860(s_unitrigger);
     while (true) {
-        e_player = self waittill(#"trigger_activated");
+        self waittill(#"trigger_activated", e_player);
         if (!level flag::get("apothicon_near_trap")) {
             continue;
         }
         playsoundatposition("zmb_deathray_activate_console", self.origin);
         exploder::exploder("fxexp_361");
         level function_73f1531();
-        e_player notify(#"hash_7cbc9d72");
+        e_player notify(#"gen_pos");
         if (isdefined(self.script_flag)) {
             level flag::set(self.script_flag);
         }
@@ -161,7 +161,7 @@ function function_d5419c08() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x71c7cc51, Offset: 0xd40
 // Size: 0x64
 function function_a15e0860(s_unitrigger) {
@@ -171,7 +171,7 @@ function function_a15e0860(s_unitrigger) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8a6aa93, Offset: 0xdb0
 // Size: 0x90
 function function_f94d9124(e_player) {
@@ -184,7 +184,7 @@ function function_f94d9124(e_player) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2d596ddd, Offset: 0xe48
 // Size: 0x70
 function function_d9879865(e_player) {
@@ -197,7 +197,7 @@ function function_d9879865(e_player) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x147f592d, Offset: 0xec0
 // Size: 0x3c
 function function_16d77af() {
@@ -206,7 +206,7 @@ function function_16d77af() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc232f695, Offset: 0xf08
 // Size: 0x6c
 function function_65305393() {
@@ -217,7 +217,7 @@ function function_65305393() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9b67bf19, Offset: 0xf80
 // Size: 0xc4
 function function_d6eeedf0(n_state) {
@@ -232,7 +232,7 @@ function function_d6eeedf0(n_state) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64c2feff, Offset: 0x1050
 // Size: 0xc6
 function function_81a3e18f(b_on) {
@@ -248,7 +248,7 @@ function function_81a3e18f(b_on) {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x12a52b91, Offset: 0x1120
 // Size: 0x1fc
 function function_78f98ad9() {
@@ -277,7 +277,7 @@ function function_78f98ad9() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x901d033e, Offset: 0x1328
 // Size: 0x18a
 function function_b89b1260() {
@@ -302,7 +302,7 @@ function function_b89b1260() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x96138b2a, Offset: 0x14c0
 // Size: 0x58
 function function_3187e8a6() {
@@ -314,7 +314,7 @@ function function_3187e8a6() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe147cb38, Offset: 0x1520
 // Size: 0x13c
 function function_73f1531() {
@@ -333,7 +333,7 @@ function function_73f1531() {
 }
 
 // Namespace zm_genesis_apothicon_god
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x60042743, Offset: 0x1668
 // Size: 0x54
 function function_1ff56fb0(str_scene) {

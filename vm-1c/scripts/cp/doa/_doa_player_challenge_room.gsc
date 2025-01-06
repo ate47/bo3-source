@@ -1,21 +1,21 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_chicken_pickup;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_enemy;
 #using scripts/cp/doa/_doa_fate;
 #using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_shield_pickup;
-#using scripts/cp/doa/_doa_chicken_pickup;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_shield_pickup;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/shared/flag_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_74ae326f;
 
@@ -144,7 +144,7 @@ function function_15a0c9b5(room) {
     if (isdefined(room.var_6f369ab4) && room.var_57ce7582.size >= room.var_6f369ab4) {
         arrayremovevalue(level.doa.var_ec2bff7b, room, 0);
     }
-    level notify(#"hash_3b432f18");
+    level notify(#"doa_playerdumpFPS");
     foreach (player in getplayers()) {
         player notify(#"hash_d28ba89d");
     }

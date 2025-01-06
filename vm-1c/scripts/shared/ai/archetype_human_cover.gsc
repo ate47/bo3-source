@@ -1,13 +1,13 @@
-#using scripts/shared/laststand_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai/archetype_cover_utility;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/systems/ai_blackboard;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/laststand_shared;
 
 #namespace archetype_human_cover;
 
@@ -37,7 +37,7 @@ function autoexec registerbehaviorscriptfunctions() {
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x43557135, Offset: 0x848
 // Size: 0x882
 function shouldthrowgrenadeatcovercondition(behaviortreeentity, throwifpossible) {
@@ -117,7 +117,7 @@ function shouldthrowgrenadeatcovercondition(behaviortreeentity, throwifpossible)
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x3a98b8d7, Offset: 0x10d8
 // Size: 0x15a
 function private sensenearbyplayers(entity) {
@@ -135,7 +135,7 @@ function private sensenearbyplayers(entity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6fd0db0c, Offset: 0x1240
 // Size: 0x190
 function private coverpreparetothrowgrenade(behaviortreeentity) {
@@ -155,7 +155,7 @@ function private coverpreparetothrowgrenade(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x8d8a6813, Offset: 0x13d8
 // Size: 0x21c
 function private covercleanuptothrowgrenade(behaviortreeentity) {
@@ -178,7 +178,7 @@ function private covercleanuptothrowgrenade(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb37ed1eb, Offset: 0x1600
 // Size: 0x9c
 function private canchangestanceatcovercondition(behaviortreeentity) {
@@ -192,7 +192,7 @@ function private canchangestanceatcovercondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4847ede1, Offset: 0x16a8
 // Size: 0x2e
 function private shouldreturntosuppressedcover(entity) {
@@ -203,7 +203,7 @@ function private shouldreturntosuppressedcover(entity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x584b1f1, Offset: 0x16e0
 // Size: 0x1a6
 function private shouldreturntocovercondition(behaviortreeentity) {
@@ -237,7 +237,7 @@ function private shouldreturntocovercondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x858e187c, Offset: 0x1890
 // Size: 0x156
 function private shouldadjusttocover(behaviortreeentity) {
@@ -261,7 +261,7 @@ function private shouldadjusttocover(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xff83653a, Offset: 0x19f0
 // Size: 0x1c2
 function private shouldvantageatcovercondition(behaviortreeentity) {
@@ -279,7 +279,7 @@ function private shouldvantageatcovercondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7623dba2, Offset: 0x1bc0
 // Size: 0xe
 function private supportsvantagecovercondition(behaviortreeentity) {
@@ -287,7 +287,7 @@ function private supportsvantagecovercondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x1af350a3, Offset: 0x1bd8
 // Size: 0x54
 function private covervantageinitialize(behaviortreeentity, asmstatename) {
@@ -296,7 +296,7 @@ function private covervantageinitialize(behaviortreeentity, asmstatename) {
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xa4c580a3, Offset: 0x1c38
 // Size: 0x6c
 function private coverblindfireshootactionstart(behaviortreeentity, asmstatename) {
@@ -306,7 +306,7 @@ function private coverblindfireshootactionstart(behaviortreeentity, asmstatename
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x7e67ccb5, Offset: 0x1cb0
 // Size: 0x54
 function private preparetochangestancetostand(behaviortreeentity, asmstatename) {
@@ -315,7 +315,7 @@ function private preparetochangestancetostand(behaviortreeentity, asmstatename) 
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xb664f0d0, Offset: 0x1d10
 // Size: 0x3c
 function private cleanupchangestancetostand(behaviortreeentity, asmstatename) {
@@ -324,7 +324,7 @@ function private cleanupchangestancetostand(behaviortreeentity, asmstatename) {
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x1b2f02da, Offset: 0x1d58
 // Size: 0x54
 function private preparetochangestancetocrouch(behaviortreeentity, asmstatename) {
@@ -333,7 +333,7 @@ function private preparetochangestancetocrouch(behaviortreeentity, asmstatename)
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x41c91cee, Offset: 0x1db8
 // Size: 0x3c
 function private cleanupchangestancetocrouch(behaviortreeentity, asmstatename) {
@@ -342,7 +342,7 @@ function private cleanupchangestancetocrouch(behaviortreeentity, asmstatename) {
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x67c54587, Offset: 0x1e00
 // Size: 0x7c
 function private prepareforadjusttocover(behaviortreeentity, asmstatename) {
@@ -352,7 +352,7 @@ function private prepareforadjusttocover(behaviortreeentity, asmstatename) {
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x396022ea, Offset: 0x1e88
 // Size: 0xde
 function private coverchangestanceactionstart(behaviortreeentity, asmstatename) {
@@ -369,7 +369,7 @@ function private coverchangestanceactionstart(behaviortreeentity, asmstatename) 
 }
 
 // Namespace archetype_human_cover
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfb9ebcb6, Offset: 0x1f70
 // Size: 0x48e
 function temp_get_arm_offset(behaviortreeentity, throwposition) {

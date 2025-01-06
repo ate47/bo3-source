@@ -5,7 +5,7 @@
 #namespace zm_cosmodrome_fx;
 
 // Namespace zm_cosmodrome_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x51208832, Offset: 0x5b8
 // Size: 0x2c
 function main() {
@@ -14,7 +14,7 @@ function main() {
 }
 
 // Namespace zm_cosmodrome_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6f20814, Offset: 0x5f0
 // Size: 0x24e
 function function_f45953c() {
@@ -42,7 +42,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_cosmodrome_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c494f54, Offset: 0x848
 // Size: 0xca
 function function_f205a5f1() {

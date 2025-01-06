@@ -1,16 +1,16 @@
-#using scripts/zm/gametypes/_weapons;
-#using scripts/zm/gametypes/_globallogic_player;
-#using scripts/zm/gametypes/_damagefeedback;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/damagefeedback_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/zm/gametypes/_damagefeedback;
+#using scripts/zm/gametypes/_globallogic_player;
+#using scripts/zm/gametypes/_weapons;
 
 #namespace globallogic_vehicle;
 
 // Namespace globallogic_vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc7e5a907, Offset: 0x288
 // Size: 0xbc
 function callback_vehiclespawned(spawner) {
@@ -27,7 +27,7 @@ function callback_vehiclespawned(spawner) {
 }
 
 // Namespace globallogic_vehicle
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x986e2bdd, Offset: 0x350
 // Size: 0xd4c
 function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -189,7 +189,7 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
 }
 
 // Namespace globallogic_vehicle
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0xf7c4aebc, Offset: 0x10a8
 // Size: 0x5dc
 function callback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdamage, fouterdamage, idflags, smeansofdeath, weapon, vpoint, fradius, fconeanglecos, vconedir, psoffsettime) {
@@ -268,7 +268,7 @@ function callback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdama
 }
 
 // Namespace globallogic_vehicle
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x971e7c9f, Offset: 0x1690
 // Size: 0x248
 function callback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -316,7 +316,7 @@ function vehiclecrush() {
 }
 
 // Namespace globallogic_vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc22f7914, Offset: 0x1978
 // Size: 0x64
 function getvehicleunderneathsplashscalar(weapon) {
@@ -330,7 +330,7 @@ function getvehicleunderneathsplashscalar(weapon) {
 }
 
 // Namespace globallogic_vehicle
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x65db527e, Offset: 0x19e8
 // Size: 0x52
 function allowfriendlyfiredamage(einflictor, eattacker, smeansofdeath, weapon) {

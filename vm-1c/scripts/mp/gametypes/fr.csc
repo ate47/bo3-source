@@ -1,7 +1,7 @@
-#using scripts/shared/system_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
 
 #namespace fr;
 

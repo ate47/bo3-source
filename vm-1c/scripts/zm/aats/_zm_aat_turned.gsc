@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/table_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/table_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_aat_turned;
 
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_turned
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1eab11b, Offset: 0x300
 // Size: 0xa4
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_turned
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xbbb572b6, Offset: 0x3b0
 // Size: 0x1ac
 function result(death, attacker, mod, weapon) {
@@ -68,7 +68,7 @@ function result(death, attacker, mod, weapon) {
 }
 
 // Namespace zm_aat_turned
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd47befed, Offset: 0x568
 // Size: 0x2ee
 function function_9781a8a4(attacker) {
@@ -106,7 +106,7 @@ function function_9781a8a4(attacker) {
 }
 
 // Namespace zm_aat_turned
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27fb16e3, Offset: 0x860
 // Size: 0xf4
 function function_8d19e8ea() {
@@ -132,7 +132,7 @@ function function_8d19e8ea() {
 }
 
 // Namespace zm_aat_turned
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x52150375, Offset: 0x960
 // Size: 0x6c
 function zombie_death_time_limit(e_attacker) {
@@ -145,7 +145,7 @@ function zombie_death_time_limit(e_attacker) {
 }
 
 // Namespace zm_aat_turned
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbd0059c6, Offset: 0x9d8
 // Size: 0x8c
 function zombie_kill_tracker(e_attacker) {
@@ -161,7 +161,7 @@ function zombie_kill_tracker(e_attacker) {
 }
 
 // Namespace zm_aat_turned
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4380c991, Offset: 0xa70
 // Size: 0xa4
 function zombie_death_gib(e_attacker) {

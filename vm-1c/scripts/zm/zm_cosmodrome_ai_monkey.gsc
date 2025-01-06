@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_ai_monkey;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_ai_monkey;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_cosmodrome_ai_monkey;
 
 // Namespace zm_cosmodrome_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x889d33bc, Offset: 0x1f8
 // Size: 0x1c
 function init() {
@@ -19,7 +19,7 @@ function init() {
 }
 
 // Namespace zm_cosmodrome_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e75e3ce, Offset: 0x220
 // Size: 0x27c
 function function_9ddb51fd() {
@@ -49,7 +49,7 @@ function function_9ddb51fd() {
 }
 
 // Namespace zm_cosmodrome_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9ce6af15, Offset: 0x4a8
 // Size: 0x4c
 function function_1c5d6c69() {
@@ -60,7 +60,7 @@ function function_1c5d6c69() {
 }
 
 // Namespace zm_cosmodrome_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb076b3ad, Offset: 0x500
 // Size: 0x1d2
 function function_886be33d() {
@@ -89,7 +89,7 @@ function function_886be33d() {
 }
 
 // Namespace zm_cosmodrome_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95d900d3, Offset: 0x6e0
 // Size: 0x1c
 function function_3cc4d318() {
@@ -115,13 +115,13 @@ function function_f5562f17() {
 }
 
 // Namespace zm_cosmodrome_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd83ed238, Offset: 0x7b8
 // Size: 0x6c
 function function_bf828621() {
     self zombie_utility::reset_attack_spot();
     self thread zombie_utility::zombie_eye_glow_stop();
-    level.var_90c5919d++;
+    level.monkey_death++;
     level.var_8757475e++;
     self namespace_8fb880d9::function_d5e87ee0();
     util::wait_network_frame();

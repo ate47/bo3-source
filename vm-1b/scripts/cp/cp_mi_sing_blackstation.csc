@@ -1,21 +1,21 @@
-#using scripts/cp/cp_mi_sing_blackstation_sound;
-#using scripts/cp/cp_mi_sing_blackstation_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/shared/water_surface;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_blackstation_fx;
+#using scripts/cp/cp_mi_sing_blackstation_sound;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/water_surface;
 
 #namespace cp_mi_sing_blackstation;
 
@@ -24,7 +24,7 @@
 // Checksum 0x607e9d62, Offset: 0x1420
 // Size: 0x202
 function main() {
-    util::function_57b966c8(&function_71f88fc, 5);
+    util::function_57b966c8(&force_streamer, 5);
     register_clientfields();
     flag_init();
     level._effect["rain_light_ne"] = "weather/fx_rain_system_lite_ne_runner_blackstation";
@@ -302,7 +302,7 @@ function function_85392f32(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 1, eflags: 0x0
 // Checksum 0x33b690a8, Offset: 0x24b0
 // Size: 0x75
-function function_71f88fc(n_index) {
+function force_streamer(n_index) {
     switch (n_index) {
     case 1:
         forcestreambundle("cin_bla_01_01_intro_1st");
@@ -924,7 +924,7 @@ function function_13a8d1c5() {
 // Checksum 0x16817572, Offset: 0x4040
 // Size: 0xe9
 function function_1bbce270() {
-    level endon(#"hash_9bfd16b7");
+    level endon(#"objective_storm_surge_terminate");
     var_10ec3c1e = struct::get_array("pulse_barge", "targetname");
     while (true) {
         foreach (s_pulse in var_10ec3c1e) {

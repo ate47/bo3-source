@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_tomb_dig;
 
 // Namespace zm_tomb_dig
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x21f714dd, Offset: 0x1c0
 // Size: 0x244
 function init() {

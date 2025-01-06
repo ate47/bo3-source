@@ -1,9 +1,9 @@
-#using scripts/cp/doa/_doa_utility;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_gibs;
-#using scripts/shared/util_shared;
+#using scripts/cp/doa/_doa_utility;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/fx_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace namespace_eaa992c;
 
@@ -401,7 +401,7 @@ function function_32bcda58(burnType, attacker) {
 // Checksum 0xeb847d5d, Offset: 0x27b8
 // Size: 0xc4
 function private function_9fc6e261(type) {
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     wait 0.05;
     if (isdefined(corpse)) {
         corpse clientfield::set("burnType", type);

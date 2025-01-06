@@ -1,10 +1,10 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace cp_mi_zurich_newworld_sound;
 
 // Namespace cp_mi_zurich_newworld_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f54b8dd, Offset: 0x158
 // Size: 0x64
 function main() {
@@ -15,7 +15,7 @@ function main() {
 }
 
 // Namespace cp_mi_zurich_newworld_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x853c4ae, Offset: 0x1c8
 // Size: 0xb4
 function security_det() {
@@ -24,7 +24,7 @@ function security_det() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_security_detector", (-10363, -24283, 9450));
             break;
@@ -33,7 +33,7 @@ function security_det() {
 }
 
 // Namespace cp_mi_zurich_newworld_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x436033a7, Offset: 0x288
 // Size: 0xb4
 function function_cfd80c1b() {
@@ -42,7 +42,7 @@ function function_cfd80c1b() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_train_horn_distant", (21054, -3421, -6031));
             break;
@@ -51,7 +51,7 @@ function function_cfd80c1b() {
 }
 
 // Namespace cp_mi_zurich_newworld_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x917a0b21, Offset: 0x348
 // Size: 0xb4
 function train_horn_dist() {
@@ -60,7 +60,7 @@ function train_horn_dist() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_train_horn_distant", (-13099, -18453, 10228));
             break;
@@ -69,7 +69,7 @@ function train_horn_dist() {
 }
 
 // Namespace cp_mi_zurich_newworld_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd5aa6127, Offset: 0x408
 // Size: 0xcc
 function function_694458bd() {
@@ -81,7 +81,7 @@ function function_694458bd() {
 }
 
 // Namespace cp_mi_zurich_newworld_sound
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x48b38d9f, Offset: 0x4e0
 // Size: 0xc8
 function sndTrainContext(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

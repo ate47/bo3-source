@@ -1,14 +1,14 @@
-#using scripts/mp/mp_western_sound;
-#using scripts/mp/mp_western_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_western_fx;
+#using scripts/mp/mp_western_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_western;
 
 // Namespace mp_western
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x910a7094, Offset: 0x1b8
 // Size: 0x8c
 function main() {
@@ -22,7 +22,7 @@ function main() {
 }
 
 // Namespace mp_western
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe996d174, Offset: 0x250
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
@@ -52,7 +52,7 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_western
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd660981c, Offset: 0x320
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {

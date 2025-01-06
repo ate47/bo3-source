@@ -1,8 +1,8 @@
-#using scripts/shared/weapons/_lightninggun;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/weapons/_lightninggun;
 
 #namespace lightninggun;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace lightninggun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd4a86e0e, Offset: 0x170
 // Size: 0x14
 function __init__() {

@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
 
 #namespace zm_timer;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4bc015a4, Offset: 0x120
 // Size: 0x1c
 function __main__() {
@@ -22,7 +22,7 @@ function __main__() {
 }
 
 // Namespace zm_timer
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa25cab14, Offset: 0x148
 // Size: 0x2dc
 function start_timer(time, stop_notify) {
@@ -66,7 +66,7 @@ function start_timer(time, stop_notify) {
 }
 
 // Namespace zm_timer
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1e248d30, Offset: 0x430
 // Size: 0x54
 function function_e018c20f(stop_notify) {
@@ -78,7 +78,7 @@ function function_e018c20f(stop_notify) {
 }
 
 // Namespace zm_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a6775ea, Offset: 0x490
 // Size: 0x64
 function function_83ea29ce() {

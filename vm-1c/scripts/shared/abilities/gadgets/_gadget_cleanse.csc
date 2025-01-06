@@ -1,14 +1,14 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
+#using scripts/codescripts/struct;
 #using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace _gadget_cleanse;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_cleanse
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x38dbf947, Offset: 0x2d0
 // Size: 0x7c
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace _gadget_cleanse
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x144bab3b, Offset: 0x358
 // Size: 0x6c
 function function_6422ca5c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,10 +1,10 @@
-#using scripts/mp/mp_crucible_sound;
-#using scripts/mp/mp_crucible_fx;
-#using scripts/mp/_util;
+#using scripts/codescripts/struct;
 #using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_crucible_fx;
+#using scripts/mp/mp_crucible_sound;
 #using scripts/shared/compass;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace mp_crucible;
 

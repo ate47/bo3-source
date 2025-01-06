@@ -1,15 +1,15 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_lightning_chain;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_lightning_chain;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_aat_dead_wire;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_dead_wire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f38e0da, Offset: 0x2d0
 // Size: 0x13c
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_dead_wire
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x193c00a1, Offset: 0x418
 // Size: 0xcc
 function result(death, attacker, mod, weapon) {

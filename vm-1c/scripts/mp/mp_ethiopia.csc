@@ -1,13 +1,13 @@
-#using scripts/mp/mp_ethiopia_sound;
-#using scripts/mp/mp_ethiopia_fx;
-#using scripts/mp/_waterfall;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/water_surface;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/_waterfall;
+#using scripts/mp/mp_ethiopia_fx;
+#using scripts/mp/mp_ethiopia_sound;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/water_surface;
 
 #namespace mp_ethiopia;
 

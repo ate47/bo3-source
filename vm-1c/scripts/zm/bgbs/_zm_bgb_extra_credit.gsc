@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
 #using scripts/zm/_zm_powerups;
 #using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_bgb_extra_credit;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_extra_credit
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86932f6, Offset: 0x1d0
 // Size: 0x54
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_extra_credit
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf80a50fa, Offset: 0x230
 // Size: 0x44
 function activation() {
@@ -38,7 +38,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_extra_credit
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8283fff, Offset: 0x280
 // Size: 0xd4
 function function_b18c3b2d(origin) {
@@ -53,7 +53,7 @@ function function_b18c3b2d(origin) {
 }
 
 // Namespace zm_bgb_extra_credit
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf150569d, Offset: 0x360
 // Size: 0x8
 function function_3258dd42() {

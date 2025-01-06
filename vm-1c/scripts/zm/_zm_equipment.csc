@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_equipment;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33123316, Offset: 0x148
 // Size: 0x7c
 function __init__() {
@@ -33,7 +33,7 @@ function add_equip_activated_callback_override(model, func) {
 }
 
 // Namespace zm_equipment
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3110322e, Offset: 0x200
 // Size: 0x13a
 function equipment_activated_clientfield_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -112,7 +112,7 @@ function is_included(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5e180a1f, Offset: 0x638
 // Size: 0x5a
 function include(equipment_name) {

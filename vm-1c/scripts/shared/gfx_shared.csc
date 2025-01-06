@@ -1,14 +1,14 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace gfx;
 
 // Namespace gfx
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x2d77b00c, Offset: 0x260
 // Size: 0x5ec
 function setstage(localclientnum, bundle, filterid, stageprefix, stagelength, accumtime, totalaccumtime, setconstants) {
@@ -91,7 +91,7 @@ function setstage(localclientnum, bundle, filterid, stageprefix, stagelength, ac
 }
 
 // Namespace gfx
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x99e635a9, Offset: 0x858
 // Size: 0x4ae
 function getshaderconstantvalue(bundle, constprefix, constname, delay) {
@@ -139,7 +139,7 @@ function getshaderconstantvalue(bundle, constprefix, constname, delay) {
 }
 
 // Namespace gfx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa0c3e150, Offset: 0xd10
 // Size: 0x4e
 function getstructfieldorzero(bundle, field) {
@@ -151,7 +151,7 @@ function getstructfieldorzero(bundle, field) {
 }
 
 // Namespace gfx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8933aded, Offset: 0xd68
 // Size: 0x8e
 function getshaderconstantindex(codeconstname) {

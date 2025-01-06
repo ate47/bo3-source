@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_projectile_vomiting;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34d7b1e0, Offset: 0x250
 // Size: 0xb4
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x310
 // Size: 0x4
 function enable() {
@@ -39,7 +39,7 @@ function enable() {
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x320
 // Size: 0x4
 function disable() {
@@ -47,7 +47,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_projectile_vomiting
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xad3199e8, Offset: 0x330
 // Size: 0x76
 function actor_death_override(attacker) {

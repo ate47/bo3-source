@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace scoreboard;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace scoreboard
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x918c5e48, Offset: 0x128
 // Size: 0x24
 function __init__() {
@@ -21,7 +21,7 @@ function __init__() {
 }
 
 // Namespace scoreboard
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf909af1, Offset: 0x158
 // Size: 0x1a
 function init() {

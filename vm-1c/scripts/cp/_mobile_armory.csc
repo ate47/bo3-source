@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace _mobile_armory;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _mobile_armory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9980bafc, Offset: 0x178
 // Size: 0x4c
 function __init__() {
@@ -20,7 +20,7 @@ function __init__() {
 }
 
 // Namespace _mobile_armory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1d0
 // Size: 0x4
 function __main__() {
@@ -28,7 +28,7 @@ function __main__() {
 }
 
 // Namespace _mobile_armory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2c5f84b4, Offset: 0x1e0
 // Size: 0x1b6
 function function_dd709a6d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/behavior_zombie_dog;
+#using scripts/shared/ai/systems/ai_interface;
 
 #namespace namespace_273d1a1c;
 
 // Namespace namespace_273d1a1c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26b16e52, Offset: 0x110
 // Size: 0xbc
 function registerzombiedoginterfaceattributes() {

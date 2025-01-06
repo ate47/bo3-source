@@ -1,12 +1,12 @@
-#using scripts/shared/bots/bot_traversals;
-#using scripts/zm/gametypes/_hostmigration;
-#using scripts/zm/gametypes/_globallogic_vehicle;
-#using scripts/zm/gametypes/_globallogic_player;
-#using scripts/zm/gametypes/_globallogic_actor;
-#using scripts/zm/gametypes/_globallogic;
-#using scripts/shared/system_shared;
-#using scripts/shared/ai/systems/blackboard;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/bots/bot_traversals;
+#using scripts/shared/system_shared;
+#using scripts/zm/gametypes/_globallogic;
+#using scripts/zm/gametypes/_globallogic_actor;
+#using scripts/zm/gametypes/_globallogic_player;
+#using scripts/zm/gametypes/_globallogic_vehicle;
+#using scripts/zm/gametypes/_hostmigration;
 
 #namespace callback;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9e4fdc6a, Offset: 0x228
 // Size: 0x1c
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeecc2927, Offset: 0x250
 // Size: 0xbc
 function setup_callbacks() {
@@ -49,7 +49,7 @@ function setup_callbacks() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x879e00a8, Offset: 0x318
 // Size: 0x1dc
 function setdefaultcallbacks() {

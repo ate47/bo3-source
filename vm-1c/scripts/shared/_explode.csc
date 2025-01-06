@@ -1,8 +1,8 @@
-#using scripts/shared/filter_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace explode;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace explode
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b05be23, Offset: 0x1d8
 // Size: 0xb4
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 /#
 
     // Namespace explode
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe604f422, Offset: 0x298
     // Size: 0x98
     function updatedvars() {
@@ -46,7 +46,7 @@ function __init__() {
 #/
 
 // Namespace explode
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e3309c9, Offset: 0x338
 // Size: 0xdc
 function localplayer_spawned(localclientnum) {
@@ -69,7 +69,7 @@ function localplayer_spawned(localclientnum) {
 }
 
 // Namespace explode
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf7871b3f, Offset: 0x420
 // Size: 0x98
 function watchforplayerfalldamage(localclientnum) {
@@ -84,7 +84,7 @@ function watchforplayerfalldamage(localclientnum) {
 }
 
 // Namespace explode
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf408b1cd, Offset: 0x4c0
 // Size: 0x1d0
 function watchforplayerslide(localclientnum) {
@@ -114,7 +114,7 @@ function watchforplayerslide(localclientnum) {
 }
 
 // Namespace explode
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xf110aae7, Offset: 0x698
 // Size: 0x204
 function dothedirty(localclientnum, right, up, distance, dirtduration, dirtfadetime) {
@@ -141,13 +141,13 @@ function dothedirty(localclientnum, right, up, distance, dirtduration, dirtfadet
 }
 
 // Namespace explode
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb6f42e6e, Offset: 0x8a8
 // Size: 0x3a8
 function watchforexplosion(localclientnum) {
     self endon(#"entityshutdown");
     while (true) {
-        localclientnum, position, mod, weapon, owner_cent = level waittill(#"explode");
+        level waittill(#"explode", localclientnum, position, mod, weapon, owner_cent);
         explosiondistance = distance(self.origin, position);
         if ((mod == "MOD_GRENADE_SPLASH" || mod == "MOD_PROJECTILE_SPLASH") && explosiondistance < 600 && !getinkillcam(localclientnum) && !isthirdperson(localclientnum)) {
             cameraangles = self getcamangles();

@@ -1,15 +1,15 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_bouncingbetty;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/weapons/_bouncingbetty;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace zm_genesis_amb;
 
 // Namespace zm_genesis_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25fad8dd, Offset: 0x1d0
 // Size: 0x3c
 function main() {
@@ -18,7 +18,7 @@ function main() {
 }
 
 // Namespace zm_genesis_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdba4d479, Offset: 0x218
 // Size: 0x238
 function function_25b0085d() {

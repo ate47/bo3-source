@@ -1,14 +1,14 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace armor;
 
 // Namespace armor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc4148b87, Offset: 0x148
 // Size: 0xec
 function setlightarmorhp(newvalue) {
@@ -45,7 +45,7 @@ function setlightarmor(optionalarmorvalue) {
 }
 
 // Namespace armor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba7ec9f2, Offset: 0x300
 // Size: 0x44
 function removelightarmorondeath() {
@@ -57,7 +57,7 @@ function removelightarmorondeath() {
 }
 
 // Namespace armor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x602433bd, Offset: 0x350
 // Size: 0x2a
 function unsetlightarmor() {
@@ -66,7 +66,7 @@ function unsetlightarmor() {
 }
 
 // Namespace armor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2bf70c92, Offset: 0x388
 // Size: 0x3c
 function removelightarmoronmatchend() {
@@ -85,7 +85,7 @@ function haslightarmor() {
 }
 
 // Namespace armor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5530d2f0, Offset: 0x3f8
 // Size: 0x1a
 function function_3e7fdc00() {

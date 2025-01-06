@@ -1,23 +1,23 @@
-#using scripts/zm/zm_cosmodrome_eggs;
-#using scripts/zm/zm_cosmodrome_amb;
-#using scripts/zm/zm_cosmodrome;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_cosmodrome;
+#using scripts/zm/zm_cosmodrome_amb;
+#using scripts/zm/zm_cosmodrome_eggs;
 
 #namespace zm_cosmodrome_eggs;
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e63e63f, Offset: 0xa30
 // Size: 0x4bc
 function init() {
@@ -75,7 +75,7 @@ function function_bf374409(alias, sound_ent, text) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x76077cd9, Offset: 0xf78
 // Size: 0x10e
 function function_55403b86(num) {
@@ -90,16 +90,16 @@ function function_55403b86(num) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20c0495, Offset: 0x1090
 // Size: 0x2ac
 function function_2f116aad() {
     teleport_target_start = struct::get("teleport_target_start", "targetname");
     teleport_target_spark = struct::get("teleport_target_spark", "targetname");
     var_1dc1d30a = teleport_target_spark.angles;
-    level.var_50560fe8 = spawn("script_model", teleport_target_start.origin);
-    level.var_50560fe8 setmodel("p7_zm_asc_transformer_electrical");
-    level.var_50560fe8.angles = teleport_target_start.angles;
+    level.teleport_target = spawn("script_model", teleport_target_start.origin);
+    level.teleport_target setmodel("p7_zm_asc_transformer_electrical");
+    level.teleport_target.angles = teleport_target_start.angles;
     teleport_target_spark = spawn("script_model", teleport_target_spark.origin);
     teleport_target_spark setmodel("tag_origin");
     teleport_target_spark.angles = var_1dc1d30a;
@@ -107,7 +107,7 @@ function function_2f116aad() {
     level.var_9c483a19 = spawn("trigger_radius", teleport_target_start.origin + (0, 0, -70), 0, 125, 100);
     /#
         if (!isdefined(level.var_74eed1d3) || !level.var_74eed1d3) {
-            level.var_50560fe8 thread zm_cosmodrome::function_620401c0(level.var_50560fe8.origin, "<dev string:x28>", "<dev string:x3d>", 2);
+            level.teleport_target thread zm_cosmodrome::function_620401c0(level.teleport_target.origin, "<dev string:x28>", "<dev string:x3d>", 2);
         }
     #/
     level.var_5fc80ad9 = &function_1e3d1509;
@@ -119,47 +119,47 @@ function function_2f116aad() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x348c9816, Offset: 0x1348
 // Size: 0x8c
 function function_1e3d1509(grenade, model, info) {
     if (isdefined(level.var_9c483a19) && grenade istouching(level.var_9c483a19)) {
         model clientfield::set("toggle_black_hole_deployed", 1);
-        level thread function_50560fe8(grenade, model);
+        level thread teleport_target(grenade, model);
         return true;
     }
     return false;
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaead40ea, Offset: 0x13e0
 // Size: 0x244
-function function_50560fe8(grenade, model) {
+function teleport_target(grenade, model) {
     level.var_9c483a19 delete();
     level.var_9c483a19 = undefined;
     wait 1;
     level notify(#"hash_2a49912");
     time = 3;
-    level.var_50560fe8 moveto(grenade.origin + (0, 0, 50), time, time - 0.05);
+    level.teleport_target moveto(grenade.origin + (0, 0, 50), time, time - 0.05);
     wait time;
     teleport_target_end = struct::get("teleport_target_end", "targetname");
-    level.var_50560fe8 ghost();
+    level.teleport_target ghost();
     playsoundatposition("zmb_gersh_teleporter_out", grenade.origin + (0, 0, 50));
     wait 0.5;
-    level.var_50560fe8.angles = teleport_target_end.angles;
-    level.var_50560fe8 moveto(teleport_target_end.origin, 0.05);
+    level.teleport_target.angles = teleport_target_end.angles;
+    level.teleport_target moveto(teleport_target_end.origin, 0.05);
     wait 0.5;
-    level.var_50560fe8 show();
-    playfxontag(level._effect["black_hole_bomb_event_horizon"], level.var_50560fe8, "tag_origin");
-    level.var_50560fe8 playsound("zmb_gersh_teleporter_go");
+    level.teleport_target show();
+    playfxontag(level._effect["black_hole_bomb_event_horizon"], level.teleport_target, "tag_origin");
+    level.teleport_target playsound("zmb_gersh_teleporter_go");
     wait 2;
     model delete();
     level flag::set("target_teleported");
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89c2963c, Offset: 0x1630
 // Size: 0x21c
 function function_6b4d4b8a() {
@@ -184,7 +184,7 @@ function function_6b4d4b8a() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x12a32001, Offset: 0x1858
 // Size: 0xe0
 function function_78f34b16(monitor) {
@@ -194,7 +194,7 @@ function function_78f34b16(monitor) {
         }
     #/
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         while (isplayer(who) && who istouching(self)) {
             if (who usebuttonpressed()) {
                 level flag::set("rerouted_power");
@@ -207,7 +207,7 @@ function function_78f34b16(monitor) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d34ef7c, Offset: 0x1940
 // Size: 0x8c
 function function_55c69e42() {
@@ -218,7 +218,7 @@ function function_55c69e42() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2be59079, Offset: 0x19d8
 // Size: 0xc8
 function function_27c6e567(switches) {
@@ -236,7 +236,7 @@ function function_27c6e567(switches) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x32c79b62, Offset: 0x1aa8
 // Size: 0x26c
 function function_2fee275() {
@@ -269,7 +269,7 @@ function function_2fee275() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xac8a09a5, Offset: 0x1d20
 // Size: 0x134
 function function_91a40788(ss, button) {
@@ -277,7 +277,7 @@ function function_91a40788(ss, button) {
     level endon(#"switches_synced");
     ss.pressed = 0;
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         while (isplayer(who) && who istouching(self)) {
             if (who usebuttonpressed()) {
                 level notify(#"hash_7dad0c40");
@@ -296,7 +296,7 @@ function function_91a40788(ss, button) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1dbd00f8, Offset: 0x1e60
 // Size: 0x266
 function function_c1215448() {
@@ -344,7 +344,7 @@ function function_c1215448() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9326816a, Offset: 0x20d0
 // Size: 0x11c
 function function_38cded10() {
@@ -363,7 +363,7 @@ function function_38cded10() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89f6bb6d, Offset: 0x21f8
 // Size: 0x5ea
 function function_40a71984(time) {
@@ -461,7 +461,7 @@ function function_40a71984(time) {
 /#
 
     // Namespace zm_cosmodrome_eggs
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x235e7242, Offset: 0x27f0
     // Size: 0x1a
     function function_1129ebfe() {
@@ -472,7 +472,7 @@ function function_40a71984(time) {
 #/
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f453967, Offset: 0x2818
 // Size: 0x344
 function function_18c28e7b() {
@@ -503,7 +503,7 @@ function function_18c28e7b() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x64ae7abf, Offset: 0x2b68
 // Size: 0x358
 function function_adcb2f80() {
@@ -556,7 +556,7 @@ function function_adcb2f80() {
 /#
 
     // Namespace zm_cosmodrome_eggs
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x45ae0f1e, Offset: 0x2ec8
     // Size: 0x144
     function function_362373ab(model) {
@@ -573,7 +573,7 @@ function function_adcb2f80() {
 #/
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47496ed, Offset: 0x3018
 // Size: 0x38
 function function_874d06b6() {
@@ -588,7 +588,7 @@ function function_874d06b6() {
 /#
 
     // Namespace zm_cosmodrome_eggs
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbe135435, Offset: 0x3058
     // Size: 0x126
     function function_33078896() {
@@ -604,7 +604,7 @@ function function_874d06b6() {
     }
 
     // Namespace zm_cosmodrome_eggs
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x272545f8, Offset: 0x3188
     // Size: 0x54
     function function_e07806c9(var_43240065) {
@@ -618,7 +618,7 @@ function function_874d06b6() {
 #/
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa0519e2, Offset: 0x31e8
 // Size: 0x46
 function function_ac792024() {
@@ -631,12 +631,12 @@ function function_ac792024() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf16bdc23, Offset: 0x3238
 // Size: 0x1ec
 function function_172345ea(letter, model) {
     level endon(#"lander_grounded");
-    e_player = self waittill(#"trigger");
+    self waittill(#"trigger", e_player);
     level flag::set("letter_acquired");
     playsoundatposition("zmb_powerup_grabbed", model.origin);
     model ghost();
@@ -670,7 +670,7 @@ function function_172345ea(letter, model) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc96906ac, Offset: 0x3430
 // Size: 0x1ee
 function function_6f6480bb() {
@@ -696,7 +696,7 @@ function function_6f6480bb() {
 /#
 
     // Namespace zm_cosmodrome_eggs
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xd69d8fd4, Offset: 0x3628
     // Size: 0x6c
     function function_a0ad103c(weapon_combo_spot) {
@@ -710,7 +710,7 @@ function function_6f6480bb() {
     }
 
     // Namespace zm_cosmodrome_eggs
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x25741739, Offset: 0x36a0
     // Size: 0x7c
     function function_8172c64e() {
@@ -722,7 +722,7 @@ function function_6f6480bb() {
 #/
 
 // Namespace zm_cosmodrome_eggs
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf39a4078, Offset: 0x3728
 // Size: 0x5e
 function function_184744ba(grenade, model, info) {
@@ -733,7 +733,7 @@ function function_184744ba(grenade, model, info) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x286b70fe, Offset: 0x3790
 // Size: 0x54
 function function_510c4845() {
@@ -742,7 +742,7 @@ function function_510c4845() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf5ad32c6, Offset: 0x37f0
 // Size: 0x28a
 function function_61f25aa1(trig) {
@@ -760,7 +760,7 @@ function function_61f25aa1(trig) {
     players = getplayers();
     array::thread_all(players, &function_6d87905c, self, trig, weapon_combo_spot);
     while (true) {
-        amount, inflictor, direction, point, type, tagname, modelname, partname, weapon = trig waittill(#"damage");
+        trig waittill(#"damage", amount, inflictor, direction, point, type, tagname, modelname, partname, weapon);
         if (isdefined(inflictor)) {
             if (weapon.name == "ray_gun_upgraded" || type == "MOD_PROJECTILE" && weapon.name == "raygun_mark2_upgraded") {
                 var_68345fe = 1;
@@ -777,7 +777,7 @@ function function_61f25aa1(trig) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb534131b, Offset: 0x3a88
 // Size: 0x1b8
 function function_6d87905c(model, trig, weapon_combo_spot) {
@@ -806,7 +806,7 @@ function function_6d87905c(model, trig, weapon_combo_spot) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xed7cdc56, Offset: 0x3c48
 // Size: 0x5c
 function function_30d8de55(trig) {
@@ -815,7 +815,7 @@ function function_30d8de55(trig) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9a59aa6e, Offset: 0x3cb0
 // Size: 0xfc
 function function_cc6ea79(trig) {
@@ -830,7 +830,7 @@ function function_cc6ea79(trig) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xca277015, Offset: 0x3db8
 // Size: 0x17c
 function soul_release(model, origin) {
@@ -850,7 +850,7 @@ function soul_release(model, origin) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeebafa53, Offset: 0x3f40
 // Size: 0x6e
 function function_944c8cd2() {
@@ -862,7 +862,7 @@ function function_944c8cd2() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10d4e2a3, Offset: 0x3fb8
 // Size: 0xb4
 function function_467428d0() {
@@ -876,7 +876,7 @@ function function_467428d0() {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb7648028, Offset: 0x4078
 // Size: 0x1bc
 function function_321f0d6f(var_d6e54e9f, var_1bb1a809, var_2c0c1edc) {
@@ -901,7 +901,7 @@ function function_321f0d6f(var_d6e54e9f, var_1bb1a809, var_2c0c1edc) {
 }
 
 // Namespace zm_cosmodrome_eggs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f0a3798, Offset: 0x4240
 // Size: 0xb4
 function function_28a46c0d() {

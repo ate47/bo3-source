@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_island_planting;
 
 // Namespace zm_island_planting
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfbbe0173, Offset: 0x610
 // Size: 0x31c
 function init() {
@@ -28,7 +28,7 @@ function init() {
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6f02f9eb, Offset: 0x938
 // Size: 0x37c
 function plant_growth_siege_anims(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -69,7 +69,7 @@ function plant_growth_siege_anims(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x31e7e1d, Offset: 0xcc0
 // Size: 0xbc
 function function_d6804e46(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -84,7 +84,7 @@ function function_d6804e46(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xca083f16, Offset: 0xd88
 // Size: 0xbe
 function babysitter_plant_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -99,7 +99,7 @@ function babysitter_plant_fx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4c0965db, Offset: 0xe50
 // Size: 0xbe
 function trap_plant_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -114,7 +114,7 @@ function trap_plant_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x966fda38, Offset: 0xf18
 // Size: 0xce
 function plant_hit_with_ww(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -129,7 +129,7 @@ function plant_hit_with_ww(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe84e4693, Offset: 0xff0
 // Size: 0xa4
 function plant_watered(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -144,7 +144,7 @@ function plant_watered(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_island_planting
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc0dcfc71, Offset: 0x10a0
 // Size: 0xc4
 function function_2179698b(localclientnum) {
@@ -158,7 +158,7 @@ function function_2179698b(localclientnum) {
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc2bc7107, Offset: 0x1170
 // Size: 0x84
 function planter_model_watered(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -170,7 +170,7 @@ function planter_model_watered(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_island_planting
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd90db32, Offset: 0x1200
 // Size: 0x1d0
 function function_b8ba462e(localclientnum, b_on) {
@@ -205,7 +205,7 @@ function function_b8ba462e(localclientnum, b_on) {
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9fe6b0ba, Offset: 0x13d8
 // Size: 0x8c
 function player_spawned_from_clone_plant(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -219,7 +219,7 @@ function player_spawned_from_clone_plant(localclientnum, oldval, newval, bnewent
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6fb72d5c, Offset: 0x1470
 // Size: 0xbe
 function player_cloned_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -234,7 +234,7 @@ function player_cloned_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x70305d3a, Offset: 0x1538
 // Size: 0x106
 function zombie_or_grenade_spawned_from_minor_cache_plant(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -253,7 +253,7 @@ function zombie_or_grenade_spawned_from_minor_cache_plant(localclientnum, oldval
 }
 
 // Namespace zm_island_planting
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xddb6b668, Offset: 0x1648
 // Size: 0xbe
 function player_vomit_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

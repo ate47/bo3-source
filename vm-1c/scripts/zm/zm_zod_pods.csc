@@ -1,15 +1,15 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/zm_zod_quest;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_zod_quest;
 
 #namespace zm_zod_pods;
 
@@ -47,8 +47,8 @@ function __init__() {
 // Checksum 0xb537fec5, Offset: 0x910
 // Size: 0x382
 function update_fungus_pod_level(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (isdefined(self.var_aa0684b4)) {
-        stopfx(localclientnum, self.var_aa0684b4);
+    if (isdefined(self.ambient_fx)) {
+        stopfx(localclientnum, self.ambient_fx);
         self stopallloopsounds();
     }
     if (!isdefined(level.var_63c365e9)) {
@@ -79,17 +79,17 @@ function update_fungus_pod_level(localclientnum, oldval, newval, bnewent, biniti
         break;
     case 1:
         self thread scene_play("p7_fxanim_zm_zod_fungus_pod_stage1_bundle", mdl_pod);
-        self.var_aa0684b4 = playfx(localclientnum, "zombie/fx_fungus_pod_ambient_sm_zod_zmb", self.origin);
+        self.ambient_fx = playfx(localclientnum, "zombie/fx_fungus_pod_ambient_sm_zod_zmb", self.origin);
         self.var_8486ae6a = newval;
         break;
     case 2:
         self thread scene_play("p7_fxanim_zm_zod_fungus_pod_stage2_bundle", mdl_pod);
-        self.var_aa0684b4 = playfx(localclientnum, "zombie/fx_fungus_pod_ambient_md_zod_zmb", self.origin);
+        self.ambient_fx = playfx(localclientnum, "zombie/fx_fungus_pod_ambient_md_zod_zmb", self.origin);
         self.var_8486ae6a = newval;
         break;
     case 3:
         self thread scene_play("p7_fxanim_zm_zod_fungus_pod_stage3_bundle", mdl_pod);
-        self.var_aa0684b4 = playfx(localclientnum, "zombie/fx_fungus_pod_ambient_lg_zod_zmb", self.origin);
+        self.ambient_fx = playfx(localclientnum, "zombie/fx_fungus_pod_ambient_lg_zod_zmb", self.origin);
         self.var_8486ae6a = newval;
         break;
     }
@@ -127,8 +127,8 @@ function function_1d1d005f(localclientnum, oldval, newval, bnewent, binitialsnap
     v_origin = self.origin;
     v_angles = anglestoforward(self.angles);
     var_8486ae6a = self.var_8486ae6a;
-    if (isdefined(self.var_aa0684b4)) {
-        stopfx(localclientnum, self.var_aa0684b4);
+    if (isdefined(self.ambient_fx)) {
+        stopfx(localclientnum, self.ambient_fx);
     }
     switch (var_8486ae6a) {
     case 1:

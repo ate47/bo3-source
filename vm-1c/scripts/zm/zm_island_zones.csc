@@ -1,15 +1,15 @@
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
 
 #namespace zm_island_zones;
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a38c980, Offset: 0x190
 // Size: 0x4c
 function init() {
@@ -17,7 +17,7 @@ function init() {
 }
 
 // Namespace zm_island_zones
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1e219594, Offset: 0x1e8
 // Size: 0x6c
 function vine_door_play_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -25,7 +25,7 @@ function vine_door_play_fx(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x260
 // Size: 0x4
 function main() {

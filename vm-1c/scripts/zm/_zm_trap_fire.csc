@@ -1,22 +1,22 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace zm_trap_fire;
 
 // Namespace zm_trap_fire
 // Params 0, eflags: 0x2
-// Checksum 0xa7481c0e, Offset: 0x160
+// Checksum 0x24bd21b8, Offset: 0x160
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_trap_fire", &__init__, undefined, undefined);
 }
 
 // Namespace zm_trap_fire
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd5e3e2a7, Offset: 0x1a0
+// Params 0, eflags: 0x0
+// Checksum 0xffdb07d7, Offset: 0x1a0
 // Size: 0xe2
 function __init__() {
     a_traps = struct::get_array("trap_fire", "targetname");
@@ -26,8 +26,8 @@ function __init__() {
 }
 
 // Namespace zm_trap_fire
-// Params 7, eflags: 0x1 linked
-// Checksum 0x92b72f08, Offset: 0x290
+// Params 7, eflags: 0x0
+// Checksum 0x4f8771e4, Offset: 0x290
 // Size: 0x172
 function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     exploder_name = "trap_fire_" + fieldname;
@@ -49,8 +49,8 @@ function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm_trap_fire
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd5b0be98, Offset: 0x410
+// Params 0, eflags: 0x0
+// Checksum 0xaf8398b7, Offset: 0x410
 // Size: 0x12c
 function asset_pool_scriptbundlelist() {
     ang = self.angles;
@@ -69,8 +69,8 @@ function asset_pool_scriptbundlelist() {
 }
 
 // Namespace zm_trap_fire
-// Params 0, eflags: 0x1 linked
-// Checksum 0x1d332b26, Offset: 0x548
+// Params 0, eflags: 0x0
+// Checksum 0x601c4c7f, Offset: 0x548
 // Size: 0x88
 function function_dc960b46() {
     players = getlocalplayers();

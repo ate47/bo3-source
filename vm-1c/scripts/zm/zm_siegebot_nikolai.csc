@@ -1,8 +1,8 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/vehicle_shared;
 
 #using_animtree("generic");
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4a7a239d, Offset: 0x4d8
 // Size: 0x2fc
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8240d81, Offset: 0x7e0
 // Size: 0x5c
 function on_spawned(localclientnum) {
@@ -45,7 +45,7 @@ function on_spawned(localclientnum) {
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xebaf355, Offset: 0x848
 // Size: 0x278
 function function_48c3fc7d(localclientnum) {
@@ -82,7 +82,7 @@ function function_48c3fc7d(localclientnum) {
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4ecd6910, Offset: 0xac8
 // Size: 0x154
 function function_97181777(var_1714a389) {
@@ -101,7 +101,7 @@ function function_97181777(var_1714a389) {
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xce04de2e, Offset: 0xc28
 // Size: 0x60
 function function_89d7e567(localclientnum) {
@@ -114,7 +114,7 @@ function function_89d7e567(localclientnum) {
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfe384a06, Offset: 0xc90
 // Size: 0x186
 function nikolai_gatling_tell(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -135,7 +135,7 @@ function nikolai_gatling_tell(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9ecc9c86, Offset: 0xe20
 // Size: 0xb4
 function nikolai_destroyed_r_arm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -146,7 +146,7 @@ function nikolai_destroyed_r_arm(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6aab2f5d, Offset: 0xee0
 // Size: 0xb4
 function nikolai_destroyed_l_arm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -157,7 +157,7 @@ function nikolai_destroyed_l_arm(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb5eba05e, Offset: 0xfa0
 // Size: 0xb4
 function nikolai_destroyed_r_chest(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -168,7 +168,7 @@ function nikolai_destroyed_r_chest(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6892a3eb, Offset: 0x1060
 // Size: 0xb4
 function nikolai_destroyed_l_chest(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -179,7 +179,7 @@ function nikolai_destroyed_l_chest(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6952148, Offset: 0x1120
 // Size: 0xb6
 function nikolai_weakpoint_r_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -194,7 +194,7 @@ function nikolai_weakpoint_r_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x766c39b5, Offset: 0x11e0
 // Size: 0xb6
 function nikolai_weakpoint_l_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -209,7 +209,7 @@ function nikolai_weakpoint_l_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9b3e04a2, Offset: 0x12a0
 // Size: 0xfc
 function harpoon_impact(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -221,7 +221,7 @@ function harpoon_impact(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdba8ff97, Offset: 0x13a8
 // Size: 0xe4
 function function_66f3947f(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
@@ -238,7 +238,7 @@ function function_66f3947f(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f8
 }
 
 // Namespace zm_siegebot_nikolai
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5043a525, Offset: 0x1498
 // Size: 0x94
 function raps_landing(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

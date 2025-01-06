@@ -1,24 +1,24 @@
-#using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
-#using scripts/cp/cp_mi_cairo_ramses_utility;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/cp_mi_cairo_ramses_level_start;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
 #using scripts/cp/_load;
 #using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_level_start;
+#using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
+#using scripts/cp/cp_mi_cairo_ramses_utility;
+#using scripts/shared/ai_shared;
 #using scripts/shared/array_shared;
 #using scripts/shared/compass;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_cairo_ramses_station_walk;
 
@@ -32,7 +32,7 @@ function main() {
     level thread function_6b91ca4();
     level thread function_3a8a502();
     level thread function_e9be9fb3();
-    level thread function_bbd12ed2();
+    level thread scene_cleanup();
     level thread function_78528b3d();
     level thread function_a99e5acb();
     level thread function_dd2cc06c();
@@ -98,7 +98,7 @@ function function_93d2e417() {
 // Size: 0x34a
 function function_eef5b755() {
     level endon(#"hash_6f437b92");
-    level thread namespace_391e4301::function_e950228a();
+    level thread ramses_util::function_e950228a();
     level thread function_317364f4();
     scene::init("cin_ram_02_04_walk_1st_introduce_01");
     scene::init("cin_ram_02_04_walk_1st_thousandyardstare");
@@ -106,16 +106,16 @@ function function_eef5b755() {
     scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_01", &function_4c91219b, "done");
     scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_01", &function_1ec9cc48, "play");
     scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_01", &function_fa1c2163, "play");
-    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_01", &namespace_391e4301::function_3bc57aa8, "done");
-    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_02", &namespace_391e4301::function_3bc57aa8, "done");
-    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_03", &namespace_391e4301::function_3bc57aa8, "done");
-    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_04", &namespace_391e4301::function_3bc57aa8, "done");
+    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_01", &ramses_util::function_3bc57aa8, "done");
+    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_02", &ramses_util::function_3bc57aa8, "done");
+    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_03", &ramses_util::function_3bc57aa8, "done");
+    scene::add_scene_func("cin_ram_02_04_walk_1st_introduce_04", &ramses_util::function_3bc57aa8, "done");
     scene::play("cin_ram_02_04_walk_1st_introduce_01");
     scene::play("cin_ram_02_04_walk_1st_introduce_02");
     scene::play("cin_ram_02_04_walk_1st_introduce_03");
     level thread function_bc43c2f8();
     level thread cp_mi_cairo_ramses_nasser_interview::function_2ed0dd8e();
-    namespace_391e4301::function_e7ebe596();
+    ramses_util::function_e7ebe596();
     level thread scene::play("cin_ram_02_04_walk_1st_introduce_04");
     var_80f9be56 = getent("armory_door_collision", "targetname");
     var_80f9be56 notsolid();
@@ -381,7 +381,7 @@ function function_7768c0ae() {
 // Params 1, eflags: 0x0
 // Checksum 0xfda37999, Offset: 0x3240
 // Size: 0x1acb
-function function_bbd12ed2(var_6dc777dc) {
+function scene_cleanup(var_6dc777dc) {
     if (!isdefined(var_6dc777dc)) {
         var_6dc777dc = 1;
     }
@@ -1047,7 +1047,7 @@ function function_e43e1d61(soundalias) {
 function function_671a7a61() {
     sndent = spawn("script_origin", (7068, -1791, 548));
     while (true) {
-        level waittill(#"hash_166d2243");
+        level waittill(#"sndPA");
         sndent playsound("amb_hospital_pa");
     }
 }

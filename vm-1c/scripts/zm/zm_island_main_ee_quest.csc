@@ -1,16 +1,16 @@
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
 
 #using_animtree("generic");
 
 #namespace zm_island_main_ee_quest;
 
 // Namespace zm_island_main_ee_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0fb6c74, Offset: 0x3b0
 // Size: 0x254
 function init_quest() {
@@ -41,7 +41,7 @@ function function_e9572f40(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x643c761c, Offset: 0x700
 // Size: 0x11c
 function function_3b831537(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -60,7 +60,7 @@ function function_3b831537(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf78e26ae, Offset: 0x828
 // Size: 0x104
 function zipline_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -77,7 +77,7 @@ function zipline_lightning_fx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xea003b22, Offset: 0x938
 // Size: 0x278
 function lightning_shield_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -118,7 +118,7 @@ function lightning_shield_fx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7a53d024, Offset: 0xbb8
 // Size: 0x2f6
 function function_7ddd182c(localclientnum) {
@@ -169,7 +169,7 @@ function function_7ddd182c(localclientnum) {
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdd1ccf0, Offset: 0xeb8
 // Size: 0xb4
 function smoke_trail_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -183,7 +183,7 @@ function smoke_trail_fx(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xeae35c42, Offset: 0xf78
 // Size: 0xb4
 function function_67a61c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -197,7 +197,7 @@ function function_67a61c(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbd7d6777, Offset: 0x1038
 // Size: 0x236
 function perk_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -229,7 +229,7 @@ function perk_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5f587176, Offset: 0x1278
 // Size: 0xcc
 function bgb_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -243,7 +243,7 @@ function bgb_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_island_main_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2216789d, Offset: 0x1350
 // Size: 0x64
 function umbra_tome_outro_igc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

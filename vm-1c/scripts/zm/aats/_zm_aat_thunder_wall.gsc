@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_aat_thunder_wall;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_thunder_wall
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d65d2ca, Offset: 0x2f8
 // Size: 0x86
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_thunder_wall
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1c0f7f83, Offset: 0x388
 // Size: 0x3c
 function result(death, attacker, mod, weapon) {
@@ -42,7 +42,7 @@ function result(death, attacker, mod, weapon) {
 }
 
 // Namespace zm_aat_thunder_wall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfedd4197, Offset: 0x3d0
 // Size: 0x536
 function function_c2f2c617(attacker) {
@@ -103,7 +103,7 @@ function function_c2f2c617(attacker) {
 }
 
 // Namespace zm_aat_thunder_wall
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x81ea2a9d, Offset: 0x910
 // Size: 0x4c
 function function_e0860fc8(v_blast_origin, var_384d5a7e) {

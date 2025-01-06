@@ -1,27 +1,27 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreak_weapons;
-#using scripts/mp/gametypes/_weapons;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_dev;
-#using scripts/mp/_util;
-#using scripts/mp/_challenges;
-#using scripts/mp/_armor;
-#using scripts/shared/abilities/gadgets/_gadget_roulette;
-#using scripts/shared/weapons/_weapon_utils;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/loadout_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/dev_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_armor;
+#using scripts/mp/_challenges;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_dev;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_weapons;
+#using scripts/mp/killstreaks/_killstreak_weapons;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/abilities/gadgets/_gadget_roulette;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/dev_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/loadout_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weapon_utils;
 
 #namespace loadout;
 
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a239e71, Offset: 0xe48
 // Size: 0x44
 function __init__() {
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xe98
 // Size: 0x4
 function on_connect() {
@@ -51,7 +51,7 @@ function on_connect() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ffc14c0, Offset: 0xea8
 // Size: 0x1554
 function init() {
@@ -309,7 +309,7 @@ function init() {
 }
 
 // Namespace loadout
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x13235f1a, Offset: 0x2408
 // Size: 0x5c
 function function_b8689fdc(eattacker, einflictor, weapon, meansofdeath, damage) {
@@ -320,7 +320,7 @@ function function_b8689fdc(eattacker, einflictor, weapon, meansofdeath, damage) 
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16100275, Offset: 0x2470
 // Size: 0xfc
 function create_class_exclusion_list() {
@@ -337,7 +337,7 @@ function create_class_exclusion_list() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x56e26c26, Offset: 0x2578
 // Size: 0x68
 function is_attachment_excluded(attachment) {
@@ -351,7 +351,7 @@ function is_attachment_excluded(attachment) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ef66feb, Offset: 0x25e8
 // Size: 0x4c
 function function_2358da67() {
@@ -389,7 +389,7 @@ function function_8428dec1(classname, var_987227b8) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaa24fae2, Offset: 0x27a0
 // Size: 0x26
 function load_default_loadout(weaponclass, classnum) {
@@ -397,7 +397,7 @@ function load_default_loadout(weaponclass, classnum) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x65673028, Offset: 0x27d0
 // Size: 0x18c
 function weapon_class_register(weaponname, weapon_type) {
@@ -427,7 +427,7 @@ function weapon_class_register(weaponname, weapon_type) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x99cf728f, Offset: 0x2968
 // Size: 0x4a
 function function_571ecd1a(weapon) {
@@ -436,7 +436,7 @@ function function_571ecd1a(weapon) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x909a0343, Offset: 0x29c0
 // Size: 0x5bc
 function function_cd945d1d() {
@@ -511,7 +511,7 @@ function function_cd945d1d() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa7b3dcbd, Offset: 0x2f88
 // Size: 0x40
 function getclasschoice(response) {
@@ -545,7 +545,7 @@ function function_5933877() {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfde1aff8, Offset: 0x3088
 // Size: 0x94
 function getkillstreakindex(weaponclass, killstreaknum) {
@@ -558,7 +558,7 @@ function getkillstreakindex(weaponclass, killstreaknum) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa13713bc, Offset: 0x3128
 // Size: 0x546
 function function_66234473() {
@@ -643,7 +643,7 @@ function function_fc32096(perkname) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x533e9206, Offset: 0x36b0
 // Size: 0x18
 function reset_specialty_slots(class_num) {
@@ -651,7 +651,7 @@ function reset_specialty_slots(class_num) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x876a0fa9, Offset: 0x36d0
 // Size: 0x10
 function function_1088c9f() {
@@ -659,7 +659,7 @@ function function_1088c9f() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xafb972, Offset: 0x36e8
 // Size: 0x36
 function function_1c374fc1(equipment_name) {
@@ -670,7 +670,7 @@ function function_1c374fc1(equipment_name) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa3d98562, Offset: 0x3728
 // Size: 0x2e
 function function_9afb7ce8(item) {
@@ -681,7 +681,7 @@ function function_9afb7ce8(item) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb01c2b0e, Offset: 0x3760
 // Size: 0x74
 function giveloadoutlevelspecific(team, weaponclass) {
@@ -696,7 +696,7 @@ function giveloadoutlevelspecific(team, weaponclass) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc9a9bd06, Offset: 0x37e0
 // Size: 0xa2
 function function_79d05183(takeallweapons) {
@@ -715,7 +715,7 @@ function function_79d05183(takeallweapons) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x457ea9b8, Offset: 0x3890
 // Size: 0x22c
 function giveperks() {
@@ -743,7 +743,7 @@ function giveperks() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd5f38cce, Offset: 0x3ac8
 // Size: 0x1d4
 function function_1d84af77(weaponclass) {
@@ -770,7 +770,7 @@ function function_1d84af77(weaponclass) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27ef5f50, Offset: 0x3ca8
 // Size: 0xc0
 function function_a6ea9349() {
@@ -784,7 +784,7 @@ function function_a6ea9349() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xab1880c1, Offset: 0x3d70
 // Size: 0x60c
 function giveWeapons() {
@@ -864,7 +864,7 @@ function giveWeapons() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6881a1e8, Offset: 0x4388
 // Size: 0x2ec
 function givePrimaryOffhand() {
@@ -904,7 +904,7 @@ function givePrimaryOffhand() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd23e178, Offset: 0x4680
 // Size: 0x2ec
 function giveSecondaryOffhand() {
@@ -944,7 +944,7 @@ function giveSecondaryOffhand() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfcd5d577, Offset: 0x4978
 // Size: 0x31c
 function giveSpecialOffhand() {
@@ -991,7 +991,7 @@ function giveSpecialOffhand() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27818157, Offset: 0x4ca0
 // Size: 0x224
 function giveHeroWeapon() {
@@ -1025,7 +1025,7 @@ function giveHeroWeapon() {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9fb6effa, Offset: 0x4ed0
 // Size: 0x294
 function giveloadout(team, weaponclass) {
@@ -1067,7 +1067,7 @@ function giveloadout(team, weaponclass) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x408b0f04, Offset: 0x5170
 // Size: 0xbc
 function function_68857c5f(spawnweapon, primaryweapon) {
@@ -1086,7 +1086,7 @@ function function_68857c5f(spawnweapon, primaryweapon) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x262d3dda, Offset: 0x5238
 // Size: 0xd4
 function function_8de272c8(weapon, amount) {
@@ -1101,7 +1101,7 @@ function function_8de272c8(weapon, amount) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x66f725dc, Offset: 0x5318
 // Size: 0x9c
 function on_player_connecting() {
@@ -1128,7 +1128,7 @@ function fadeaway(waitdelay, fadedelay) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeca5592d, Offset: 0x5408
 // Size: 0x18
 function setclass(newclass) {
@@ -1136,7 +1136,7 @@ function setclass(newclass) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7296d380, Offset: 0x5428
 // Size: 0xf4
 function initperkdvars() {
@@ -1149,7 +1149,7 @@ function initperkdvars() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9eeac2c2, Offset: 0x5528
 // Size: 0x8e
 function cac_selector() {
@@ -1166,7 +1166,7 @@ function cac_selector() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcb5b5876, Offset: 0x55c0
 // Size: 0xf4
 function register_perks() {
@@ -1188,7 +1188,7 @@ function register_perks() {
 }
 
 // Namespace loadout
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x1b5520eb, Offset: 0x56c0
 // Size: 0x1ea
 function cac_modified_vehicle_damage(victim, attacker, damage, meansofdeath, weapon, inflictor) {
@@ -1219,7 +1219,7 @@ function cac_modified_vehicle_damage(victim, attacker, damage, meansofdeath, wea
 }
 
 // Namespace loadout
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7aa99c79, Offset: 0x58b8
 // Size: 0x70c
 function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, hitloc) {
@@ -1306,7 +1306,7 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf4d9f7dc, Offset: 0x5fd0
 // Size: 0x4c
 function isexplosivedamage(meansofdeath) {
@@ -1322,7 +1322,7 @@ function isexplosivedamage(meansofdeath) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8c35470, Offset: 0x6028
 // Size: 0x6a
 function function_bb61b344(player) {
@@ -1330,7 +1330,7 @@ function function_bb61b344(player) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1e56d988, Offset: 0x60a0
 // Size: 0x28
 function isprimarydamage(meansofdeath) {
@@ -1338,7 +1338,7 @@ function isprimarydamage(meansofdeath) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3d3df362, Offset: 0x60d0
 // Size: 0x38
 function isbulletdamage(meansofdeath) {
@@ -1346,7 +1346,7 @@ function isbulletdamage(meansofdeath) {
 }
 
 // Namespace loadout
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc611d287, Offset: 0x6110
 // Size: 0x7a
 function isfmjdamage(sweapon, smeansofdeath, attacker) {
@@ -1354,7 +1354,7 @@ function isfmjdamage(sweapon, smeansofdeath, attacker) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x76b21971, Offset: 0x6198
 // Size: 0x60
 function isfiredamage(weapon, meansofdeath) {
@@ -1365,7 +1365,7 @@ function isfiredamage(weapon, meansofdeath) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x78284d8e, Offset: 0x6200
 // Size: 0x38
 function function_1b2a8c(hitloc) {
@@ -1373,7 +1373,7 @@ function function_1b2a8c(hitloc) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa616eda, Offset: 0x6240
 // Size: 0x3a
 function function_c44068e7(inflictor) {

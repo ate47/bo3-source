@@ -4,7 +4,7 @@
 #namespace zm_asylum_fx;
 
 // Namespace zm_asylum_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56c7900a, Offset: 0x10c8
 // Size: 0x3c
 function main() {
@@ -14,7 +14,7 @@ function main() {
 }
 
 // Namespace zm_asylum_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x686713e2, Offset: 0x1110
 // Size: 0x622
 function function_e6258024() {
@@ -77,7 +77,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_asylum_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdac18e90, Offset: 0x1740
 // Size: 0x1de
 function function_f45953c() {
@@ -101,7 +101,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_asylum_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe545c443, Offset: 0x1928
 // Size: 0xae
 function function_f205a5f1() {

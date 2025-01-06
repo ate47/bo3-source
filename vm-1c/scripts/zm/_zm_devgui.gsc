@@ -1,32 +1,32 @@
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/zombie_death;
-#using scripts/zm/_rat;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_turned;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_placeable_mine;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/rank_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/dev_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/dev_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/rank_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_rat;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_placeable_mine;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_turned;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_devgui;
 
@@ -41,7 +41,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe1065e72, Offset: 0x430
     // Size: 0x1e4
     function __init__() {
@@ -67,7 +67,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x61e7fd8f, Offset: 0x620
     // Size: 0x64
     function __main__() {
@@ -78,7 +78,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x70c4e3f4, Offset: 0x690
     // Size: 0x8
     function zombie_devgui_player_commands() {
@@ -86,7 +86,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x42a9c1cd, Offset: 0x6a0
     // Size: 0x44
     function player_on_connect() {
@@ -98,7 +98,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x15a4f6b3, Offset: 0x6f0
     // Size: 0x4c
     function zombie_devgui_player_menu_clear(playername) {
@@ -107,7 +107,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xeabbcdc6, Offset: 0x748
     // Size: 0x454
     function zombie_devgui_player_menu(player) {
@@ -132,7 +132,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x854843d, Offset: 0xba8
     // Size: 0x54
     function zombie_devgui_player_menu_clear_on_disconnect(player) {
@@ -142,7 +142,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x17eca99d, Offset: 0xc08
     // Size: 0x180
     function zombie_devgui_validation_commands() {
@@ -177,7 +177,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8833465f, Offset: 0xd90
     // Size: 0x3f4
     function zombie_spawner_validation() {
@@ -224,7 +224,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x5f62e36b, Offset: 0x1190
     // Size: 0x20c
     function validate_to_board(spawn_point, spawn_point_origin_backup) {
@@ -251,7 +251,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xaa60c80d, Offset: 0x13a8
     // Size: 0x21a
     function validate_to_wait_point(zone, new_spawn_point_origin, spawn_point) {
@@ -281,7 +281,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x7678f58, Offset: 0x15d0
     // Size: 0x310
     function drawvalidation(origin, zone_name, nav_mesh_wait_point, boards_point) {
@@ -324,7 +324,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x5020e431, Offset: 0x18e8
     // Size: 0x260
     function zone_adjacencies_validation() {
@@ -360,7 +360,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0x3101df27, Offset: 0x1b50
     // Size: 0x244
     function draw_zone_adjacencies_validation(zone, status, name, current_zone, offset) {
@@ -389,7 +389,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xcac8d0e0, Offset: 0x1da0
     // Size: 0x150
     function zombie_pathing_validation() {
@@ -417,7 +417,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xc72218ba, Offset: 0x1ef8
     // Size: 0xec
     function function_300fe60f(weapon_name, up, root) {
@@ -434,7 +434,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x5055821b, Offset: 0x1ff0
     // Size: 0xec
     function devgui_add_weapon_entry(weapon_name, up, root) {
@@ -451,7 +451,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xfb274287, Offset: 0x20e8
     // Size: 0x3c
     function function_1567189b(weapon_name, up, root) {
@@ -459,7 +459,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 7, eflags: 0x1 linked
+    // Params 7, eflags: 0x0
     // Checksum 0x19d2aed5, Offset: 0x2130
     // Size: 0x13c
     function devgui_add_weapon(weapon, upgrade, hint, cost, weaponvo, weaponvoresp, ammo_cost) {
@@ -479,7 +479,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8b84ba27, Offset: 0x2278
     // Size: 0x300
     function function_315fab2d() {
@@ -529,7 +529,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x22c61e2a, Offset: 0x2580
     // Size: 0x1a0
     function zombie_weapon_devgui_think() {
@@ -554,7 +554,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xb9d8da6d, Offset: 0x2728
     // Size: 0x64
     function zombie_devgui_weapon_give(weapon_name) {
@@ -563,7 +563,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x7ef518a7, Offset: 0x2798
     // Size: 0x94
     function function_4e8e32dc(attachment) {
@@ -573,7 +573,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0x48bbe3e2, Offset: 0x2838
     // Size: 0x164
     function devgui_add_ability(name, upgrade_active_func, stat_name, stat_desired_value, game_end_reset_if_not_achieved) {
@@ -596,7 +596,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2f6f8013, Offset: 0x29a8
     // Size: 0xd2
     function zombie_devgui_ability_give(name) {
@@ -612,7 +612,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xe2044081, Offset: 0x2a88
     // Size: 0xc2
     function zombie_devgui_ability_take(name) {
@@ -628,7 +628,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb96a3e57, Offset: 0x2b58
     // Size: 0x1c8
     function zombie_ability_devgui_think() {
@@ -657,7 +657,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x2ebcc66c, Offset: 0x2d28
     // Size: 0xfc
     function zombie_healthbar(pos, dsquared) {
@@ -674,7 +674,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd6449724, Offset: 0x2e30
     // Size: 0x138
     function devgui_zombie_healthbar() {
@@ -706,7 +706,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1e1e5523, Offset: 0x3008
     // Size: 0x44
     function damage_player() {
@@ -715,7 +715,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdea01d12, Offset: 0x3058
     // Size: 0x9c
     function kill_player() {
@@ -725,7 +725,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x750309ff, Offset: 0x3100
     // Size: 0x274
     function force_drink() {
@@ -758,7 +758,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x934a27f1, Offset: 0x3380
     // Size: 0x1c
     function zombie_devgui_dpad_none() {
@@ -766,7 +766,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x157772c6, Offset: 0x33a8
     // Size: 0x2c
     function zombie_devgui_dpad_death() {
@@ -774,7 +774,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfbde5089, Offset: 0x33e0
     // Size: 0x2c
     function zombie_devgui_dpad_damage() {
@@ -782,7 +782,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdf9f2bc2, Offset: 0x3418
     // Size: 0x2c
     function zombie_devgui_dpad_changeweapon() {
@@ -790,7 +790,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x3f9f83dd, Offset: 0x3450
     // Size: 0xb0
     function watch_debug_input(callback) {
@@ -813,7 +813,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6fd74e0, Offset: 0x3508
     // Size: 0x2220
     function zombie_devgui_think() {
@@ -1443,7 +1443,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x8076baf9, Offset: 0x5730
     // Size: 0x13a
     function add_custom_devgui_callback(callback) {
@@ -1470,7 +1470,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x833924a5, Offset: 0x5878
     // Size: 0xb4
     function devgui_all_spawn() {
@@ -1485,7 +1485,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xddeffc9, Offset: 0x5938
     // Size: 0x34
     function devgui_toggle_show_spawn_locations() {
@@ -1497,7 +1497,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb4ee3e52, Offset: 0x5978
     // Size: 0x34
     function devgui_toggle_show_exterior_goals() {
@@ -1509,7 +1509,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x809796ad, Offset: 0x59b8
     // Size: 0x1fa
     function devgui_zombie_spawn() {
@@ -1535,7 +1535,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x5b569de, Offset: 0x5bc0
     // Size: 0x1ea
     function devgui_make_crawler() {
@@ -1559,7 +1559,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa122d596, Offset: 0x5db8
     // Size: 0x24c
     function function_ed94fcf9(team) {
@@ -1587,7 +1587,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x146c070, Offset: 0x6010
     // Size: 0x80
     function function_84ca773c(origin, yaw) {
@@ -1601,7 +1601,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf23439c6, Offset: 0x6098
     // Size: 0x38c
     function zombie_devgui_open_sesame() {
@@ -1643,7 +1643,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x948d7f16, Offset: 0x6430
     // Size: 0xb6
     function any_player_in_noclip() {
@@ -1656,7 +1656,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe69e3a05, Offset: 0x64f0
     // Size: 0x150
     function diable_fog_in_noclip() {
@@ -1684,7 +1684,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x9c47bc0f, Offset: 0x6648
     // Size: 0x8c
     function zombie_devgui_allow_fog() {
@@ -1699,7 +1699,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc344fed, Offset: 0x66e0
     // Size: 0x9c
     function zombie_devgui_give_money() {
@@ -1711,7 +1711,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x9679e5f, Offset: 0x6788
     // Size: 0xc4
     function zombie_devgui_take_money() {
@@ -1726,7 +1726,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x1e3e20c3, Offset: 0x6858
     // Size: 0xb4
     function zombie_devgui_give_xp(amount) {
@@ -1737,7 +1737,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x7db63dc1, Offset: 0x6918
     // Size: 0x184
     function zombie_devgui_turn_player(index) {
@@ -1761,7 +1761,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x829c7890, Offset: 0x6aa8
     // Size: 0x384
     function function_be875f57(index) {
@@ -1799,7 +1799,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xefaacbe, Offset: 0x6e38
     // Size: 0x1d4
     function function_4619dfa7() {
@@ -1839,7 +1839,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe2aa2f6e, Offset: 0x7048
     // Size: 0x78
     function zombie_devgui_preserve_turbines() {
@@ -1857,7 +1857,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7c28d7fb, Offset: 0x70c8
     // Size: 0x160
     function zombie_devgui_equipment_stays_healthy() {
@@ -1887,7 +1887,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x633c714b, Offset: 0x7230
     // Size: 0x14
     function zombie_devgui_disown_equipment() {
@@ -1895,7 +1895,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x329e5679, Offset: 0x7250
     // Size: 0xb4
     function zombie_devgui_equipment_give(equipment) {
@@ -1909,7 +1909,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x5e236d4e, Offset: 0x7310
     // Size: 0x13e
     function zombie_devgui_give_placeable_mine(weapon) {
@@ -1959,7 +1959,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x104f9c84, Offset: 0x75b0
     // Size: 0x13e
     function zombie_devgui_give_lethal(weapon) {
@@ -1982,7 +1982,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2d088871, Offset: 0x76f8
     // Size: 0x34
     function zombie_devgui_give_frags() {
@@ -1990,7 +1990,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc317352d, Offset: 0x7738
     // Size: 0x34
     function zombie_devgui_give_sticky() {
@@ -1998,7 +1998,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x99f040aa, Offset: 0x7778
     // Size: 0x136
     function zombie_devgui_give_monkey() {
@@ -2022,7 +2022,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3fe4dfd1, Offset: 0x78b8
     // Size: 0x126
     function zombie_devgui_give_bhb() {
@@ -2046,7 +2046,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x44978d04, Offset: 0x79e8
     // Size: 0x126
     function zombie_devgui_give_qed() {
@@ -2070,7 +2070,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd7b02818, Offset: 0x7b18
     // Size: 0x126
     function zombie_devgui_give_dolls() {
@@ -2094,7 +2094,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x168406c, Offset: 0x7c48
     // Size: 0x136
     function zombie_devgui_give_emp_bomb() {
@@ -2118,7 +2118,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xb2667b7f, Offset: 0x7d88
     // Size: 0xdc
     function zombie_devgui_invulnerable(playerindex, onoff) {
@@ -2139,7 +2139,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xcaa0ac9f, Offset: 0x7e70
     // Size: 0x10c
     function zombie_devgui_kill() {
@@ -2152,7 +2152,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbe8d35a7, Offset: 0x7f88
     // Size: 0x1ee
     function zombie_devgui_toggle_ammo() {
@@ -2184,7 +2184,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x15ca9588, Offset: 0x8180
     // Size: 0xfc
     function zombie_devgui_toggle_ignore() {
@@ -2206,7 +2206,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbb822371, Offset: 0x8288
     // Size: 0x116
     function zombie_devgui_revive() {
@@ -2226,7 +2226,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa745ef8e, Offset: 0x83a8
     // Size: 0x116
     function zombie_devgui_give_health() {
@@ -2247,7 +2247,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd5bf64c4, Offset: 0x84c8
     // Size: 0x10e
     function zombie_devgui_low_health() {
@@ -2268,7 +2268,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x149c56c3, Offset: 0x85e0
     // Size: 0x148
     function zombie_devgui_give_perk(perk) {
@@ -2289,7 +2289,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xd64d3f60, Offset: 0x8730
     // Size: 0x1d2
     function zombie_devgui_take_perks(cmd) {
@@ -2311,7 +2311,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xcb69f9e6, Offset: 0x8910
     // Size: 0x30
     function function_af69dfbe(cmd) {
@@ -2321,7 +2321,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x704d7a31, Offset: 0x8948
     // Size: 0x30
     function function_3df1388a(cmd) {
@@ -2331,7 +2331,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6638e0ac, Offset: 0x8980
     // Size: 0x30
     function function_f976401d(cmd) {
@@ -2341,7 +2341,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xecab6c91, Offset: 0x89b8
     // Size: 0x30
     function function_a888b17c(cmd) {
@@ -2351,7 +2351,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x85c7891e, Offset: 0x89f0
     // Size: 0x30
     function function_7743668b(cmd) {
@@ -2361,7 +2361,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x98232765, Offset: 0x8a28
     // Size: 0x30
     function function_7d8af9ea(cmd) {
@@ -2381,7 +2381,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xba0ce416, Offset: 0x8a98
     // Size: 0x234
     function zombie_devgui_give_powerup(powerup_name, now, origin) {
@@ -2418,7 +2418,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x309f0d12, Offset: 0x8cd8
     // Size: 0x1fc
     function zombie_devgui_give_powerup_player(powerup_name, now) {
@@ -2451,7 +2451,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6b0a6aa6, Offset: 0x8ee0
     // Size: 0x186
     function zombie_devgui_goto_round(target_round) {
@@ -2497,7 +2497,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x8de0d88b, Offset: 0x90e0
     // Size: 0xdc
     function zombie_devgui_dog_round(num_dogs) {
@@ -2517,7 +2517,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x43b82ae4, Offset: 0x91c8
     // Size: 0x2c
     function zombie_devgui_dog_round_skip() {
@@ -2527,7 +2527,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x44b987d5, Offset: 0x9200
     // Size: 0xf4
     function zombie_devgui_dump_zombie_vars() {
@@ -2548,7 +2548,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x82f9acb8, Offset: 0x9300
     // Size: 0x196
     function zombie_devgui_pack_current_weapon() {
@@ -2569,7 +2569,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7f17b085, Offset: 0x94a0
     // Size: 0x10e
     function zombie_devgui_repack_current_weapon() {
@@ -2587,7 +2587,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x17d3cf37, Offset: 0x95b8
     // Size: 0x16e
     function zombie_devgui_unpack_current_weapon() {
@@ -2607,7 +2607,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xb4fd818f, Offset: 0x9730
     // Size: 0x74
     function function_3ec0de8d(itemindex, xp) {
@@ -2621,7 +2621,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xe3d71c52, Offset: 0x97b0
     // Size: 0xfe
     function function_949d6013(weapon) {
@@ -2639,7 +2639,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xc8132c5f, Offset: 0x98b8
     // Size: 0x90
     function function_718c64af(weapon, var_2e8a2b5e) {
@@ -2655,7 +2655,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x1b99ec5c, Offset: 0x9950
     // Size: 0x68
     function function_e9906f08(weapon) {
@@ -2668,7 +2668,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6908cf36, Offset: 0x99c0
     // Size: 0x13e
     function function_2306f73c() {
@@ -2687,7 +2687,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x48447650, Offset: 0x9b08
     // Size: 0x146
     function function_5da1c3cd() {
@@ -2706,7 +2706,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x5c269215, Offset: 0x9c58
     // Size: 0x10e
     function function_6afc4c2f() {
@@ -2724,7 +2724,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa2f66bf6, Offset: 0x9d70
     // Size: 0xee
     function function_9b4ea903() {
@@ -2741,7 +2741,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x98bd74cd, Offset: 0x9e68
     // Size: 0x160
     function function_4d2e8278() {
@@ -2765,7 +2765,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2550312c, Offset: 0x9fd0
     // Size: 0x140
     function function_ce561484() {
@@ -2788,7 +2788,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xf89a404a, Offset: 0xa118
     // Size: 0x104
     function function_be6b95c4(xp) {
@@ -2804,7 +2804,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x43d61e30, Offset: 0xa228
     // Size: 0x34
     function function_1a6e88f7(var_2e8a2b5e) {
@@ -2812,7 +2812,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8a6a9550, Offset: 0xa268
     // Size: 0x46
     function function_b207ef2e() {
@@ -2822,7 +2822,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2231105c, Offset: 0xa2b8
     // Size: 0xee
     function function_9e5bfd9d() {
@@ -2839,7 +2839,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe743155f, Offset: 0xa3b0
     // Size: 0xf6
     function function_435ea700() {
@@ -2856,7 +2856,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x50878941, Offset: 0xa4b0
     // Size: 0xce
     function function_525facc6() {
@@ -2872,7 +2872,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xba7ef207, Offset: 0xa588
     // Size: 0xa6
     function function_935f6cc2() {
@@ -2887,7 +2887,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x16a4b86f, Offset: 0xa638
     // Size: 0x17e
     function zombie_devgui_reopt_current_weapon() {
@@ -2909,7 +2909,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xea16f241, Offset: 0xa7c0
     // Size: 0xee
     function zombie_devgui_take_weapon() {
@@ -2925,7 +2925,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2ee68388, Offset: 0xa8b8
     // Size: 0xe6
     function zombie_devgui_take_weapons(give_fallback) {
@@ -2943,7 +2943,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x87747146, Offset: 0xa9a8
     // Size: 0x7c
     function get_upgrade(weapon) {
@@ -2954,7 +2954,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x70ce405d, Offset: 0xaa30
     // Size: 0x24
     function zombie_devgui_director_easy() {
@@ -2964,7 +2964,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdece5edc, Offset: 0xaa60
     // Size: 0x36
     function zombie_devgui_chest_never_move() {
@@ -2977,7 +2977,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7e716bac, Offset: 0xaaa0
     // Size: 0x3c
     function zombie_devgui_disable_kill_thread_toggle() {
@@ -2989,7 +2989,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4a9c1e0f, Offset: 0xaae8
     // Size: 0x3c
     function zombie_devgui_check_kill_thread_every_frame_toggle() {
@@ -3001,7 +3001,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xebdec2d6, Offset: 0xab30
     // Size: 0x3c
     function zombie_devgui_kill_thread_test_mode_toggle() {
@@ -3066,7 +3066,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 6, eflags: 0x1 linked
+    // Params 6, eflags: 0x0
     // Checksum 0x6bca5a04, Offset: 0xb110
     // Size: 0x70
     function print3duntilnotified(origin, text, color, alpha, scale, notification) {
@@ -3078,7 +3078,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xce6240a4, Offset: 0xb188
     // Size: 0x68
     function lineuntilnotified(start, end, color, depthtest, notification) {
@@ -3090,7 +3090,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xadf4520d, Offset: 0xb1f8
     // Size: 0x2dc
     function devgui_debug_hud() {
@@ -3132,7 +3132,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x515572a3, Offset: 0xb4e0
     // Size: 0x20c
     function devgui_test_chart_think() {
@@ -3162,7 +3162,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc735cb95, Offset: 0xb6f8
     // Size: 0x34
     function zombie_devgui_draw_traversals() {
@@ -3174,7 +3174,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6c9b94d7, Offset: 0xb738
     // Size: 0x34
     function zombie_devgui_keyline_always() {
@@ -3186,7 +3186,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xba2ffa47, Offset: 0xb778
     // Size: 0x34
     function function_13d8ea87() {
@@ -3198,7 +3198,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x528dc1d1, Offset: 0xb7b8
     // Size: 0x2dc
     function wait_for_zombie(crawler) {
@@ -3241,7 +3241,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd1714b48, Offset: 0xbaa0
     // Size: 0x230
     function zombie_draw_traversals() {
@@ -3271,7 +3271,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x362aa267, Offset: 0xbcd8
     // Size: 0x1fc
     function function_364ed1b9() {
@@ -3292,7 +3292,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6d5e3542, Offset: 0xbee0
     // Size: 0x220
     function function_1d21f4f() {
@@ -3324,7 +3324,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4b960277, Offset: 0xc108
     // Size: 0x24
     function testscriptruntimeerrorassert() {
@@ -3333,7 +3333,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc866f8f9, Offset: 0xc138
     // Size: 0x44
     function testscriptruntimeerror2() {
@@ -3344,7 +3344,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x901d1cbd, Offset: 0xc188
     // Size: 0x1c
     function testscriptruntimeerror1() {
@@ -3352,7 +3352,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x92534bc4, Offset: 0xc1b0
     // Size: 0xcc
     function testscriptruntimeerror() {
@@ -3374,7 +3374,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa7661b2d, Offset: 0xc288
     // Size: 0x84
     function function_2fcc56bd() {
@@ -3383,7 +3383,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x43faf036, Offset: 0xc318
     // Size: 0x244
     function function_1acc8e35() {
@@ -3411,7 +3411,7 @@
     }
 
     // Namespace zm_devgui
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6e03069e, Offset: 0xc568
     // Size: 0x34
     function function_eec2d58b() {

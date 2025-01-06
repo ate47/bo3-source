@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_island_transport;
 
 // Namespace zm_island_transport
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4aed2560, Offset: 0x170
 // Size: 0x4c
 function init() {
@@ -16,7 +16,7 @@ function init() {
 }
 
 // Namespace zm_island_transport
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd740ad0a, Offset: 0x1c8
 // Size: 0xcc
 function sewer_current_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -34,7 +34,7 @@ function sewer_current_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_island_transport
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee601996, Offset: 0x2a0
 // Size: 0x68
 function function_a39e4663(localclientnum) {

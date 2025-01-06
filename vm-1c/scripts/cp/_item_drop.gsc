@@ -1,9 +1,9 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace item_drop;
 
@@ -185,7 +185,7 @@ function function_64a1deed() {
     trigger = spawn("trigger_radius", self.origin, 0, 60, 60);
     self.pickuptrigger = trigger;
     while (isdefined(self)) {
-        player = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", player);
         if (player thread pickup(self)) {
             break;
         }

@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_aat_blast_furnace;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3490d32e, Offset: 0x2e0
 // Size: 0x144
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xd336c103, Offset: 0x430
 // Size: 0x44
 function result(death, attacker, mod, weapon) {
@@ -44,7 +44,7 @@ function result(death, attacker, mod, weapon) {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe49ec50e, Offset: 0x480
 // Size: 0x3cc
 function function_6e8c313c(e_attacker, w_weapon) {
@@ -86,7 +86,7 @@ function function_6e8c313c(e_attacker, w_weapon) {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4dbbdce1, Offset: 0x858
 // Size: 0xd0
 function function_2ccbcfcb(e_attacker, w_weapon) {
@@ -104,7 +104,7 @@ function function_2ccbcfcb(e_attacker, w_weapon) {
 }
 
 // Namespace zm_aat_blast_furnace
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8ad1d450, Offset: 0x930
 // Size: 0xec
 function zombie_death_gib(e_attacker, w_weapon) {

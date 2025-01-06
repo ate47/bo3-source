@@ -1,31 +1,31 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_devgui;
 #using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_pack_a_punch;
+#using scripts/zm/_zm_pack_a_punch_util;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_power;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_keeper_skull;
 #using scripts/zm/_zm_weapons;
 #using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_power;
-#using scripts/zm/_zm_weap_keeper_skull;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_blockers;
-#using scripts/zm/_util;
-#using scripts/zm/_zm_pack_a_punch_util;
-#using scripts/zm/_zm_pack_a_punch;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_island_util;
 
 // Namespace zm_island_util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xedfdab31, Offset: 0x3d0
 // Size: 0x5a
 function function_d095318(origin, radius, use_trigger, var_cd7edcab) {
@@ -36,7 +36,7 @@ function function_d095318(origin, radius, use_trigger, var_cd7edcab) {
 }
 
 // Namespace zm_island_util
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xb27fe2a0, Offset: 0x438
 // Size: 0x1f8
 function private function_a40fee2f(origin, angles, var_3b9cee11, use_trigger, var_cd7edcab) {
@@ -74,7 +74,7 @@ function private function_a40fee2f(origin, angles, var_3b9cee11, use_trigger, va
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcea5676, Offset: 0x638
 // Size: 0x170
 function function_5ea427bf(player) {
@@ -103,20 +103,20 @@ function function_5ea427bf(player) {
 }
 
 // Namespace zm_island_util
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xceb4f4f2, Offset: 0x7b0
 // Size: 0x60
 function private function_c54cd556() {
     self endon(#"kill_trigger");
     self.stub thread function_c1947ff7();
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         self.stub notify(#"trigger", player);
     }
 }
 
 // Namespace zm_island_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x68689137, Offset: 0x818
 // Size: 0x1c
 function function_c1947ff7() {
@@ -124,7 +124,7 @@ function function_c1947ff7() {
 }
 
 // Namespace zm_island_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4cfd57a9, Offset: 0x840
 // Size: 0x28
 function function_acd04dc9() {
@@ -134,7 +134,7 @@ function function_acd04dc9() {
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x623a4f3d, Offset: 0x870
 // Size: 0x324
 function function_7448e472(e_target) {
@@ -153,7 +153,7 @@ function function_7448e472(e_target) {
                         wait 0.05;
                     }
                 } else if (self getammocount(level.var_c003f5b)) {
-                    if (self namespace_f55b6585::function_3f3f64e9(e_target) && self namespace_f55b6585::function_5fa274c1(e_target)) {
+                    if (self keeper_skull::function_3f3f64e9(e_target) && self keeper_skull::function_5fa274c1(e_target)) {
                         self playrumbleonentity("zm_island_skull_reveal");
                         n_count = 0;
                         while (self util::ads_button_held()) {
@@ -167,7 +167,7 @@ function function_7448e472(e_target) {
                             e_target.var_f0b65c0a = self;
                             var_c2b47c7a = 1;
                             playsoundatposition("zmb_wpn_skullgun_discover", e_target.origin);
-                            self notify(#"hash_b2ddad7");
+                            self notify(#"skullweapon_revealed_location");
                             self thread function_4aedb20b();
                             foreach (player in level.players) {
                                 if (e_target === player.var_abd1c759) {
@@ -191,7 +191,7 @@ function function_7448e472(e_target) {
 }
 
 // Namespace zm_island_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb69e2633, Offset: 0xba0
 // Size: 0x64
 function function_4aedb20b() {
@@ -203,7 +203,7 @@ function function_4aedb20b() {
 }
 
 // Namespace zm_island_util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc2793d9b, Offset: 0xc10
 // Size: 0x182
 function function_925aa63a(a_e_elements, n_delay, n_value, b_delete) {
@@ -228,7 +228,7 @@ function function_925aa63a(a_e_elements, n_delay, n_value, b_delete) {
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe2ee335f, Offset: 0xda0
 // Size: 0x62
 function function_f2a55b5f(a_str_zones) {
@@ -240,7 +240,7 @@ function function_f2a55b5f(a_str_zones) {
 }
 
 // Namespace zm_island_util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1c271c0a, Offset: 0xe10
 // Size: 0x142
 function is_facing(target, var_94d542a1) {
@@ -261,7 +261,7 @@ function is_facing(target, var_94d542a1) {
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5bbda886, Offset: 0xf60
 // Size: 0x15c
 function function_1867f3e8(n_distance) {
@@ -278,7 +278,7 @@ function function_1867f3e8(n_distance) {
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf03d770, Offset: 0x10c8
 // Size: 0xd2
 function function_4bf4ac40(v_loc) {
@@ -296,7 +296,7 @@ function function_4bf4ac40(v_loc) {
 }
 
 // Namespace zm_island_util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x2c12842f, Offset: 0x11a8
 // Size: 0xdc
 function any_player_looking_at(v_org, n_dot, b_do_trace, e_ignore) {
@@ -309,7 +309,7 @@ function any_player_looking_at(v_org, n_dot, b_do_trace, e_ignore) {
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x83f1c76a, Offset: 0x1290
 // Size: 0x242
 function swap_weapon(var_9f85aad5) {
@@ -343,7 +343,7 @@ function swap_weapon(var_9f85aad5) {
 }
 
 // Namespace zm_island_util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbb6ab070, Offset: 0x14e0
 // Size: 0xa0
 function function_dcfc8bde(current_weapon, weapon) {
@@ -355,7 +355,7 @@ function function_dcfc8bde(current_weapon, weapon) {
 }
 
 // Namespace zm_island_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x23f61bbf, Offset: 0x1588
 // Size: 0x140
 function function_3420bc2f(var_9f85aad5) {
@@ -376,15 +376,15 @@ function function_3420bc2f(var_9f85aad5) {
 /#
 
     // Namespace zm_island_util
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0xafa07a94, Offset: 0x16d0
     // Size: 0x108
-    function function_8faf1d24(v_color, var_8882142e, n_scale, str_endon) {
+    function function_8faf1d24(v_color, str_print, n_scale, str_endon) {
         if (!isdefined(v_color)) {
             v_color = (0, 0, 255);
         }
-        if (!isdefined(var_8882142e)) {
-            var_8882142e = "<dev string:x28>";
+        if (!isdefined(str_print)) {
+            str_print = "<dev string:x28>";
         }
         if (!isdefined(n_scale)) {
             n_scale = 0.25;
@@ -400,7 +400,7 @@ function function_3420bc2f(var_9f85aad5) {
         }
         origin = self.origin;
         while (true) {
-            print3d(origin, var_8882142e, v_color, n_scale);
+            print3d(origin, str_print, v_color, n_scale);
             wait 0.1;
         }
     }

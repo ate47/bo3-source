@@ -1,7 +1,7 @@
-#using scripts/shared/audio_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_stalingrad_ambient;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2c9d783d, Offset: 0x3a0
 // Size: 0x154
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbdbeba14, Offset: 0x500
 // Size: 0xc4
 function ambient_mortar_strike(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,7 +50,7 @@ function ambient_mortar_strike(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa0bf571e, Offset: 0x5d0
 // Size: 0xc4
 function ambient_artillery_strike(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -71,7 +71,7 @@ function ambient_artillery_strike(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb40305a0, Offset: 0x6a0
 // Size: 0xcc
 function function_a7d3e4ff(localclientnum, var_df2299f9) {
@@ -84,7 +84,7 @@ function function_a7d3e4ff(localclientnum, var_df2299f9) {
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2024e277, Offset: 0x778
 // Size: 0x52
 function power_on_level(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
@@ -94,7 +94,7 @@ function power_on_level(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, 
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4636f9d7, Offset: 0x7d8
 // Size: 0x164
 function function_866a2751() {
@@ -114,7 +114,7 @@ function function_866a2751() {
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x736496a9, Offset: 0x948
 // Size: 0x13a
 function function_916d6917(str_targetname) {
@@ -129,7 +129,7 @@ function function_916d6917(str_targetname) {
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7602f239, Offset: 0xa90
 // Size: 0x13a
 function function_4820908f(str_targetname) {
@@ -144,29 +144,29 @@ function function_4820908f(str_targetname) {
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89a66a65, Offset: 0xbd8
 // Size: 0x2c
 function function_a8bcf075() {
-    level waittill(#"hash_350165d0");
+    level waittill(#"nbs");
     audio::snd_set_snapshot("zmb_stal_boss_fight");
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc24baac2, Offset: 0xc10
 // Size: 0x2c
 function function_1eb91e4b() {
-    level waittill(#"hash_2a3c981c");
+    level waittill(#"nbstp");
     audio::snd_set_snapshot("default");
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x30fab8dc, Offset: 0xc48
 // Size: 0x2c
 function function_b833e317() {
-    level waittill(#"hash_18671e96");
+    level waittill(#"dfs");
     audio::snd_set_snapshot("zmb_stal_dragon_fight");
 }
 
@@ -175,12 +175,12 @@ function function_b833e317() {
 // Checksum 0x47ab23dc, Offset: 0xc80
 // Size: 0x2c
 function function_b6e2489() {
-    level waittill(#"hash_b9dbb809");
+    level waittill(#"dfss");
     audio::snd_set_snapshot("default");
 }
 
 // Namespace zm_stalingrad_ambient
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb0bec197, Offset: 0xcb8
 // Size: 0x2c
 function function_65c51e85() {

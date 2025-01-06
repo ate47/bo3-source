@@ -1,7 +1,7 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_infection_sgen_test_chamber;
 

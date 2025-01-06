@@ -1,23 +1,23 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/cp_doa_bo3_enemy;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_chicken_pickup;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_enemy;
 #using scripts/cp/doa/_doa_enemy_boss;
-#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_shield_pickup;
-#using scripts/cp/doa/_doa_chicken_pickup;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_shield_pickup;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/cp/cp_doa_bo3_enemy;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_23f188a4;
 
@@ -275,7 +275,7 @@ function private function_271ba816(var_26fc4461) {
     objective_add(self.id, "active", self.origin);
     function_4ccbe3a6(self.id, 1, "default", "*");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         objective_state(self.id, "done");
         if (!isplayer(guy)) {
             continue;
@@ -810,7 +810,7 @@ function private function_5aaa5a64(shield) {
     self endon(#"death");
     level endon(#"boss_of_justice_died");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (!isalive(guy)) {
             continue;
         }
@@ -886,7 +886,7 @@ function private function_b1d23a45(boss) {
     var_4c0a8371 = int(self.maxhealth * 0.25);
     while (self.health > 0) {
         lasthealth = self.health;
-        damage = self waittill(#"damage");
+        self waittill(#"damage", damage);
         if (isdefined(self.var_e34a8df9)) {
             self thread namespace_eaa992c::function_285a2999("stoneboss_shield_explode");
             loc = spawnstruct();
@@ -1015,7 +1015,7 @@ function private _bossShield() {
         wait 0.2;
     }
     while (true) {
-        org = self waittill(#"hash_d57cf5a3");
+        self waittill(#"hash_d57cf5a3", org);
         self thread _shieldRegenerate(org);
     }
 }
@@ -1071,7 +1071,7 @@ function private function_c492e72d() {
     #/
     while (self.health > 0) {
         lasthealth = self.health;
-        damage, attacker = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker);
         data = namespace_49107f3a::clamp(self.health / self.maxhealth, 0, 1);
         level clientfield::set("pumpBannerBar", data);
         if (isdefined(attacker)) {
@@ -1146,8 +1146,8 @@ function private function_ae21464b() {
 function private function_5c819284() {
     level endon(#"player_challenge_failure");
     level endon(#"boss_of_justice_died");
-    var_a47b1f6f = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
-    level.doa.var_c984ad24 = level.doa.spawners[var_a47b1f6f];
+    spawn_set = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
+    level.doa.var_c984ad24 = level.doa.spawners[spawn_set];
     level.doa.var_3706f843 = [];
     while (true) {
         for (wave = 0; wave < level.doa.var_d9933f22.size; wave++) {
@@ -1158,8 +1158,8 @@ function private function_5c819284() {
             if (!level flag::get("doa_round_active")) {
                 return;
             }
-            level.doa.var_6808cc14 = level.doa.var_d9933f22[wave];
-            level thread namespace_cdb9a8fe::function_21a582ff(level.doa.var_6808cc14, "boss_of_justice_died");
+            level.doa.current_wave = level.doa.var_d9933f22[wave];
+            level thread namespace_cdb9a8fe::function_21a582ff(level.doa.current_wave, "boss_of_justice_died");
         }
     }
 }
@@ -1296,7 +1296,7 @@ function private function_69ae5d15(loc) {
     timeleft = gettime() + time * 1000;
     while (gettime() < timeleft) {
         wait 0.05;
-        guy = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", guy);
         if (isplayer(guy)) {
             continue;
         }
@@ -1331,7 +1331,7 @@ function private function_69ae5d15(loc) {
 function private function_9fc6e261() {
     self notify(#"hash_9fc6e261");
     self endon(#"hash_9fc6e261");
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     wait 0.05;
     if (isdefined(corpse)) {
         corpse clientfield::set("burnType", 3);

@@ -1,9 +1,9 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/cp/voice/voice_ramses1;
-#using scripts/cp/voice/voice_ramses;
-#using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/voice/voice_ramses;
+#using scripts/cp/voice/voice_ramses1;
+#using scripts/shared/music_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_ramses_sound;
 

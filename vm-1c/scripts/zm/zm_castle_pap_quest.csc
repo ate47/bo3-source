@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_pack_a_punch;
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/postfx_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_pack_a_punch;
 
 #namespace zm_castle_pap_quest;
 
@@ -15,7 +15,7 @@ function autoexec main() {
 }
 
 // Namespace zm_castle_pap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3f56612b, Offset: 0x178
 // Size: 0x4c
 function register_clientfields() {
@@ -23,7 +23,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_castle_pap_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb5fad7c4, Offset: 0x1d0
 // Size: 0x6c
 function pap_tp_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

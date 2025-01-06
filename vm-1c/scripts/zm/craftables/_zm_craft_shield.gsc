@@ -1,33 +1,33 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_powerup_shield_charge;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_weap_riotshield;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_powerup_shield_charge;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_riotshield;
+#using scripts/zm/craftables/_zm_craftables;
 
 #namespace zm_craft_shield;
 
 // Namespace zm_craft_shield
 // Params 0, eflags: 0x2
-// Checksum 0xbcdfead9, Offset: 0x438
+// Checksum 0x1fd66332, Offset: 0x438
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("zm_craft_shield", &__init__, &__main__, undefined);
 }
 
 // Namespace zm_craft_shield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x480
 // Size: 0x4
 function __init__() {
@@ -35,8 +35,8 @@ function __init__() {
 }
 
 // Namespace zm_craft_shield
-// Params 6, eflags: 0x1 linked
-// Checksum 0xd1de82a4, Offset: 0x490
+// Params 6, eflags: 0x0
+// Checksum 0xa0a13710, Offset: 0x490
 // Size: 0x47c
 function init(var_fcfc23b7, var_4524a629, shield_model, var_d6fd6d9d, var_6cabc9d6, var_6dddeed3) {
     if (!isdefined(var_d6fd6d9d)) {
@@ -76,8 +76,8 @@ function init(var_fcfc23b7, var_4524a629, shield_model, var_d6fd6d9d, var_6cabc9
 }
 
 // Namespace zm_craft_shield
-// Params 0, eflags: 0x1 linked
-// Checksum 0xf6e2a1b7, Offset: 0x918
+// Params 0, eflags: 0x0
+// Checksum 0x4d304f75, Offset: 0x918
 // Size: 0x1c
 function __main__() {
     /#
@@ -86,16 +86,16 @@ function __main__() {
 }
 
 // Namespace zm_craft_shield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x36dded58, Offset: 0x940
+// Params 0, eflags: 0x0
+// Checksum 0xd2c90327, Offset: 0x940
 // Size: 0x3c
 function function_70a15daf() {
     zm_craftables::function_4f91b11d("riotshield_zm_craftable_trigger", level.var_a081b24e, level.var_8a69e1e, level.var_55d294f8, 1, 1);
 }
 
 // Namespace zm_craft_shield
-// Params 2, eflags: 0x1 linked
-// Checksum 0xad949706, Offset: 0x988
+// Params 2, eflags: 0x0
+// Checksum 0xba70474a, Offset: 0x988
 // Size: 0x54
 function function_69e0fb83(var_55ce4248, n_duration) {
     self clientfield::set_to_player(var_55ce4248, 1);
@@ -104,8 +104,8 @@ function function_69e0fb83(var_55ce4248, n_duration) {
 }
 
 // Namespace zm_craft_shield
-// Params 1, eflags: 0x1 linked
-// Checksum 0xb9caaef0, Offset: 0x9e8
+// Params 1, eflags: 0x0
+// Checksum 0x84261de7, Offset: 0x9e8
 // Size: 0x148
 function function_314a523b(player) {
     println("<dev string:x28>");
@@ -122,8 +122,8 @@ function function_314a523b(player) {
 }
 
 // Namespace zm_craft_shield
-// Params 1, eflags: 0x1 linked
-// Checksum 0x557ab9c5, Offset: 0xb38
+// Params 1, eflags: 0x0
+// Checksum 0xcd5b9b4d, Offset: 0xb38
 // Size: 0x4e
 function function_5e1c958e(player) {
     println("<dev string:x4e>");
@@ -132,8 +132,8 @@ function function_5e1c958e(player) {
 }
 
 // Namespace zm_craft_shield
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe41d3e73, Offset: 0xb90
+// Params 0, eflags: 0x0
+// Checksum 0xf1366177, Offset: 0xb90
 // Size: 0x20
 function function_15eb00ae() {
     if (isdefined(level.var_dcf785c5)) {
@@ -142,8 +142,8 @@ function function_15eb00ae() {
 }
 
 // Namespace zm_craft_shield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x6b2c9e53, Offset: 0xbb8
+// Params 0, eflags: 0x0
+// Checksum 0x2ee760d8, Offset: 0xbb8
 // Size: 0xee
 function function_a8c317e7() {
     players = level.players;
@@ -157,8 +157,8 @@ function function_a8c317e7() {
 }
 
 // Namespace zm_craft_shield
-// Params 1, eflags: 0x1 linked
-// Checksum 0x67da6688, Offset: 0xcb0
+// Params 1, eflags: 0x0
+// Checksum 0xb4f35b68, Offset: 0xcb0
 // Size: 0x28
 function function_b908e870(player) {
     if (isdefined(level.var_a71b815c)) {
@@ -167,8 +167,8 @@ function function_b908e870(player) {
 }
 
 // Namespace zm_craft_shield
-// Params 1, eflags: 0x1 linked
-// Checksum 0xaa9dcebc, Offset: 0xce0
+// Params 1, eflags: 0x0
+// Checksum 0xf23923d0, Offset: 0xce0
 // Size: 0x96
 function function_3a4a378(player) {
     if (isdefined(player.player_shield_reset_health)) {
@@ -184,8 +184,8 @@ function function_3a4a378(player) {
 /#
 
     // Namespace zm_craft_shield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x4c2e5071, Offset: 0xd80
+    // Params 0, eflags: 0x0
+    // Checksum 0xc5ba1f70, Offset: 0xd80
     // Size: 0xf4
     function shield_devgui() {
         level flagsys::wait_till("<dev string:x72>");
@@ -198,8 +198,8 @@ function function_3a4a378(player) {
     }
 
     // Namespace zm_craft_shield
-    // Params 1, eflags: 0x1 linked
-    // Checksum 0x40b6bd33, Offset: 0xe80
+    // Params 1, eflags: 0x0
+    // Checksum 0x73f015cf, Offset: 0xe80
     // Size: 0x1d0
     function shield_devgui_callback(cmd) {
         players = getplayers();
@@ -242,8 +242,8 @@ function function_3a4a378(player) {
     }
 
     // Namespace zm_craft_shield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0xf5ae50b3, Offset: 0x1058
+    // Params 0, eflags: 0x0
+    // Checksum 0xecefade4, Offset: 0x1058
     // Size: 0x38
     function function_2449723c() {
         if (isdefined(self.var_9dc82bca)) {
@@ -256,8 +256,8 @@ function function_3a4a378(player) {
     }
 
     // Namespace zm_craft_shield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x5cff49e3, Offset: 0x1098
+    // Params 0, eflags: 0x0
+    // Checksum 0x8b036884, Offset: 0x1098
     // Size: 0x198
     function function_2b0b208f() {
         if (self function_2449723c()) {
@@ -283,8 +283,8 @@ function function_3a4a378(player) {
     }
 
     // Namespace zm_craft_shield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0xef6668b6, Offset: 0x1238
+    // Params 0, eflags: 0x0
+    // Checksum 0x975b5366, Offset: 0x1238
     // Size: 0x54
     function function_70d7908d() {
         if (self function_2449723c()) {

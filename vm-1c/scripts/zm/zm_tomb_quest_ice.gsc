@@ -1,19 +1,19 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_quest_ice;
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac97beae, Offset: 0x460
 // Size: 0x24c
 function main() {
@@ -39,7 +39,7 @@ function main() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e4eb168, Offset: 0x6b8
 // Size: 0x414
 function function_2a704782() {
@@ -74,7 +74,7 @@ function function_2a704782() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1dcec447, Offset: 0xad8
 // Size: 0xfc
 function function_f610cd68() {
@@ -87,7 +87,7 @@ function function_f610cd68() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x75f73410, Offset: 0xbe0
 // Size: 0x2bc
 function function_2d7101fc() {
@@ -115,7 +115,7 @@ function function_2d7101fc() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc8ca76da, Offset: 0xea8
 // Size: 0xba
 function function_3ae7c694() {
@@ -126,14 +126,14 @@ function function_3ae7c694() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa468ee0b, Offset: 0xf70
 // Size: 0x186
 function function_24291691() {
     var_36e5dd29 = getentarray("ice_chamber_digit", "targetname");
     level endon(#"ice_puzzle_1_complete");
     while (true) {
-        newval = level waittill(#"hash_bcc8b856");
+        level waittill(#"hash_bcc8b856", newval);
         foreach (digit in var_36e5dd29) {
             digit ghost();
             if (isdefined(newval)) {
@@ -149,7 +149,7 @@ function function_24291691() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x14a9382d, Offset: 0x1100
 // Size: 0xb2
 function function_fd6544ff() {
@@ -164,7 +164,7 @@ function function_fd6544ff() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x685006d0, Offset: 0x11c0
 // Size: 0x138
 function function_2985fdd0() {
@@ -174,7 +174,7 @@ function function_2985fdd0() {
     var_c7475fb2 setcandamage(1);
     var_83560def = level.var_b0d8f1fe["staff_water"].w_weapon;
     while (true) {
-        damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weapon = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weapon);
         if (weapon.name == var_83560def) {
             function_fd6544ff();
         }
@@ -182,7 +182,7 @@ function function_2985fdd0() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa027c18f, Offset: 0x1300
 // Size: 0x2c
 function function_dd616543() {
@@ -191,7 +191,7 @@ function function_dd616543() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8224a24a, Offset: 0x1338
 // Size: 0x150
 function function_936dd5e5(var_7e740424) {
@@ -217,7 +217,7 @@ function function_936dd5e5(var_7e740424) {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc24b8987, Offset: 0x1490
 // Size: 0x2ae
 function function_9e56bf95() {
@@ -226,7 +226,7 @@ function function_9e56bf95() {
     self setcandamage(1);
     var_c7475fb2 setcandamage(1);
     while (true) {
-        damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weaponname = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weaponname);
         var_f1415f17 = arraygetclosest(point, level.var_2f1dfdf1);
         if (issubstr(weaponname.name, "water") && self.var_11cf46f9 && var_f1415f17 == self) {
             if (!level flag::get("ice_tile_flipping")) {
@@ -253,7 +253,7 @@ function function_9e56bf95() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1748
 // Size: 0x4
 function function_6aa0b46f() {
@@ -261,7 +261,7 @@ function function_6aa0b46f() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93150d93, Offset: 0x1758
 // Size: 0xd2
 function function_d0beb464() {
@@ -274,7 +274,7 @@ function function_d0beb464() {
 }
 
 // Namespace zm_tomb_quest_ice
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd2782c1, Offset: 0x1838
 // Size: 0x642
 function function_8bec872() {
@@ -288,7 +288,7 @@ function function_8bec872() {
     self.e_model setcandamage(1);
     self.e_model playloopsound("zmb_squest_ice_stone_flow", 2);
     for (var_7aed76a = 0; !level flag::get("ice_puzzle_2_complete"); var_7aed76a = 1) {
-        amount, inflictor, direction, point, type, tagname, modelname, partname, weaponname, idflags = self.e_model waittill(#"damage");
+        self.e_model waittill(#"damage", amount, inflictor, direction, point, type, tagname, modelname, partname, weaponname, idflags);
         level notify(#"vo_try_puzzle_water2", inflictor);
         if (issubstr(weaponname.name, "water")) {
             level notify(#"vo_puzzle_good", inflictor);
@@ -302,7 +302,7 @@ function function_8bec872() {
     self.e_model clientfield::set("stone_frozen", 1);
     playsoundatposition("zmb_squest_ice_stone_freeze", self.origin);
     while (!level flag::get("ice_puzzle_2_complete")) {
-        amount, inflictor, direction, point, type, tagname, modelname, partname, weaponname, idflags = self.e_model waittill(#"damage");
+        self.e_model waittill(#"damage", amount, inflictor, direction, point, type, tagname, modelname, partname, weaponname, idflags);
         if (!issubstr(weaponname.name, "staff") && issubstr(type, "BULLET")) {
             level notify(#"vo_puzzle_good", inflictor);
             break;

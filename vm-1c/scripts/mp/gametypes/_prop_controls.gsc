@@ -1,27 +1,27 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/gametypes/prop;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_prop_dev;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_spawn;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
-#using scripts/mp/gametypes/_dogtags;
-#using scripts/mp/_util;
 #using scripts/mp/_teamops;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_dogtags;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_prop_dev;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/gametypes/prop;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
 
 #namespace prop_controls;
 
@@ -347,7 +347,7 @@ function propinputwatch() {
             continue;
         }
         if (msg == "spin") {
-            self function_90ce903e();
+            self propspin();
             continue;
         }
         if (msg == "changeProp") {
@@ -391,7 +391,7 @@ function proplockunlock() {
 // Params 0, eflags: 0x0
 // Checksum 0xf2cf965e, Offset: 0x1a38
 // Size: 0xcc
-function function_90ce903e() {
+function propspin() {
     self.propent unlink();
     self.propent.angles += (0, 45, 0);
     self.propent.origin = self.propanchor.origin;
@@ -700,7 +700,7 @@ function set_pitch_roll_for_ground_normal(traceignore) {
     if (!isdefined(groundnormal)) {
         return;
     }
-    var_a8f94d84 = anglestoforward(self.angles);
+    ovf = anglestoforward(self.angles);
     ovr = anglestoright(self.angles);
     new_angles = vectortoangles(groundnormal);
     pitch = angleclamp180(new_angles[0] + 90);
@@ -712,7 +712,7 @@ function set_pitch_roll_for_ground_normal(traceignore) {
     } else {
         mod = 1;
     }
-    dot = vectordot(var_7001e881, var_a8f94d84);
+    dot = vectordot(var_7001e881, ovf);
     newpitch = dot * pitch;
     newroll = (1 - abs(dot)) * pitch * mod;
     self.angles = (newpitch, self.angles[1], newroll);
@@ -1009,8 +1009,8 @@ function canlock() {
             #/
             return 0;
         }
-        var_ae6a54dd = point[2] - org1[2];
-        if (var_ae6a54dd > 50) {
+        distz = point[2] - org1[2];
+        if (distz > 50) {
             point2 = getnearestpathpoint(org1, 50);
             if (!isdefined(point2)) {
                 /#
@@ -1138,7 +1138,7 @@ function flashtheprops(var_e967d644) {
     var_e967d644 endon(#"disconnect");
     self thread endondeath();
     self endon(#"end_explode");
-    position = self waittill(#"explode");
+    self waittill(#"explode", position);
     if (!isdefined(var_e967d644)) {
         return;
     }
@@ -1424,7 +1424,7 @@ function watchspecialgrenadethrow() {
     self notify(#"watchspecialgrenadethrow");
     self endon(#"watchspecialgrenadethrow");
     while (true) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         self thread trackgrenade(grenade);
         self.thrownspecialcount += 1;
     }
@@ -1438,7 +1438,7 @@ function trackgrenade(grenade) {
     level endon(#"game_ended");
     self endon(#"disconnect");
     weapon = grenade.weapon;
-    damageorigin = grenade waittill(#"explode");
+    grenade waittill(#"explode", damageorigin);
     if (!isdefined(level.var_56d3e86e)) {
         level.var_56d3e86e = [];
     }

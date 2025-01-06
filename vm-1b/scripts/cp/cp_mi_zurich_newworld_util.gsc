@@ -1,32 +1,32 @@
-#using scripts/cp/cp_mi_zurich_newworld_rooftops;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom_tactical_rig;
-#using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_hacking;
+#using scripts/codescripts/struct;
 #using scripts/cp/_dialog;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/cp/_hacking;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld_rooftops;
+#using scripts/cp/cybercom/_cybercom_gadget;
+#using scripts/cp/cybercom/_cybercom_tactical_rig;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/shared/ai/archetype_utility;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace newworld_util;
 
@@ -59,8 +59,8 @@ function init_client_field_callback_funcs() {
 // Checksum 0xd1f3c088, Offset: 0xd20
 // Size: 0x452
 function function_be075359() {
-    if (!isdefined(level.var_ba7d14b0)) {
-        level.var_ba7d14b0 = [];
+    if (!isdefined(level.mobile_armory_used)) {
+        level.mobile_armory_used = [];
     }
     var_c4ba82be = getweapon("ar_fastburst", "suppressed", "acog");
     var_7d2e8aba = getweapon("smg_fastfire", "extclip");
@@ -107,7 +107,7 @@ function function_be075359() {
     case "underground_staging_room_igc":
     case "underground_subway":
     case "underground_water_plant":
-        if (!self flagsys::get("mobile_armory_in_use") && !isdefined(level.var_ba7d14b0[self getentitynumber()])) {
+        if (!self flagsys::get("mobile_armory_in_use") && !isdefined(level.mobile_armory_used[self getentitynumber()])) {
             self take_weapons();
             self.primaryloadoutweapon = var_a337836d;
             self giveweapon(var_ae16e040);
@@ -141,10 +141,10 @@ function function_be075359() {
 // Checksum 0xc3ebbbf0, Offset: 0x1180
 // Size: 0x5a
 function function_3a7ee040() {
-    if (!isdefined(level.var_ba7d14b0[self getentitynumber()])) {
-        level.var_ba7d14b0[self getentitynumber()] = 1;
+    if (!isdefined(level.mobile_armory_used[self getentitynumber()])) {
+        level.mobile_armory_used[self getentitynumber()] = 1;
         self waittill(#"disconnect");
-        level.var_ba7d14b0[self getentitynumber()] = undefined;
+        level.mobile_armory_used[self getentitynumber()] = undefined;
     }
 }
 
@@ -417,7 +417,7 @@ function function_84a7d8c() {
 // Size: 0x97
 function function_44aa9d22() {
     self endon(#"hash_70947625");
-    e_corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", e_corpse);
     if (isdefined(level.player_on_top_of_train) && level.player_on_top_of_train) {
         wait 10;
     }
@@ -466,7 +466,7 @@ function function_523cdc93(var_9e5eb4d9) {
         var_9e5eb4d9 = 1;
     }
     if (isdefined(var_9e5eb4d9) && var_9e5eb4d9) {
-        damage, attacker = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker);
         self thread function_91b16538();
         self thread function_4ccc51b5();
     }
@@ -504,7 +504,7 @@ function function_91b16538() {
 // Size: 0x4f
 function function_4ccc51b5() {
     self endon(#"hash_ed74b5db");
-    e_corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", e_corpse);
     wait 0.25;
     if (isdefined(e_corpse)) {
         e_corpse delete();
@@ -638,7 +638,7 @@ function function_8531ac12(var_81a32895, str_endon) {
         __s util::delay_notify(30, "timeout");
     }
     while (!self flag::get(var_81a32895 + "_WW_tutorial")) {
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         var_66700f08 = strtok(response, ",");
         if (var_66700f08[0] == "opened") {
             self flag::set(var_81a32895 + "_WW_opened");
@@ -660,7 +660,7 @@ function function_b95b168e(var_81a32895, str_endon) {
         __s util::delay_notify(30, "timeout");
     }
     while (true) {
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         var_66700f08 = strtok(response, ",");
         if (var_66700f08[0] == "opened") {
             continue;
@@ -790,7 +790,7 @@ function function_5dca74fc(var_81a32895, str_endon, var_e8551372) {
     }
     self util::hide_hint_text(1);
     while (!self flag::get(var_81a32895 + "_use_ability_tutorial")) {
-        ent, e_player = level waittill(#"hash_92698df4");
+        level waittill(#"ccom_locked_on", ent, e_player);
         if (e_player == self) {
             self function_e52b73c0(var_81a32895, str_endon, var_e8551372);
         }
@@ -845,7 +845,7 @@ function function_e84823a9(var_81a32895, str_endon) {
         __s util::delay_notify(30, "timeout");
     }
     while (true) {
-        ent, e_player = level waittill(#"ccom_lost_lock");
+        level waittill(#"ccom_lost_lock", ent, e_player);
         if (e_player == self) {
             if (isdefined(self.cybercom) && self.cybercom.var_d1460543.size < 1) {
                 self notify(#"hash_5e2557e1");
@@ -959,7 +959,7 @@ function function_70176ad6() {
         self.var_98bf72c3 = 0;
     }
     while (self.var_98bf72c3 < 3) {
-        n_slot, var_2de327e8 = self waittill(#"gadget_denied_activation");
+        self waittill(#"gadget_denied_activation", n_slot, var_2de327e8);
         if (var_2de327e8 == 1) {
             self.var_98bf72c3++;
             self util::show_hint_text(%CP_MI_ZURICH_NEWWORLD_CYBERCOM_RECHARGE, 0, undefined, 4);
@@ -1056,7 +1056,7 @@ function function_68b8f4af(e_volume) {
 // Params 4, eflags: 0x0
 // Checksum 0x877bc93f, Offset: 0x34c8
 // Size: 0x129
-function function_c478189b(str_trigger, var_390543cc, var_9d774f5d, var_43a68d40) {
+function function_c478189b(str_trigger, var_390543cc, var_9d774f5d, max_guys) {
     if (isdefined(str_trigger)) {
         e_trigger = getent(str_trigger, "targetname");
         e_trigger waittill(#"trigger");
@@ -1064,13 +1064,13 @@ function function_c478189b(str_trigger, var_390543cc, var_9d774f5d, var_43a68d40
     var_441bd962 = getent(var_390543cc, "targetname");
     var_ee2fd889 = getent(var_9d774f5d, "targetname");
     a_ai = getaiteamarray("axis");
-    if (!isdefined(var_43a68d40)) {
-        var_43a68d40 = a_ai.size;
+    if (!isdefined(max_guys)) {
+        max_guys = a_ai.size;
     }
-    if (var_43a68d40 > a_ai.size) {
-        var_43a68d40 = a_ai.size;
+    if (max_guys > a_ai.size) {
+        max_guys = a_ai.size;
     }
-    for (i = 0; i < var_43a68d40; i++) {
+    for (i = 0; i < max_guys; i++) {
         e_ent = a_ai[i];
         if (e_ent istouching(var_441bd962)) {
             e_ent setgoalvolume(var_ee2fd889);
@@ -1130,7 +1130,7 @@ function function_e0fb6da9(str_struct, close_dist, var_376aa7b3, var_fa069c9d, v
     var_7d22b48e = getent(var_98e9bc46, "targetname");
     v_forward = anglestoforward(s_struct.angles);
     s_struct.start_time = undefined;
-    var_cc06a93d = 0;
+    num_charges = 0;
     wait_time = randomintrange(var_376aa7b3, var_fa069c9d);
     while (true) {
         e_player = getplayers()[0];
@@ -1170,8 +1170,8 @@ function function_e0fb6da9(str_struct, close_dist, var_376aa7b3, var_fa069c9d, v
                     a_touching[i].var_db552f4 = 1;
                 }
                 s_struct.start_time = undefined;
-                var_cc06a93d++;
-                if (var_cc06a93d >= var_a70db4af) {
+                num_charges++;
+                if (num_charges >= var_a70db4af) {
                     return;
                 }
                 wait_time = randomintrange(var_376aa7b3, var_fa069c9d);
@@ -1205,15 +1205,15 @@ function function_8f7b1e06(str_trigger, var_390543cc, var_9d774f5d) {
 // Params 4, eflags: 0x0
 // Checksum 0x9177b13c, Offset: 0x3b78
 // Size: 0xe1
-function function_bccc2e65(str_aigroup, var_6ec47843, var_6c5c89e1, goal_radius) {
+function function_bccc2e65(str_aigroup, var_6ec47843, str_node, goal_radius) {
     spawner::waittill_ai_group_ai_count("aig_water_treatment", var_6ec47843);
-    var_22752fde = getnode(var_6c5c89e1, "targetname");
+    nd_node = getnode(str_node, "targetname");
     a_ai = getentarray(str_aigroup, "script_aigroup");
     for (i = 0; i < a_ai.size; i++) {
         e_ent = a_ai[i];
         if (issentient(e_ent)) {
             e_ent.goalradius = goal_radius;
-            e_ent setgoal(var_22752fde.origin);
+            e_ent setgoal(nd_node.origin);
         }
     }
 }
@@ -1335,7 +1335,7 @@ function function_16dd8c5f(var_d72a94c2, str_type, str_hint, var_8baec92b, var_2
     if (!var_d78830f5) {
         var_dcf4cbb0 = util::function_14518e76(t_interact, str_type, str_hint, &function_e27a8082, var_69f96d87);
         var_dcf4cbb0.var_2df3d133 = var_2df3d133;
-        e_player = level waittill(var_2df3d133);
+        level waittill(var_2df3d133, e_player);
     } else {
         t_interact hacking::function_68df65d8(1, str_type, str_hint, undefined, var_69f96d87);
         t_interact hacking::trigger_wait();
@@ -1697,7 +1697,7 @@ function function_2eded728(b_enabled) {
 // Params 1, eflags: 0x0
 // Checksum 0xda48f31e, Offset: 0x5020
 // Size: 0x5a
-function function_bbd12ed2(str_scene_name) {
+function scene_cleanup(str_scene_name) {
     if (scene::is_active(str_scene_name)) {
         scene::stop(str_scene_name, 1);
         util::wait_network_frame();

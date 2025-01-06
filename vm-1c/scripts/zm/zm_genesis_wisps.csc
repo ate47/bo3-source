@@ -1,18 +1,18 @@
-#using scripts/zm/zm_genesis_util;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/weapons/_bouncingbetty;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_bouncingbetty;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_genesis_util;
 
 #namespace zm_genesis_wisps;
 
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_wisps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc5e553eb, Offset: 0x350
 // Size: 0x94
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_wisps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x3f0
 // Size: 0x4
 function __main__() {
@@ -42,7 +42,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_wisps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xaab4bf93, Offset: 0x400
 // Size: 0xbc
 function wisp_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +55,7 @@ function wisp_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldnam
 }
 
 // Namespace zm_genesis_wisps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe7c5e163, Offset: 0x4c8
 // Size: 0x194
 function set_funfact_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

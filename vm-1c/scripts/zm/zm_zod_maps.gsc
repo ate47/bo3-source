@@ -1,14 +1,14 @@
-#using scripts/zm/zm_zod_quest;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/zm_zod_quest;
 
 #namespace zm_zod_maps;
 
 // Namespace zm_zod_maps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ed6eb9e, Offset: 0x310
 // Size: 0x14
 function init() {
@@ -16,7 +16,7 @@ function init() {
 }
 
 // Namespace zm_zod_maps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x12300971, Offset: 0x330
 // Size: 0x432
 function function_ca1a937() {
@@ -63,7 +63,7 @@ function function_ca1a937() {
 }
 
 // Namespace zm_zod_maps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71feb0c0, Offset: 0x770
 // Size: 0x320
 function function_87325d74() {

@@ -1,42 +1,42 @@
-#using scripts/cp/cp_mi_sing_sgen_revenge_igc;
+#using scripts/codescripts/struct;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_quadtank_util;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
 #using scripts/cp/cp_mi_sing_sgen_accolades;
+#using scripts/cp/cp_mi_sing_sgen_enter_silo;
+#using scripts/cp/cp_mi_sing_sgen_revenge_igc;
 #using scripts/cp/cp_mi_sing_sgen_sound;
 #using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_enter_silo;
-#using scripts/cp/cp_mi_sing_sgen;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_quadtank_util;
-#using scripts/cp/_hacking;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_collectibles;
-#using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/abilities/_ability_util;
-#using scripts/shared/lui_shared;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 #using scripts/shared/vehicleriders_shared;
 #using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_sing_sgen_exterior;
 
@@ -299,7 +299,7 @@ function function_daa3910f() {
     self endon(#"death");
     level endon(#"start_hendricks_move_up_battle_1");
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (level.players.size == 1) {
             trigger::use(self.script_string, "targetname", e_player);
             wait 1;
@@ -403,7 +403,7 @@ function function_cb09a77d() {
     var_83181ea9[0] = "gadget_active_camo";
     var_83181ea9[1] = "gadget_es_strike";
     while (true) {
-        var_db4f7ce4 = self waittill(#"hash_81c0052c");
+        self waittill(#"cybercom_activation_succeeded", var_db4f7ce4);
         b_safe = 0;
         foreach (var_86ce8156 in var_83181ea9) {
             if (issubstr(var_db4f7ce4.name, var_86ce8156)) {
@@ -760,7 +760,7 @@ function function_5d6e495e() {
     self endon(#"hash_3a662ede");
     self endon(#"hash_2f93f839");
     self.var_f9b223f5 = 1;
-    e_attacker = self waittill(#"death");
+    self waittill(#"death", e_attacker);
     if (!!level flag::get("exterior_gone_hot")) {
         var_469bb0aa = arraygetclosest(self.origin, getaiteamarray("axis"), 512);
         if (isalive(var_469bb0aa)) {
@@ -1088,7 +1088,7 @@ function function_e6160d3() {
 // Size: 0x55
 function function_624e7d89() {
     self endon(#"death");
-    self waittill(#"hash_27175bcd");
+    self waittill(#"trophy_system_destroyed");
     level flag::set("quad_tank_trophy_system_destroyed");
     while (true) {
         level notify(#"vo_trophy_system_destroyed");
@@ -1102,9 +1102,9 @@ function function_624e7d89() {
 // Size: 0x47
 function function_749f2173() {
     self endon(#"death");
-    self endon(#"hash_27175bcd");
+    self endon(#"trophy_system_destroyed");
     while (true) {
-        self waittill(#"hash_6530962c");
+        self waittill(#"trophy_system_disabled");
         level notify(#"vo_trophy_system_disabled");
         self waittill(#"hash_f015cdf7");
         level notify(#"vo_trophy_system_enabled");
@@ -1206,8 +1206,8 @@ function function_f2daaec0() {
     var_3f9c346d = struct::get("qtank_impact", "targetname");
     radiusdamage(var_3f9c346d.origin, -76, 500, 90, self);
     a_nodes = getnodearray("qt_truck_nodes", "script_noteworthy");
-    foreach (var_22752fde in a_nodes) {
-        setenablenode(var_22752fde, 0);
+    foreach (nd_node in a_nodes) {
+        setenablenode(nd_node, 0);
     }
     var_df4fa6d = getentarray("pickup_carver", "targetname");
     foreach (e_ent in var_df4fa6d) {
@@ -1570,9 +1570,9 @@ function function_392ca6eb(var_45900c37) {
 // Checksum 0x6f5bda2d, Offset: 0x7208
 // Size: 0x1cb
 function function_9e3af01c() {
-    level endon(#"hash_a4b7fa05");
+    level endon(#"qt_plaza_outro_igc_started");
     while (true) {
-        n_damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", n_damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (weapon == level.var_b27f706d || weapon == level.var_51d112fe || weapon == level.var_9e92e4b8) {
             self dodamage(self.health, self.origin);
             break;

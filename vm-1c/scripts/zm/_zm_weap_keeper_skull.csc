@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace keeper_skull;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace keeper_skull
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf9f81d59, Offset: 0xbb8
 // Size: 0x65e
 function __init__() {
@@ -67,7 +67,7 @@ function __init__() {
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa44c072a, Offset: 0x1220
 // Size: 0x346
 function function_2802db6f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -113,7 +113,7 @@ function function_2802db6f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb99ac059, Offset: 0x1570
 // Size: 0x2f6
 function function_4fb98616(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,7 +155,7 @@ function function_4fb98616(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4ef8c552, Offset: 0x1870
 // Size: 0x314
 function zombie_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -182,7 +182,7 @@ function zombie_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa300bf3b, Offset: 0x1b90
 // Size: 0xc6
 function death_ray_shock_eye_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -197,7 +197,7 @@ function death_ray_shock_eye_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbb2b7933, Offset: 0x1c60
 // Size: 0xc6
 function function_384d8884(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -212,7 +212,7 @@ function function_384d8884(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc56d6e1, Offset: 0x1d30
 // Size: 0x94
 function thrasher_skull_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -226,7 +226,7 @@ function thrasher_skull_fire(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace keeper_skull
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x704d11cf, Offset: 0x1dd0
 // Size: 0x592
 function function_c16de463(var_1607039a, localclientnum) {
@@ -291,7 +291,7 @@ function function_c16de463(var_1607039a, localclientnum) {
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa63dde97, Offset: 0x2370
 // Size: 0xa4
 function function_c92fcc97(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -303,7 +303,7 @@ function function_c92fcc97(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3a41785, Offset: 0x2420
 // Size: 0x15e
 function function_cea6821(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -332,7 +332,7 @@ function function_cea6821(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace keeper_skull
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdcbfb49a, Offset: 0x2588
 // Size: 0x15e
 function function_3f47ba02(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

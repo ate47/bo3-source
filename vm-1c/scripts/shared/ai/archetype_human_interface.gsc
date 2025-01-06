@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/archetype_human;
+#using scripts/shared/ai/systems/ai_interface;
 
 #namespace humaninterface;
 
 // Namespace humaninterface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5707d523, Offset: 0x1b8
 // Size: 0x3c4
 function registerhumaninterfaceattributes() {

@@ -1,19 +1,19 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/table_shared;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/table_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_frontend_zm_bgb_chance;
 
 /#
 
     // Namespace zm_frontend_zm_bgb_chance
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc27953be, Offset: 0x1a8
     // Size: 0x1c
     function zm_frontend_bgb_slots_logic() {
@@ -21,7 +21,7 @@
     }
 
     // Namespace zm_frontend_zm_bgb_chance
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xaba81fc3, Offset: 0x1d0
     // Size: 0x1bc
     function zm_frontend_bgb_devgui() {
@@ -39,7 +39,7 @@
     }
 
     // Namespace zm_frontend_zm_bgb_chance
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x98c1dcc6, Offset: 0x398
     // Size: 0x1c0
     function bgb_devgui_think() {

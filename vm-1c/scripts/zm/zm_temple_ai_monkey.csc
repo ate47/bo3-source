@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_temple_ai_monkey;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_temple_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43758031, Offset: 0x150
 // Size: 0x4c
 function __init__() {
@@ -21,7 +21,7 @@ function __init__() {
 }
 
 // Namespace zm_temple_ai_monkey
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf5d19323, Offset: 0x1a8
 // Size: 0x64
 function monkey_ragdoll(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

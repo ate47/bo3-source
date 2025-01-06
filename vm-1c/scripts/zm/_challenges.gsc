@@ -1,9 +1,9 @@
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
 
 #namespace challenges;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x9c0
 // Size: 0x4
 function __init__() {
@@ -46,7 +46,7 @@ function init() {
 }
 
 // Namespace challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x35a3b5e7, Offset: 0xb70
 // Size: 0x1f6c
 function challengekills(data, time) {
@@ -434,7 +434,7 @@ function challengekills(data, time) {
 }
 
 // Namespace challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9055776d, Offset: 0x2ae8
 // Size: 0x14
 function function_9323a046(data, time) {

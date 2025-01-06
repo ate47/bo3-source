@@ -1,26 +1,26 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/cp/voice/voice_lotus1;
-#using scripts/cp/lotus_util;
-#using scripts/cp/lotus_start_riot;
-#using scripts/cp/lotus_security_station;
-#using scripts/cp/lotus_accolades;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cp_mi_cairo_lotus_sound;
-#using scripts/cp/cp_mi_cairo_lotus_fx;
-#using scripts/cp/cp_mi_cairo_lotus_anim;
-#using scripts/cp/_vehicle_platform;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_elevator;
-#using scripts/cp/_collectibles;
 #using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_elevator;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/_vehicle_platform;
+#using scripts/cp/cp_mi_cairo_lotus_anim;
+#using scripts/cp/cp_mi_cairo_lotus_fx;
+#using scripts/cp/cp_mi_cairo_lotus_sound;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/lotus_accolades;
+#using scripts/cp/lotus_security_station;
+#using scripts/cp/lotus_start_riot;
+#using scripts/cp/lotus_util;
+#using scripts/cp/voice/voice_lotus1;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_cairo_lotus;
 
@@ -149,11 +149,11 @@ function init_clientfields() {
 // Size: 0x252
 function function_673254cc() {
     skipto::add("plan_b", &lotus_start_riot::function_e86a5395, undefined, &lotus_start_riot::function_88b5ab32);
-    skipto::add("start_the_riots", &lotus_start_riot::function_5fb7ec5, undefined, &lotus_start_riot::function_a3cc6d62);
+    skipto::add("start_the_riots", &lotus_start_riot::function_5fb7ec5, undefined, &lotus_start_riot::start_the_riots_done);
     skipto::function_d68e678e("general_hakim", &lotus_start_riot::function_92206070, undefined, &lotus_start_riot::function_14166bcb);
     skipto::function_d68e678e("apartments", &lotus_security_station::function_cd269efc, undefined, &lotus_security_station::function_46593e07);
     skipto::function_d68e678e("atrium_battle", &lotus_security_station::atrium_battle, undefined, &lotus_security_station::function_57b2d9ef);
-    skipto::function_d68e678e("to_security_station", &lotus_security_station::to_security_station, undefined, &lotus_security_station::function_2d424c3d);
+    skipto::function_d68e678e("to_security_station", &lotus_security_station::to_security_station, undefined, &lotus_security_station::to_security_station_done);
     skipto::function_d68e678e("hack_the_system", &lotus_security_station::function_f5f5e18e, undefined, &lotus_security_station::function_2f8e8d25);
     /#
         skipto::add_dev("<dev string:x28>", &function_a56ed2d0);

@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_immolation_liquidation;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_immolation_liquidation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c05325f, Offset: 0x1c8
 // Size: 0x64
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_immolation_liquidation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33c4332e, Offset: 0x238
 // Size: 0x24
 function activation() {
@@ -35,7 +35,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_immolation_liquidation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd54d9f7b, Offset: 0x268
 // Size: 0x3e
 function function_3d1f600e() {

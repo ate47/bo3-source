@@ -1,16 +1,16 @@
-#using scripts/zm/zm_temple_sq_skits;
-#using scripts/zm/_zm_audio_zhd;
-#using scripts/zm/_zm_audio;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
 #using scripts/shared/flag_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_audio_zhd;
+#using scripts/zm/zm_temple_sq_skits;
 
 #namespace zm_temple_amb;
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85c85b1, Offset: 0x2b0
 // Size: 0xf4
 function main() {
@@ -26,7 +26,7 @@ function main() {
 }
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23e3b70b, Offset: 0x3b0
 // Size: 0x42
 function function_5d71efd7() {
@@ -43,7 +43,7 @@ function function_d4b7774a() {
 }
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf513140a, Offset: 0x418
 // Size: 0x154
 function function_8e7c8fe0() {
@@ -71,7 +71,7 @@ function function_8e7c8fe0() {
 }
 
 // Namespace zm_temple_amb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfda8abdf, Offset: 0x578
 // Size: 0x80
 function function_621add9(weapon, magic_box) {
@@ -83,17 +83,17 @@ function function_621add9(weapon, magic_box) {
 }
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x713ea969, Offset: 0x600
 // Size: 0x5c
 function function_702b17be() {
-    level thread namespace_52adc03e::function_e753d4f();
+    level thread zm_audio_zhd::function_e753d4f();
     level flag::wait_till("snd_song_completed");
     level thread zm_audio::sndmusicsystem_playstate("pareidolia");
 }
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5bc3831b, Offset: 0x668
 // Size: 0x17c
 function function_517d4259() {
@@ -113,7 +113,7 @@ function function_517d4259() {
 }
 
 // Namespace zm_temple_amb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x268a0bed, Offset: 0x7f0
 // Size: 0x134
 function function_6d5ecc2a(place) {
@@ -124,7 +124,7 @@ function function_6d5ecc2a(place) {
     }
     var_5cb1355d = spawn("trigger_radius", struct.origin - (0, 0, 100), 0, -6, -56);
     while (true) {
-        who = var_5cb1355d waittill(#"trigger");
+        var_5cb1355d waittill(#"trigger", who);
         if (isplayer(who)) {
             who thread zm_audio::create_and_play_dialog("general", place);
             if (place == "location_maze") {
@@ -138,7 +138,7 @@ function function_6d5ecc2a(place) {
 }
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a3b85b4, Offset: 0x930
 // Size: 0x11c
 function function_45b4acf2() {
@@ -150,7 +150,7 @@ function function_45b4acf2() {
         return;
     }
     while (true) {
-        num = level waittill(#"hash_ab740a84");
+        level waittill(#"hash_ab740a84", num);
         if (num == var_6932cc13[n_count]) {
             n_count++;
             if (n_count >= 3) {
@@ -164,13 +164,13 @@ function function_45b4acf2() {
 }
 
 // Namespace zm_temple_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3644b6c2, Offset: 0xa58
 // Size: 0x148
 function function_19277046() {
     level endon(#"snd_zhdegg_activate");
     while (true) {
-        damage, attacker, dir, loc, str_type, model, tag, part, weapon, flags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, dir, loc, str_type, model, tag, part, weapon, flags);
         if (!level flag::get("gongs_resonating")) {
             continue;
         }

@@ -1,15 +1,15 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace satchel_charge;
 
 // Namespace satchel_charge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6f420386, Offset: 0x2a0
 // Size: 0x5c
 function init_shared() {
@@ -19,7 +19,7 @@ function init_shared() {
 }
 
 // Namespace satchel_charge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1165c958, Offset: 0x308
 // Size: 0x1c4
 function function_d7ed4157() {
@@ -44,7 +44,7 @@ function function_d7ed4157() {
 }
 
 // Namespace satchel_charge
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xbfca25a, Offset: 0x4d8
 // Size: 0xbc
 function function_3543ddb5(attacker, weapon, target) {
@@ -60,7 +60,7 @@ function function_3543ddb5(attacker, weapon, target) {
 }
 
 // Namespace satchel_charge
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc228611f, Offset: 0x5a0
 // Size: 0x114
 function function_a3a42df2(watcher, owner) {

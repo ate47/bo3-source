@@ -1,29 +1,29 @@
-#using scripts/zm/zm_island_util;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_ai_clone;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/archetype_clone;
-#using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/archetype_clone;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_ai_clone;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_island_util;
 
 #namespace zm_island_side_ee_doppleganger;
 
@@ -36,7 +36,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc69a70b7, Offset: 0x4e0
 // Size: 0x70
 function __init__() {
@@ -47,7 +47,7 @@ function __init__() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda917a1c, Offset: 0x558
 // Size: 0x34
 function main() {
@@ -58,7 +58,7 @@ function main() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6aca1d38, Offset: 0x598
 // Size: 0x24
 function on_player_connected() {
@@ -66,7 +66,7 @@ function on_player_connected() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x83ac1999, Offset: 0x5c8
 // Size: 0x24
 function on_player_spawned() {
@@ -74,7 +74,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81186781, Offset: 0x5f8
 // Size: 0x2c
 function function_178d800() {
@@ -84,7 +84,7 @@ function function_178d800() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x23c5904d, Offset: 0x630
 // Size: 0x12a
 function function_46051422(n_time) {
@@ -112,14 +112,14 @@ function function_46051422(n_time) {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18eaf58c, Offset: 0x768
 // Size: 0x138
 function function_b1aa7056() {
     t_lookat_doppleganger_enable = getent("t_lookat_doppleganger_enable", "targetname");
     if (isdefined(t_lookat_doppleganger_enable)) {
         while (true) {
-            e_who = t_lookat_doppleganger_enable waittill(#"trigger");
+            t_lookat_doppleganger_enable waittill(#"trigger", e_who);
             if (zm_utility::is_player_valid(e_who) && e_who util::ads_button_held() && !e_who flag::get("doppleganger_enabled")) {
                 e_weapon = e_who getcurrentweapon();
                 var_5d131e4a = strtok(e_weapon.name, "_");
@@ -133,7 +133,7 @@ function function_b1aa7056() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd99fdfff, Offset: 0x8a8
 // Size: 0x5c
 function function_957b43e5() {
@@ -145,7 +145,7 @@ function function_957b43e5() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e3a1205, Offset: 0x910
 // Size: 0x378
 function function_8c3f76f3() {
@@ -187,7 +187,7 @@ function function_8c3f76f3() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8d155736, Offset: 0xc90
 // Size: 0x3b4
 function function_5ee3951f() {
@@ -233,7 +233,7 @@ function function_5ee3951f() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c1ce2ec, Offset: 0x1050
 // Size: 0x1e6
 function function_c948de86() {
@@ -267,7 +267,7 @@ function function_c948de86() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9ae2d383, Offset: 0x1240
 // Size: 0x2b4
 function function_69f74476() {
@@ -302,7 +302,7 @@ function function_69f74476() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x230c0374, Offset: 0x1500
 // Size: 0x78
 function function_89b0bd32() {
@@ -316,7 +316,7 @@ function function_89b0bd32() {
 }
 
 // Namespace zm_island_side_ee_doppleganger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3cd5390d, Offset: 0x1580
 // Size: 0x44
 function function_38165cb6() {
@@ -329,7 +329,7 @@ function function_38165cb6() {
 /#
 
     // Namespace zm_island_side_ee_doppleganger
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x47110361, Offset: 0x15d0
     // Size: 0x8c
     function function_bece461b() {
@@ -341,7 +341,7 @@ function function_38165cb6() {
     }
 
     // Namespace zm_island_side_ee_doppleganger
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x7e1fdea2, Offset: 0x1668
     // Size: 0x13e
     function function_8924dbff(cmd) {

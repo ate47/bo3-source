@@ -1,21 +1,21 @@
-#using scripts/zm/_zm_altbody;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_util;
-#using scripts/shared/weapons/grapple;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/beam_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/beam_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/filter_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/grapple;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_altbody;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_altbody_beast;
 
@@ -732,7 +732,7 @@ function function_2a7bb7b3(localclientnum, on_off) {
     function_14637ad2(localclientnum);
     if (on_off) {
         while (isdefined(self)) {
-            lcn, note = level waittill(#"notetrack");
+            level waittill(#"notetrack", lcn, note);
             if (note == "shock_loop") {
                 function_14637ad2(localclientnum);
                 charge = getweaponchargelevel(localclientnum);
@@ -897,7 +897,7 @@ function grapple_watch(onoff, tag, delay) {
     self endon(#"grapple_watch");
     if (onoff) {
         while (isdefined(self)) {
-            pivot = self waittill(#"grapple_beam_on");
+            self waittill(#"grapple_beam_on", pivot);
             var_1e66ebb1 = tag;
             /#
                 if (getdvarint("<dev string:x3f>") > 0) {
@@ -951,19 +951,19 @@ function function_89d6f49a(localclientnum, onoff) {
     var_27745be8 = (105, -108, 24) / -1;
     var_d7805253 = 2;
     var_ec055171 = 0.25;
-    var_c051243b = var_d7805253;
+    cycle_time = var_d7805253;
     old_color = function_4778b020(var_781fc232, var_27745be8);
     new_color = old_color;
     while (isdefined(self)) {
-        if (var_c051243b >= var_d7805253) {
+        if (cycle_time >= var_d7805253) {
             old_color = new_color;
             new_color = function_4778b020(var_781fc232, var_27745be8);
-            var_c051243b = 0;
+            cycle_time = 0;
         }
-        color = function_4b2bbece(old_color, new_color, var_c051243b / var_d7805253);
+        color = function_4b2bbece(old_color, new_color, cycle_time / var_d7805253);
         self setcontrollerlightbarcolor(localclientnum, color);
         self.controllercolor = color;
-        var_c051243b += var_ec055171;
+        cycle_time += var_ec055171;
         wait var_ec055171;
     }
 }

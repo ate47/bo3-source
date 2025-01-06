@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_util;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_ai_raps;
 
@@ -89,7 +89,7 @@ function function_3502da52(localclientnum) {
         return;
     }
     while (true) {
-        attacker, impactpos, effectdir, partname = self waittill(#"damage");
+        self waittill(#"damage", attacker, impactpos, effectdir, partname);
         playfx(localclientnum, settings.weakspotfx, impactpos, effectdir);
     }
 }

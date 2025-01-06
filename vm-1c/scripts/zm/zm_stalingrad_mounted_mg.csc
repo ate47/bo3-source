@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_mounted_mg;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_mounted_mg
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfdc67ffc, Offset: 0x1d0
 // Size: 0x64
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_mounted_mg
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc81e841f, Offset: 0x240
 // Size: 0xac
 function function_c71f5e4a(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {

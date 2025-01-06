@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace serversettings;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace serversettings
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc62c73c9, Offset: 0x1e8
 // Size: 0x24
 function __init__() {
@@ -21,7 +21,7 @@ function __init__() {
 }
 
 // Namespace serversettings
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e9c1d4d, Offset: 0x218
 // Size: 0x40e
 function main() {
@@ -71,7 +71,7 @@ function main() {
 }
 
 // Namespace serversettings
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd72235f, Offset: 0x630
 // Size: 0x184
 function updateserversettings() {
@@ -98,7 +98,7 @@ function updateserversettings() {
 }
 
 // Namespace serversettings
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x95fa68ba, Offset: 0x7c0
 // Size: 0x276
 function constraingametype(gametype) {
@@ -144,7 +144,7 @@ function constraingametype(gametype) {
 }
 
 // Namespace serversettings
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x769f991c, Offset: 0xa40
 // Size: 0x206
 function function_11d2785d(mapsize) {

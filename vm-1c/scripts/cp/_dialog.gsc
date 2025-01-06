@@ -1,13 +1,13 @@
-#using scripts/shared/ai/systems/face;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/face;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace dialog;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace dialog
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x11db08a0, Offset: 0x3b0
 // Size: 0x54
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace dialog
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa24dcb57, Offset: 0x410
 // Size: 0x24
 function function_bfb57e5a() {
@@ -38,7 +38,7 @@ function function_bfb57e5a() {
 }
 
 // Namespace dialog
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc4c71d70, Offset: 0x440
 // Size: 0xfc
 function add(var_6ec80991, str_vox_file) {
@@ -55,7 +55,7 @@ function add(var_6ec80991, str_vox_file) {
 }
 
 // Namespace dialog
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa941fc30, Offset: 0x548
 // Size: 0xbc
 function function_3c0e32a(str_vo_line) {
@@ -75,7 +75,7 @@ function function_3c0e32a(str_vo_line) {
 }
 
 // Namespace dialog
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x91f25a, Offset: 0x610
 // Size: 0x82
 function function_9fc88ab6(var_e8800af4) {
@@ -90,7 +90,7 @@ function function_9fc88ab6(var_e8800af4) {
 }
 
 // Namespace dialog
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xcd48912e, Offset: 0x6a0
 // Size: 0x164
 function say(str_vo_line, n_delay, var_57b7ba95, e_to_player, var_43937b21) {
@@ -121,7 +121,7 @@ function say(str_vo_line, n_delay, var_57b7ba95, e_to_player, var_43937b21) {
 }
 
 // Namespace dialog
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0xe81d3e10, Offset: 0x810
 // Size: 0x2a6
 function private function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_player) {
@@ -163,7 +163,7 @@ function private function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_play
 }
 
 // Namespace dialog
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd0441982, Offset: 0xac0
 // Size: 0x5e
 function function_665c78f1(str_vo_line) {
@@ -175,7 +175,7 @@ function function_665c78f1(str_vo_line) {
 }
 
 // Namespace dialog
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf1c3dfeb, Offset: 0xb28
 // Size: 0xf4
 function function_13b3b16a(str_vo_line, n_delay) {

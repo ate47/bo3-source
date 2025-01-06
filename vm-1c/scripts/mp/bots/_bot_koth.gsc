@@ -1,15 +1,15 @@
-#using scripts/mp/bots/_bot_combat;
 #using scripts/mp/bots/_bot;
-#using scripts/shared/bots/_bot_combat;
-#using scripts/shared/bots/_bot;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
+#using scripts/mp/bots/_bot_combat;
 #using scripts/shared/array_shared;
+#using scripts/shared/bots/_bot;
+#using scripts/shared/bots/_bot_combat;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_366cf615;
 
 // Namespace namespace_366cf615
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3fa050e8, Offset: 0x148
 // Size: 0x4c
 function init() {
@@ -19,7 +19,7 @@ function init() {
 }
 
 // Namespace namespace_366cf615
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f53e294, Offset: 0x1a0
 // Size: 0x34
 function on_bot_spawned() {
@@ -28,7 +28,7 @@ function on_bot_spawned() {
 }
 
 // Namespace namespace_366cf615
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23fee3f3, Offset: 0x1e0
 // Size: 0x80
 function function_66c53beb() {
@@ -43,7 +43,7 @@ function function_66c53beb() {
 }
 
 // Namespace namespace_366cf615
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8c2b8aae, Offset: 0x268
 // Size: 0x9c
 function function_5a6e5507() {
@@ -57,7 +57,7 @@ function function_5a6e5507() {
 }
 
 // Namespace namespace_366cf615
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4a08fd45, Offset: 0x310
 // Size: 0xcc
 function function_eeb4665() {

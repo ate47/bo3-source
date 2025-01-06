@@ -1,6 +1,6 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/ai/systems/gib;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/clientfield_shared;
 
 #namespace destructible_character;
 
@@ -38,7 +38,7 @@ function autoexec main() {
 #namespace destructclientutils;
 
 // Namespace destructclientutils
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xacfac1d4, Offset: 0x588
 // Size: 0x138
 function private _destructhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -62,7 +62,7 @@ function private _destructhandler(localclientnum, oldvalue, newvalue, bnewent, b
 }
 
 // Namespace destructclientutils
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x521f25b2, Offset: 0x6c8
 // Size: 0x164
 function private _destructpiece(localclientnum, entity, piecenumber, shouldspawngibs) {
@@ -82,7 +82,7 @@ function private _destructpiece(localclientnum, entity, piecenumber, shouldspawn
 }
 
 // Namespace destructclientutils
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x557f08af, Offset: 0x838
 // Size: 0x3a
 function private _getdestructstate(localclientnum, entity) {
@@ -93,7 +93,7 @@ function private _getdestructstate(localclientnum, entity) {
 }
 
 // Namespace destructclientutils
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xe0d458c6, Offset: 0x880
 // Size: 0xf4
 function private _handledestructcallbacks(localclientnum, entity, piecenumber) {
@@ -107,7 +107,7 @@ function private _handledestructcallbacks(localclientnum, entity, piecenumber) {
 }
 
 // Namespace destructclientutils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xb1c157a2, Offset: 0x980
 // Size: 0xf6
 function adddestructpiececallback(localclientnum, entity, piecenumber, callbackfunction) {
@@ -124,7 +124,7 @@ function adddestructpiececallback(localclientnum, entity, piecenumber, callbackf
 }
 
 // Namespace destructclientutils
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x50f61d1f, Offset: 0xa80
 // Size: 0x3e
 function ispiecedestructed(localclientnum, entity, piecenumber) {

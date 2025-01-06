@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_devgui;
 #using scripts/shared/array_shared;
 #using scripts/shared/rat_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
 
 #namespace rat;
 
@@ -17,7 +17,7 @@
     }
 
     // Namespace rat
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7b1372c7, Offset: 0x140
     // Size: 0x6c
     function __init__() {
@@ -27,7 +27,7 @@
     }
 
     // Namespace rat
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x4e9d15a5, Offset: 0x1b8
     // Size: 0x514
     function derriesezombiespawnnavmeshtest(params, inrat) {

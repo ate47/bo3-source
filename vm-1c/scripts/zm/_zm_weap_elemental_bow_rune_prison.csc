@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_weap_elemental_bow;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weap_elemental_bow;
 
 #namespace _zm_weap_elemental_bow_rune_prison;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2a6a6b8c, Offset: 0x550
 // Size: 0x32e
 function __init__() {
@@ -41,7 +41,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc37dc270, Offset: 0x888
 // Size: 0x64
 function function_8339cd3d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -49,7 +49,7 @@ function function_8339cd3d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe93829d1, Offset: 0x8f8
 // Size: 0x74
 function function_4b59f7f4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -59,7 +59,7 @@ function function_4b59f7f4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc2eab864, Offset: 0x978
 // Size: 0x74
 function function_ed22f261(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -69,7 +69,7 @@ function function_ed22f261(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xea86c45d, Offset: 0x9f8
 // Size: 0x126
 function runeprison_rock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -90,7 +90,7 @@ function runeprison_rock_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb7ef3984, Offset: 0xb28
 // Size: 0x84
 function scene_play(scene, var_7b98b639) {
@@ -104,7 +104,7 @@ function scene_play(scene, var_7b98b639) {
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5da365bc, Offset: 0xbb8
 // Size: 0x3c
 function function_6221b6b9(scene, var_7b98b639) {
@@ -113,7 +113,7 @@ function function_6221b6b9(scene, var_7b98b639) {
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcc36c409, Offset: 0xc00
 // Size: 0x118
 function function_79854312(localclientnum) {
@@ -135,7 +135,7 @@ function function_79854312(localclientnum) {
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x776f42c8, Offset: 0xd20
 // Size: 0x7c
 function runeprison_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -145,7 +145,7 @@ function runeprison_explode_fx(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfbe809e1, Offset: 0xda8
 // Size: 0xa4
 function runeprison_lava_geyser_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -156,7 +156,7 @@ function runeprison_lava_geyser_fx(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcb126a2f, Offset: 0xe58
 // Size: 0x9c
 function runeprison_lava_geyser_dot_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -168,7 +168,7 @@ function runeprison_lava_geyser_dot_fx(localclientnum, oldval, newval, bnewent, 
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa6c6940a, Offset: 0xf00
 // Size: 0xf8
 function runeprison_zombie_charring(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -187,7 +187,7 @@ function runeprison_zombie_charring(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3470f574, Offset: 0x1000
 // Size: 0x10c
 function runeprison_zombie_death_skull(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

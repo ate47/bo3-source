@@ -1,8 +1,8 @@
-#using scripts/mp/mp_rise_fx;
-#using scripts/mp/mp_rise_amb;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/mp_rise_amb;
+#using scripts/mp/mp_rise_fx;
+#using scripts/shared/util_shared;
 
 #namespace mp_rise;
 

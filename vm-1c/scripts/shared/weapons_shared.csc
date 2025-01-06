@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace weapons_shared;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace weapons_shared
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x108
 // Size: 0x4
 function __init__() {

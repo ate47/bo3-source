@@ -1,7 +1,7 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_util;
 #using scripts/shared/music_shared;
 #using scripts/shared/util_shared;
-#using scripts/cp/_util;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_lotus_sound;
 

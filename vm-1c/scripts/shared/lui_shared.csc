@@ -1,10 +1,10 @@
-#using scripts/core/_multi_extracam;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/_character_customization;
 #using scripts/codescripts/struct;
+#using scripts/core/_multi_extracam;
+#using scripts/shared/_character_customization;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("all_player");
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace lui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16b8ac5f, Offset: 0x268
 // Size: 0x3c
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace lui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa0d86ac1, Offset: 0x2b0
 // Size: 0x24
 function on_player_connect(localclientnum) {
@@ -36,7 +36,7 @@ function on_player_connect(localclientnum) {
 }
 
 // Namespace lui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x98e37b12, Offset: 0x2e0
 // Size: 0x52
 function initmenudata(localclientnum) {
@@ -66,7 +66,7 @@ function createextracamxcamdata(menu_name, localclientnum, extracam_index, targe
 }
 
 // Namespace lui
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x886a3fce, Offset: 0x4f0
 // Size: 0x14e
 function createcustomextracamxcamdata(menu_name, localclientnum, extracam_index, camera_function) {
@@ -84,7 +84,7 @@ function createcustomextracamxcamdata(menu_name, localclientnum, extracam_index,
 }
 
 // Namespace lui
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdf29c4b5, Offset: 0x648
 // Size: 0x226
 function addmenuexploders(menu_name, localclientnum, exploder) {
@@ -110,7 +110,7 @@ function addmenuexploders(menu_name, localclientnum, exploder) {
 }
 
 // Namespace lui
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x22739eae, Offset: 0x878
 // Size: 0x154
 function linktocustomcharacter(menu_name, localclientnum, target_name) {
@@ -128,7 +128,7 @@ function linktocustomcharacter(menu_name, localclientnum, target_name) {
 }
 
 // Namespace lui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdc1c6dd2, Offset: 0x9d8
 // Size: 0x4a
 function getcharacterdataformenu(menu_name, localclientnum) {
@@ -139,7 +139,7 @@ function getcharacterdataformenu(menu_name, localclientnum) {
 }
 
 // Namespace lui
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xd6cbf158, Offset: 0xa30
 // Size: 0x164
 function createcameramenu(menu_name, localclientnum, target_name, xcam, sub_xcam, xcam_frame, var_3122eae6, var_dd603074) {
@@ -165,7 +165,7 @@ function createcameramenu(menu_name, localclientnum, target_name, xcam, sub_xcam
 }
 
 // Namespace lui
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x594a6769, Offset: 0xba0
 // Size: 0x11c
 function createcustomcameramenu(menu_name, localclientnum, camera_function, has_state, var_3122eae6, var_dd603074) {
@@ -186,7 +186,7 @@ function createcustomcameramenu(menu_name, localclientnum, camera_function, has_
 }
 
 // Namespace lui
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7f3f05d1, Offset: 0xcc8
 // Size: 0x86a
 function setup_menu(localclientnum, menu_data, previous_menu) {
@@ -276,14 +276,14 @@ function setup_menu(localclientnum, menu_data, previous_menu) {
 }
 
 // Namespace lui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9a1959c6, Offset: 0x1540
 // Size: 0x3f0
 function client_menus(localclientnum) {
     level endon(#"disconnect");
     clientmenustack = array();
     while (true) {
-        menu_name, status, state = level waittill("menu_change" + localclientnum);
+        level waittill("menu_change" + localclientnum, menu_name, status, state);
         menu_index = undefined;
         for (i = 0; i < clientmenustack.size; i++) {
             if (clientmenustack[i].menu_name == menu_name) {
@@ -335,7 +335,7 @@ function client_menus(localclientnum) {
 }
 
 // Namespace lui
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x83b27f4e, Offset: 0x1938
 // Size: 0x14c
 function screen_fade(n_time, n_target_alpha, n_start_alpha, str_color, b_force_close_menu) {
@@ -361,7 +361,7 @@ function screen_fade(n_time, n_target_alpha, n_start_alpha, str_color, b_force_c
 }
 
 // Namespace lui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb533994f, Offset: 0x1a90
 // Size: 0x3a
 function screen_fade_out(n_time, str_color) {
@@ -370,7 +370,7 @@ function screen_fade_out(n_time, str_color) {
 }
 
 // Namespace lui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe6f355b3, Offset: 0x1ad8
 // Size: 0x42
 function screen_fade_in(n_time, str_color) {
@@ -393,7 +393,7 @@ function screen_close_menu() {
 }
 
 // Namespace lui
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xeefc9064, Offset: 0x1be8
 // Size: 0xf0
 function private _screen_close_menu() {
@@ -415,7 +415,7 @@ function private _screen_close_menu() {
 }
 
 // Namespace lui
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xbca20e54, Offset: 0x1ce0
 // Size: 0x3d8
 function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu) {
@@ -471,7 +471,7 @@ function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_
 }
 
 // Namespace lui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaeb53d61, Offset: 0x20c0
 // Size: 0xa4
 function set_color(menu, color) {

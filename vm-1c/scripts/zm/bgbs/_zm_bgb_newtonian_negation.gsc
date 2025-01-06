@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_newtonian_negation;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_newtonian_negation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17a758b2, Offset: 0x1e8
 // Size: 0x5c
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_newtonian_negation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc088cf25, Offset: 0x250
 // Size: 0x34
 function enable() {
@@ -38,7 +38,7 @@ function enable() {
 }
 
 // Namespace zm_bgb_newtonian_negation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7d77b374, Offset: 0x290
 // Size: 0x2c
 function function_7d6ddd3a() {
@@ -48,7 +48,7 @@ function function_7d6ddd3a() {
 }
 
 // Namespace zm_bgb_newtonian_negation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb239c052, Offset: 0x2c8
 // Size: 0xdc
 function disable() {
@@ -65,7 +65,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_newtonian_negation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8054583, Offset: 0x3b0
 // Size: 0x54
 function function_2b4ff13a(var_365c612) {

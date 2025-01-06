@@ -1,13 +1,13 @@
-#using scripts/cp/_util;
-#using scripts/cp/_challenges;
-#using scripts/cp/gametypes/_globallogic_score;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/rank_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_challenges;
+#using scripts/cp/_util;
+#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/rank_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace scoreevents;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace scoreevents
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x64f7635d, Offset: 0x6f8
 // Size: 0x24
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace scoreevents
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e37df8c, Offset: 0x728
 // Size: 0x74
 function main() {
@@ -68,7 +68,7 @@ function function_f8204815(event) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdd83568, Offset: 0x920
 // Size: 0x5c
 function registerscoreeventcallback(callback, func) {
@@ -79,7 +79,7 @@ function registerscoreeventcallback(callback, func) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x89f4e20e, Offset: 0x988
 // Size: 0x14c
 function function_e1c28246(data, time) {
@@ -106,7 +106,7 @@ function function_e1c28246(data, time) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9efbbb5, Offset: 0xae0
 // Size: 0x10d4
 function scoreeventplayerkill(data, time) {
@@ -293,7 +293,7 @@ function scoreeventplayerkill(data, time) {
 }
 
 // Namespace scoreevents
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x8c92906e, Offset: 0x1bc0
 // Size: 0x24
 function specificweaponkill(attacker, victim, weapon, killstreak) {
@@ -301,7 +301,7 @@ function specificweaponkill(attacker, victim, weapon, killstreak) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4a78eb6e, Offset: 0x1bf0
 // Size: 0xcc
 function multikill(killcount, weapon) {
@@ -316,7 +316,7 @@ function multikill(killcount, weapon) {
 }
 
 // Namespace scoreevents
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x26e32e55, Offset: 0x1cc8
 // Size: 0xde
 function is_weapon_valid(meansofdeath, weapon, weaponclass) {
@@ -334,7 +334,7 @@ function is_weapon_valid(meansofdeath, weapon, weaponclass) {
 }
 
 // Namespace scoreevents
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x56c02a99, Offset: 0x1db0
 // Size: 0x3c4
 function updatemultikills(weapon, weaponclass, killstreak) {
@@ -418,7 +418,7 @@ function updatemultikills(weapon, weaponclass, killstreak) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdbd0869e, Offset: 0x2180
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
@@ -427,7 +427,7 @@ function waittilltimeoutordeath(timeout) {
 }
 
 // Namespace scoreevents
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xee81e220, Offset: 0x21a8
 // Size: 0xe0
 function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
@@ -449,7 +449,7 @@ function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x996c99cf, Offset: 0x2290
 // Size: 0x13a
 function get_distance_for_weapon(weapon, weaponclass) {
@@ -491,7 +491,7 @@ function get_distance_for_weapon(weapon, weaponclass) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcbd91ba5, Offset: 0x23d8
 // Size: 0x174
 function ongameend(data) {

@@ -1,13 +1,13 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_castle_ee_bossfight;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95c85f9a, Offset: 0xcc8
 // Size: 0x82c
 function __init__() {
@@ -70,7 +70,7 @@ function __init__() {
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe341df9d, Offset: 0x1500
 // Size: 0x80
 function player_snow_fx_off(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +81,7 @@ function player_snow_fx_off(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6ce90da0, Offset: 0x1588
 // Size: 0x54
 function boss_skeleton_eye_glow_fx_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -89,7 +89,7 @@ function boss_skeleton_eye_glow_fx_change(localclientnum, oldval, newval, bnewen
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xaa544299, Offset: 0x15e8
 // Size: 0x196
 function boss_mpd_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -114,7 +114,7 @@ function boss_mpd_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x65da8121, Offset: 0x1788
 // Size: 0x196
 function boss_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -139,7 +139,7 @@ function boss_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldnam
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x19cb9426, Offset: 0x1928
 // Size: 0x104
 function boss_weak_point_shader(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -159,7 +159,7 @@ function boss_weak_point_shader(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa895a8d0, Offset: 0x1a38
 // Size: 0x12e
 function boss_zombie_rise_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -178,7 +178,7 @@ function boss_zombie_rise_fx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xcad8435d, Offset: 0x1b70
 // Size: 0xec
 function function_200d4bd2(localclientnum, var_ee65ea53, var_7bc37da8) {
@@ -190,7 +190,7 @@ function function_200d4bd2(localclientnum, var_ee65ea53, var_7bc37da8) {
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3f7dcdfd, Offset: 0x1c68
 // Size: 0xae
 function boss_teleport_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -203,7 +203,7 @@ function boss_teleport_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa9c485a0, Offset: 0x1d20
 // Size: 0xfe
 function boss_elemental_storm_cast_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -224,7 +224,7 @@ function boss_elemental_storm_cast_fx(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x43b4cd7f, Offset: 0x1e28
 // Size: 0xd8
 function function_4278d80d(localclientnum) {
@@ -243,7 +243,7 @@ function function_4278d80d(localclientnum) {
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x62b08e19, Offset: 0x1f08
 // Size: 0x12c
 function boss_elemental_storm_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -264,7 +264,7 @@ function boss_elemental_storm_explode_fx(localclientnum, oldval, newval, bnewent
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2c87f867, Offset: 0x2040
 // Size: 0xb6
 function boss_elemental_storm_stunned_spikes_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -279,7 +279,7 @@ function boss_elemental_storm_stunned_spikes_fx(localclientnum, oldval, newval, 
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa8ffb5d8, Offset: 0x2100
 // Size: 0xb6
 function boss_elemental_storm_stunned_keeper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -294,7 +294,7 @@ function boss_elemental_storm_stunned_keeper_fx(localclientnum, oldval, newval, 
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9130bdfa, Offset: 0x21c0
 // Size: 0x1a6
 function boss_demongate_cast_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -318,7 +318,7 @@ function boss_demongate_cast_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7447692f, Offset: 0x2370
 // Size: 0x1a4
 function boss_demongate_chomper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -344,7 +344,7 @@ function boss_demongate_chomper_fx(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x99bf320e, Offset: 0x2520
 // Size: 0xbc
 function boss_demongate_chomper_bite_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -355,7 +355,7 @@ function boss_demongate_chomper_bite_fx(localclientnum, oldval, newval, bnewent,
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7f38b183, Offset: 0x25e8
 // Size: 0xa6
 function boss_rune_prison_erupt_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -371,7 +371,7 @@ function boss_rune_prison_erupt_fx(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x50ec4b39, Offset: 0x2698
 // Size: 0xb8
 function function_92f90eb7(localclientnum) {
@@ -392,7 +392,7 @@ function function_92f90eb7(localclientnum) {
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xac2be47c, Offset: 0x2758
 // Size: 0xb6
 function boss_rune_prison_rock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -408,7 +408,7 @@ function boss_rune_prison_rock_fx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x71c84a4c, Offset: 0x2818
 // Size: 0x7c
 function boss_rune_prison_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -418,7 +418,7 @@ function boss_rune_prison_explode_fx(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6aaff86f, Offset: 0x28a0
 // Size: 0x9c
 function boss_rune_prison_dot_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -430,7 +430,7 @@ function boss_rune_prison_dot_fx(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x83df4ef0, Offset: 0x2948
 // Size: 0x7e
 function boss_wolf_howl_fx_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -442,7 +442,7 @@ function boss_wolf_howl_fx_change(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x560b04c1, Offset: 0x29d0
 // Size: 0xb6
 function boss_gravity_spike_fx_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -456,7 +456,7 @@ function boss_gravity_spike_fx_change(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace zm_castle_ee_bossfight
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x236f0dd4, Offset: 0x2a90
 // Size: 0xe4
 function sndBossBattle(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

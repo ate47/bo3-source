@@ -1,30 +1,30 @@
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace sentry_turret;
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x2
-// Checksum 0x15c2c658, Offset: 0x4c0
+// Checksum 0x75549d55, Offset: 0x4c0
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("sentry_turret", &__init__, undefined, undefined);
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xbae3f097, Offset: 0x500
+// Params 0, eflags: 0x0
+// Checksum 0x4a004db0, Offset: 0x500
 // Size: 0x18e
 function __init__() {
     vehicle::add_main_callback("veh_turret_sentry_machinegun", &function_b2e9d990);
@@ -44,8 +44,8 @@ function __init__() {
 /#
 
     // Namespace sentry_turret
-    // Params 3, eflags: 0x1 linked
-    // Checksum 0xb647502c, Offset: 0x698
+    // Params 3, eflags: 0x0
+    // Checksum 0x2b795965, Offset: 0x698
     // Size: 0x6c
     function function_6a14e39c(start, end, color) {
         if (getdvarint("<dev string:x28>") != 0) {
@@ -56,8 +56,8 @@ function __init__() {
 #/
 
 // Namespace sentry_turret
-// Params 2, eflags: 0x1 linked
-// Checksum 0xaaa59e92, Offset: 0x710
+// Params 2, eflags: 0x0
+// Checksum 0xb4d14471, Offset: 0x710
 // Size: 0xd8
 function function_ba2c6c94(origin, sector) {
     forward = anglestoforward((0, sector, 0));
@@ -74,8 +74,8 @@ function function_ba2c6c94(origin, sector) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdfcf41da, Offset: 0x7f0
+// Params 0, eflags: 0x0
+// Checksum 0x9f710d9e, Offset: 0x7f0
 // Size: 0x284
 function function_e606dad7() {
     angles = self.angles;
@@ -114,8 +114,8 @@ function function_e606dad7() {
 }
 
 // Namespace sentry_turret
-// Params 2, eflags: 0x1 linked
-// Checksum 0x1012d25, Offset: 0xa80
+// Params 2, eflags: 0x0
+// Checksum 0xe5e2a9b0, Offset: 0xa80
 // Size: 0x5c
 function function_5f695de4(point, yaw) {
     targetpoint = spawnstruct();
@@ -125,8 +125,8 @@ function function_5f695de4(point, yaw) {
 }
 
 // Namespace sentry_turret
-// Params 3, eflags: 0x1 linked
-// Checksum 0x667e4aa, Offset: 0xae8
+// Params 3, eflags: 0x0
+// Checksum 0x71e22c56, Offset: 0xae8
 // Size: 0x72
 function get_target_point(origin, angles, yaw_offset) {
     point = origin + anglestoforward(angles + (self.var_e7379303, yaw_offset, 0)) * 1000;
@@ -134,8 +134,8 @@ function get_target_point(origin, angles, yaw_offset) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x24853369, Offset: 0xb68
+// Params 0, eflags: 0x0
+// Checksum 0xb54dd18d, Offset: 0xb68
 // Size: 0x258
 function function_1b820c4d() {
     self.targetpoints = [];
@@ -160,8 +160,8 @@ function function_1b820c4d() {
 }
 
 // Namespace sentry_turret
-// Params 3, eflags: 0x1 linked
-// Checksum 0x3cde5e77, Offset: 0xdc8
+// Params 3, eflags: 0x0
+// Checksum 0x662479c5, Offset: 0xdc8
 // Size: 0x62
 function function_4ac3c3a1(e1, e2, b_lowest_first) {
     if (b_lowest_first) {
@@ -171,8 +171,8 @@ function function_4ac3c3a1(e1, e2, b_lowest_first) {
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9f769ea5, Offset: 0xe38
+// Params 1, eflags: 0x0
+// Checksum 0xa9f59aba, Offset: 0xe38
 // Size: 0x1cc
 function function_c8f2c95d(point) {
     direction = point - self.eyeorigin;
@@ -197,24 +197,24 @@ function function_c8f2c95d(point) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdfd32b02, Offset: 0x1010
+// Params 0, eflags: 0x0
+// Checksum 0xf7a0eef2, Offset: 0x1010
 // Size: 0x1c
 function function_b2e9d990() {
     self thread function_8f042083();
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xcd6da779, Offset: 0x1038
+// Params 0, eflags: 0x0
+// Checksum 0xb4bcf6f4, Offset: 0x1038
 // Size: 0x1c
 function function_c2d2b587() {
     self thread function_8f042083();
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x34c14e5c, Offset: 0x1060
+// Params 1, eflags: 0x0
+// Checksum 0x636168d2, Offset: 0x1060
 // Size: 0x6e
 function function_e7857e05(e_enemy) {
     var_b9baf316 = 1;
@@ -225,8 +225,8 @@ function function_e7857e05(e_enemy) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xaa593b6d, Offset: 0x10d8
+// Params 0, eflags: 0x0
+// Checksum 0x42e1d329, Offset: 0x10d8
 // Size: 0x2ac
 function function_8f042083() {
     if (!isdefined(self.var_c35cf4ed)) {
@@ -264,23 +264,23 @@ function function_8f042083() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
-// Checksum 0xf5f67161, Offset: 0x1390
+// Checksum 0xf9deb0a5, Offset: 0x1390
 // Size: 0x24
 function function_d19a819d() {
     self.state_machine statemachine::set_state("scripted");
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x48f2204a, Offset: 0x13c0
+// Params 0, eflags: 0x0
+// Checksum 0x1077d77f, Offset: 0x13c0
 // Size: 0x24
 function function_62182551() {
     self.state_machine statemachine::set_state("main");
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x55ec47eb, Offset: 0x13f0
+// Params 1, eflags: 0x0
+// Checksum 0x783fdcf7, Offset: 0x13f0
 // Size: 0x54
 function function_e59668cf(params) {
     if (isalive(self)) {
@@ -290,8 +290,8 @@ function function_e59668cf(params) {
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x81ec0d48, Offset: 0x1450
+// Params 1, eflags: 0x0
+// Checksum 0x39e83018, Offset: 0x1450
 // Size: 0x15c
 function function_e6f10cc7(angles) {
     self.state_machine statemachine::set_state("scripted");
@@ -312,8 +312,8 @@ function function_e6f10cc7(angles) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x676f9d9, Offset: 0x15b8
+// Params 0, eflags: 0x0
+// Checksum 0x8002ced9, Offset: 0x15b8
 // Size: 0xcc
 function function_21af94b3() {
     self playsound("mpl_turret_startup");
@@ -328,8 +328,8 @@ function function_21af94b3() {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x58805034, Offset: 0x1690
+// Params 0, eflags: 0x0
+// Checksum 0xe371fc8a, Offset: 0x1690
 // Size: 0x118
 function function_4ebb4502() {
     for (i = 0; i < 6; i++) {
@@ -349,8 +349,8 @@ function function_4ebb4502() {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xf0a88490, Offset: 0x17b0
+// Params 0, eflags: 0x0
+// Checksum 0xb92cabe6, Offset: 0x17b0
 // Size: 0x518
 function function_2e229297() {
     self endon(#"death");
@@ -424,8 +424,8 @@ function function_2e229297() {
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x6d65d8d0, Offset: 0x1cd0
+// Params 1, eflags: 0x0
+// Checksum 0x59350a6, Offset: 0x1cd0
 // Size: 0xc4
 function function_4642c69e(params) {
     driver = self getseatoccupant(0);
@@ -441,8 +441,8 @@ function function_4642c69e(params) {
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0xd2fcc119, Offset: 0x1da0
+// Params 1, eflags: 0x0
+// Checksum 0x48afed7, Offset: 0x1da0
 // Size: 0xaa
 function function_e823c700(health_pct) {
     if (issubstr(self.vehicletype, "turret_sentry")) {
@@ -460,8 +460,8 @@ function function_e823c700(health_pct) {
 }
 
 // Namespace sentry_turret
-// Params 2, eflags: 0x1 linked
-// Checksum 0x982ca49e, Offset: 0x1e58
+// Params 2, eflags: 0x0
+// Checksum 0xe3a793b4, Offset: 0x1e58
 // Size: 0x190
 function function_b212223b(effect, tag) {
     if (isdefined(self.damage_fx_ent)) {
@@ -486,8 +486,8 @@ function function_b212223b(effect, tag) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd30ea938, Offset: 0x1ff0
+// Params 0, eflags: 0x0
+// Checksum 0x2db59c81, Offset: 0x1ff0
 // Size: 0x98
 function function_8109253b() {
     self endon(#"crash_done");
@@ -503,8 +503,8 @@ function function_8109253b() {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe1c5282b, Offset: 0x2090
+// Params 0, eflags: 0x0
+// Checksum 0x4f73f417, Offset: 0x2090
 // Size: 0x254
 function sentry_turret_death() {
     wait 0.1;
@@ -512,7 +512,7 @@ function sentry_turret_death() {
         return;
     }
     self notify(#"nodeath_thread");
-    attacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
+    self waittill(#"death", attacker, damagefromunderneath, weapon, point, dir);
     if (!isdefined(self)) {
         return;
     }
@@ -544,16 +544,16 @@ function sentry_turret_death() {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xfe9315dd, Offset: 0x22f0
+// Params 0, eflags: 0x0
+// Checksum 0xbe3ab968, Offset: 0x22f0
 // Size: 0x1c
 function death_fx() {
     self vehicle::do_death_fx();
 }
 
 // Namespace sentry_turret
-// Params 2, eflags: 0x1 linked
-// Checksum 0x625ca4e1, Offset: 0x2318
+// Params 2, eflags: 0x0
+// Checksum 0x4a9e1336, Offset: 0x2318
 // Size: 0x106
 function function_e99c1c2(attacker, hitdir) {
     self endon(#"crash_done");
@@ -569,8 +569,8 @@ function function_e99c1c2(attacker, hitdir) {
 }
 
 // Namespace sentry_turret
-// Params 2, eflags: 0x1 linked
-// Checksum 0x5d10919, Offset: 0x2428
+// Params 2, eflags: 0x0
+// Checksum 0x62285a9d, Offset: 0x2428
 // Size: 0x184
 function sentry_turret_fire_for_time(totalfiretime, enemy) {
     self endon(#"crash_done");
@@ -601,16 +601,16 @@ function sentry_turret_fire_for_time(totalfiretime, enemy) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x2d134142, Offset: 0x25b8
+// Params 0, eflags: 0x0
+// Checksum 0xeae21e1d, Offset: 0x25b8
 // Size: 0x24
 function sentry_turret_alert_sound() {
     self playsound("veh_turret_alert");
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0xe1a81016, Offset: 0x25e8
+// Params 1, eflags: 0x0
+// Checksum 0x8d0dc9de, Offset: 0x25e8
 // Size: 0x34
 function function_ebdfd4e4(team) {
     self.team = team;
@@ -620,8 +620,8 @@ function function_ebdfd4e4(team) {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe6a5421a, Offset: 0x2628
+// Params 0, eflags: 0x0
+// Checksum 0xd4133284, Offset: 0x2628
 // Size: 0x44
 function function_f08ad3e6() {
     self endon(#"death");
@@ -631,8 +631,8 @@ function function_f08ad3e6() {
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x1e57299e, Offset: 0x2678
+// Params 0, eflags: 0x0
+// Checksum 0x6a8d7be7, Offset: 0x2678
 // Size: 0x1dc
 function function_791c1a61() {
     self endon(#"death");
@@ -659,8 +659,8 @@ function function_791c1a61() {
 }
 
 // Namespace sentry_turret
-// Params 15, eflags: 0x1 linked
-// Checksum 0x3ea5ef4d, Offset: 0x2860
+// Params 15, eflags: 0x0
+// Checksum 0x22175dc, Offset: 0x2860
 // Size: 0xe0
 function function_df1adf01(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
     if (weapon.isemp && smeansofdeath != "MOD_IMPACT") {
@@ -673,8 +673,8 @@ function function_df1adf01(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x907b0581, Offset: 0x2948
+// Params 1, eflags: 0x0
+// Checksum 0x42459777, Offset: 0x2948
 // Size: 0x128
 function function_2790de05(turret) {
     self endon(#"exit_vehicle");
@@ -697,16 +697,16 @@ function function_2790de05(turret) {
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0x85356397, Offset: 0x2a78
+// Params 1, eflags: 0x0
+// Checksum 0xf141008, Offset: 0x2a78
 // Size: 0x2c
 function function_aa320a88(victim) {
     function_c8f2c95d(victim.origin);
 }
 
 // Namespace sentry_turret
-// Params 0, eflags: 0x1 linked
-// Checksum 0x18c56841, Offset: 0x2ab0
+// Params 0, eflags: 0x0
+// Checksum 0x4972c150, Offset: 0x2ab0
 // Size: 0x84
 function turret_idle_sound() {
     sndloop_ent = spawn("script_origin", self.origin);
@@ -716,8 +716,8 @@ function turret_idle_sound() {
 }
 
 // Namespace sentry_turret
-// Params 1, eflags: 0x1 linked
-// Checksum 0xc9afb3ac, Offset: 0x2b40
+// Params 1, eflags: 0x0
+// Checksum 0xe8a160f4, Offset: 0x2b40
 // Size: 0x54
 function turret_idle_sound_stop(sndloop_ent) {
     self waittill(#"death");

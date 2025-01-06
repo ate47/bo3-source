@@ -1,19 +1,19 @@
+#using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
 #using scripts/mp/mp_miniature_ant;
 #using scripts/mp/mp_miniature_fly;
+#using scripts/mp/mp_miniature_fx;
 #using scripts/mp/mp_miniature_ladybug;
 #using scripts/mp/mp_miniature_sound;
-#using scripts/mp/mp_miniature_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
 #using scripts/shared/compass;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace mp_miniature;
 
 // Namespace mp_miniature
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6732c01b, Offset: 0x1e8
 // Size: 0x12c
 function main() {
@@ -30,7 +30,7 @@ function main() {
 }
 
 // Namespace mp_miniature
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x320
 // Size: 0x4
 function precache() {

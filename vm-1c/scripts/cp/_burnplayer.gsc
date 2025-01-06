@@ -1,7 +1,7 @@
-#using scripts/cp/gametypes/_globallogic_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/damagefeedback_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/gametypes/_globallogic_player;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/util_shared;
 
 #namespace burnplayer;
 

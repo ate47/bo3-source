@@ -1,9 +1,9 @@
 #using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/math_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_ai_napalm;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_napalm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86bf967c, Offset: 0x450
 // Size: 0x24
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace zm_ai_napalm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10590ffc, Offset: 0x480
 // Size: 0x124
 function init_clientfields() {
@@ -36,7 +36,7 @@ function init_clientfields() {
 }
 
 // Namespace zm_ai_napalm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a32b6f3, Offset: 0x5b0
 // Size: 0x3c
 function function_dd1b0e06() {
@@ -46,7 +46,7 @@ function function_dd1b0e06() {
 }
 
 // Namespace zm_ai_napalm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb10b526c, Offset: 0x5f8
 // Size: 0xc6
 function function_4b68d007() {
@@ -60,7 +60,7 @@ function function_4b68d007() {
 }
 
 // Namespace zm_ai_napalm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3fc63f46, Offset: 0x6c8
 // Size: 0x126
 function function_d4f3a23b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -83,7 +83,7 @@ function function_d4f3a23b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf98aeeed, Offset: 0x7f8
 // Size: 0x50
 function function_dfc155a2(localclientnum) {
@@ -95,7 +95,7 @@ function function_dfc155a2(localclientnum) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x25553926, Offset: 0x850
 // Size: 0x194
 function function_1fdd4254(client_num) {
@@ -123,7 +123,7 @@ function function_1fdd4254(client_num) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4dac8ccc, Offset: 0x9f0
 // Size: 0x2a6
 function function_e1af61cc(localclientnum) {
@@ -151,7 +151,7 @@ function function_e1af61cc(localclientnum) {
 }
 
 // Namespace zm_ai_napalm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2bf20574, Offset: 0xca0
 // Size: 0x6c
 function function_85152189(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -160,7 +160,7 @@ function function_85152189(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_napalm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x24a9141a, Offset: 0xd18
 // Size: 0x7c
 function function_8b5f66c2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -172,7 +172,7 @@ function function_8b5f66c2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89808b0f, Offset: 0xda0
 // Size: 0x25e
 function function_d7b6f45e(localclientnum) {
@@ -197,7 +197,7 @@ function function_d7b6f45e(localclientnum) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5c631d9, Offset: 0x1008
 // Size: 0x8c
 function function_7165b8f0(localclientnum) {
@@ -209,7 +209,7 @@ function function_7165b8f0(localclientnum) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8f47dc1c, Offset: 0x10a0
 // Size: 0x6c
 function function_dfaf1b3e(set) {
@@ -223,7 +223,7 @@ function function_dfaf1b3e(set) {
 }
 
 // Namespace zm_ai_napalm
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x78e6bdaf, Offset: 0x1118
 // Size: 0x74
 function function_3753bc33(localclientnum, pos, surface, notetrack, bone) {
@@ -264,7 +264,7 @@ function function_3e44525f() {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18bf01b9, Offset: 0x1368
 // Size: 0x94
 function function_64eb29a7(var_9eb510f4) {
@@ -279,7 +279,7 @@ function function_64eb29a7(var_9eb510f4) {
 }
 
 // Namespace zm_ai_napalm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa063c9b6, Offset: 0x1408
 // Size: 0x7c
 function function_c8019df4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -291,7 +291,7 @@ function function_c8019df4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5be679b4, Offset: 0x1490
 // Size: 0x74
 function function_c0554f0f(client_num) {
@@ -303,7 +303,7 @@ function function_c0554f0f(client_num) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xca6756c3, Offset: 0x1510
 // Size: 0x74
 function function_41d418e2(client_num) {
@@ -315,7 +315,7 @@ function function_41d418e2(client_num) {
 }
 
 // Namespace zm_ai_napalm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9c36257a, Offset: 0x1590
 // Size: 0x44
 function function_ce20ddd(client_num, var_2e5dee4b) {
@@ -324,7 +324,7 @@ function function_ce20ddd(client_num, var_2e5dee4b) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc5be5b7d, Offset: 0x15e0
 // Size: 0x2c
 function function_b29c4d0c(client_num) {
@@ -332,7 +332,7 @@ function function_b29c4d0c(client_num) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5ef8973e, Offset: 0x1618
 // Size: 0x2c
 function function_e6743744(client_num) {
@@ -340,7 +340,7 @@ function function_e6743744(client_num) {
 }
 
 // Namespace zm_ai_napalm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x75ec393a, Offset: 0x1650
 // Size: 0x2c
 function function_f5a16a3f(client_num) {
@@ -348,7 +348,7 @@ function function_f5a16a3f(client_num) {
 }
 
 // Namespace zm_ai_napalm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x62e5c152, Offset: 0x1688
 // Size: 0x174
 function function_e0b475c6(client_num, var_2e5dee4b) {

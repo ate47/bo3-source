@@ -1,13 +1,13 @@
-#using scripts/zm/zm_sumpf_zipline;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
 #using scripts/zm/zm_sumpf_perks;
 #using scripts/zm/zm_sumpf_trap_pendulum;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
+#using scripts/zm/zm_sumpf_zipline;
 
 #namespace zm_sumpf_magic_box;
 
 // Namespace zm_sumpf_magic_box
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd83f6499, Offset: 0x2c8
 // Size: 0xbc
 function function_2a476331() {
@@ -20,7 +20,7 @@ function function_2a476331() {
 }
 
 // Namespace zm_sumpf_magic_box
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85698f57, Offset: 0x390
 // Size: 0xf4
 function function_b286cf09() {
@@ -35,7 +35,7 @@ function function_b286cf09() {
 }
 
 // Namespace zm_sumpf_magic_box
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc865184, Offset: 0x490
 // Size: 0x2fa
 function function_690bec51(which) {
@@ -93,7 +93,7 @@ function function_690bec51(which) {
 }
 
 // Namespace zm_sumpf_magic_box
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1aa1f55a, Offset: 0x798
 // Size: 0x124
 function function_a0db1fb9() {

@@ -1,15 +1,15 @@
-#using scripts/shared/postfx_shared;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace proximity_grenade;
 
 // Namespace proximity_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x666763f5, Offset: 0x2f0
 // Size: 0x104
 function init_shared() {
@@ -24,7 +24,7 @@ function init_shared() {
 }
 
 // Namespace proximity_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3118a1e, Offset: 0x400
 // Size: 0x84
 function proximity_spawned(localclientnum) {
@@ -38,7 +38,7 @@ function proximity_spawned(localclientnum) {
 }
 
 // Namespace proximity_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1a64e51, Offset: 0x490
 // Size: 0x198
 function watchforproximityexplosion() {
@@ -47,7 +47,7 @@ function watchforproximityexplosion() {
     }
     weapon_proximity = getweapon("proximity_grenade");
     while (true) {
-        localclientnum, position, mod, weapon, owner_cent = level waittill(#"explode");
+        level waittill(#"explode", localclientnum, position, mod, weapon, owner_cent);
         if (weapon.rootweapon != weapon_proximity) {
             continue;
         }

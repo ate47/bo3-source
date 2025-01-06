@@ -1,6 +1,6 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
 
 #namespace cp_mi_sing_vengeance_sound;
 
@@ -80,7 +80,7 @@ function function_4035bef1() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_police_siren", (23974, 2768, 631));
             break;
@@ -101,7 +101,7 @@ function function_a0c5a719() {
 // Checksum 0x6635cde2, Offset: 0x648
 // Size: 0x92
 function function_759e7aaa() {
-    level waittill(#"hash_51e4b2c0");
+    level waittill(#"sndLRstart");
     level thread function_60df3271();
     target_origin = (21636, -1368, -28);
     player = getlocalplayer(0);

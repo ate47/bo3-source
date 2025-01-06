@@ -1,12 +1,12 @@
-#using scripts/mp/killstreaks/_airsupport;
 #using scripts/mp/_util;
 #using scripts/mp/gametypes/_spawnlogic;
-#using scripts/shared/weapons/_tacticalinsertion;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/mp/killstreaks/_airsupport;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_tacticalinsertion;
 
 #namespace spawning;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace spawning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc790bdc2, Offset: 0x320
 // Size: 0x74
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace spawning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b39346, Offset: 0x3a0
 // Size: 0xc
 function on_player_connect(local_client_num) {
@@ -37,7 +37,7 @@ function on_player_connect(local_client_num) {
 }
 
 // Namespace spawning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x13d007ea, Offset: 0x3b8
 // Size: 0x54
 function on_player_spawned(local_client_num) {
@@ -47,7 +47,7 @@ function on_player_spawned(local_client_num) {
 }
 
 // Namespace spawning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52708e88, Offset: 0x418
 // Size: 0x9c
 function monitorflight() {
@@ -65,7 +65,7 @@ function monitorflight() {
 }
 
 // Namespace spawning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xee141e00, Offset: 0x4c0
 // Size: 0x5a0
 function monitorgpsjammer() {
@@ -159,7 +159,7 @@ function monitorgpsjammer() {
 }
 
 // Namespace spawning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8c5b66f, Offset: 0xa68
 // Size: 0x5a0
 function monitorsengrenjammer() {

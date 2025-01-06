@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace serverfaceanim;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace serverfaceanim
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82f7fe, Offset: 0x1c0
 // Size: 0x3c
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace serverfaceanim
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6e06f9, Offset: 0x208
 // Size: 0x19c
 function init_serverfaceanim() {
@@ -46,12 +46,12 @@ function init_serverfaceanim() {
 }
 
 // Namespace serverfaceanim
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43055e4f, Offset: 0x3b0
 // Size: 0xa8
 function wait_for_face_event() {
     while (true) {
-        face_notify, ent = level waittill(#"face");
+        level waittill(#"face", face_notify, ent);
         if (isdefined(ent) && isdefined(ent.do_face_anims) && ent.do_face_anims) {
             if (isdefined(level.face_event_handler.events[face_notify])) {
                 ent sendfaceevent(level.face_event_handler.events[face_notify]);

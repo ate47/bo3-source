@@ -1,25 +1,25 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 #using scripts/zm/zm_island_power;
 #using scripts/zm/zm_island_util;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_island_side_ee_song;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x4c8
 // Size: 0x4
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd7fc3d18, Offset: 0x4d8
 // Size: 0x7c
 function main() {
@@ -62,7 +62,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85622b47, Offset: 0x570
 // Size: 0xd4
 function function_553b8e23() {
@@ -80,7 +80,7 @@ function function_553b8e23() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd7c7d94b, Offset: 0x650
 // Size: 0x14c
 function function_4b02c768() {
@@ -101,7 +101,7 @@ function function_4b02c768() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x63374814, Offset: 0x7a8
 // Size: 0x7c
 function function_f86c981f() {
@@ -117,7 +117,7 @@ function function_f86c981f() {
 /#
 
     // Namespace zm_island_side_ee_song
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x42bcc40, Offset: 0x830
     // Size: 0x74
     function function_88ab6cf8() {
@@ -128,7 +128,7 @@ function function_f86c981f() {
     }
 
     // Namespace zm_island_side_ee_song
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x70f857db, Offset: 0x8b0
     // Size: 0xb6
     function function_aed87222(cmd) {
@@ -149,7 +149,7 @@ function function_f86c981f() {
 #/
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb02788ac, Offset: 0x970
 // Size: 0xee
 function function_222dc6f4() {
@@ -160,7 +160,7 @@ function function_222dc6f4() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x11892357, Offset: 0xa68
 // Size: 0xe4
 function function_4824fe93(origin, num) {
@@ -176,7 +176,7 @@ function function_4824fe93(origin, num) {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7ee76277, Offset: 0xb58
 // Size: 0x2d4
 function function_76bcb530() {
@@ -217,7 +217,7 @@ function function_76bcb530() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84563366, Offset: 0xe38
 // Size: 0x3c
 function function_69208549() {
@@ -227,7 +227,7 @@ function function_69208549() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5be1cc9, Offset: 0xe80
 // Size: 0x1c0
 function function_cd6c47c5() {
@@ -241,7 +241,7 @@ function function_cd6c47c5() {
     self.unitrigger_stub.related_parent = self;
     zm_unitrigger::register_static_unitrigger(self.unitrigger_stub, &zm_unitrigger::function_77c4e424);
     while (true) {
-        who = self waittill(#"trigger_activated");
+        self waittill(#"trigger_activated", who);
         if (isdefined(level.var_eeab4a07) && level.var_eeab4a07) {
             continue;
         }
@@ -254,12 +254,12 @@ function function_cd6c47c5() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6f21c92d, Offset: 0x1048
 // Size: 0x120
 function function_f86f94db() {
     while (true) {
-        damage, attacker, dir, loc, str_type, model, tag, part, weapon, flags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, dir, loc, str_type, model, tag, part, weapon, flags);
         if (!isdefined(attacker) || !isplayer(attacker)) {
             continue;
         }
@@ -275,7 +275,7 @@ function function_f86f94db() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x51563614, Offset: 0x1170
 // Size: 0xd2
 function function_c5359566() {
@@ -289,7 +289,7 @@ function function_c5359566() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc7b5fdee, Offset: 0x1250
 // Size: 0x24a
 function function_88572b8() {
@@ -318,7 +318,7 @@ function function_88572b8() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f0b5f32, Offset: 0x14a8
 // Size: 0xa4
 function function_ae93bb6d() {
@@ -332,7 +332,7 @@ function function_ae93bb6d() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x602739ec, Offset: 0x1558
 // Size: 0x5e
 function function_d75eac4e() {
@@ -345,7 +345,7 @@ function function_d75eac4e() {
 }
 
 // Namespace zm_island_side_ee_song
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf634a948, Offset: 0x15c0
 // Size: 0xee
 function function_e01c1b04(var_f45614a) {

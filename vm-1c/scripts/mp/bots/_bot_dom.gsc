@@ -1,17 +1,17 @@
-#using scripts/mp/bots/_bot_combat;
 #using scripts/mp/bots/_bot;
-#using scripts/shared/bots/_bot_combat;
-#using scripts/shared/bots/_bot;
+#using scripts/mp/bots/_bot_combat;
 #using scripts/mp/gametypes/dom;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/bots/_bot;
+#using scripts/shared/bots/_bot_combat;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_5f1d8415;
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfcd9eb92, Offset: 0x188
 // Size: 0x64
 function init() {
@@ -22,7 +22,7 @@ function init() {
 }
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x72bfab5b, Offset: 0x1f8
 // Size: 0x114
 function function_7ec247b0() {
@@ -40,7 +40,7 @@ function function_7ec247b0() {
 }
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18c9a380, Offset: 0x318
 // Size: 0x94
 function function_9fd498fd() {
@@ -51,7 +51,7 @@ function function_9fd498fd() {
 }
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba0aca38, Offset: 0x3b8
 // Size: 0xc4
 function function_eeb4665() {
@@ -69,7 +69,7 @@ function function_eeb4665() {
 }
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8234aba5, Offset: 0x488
 // Size: 0x74
 function function_5a6e5507() {
@@ -83,7 +83,7 @@ function function_5a6e5507() {
 }
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdce622e0, Offset: 0x508
 // Size: 0xc4
 function function_63001052() {
@@ -96,7 +96,7 @@ function function_63001052() {
 }
 
 // Namespace namespace_5f1d8415
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x190a3d78, Offset: 0x5d8
 // Size: 0x15e
 function function_4b02b46d() {

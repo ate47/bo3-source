@@ -1,19 +1,19 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/craftables/_zm_craftables;
 
 #using_animtree("generic");
 
@@ -1180,27 +1180,27 @@ function footsteps(localclientnum, str_name) {
     for (var_e9c11897 = 0; var_e9c11897 < 10; var_e9c11897++) {
         for (i = 0; i < var_1e806caa.size; i++) {
             var_a8ea877f = var_1e806caa[i];
-            if (!isdefined(var_a8ea877f.m_model)) {
-                var_a8ea877f.m_model = [];
+            if (!isdefined(var_a8ea877f.j_cosmetic_cowl_lefte)) {
+                var_a8ea877f.j_cosmetic_cowl_lefte = [];
             }
-            if (!isdefined(var_a8ea877f.m_model[localclientnum])) {
-                var_a8ea877f.m_model[localclientnum] = spawn(localclientnum, var_a8ea877f.origin, "script_model");
+            if (!isdefined(var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum])) {
+                var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum] = spawn(localclientnum, var_a8ea877f.origin, "script_model");
             }
-            var_a8ea877f.m_model[localclientnum] setmodel("tag_origin");
-            var_a8ea877f.m_model[localclientnum].angles = var_a8ea877f.angles;
+            var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum] setmodel("tag_origin");
+            var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum].angles = var_a8ea877f.angles;
             if (i & 1) {
-                playfxontag(localclientnum, level._effect["footprint_r"], var_a8ea877f.m_model[localclientnum], "tag_origin");
+                playfxontag(localclientnum, level._effect["footprint_r"], var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum], "tag_origin");
             } else {
-                playfxontag(localclientnum, level._effect["footprint_l"], var_a8ea877f.m_model[localclientnum], "tag_origin");
+                playfxontag(localclientnum, level._effect["footprint_l"], var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum], "tag_origin");
             }
             wait 0.1;
         }
         wait 4;
         for (i = 0; i < var_1e806caa.size; i++) {
             var_a8ea877f = var_1e806caa[i];
-            if (isdefined(var_a8ea877f.m_model[localclientnum])) {
-                var_a8ea877f.m_model[localclientnum] delete();
-                var_a8ea877f.m_model[localclientnum] = undefined;
+            if (isdefined(var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum])) {
+                var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum] delete();
+                var_a8ea877f.j_cosmetic_cowl_lefte[localclientnum] = undefined;
             }
         }
         wait 1;

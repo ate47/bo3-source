@@ -1,32 +1,32 @@
-#using scripts/cp/doa/_doa_fx;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_round;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_hazard;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/cp/gametypes/_globallogic_score;
 #using scripts/shared/ai/archetype_locomotion_utility;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai_shared;
-#using scripts/cp/gametypes/_globallogic_score;
-#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -866,7 +866,7 @@ function function_a4e16560(var_1e913765, s_spawn_loc, force) {
 // Checksum 0x73a4e661, Offset: 0x3f60
 // Size: 0x1c
 function function_71a4f1d5() {
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
 }
 
 // Namespace doa_enemy

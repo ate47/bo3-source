@@ -1,11 +1,11 @@
-#using scripts/mp/killstreaks/_rcbomb;
-#using scripts/mp/killstreaks/_qrdrone;
 #using scripts/mp/killstreaks/_ai_tank;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
+#using scripts/mp/killstreaks/_qrdrone;
+#using scripts/mp/killstreaks/_rcbomb;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace vehicle;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe76df173, Offset: 0x1d8
 // Size: 0x6c
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2dd0f302, Offset: 0x250
 // Size: 0x3a0
 function vehicle_rumble(localclientnum) {
@@ -93,7 +93,7 @@ function vehicle_rumble(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2d473c90, Offset: 0x5f8
 // Size: 0x94
 function set_static_amount(staticamount) {
@@ -115,7 +115,7 @@ function vehicle_variants(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9c8d31e5, Offset: 0x6b0
 // Size: 0x19c
 function timeout_beep(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

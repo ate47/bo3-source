@@ -1,20 +1,20 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/_burnplayer;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
-#using scripts/shared/abilities/_ability_player;
 #using scripts/shared/abilities/_ability_gadgets;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/killstreaks_shared;
 #using scripts/shared/scoreevents_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace thief;
 
@@ -27,7 +27,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c13fa14, Offset: 0x8a8
 // Size: 0x26c
 function __init__() {
@@ -55,7 +55,7 @@ function __init__() {
 /#
 
     // Namespace thief
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf51bb4d, Offset: 0xb20
     // Size: 0x40
     function updatedvars() {
@@ -68,7 +68,7 @@ function __init__() {
 #/
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb755b5e2, Offset: 0xb68
 // Size: 0x1d6
 function function_f6dcf468() {
@@ -84,7 +84,7 @@ function function_f6dcf468() {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x86fde913, Offset: 0xd48
 // Size: 0x22
 function function_2bbe8c38(slot) {
@@ -92,7 +92,7 @@ function function_2bbe8c38(slot) {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32161e00, Offset: 0xd78
 // Size: 0x22
 function function_8909e8f6(slot) {
@@ -100,7 +100,7 @@ function function_8909e8f6(slot) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb1063de9, Offset: 0xda8
 // Size: 0x34
 function function_4b26d505(slot, weapon) {
@@ -108,7 +108,7 @@ function function_4b26d505(slot, weapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x32653016, Offset: 0xde8
 // Size: 0x1a4
 function function_f42ffc8c(slot, weapon) {
@@ -131,7 +131,7 @@ function function_f42ffc8c(slot, weapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x56a2a451, Offset: 0xf98
 // Size: 0x5c
 function function_3646319f(victim, weapon) {
@@ -140,7 +140,7 @@ function function_3646319f(victim, weapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa7a1ffaa, Offset: 0x1000
 // Size: 0x34
 function function_f0dd0e3a(slot, weapon) {
@@ -152,7 +152,7 @@ function function_f0dd0e3a(slot, weapon) {
 }
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe4040f63, Offset: 0x1040
 // Size: 0x64
 function function_81f89e3() {
@@ -166,7 +166,7 @@ function function_81f89e3() {
 }
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3df4ebff, Offset: 0x10b0
 // Size: 0x8e
 function function_5a521c68() {
@@ -190,7 +190,7 @@ function function_f0e244e5() {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe299ec34, Offset: 0x1158
 // Size: 0x14
 function function_443d988(slot, weapon) {
@@ -198,7 +198,7 @@ function function_443d988(slot, weapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x21a9851, Offset: 0x1178
 // Size: 0x14
 function function_93bbdda7(slot, weapon) {
@@ -206,7 +206,7 @@ function function_93bbdda7(slot, weapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe407a7c, Offset: 0x1198
 // Size: 0x8c
 function function_aac33c1d(slot, weapon) {
@@ -218,7 +218,7 @@ function function_aac33c1d(slot, weapon) {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5b807518, Offset: 0x1230
 // Size: 0x172
 function function_7fa5bb36(gadget) {
@@ -263,7 +263,7 @@ function function_7fa5bb36(gadget) {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd99d4a12, Offset: 0x13b0
 // Size: 0x6c
 function function_1208ecd9(delay) {
@@ -275,7 +275,7 @@ function function_1208ecd9(delay) {
 }
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce642199, Offset: 0x1428
 // Size: 0x98
 function function_60e43dc1() {
@@ -286,7 +286,7 @@ function function_60e43dc1() {
 }
 
 // Namespace thief
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdf54edc8, Offset: 0x14c8
 // Size: 0x384
 function function_dd8bf2ad(slot, weapon, victim) {
@@ -327,7 +327,7 @@ function function_dd8bf2ad(slot, weapon, victim) {
 }
 
 // Namespace thief
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x9bb3af16, Offset: 0x1858
 // Size: 0x304
 function function_fb9d3bc7(victim, slot, var_34a4ec9c, var_b8e167f8) {
@@ -365,7 +365,7 @@ function function_fb9d3bc7(victim, slot, var_34a4ec9c, var_b8e167f8) {
 }
 
 // Namespace thief
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa8aad111, Offset: 0x1b68
 // Size: 0x1bc
 function function_57d5323b(slot, victim, heroweapon) {
@@ -390,7 +390,7 @@ function function_57d5323b(slot, victim, heroweapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x25fe5033, Offset: 0x1d30
 // Size: 0xa4
 function function_6ccc7536(slot, justspawned) {
@@ -428,7 +428,7 @@ function function_12fae26() {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x27cfb19f, Offset: 0x1e88
 // Size: 0x204
 function function_ed78a948(heroweapon) {
@@ -483,7 +483,7 @@ function function_ed78a948(heroweapon) {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9603c5fb, Offset: 0x2098
 // Size: 0x208
 function function_25dc0dbf(slot) {
@@ -491,7 +491,7 @@ function function_25dc0dbf(slot) {
     self endon(#"hash_63c8b607");
     self.gadgetthiefactive = 1;
     while (true) {
-        herogadget, victim = self waittill(#"hero_shutdown_gadget");
+        self waittill(#"hero_shutdown_gadget", herogadget, victim);
         var_b8e167f8 = function_7fa5bb36(herogadget);
         var_668e7ff = 0;
         if (var_668e7ff) {
@@ -513,7 +513,7 @@ function function_25dc0dbf(slot) {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb9cbeda, Offset: 0x22a8
 // Size: 0x74
 function function_3ba16324(origin) {
@@ -525,12 +525,12 @@ function function_3ba16324(origin) {
 /#
 
     // Namespace thief
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x76089856, Offset: 0x2328
     // Size: 0xc0
     function function_8da00c80() {
         while (true) {
-            victim = self waittill(#"killed_enemy_player");
+            self waittill(#"killed_enemy_player", victim);
             self function_3ba16324(victim.origin);
             var_aac40aca = spawn("<dev string:x59>", victim.origin);
             var_aac40aca clientfield::set("<dev string:x66>", 1);
@@ -541,7 +541,7 @@ function function_3ba16324(origin) {
 #/
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5d3f197c, Offset: 0x23f0
 // Size: 0x24
 function waitthendelete(time) {
@@ -550,7 +550,7 @@ function waitthendelete(time) {
 }
 
 // Namespace thief
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x7274bf44, Offset: 0x2420
 // Size: 0x20c
 function function_dbe98d36(slot, weapon, var_74232a9d, justspawned) {
@@ -587,7 +587,7 @@ function function_dbe98d36(slot, weapon, var_74232a9d, justspawned) {
 }
 
 // Namespace thief
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xbfcc443b, Offset: 0x2638
 // Size: 0x1f8
 function function_acd87de5(slot, var_1c7e5537, justspawned) {
@@ -623,7 +623,7 @@ function function_acd87de5(slot, var_1c7e5537, justspawned) {
 }
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4596c014, Offset: 0x2838
 // Size: 0x1a
 function function_81b15d4d() {
@@ -631,7 +631,7 @@ function function_81b15d4d() {
 }
 
 // Namespace thief
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9c74b7fc, Offset: 0x2860
 // Size: 0xd0
 function function_a0282fc6() {
@@ -640,7 +640,7 @@ function function_a0282fc6() {
     self endon(#"death");
     self endon(#"disconnect");
     while (true) {
-        justspawned, newweapon = self waittill(#"hash_63330928");
+        self waittill(#"hash_63330928", justspawned, newweapon);
         if (justspawned) {
             if (isdefined(newweapon) && isdefined(newweapon.gadgetreadysoundplayer)) {
                 self playsoundtoplayer(newweapon.gadgetreadysoundplayer, self);
@@ -652,7 +652,7 @@ function function_a0282fc6() {
 }
 
 // Namespace thief
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x13b99ccd, Offset: 0x2938
 // Size: 0x1c4
 function function_1eb9e79f(slot) {
@@ -677,7 +677,7 @@ function function_1eb9e79f(slot) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8cc4cf03, Offset: 0x2b08
 // Size: 0xc0
 function function_187ceb81(slot, weapon) {
@@ -693,7 +693,7 @@ function function_187ceb81(slot, weapon) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2dfc9126, Offset: 0x2bd0
 // Size: 0x14
 function function_dc57cabd(slot, weapon) {
@@ -715,7 +715,7 @@ function function_39b1b87b(status, time) {
 }
 
 // Namespace thief
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x88ca1205, Offset: 0x2c98
 // Size: 0x152
 function function_4c1c1b75(victim, heroweapon) {

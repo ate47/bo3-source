@@ -1,51 +1,51 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/hud_message_shared;
-#using scripts/cp/_objectives;
-#using scripts/cp/cp_mi_cairo_aquifer_ambience;
-#using scripts/cp/cp_mi_cairo_aquifer_aitest;
-#using scripts/shared/colors_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/cp/cp_mi_cairo_aquifer_accolades;
-#using scripts/cp/cp_mi_cairo_aquifer_sound;
-#using scripts/cp/cp_mi_cairo_aquifer_fx;
-#using scripts/cp/cp_mi_cairo_aquifer_water_room;
-#using scripts/cp/cp_mi_cairo_aquifer_boss;
-#using scripts/cp/cp_mi_cairo_aquifer_interior;
-#using scripts/cp/cp_mi_cairo_aquifer_utility;
-#using scripts/shared/vehicle_ai_shared;
+#using scripts/codescripts/struct;
 #using scripts/cp/_debug;
-#using scripts/cp/_skipto;
-#using scripts/cp/_util;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
 #using scripts/cp/_load;
-#using scripts/shared/turret_shared;
-#using scripts/cp/gametypes/_spawnlogic;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_aquifer_accolades;
+#using scripts/cp/cp_mi_cairo_aquifer_aitest;
+#using scripts/cp/cp_mi_cairo_aquifer_ambience;
+#using scripts/cp/cp_mi_cairo_aquifer_boss;
+#using scripts/cp/cp_mi_cairo_aquifer_fx;
+#using scripts/cp/cp_mi_cairo_aquifer_interior;
+#using scripts/cp/cp_mi_cairo_aquifer_sound;
+#using scripts/cp/cp_mi_cairo_aquifer_utility;
+#using scripts/cp/cp_mi_cairo_aquifer_water_room;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/fx_shared;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/gametypes/_spawnlogic;
+#using scripts/shared/_oob;
 #using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_hacking;
-#using scripts/cp/_dialog;
-#using scripts/shared/_oob;
 #using scripts/shared/animation_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace namespace_84eb777e;
 
@@ -406,7 +406,7 @@ function function_a45989aa(tname) {
 // Checksum 0xff153639, Offset: 0x39c0
 // Size: 0xca
 function function_f5924bbd() {
-    e_attacker = self waittill(#"death");
+    self waittill(#"death", e_attacker);
     if (isdefined(e_attacker)) {
         var_2c3a4ffd = spawn("script_origin", self.origin);
         var_2c3a4ffd endon(#"death");
@@ -636,9 +636,9 @@ function function_10d2d1c3(obj_id, obj, ent, var_d5639cb) {
 // Params 5, eflags: 0x0
 // Checksum 0x927c8f30, Offset: 0x44e8
 // Size: 0x1c2
-function function_b7f8aff0(obj_id, obj, var_afd6c3c7, ent, var_d5639cb) {
+function function_b7f8aff0(obj_id, obj, obj_defend, ent, var_d5639cb) {
     if (obj_id == "cp_level_aquifer_defendme" || obj_id == "cp_level_aquifer_defendme2") {
-        var_dfd71aec = objectives::function_e95d8ccb(var_afd6c3c7, obj);
+        var_dfd71aec = objectives::function_e95d8ccb(obj_defend, obj);
         objective_setprogress(var_dfd71aec, 0);
     }
     if (ent.targetname == "exterior_hack_trig_right_1") {
@@ -654,23 +654,23 @@ function function_b7f8aff0(obj_id, obj, var_afd6c3c7, ent, var_d5639cb) {
         flag::set(flag_name);
     }
     ent triggerenable(0);
-    function_4d816f2c(var_afd6c3c7, obj);
-    function_10d2d1c3(var_afd6c3c7, obj, ent, var_d5639cb);
+    function_4d816f2c(obj_defend, obj);
+    function_10d2d1c3(obj_defend, obj, ent, var_d5639cb);
     flag_name = var_b43079a5 + "_finished";
     if (flag::exists(flag_name)) {
         flag::set(flag_name);
     }
     level notify(var_d5639cb);
-    thread function_e2cebeb6(obj, var_afd6c3c7);
+    thread function_e2cebeb6(obj, obj_defend);
 }
 
 // Namespace namespace_84eb777e
 // Params 2, eflags: 0x0
 // Checksum 0xaea7eafb, Offset: 0x46b8
 // Size: 0x2a
-function function_e2cebeb6(obj, var_afd6c3c7) {
+function function_e2cebeb6(obj, obj_defend) {
     wait 5;
-    function_5ec99c19(var_afd6c3c7, obj);
+    function_5ec99c19(obj_defend, obj);
 }
 
 // Namespace namespace_84eb777e
@@ -693,7 +693,7 @@ function function_3207fe78(base_name) {
 // Params 8, eflags: 0x0
 // Checksum 0x61043c17, Offset: 0x4768
 // Size: 0x217
-function function_f1e1d63(base_name, var_2b4368ec, var_c91af2ba, var_afd6c3c7, var_d5639cb, var_f9d3d7f2, var_368eea5, var_d66abd8d) {
+function function_f1e1d63(base_name, var_2b4368ec, var_c91af2ba, obj_defend, var_d5639cb, var_f9d3d7f2, var_368eea5, var_d66abd8d) {
     level flag::set("can_spawn_hunters");
     if (!isdefined(var_f9d3d7f2)) {
         var_f9d3d7f2 = (0, 0, 0);
@@ -710,7 +710,7 @@ function function_f1e1d63(base_name, var_2b4368ec, var_c91af2ba, var_afd6c3c7, v
     }
     thread function_4d816f2c(var_2b4368ec, obj2);
     for (i = 0; i < level.var_7e2f5eca.size; i++) {
-        thread function_b7f8aff0(var_c91af2ba, obj2[i], var_afd6c3c7, level.var_7e2f5eca[i], var_d5639cb);
+        thread function_b7f8aff0(var_c91af2ba, obj2[i], obj_defend, level.var_7e2f5eca[i], var_d5639cb);
     }
     while (isdefined(var_368eea5)) {
         if (util::any_player_is_touching(var_368eea5, "allies")) {
@@ -752,7 +752,7 @@ function function_eb911c76(var_740a45ce, obj_structs) {
         wait 0.05;
     }
     if (isdefined(obj_structs)) {
-        zone = self waittill(#"vtol_starting_landing");
+        self waittill(#"vtol_starting_landing", zone);
         level notify(#"hash_f3cbe351", zone);
         if (level.var_b91023ce.size > 1) {
             aquifer_util::function_fc653485();
@@ -963,7 +963,7 @@ function function_60c28440() {
 function function_6a7fa9c7(projectile) {
     self endon(#"entityshutdown");
     self endon(#"death");
-    projectile = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", projectile);
     wait 0.7;
     if (isdefined(projectile)) {
         projectile missile_settarget(undefined);
@@ -1183,7 +1183,7 @@ function function_204cfb5c(land) {
 // Size: 0x5b9
 function function_33fdc686(var_52055f73) {
     zone = 1;
-    zone = level waittill(#"hash_f3cbe351");
+    level waittill(#"hash_f3cbe351", zone);
     var_961abda = getentarray("landing_zone_kane", "targetname");
     active = undefined;
     foreach (lz in var_961abda) {
@@ -1289,7 +1289,7 @@ function vision_hint_exit_water() {
     trig = getent("vision_hint_exit_water", "targetname");
     who = trig;
     while (who != self) {
-        who = trig waittill(#"trigger");
+        trig waittill(#"trigger", who);
     }
     self hud_message::hintmessage(%CP_MI_CAIRO_AQUIFER_ENHANCED_VISION, 5);
 }
@@ -1697,7 +1697,7 @@ function function_380b183b() {
 // Checksum 0x41a09307, Offset: 0x8020
 // Size: 0x9b
 function function_91c91014(veh) {
-    player = level waittill(#"hash_2e0c12cd");
+    level waittill(#"hash_2e0c12cd", player);
     guys = spawner::get_ai_group_ai("mid_defense_rpgs");
     foreach (guy in guys) {
         if (isdefined(guy)) {
@@ -1827,7 +1827,7 @@ function function_efd791ac() {
 // Size: 0xfa
 function function_bfe402a1() {
     level.var_3fe6078c = 4096;
-    var_18d84fad = level.var_3fe6078c * level.var_3fe6078c;
+    sq = level.var_3fe6078c * level.var_3fe6078c;
     level.var_3fe6078c = 8192;
     thread function_e5d81c9();
     var_d5639cb = "trigger_hacked";
@@ -1917,10 +1917,10 @@ function function_724496b1(str_objective, var_74cd64bc) {
     aquifer_util::function_c897523d("respawn_lcombat");
     aquifer_util::function_9cea70b7();
     thread aquifer_util::function_9cf1804b();
-    thread aquifer_util::function_fd0dbe22();
+    thread aquifer_util::lcombat_crash_event();
     thread aquifer_util::function_367616d8();
     thread function_61034146(1);
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     level thread namespace_71a63eac::function_b1ee6c2d();
     if (var_74cd64bc) {
         while (!isdefined(level.activeplayers[0].var_8fedf36c)) {
@@ -2052,7 +2052,7 @@ function function_af4fc2de(str_objective, var_74cd64bc) {
         function_4d816f2c("cp_level_aquifer_capture");
         load::function_a2995f22();
     }
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     aquifer_util::function_c897523d("none");
     function_eb16c4f5("hendricks_pre_breach");
     level.hendricks util::magic_bullet_shield();
@@ -2250,7 +2250,7 @@ function function_abc982c8() {
 function function_8888ffc6() {
     trig = getent("pre_breach_zone", "targetname");
     while (level flag::get("start_pre_breach")) {
-        who = trig waittill(#"trigger");
+        trig waittill(#"trigger", who);
         if (!(isdefined(who.var_cfe457fd) && who.var_cfe457fd)) {
             if (isplayer(who)) {
                 who.var_cfe457fd = 1;
@@ -2321,7 +2321,7 @@ function function_d22b2659(str_objective, var_74cd64bc) {
         load::function_a2995f22();
     }
     level flag::wait_till("inside_aquifer");
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     aquifer_util::function_8bf8a765();
     thread function_61034146(0);
     thread function_e2d8799f(1);
@@ -2345,7 +2345,7 @@ function function_b8af1c13(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 // Size: 0x38a
 function function_53d54ffb(str_objective, var_74cd64bc) {
     level flag::set("inside_aquifer");
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     level.hendricks = function_eb16c4f5("hendricks_boss_intro");
     level.hendricks util::magic_bullet_shield();
     level.hendricks battlechatter::function_d9f49fba(0);
@@ -2451,7 +2451,7 @@ function function_8a28a59e(str_objective, var_74cd64bc) {
     thread function_e2d8799f(0);
     thread function_5d32874c(0);
     exploder::stop_exploder("lighting_hangar_a");
-    thread cp_mi_cairo_aquifer_boss::function_998c817d();
+    thread cp_mi_cairo_aquifer_boss::start_boss();
     thread aquifer_util::player_kill_triggers("obj1_kill_trig", 0);
     thread aquifer_util::player_kill_triggers("obj2_kill_trig", 0);
     thread aquifer_util::player_kill_triggers("obj3_kill_trig", 1);
@@ -2508,7 +2508,7 @@ function function_d6b95c0b(str_objective, var_74cd64bc) {
     }
     level flag::set("hyperion_start_tree_scene");
     aquifer_util::function_75ab4ede(0);
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     thread function_61034146(0);
     thread function_e2d8799f(1);
     thread function_5d32874c(1);
@@ -2572,7 +2572,7 @@ function function_95463da0(str_objective, var_74cd64bc) {
     thread aquifer_util::function_c1bd6415("oob_upper_trig", 0);
     thread aquifer_util::function_c1bd6415("oob_low_trig", 0);
     thread aquifer_util::function_287ca2ad(1);
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     thread function_61034146(0);
     thread function_e2d8799f(1);
     thread function_5d32874c(1);
@@ -2616,7 +2616,7 @@ function function_df17401b(str_objective, var_74cd64bc) {
     thread aquifer_util::function_c1bd6415("oob_upper_trig", 0);
     thread aquifer_util::function_c1bd6415("oob_low_trig", 0);
     thread aquifer_util::function_287ca2ad(1);
-    level notify(#"hash_7725d2f1");
+    level notify(#"combat_music");
     level.hendricks = function_eb16c4f5("escape_hendricks");
     if (var_74cd64bc) {
         thread function_61034146(0);
@@ -2736,12 +2736,12 @@ function function_eb16c4f5(spawner_name) {
 // Checksum 0x9b6be096, Offset: 0xbb28
 // Size: 0x89
 function function_25604491(spawner_name) {
-    if (!isdefined(level.var_3c272574) || !isalive(level.var_3c272574)) {
+    if (!isdefined(level.khalil) || !isalive(level.khalil)) {
         s = getent(spawner_name, "targetname");
-        level.var_3c272574 = s spawner::spawn(1);
-        level.var_3c272574 util::magic_bullet_shield();
+        level.khalil = s spawner::spawn(1);
+        level.khalil util::magic_bullet_shield();
     }
-    return level.var_3c272574;
+    return level.khalil;
 }
 
 // Namespace namespace_84eb777e
@@ -2762,8 +2762,8 @@ function function_30343b22(spawner_name) {
 // Params 2, eflags: 0x0
 // Checksum 0x9001e26b, Offset: 0xbc70
 // Size: 0xd5
-function function_2fcfc76(who, var_199e0d00) {
-    level endon(var_199e0d00);
+function function_2fcfc76(who, end_notify) {
+    level endon(end_notify);
     weapon = getweapon("ar_standard");
     wait 0.05;
     origin_offset = -500 * anglestoforward(who.angles) + (0, 0, 60);

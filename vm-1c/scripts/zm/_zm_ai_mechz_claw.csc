@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_ai_mechz_claw;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_mechz_claw
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x4c4d1b5d, Offset: 0x1f0
 // Size: 0x13c
 function private __init__() {
@@ -32,7 +32,7 @@ function private __main__() {
 }
 
 // Namespace zm_ai_mechz_claw
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xf9f83fd2, Offset: 0x348
 // Size: 0x174
 function private function_ed6989ab(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -46,7 +46,7 @@ function private function_ed6989ab(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace zm_ai_mechz_claw
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0x9a423dc9, Offset: 0x4c8
 // Size: 0x3c
 function private function_22b149ce(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -54,7 +54,7 @@ function private function_22b149ce(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace zm_ai_mechz_claw
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xc5ef36f3, Offset: 0x510
 // Size: 0x74
 function private function_2ad55883(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -64,7 +64,7 @@ function private function_2ad55883(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace zm_ai_mechz_claw
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0x4388791f, Offset: 0x590
 // Size: 0xb6
 function private function_54ae128d(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -79,7 +79,7 @@ function private function_54ae128d(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace zm_ai_mechz_claw
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0x92adcc87, Offset: 0x650
 // Size: 0x74
 function private function_8dfa08c1(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

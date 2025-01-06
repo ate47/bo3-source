@@ -1,15 +1,15 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_genesis_keeper;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_keeper
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8cd9d433, Offset: 0x268
 // Size: 0x8c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_keeper
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x244ff664, Offset: 0x300
 // Size: 0x24
 function function_6ded398b(localclientnum) {
@@ -41,7 +41,7 @@ function function_6ded398b(localclientnum) {
 }
 
 // Namespace zm_genesis_keeper
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1a010f33, Offset: 0x330
 // Size: 0x140
 function function_ea48e71e(localclientnum) {
@@ -63,7 +63,7 @@ function function_ea48e71e(localclientnum) {
 }
 
 // Namespace zm_genesis_keeper
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f9bf60f, Offset: 0x478
 // Size: 0x58
 function new_timer(localclientnum) {
@@ -74,7 +74,7 @@ function new_timer(localclientnum) {
 }
 
 // Namespace zm_genesis_keeper
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xedbcc95e, Offset: 0x4d8
 // Size: 0x68
 function function_ec23b7a7(localclientnum, entity) {
@@ -95,7 +95,7 @@ function get_time() {
 }
 
 // Namespace zm_genesis_keeper
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd575c899, Offset: 0x560
 // Size: 0xa
 function get_time_in_seconds() {
@@ -111,7 +111,7 @@ function function_799c46b8() {
 }
 
 // Namespace zm_genesis_keeper
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1d179980, Offset: 0x590
 // Size: 0x27c
 function function_6e8422e9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

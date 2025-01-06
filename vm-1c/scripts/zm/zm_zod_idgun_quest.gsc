@@ -1,31 +1,31 @@
-#using scripts/zm/zm_zod_vo;
-#using scripts/zm/zm_zod_util;
-#using scripts/zm/zm_zod_sword_quest;
-#using scripts/zm/zm_zod_smashables;
-#using scripts/zm/_zm_weap_idgun;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_timer;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_ai_raps;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_raps;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_timer;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_idgun;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_zod_smashables;
+#using scripts/zm/zm_zod_sword_quest;
+#using scripts/zm/zm_zod_util;
+#using scripts/zm/zm_zod_vo;
 
 #namespace zm_zod_idgun_quest;
 
@@ -38,7 +38,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d65e931, Offset: 0x648
 // Size: 0x144
 function __init__() {
@@ -57,7 +57,7 @@ function __init__() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb38d215e, Offset: 0x798
 // Size: 0x1f0
 function __main__() {
@@ -82,7 +82,7 @@ function __main__() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8b83f51f, Offset: 0x990
 // Size: 0x8a
 function function_e1efbc50(var_9727e47e) {
@@ -97,7 +97,7 @@ function function_e1efbc50(var_9727e47e) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x283cfe5b, Offset: 0xa28
 // Size: 0x154
 function function_436486f7() {
@@ -113,7 +113,7 @@ function function_436486f7() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xb88
 // Size: 0x4
 function on_player_connect() {
@@ -121,7 +121,7 @@ function on_player_connect() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xb98
 // Size: 0x4
 function on_player_spawned() {
@@ -129,7 +129,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf6c8b2d9, Offset: 0xba8
 // Size: 0x248
 function function_14e2eca6(params) {
@@ -169,7 +169,7 @@ function function_14e2eca6(params) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x885cfa7e, Offset: 0xdf8
 // Size: 0x64
 function function_c3ffc175() {
@@ -183,7 +183,7 @@ function function_c3ffc175() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1e0cc54, Offset: 0xe68
 // Size: 0x180
 function function_44e0f6b4() {
@@ -207,7 +207,7 @@ function function_44e0f6b4() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa00d251, Offset: 0xff0
 // Size: 0x118
 function function_6893c200() {
@@ -224,7 +224,7 @@ function function_6893c200() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbde7df9, Offset: 0x1110
 // Size: 0x9c
 function function_6baaa92e() {
@@ -236,7 +236,7 @@ function function_6baaa92e() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x84d2ff7f, Offset: 0x11b8
 // Size: 0x194
 function function_a3712047(var_5404ad23) {
@@ -258,7 +258,7 @@ function function_a3712047(var_5404ad23) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x48a555f6, Offset: 0x1358
 // Size: 0x62
 function function_12fffd19(player) {
@@ -268,12 +268,12 @@ function function_12fffd19(player) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5974a5a, Offset: 0x13c8
 // Size: 0xba
 function function_dd2f6fe3() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger()) {
             continue;
         }
@@ -290,7 +290,7 @@ function function_dd2f6fe3() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5ba6e2f2, Offset: 0x1490
 // Size: 0xac
 function function_32d36516(var_5404ad23) {
@@ -301,7 +301,7 @@ function function_32d36516(var_5404ad23) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x32c4dbc8, Offset: 0x1548
 // Size: 0x1ea
 function function_f5469e1(v_origin, str_part, var_1907d45e, var_6a2f1c3a) {
@@ -341,7 +341,7 @@ function function_f5469e1(v_origin, str_part, var_1907d45e, var_6a2f1c3a) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x349e75f1, Offset: 0x1740
 // Size: 0x80
 function function_21ad8866(mdl_part) {
@@ -367,7 +367,7 @@ function function_e70e794e(var_bd705d9a) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe6dc09aa, Offset: 0x1808
 // Size: 0x12e
 function function_101cc4e2(attacker) {
@@ -394,7 +394,7 @@ function function_101cc4e2(attacker) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7114ff0d, Offset: 0x1940
 // Size: 0x64
 function function_b9729f28(player) {
@@ -443,7 +443,7 @@ function function_b4c3b798() {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc809a9e1, Offset: 0x1c10
 // Size: 0x48
 function function_1bfbfa4c(e_entity, var_d42f02cf) {
@@ -454,12 +454,12 @@ function function_1bfbfa4c(e_entity, var_d42f02cf) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6fb988f5, Offset: 0x1c60
 // Size: 0x27a
 function function_47867b41(var_3fbc06aa, str_part) {
     while (true) {
-        amount, attacker, direction_vec, point, type, tagname, modelname, partname, weapon = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, direction_vec, point, type, tagname, modelname, partname, weapon);
         level flag::set("idgun_cocoon_" + var_3fbc06aa + "_found");
         if ((isdefined(zm::is_idgun_damage(weapon)) && zm::is_idgun_damage(weapon)) === 0) {
             return;
@@ -482,7 +482,7 @@ function function_47867b41(var_3fbc06aa, str_part) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe68dd99b, Offset: 0x1ee8
 // Size: 0x3e4
 function function_538643a3(var_3fbc06aa) {
@@ -547,7 +547,7 @@ function function_538643a3(var_3fbc06aa) {
 }
 
 // Namespace zm_zod_idgun_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdb675b88, Offset: 0x22d8
 // Size: 0x17c
 function function_eaadff84(var_f7cef040) {
@@ -574,7 +574,7 @@ function function_eaadff84(var_f7cef040) {
 /#
 
     // Namespace zm_zod_idgun_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xea757c4e, Offset: 0x2460
     // Size: 0xac
     function function_1c946455() {
@@ -584,7 +584,7 @@ function function_eaadff84(var_f7cef040) {
     }
 
     // Namespace zm_zod_idgun_quest
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8ad5c04e, Offset: 0x2518
     // Size: 0x3c
     function function_e4e5cd30() {
@@ -592,7 +592,7 @@ function function_eaadff84(var_f7cef040) {
     }
 
     // Namespace zm_zod_idgun_quest
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xf26f30e3, Offset: 0x2560
     // Size: 0xaa
     function function_9e990d87(n_value) {
@@ -603,7 +603,7 @@ function function_eaadff84(var_f7cef040) {
     }
 
     // Namespace zm_zod_idgun_quest
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xb3198b8e, Offset: 0x2618
     // Size: 0x2c
     function function_1f7b4ebf(n_val) {
@@ -611,7 +611,7 @@ function function_eaadff84(var_f7cef040) {
     }
 
     // Namespace zm_zod_idgun_quest
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x3ccd0851, Offset: 0x2650
     // Size: 0x3c
     function function_8c7ac1b9(n_value) {

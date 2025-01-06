@@ -1,14 +1,14 @@
 #using scripts/shared/ai/archetype_aivsaimelee;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/behavior_state_machine;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
 #using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_state_machine;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/util_shared;
 
 #namespace aiutility;
 
@@ -96,7 +96,7 @@ function autoexec registerbehaviorscriptfunctions() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7a30878, Offset: 0x1dc8
 // Size: 0x1474
 function function_89e1fc16() {
@@ -436,7 +436,7 @@ function function_89e1fc16() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd13a6d5a, Offset: 0x3248
 // Size: 0x172
 function private bb_getstairsnumskipsteps() {
@@ -458,7 +458,7 @@ function private bb_getstairsnumskipsteps() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x78059b88, Offset: 0x33c8
 // Size: 0x32
 function private bb_getawareness() {
@@ -469,7 +469,7 @@ function private bb_getawareness() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xb7c38009, Offset: 0x3408
 // Size: 0x32
 function private bb_getawarenessprevious() {
@@ -480,7 +480,7 @@ function private bb_getawarenessprevious() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa809b14a, Offset: 0x3448
 // Size: 0x104
 function private bb_getyawtocovernode() {
@@ -512,7 +512,7 @@ function bb_gethigheststance() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa133a32a, Offset: 0x35e0
 // Size: 0x8e
 function bb_getlocomotionfaceenemyquadrantprevious() {
@@ -535,7 +535,7 @@ function bb_getlocomotionfaceenemyquadrantprevious() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3873aa34, Offset: 0x3678
 // Size: 0x1a
 function bb_getcurrentcovernodetype() {
@@ -543,7 +543,7 @@ function bb_getcurrentcovernodetype() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcef8cf82, Offset: 0x36a0
 // Size: 0x2e
 function bb_getcoverconcealed() {
@@ -554,7 +554,7 @@ function bb_getcoverconcealed() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa330e2b, Offset: 0x36d8
 // Size: 0x6a
 function bb_getcurrentlocationcovernodetype() {
@@ -565,7 +565,7 @@ function bb_getcurrentlocationcovernodetype() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9bff02aa, Offset: 0x3750
 // Size: 0xda
 function bb_getdamagedirection() {
@@ -591,7 +591,7 @@ function bb_getdamagedirection() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59120ec0, Offset: 0x3838
 // Size: 0x3b0
 function bb_actorgetdamagelocation() {
@@ -641,7 +641,7 @@ function bb_actorgetdamagelocation() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b9e2ad9, Offset: 0x3bf0
 // Size: 0x186
 function bb_getdamageweaponclass() {
@@ -663,7 +663,7 @@ function bb_getdamageweaponclass() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac418644, Offset: 0x3d80
 // Size: 0x6a
 function bb_getdamageweapon() {
@@ -677,7 +677,7 @@ function bb_getdamageweapon() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x651ace7b, Offset: 0x3df8
 // Size: 0x32
 function bb_getdamagemod() {
@@ -688,7 +688,7 @@ function bb_getdamagemod() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x639efca2, Offset: 0x3e38
 // Size: 0xec
 function bb_getdamagetaken() {
@@ -716,7 +716,7 @@ function bb_getdamagetaken() {
 }
 
 // Namespace aiutility
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x3c02b16f, Offset: 0x3f30
 // Size: 0x2a6
 function addaioverridedamagecallback(entity, callback, addtofront) {
@@ -746,7 +746,7 @@ function addaioverridedamagecallback(entity, callback, addtofront) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6242b1b, Offset: 0x41e0
 // Size: 0x178
 function removeaioverridedamagecallback(entity, callback) {
@@ -771,7 +771,7 @@ function clearaioverridedamagecallbacks(entity) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x91ee66fe, Offset: 0x4388
 // Size: 0x156
 function addaioverridekilledcallback(entity, callback) {
@@ -787,7 +787,7 @@ function addaioverridekilledcallback(entity, callback) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcfb8cfac, Offset: 0x44e8
 // Size: 0x1a0
 function actorgetpredictedyawtoenemy(entity, lookaheadtime) {
@@ -805,7 +805,7 @@ function actorgetpredictedyawtoenemy(entity, lookaheadtime) {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b31ee94, Offset: 0x4690
 // Size: 0x66
 function bb_actorispatroling() {
@@ -817,7 +817,7 @@ function bb_actorispatroling() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd5dc8d1, Offset: 0x4700
 // Size: 0x36
 function bb_actorhasenemy() {
@@ -829,7 +829,7 @@ function bb_actorhasenemy() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60f0abe7, Offset: 0x4740
 // Size: 0x54
 function bb_actorgetenemyyaw() {
@@ -842,7 +842,7 @@ function bb_actorgetenemyyaw() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7bf7e136, Offset: 0x47a0
 // Size: 0xc0
 function bb_actorgetperfectenemyyaw() {
@@ -859,7 +859,7 @@ function bb_actorgetperfectenemyyaw() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d1480d, Offset: 0x4868
 // Size: 0x13c
 function bb_actorgetreactyaw() {
@@ -884,7 +884,7 @@ function bb_actorgetreactyaw() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2d79fa1b, Offset: 0x49b0
 // Size: 0x248
 function bb_actorgetfataldamagelocation() {
@@ -919,7 +919,7 @@ function bb_actorgetfataldamagelocation() {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf3fc01fd, Offset: 0x4c00
 // Size: 0xca
 function getangleusingdirection(direction) {
@@ -932,7 +932,7 @@ function getangleusingdirection(direction) {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xef2633e8, Offset: 0x4cd8
 // Size: 0xf8
 function wasatcovernode() {
@@ -945,7 +945,7 @@ function wasatcovernode() {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x76af89d3, Offset: 0x4dd8
 // Size: 0x4d8
 function bb_getlocomotionexityaw(blackboard, yaw) {
@@ -1003,7 +1003,7 @@ function bb_getlocomotionexityaw(blackboard, yaw) {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ad31c48, Offset: 0x52b8
 // Size: 0xfe
 function bb_getlocomotionfaceenemyquadrant() {
@@ -1037,7 +1037,7 @@ function bb_getlocomotionfaceenemyquadrant() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad389b7d, Offset: 0x53c0
 // Size: 0x292
 function bb_getlocomotionpaintype() {
@@ -1074,7 +1074,7 @@ function bb_getlocomotionpaintype() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a3dea29, Offset: 0x5660
 // Size: 0x42
 function bb_getlookaheadangle() {
@@ -1082,7 +1082,7 @@ function bb_getlookaheadangle() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82698b53, Offset: 0x56b0
 // Size: 0x1a
 function bb_getpreviouscovernodetype() {
@@ -1090,7 +1090,7 @@ function bb_getpreviouscovernodetype() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8407abe8, Offset: 0x56d8
 // Size: 0x186
 function bb_actorgettrackingturnyaw() {
@@ -1114,7 +1114,7 @@ function bb_actorgettrackingturnyaw() {
 }
 
 // Namespace aiutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x64665720, Offset: 0x5868
 // Size: 0xa
 function bb_getweaponclass() {
@@ -1122,7 +1122,7 @@ function bb_getweaponclass() {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaea3e2b8, Offset: 0x5880
 // Size: 0x40
 function notstandingcondition(behaviortreeentity) {
@@ -1133,7 +1133,7 @@ function notstandingcondition(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4a7e164, Offset: 0x58c8
 // Size: 0x40
 function notcrouchingcondition(behaviortreeentity) {
@@ -1144,7 +1144,7 @@ function notcrouchingcondition(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc476784, Offset: 0x5910
 // Size: 0x24
 function scriptstartragdoll(behaviortreeentity) {
@@ -1152,7 +1152,7 @@ function scriptstartragdoll(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x74f6c3f2, Offset: 0x5940
 // Size: 0x124
 function private prepareforexposedmelee(behaviortreeentity) {
@@ -1168,7 +1168,7 @@ function private prepareforexposedmelee(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x34e788, Offset: 0x5a70
 // Size: 0x32
 function isfrustrated(behaviortreeentity) {
@@ -1176,7 +1176,7 @@ function isfrustrated(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc5eeee0b, Offset: 0x5ab0
 // Size: 0x38
 function clampfrustration(frustrationlevel) {
@@ -1189,7 +1189,7 @@ function clampfrustration(frustrationlevel) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x12c279a4, Offset: 0x5af0
 // Size: 0x3c8
 function updatefrustrationlevel(entity) {
@@ -1247,7 +1247,7 @@ function updatefrustrationlevel(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4763758c, Offset: 0x5ec0
 // Size: 0x24
 function flagenemyunattackableservice(behaviortreeentity) {
@@ -1255,7 +1255,7 @@ function flagenemyunattackableservice(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x173546c, Offset: 0x5ef0
 // Size: 0xa6
 function islastknownenemypositionapproachable(behaviortreeentity) {
@@ -1269,7 +1269,7 @@ function islastknownenemypositionapproachable(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7ca6e48f, Offset: 0x5fa0
 // Size: 0x104
 function tryadvancingonlastknownpositionbehavior(behaviortreeentity) {
@@ -1287,7 +1287,7 @@ function tryadvancingonlastknownpositionbehavior(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x85bc35a6, Offset: 0x60b0
 // Size: 0xf4
 function trygoingtoclosestnodetoenemybehavior(behaviortreeentity) {
@@ -1302,7 +1302,7 @@ function trygoingtoclosestnodetoenemybehavior(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa78b0691, Offset: 0x61b0
 // Size: 0xf4
 function tryrunningdirectlytoenemybehavior(behaviortreeentity) {
@@ -1318,7 +1318,7 @@ function tryrunningdirectlytoenemybehavior(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9691d3c2, Offset: 0x62b0
 // Size: 0x16
 function shouldreacttonewenemy(behaviortreeentity) {
@@ -1326,7 +1326,7 @@ function shouldreacttonewenemy(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd77d1244, Offset: 0x6360
 // Size: 0x2e
 function hasweaponmalfunctioned(behaviortreeentity) {
@@ -1334,7 +1334,7 @@ function hasweaponmalfunctioned(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfa60ebb0, Offset: 0x6398
 // Size: 0x1a4
 function issafefromgrenades(entity) {
@@ -1358,7 +1358,7 @@ function issafefromgrenades(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x80cd33d0, Offset: 0x6548
 // Size: 0x24
 function ingrenadeblastradius(entity) {
@@ -1366,7 +1366,7 @@ function ingrenadeblastradius(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x57588595, Offset: 0x6578
 // Size: 0x56
 function recentlysawenemy(behaviortreeentity) {
@@ -1377,7 +1377,7 @@ function recentlysawenemy(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x212c6e87, Offset: 0x65d8
 // Size: 0x3a
 function shouldonlyfireaccurately(behaviortreeentity) {
@@ -1388,7 +1388,7 @@ function shouldonlyfireaccurately(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdcf501bb, Offset: 0x6620
 // Size: 0x3a
 function shouldbeaggressive(behaviortreeentity) {
@@ -1399,7 +1399,7 @@ function shouldbeaggressive(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4f334d66, Offset: 0x6668
 // Size: 0xc4
 function usecovernodewrapper(behaviortreeentity, node) {
@@ -1413,7 +1413,7 @@ function usecovernodewrapper(behaviortreeentity, node) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xee85b986, Offset: 0x6738
 // Size: 0x58
 function setnextfindbestcovertime(behaviortreeentity, node) {
@@ -1421,7 +1421,7 @@ function setnextfindbestcovertime(behaviortreeentity, node) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdabe682a, Offset: 0x6798
 // Size: 0xaa
 function trackcoverparamsservice(behaviortreeentity) {
@@ -1436,7 +1436,7 @@ function trackcoverparamsservice(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd207e5bb, Offset: 0x6850
 // Size: 0x6c
 function choosebestcovernodeasap(behaviortreeentity) {
@@ -1450,7 +1450,7 @@ function choosebestcovernodeasap(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x84e4a07f, Offset: 0x68c8
 // Size: 0x45a
 function shouldchoosebettercover(behaviortreeentity) {
@@ -1509,7 +1509,7 @@ function shouldchoosebettercover(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x962eba02, Offset: 0x6d30
 // Size: 0x10e
 function choosebettercoverservicecodeversion(behaviortreeentity) {
@@ -1559,7 +1559,7 @@ function private choosebettercoverservice(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf244ab0e, Offset: 0x6ff8
 // Size: 0x4c
 function refillammo(behaviortreeentity) {
@@ -1569,7 +1569,7 @@ function refillammo(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd093cac0, Offset: 0x7050
 // Size: 0x30
 function hasammo(behaviortreeentity) {
@@ -1580,7 +1580,7 @@ function hasammo(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb9bc8ddd, Offset: 0x7088
 // Size: 0x5a
 function hasLowAmmo(behaviortreeentity) {
@@ -1591,7 +1591,7 @@ function hasLowAmmo(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x174d6034, Offset: 0x70f0
 // Size: 0x28
 function hasEnemy(behaviortreeentity) {
@@ -1602,7 +1602,7 @@ function hasEnemy(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x979847b9, Offset: 0x7120
 // Size: 0xbc
 function getbestcovernodeifavailable(behaviortreeentity) {
@@ -1650,7 +1650,7 @@ function getsecondbestcovernodeifavailable(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbd32b4c8, Offset: 0x7318
 // Size: 0x176
 function getcovertype(node) {
@@ -1673,7 +1673,7 @@ function getcovertype(node) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9515ee2f, Offset: 0x7498
 // Size: 0x4c
 function iscoverconcealed(node) {
@@ -1740,7 +1740,7 @@ function canseeenemywrapper() {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4617ab94, Offset: 0x79b8
 // Size: 0xaa
 function calculatenodeoffsetposition(node, nodeoffset) {
@@ -1750,7 +1750,7 @@ function calculatenodeoffsetposition(node, nodeoffset) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf815c3d0, Offset: 0x7a70
 // Size: 0x186
 function gethighestnodestance(node) {
@@ -1772,7 +1772,7 @@ function gethighestnodestance(node) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd904a1, Offset: 0x7c00
 // Size: 0x12e
 function isstanceallowedatnode(stance, node) {
@@ -1791,7 +1791,7 @@ function isstanceallowedatnode(stance, node) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x25bfe1d2, Offset: 0x7d38
 // Size: 0x6a
 function trystoppingservice(behaviortreeentity) {
@@ -1805,7 +1805,7 @@ function trystoppingservice(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8227f0cf, Offset: 0x7db0
 // Size: 0x2e
 function shouldstopmoving(behaviortreeentity) {
@@ -1816,7 +1816,7 @@ function shouldstopmoving(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3057e89, Offset: 0x7de8
 // Size: 0x9c
 function setcurrentweapon(weapon) {
@@ -1829,7 +1829,7 @@ function setcurrentweapon(weapon) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x93f55e66, Offset: 0x7e90
 // Size: 0x84
 function setprimaryweapon(weapon) {
@@ -1841,7 +1841,7 @@ function setprimaryweapon(weapon) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7dca4ad1, Offset: 0x7f20
 // Size: 0x84
 function setsecondaryweapon(weapon) {
@@ -1853,7 +1853,7 @@ function setsecondaryweapon(weapon) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb3cadd44, Offset: 0x7fb0
 // Size: 0x24
 function keepclaimnode(behaviortreeentity) {
@@ -1862,7 +1862,7 @@ function keepclaimnode(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc0cdb3f, Offset: 0x7fe0
 // Size: 0x20
 function releaseclaimnode(behaviortreeentity) {
@@ -1871,7 +1871,7 @@ function releaseclaimnode(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x97e0a87d, Offset: 0x8008
 // Size: 0x8a
 function getaimyawtoenemyfromnode(behaviortreeentity, node, enemy) {
@@ -1879,7 +1879,7 @@ function getaimyawtoenemyfromnode(behaviortreeentity, node, enemy) {
 }
 
 // Namespace aiutility
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa36c0a17, Offset: 0x80a0
 // Size: 0x82
 function getaimpitchtoenemyfromnode(behaviortreeentity, node, enemy) {
@@ -1887,7 +1887,7 @@ function getaimpitchtoenemyfromnode(behaviortreeentity, node, enemy) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5d933fc0, Offset: 0x8130
 // Size: 0x84
 function choosefrontcoverdirection(behaviortreeentity) {
@@ -1897,7 +1897,7 @@ function choosefrontcoverdirection(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1e201153, Offset: 0x81c0
 // Size: 0x1e6
 function shouldtacticalwalk(behaviortreeentity) {
@@ -1934,7 +1934,7 @@ function shouldtacticalwalk(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf7d29263, Offset: 0x83b0
 // Size: 0x11e
 function shouldstealth(behaviortreeentity) {
@@ -1958,7 +1958,7 @@ function shouldstealth(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf981c168, Offset: 0x84d8
 // Size: 0x1d6
 function locomotionshouldstealth(behaviortreeentity) {
@@ -1990,7 +1990,7 @@ function locomotionshouldstealth(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4edd2e40, Offset: 0x86b8
 // Size: 0x62
 function shouldstealthresume(behaviortreeentity) {
@@ -2005,7 +2005,7 @@ function shouldstealthresume(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xa46a95c1, Offset: 0x8728
 // Size: 0x9c
 function private stealthreactcondition(entity) {
@@ -2014,7 +2014,7 @@ function private stealthreactcondition(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x5ace4537, Offset: 0x87d0
 // Size: 0x20
 function private stealthreactstart(behaviortreeentity) {
@@ -2022,7 +2022,7 @@ function private stealthreactstart(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x1d064623, Offset: 0x87f8
 // Size: 0x1a
 function private stealthreactterminate(behaviortreeentity) {
@@ -2030,7 +2030,7 @@ function private stealthreactterminate(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xdba3404c, Offset: 0x8820
 // Size: 0x60
 function private stealthidleterminate(behaviortreeentity) {
@@ -2042,7 +2042,7 @@ function private stealthidleterminate(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf0ee21d, Offset: 0x8888
 // Size: 0x8e
 function locomotionshouldpatrol(behaviortreeentity) {
@@ -2056,7 +2056,7 @@ function locomotionshouldpatrol(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7cde30c5, Offset: 0x8920
 // Size: 0x40
 function explosivekilled(behaviortreeentity) {
@@ -2067,7 +2067,7 @@ function explosivekilled(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc541ec5b, Offset: 0x8968
 // Size: 0x84
 function private _dropriotshield(riotshieldinfo) {
@@ -2079,7 +2079,7 @@ function private _dropriotshield(riotshieldinfo) {
 }
 
 // Namespace aiutility
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x7eecc596, Offset: 0x89f8
 // Size: 0xb8
 function attachriotshield(entity, riotshieldweapon, riotshieldmodel, riotshieldtag) {
@@ -2092,7 +2092,7 @@ function attachriotshield(entity, riotshieldweapon, riotshieldmodel, riotshieldt
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbce0508b, Offset: 0x8ab8
 // Size: 0x64
 function dropriotshield(behaviortreeentity) {
@@ -2104,7 +2104,7 @@ function dropriotshield(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x595de238, Offset: 0x8b28
 // Size: 0x70
 function electrifiedkilled(behaviortreeentity) {
@@ -2118,7 +2118,7 @@ function electrifiedkilled(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5f01cdcf, Offset: 0x8ba0
 // Size: 0x40
 function burnedkilled(behaviortreeentity) {
@@ -2129,7 +2129,7 @@ function burnedkilled(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xda17b8b3, Offset: 0x8be8
 // Size: 0x50
 function rapskilled(behaviortreeentity) {
@@ -2140,7 +2140,7 @@ function rapskilled(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7793b9af, Offset: 0x8c40
 // Size: 0xf8
 function meleeacquiremutex(behaviortreeentity) {
@@ -2157,7 +2157,7 @@ function meleeacquiremutex(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6f2f1142, Offset: 0x8d40
 // Size: 0x11a
 function meleereleasemutex(behaviortreeentity) {
@@ -2177,7 +2177,7 @@ function meleereleasemutex(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x12405f23, Offset: 0x8e68
 // Size: 0xea
 function shouldmutexmelee(behaviortreeentity) {
@@ -2203,7 +2203,7 @@ function shouldmutexmelee(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x425658f2, Offset: 0x8f60
 // Size: 0x22
 function shouldnormalmelee(behaviortreeentity) {
@@ -2211,7 +2211,7 @@ function shouldnormalmelee(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb7e6d289, Offset: 0x8f90
 // Size: 0x320
 function shouldmelee(entity) {
@@ -2259,7 +2259,7 @@ function shouldmelee(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbcadd7d9, Offset: 0x92b8
 // Size: 0x2a
 function hascloseenemytomelee(entity) {
@@ -2267,7 +2267,7 @@ function hascloseenemytomelee(entity) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8fa7a46b, Offset: 0x92f0
 // Size: 0x1c4
 function hascloseenemytomeleewithrange(entity, melee_range_sq) {
@@ -2288,7 +2288,7 @@ function hascloseenemytomeleewithrange(entity, melee_range_sq) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc0cc81f8, Offset: 0x94c0
 // Size: 0x24c
 function shouldchargemelee(entity) {
@@ -2316,7 +2316,7 @@ function shouldchargemelee(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x8deab18, Offset: 0x9718
 // Size: 0xf6
 function private shouldattackinchargemelee(behaviortreeentity) {
@@ -2332,7 +2332,7 @@ function private shouldattackinchargemelee(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xaf37ec01, Offset: 0x9818
 // Size: 0xc4
 function private setupchargemeleeattack(behaviortreeentity) {
@@ -2344,7 +2344,7 @@ function private setupchargemeleeattack(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfd8d084b, Offset: 0x98e8
 // Size: 0x5c
 function private cleanupmelee(behaviortreeentity) {
@@ -2354,7 +2354,7 @@ function private cleanupmelee(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x75caa300, Offset: 0x9950
 // Size: 0xb4
 function private cleanupchargemelee(behaviortreeentity) {
@@ -2366,7 +2366,7 @@ function private cleanupchargemelee(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x53e02229, Offset: 0x9a10
 // Size: 0x9c
 function cleanupchargemeleeattack(behaviortreeentity) {
@@ -2377,7 +2377,7 @@ function cleanupchargemeleeattack(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc2f3db4a, Offset: 0x9ab8
 // Size: 0x54
 function private shouldchoosespecialpronepain(behaviortreeentity) {
@@ -2386,7 +2386,7 @@ function private shouldchoosespecialpronepain(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xabde30a1, Offset: 0x9b18
 // Size: 0x4c
 function private shouldchoosespecialpain(behaviortreeentity) {
@@ -2397,7 +2397,7 @@ function private shouldchoosespecialpain(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xcd9c3040, Offset: 0x9b70
 // Size: 0x3a
 function private shouldchoosespecialdeath(behaviortreeentity) {
@@ -2408,7 +2408,7 @@ function private shouldchoosespecialdeath(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x22a3b7e5, Offset: 0x9bb8
 // Size: 0x54
 function private shouldchoosespecialpronedeath(behaviortreeentity) {
@@ -2417,7 +2417,7 @@ function private shouldchoosespecialpronedeath(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x92ec95f1, Offset: 0x9c18
 // Size: 0x48
 function private setupexplosionanimscale(entity, asmstatename) {
@@ -2427,7 +2427,7 @@ function private setupexplosionanimscale(entity, asmstatename) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x12de9861, Offset: 0x9c68
 // Size: 0x270
 function isbalconydeath(behaviortreeentity) {
@@ -2464,7 +2464,7 @@ function isbalconydeath(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x70b58874, Offset: 0x9ee0
 // Size: 0xac
 function balconydeath(behaviortreeentity) {
@@ -2479,7 +2479,7 @@ function balconydeath(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xabdb06e6, Offset: 0x9f98
 // Size: 0x2c
 function usecurrentposition(entity) {
@@ -2487,7 +2487,7 @@ function usecurrentposition(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3507cd, Offset: 0x9fd0
 // Size: 0x30
 function isunarmed(behaviortreeentity) {
@@ -2498,7 +2498,7 @@ function isunarmed(behaviortreeentity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4351a17b, Offset: 0xa008
 // Size: 0x24
 function forceRagdoll(entity) {
@@ -2506,7 +2506,7 @@ function forceRagdoll(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e5a27a2, Offset: 0xa038
 // Size: 0x1a8
 function preshootlaserandglinton(ai) {
@@ -2535,7 +2535,7 @@ function preshootlaserandglinton(ai) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89933b5c, Offset: 0xa1e8
 // Size: 0x70
 function postshootlaserandglintoff(ai) {
@@ -2550,7 +2550,7 @@ function postshootlaserandglintoff(ai) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf795b6db, Offset: 0xa260
 // Size: 0x2a
 function private isinphalanx(entity) {
@@ -2558,7 +2558,7 @@ function private isinphalanx(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x761035c, Offset: 0xa298
 // Size: 0xa6
 function private isinphalanxstance(entity) {
@@ -2574,7 +2574,7 @@ function private isinphalanxstance(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xbaf8aa62, Offset: 0xa348
 // Size: 0xa6
 function private togglephalanxstance(entity) {
@@ -2590,7 +2590,7 @@ function private togglephalanxstance(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd9cb97ca, Offset: 0xa3f8
 // Size: 0x10e
 function private tookflashbangdamage(entity) {
@@ -2602,7 +2602,7 @@ function private tookflashbangdamage(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x69a26ef, Offset: 0xa510
 // Size: 0xd0
 function isatattackobject(entity) {
@@ -2622,7 +2622,7 @@ function isatattackobject(entity) {
 }
 
 // Namespace aiutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa0661012, Offset: 0xa5e8
 // Size: 0xb2
 function shouldattackobject(entity) {

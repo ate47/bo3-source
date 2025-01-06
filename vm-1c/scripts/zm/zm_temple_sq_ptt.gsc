@@ -1,17 +1,17 @@
-#using scripts/zm/zm_temple_sq_skits;
-#using scripts/zm/zm_temple_sq_brock;
-#using scripts/zm/zm_temple_sq;
-#using scripts/zm/_zm_sidequests;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/zm_temple_sq;
+#using scripts/zm/zm_temple_sq_brock;
+#using scripts/zm/zm_temple_sq_skits;
 
 #namespace zm_temple_sq_ptt;
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x955f1b6, Offset: 0x410
 // Size: 0x10c
 function init() {
@@ -48,7 +48,7 @@ function init() {
 #/
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ae3ab01, Offset: 0x670
 // Size: 0x84
 function function_a9423e63() {
@@ -61,7 +61,7 @@ function function_a9423e63() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x211abeaa, Offset: 0x700
 // Size: 0xfa
 function function_5fba445d() {
@@ -70,7 +70,7 @@ function function_5fba445d() {
     level flag::wait_till("sq_ptt_dial_dialed");
     exploder::exploder("fxexp_" + self.script_int);
     while (true) {
-        volume = level waittill(#"hash_1a72a54d");
+        level waittill(#"hash_1a72a54d", volume);
         if (volume == self.script_int) {
             self.trigger notify(#"hash_ad2035e4");
             level notify(#"hash_ad2035e4");
@@ -83,7 +83,7 @@ function function_5fba445d() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcfe1fc44, Offset: 0x808
 // Size: 0xc8
 function function_73e47eae() {
@@ -97,7 +97,7 @@ function function_73e47eae() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f3b54da, Offset: 0x8d8
 // Size: 0x15c
 function function_d9c0ed6() {
@@ -125,7 +125,7 @@ function function_d9c0ed6() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46903df9, Offset: 0xa40
 // Size: 0x9c
 function function_74e74bde() {
@@ -142,14 +142,14 @@ function function_74e74bde() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf05ec056, Offset: 0xae8
 // Size: 0x9a
 function function_794a67e2() {
     self endon(#"death");
     self endon(#"hash_ad2035e4");
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         if (isplayer(who)) {
             who thread zm_audio::create_and_play_dialog("eggs", "quest4", randomintrange(0, 2));
             return;
@@ -158,7 +158,7 @@ function function_794a67e2() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x925eb882, Offset: 0xb90
 // Size: 0x13c
 function init_stage() {
@@ -179,7 +179,7 @@ function init_stage() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2be55a09, Offset: 0xcd8
 // Size: 0x106
 function function_723ad690() {
@@ -198,7 +198,7 @@ function function_723ad690() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcc1251a5, Offset: 0xde8
 // Size: 0x24
 function function_9873f186(skit) {
@@ -206,7 +206,7 @@ function function_9873f186(skit) {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc8f3653, Offset: 0xe18
 // Size: 0x1bc
 function function_c4f2f172() {
@@ -234,7 +234,7 @@ function function_c4f2f172() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b6553ca, Offset: 0xfe0
 // Size: 0x356
 function function_43b76deb(player) {
@@ -275,7 +275,7 @@ function function_43b76deb(player) {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbc8ad670, Offset: 0x1340
 // Size: 0xae
 function function_3da38a8c(waittime) {
@@ -291,7 +291,7 @@ function function_3da38a8c(waittime) {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x42ed1ba6, Offset: 0x13f8
 // Size: 0x104
 function function_7747c56() {
@@ -313,7 +313,7 @@ function function_7747c56() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x114d3de9, Offset: 0x1508
 // Size: 0xd4
 function function_7c44052() {
@@ -329,7 +329,7 @@ function function_7c44052() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe1713072, Offset: 0x15e8
 // Size: 0x20e
 function function_cc3f3f6a(success) {
@@ -366,20 +366,20 @@ function function_cc3f3f6a(success) {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6529b10f, Offset: 0x1800
 // Size: 0x58
 function function_58999522() {
     level endon(#"hash_114a0a12");
     level endon(#"hash_64b1dd4d");
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         self.var_bbca234 notify(#"triggered", who);
     }
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde5b6eae, Offset: 0x1860
 // Size: 0x16c
 function function_6b0bda58() {
@@ -389,7 +389,7 @@ function function_6b0bda58() {
     self.trigger triggerignoreteam();
     self.trigger thread function_58999522();
     while (var_66f2b40c < 4) {
-        who = self waittill(#"triggered");
+        self waittill(#"triggered", who);
         self playsound("evt_sq_ptt_valve");
         self rotateroll(90, 0.25);
         self waittill(#"rotatedone");
@@ -403,7 +403,7 @@ function function_6b0bda58() {
 }
 
 // Namespace zm_temple_sq_ptt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x76492037, Offset: 0x19d8
 // Size: 0x90
 function function_fbbc8808() {

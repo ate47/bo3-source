@@ -1,16 +1,16 @@
-#using scripts/shared/stealth_vehicle;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_debug;
-#using scripts/shared/stealth_player;
-#using scripts/shared/stealth_actor;
-#using scripts/shared/stealth_level;
 #using scripts/cp/gametypes/_save;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/stealth_actor;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_debug;
+#using scripts/shared/stealth_level;
+#using scripts/shared/stealth_player;
+#using scripts/shared/stealth_vehicle;
 #using scripts/shared/system_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth;
 
@@ -83,7 +83,7 @@ function stop() {
     if (!isdefined(self.stealth)) {
         return;
     }
-    self notify(#"hash_94ff6d85");
+    self notify(#"stop_stealth");
     if (isdefined(self.stealth.agents)) {
         foreach (agent in self.stealth.agents) {
             if (!isdefined(agent)) {
@@ -92,7 +92,7 @@ function stop() {
             if (agent == self) {
                 continue;
             }
-            agent notify(#"hash_94ff6d85");
+            agent notify(#"stop_stealth");
             agent function_7aa44f83();
         }
     }
@@ -250,7 +250,7 @@ function function_8ab6cff5(waitfor) {
     } else {
         self endon(#"death");
     }
-    self endon(#"hash_94ff6d85");
+    self endon(#"stop_stealth");
     level waittill(waitfor);
     self notify(waitfor);
 }
@@ -448,7 +448,7 @@ function private function_762607ad() {
     level notify(#"hash_762607ad");
     level endon(#"hash_762607ad");
     level endon(#"save_restore");
-    level endon(#"hash_94ff6d85");
+    level endon(#"stop_stealth");
     var_b5d2021c = 0;
     while (var_b5d2021c < 10) {
         var_62de14e3 = level flag::get("stealth_alert") || level flag::get("stealth_combat") || level stealth_level::enabled() && level flag::get("stealth_discovered");

@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4cd01a4b, Offset: 0x490
 // Size: 0x24
 function __init__() {
@@ -28,13 +28,13 @@ function __init__() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf31df8c6, Offset: 0x4c0
 // Size: 0x630
 function main() {
     self endon(#"nodeath_thread");
     while (isdefined(self)) {
-        attacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
+        self waittill(#"death", attacker, damagefromunderneath, weapon, point, dir);
         if (isdefined(self.death_enter_cb)) {
             [[ self.death_enter_cb ]]();
         }
@@ -137,7 +137,7 @@ function main() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3e34d393, Offset: 0xaf8
 // Size: 0x26
 function do_scripted_crash() {
@@ -145,7 +145,7 @@ function do_scripted_crash() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41e563d8, Offset: 0xb28
 // Size: 0x7c
 function play_death_audio() {
@@ -161,7 +161,7 @@ function play_death_audio() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60d9fa49, Offset: 0xbb0
 // Size: 0x74
 function play_spinning_plane_sound() {
@@ -171,7 +171,7 @@ function play_spinning_plane_sound() {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdca0f9b2, Offset: 0xc30
 // Size: 0x10c
 function set_death_model(smodel, fdelay) {
@@ -201,7 +201,7 @@ function set_death_model(smodel, fdelay) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1cfbc55, Offset: 0xd48
 // Size: 0x84
 function aircraft_crash(point, dir) {
@@ -219,7 +219,7 @@ function aircraft_crash(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbe09bf78, Offset: 0xdd8
 // Size: 0x7c
 function helicopter_crash(point, dir) {
@@ -237,7 +237,7 @@ function helicopter_crash(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x93541dd2, Offset: 0xe60
 // Size: 0x4b6
 function helicopter_crash_movement(point, dir) {
@@ -304,7 +304,7 @@ function helicopter_crash_movement(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe91642b0, Offset: 0x1320
 // Size: 0xa8
 function helicopter_crash_accel() {
@@ -321,7 +321,7 @@ function helicopter_crash_accel() {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x40006202, Offset: 0x13d0
 // Size: 0x388
 function helicopter_crash_rotation(point, dir) {
@@ -364,7 +364,7 @@ function helicopter_crash_rotation(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x31b6e14b, Offset: 0x1760
 // Size: 0x640
 function helicopter_crash_zone_accel(dir) {
@@ -438,7 +438,7 @@ function helicopter_crash_zone_accel(dir) {
 function helicopter_collision() {
     self endon(#"crash_done");
     while (true) {
-        velocity, normal = self waittill(#"veh_collision");
+        self waittill(#"veh_collision", velocity, normal);
         ang_vel = self getangularvelocity() * 0.5;
         self setangularvelocity(ang_vel);
         if (normal[2] < 0.7) {
@@ -450,7 +450,7 @@ function helicopter_collision() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34bd476f, Offset: 0x1e90
 // Size: 0xac
 function play_crashing_loop() {
@@ -462,7 +462,7 @@ function play_crashing_loop() {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x360caf15, Offset: 0x1f48
 // Size: 0x84
 function helicopter_explode(delete_me) {
@@ -475,7 +475,7 @@ function helicopter_explode(delete_me) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa1cbe6cd, Offset: 0x1fd8
 // Size: 0x5a8
 function aircraft_crash_move(point, dir) {
@@ -546,7 +546,7 @@ function aircraft_crash_move(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5cea5205, Offset: 0x2588
 // Size: 0x74
 function delay_set_gravity(delay) {
@@ -600,7 +600,7 @@ function helicopter_crash_move(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfbe3ab51, Offset: 0x2988
 // Size: 0x6c
 function boat_crash(point, dir) {
@@ -617,7 +617,7 @@ function boat_crash(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd69d1e48, Offset: 0x2a00
 // Size: 0x2c0
 function boat_crash_movement(point, dir) {
@@ -651,7 +651,7 @@ function boat_crash_movement(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xad262dea, Offset: 0x2cc8
 // Size: 0x5a
 function boat_crash_monitor(point, dir, crash_time) {
@@ -663,7 +663,7 @@ function boat_crash_monitor(point, dir, crash_time) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d209fc5, Offset: 0x2d30
 // Size: 0x19c
 function crash_stop() {
@@ -689,12 +689,12 @@ function crash_stop() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x77e5cbfe, Offset: 0x2ed8
 // Size: 0x15c
 function crash_collision_test() {
     self endon(#"death");
-    velocity, normal = self waittill(#"veh_collision");
+    self waittill(#"veh_collision", velocity, normal);
     self helicopter_explode();
     self notify(#"crash_move_done");
     if (normal[2] > 0.7) {
@@ -711,7 +711,7 @@ function crash_collision_test() {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97b039a5, Offset: 0x3040
 // Size: 0x1b2
 function crash_path_check(node) {
@@ -753,7 +753,7 @@ function death_firesound(sound) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99a681cf, Offset: 0x3278
 // Size: 0x6c
 function death_fx() {
@@ -769,7 +769,7 @@ function death_fx() {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8674df3e, Offset: 0x32f0
 // Size: 0xa4
 function death_make_badplace(type) {
@@ -787,7 +787,7 @@ function death_make_badplace(type) {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9b380fa3, Offset: 0x33a0
 // Size: 0x174
 function death_jolt(type) {
@@ -811,7 +811,7 @@ function death_jolt(type) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5449791f, Offset: 0x3520
 // Size: 0x20
 function deathrollon() {
@@ -821,7 +821,7 @@ function deathrollon() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1b628b79, Offset: 0x3548
 // Size: 0x1a
 function deathrolloff() {
@@ -845,7 +845,7 @@ function loop_fx_on_vehicle_tag(effect, looptime, tag) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7a1d4c, Offset: 0x3638
 // Size: 0x12a
 function deathfx_ent() {
@@ -866,7 +866,7 @@ function deathfx_ent() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x274ba33d, Offset: 0x3770
 // Size: 0x12c
 function death_cleanup_level_variables() {
@@ -890,7 +890,7 @@ function death_cleanup_level_variables() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd35c1aca, Offset: 0x38a8
 // Size: 0x90
 function death_cleanup_riders() {
@@ -907,7 +907,7 @@ function death_cleanup_riders() {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x65e7fa1d, Offset: 0x3940
 // Size: 0x114
 function death_radius_damage(meansofdamage) {
@@ -930,7 +930,7 @@ function death_radius_damage(meansofdamage) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc1a92822, Offset: 0x3a60
 // Size: 0x2f4
 function death_update_crash(point, dir) {
@@ -987,7 +987,7 @@ function death_update_crash(point, dir) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe1b657a3, Offset: 0x3d60
 // Size: 0x180
 function waittill_crash_done_or_stopped() {
@@ -1020,7 +1020,7 @@ function waittill_crash_done_or_stopped() {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb9c422e9, Offset: 0x3ee8
 // Size: 0x1ac
 function vehicle_damage_filter_damage_watcher(driver, heavy_damage_threshold) {
@@ -1031,7 +1031,7 @@ function vehicle_damage_filter_damage_watcher(driver, heavy_damage_threshold) {
         heavy_damage_threshold = 100;
     }
     while (true) {
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon);
         earthquake(0.25, 0.15, self.origin, 512, self);
         driver playrumbleonentity("damage_light");
         time = gettime();
@@ -1048,7 +1048,7 @@ function vehicle_damage_filter_damage_watcher(driver, heavy_damage_threshold) {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x87bd53c7, Offset: 0x40a0
 // Size: 0x3c
 function vehicle_damage_filter_exit_watcher(driver) {
@@ -1056,7 +1056,7 @@ function vehicle_damage_filter_exit_watcher(driver) {
 }
 
 // Namespace vehicle_death
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x7743d4cb, Offset: 0x40e8
 // Size: 0x188
 function vehicle_damage_filter(vision_set, heavy_damage_threshold, filterid, b_use_player_damage) {
@@ -1092,7 +1092,7 @@ function vehicle_damage_filter(vision_set, heavy_damage_threshold, filterid, b_u
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5430d41c, Offset: 0x4278
 // Size: 0x19c
 function flipping_shooting_death(attacker, hitdir) {
@@ -1124,7 +1124,7 @@ function flipping_shooting_death(attacker, hitdir) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41e158cd, Offset: 0x4420
 // Size: 0x28c
 function plane_crash() {
@@ -1152,7 +1152,7 @@ function plane_crash() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0997231, Offset: 0x46b8
 // Size: 0x24c
 function barrel_rolling_crash() {
@@ -1177,7 +1177,7 @@ function barrel_rolling_crash() {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7325c797, Offset: 0x4910
 // Size: 0x31c
 function random_crash(hitdir) {
@@ -1208,7 +1208,7 @@ function random_crash(hitdir) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4b3e7008, Offset: 0x4c38
 // Size: 0x20e
 function set_movement_and_accel(new_vel, ang_vel) {
@@ -1239,7 +1239,7 @@ function set_movement_and_accel(new_vel, ang_vel) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaad4f63d, Offset: 0x4e50
 // Size: 0x19a
 function flipping_shooting_crash_movement(attacker, hitdir) {
@@ -1273,7 +1273,7 @@ function flipping_shooting_crash_movement(attacker, hitdir) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3cbae300, Offset: 0x4ff8
 // Size: 0xcc
 function flipping_shooting_dmg_snd() {
@@ -1287,7 +1287,7 @@ function flipping_shooting_dmg_snd() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41466a4e, Offset: 0x50d0
 // Size: 0x300
 function flipping_shooting_crash_accel() {
@@ -1332,7 +1332,7 @@ function flipping_shooting_crash_accel() {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec5f4fe7, Offset: 0x53d8
 // Size: 0x8c
 function death_fire_loop_audio() {
@@ -1344,7 +1344,7 @@ function death_fire_loop_audio() {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4091733c, Offset: 0x5470
 // Size: 0x3c
 function freewhensafe(time) {
@@ -1355,7 +1355,7 @@ function freewhensafe(time) {
 }
 
 // Namespace vehicle_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x884277c2, Offset: 0x54b8
 // Size: 0x3c
 function deletewhensafe(time) {
@@ -1366,7 +1366,7 @@ function deletewhensafe(time) {
 }
 
 // Namespace vehicle_death
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc9daef3b, Offset: 0x5500
 // Size: 0xdc
 function delayedremove_thread(time, shoulddelete) {
@@ -1389,7 +1389,7 @@ function delayedremove_thread(time, shoulddelete) {
 }
 
 // Namespace vehicle_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6da5e86a, Offset: 0x55e8
 // Size: 0x34
 function cleanup() {

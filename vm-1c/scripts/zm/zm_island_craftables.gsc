@@ -1,27 +1,27 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_island;
 #using scripts/zm/zm_island_main_ee_quest;
 #using scripts/zm/zm_island_pap_quest;
-#using scripts/zm/zm_island;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/shared/util_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_island_craftables;
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8c92131d, Offset: 0x538
 // Size: 0x35c
 function function_3ebec56b() {
@@ -48,7 +48,7 @@ function function_3ebec56b() {
 }
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93ca2058, Offset: 0x8a0
 // Size: 0x8c
 function function_95743e9f() {
@@ -58,7 +58,7 @@ function function_95743e9f() {
 }
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8ce9a776, Offset: 0x938
 // Size: 0x14c
 function register_clientfields() {
@@ -88,7 +88,7 @@ function function_66a9cb86(player) {
 }
 
 // Namespace zm_island_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x25384b93, Offset: 0xaf0
 // Size: 0x64
 function function_9708cb71(piecename) {
@@ -112,19 +112,19 @@ function function_69e0fb83(var_55ce4248, n_duration) {
 }
 
 // Namespace zm_island_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2e18b0bb, Offset: 0xbc0
 // Size: 0x9c
 function function_aef4c63(player) {
     str_piece = self.var_dba2448c + "_" + self.piecename;
     level flag::set(str_piece + "_found");
     player thread function_9708cb71(self.piecename);
-    player notify(#"hash_a15b4609");
+    player notify(#"player_got_gasmask_part");
     level thread function_f34bd805(str_piece);
 }
 
 // Namespace zm_island_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6a4db877, Offset: 0xc68
 // Size: 0x2b6
 function function_f34bd805(str_piece) {
@@ -159,7 +159,7 @@ function function_f34bd805(str_piece) {
 }
 
 // Namespace zm_island_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc944da77, Offset: 0xf28
 // Size: 0x44
 function function_3e3b2e02(player) {
@@ -167,7 +167,7 @@ function function_3e3b2e02(player) {
 }
 
 // Namespace zm_island_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa4d1c662, Offset: 0xf78
 // Size: 0x106
 function function_4e02c665(player) {
@@ -181,7 +181,7 @@ function function_4e02c665(player) {
 }
 
 // Namespace zm_island_craftables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa0452c9b, Offset: 0x1088
 // Size: 0x144
 function function_aa4f440c(v_origin, v_angles) {
@@ -202,7 +202,7 @@ function function_aa4f440c(v_origin, v_angles) {
 }
 
 // Namespace zm_island_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x48afeb90, Offset: 0x11d8
 // Size: 0x60
 function function_dbc8e9c0(player) {
@@ -215,12 +215,12 @@ function function_dbc8e9c0(player) {
 }
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d1c85be, Offset: 0x1240
 // Size: 0xb4
 function function_272fcc74() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger()) {
             continue;
         }
@@ -238,7 +238,7 @@ function function_272fcc74() {
 }
 
 // Namespace zm_island_craftables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3924419a, Offset: 0x1300
 // Size: 0x38
 function function_b4c30297(var_91089b66, player) {
@@ -247,7 +247,7 @@ function function_b4c30297(var_91089b66, player) {
 }
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec9edbc6, Offset: 0x1340
 // Size: 0x3c
 function function_f89bb811() {
@@ -259,7 +259,7 @@ function function_f89bb811() {
 }
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcfe38987, Offset: 0x1388
 // Size: 0x58
 function function_e1832857() {
@@ -273,7 +273,7 @@ function function_e1832857() {
 }
 
 // Namespace zm_island_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc5314377, Offset: 0x13e8
 // Size: 0x4c
 function function_d2d29a1b() {

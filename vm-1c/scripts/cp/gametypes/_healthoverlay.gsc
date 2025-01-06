@@ -1,9 +1,9 @@
-#using scripts/cp/gametypes/_globallogic_player;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/gametypes/_globallogic_player;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
 
 #namespace healthoverlay;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8780d78, Offset: 0x1f8
 // Size: 0xc4
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60477e63, Offset: 0x2c8
 // Size: 0x50
 function init() {
@@ -40,7 +40,7 @@ function init() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb216045f, Offset: 0x320
 // Size: 0x4a
 function end_health_regen() {
@@ -50,7 +50,7 @@ function end_health_regen() {
 }
 
 // Namespace healthoverlay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7f8ce855, Offset: 0x378
 // Size: 0xe8
 function function_ec5615ca(duration) {
@@ -69,7 +69,7 @@ function function_ec5615ca(duration) {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4060880e, Offset: 0x468
 // Size: 0x68c
 function player_health_regen() {
@@ -186,7 +186,7 @@ function player_health_regen() {
 }
 
 // Namespace healthoverlay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1d7ea81f, Offset: 0xb00
 // Size: 0xee
 function decay_player_damages(decay) {
@@ -230,7 +230,7 @@ function player_breathing_sound(healthcap) {
 }
 
 // Namespace healthoverlay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x52ce349e, Offset: 0xcd0
 // Size: 0x130
 function function_1373098a(healthcap) {

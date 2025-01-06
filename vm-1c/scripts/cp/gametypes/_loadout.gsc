@@ -1,21 +1,21 @@
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/teams/_teams;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/_util;
+#using scripts/codescripts/struct;
 #using scripts/cp/_challenges;
+#using scripts/cp/_util;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/cp/gametypes/_dev;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/teams/_teams;
 #using scripts/shared/abilities/_ability_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/loadout_shared;
-#using scripts/shared/player_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/challenges_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/loadout_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
 
 #namespace loadout;
 
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55852f9b, Offset: 0xa60
 // Size: 0x8c
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xaf8
 // Size: 0x4
 function on_connect() {
@@ -48,7 +48,7 @@ function on_connect() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfaebfa54, Offset: 0xb08
 // Size: 0x7f4
 function init() {
@@ -145,7 +145,7 @@ function init() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x123a8588, Offset: 0x1308
 // Size: 0x34
 function function_adca0ced() {
@@ -154,7 +154,7 @@ function function_adca0ced() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x439d2521, Offset: 0x1348
 // Size: 0x124
 function function_ef129246() {
@@ -170,7 +170,7 @@ function function_ef129246() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x21dc74d3, Offset: 0x1478
 // Size: 0xfc
 function create_class_exclusion_list() {
@@ -187,7 +187,7 @@ function create_class_exclusion_list() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa940ae62, Offset: 0x1580
 // Size: 0x68
 function is_attachment_excluded(attachment) {
@@ -201,7 +201,7 @@ function is_attachment_excluded(attachment) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7fe68aea, Offset: 0x15f0
 // Size: 0x3c
 function function_2358da67() {
@@ -238,7 +238,7 @@ function function_8428dec1(classname, var_987227b8) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x607c0abc, Offset: 0x1798
 // Size: 0x26
 function load_default_loadout(weaponclass, classnum) {
@@ -246,7 +246,7 @@ function load_default_loadout(weaponclass, classnum) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3388cae8, Offset: 0x17c8
 // Size: 0x174
 function weapon_class_register(weaponname, weapon_type) {
@@ -274,7 +274,7 @@ function weapon_class_register(weaponname, weapon_type) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7cb62687, Offset: 0x1948
 // Size: 0x4cc
 function function_cd945d1d() {
@@ -335,7 +335,7 @@ function function_cd945d1d() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x371bba63, Offset: 0x1e20
 // Size: 0x40
 function getclasschoice(response) {
@@ -390,7 +390,7 @@ function function_fc32096(perkname) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64c94f7, Offset: 0x1ff8
 // Size: 0x18
 function reset_specialty_slots(class_num) {
@@ -398,7 +398,7 @@ function reset_specialty_slots(class_num) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb12d28c9, Offset: 0x2018
 // Size: 0x10
 function function_1088c9f() {
@@ -406,7 +406,7 @@ function function_1088c9f() {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeb3e3950, Offset: 0x2030
 // Size: 0x36
 function function_1c374fc1(equipment_name) {
@@ -417,7 +417,7 @@ function function_1c374fc1(equipment_name) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5dd6cf09, Offset: 0x2070
 // Size: 0x2e
 function function_9afb7ce8(item) {
@@ -428,7 +428,7 @@ function function_9afb7ce8(item) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7cd601ec, Offset: 0x20a8
 // Size: 0x44
 function function_db96b564(var_dc236bc8) {
@@ -453,7 +453,7 @@ function giveloadoutlevelspecific(team, weaponclass) {
 }
 
 // Namespace loadout
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x74e170fe, Offset: 0x2178
 // Size: 0x19c4
 function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
@@ -544,11 +544,11 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
             secondaryweaponoptions = var_5a13c491 calcweaponoptions(class_num, 1);
         }
         println("<dev string:xc6>" + self.name + "<dev string:xd1>" + sidearm.name + "<dev string:xfd>");
-        var_65ce895e = self getattachmentcosmeticvariantforweapon(class_num, "secondary");
+        acvi = self getattachmentcosmeticvariantforweapon(class_num, "secondary");
         if (isdefined(var_5a13c491)) {
-            var_65ce895e = var_5a13c491 getattachmentcosmeticvariantforweapon(class_num, "secondary");
+            acvi = var_5a13c491 getattachmentcosmeticvariantforweapon(class_num, "secondary");
         }
-        self giveweapon(sidearm, secondaryweaponoptions, var_65ce895e);
+        self giveweapon(sidearm, secondaryweaponoptions, acvi);
         self.secondaryloadoutweapon = sidearm;
         self.var_f8a642e8 = sidearm.altweapon;
         self.secondaryloadoutgunsmithvariantindex = self getloadoutgunsmithvariantindex(self.class_num, 1);
@@ -566,11 +566,11 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
             primaryweaponoptions = var_5a13c491 calcweaponoptions(class_num, 0);
         }
         println("<dev string:xc6>" + self.name + "<dev string:xd1>" + primaryweapon.name + "<dev string:x10b>");
-        var_65ce895e = self getattachmentcosmeticvariantforweapon(class_num, "primary");
+        acvi = self getattachmentcosmeticvariantforweapon(class_num, "primary");
         if (isdefined(var_5a13c491)) {
-            var_65ce895e = var_5a13c491 getattachmentcosmeticvariantforweapon(class_num, "primary");
+            acvi = var_5a13c491 getattachmentcosmeticvariantforweapon(class_num, "primary");
         }
-        self giveweapon(primaryweapon, primaryweaponoptions, var_65ce895e);
+        self giveweapon(primaryweapon, primaryweaponoptions, acvi);
         self.primaryloadoutweapon = primaryweapon;
         self.var_367ea154 = primaryweapon.altweapon;
         self.primaryloadoutgunsmithvariantindex = self getloadoutgunsmithvariantindex(self.class_num, 0);
@@ -772,7 +772,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x597d816b, Offset: 0x3b48
 // Size: 0xd4
 function function_8de272c8(weapon, amount) {
@@ -787,12 +787,12 @@ function function_8de272c8(weapon, amount) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x878c629, Offset: 0x3c28
 // Size: 0xf0
 function onplayerconnecting() {
     for (;;) {
-        player = level waittill(#"connecting");
+        level waittill(#"connecting", player);
         if (!level.oldschool) {
             if (!isdefined(player.pers["class"])) {
                 player.pers["class"] = "";
@@ -819,7 +819,7 @@ function fadeaway(waitdelay, fadedelay) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5f10957a, Offset: 0x3d68
 // Size: 0x18
 function setclass(newclass) {
@@ -827,7 +827,7 @@ function setclass(newclass) {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8d23c057, Offset: 0x3d88
 // Size: 0xf4
 function initperkdvars() {
@@ -840,7 +840,7 @@ function initperkdvars() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60bcfef8, Offset: 0x3e88
 // Size: 0x82
 function cac_selector() {
@@ -855,7 +855,7 @@ function cac_selector() {
 }
 
 // Namespace loadout
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa24ff510, Offset: 0x3f18
 // Size: 0x134
 function register_perks() {
@@ -878,7 +878,7 @@ function register_perks() {
 }
 
 // Namespace loadout
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x1b85a4a2, Offset: 0x4058
 // Size: 0x1ea
 function cac_modified_vehicle_damage(victim, attacker, damage, meansofdeath, weapon, inflictor) {
@@ -909,7 +909,7 @@ function cac_modified_vehicle_damage(victim, attacker, damage, meansofdeath, wea
 }
 
 // Namespace loadout
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa2d23203, Offset: 0x4250
 // Size: 0x6b4
 function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, hitloc) {
@@ -988,7 +988,7 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf7bad875, Offset: 0x4910
 // Size: 0x44
 function isexplosivedamage(meansofdeath) {
@@ -1003,7 +1003,7 @@ function isexplosivedamage(meansofdeath) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x608f1dc, Offset: 0x4960
 // Size: 0x6a
 function function_bb61b344(player) {
@@ -1011,7 +1011,7 @@ function function_bb61b344(player) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb68b04cb, Offset: 0x49d8
 // Size: 0x28
 function isprimarydamage(meansofdeath) {
@@ -1019,7 +1019,7 @@ function isprimarydamage(meansofdeath) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4340341d, Offset: 0x4a08
 // Size: 0x60
 function isfiredamage(weapon, meansofdeath) {
@@ -1030,7 +1030,7 @@ function isfiredamage(weapon, meansofdeath) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xda8b9793, Offset: 0x4a70
 // Size: 0x38
 function function_1b2a8c(hitloc) {
@@ -1038,7 +1038,7 @@ function function_1b2a8c(hitloc) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e4cd6fd, Offset: 0x4ab0
 // Size: 0x3a
 function function_c44068e7(inflictor) {

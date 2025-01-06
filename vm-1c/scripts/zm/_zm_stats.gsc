@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm;
-#using scripts/zm/gametypes/_globallogic_score;
-#using scripts/zm/gametypes/_globallogic;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/gametypes/_globallogic;
+#using scripts/zm/gametypes/_globallogic_score;
 
 #namespace zm_stats;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7418303c, Offset: 0xfe0
 // Size: 0x4c
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1785a5eb, Offset: 0x1038
 // Size: 0xcd4
 function player_stats_init() {
@@ -144,7 +144,7 @@ function player_stats_init() {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf69e65b8, Offset: 0x1d18
 // Size: 0x65e
 function update_players_stats_at_match_end(players) {
@@ -218,7 +218,7 @@ function update_players_stats_at_match_end(players) {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7a4847db, Offset: 0x2380
 // Size: 0x1dc
 function update_playing_utc_time(matchendutctime) {
@@ -243,7 +243,7 @@ function update_playing_utc_time(matchendutctime) {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x2568
 // Size: 0x4
 function survival_classic_custom_stat_update() {
@@ -259,7 +259,7 @@ function grief_custom_stat_update() {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2df621d2, Offset: 0x2588
 // Size: 0x32
 function get_global_stat(stat_name) {
@@ -267,7 +267,7 @@ function get_global_stat(stat_name) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x51c49eb7, Offset: 0x25c8
 // Size: 0x5c
 function set_global_stat(stat_name, value) {
@@ -278,7 +278,7 @@ function set_global_stat(stat_name, value) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2b89a18f, Offset: 0x2630
 // Size: 0x5c
 function add_global_stat(stat_name, value) {
@@ -289,7 +289,7 @@ function add_global_stat(stat_name, value) {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x74d674fb, Offset: 0x2698
 // Size: 0x54
 function increment_global_stat(stat_name) {
@@ -300,7 +300,7 @@ function increment_global_stat(stat_name) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc017dcbf, Offset: 0x26f8
 // Size: 0x4c
 function highwater_global_stat(stat_name, value) {
@@ -310,7 +310,7 @@ function highwater_global_stat(stat_name, value) {
 }
 
 // Namespace zm_stats
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7c071ac4, Offset: 0x2750
 // Size: 0x7e
 function add_client_stat(stat_name, stat_value, include_gametype) {
@@ -325,7 +325,7 @@ function add_client_stat(stat_name, stat_value, include_gametype) {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x83097eca, Offset: 0x27d8
 // Size: 0x44
 function increment_player_stat(stat_name) {
@@ -347,7 +347,7 @@ function increment_root_stat(stat_name, stat_value) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x971dccfb, Offset: 0x2880
 // Size: 0x4c
 function increment_client_stat(stat_name, include_gametype) {
@@ -358,7 +358,7 @@ function increment_client_stat(stat_name, include_gametype) {
 }
 
 // Namespace zm_stats
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd4111de9, Offset: 0x28d8
 // Size: 0x96
 function set_client_stat(stat_name, stat_value, include_gametype) {
@@ -371,7 +371,7 @@ function set_client_stat(stat_name, stat_value, include_gametype) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8bfc54bc, Offset: 0x2978
 // Size: 0x8e
 function zero_client_stat(stat_name, include_gametype) {
@@ -384,7 +384,7 @@ function zero_client_stat(stat_name, include_gametype) {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb1c5b003, Offset: 0x2a10
 // Size: 0x42
 function get_map_stat(stat_name) {
@@ -392,7 +392,7 @@ function get_map_stat(stat_name) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf76a9a96, Offset: 0x2a60
 // Size: 0x74
 function set_map_stat(stat_name, value) {
@@ -403,7 +403,7 @@ function set_map_stat(stat_name, value) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3de567ab, Offset: 0x2ae0
 // Size: 0x74
 function add_map_stat(stat_name, value) {
@@ -414,7 +414,7 @@ function add_map_stat(stat_name, value) {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3783d560, Offset: 0x2b60
 // Size: 0x6c
 function increment_map_stat(stat_name) {
@@ -425,7 +425,7 @@ function increment_map_stat(stat_name) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb8037726, Offset: 0x2bd8
 // Size: 0x4c
 function highwater_map_stat(stat_name, value) {
@@ -435,7 +435,7 @@ function highwater_map_stat(stat_name, value) {
 }
 
 // Namespace zm_stats
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1dccfbd8, Offset: 0x2c30
 // Size: 0x5c
 function increment_map_cheat_stat(stat_name) {
@@ -446,7 +446,7 @@ function increment_map_cheat_stat(stat_name) {
 }
 
 // Namespace zm_stats
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd73691f7, Offset: 0x2c98
 // Size: 0x6c
 function increment_challenge_stat(stat_name, amount) {
@@ -460,7 +460,7 @@ function increment_challenge_stat(stat_name, amount) {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb68fba3c, Offset: 0x2d10
 // Size: 0xb6
 function get_stat_distance_traveled() {
@@ -475,7 +475,7 @@ function get_stat_distance_traveled() {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97e9d24a, Offset: 0x2dd0
 // Size: 0x12
 function get_stat_round_number() {
@@ -497,7 +497,7 @@ function get_stat_combined_rank_value_survival_classic() {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4ce04057, Offset: 0x2e78
 // Size: 0x12ac
 function update_global_counters_on_match_end() {
@@ -690,7 +690,7 @@ function get_specific_stat(stat_category, stat_name) {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x937e02e3, Offset: 0x4178
 // Size: 0x9c
 function initializematchstats() {
@@ -703,7 +703,7 @@ function initializematchstats() {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x666eeb34, Offset: 0x4220
 // Size: 0x64
 function adjustrecentstats() {
@@ -716,7 +716,7 @@ function adjustrecentstats() {
 }
 
 // Namespace zm_stats
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xea9aaa5a, Offset: 0x4290
 // Size: 0x44
 function uploadstatssoon() {

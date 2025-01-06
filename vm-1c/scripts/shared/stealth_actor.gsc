@@ -1,22 +1,22 @@
 #using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
 #using scripts/shared/flag_shared;
-#using scripts/shared/stealth_vo;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth_event;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_debug;
-#using scripts/shared/stealth_behavior;
-#using scripts/shared/stealth;
 #using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_behavior;
+#using scripts/shared/stealth_debug;
+#using scripts/shared/stealth_event;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_tagging;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_actor;
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa1840353, Offset: 0x2f0
 // Size: 0x1bc
 function init() {
@@ -47,7 +47,7 @@ function init() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8ad0ef9, Offset: 0x4b8
 // Size: 0xec
 function stop() {
@@ -62,7 +62,7 @@ function stop() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf8bbf25, Offset: 0x5b0
 // Size: 0x3c
 function reset() {
@@ -72,7 +72,7 @@ function reset() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e18699c, Offset: 0x5f8
 // Size: 0x20
 function enabled() {
@@ -80,7 +80,7 @@ function enabled() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe1bfa2fc, Offset: 0x620
 // Size: 0x17e
 function function_a860a2eb() {
@@ -106,7 +106,7 @@ function function_a860a2eb() {
 }
 
 // Namespace stealth_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7598875c, Offset: 0x7a8
 // Size: 0x74
 function function_a880fdea(entity) {
@@ -117,7 +117,7 @@ function function_a880fdea(entity) {
 }
 
 // Namespace stealth_actor
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0xd014db9c, Offset: 0x828
 // Size: 0x106
 function function_ebcb7adc(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
@@ -131,7 +131,7 @@ function function_ebcb7adc(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7c26ee53, Offset: 0x938
 // Size: 0x2e0
 function function_39fb9593() {
@@ -158,7 +158,7 @@ function function_39fb9593() {
     self thread function_517ba9d2();
     self thread function_56e538df();
     while (true) {
-        var_12131b3c = self waittill(#"hash_3dce0f1d");
+        self waittill(#"hash_3dce0f1d", var_12131b3c);
         if (!self enabled() || !isdefined(level.stealth) || !isdefined(level.stealth.seek)) {
             return;
         }
@@ -176,7 +176,7 @@ function function_39fb9593() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdab89d53, Offset: 0xc20
 // Size: 0x116
 function function_8be8b843() {
@@ -196,20 +196,20 @@ function function_8be8b843() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x21a91e59, Offset: 0xd40
 // Size: 0x52
 function function_517ba9d2() {
     self endon(#"hash_39fb9593");
     self endon(#"death");
     while (true) {
-        var_12131b3c = self waittill(#"awareness");
+        self waittill(#"awareness", var_12131b3c);
         self notify(#"hash_3dce0f1d", var_12131b3c);
     }
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49e35df1, Offset: 0xda0
 // Size: 0x70
 function function_56e538df() {
@@ -223,7 +223,7 @@ function function_56e538df() {
 }
 
 // Namespace stealth_actor
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93fc16d4, Offset: 0xe18
 // Size: 0x2de
 function function_1064f733() {
@@ -272,7 +272,7 @@ function function_1064f733() {
 }
 
 // Namespace stealth_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb2c0817, Offset: 0x1100
 // Size: 0x10c
 function function_77ae41ed(var_e0824a47) {

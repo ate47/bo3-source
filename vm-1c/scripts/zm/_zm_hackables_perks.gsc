@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_equip_hacker;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_equip_hacker;
 
 #namespace namespace_75cc53cb;
 
 // Namespace namespace_75cc53cb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf8c1c590, Offset: 0x168
 // Size: 0x28c
 function function_4678364() {
@@ -39,7 +39,7 @@ function function_4678364() {
 }
 
 // Namespace namespace_75cc53cb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc5a10708, Offset: 0x400
 // Size: 0x36
 function function_84c54257() {
@@ -50,7 +50,7 @@ function function_84c54257() {
 }
 
 // Namespace namespace_75cc53cb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x69d95eb1, Offset: 0x440
 // Size: 0x76
 function function_194e8dfe(player) {
@@ -66,7 +66,7 @@ function function_194e8dfe(player) {
 }
 
 // Namespace namespace_75cc53cb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaef62bd, Offset: 0x4c0
 // Size: 0x13a
 function function_b4d7ca0b(hacker) {

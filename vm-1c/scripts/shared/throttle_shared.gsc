@@ -5,7 +5,7 @@
 class throttle {
 
     // Namespace throttle
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe3809695, Offset: 0xc0
     // Size: 0x38
     function constructor() {
@@ -16,7 +16,7 @@ class throttle {
     }
 
     // Namespace throttle
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xe35b4acd, Offset: 0x250
     // Size: 0xb4
     function waitinqueue(entity) {
@@ -39,7 +39,7 @@ class throttle {
     }
 
     // Namespace throttle
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x6bf13dd3, Offset: 0x1d8
     // Size: 0x6c
     function initialize(processlimit, updaterate) {
@@ -55,7 +55,7 @@ class throttle {
     }
 
     // Namespace throttle
-    // Params 0, eflags: 0x5 linked
+    // Params 0, eflags: 0x4
     // Checksum 0x2064fb3c, Offset: 0x110
     // Size: 0xc0
     function private _updatethrottle() {
@@ -70,7 +70,7 @@ class throttle {
     }
 
     // Namespace throttle
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0xad52b6cf, Offset: 0x78
     // Size: 0x3c
     function private _updatethrottlethread(throttle) {

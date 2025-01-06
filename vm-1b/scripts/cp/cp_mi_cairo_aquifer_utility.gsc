@@ -1,47 +1,47 @@
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/vehicle_shared;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_oed;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_aquifer_accolades;
 #using scripts/cp/cp_mi_cairo_aquifer_ambience;
+#using scripts/cp/cp_mi_cairo_aquifer_fx;
 #using scripts/cp/cp_mi_cairo_aquifer_objectives;
 #using scripts/cp/cp_mi_cairo_aquifer_sound;
-#using scripts/cp/cp_mi_cairo_aquifer_fx;
-#using scripts/cp/gametypes/_spawnlogic;
-#using scripts/cp/_oed;
-#using scripts/cp/_util;
-#using scripts/cp/_hacking;
-#using scripts/shared/gameobjects_shared;
 #using scripts/cp/cybercom/_cybercom;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/vehicles/_hunter;
-#using scripts/cp/_dialog;
-#using scripts/shared/fx_shared;
-#using scripts/cp/_spawn_manager;
 #using scripts/cp/gametypes/_save;
-#using scripts/shared/player_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/vehicle_ai_shared;
+#using scripts/cp/gametypes/_spawnlogic;
 #using scripts/shared/_oob;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/spawner_shared;
+#using scripts/shared/ai_shared;
 #using scripts/shared/animation_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hud_shared;
+#using scripts/shared/audio_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_hunter;
+#using scripts/shared/vehicles/_quadtank;
 
 #using_animtree("generic");
 
@@ -167,15 +167,15 @@ function function_a3fd472e() {
     var_4fb2233[var_4fb2233.size] = "res_vtol2_vh";
     var_4fb2233[var_4fb2233.size] = "port_vtol1_vh";
     var_4fb2233[var_4fb2233.size] = "port_vtol2_vh";
-    var_66172ffc = target_getarray();
+    target_array = target_getarray();
     foreach (name in var_4fb2233) {
         vtol = getent(name, "targetname");
         if (isdefined(vtol)) {
             vtol.allowcontinuedlockonafterinvis = 1;
-            array::add(var_66172ffc, vtol);
+            array::add(target_array, vtol);
         }
     }
-    return var_66172ffc;
+    return target_array;
 }
 
 // Namespace aquifer_util
@@ -295,7 +295,7 @@ function function_a643bffd() {
 function function_14519736() {
     self endon(#"death");
     while (true) {
-        ent = self waittill(#"trigger");
+        self waittill(#"trigger", ent);
         self function_cc4d91b(ent);
     }
 }
@@ -324,7 +324,7 @@ function function_cc4d91b(ent) {
 // Size: 0x32
 function function_eee6cbf2() {
     self endon(#"death");
-    ent = self waittill(#"trigger");
+    self waittill(#"trigger", ent);
     self function_9c6e51f(ent);
 }
 
@@ -586,7 +586,7 @@ function function_78e66c54() {
     var_29fc3405 = 0;
     self clientfield::set("vtol_show_damage_stages", 1);
     while (isdefined(self) && isalive(self)) {
-        damage, attacker, dir, loc, type, model, tag, part, weapon, flags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, dir, loc, type, model, tag, part, weapon, flags);
         if (isdefined(self.var_8f9e6a04) && attacker == self.var_8f9e6a04) {
             var_94bdacf3 = 0;
             if (issubstr(type, "BULLET")) {
@@ -919,9 +919,9 @@ function function_e9a25955() {
             var_c30a0e54 = (var_522698b3.origin[0], var_522698b3.origin[1], height);
             desired_origin = var_c30a0e54 + vectornormalize((veh.origin[0], veh.origin[1], height) - var_c30a0e54) * radius * 0.9;
             speed_scale = pow(math::clamp(distance(veh.origin, desired_origin) / 2400, 0, 1), 2);
-            var_35edc664 = vectortoangles(desired_origin - veh.origin);
-            desired_yaw = angleclamp180(var_35edc664[1]);
-            var_e8e62a06 = angleclamp180(var_35edc664[0]);
+            desired_angles = vectortoangles(desired_origin - veh.origin);
+            desired_yaw = angleclamp180(desired_angles[1]);
+            var_e8e62a06 = angleclamp180(desired_angles[0]);
             yaw_diff = angleclamp180(desired_yaw - veh.angles[1]);
             var_cd190041 = angleclamp180(var_e8e62a06 - veh.angles[0]);
             veh.angles = (angleclamp180(veh.angles[0]) + math::clamp(var_cd190041, -2.25, 2.25), angleclamp180(veh.angles[1]) + math::clamp(yaw_diff, -2.25, 2.25), veh.angles[2] * 0.9);
@@ -1078,7 +1078,7 @@ function function_d2db9d30() {
         }
         gunner_index = -1;
         while (gunner_index != var_6b1c0c6) {
-            gunner_index, missile = self.var_8fedf36c waittill(#"gunner_weapon_fired");
+            self.var_8fedf36c waittill(#"gunner_weapon_fired", gunner_index, missile);
             self thread function_6174aaa2(missile);
         }
         self.var_cf011976[var_b5ef1165] = gettime() + var_5f6c4b;
@@ -1793,14 +1793,14 @@ function function_e1fcf95(play_anim, var_74df67ae) {
             var_8f8a1689 = "pb_aqu_vtol_enter";
         }
         target_origin = getstartorigin(self.var_8fedf36c.origin, self.var_8fedf36c.angles, var_8f8a1689);
-        var_544bbb55 = getstartangles(self.var_8fedf36c.origin, self.var_8fedf36c.angles, var_8f8a1689);
+        target_angles = getstartangles(self.var_8fedf36c.origin, self.var_8fedf36c.angles, var_8f8a1689);
         anim_name = "pb_aqu_vtol_enter_jump_loop_" + var_c94a0984;
         lerp_time = 0.5;
         anim_time = getanimlength(anim_name);
         anim_rate = anim_time / lerp_time;
         self thread animation::play(anim_name, var_bfa4502a, "tag_origin", anim_rate, 0.2, 0, 0);
         var_bfa4502a moveto(target_origin, lerp_time, 0, 0);
-        var_bfa4502a rotateto(var_544bbb55, lerp_time, 0, 0);
+        var_bfa4502a rotateto(target_angles, lerp_time, 0, 0);
         wait lerp_time - 0.05;
         self thread animation::play(var_8f8a1689, self.var_8fedf36c, "tag_origin", 1, 0.2, 0.1, 0, 0, 0, 0);
         self waittillmatch(var_8f8a1689, "end");
@@ -2621,12 +2621,12 @@ function function_cea27223() {
     self endon(#"disconnect");
     self endon(#"death");
     wait 1;
-    var_649d368b = 0.9;
+    min_dot = 0.9;
     var_d2877b0d = 1024;
     var_74de1c26 = 500;
     var_8662a9e8 = 0.707;
     /#
-        var_649d368b = 0.7;
+        min_dot = 0.7;
         var_d2877b0d = 6024;
         var_74de1c26 = 100;
     #/
@@ -2648,12 +2648,12 @@ function function_cea27223() {
                 continue;
             }
             forward = anglestoforward(self getplayerangles());
-            var_97b38341 = anglestoforward(enemy.angles);
-            var_6bf94dd9 = vectordot(forward, var_97b38341);
+            enemy_forward = anglestoforward(enemy.angles);
+            var_6bf94dd9 = vectordot(forward, enemy_forward);
             if (var_6bf94dd9 >= var_8662a9e8) {
                 normal = vectornormalize(to_enemy);
                 dot = vectordot(forward, normal);
-                if (dot > var_649d368b && dot > best_dot) {
+                if (dot > min_dot && dot > best_dot) {
                     best_dot = dot;
                     var_4faf77e2 = enemy;
                 }
@@ -2842,7 +2842,7 @@ function function_c10544f() {
         self.var_4324603c = spawnstruct();
     }
     while (self function_5c971cb7() && isalive(self)) {
-        damage, attacker, dir, loc, type, model, tag, part, weapon, flags = self.var_8fedf36c waittill(#"damage");
+        self.var_8fedf36c waittill(#"damage", damage, attacker, dir, loc, type, model, tag, part, weapon, flags);
         self.var_4324603c.attacker = attacker;
         self.var_4324603c.loc = loc;
         self.var_4324603c.weapon = weapon;
@@ -3029,7 +3029,7 @@ function function_61b71c43() {
     scene::add_scene_func("cin_aqu_01_10_intro_1st_flyin_main", &function_f005cfe, "done");
     scene::init("cin_aqu_01_10_intro_1st_flyin_main");
     level.hendricks_vtol = vehicle::simple_spawn_single("hendricks_vtol");
-    level.var_52aa09ce = getent("kane_intro", "targetname") spawner::spawn(1);
+    level.kane = getent("kane_intro", "targetname") spawner::spawn(1);
     level.kane_vtol = vehicle::simple_spawn_single("kane_vtol");
 }
 
@@ -3057,7 +3057,7 @@ function play_intro(hendricks) {
     } else if (!isarray(var_f13bfa4a)) {
         var_f13bfa4a = array(var_f13bfa4a);
     }
-    var_f13bfa4a[var_f13bfa4a.size] = level.var_52aa09ce;
+    var_f13bfa4a[var_f13bfa4a.size] = level.kane;
     if (!isdefined(var_f13bfa4a)) {
         var_f13bfa4a = [];
     } else if (!isarray(var_f13bfa4a)) {
@@ -3339,7 +3339,7 @@ function function_367616d8() {
 // Params 0, eflags: 0x0
 // Checksum 0xd54eaa1e, Offset: 0xd540
 // Size: 0x42
-function function_fd0dbe22() {
+function lcombat_crash_event() {
     level thread scene::play("lcombat_hunter_event_anim", "targetname");
     wait 3;
     level scene::play("lcombat_hunter_crash_trans", "targetname");
@@ -3531,7 +3531,7 @@ function function_99b61785() {
     self endon(#"death");
     self endon(#"hack_terminal_right_completed");
     self.favoriteenemy = level.var_c37cadc1.riders[0];
-    level.var_c37cadc1.riders[0].var_78436f04 = self;
+    level.var_c37cadc1.riders[0].favorite_enemy = self;
     self setneargoalnotifydist(512);
     self.favoriteenemy = level.var_c37cadc1.riders[0];
     self setvehgoalpos(level.var_c37cadc1.riders[0].origin, 1, 1);
@@ -3959,7 +3959,7 @@ function function_9ab6fc55(var_5fe70955, max_missiles) {
 function function_b7aaca29(projectile) {
     self endon(#"entityshutdown");
     self endon(#"death");
-    projectile = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", projectile);
     wait 0.75;
     if (isdefined(projectile)) {
         offset = (0, 0, 0);

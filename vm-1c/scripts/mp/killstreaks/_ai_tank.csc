@@ -1,12 +1,12 @@
-#using scripts/mp/_vehicle;
-#using scripts/mp/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/_vehicle;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #using_animtree("mp_vehicles");
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace ai_tank
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9c33814e, Offset: 0x3e8
 // Size: 0x254
 function __init__() {
@@ -42,7 +42,7 @@ function __init__() {
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xba08e0d0, Offset: 0x648
 // Size: 0x3c
 function spawned(localclientnum, killstreak_duration) {
@@ -51,7 +51,7 @@ function spawned(localclientnum, killstreak_duration) {
 }
 
 // Namespace ai_tank
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe91f8a15, Offset: 0x690
 // Size: 0x1ec
 function missile_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -76,7 +76,7 @@ function missile_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace ai_tank
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa15fa138, Offset: 0x888
 // Size: 0xb4
 function update_hud(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -89,7 +89,7 @@ function update_hud(localclientnum, oldval, newval, bnewent, binitialsnap, field
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x397ae200, Offset: 0x948
 // Size: 0x64
 function update_ui_ammo_count(localclientnum, missiles_loaded) {
@@ -99,7 +99,7 @@ function update_ui_ammo_count(localclientnum, missiles_loaded) {
 }
 
 // Namespace ai_tank
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x22122786, Offset: 0x9b8
 // Size: 0x74
 function update_ui_model_ammo_count(localclientnum, missiles_loaded) {
@@ -110,7 +110,7 @@ function update_ui_model_ammo_count(localclientnum, missiles_loaded) {
 }
 
 // Namespace ai_tank
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf8d81b4e, Offset: 0xa38
 // Size: 0xb4
 function tank_stun(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -126,7 +126,7 @@ function tank_stun(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace ai_tank
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x92ced6c2, Offset: 0xaf8
 // Size: 0xba
 function death(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -144,7 +144,7 @@ function death(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname,
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa6efb21f, Offset: 0xbc0
 // Size: 0x6c
 function start_stun_fx(localclientnum) {
@@ -153,7 +153,7 @@ function start_stun_fx(localclientnum) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x258e9b84, Offset: 0xc38
 // Size: 0x3e
 function stop_stun_fx(localclientnum) {
@@ -164,7 +164,7 @@ function stop_stun_fx(localclientnum) {
 }
 
 // Namespace ai_tank
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4f294358, Offset: 0xc80
 // Size: 0x118
 function play_driving_rumble(localclientnum) {

@@ -1,16 +1,16 @@
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/shared/exploder_shared;
-#using scripts/cp/gametypes/coop;
-#using scripts/cp/_util;
+#using scripts/codescripts/struct;
 #using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/gametypes/coop;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_quadtank;
 
 #using_animtree("critter");
 #using_animtree("a_water_buffalo_run_b");
@@ -290,7 +290,7 @@ function function_7183a31d(fieldname, diff) {
 function function_ec984567() {
     level endon(#"hash_ec7ca67b");
     while (true) {
-        fieldname, diff = level waittill(#"hash_48152b36");
+        level waittill(#"hash_48152b36", fieldname, diff);
         if (diff > 0) {
             level thread function_7183a31d(fieldname, diff);
         }
@@ -346,7 +346,7 @@ function redinstutorial(localclientnum, oldval, newval, bnewent, binitialsnap, f
             string = "CP_DOA_BO3_REDINS_HINT" + randomint(8);
             setuimodelvalue(createuimodel(level.var_7e2a814c, "hint"), istring(string));
             while (true) {
-                val = level waittill(#"countdown");
+                level waittill(#"countdown", val);
                 if (val <= 1) {
                     break;
                 }

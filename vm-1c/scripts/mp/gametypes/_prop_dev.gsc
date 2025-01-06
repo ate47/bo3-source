@@ -1,23 +1,23 @@
+#using scripts/mp/_teamops;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_dogtags;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_prop_controls;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/gametypes/prop;
+#using scripts/mp/killstreaks/_killstreaks;
 #using scripts/shared/bots/_bot;
 #using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
 #using scripts/shared/gameobjects_shared;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/gametypes/prop;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_prop_controls;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_spawn;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
-#using scripts/mp/gametypes/_dogtags;
-#using scripts/mp/_util;
-#using scripts/mp/_teamops;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace prop_dev;
 
@@ -225,7 +225,7 @@
                 function_b02387d6();
             }
             if (getdvarint("<dev string:x226>", 0) != 0) {
-                function_ad9aebcc();
+                showmodels();
                 setdvar("<dev string:x226>", 0);
             }
             if (getdvarint("<dev string:x188>", 0) != 0) {
@@ -1140,7 +1140,7 @@
     // Params 0, eflags: 0x0
     // Checksum 0x6628b56a, Offset: 0x66a0
     // Size: 0x264
-    function function_ad9aebcc() {
+    function showmodels() {
         player = level.players[0];
         angles = player.angles;
         dir = anglestoforward(angles);

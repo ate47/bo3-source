@@ -1,24 +1,24 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_zurich_coalescence_sound;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
-#using scripts/cp/cp_mi_zurich_coalescence_zurich_sacrifice;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_hq;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_plaza_battle;
+#using scripts/cp/cp_mi_zurich_coalescence_zurich_sacrifice;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/ai_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace namespace_e0fbc9fc;
 
@@ -150,8 +150,8 @@ function function_1a4dfaaa(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     spawner::add_global_spawn_function("axis", &zurich_util::function_b1d28dc8);
     spawner::add_global_spawn_function("axis", &zurich_util::function_90de3a76);
     level.var_6b5304af = getnodearray("ai_taylor_cover", "script_noteworthy");
-    foreach (var_974cc07 in level.var_6b5304af) {
-        setenablenode(var_974cc07, 0);
+    foreach (nd_cover in level.var_6b5304af) {
+        setenablenode(nd_cover, 0);
     }
     objectives::set("cp_level_zurich_apprehend_awaiting_obj");
     objectives::hide("cp_level_zurich_apprehend_awaiting_obj");

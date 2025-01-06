@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_cosmodrome_magic_box;
 
 // Namespace zm_cosmodrome_magic_box
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb4e22bc9, Offset: 0x220
 // Size: 0xe4
 function function_2a476331() {
@@ -20,7 +20,7 @@ function function_2a476331() {
 }
 
 // Namespace zm_cosmodrome_magic_box
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa18d0f9a, Offset: 0x310
 // Size: 0xb4
 function get_location_from_chest_index(chest_index) {
@@ -36,7 +36,7 @@ function get_location_from_chest_index(chest_index) {
 }
 
 // Namespace zm_cosmodrome_magic_box
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26ee666, Offset: 0x3d0
 // Size: 0x2c4
 function magic_box_update() {
@@ -79,14 +79,14 @@ function magic_box_update() {
 }
 
 // Namespace zm_cosmodrome_magic_box
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d5a895c, Offset: 0x6a0
 // Size: 0x15c
 function function_dc03417c() {
-    var_a80cddab = struct::get_array("player_respawn_point", "targetname");
-    for (i = 0; i < var_a80cddab.size; i++) {
-        if (var_a80cddab[i].script_noteworthy == "storage_lander_zone") {
-            var_c17a112a = struct::get_array(var_a80cddab[i].target, "targetname");
+    respawn_points = struct::get_array("player_respawn_point", "targetname");
+    for (i = 0; i < respawn_points.size; i++) {
+        if (respawn_points[i].script_noteworthy == "storage_lander_zone") {
+            var_c17a112a = struct::get_array(respawn_points[i].target, "targetname");
             for (j = 0; j < var_c17a112a.size; j++) {
                 if (isdefined(var_c17a112a[j].script_int) && var_c17a112a[j].script_int == 1 && var_c17a112a[j].origin[0] == -159.5) {
                     var_c17a112a[j].origin = (-159.5, -1292.7, -119);

@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace zm_cosmodrome_fx;
 
 // Namespace zm_cosmodrome_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7328abba, Offset: 0x11d8
 // Size: 0x124
 function main() {
@@ -20,7 +20,7 @@ function main() {
 }
 
 // Namespace zm_cosmodrome_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb7cf7cfd, Offset: 0x1308
 // Size: 0x416
 function function_f45953c() {
@@ -108,7 +108,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_cosmodrome_fx
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x3095b104, Offset: 0x1b40
 // Size: 0x11a
 function trap_fx_monitor(name, loc, trap_type) {
@@ -128,7 +128,7 @@ function trap_fx_monitor(name, loc, trap_type) {
 }
 
 // Namespace zm_cosmodrome_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x56bde681, Offset: 0x1c68
 // Size: 0x260
 function function_68c9b7de(loc, trap_type) {
@@ -171,7 +171,7 @@ function function_68c9b7de(loc, trap_type) {
 }
 
 // Namespace zm_cosmodrome_fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8efbaf42, Offset: 0x1ed0
 // Size: 0x37a
 function function_3b3f16da(color, localclientnum) {

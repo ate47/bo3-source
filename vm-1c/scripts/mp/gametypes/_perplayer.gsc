@@ -74,7 +74,7 @@ function disable(handler) {
 // Size: 0x180
 function onplayerconnect(handler) {
     for (;;) {
-        player = level waittill(#"connecting");
+        level waittill(#"connecting", player);
         if (!isdefined(player.handlers)) {
             player.handlers = [];
         }

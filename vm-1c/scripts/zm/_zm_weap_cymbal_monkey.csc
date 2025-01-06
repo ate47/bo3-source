@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
 #using scripts/codescripts/struct;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_cymbal_monkey;
 
 // Namespace _zm_weap_cymbal_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1164836, Offset: 0x110
 // Size: 0x70
 function init() {

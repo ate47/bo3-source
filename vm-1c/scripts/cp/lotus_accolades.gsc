@@ -1,19 +1,19 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace lotus_accolades;
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3235da01, Offset: 0x7f0
 // Size: 0x244
 function function_66df416f() {
@@ -40,7 +40,7 @@ function function_66df416f() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa956d313, Offset: 0xa40
 // Size: 0x112
 function function_f2c7746a() {
@@ -67,7 +67,7 @@ function function_f2c7746a() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa77b0c08, Offset: 0xb60
 // Size: 0xaa
 function function_a2c4c634() {
@@ -87,7 +87,7 @@ function function_a2c4c634() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39d39d38, Offset: 0xc18
 // Size: 0x24
 function function_d657f93a() {
@@ -95,7 +95,7 @@ function function_d657f93a() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2e755a98, Offset: 0xc48
 // Size: 0xb0
 function function_8b3820b0(params) {
@@ -108,7 +108,7 @@ function function_8b3820b0(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a7670fe, Offset: 0xd00
 // Size: 0x24
 function function_b68ffa5d() {
@@ -116,7 +116,7 @@ function function_b68ffa5d() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf4f9735, Offset: 0xd30
 // Size: 0x322
 function function_6e45ce5d(params) {
@@ -153,7 +153,7 @@ function function_6e45ce5d(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x377f2d1e, Offset: 0x1060
 // Size: 0x24
 function function_c6ba5108() {
@@ -161,7 +161,7 @@ function function_c6ba5108() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c6a9bf6, Offset: 0x1090
 // Size: 0xec
 function function_8eb61d56(params) {
@@ -171,7 +171,7 @@ function function_8eb61d56(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5754643a, Offset: 0x1188
 // Size: 0x24
 function function_367835e3() {
@@ -179,7 +179,7 @@ function function_367835e3() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2957958e, Offset: 0x11b8
 // Size: 0xe8
 function function_109e560b() {
@@ -187,7 +187,7 @@ function function_109e560b() {
     if (self.archetype === "human_riotshield") {
         self thread function_d48890bb();
         while (!isdefined(self.var_66202c1f)) {
-            n_damage, e_attacker, v_direction, v_point, var_4ae4f03b = self waittill(#"damage");
+            self waittill(#"damage", n_damage, e_attacker, v_direction, v_point, var_4ae4f03b);
             if (var_4ae4f03b === "MOD_RIFLE_BULLET" || var_4ae4f03b === "MOD_PISTOL_BULLET" || isplayer(e_attacker) && var_4ae4f03b === "MOD_HEAD_SHOT") {
                 self.var_66202c1f = 1;
             }
@@ -196,18 +196,18 @@ function function_109e560b() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe9570bc0, Offset: 0x12a8
 // Size: 0x58
 function function_d48890bb() {
-    attacker = self waittill(#"death");
+    self waittill(#"death", attacker);
     if (isplayer(attacker) && self.var_66202c1f !== 1) {
         attacker notify(#"accolade_6_increment");
     }
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x571729d5, Offset: 0x1308
 // Size: 0xae
 function function_7c30e9e0() {
@@ -220,7 +220,7 @@ function function_7c30e9e0() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe69b9404, Offset: 0x13c0
 // Size: 0x14
 function function_8c0cbe3e() {
@@ -228,7 +228,7 @@ function function_8c0cbe3e() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcefd2ea7, Offset: 0x13e0
 // Size: 0x24
 function function_4815496() {
@@ -236,7 +236,7 @@ function function_4815496() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x259dd1a6, Offset: 0x1410
 // Size: 0x64
 function function_b9a9c8d8(params) {
@@ -246,7 +246,7 @@ function function_b9a9c8d8(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6401a69, Offset: 0x1480
 // Size: 0x24
 function function_9e965239() {
@@ -254,7 +254,7 @@ function function_9e965239() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4c0435cd, Offset: 0x14b0
 // Size: 0x84
 function function_3bbd5251(params) {
@@ -264,7 +264,7 @@ function function_3bbd5251(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb5aa7517, Offset: 0x1540
 // Size: 0x24
 function function_8593adf4() {
@@ -272,7 +272,7 @@ function function_8593adf4() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b89ac64, Offset: 0x1570
 // Size: 0x150
 function function_e36c85d8(params) {
@@ -297,7 +297,7 @@ function function_e36c85d8(params) {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf0ea6fee, Offset: 0x16c8
 // Size: 0x5c
 function function_8dc27487(n_max_time) {
@@ -312,7 +312,7 @@ function function_8dc27487(n_max_time) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1ad67a44, Offset: 0x1730
 // Size: 0x48c
 function function_75102c92() {
@@ -381,7 +381,7 @@ function function_75102c92() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96193fab, Offset: 0x1bc8
 // Size: 0x8c
 function function_f5ef0d83(params) {
@@ -391,7 +391,7 @@ function function_f5ef0d83(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe56efb89, Offset: 0x1c60
 // Size: 0xf2
 function function_c20741bf() {
@@ -410,7 +410,7 @@ function function_c20741bf() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x77d19dbd, Offset: 0x1d60
 // Size: 0x64
 function function_fc480d54() {
@@ -421,7 +421,7 @@ function function_fc480d54() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x124b1cb, Offset: 0x1dd0
 // Size: 0x58
 function function_e8cf8caa(params) {
@@ -431,7 +431,7 @@ function function_e8cf8caa(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc7f3aa54, Offset: 0x1e30
 // Size: 0x64
 function function_12b1c299() {
@@ -441,7 +441,7 @@ function function_12b1c299() {
 }
 
 // Namespace lotus_accolades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc8af3a7, Offset: 0x1ea0
 // Size: 0x19c
 function function_436940b1(params) {
@@ -462,7 +462,7 @@ function function_436940b1(params) {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8fcd3e58, Offset: 0x2048
 // Size: 0x5c
 function function_f53b652e() {
@@ -472,7 +472,7 @@ function function_f53b652e() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd5d8ae75, Offset: 0x20b0
 // Size: 0x222
 function function_d57bb90f() {
@@ -484,7 +484,7 @@ function function_d57bb90f() {
     var_cc018542 = getweapon("launcher_standard");
     w_minigun = getweapon("minigun_lotus");
     while (isdefined(level.var_38a4277e)) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = level.var_38a4277e waittill(#"damage");
+        level.var_38a4277e waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (attacker === self && damage > 0) {
             if (weapon === var_cc018542 && !isdefined(self.var_e1f9f377)) {
                 self.var_e1f9f377 = 1;
@@ -501,7 +501,7 @@ function function_d57bb90f() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf586e5e5, Offset: 0x22e0
 // Size: 0x1a2
 function function_aff09c5b() {
@@ -523,7 +523,7 @@ function function_aff09c5b() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd9ffa31, Offset: 0x2490
 // Size: 0x5c
 function function_428a25c7() {
@@ -534,7 +534,7 @@ function function_428a25c7() {
 }
 
 // Namespace lotus_accolades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4bb85d05, Offset: 0x24f8
 // Size: 0x11a
 function function_3d0c6b79() {
@@ -542,7 +542,7 @@ function function_3d0c6b79() {
     self endon(#"accolade_15_complete");
     var_429f87f7 = getweapon("gunship_cannon");
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (weapon === var_429f87f7) {
             /#
                 iprintln("<dev string:x52>");

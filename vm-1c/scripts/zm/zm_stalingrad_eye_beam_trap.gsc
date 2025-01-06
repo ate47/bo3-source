@@ -1,23 +1,23 @@
-#using scripts/zm/zm_stalingrad_vo;
-#using scripts/zm/zm_stalingrad_util;
-#using scripts/zm/zm_stalingrad;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_load;
-#using scripts/shared/_burnplayer;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/_burnplayer;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_stalingrad;
+#using scripts/zm/zm_stalingrad_util;
+#using scripts/zm/zm_stalingrad_vo;
 
 #namespace zm_stalingrad_eye_beam_trap;
 
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcad13822, Offset: 0x570
 // Size: 0x2a0
 function __init__() {
@@ -52,7 +52,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaf83ccba, Offset: 0x818
 // Size: 0x150
 function function_a2abac9c(e_player) {
@@ -75,7 +75,7 @@ function function_a2abac9c(e_player) {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd45b1c8, Offset: 0x970
 // Size: 0x1b0
 function function_fd8775a2() {
@@ -84,7 +84,7 @@ function function_fd8775a2() {
         if (self.stub flag::get("beam_cooldown")) {
             self.stub flag::wait_till_clear("beam_cooldown");
         }
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         if (!self.stub flag::get("beam_on") && !self.stub flag::get("beam_cooldown")) {
             if (!e_who zm_score::can_player_purchase(1500)) {
                 zm_utility::play_sound_at_pos("no_purchase", self.origin);
@@ -99,7 +99,7 @@ function function_fd8775a2() {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x85a77903, Offset: 0xb28
 // Size: 0x10c
 function function_3ae55c2d(var_f2bd831, a_s_switches) {
@@ -112,7 +112,7 @@ function function_3ae55c2d(var_f2bd831, a_s_switches) {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcafafa64, Offset: 0xc40
 // Size: 0x702
 function function_8bc8cc13(var_f2bd831, a_s_switches) {
@@ -176,7 +176,7 @@ function function_8bc8cc13(var_f2bd831, a_s_switches) {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x94c79d6c, Offset: 0x1350
 // Size: 0xbc
 function function_78f79e79(var_66a9cd70) {
@@ -191,7 +191,7 @@ function function_78f79e79(var_66a9cd70) {
 }
 
 // Namespace zm_stalingrad_eye_beam_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46473d35, Offset: 0x1418
 // Size: 0x166
 function function_6009178e(var_47326) {

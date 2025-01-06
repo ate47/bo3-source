@@ -1,12 +1,12 @@
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/hostmigration_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/hud_util_shared;
 
 #namespace hostmigration;
 
 // Namespace hostmigration
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x100
 // Size: 0x4
 function callback_hostmigrationsave() {
@@ -14,7 +14,7 @@ function callback_hostmigrationsave() {
 }
 
 // Namespace hostmigration
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x110
 // Size: 0x4
 function callback_prehostmigrationsave() {
@@ -22,7 +22,7 @@ function callback_prehostmigrationsave() {
 }
 
 // Namespace hostmigration
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x348f972e, Offset: 0x120
 // Size: 0x1b2
 function callback_hostmigration() {

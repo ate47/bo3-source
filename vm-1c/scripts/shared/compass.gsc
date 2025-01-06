@@ -3,7 +3,7 @@
 #namespace compass;
 
 // Namespace compass
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb5439aef, Offset: 0xc0
 // Size: 0x46c
 function setupminimap(material) {
@@ -53,7 +53,7 @@ function setupminimap(material) {
 }
 
 // Namespace compass
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9f81d54e, Offset: 0x538
 // Size: 0x44
 function vecscale(vec, scalar) {

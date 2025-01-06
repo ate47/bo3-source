@@ -1,15 +1,15 @@
-#using scripts/shared/gameskill_shared;
-#using scripts/shared/abilities/_ability_power;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/gameskill_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace scoreevents;
 
 // Namespace scoreevents
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x96ec284d, Offset: 0x2b0
 // Size: 0x3c8
 function processscoreevent(event, player, victim, weapon) {
@@ -69,7 +69,7 @@ function processscoreevent(event, player, victim, weapon) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x81884cba, Offset: 0x680
 // Size: 0xa4
 function shouldaddrankxp(player) {
@@ -89,7 +89,7 @@ function shouldaddrankxp(player) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe2352c0a, Offset: 0x730
 // Size: 0x64
 function uninterruptedobitfeedkills(attacker, weapon) {
@@ -101,7 +101,7 @@ function uninterruptedobitfeedkills(attacker, weapon) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2ba82723, Offset: 0x7a0
 // Size: 0x2c
 function isregisteredevent(type) {
@@ -112,7 +112,7 @@ function isregisteredevent(type) {
 }
 
 // Namespace scoreevents
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2107d27e, Offset: 0x7d8
 // Size: 0x3c
 function decrementlastobituaryplayercountafterfade() {
@@ -123,7 +123,7 @@ function decrementlastobituaryplayercountafterfade() {
 }
 
 // Namespace scoreevents
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95f44f5, Offset: 0x820
 // Size: 0x4c
 function getscoreeventtablename() {
@@ -137,7 +137,7 @@ function getscoreeventtablename() {
 }
 
 // Namespace scoreevents
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe86d5f70, Offset: 0x878
 // Size: 0x98
 function getscoreeventtableid() {
@@ -151,7 +151,7 @@ function getscoreeventtableid() {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb9267f2c, Offset: 0x918
 // Size: 0x6a
 function function_575986e3(gametype) {
@@ -164,7 +164,7 @@ function function_575986e3(gametype) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd5027df8, Offset: 0x990
 // Size: 0x6c
 function function_6dd97e6b(gametype) {
@@ -177,7 +177,7 @@ function function_6dd97e6b(gametype) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb0dffb9e, Offset: 0xa08
 // Size: 0x138
 function function_7d1547d7(gametype) {
@@ -205,7 +205,7 @@ function function_7d1547d7(gametype) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbc263923, Offset: 0xb48
 // Size: 0x7a
 function function_f8c7e604(type) {
@@ -219,7 +219,7 @@ function function_f8c7e604(type) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x14c99e5b, Offset: 0xbd0
 // Size: 0x54
 function function_9b69b9d6(event) {
@@ -230,7 +230,7 @@ function function_9b69b9d6(event) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x389972ed, Offset: 0xc30
 // Size: 0x1ec
 function givecratecapturemedal(crate, capturer) {
@@ -260,7 +260,7 @@ function givecratecapturemedal(crate, capturer) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7417fa2f, Offset: 0xe28
 // Size: 0x3a
 function register_hero_ability_kill_event(event_func) {
@@ -271,7 +271,7 @@ function register_hero_ability_kill_event(event_func) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8fbb5a80, Offset: 0xe70
 // Size: 0x3a
 function register_hero_ability_multikill_event(event_func) {
@@ -282,7 +282,7 @@ function register_hero_ability_multikill_event(event_func) {
 }
 
 // Namespace scoreevents
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x76e4f673, Offset: 0xeb8
 // Size: 0x3a
 function register_hero_weapon_multikill_event(event_func) {
@@ -304,7 +304,7 @@ function register_thief_shutdown_enemy_event(event_func) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x33bad423, Offset: 0xf48
 // Size: 0xb4
 function hero_ability_kill_event(ability, victim_ability) {
@@ -319,7 +319,7 @@ function hero_ability_kill_event(ability, victim_ability) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd58684a, Offset: 0x1008
 // Size: 0xb4
 function hero_ability_multikill_event(killcount, ability) {
@@ -334,7 +334,7 @@ function hero_ability_multikill_event(killcount, ability) {
 }
 
 // Namespace scoreevents
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x52be2291, Offset: 0x10c8
 // Size: 0xb4
 function hero_weapon_multikill_event(killcount, weapon) {

@@ -3,7 +3,7 @@
 #namespace zm_temple_ffotd;
 
 // Namespace zm_temple_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc297980b, Offset: 0xe8
 // Size: 0x102
 function main_start() {
@@ -17,7 +17,7 @@ function main_start() {
 }
 
 // Namespace zm_temple_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1f8
 // Size: 0x4
 function main_end() {

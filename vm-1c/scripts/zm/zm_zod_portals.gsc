@@ -1,22 +1,22 @@
-#using scripts/zm/zm_zod_quest;
-#using scripts/shared/ai/zombie_death;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_zod_quest;
 
 #using_animtree("generic");
 
@@ -24,7 +24,7 @@
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x2
-// Checksum 0x9a169138, Offset: 0x600
+// Checksum 0xb683972a, Offset: 0x600
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_zod_portals", &__init__, undefined, undefined);
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x0
-// Checksum 0xd5a08ec2, Offset: 0x640
+// Checksum 0x54a6fbbe, Offset: 0x640
 // Size: 0x294
 function __init__() {
     level._effect["portal_3p"] = "zombie/fx_quest_portal_trail_zod_zmb";
@@ -53,7 +53,7 @@ function __init__() {
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0xe64e3602, Offset: 0x8e0
+// Checksum 0x3b736b57, Offset: 0x8e0
 // Size: 0x2bc
 function function_54ec766b(str_id) {
     width = -64;
@@ -81,7 +81,7 @@ function function_54ec766b(str_id) {
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0x33a38e3e, Offset: 0xba8
+// Checksum 0xe6446812, Offset: 0xba8
 // Size: 0xf2
 function function_16fca6d(player) {
     level endon(#"ritual_pap_complete");
@@ -99,12 +99,12 @@ function function_16fca6d(player) {
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x0
-// Checksum 0x2e7a084c, Offset: 0xca8
+// Checksum 0x909f3271, Offset: 0xca8
 // Size: 0xac
 function function_a90ab0d7() {
     level endon(#"ritual_pap_complete");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger()) {
             continue;
         }
@@ -121,7 +121,7 @@ function function_a90ab0d7() {
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0x82f69d4b, Offset: 0xd60
+// Checksum 0xac2689b9, Offset: 0xd60
 // Size: 0xe6
 function function_42ed55f2(var_d42f02cf) {
     var_3842f06d = struct::get_array("teleport_effect_origin", "targetname");
@@ -136,7 +136,7 @@ function function_42ed55f2(var_d42f02cf) {
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0x1f443c9f, Offset: 0xe50
+// Checksum 0x69b35316, Offset: 0xe50
 // Size: 0x4c
 function function_e0c93f92(var_d42f02cf) {
     level clientfield::set("portal_state_" + var_d42f02cf, 1);
@@ -145,7 +145,7 @@ function function_e0c93f92(var_d42f02cf) {
 
 // Namespace zm_zod_portals
 // Params 2, eflags: 0x0
-// Checksum 0x7f93ac8a, Offset: 0xea8
+// Checksum 0x36c40ff2, Offset: 0xea8
 // Size: 0x38c
 function portal_open(var_d42f02cf, var_14429fc9) {
     if (!isdefined(var_14429fc9)) {
@@ -181,7 +181,7 @@ function portal_open(var_d42f02cf, var_14429fc9) {
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0xba3be233, Offset: 0x1240
+// Checksum 0x8ea2c018, Offset: 0x1240
 // Size: 0xd2
 function function_7679b497(str_input) {
     var_ab765abb = array("canal", "slums", "theater");
@@ -194,12 +194,12 @@ function function_7679b497(str_input) {
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x0
-// Checksum 0xf0b3fe88, Offset: 0x1320
+// Checksum 0x355a376, Offset: 0x1320
 // Size: 0x174
 function portal_think() {
     self.var_71abf438 = struct::get_array(self.target, "targetname");
     while (true) {
-        var_5ee55fde = self waittill(#"trigger");
+        self waittill(#"trigger", var_5ee55fde);
         level clientfield::increment("pulse_" + self.script_noteworthy);
         if (isdefined(var_5ee55fde.teleporting) && var_5ee55fde.teleporting) {
             continue;
@@ -217,7 +217,7 @@ function portal_think() {
 
 // Namespace zm_zod_portals
 // Params 2, eflags: 0x0
-// Checksum 0xba9ca66d, Offset: 0x14a0
+// Checksum 0x733f4314, Offset: 0x14a0
 // Size: 0x924
 function function_d0ff7e09(player, show_fx) {
     if (!isdefined(show_fx)) {
@@ -271,8 +271,8 @@ function function_d0ff7e09(player, show_fx) {
             var_cefa4b63 = 1;
             s_pos = array::random(self.var_71abf438);
             foreach (var_3bc10d31 in a_players) {
-                var_f2c93934 = distance(var_3bc10d31.origin, s_pos.origin);
-                if (var_f2c93934 < 32) {
+                f_dist = distance(var_3bc10d31.origin, s_pos.origin);
+                if (f_dist < 32) {
                     var_cefa4b63 = 0;
                 }
             }
@@ -314,7 +314,7 @@ function function_d0ff7e09(player, show_fx) {
 
 // Namespace zm_zod_portals
 // Params 0, eflags: 0x0
-// Checksum 0x1e9b6cdc, Offset: 0x1dd0
+// Checksum 0x7ffaffff, Offset: 0x1dd0
 // Size: 0x5e
 function function_7807150a() {
     if (!(isdefined(self.b_ignore_cleanup) && self.b_ignore_cleanup)) {
@@ -329,7 +329,7 @@ function function_7807150a() {
 
 // Namespace zm_zod_portals
 // Params 1, eflags: 0x0
-// Checksum 0x45bad9c8, Offset: 0x1e38
+// Checksum 0xeff1321, Offset: 0x1e38
 // Size: 0x2c4
 function function_eb1242c8(var_5ee55fde) {
     var_5ee55fde endon(#"death");

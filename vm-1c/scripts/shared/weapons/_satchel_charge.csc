@@ -1,13 +1,13 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace satchel_charge;
 
 // Namespace satchel_charge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb6ac2d4a, Offset: 0x1b0
 // Size: 0x6c
 function init_shared(localclientnum) {
@@ -17,7 +17,7 @@ function init_shared(localclientnum) {
 }
 
 // Namespace satchel_charge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x25a4dde6, Offset: 0x228
 // Size: 0x8c
 function function_dcd6d73e(localclientnum) {

@@ -1,14 +1,14 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_moon_fx;
 
 // Namespace zm_moon_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad1c205c, Offset: 0x10c0
 // Size: 0x3c
 function main() {
@@ -18,7 +18,7 @@ function main() {
 }
 
 // Namespace zm_moon_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc015e12e, Offset: 0x1108
 // Size: 0x382
 function function_f45953c() {
@@ -57,7 +57,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_moon_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3236df1, Offset: 0x1498
 // Size: 0x34a
 function function_e6258024() {
@@ -94,7 +94,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_moon_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d15c0f3, Offset: 0x17f0
 // Size: 0x102
 function function_f205a5f1() {

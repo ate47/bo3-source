@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_tone_death;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_tone_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7413b4ce, Offset: 0x240
 // Size: 0x7c
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_tone_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf37c053, Offset: 0x2c8
 // Size: 0x5c
 function event() {
@@ -42,7 +42,7 @@ function event() {
 }
 
 // Namespace zm_bgb_tone_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8d77d2f, Offset: 0x330
 // Size: 0x46
 function function_1473087b() {
@@ -51,7 +51,7 @@ function function_1473087b() {
 }
 
 // Namespace zm_bgb_tone_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32ecd2b7, Offset: 0x380
 // Size: 0xe8
 function actor_death_override(e_attacker) {

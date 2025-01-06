@@ -1,47 +1,47 @@
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/ai/zombie_vortex;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/ai/systems/gib;
-#using scripts/zm/_zm_hero_weapon;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/throttle_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai/zombie_vortex;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/throttle_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_hero_weapon;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_gravityspikes;
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x2
-// Checksum 0x9ef5452a, Offset: 0x8a0
+// Checksum 0x39ca53c8, Offset: 0x8a0
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_weap_gravityspikes", &__init__, undefined, undefined);
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb6f0c845, Offset: 0x8e0
+// Params 0, eflags: 0x0
+// Checksum 0x55f71b3f, Offset: 0x8e0
 // Size: 0x1bc
 function __init__() {
     level.n_zombies_lifted_for_ragdoll = 0;
@@ -64,8 +64,8 @@ function __init__() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdb3e254d, Offset: 0xaa8
+// Params 0, eflags: 0x0
+// Checksum 0x716fc906, Offset: 0xaa8
 // Size: 0x274
 function register_clientfields() {
     clientfield::register("actor", "gravity_slam_down", 1, 1, "int");
@@ -84,8 +84,8 @@ function register_clientfields() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x5 linked
-// Checksum 0xe4775326, Offset: 0xd28
+// Params 0, eflags: 0x4
+// Checksum 0xbfd2ee69, Offset: 0xd28
 // Size: 0x204
 function private function_6bfe94e8() {
     self endon(#"disconnect");
@@ -99,7 +99,7 @@ function private function_6bfe94e8() {
     self.b_gravity_trap_fx_on = 0;
     self thread reset_after_bleeding_out();
     do {
-        weapon = self waittill(#"hash_b53927b");
+        self waittill(#"hash_b53927b", weapon);
     } while (weapon != var_f790ca9f);
     if (isdefined(self.var_b1869952) && isdefined(self.var_b1869952["hero_gravityspikes_melee"])) {
         self setweaponammoclip(var_f790ca9f, self.var_b1869952["hero_gravityspikes_melee"]);
@@ -119,8 +119,8 @@ function private function_6bfe94e8() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xaed6b8eb, Offset: 0xf38
+// Params 0, eflags: 0x0
+// Checksum 0x384cf53, Offset: 0xf38
 // Size: 0x194
 function reset_after_bleeding_out() {
     self endon(#"disconnect");
@@ -148,8 +148,8 @@ function reset_after_bleeding_out() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0x15cc7355, Offset: 0x10d8
+// Params 2, eflags: 0x0
+// Checksum 0xdfe3c4b8, Offset: 0x10d8
 // Size: 0x354
 function function_4650a121(e_player, ai_enemy) {
     if (e_player laststand::player_is_in_laststand()) {
@@ -186,8 +186,8 @@ function function_4650a121(e_player, ai_enemy) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x615bf360, Offset: 0x1438
+// Params 1, eflags: 0x0
+// Checksum 0xa8254da4, Offset: 0x1438
 // Size: 0x12c
 function function_618e090(var_87f03818) {
     self zm_hero_weapon::function_44ede878(var_87f03818);
@@ -207,8 +207,8 @@ function function_618e090(var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x95e60846, Offset: 0x1570
+// Params 1, eflags: 0x0
+// Checksum 0xc6f4073d, Offset: 0x1570
 // Size: 0x94
 function function_aebacd0f(var_87f03818) {
     self zm_hero_weapon::function_d1e94a2f(var_87f03818);
@@ -221,13 +221,13 @@ function function_aebacd0f(var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x46af0972, Offset: 0x1610
+// Params 0, eflags: 0x0
+// Checksum 0xfa6b0d56, Offset: 0x1610
 // Size: 0x68
 function weapon_drop_watcher() {
     self endon(#"disconnect");
     while (true) {
-        w_current = self waittill(#"weapon_switch_started");
+        self waittill(#"weapon_switch_started", w_current);
         if (zm_utility::is_hero_weapon(w_current)) {
             self setweaponammoclip(w_current, 0);
         }
@@ -235,13 +235,13 @@ function weapon_drop_watcher() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x2cd55, Offset: 0x1680
+// Params 0, eflags: 0x0
+// Checksum 0x81c33e48, Offset: 0x1680
 // Size: 0x70
 function weapon_change_watcher() {
     self endon(#"disconnect");
     while (true) {
-        w_current, w_previous = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", w_current, w_previous);
         if (isdefined(w_previous) && zm_utility::is_hero_weapon(w_current)) {
             self.var_f26475de = w_previous;
         }
@@ -249,8 +249,8 @@ function weapon_change_watcher() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x805edba7, Offset: 0x16f8
+// Params 1, eflags: 0x0
+// Checksum 0xc75d2914, Offset: 0x16f8
 // Size: 0xc8
 function gravityspikes_attack_watcher(var_87f03818) {
     self endon(#"hash_6716a6e7");
@@ -259,7 +259,7 @@ function gravityspikes_attack_watcher(var_87f03818) {
     self endon(#"death");
     self endon(#"gravity_spike_expired");
     while (true) {
-        weapon = self waittill(#"weapon_melee_power");
+        self waittill(#"weapon_melee_power", weapon);
         if (weapon == var_87f03818) {
             self playrumbleonentity("talon_spike");
             self thread knockdown_zombies_slam();
@@ -269,8 +269,8 @@ function gravityspikes_attack_watcher(var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0xdd2886b6, Offset: 0x17c8
+// Params 1, eflags: 0x0
+// Checksum 0xcff03d98, Offset: 0x17c8
 // Size: 0x4f0
 function gravityspikes_stuck_above_zombie_watcher(var_87f03818) {
     self endon(#"hash_6716a6e7");
@@ -334,8 +334,8 @@ function gravityspikes_stuck_above_zombie_watcher(var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x165db7f1, Offset: 0x1cc0
+// Params 1, eflags: 0x0
+// Checksum 0xe331f0c6, Offset: 0x1cc0
 // Size: 0xa8
 function gravityspikes_altfire_watcher(var_87f03818) {
     self endon(#"hash_6716a6e7");
@@ -344,7 +344,7 @@ function gravityspikes_altfire_watcher(var_87f03818) {
     self endon(#"death");
     self endon(#"gravity_spike_expired");
     while (true) {
-        weapon = self waittill(#"weapon_melee_power_left");
+        self waittill(#"weapon_melee_power_left", weapon);
         if (weapon == var_87f03818 && self gravity_spike_position_valid()) {
             self thread plant_gravity_trap(var_87f03818);
         }
@@ -352,8 +352,8 @@ function gravityspikes_altfire_watcher(var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc5dc9315, Offset: 0x1d70
+// Params 0, eflags: 0x0
+// Checksum 0x4bd5ce67, Offset: 0x1d70
 // Size: 0x44
 function gravity_spike_position_valid() {
     if (isdefined(level.gravityspike_position_check)) {
@@ -365,8 +365,8 @@ function gravity_spike_position_valid() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 3, eflags: 0x1 linked
-// Checksum 0x3eaba3a0, Offset: 0x1dc0
+// Params 3, eflags: 0x0
+// Checksum 0x937714ea, Offset: 0x1dc0
 // Size: 0xfc
 function chop_actor(ai, leftswing, weapon) {
     if (!isdefined(weapon)) {
@@ -385,8 +385,8 @@ function chop_actor(ai, leftswing, weapon) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 3, eflags: 0x1 linked
-// Checksum 0x749f776c, Offset: 0x1ec8
+// Params 3, eflags: 0x0
+// Checksum 0x5bc61f40, Offset: 0x1ec8
 // Size: 0x2f2
 function chop_zombies(first_time, leftswing, weapon) {
     if (!isdefined(weapon)) {
@@ -428,8 +428,8 @@ function chop_zombies(first_time, leftswing, weapon) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7dc03813, Offset: 0x21c8
+// Params 1, eflags: 0x0
+// Checksum 0x77b1108a, Offset: 0x21c8
 // Size: 0x7c
 function function_b2b16b7b(player) {
     player thread chop_zombies(1, 1, self);
@@ -440,8 +440,8 @@ function function_b2b16b7b(player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0xe628e136, Offset: 0x2250
+// Params 1, eflags: 0x0
+// Checksum 0x11b59448, Offset: 0x2250
 // Size: 0x88
 function function_844248de(var_87f03818) {
     self endon(#"hash_6716a6e7");
@@ -450,14 +450,14 @@ function function_844248de(var_87f03818) {
     self endon(#"death");
     self endon(#"gravity_spike_expired");
     while (true) {
-        weapon = self waittill(#"weapon_melee");
+        self waittill(#"weapon_melee", weapon);
         weapon thread function_b2b16b7b(self);
     }
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5a80143, Offset: 0x22e0
+// Params 1, eflags: 0x0
+// Checksum 0x4387b211, Offset: 0x22e0
 // Size: 0x64
 function function_6b90b056(player) {
     if (!(isdefined(player.disable_hero_power_charging) && player.disable_hero_power_charging)) {
@@ -467,8 +467,8 @@ function function_6b90b056(player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1767b038, Offset: 0x2350
+// Params 1, eflags: 0x0
+// Checksum 0x98cee00a, Offset: 0x2350
 // Size: 0x3e
 function function_e0511e28(weapon) {
     self zm_hero_weapon::function_194811c8(weapon);
@@ -477,8 +477,8 @@ function function_e0511e28(weapon) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 11, eflags: 0x1 linked
-// Checksum 0xfc5653c5, Offset: 0x2398
+// Params 11, eflags: 0x0
+// Checksum 0x5067e5b3, Offset: 0x2398
 // Size: 0xac
 function player_invulnerable_during_gravityspike_slam(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
     if (isdefined(self.gravityspikes_slam) && (self isslamming() || self.var_887585ba === 3 && self.gravityspikes_slam)) {
@@ -488,8 +488,8 @@ function player_invulnerable_during_gravityspike_slam(einflictor, eattacker, ida
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd76275e9, Offset: 0x2450
+// Params 0, eflags: 0x0
+// Checksum 0xaaa27ccd, Offset: 0x2450
 // Size: 0x24
 function no_damage_gravityspikes_slam() {
     self.gravityspikes_slam = 1;
@@ -498,8 +498,8 @@ function no_damage_gravityspikes_slam() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x2f26f535, Offset: 0x2480
+// Params 1, eflags: 0x0
+// Checksum 0x63612f99, Offset: 0x2480
 // Size: 0x1a0
 function player_near_gravity_vortex(v_vortex_origin) {
     self endon(#"disconnect");
@@ -521,8 +521,8 @@ function player_near_gravity_vortex(v_vortex_origin) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0x5be604f5, Offset: 0x2628
+// Params 2, eflags: 0x0
+// Checksum 0x3206569, Offset: 0x2628
 // Size: 0xf2
 function function_55a5024b(e_player, v_vortex_origin) {
     e_player endon(#"disconnect");
@@ -538,8 +538,8 @@ function function_55a5024b(e_player, v_vortex_origin) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x4d34d67a, Offset: 0x2728
+// Params 1, eflags: 0x0
+// Checksum 0xe97c584, Offset: 0x2728
 // Size: 0x3a2
 function plant_gravity_trap(var_87f03818) {
     self endon(#"disconnect");
@@ -579,8 +579,8 @@ function plant_gravity_trap(var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0x6a783cb0, Offset: 0x2ad8
+// Params 2, eflags: 0x0
+// Checksum 0x9bc6759c, Offset: 0x2ad8
 // Size: 0x1ac
 function gravity_trap_loop(var_5da14f3b, var_87f03818) {
     self endon(#"gravity_trap_spikes_retrieved");
@@ -609,8 +609,8 @@ function gravity_trap_loop(var_5da14f3b, var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x64f4091e, Offset: 0x2c90
+// Params 1, eflags: 0x0
+// Checksum 0xbac5421, Offset: 0x2c90
 // Size: 0x1ac
 function gravity_trap_check(player) {
     player endon(#"gravity_trap_spikes_retrieved");
@@ -637,8 +637,8 @@ function gravity_trap_check(player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0xeda43306, Offset: 0x2e48
+// Params 1, eflags: 0x0
+// Checksum 0x94437bbb, Offset: 0x2e48
 // Size: 0x176
 function create_gravity_trap_spikes_in_ground(var_e987f01a) {
     if (!isdefined(self.mdl_gravity_trap_spikes)) {
@@ -661,8 +661,8 @@ function create_gravity_trap_spikes_in_ground(var_e987f01a) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xfcca3bb1, Offset: 0x2fc8
+// Params 0, eflags: 0x0
+// Checksum 0xf75329c0, Offset: 0x2fc8
 // Size: 0x34
 function gravity_spike_planted_play() {
     wait 2;
@@ -670,8 +670,8 @@ function gravity_spike_planted_play() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x7b59e6be, Offset: 0x3008
+// Params 0, eflags: 0x0
+// Checksum 0x4f65b185, Offset: 0x3008
 // Size: 0x186
 function destroy_gravity_trap_spikes_in_ground() {
     mdl_spike_source = self.mdl_gravity_trap_fx_source;
@@ -698,8 +698,8 @@ function destroy_gravity_trap_spikes_in_ground() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1a4c2838, Offset: 0x3198
+// Params 1, eflags: 0x0
+// Checksum 0x7c1df814, Offset: 0x3198
 // Size: 0x9c
 function gravity_trap_fx_on(v_spawn_pos) {
     if (!isdefined(self.mdl_gravity_trap_fx_source)) {
@@ -712,8 +712,8 @@ function gravity_trap_fx_on(v_spawn_pos) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x276531a1, Offset: 0x3240
+// Params 0, eflags: 0x0
+// Checksum 0xbb9892bd, Offset: 0x3240
 // Size: 0x5c
 function gravity_trap_fx_off() {
     if (!isdefined(self.mdl_gravity_trap_fx_source)) {
@@ -724,8 +724,8 @@ function gravity_trap_fx_off() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0xf7da4d32, Offset: 0x32a8
+// Params 2, eflags: 0x0
+// Checksum 0x10ed1d7e, Offset: 0x32a8
 // Size: 0x12c
 function function_268b0239(v_origin, var_87f03818) {
     if (isdefined(self.var_817ff1ed)) {
@@ -746,8 +746,8 @@ function function_268b0239(v_origin, var_87f03818) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5b1051f8, Offset: 0x33e0
+// Params 1, eflags: 0x0
+// Checksum 0xec139795, Offset: 0x33e0
 // Size: 0x68
 function function_66b8ce07(player) {
     if (player == self.stub.var_89b417e9) {
@@ -759,12 +759,12 @@ function function_66b8ce07(player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x1cb5ce6b, Offset: 0x3450
+// Params 0, eflags: 0x0
+// Checksum 0x7d365d5a, Offset: 0x3450
 // Size: 0xa4
 function function_23d2cc59() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger()) {
             continue;
         }
@@ -780,8 +780,8 @@ function function_23d2cc59() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0xb7cc22e0, Offset: 0x3500
+// Params 2, eflags: 0x0
+// Checksum 0x5462b561, Offset: 0x3500
 // Size: 0x15a
 function function_6a359e28(var_91089b66, player) {
     if (player == var_91089b66.var_89b417e9) {
@@ -800,8 +800,8 @@ function function_6a359e28(var_91089b66, player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x3c25e438, Offset: 0x3668
+// Params 1, eflags: 0x0
+// Checksum 0xdcfec3ee, Offset: 0x3668
 // Size: 0x18
 function update_gravityspikes_state(n_gravityspikes_state) {
     self.var_887585ba = n_gravityspikes_state;
@@ -809,7 +809,7 @@ function update_gravityspikes_state(n_gravityspikes_state) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x0
-// Checksum 0x5a168cb8, Offset: 0x3688
+// Checksum 0x921a365f, Offset: 0x3688
 // Size: 0x3c
 function function_9605596b(var_9284dd5) {
     self.var_9284dd5 = var_9284dd5;
@@ -817,8 +817,8 @@ function function_9605596b(var_9284dd5) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 3, eflags: 0x1 linked
-// Checksum 0x97d98ef6, Offset: 0x36d0
+// Params 3, eflags: 0x0
+// Checksum 0xa125cfe2, Offset: 0x36d0
 // Size: 0xf6
 function check_for_range_and_los(v_attack_source, n_allowed_z_diff, n_radius_sq) {
     if (isalive(self)) {
@@ -836,8 +836,8 @@ function check_for_range_and_los(v_attack_source, n_allowed_z_diff, n_radius_sq)
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0xed3bd535, Offset: 0x37d0
+// Params 1, eflags: 0x0
+// Checksum 0xc99a3858, Offset: 0x37d0
 // Size: 0x48
 function gravityspikes_target_filtering(ai_enemy) {
     b_callback_result = 1;
@@ -848,8 +848,8 @@ function gravityspikes_target_filtering(ai_enemy) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 6, eflags: 0x1 linked
-// Checksum 0xbf01cd7d, Offset: 0x3820
+// Params 6, eflags: 0x0
+// Checksum 0x9d2c9219, Offset: 0x3820
 // Size: 0x79c
 function zombie_lift(player, v_attack_source, n_push_away, n_lift_height, v_lift_offset, n_lift_speed) {
     var_87f03818 = getweapon("hero_gravityspikes_melee");
@@ -927,8 +927,8 @@ function zombie_lift(player, v_attack_source, n_push_away, n_lift_height, v_lift
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x107e8a0, Offset: 0x3fc8
+// Params 1, eflags: 0x0
+// Checksum 0x3c590379, Offset: 0x3fc8
 // Size: 0x8a
 function gravity_trap_notify_watcher(player) {
     self endon(#"gravity_trap_complete");
@@ -938,8 +938,8 @@ function gravity_trap_notify_watcher(player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x41563f55, Offset: 0x4060
+// Params 0, eflags: 0x0
+// Checksum 0x492de555, Offset: 0x4060
 // Size: 0xa2
 function gravity_trap_timeout_watcher() {
     self endon(#"gravity_trap_complete");
@@ -951,8 +951,8 @@ function gravity_trap_timeout_watcher() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0x9659b636, Offset: 0x4110
+// Params 2, eflags: 0x0
+// Checksum 0x84ee79e4, Offset: 0x4110
 // Size: 0x152
 function zombie_lift_wacky_rotate(n_lift_time, player) {
     player endon(#"gravityspikes_timer_end");
@@ -966,8 +966,8 @@ function zombie_lift_wacky_rotate(n_lift_time, player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x194824b0, Offset: 0x4270
+// Params 1, eflags: 0x0
+// Checksum 0xa7e34b94, Offset: 0x4270
 // Size: 0xcc
 function zombie_kill_and_gib(player) {
     var_87f03818 = getweapon("hero_gravityspikes_melee");
@@ -982,8 +982,8 @@ function zombie_kill_and_gib(player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x48910d37, Offset: 0x4348
+// Params 0, eflags: 0x0
+// Checksum 0x163fcd0e, Offset: 0x4348
 // Size: 0x20
 function track_lifted_for_ragdoll_count() {
     level.n_zombies_lifted_for_ragdoll++;
@@ -992,11 +992,11 @@ function track_lifted_for_ragdoll_count() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd682d666, Offset: 0x4370
+// Params 0, eflags: 0x0
+// Checksum 0xb2d2157, Offset: 0x4370
 // Size: 0x94
 function corpse_off_navmesh_watcher() {
-    e_corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", e_corpse);
     v_pos = getclosestpointonnavmesh(e_corpse.origin, 256);
     if (!isdefined(v_pos) || e_corpse.origin[2] > v_pos[2] + 64) {
         e_corpse thread do_zombie_explode();
@@ -1004,8 +1004,8 @@ function corpse_off_navmesh_watcher() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x5 linked
-// Checksum 0xa6ac0223, Offset: 0x4410
+// Params 0, eflags: 0x4
+// Checksum 0xc65ee132, Offset: 0x4410
 // Size: 0x94
 function private do_zombie_explode() {
     util::wait_network_frame();
@@ -1018,8 +1018,8 @@ function private do_zombie_explode() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 2, eflags: 0x1 linked
-// Checksum 0x8c13aa57, Offset: 0x44b0
+// Params 2, eflags: 0x0
+// Checksum 0xe857b7e9, Offset: 0x44b0
 // Size: 0xb4
 function gravity_spike_melee_kill(v_position, player) {
     self.b_melee_kill = 1;
@@ -1030,8 +1030,8 @@ function gravity_spike_melee_kill(v_position, player) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 0, eflags: 0x1 linked
-// Checksum 0x78cd4a15, Offset: 0x4570
+// Params 0, eflags: 0x0
+// Checksum 0x7c339e68, Offset: 0x4570
 // Size: 0x17c
 function knockdown_zombies_slam() {
     v_forward = anglestoforward(self getplayerangles());
@@ -1046,8 +1046,8 @@ function knockdown_zombies_slam() {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x53001a3f, Offset: 0x46f8
+// Params 1, eflags: 0x0
+// Checksum 0xc2db240b, Offset: 0x46f8
 // Size: 0xac
 function play_slam_fx(v_pos) {
     mdl_fx_pos = util::spawn_model("tag_origin", v_pos, (-90, 0, 0));
@@ -1059,8 +1059,8 @@ function play_slam_fx(v_pos) {
 }
 
 // Namespace zm_weap_gravityspikes
-// Params 1, eflags: 0x1 linked
-// Checksum 0x22b6f5f2, Offset: 0x47b0
+// Params 1, eflags: 0x0
+// Checksum 0x4c29da22, Offset: 0x47b0
 // Size: 0x28c
 function zombie_slam_direction(v_position) {
     self endon(#"death");
@@ -1102,8 +1102,8 @@ function zombie_slam_direction(v_position) {
 /#
 
     // Namespace zm_weap_gravityspikes
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x6d63cdd7, Offset: 0x4a48
+    // Params 0, eflags: 0x0
+    // Checksum 0x3133815e, Offset: 0x4a48
     // Size: 0x5d0
     function function_81889ac5() {
         wait 0.05;

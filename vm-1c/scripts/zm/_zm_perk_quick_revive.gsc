@@ -1,33 +1,33 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_pers_upgrades_system;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_pers_upgrades_system;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_perk_quick_revive;
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x2
-// Checksum 0x1e116145, Offset: 0x490
+// Checksum 0x31c9f1ad, Offset: 0x490
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_perk_quick_revive", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x16f0358b, Offset: 0x4d0
+// Params 0, eflags: 0x0
+// Checksum 0x1c5d3cca, Offset: 0x4d0
 // Size: 0x2c
 function __init__() {
     enable_quick_revive_perk_for_level();
@@ -35,8 +35,8 @@ function __init__() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x133eeaa5, Offset: 0x508
+// Params 0, eflags: 0x0
+// Checksum 0xa23d8ca9, Offset: 0x508
 // Size: 0x184
 function enable_quick_revive_perk_for_level() {
     zm_perks::register_perk_basic_info("specialty_quickrevive", "revive", &function_72474405, %ZOMBIE_PERK_QUICKREVIVE, getweapon("zombie_perk_bottle_revive"));
@@ -50,8 +50,8 @@ function enable_quick_revive_perk_for_level() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x6586f077, Offset: 0x698
+// Params 0, eflags: 0x0
+// Checksum 0xeb17d126, Offset: 0x698
 // Size: 0xe0
 function quick_revive_precache() {
     if (isdefined(level.var_a7e576e6)) {
@@ -66,24 +66,24 @@ function quick_revive_precache() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3c04f5ef, Offset: 0x780
+// Params 0, eflags: 0x0
+// Checksum 0x39e90c5e, Offset: 0x780
 // Size: 0x34
 function quick_revive_register_clientfield() {
     clientfield::register("clientuimodel", "hudItems.perks.quick_revive", 1, 2, "int");
 }
 
 // Namespace zm_perk_quick_revive
-// Params 1, eflags: 0x1 linked
-// Checksum 0x48400063, Offset: 0x7c0
+// Params 1, eflags: 0x0
+// Checksum 0xcf185e40, Offset: 0x7c0
 // Size: 0x2c
 function quick_revive_set_clientfield(state) {
     self clientfield::set_player_uimodel("hudItems.perks.quick_revive", state);
 }
 
 // Namespace zm_perk_quick_revive
-// Params 4, eflags: 0x1 linked
-// Checksum 0x3e456eb2, Offset: 0x7f8
+// Params 4, eflags: 0x0
+// Checksum 0x2bd8aa54, Offset: 0x7f8
 // Size: 0xbc
 function quick_revive_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_revive_jingle";
@@ -98,20 +98,20 @@ function quick_revive_perk_machine_setup(use_trigger, perk_machine, bump_trigger
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8646f89d, Offset: 0x8c0
+// Params 0, eflags: 0x0
+// Checksum 0x8615b9bb, Offset: 0x8c0
 // Size: 0x38
 function function_72474405() {
-    var_b93a49d8 = zm_perks::function_23ee6fc();
-    if (var_b93a49d8) {
+    SOLO = zm_perks::function_23ee6fc();
+    if (SOLO) {
         return 500;
     }
     return 1500;
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3ff297db, Offset: 0x900
+// Params 0, eflags: 0x0
+// Checksum 0x30a1dc3b, Offset: 0x900
 // Size: 0x74a
 function turn_revive_on() {
     level endon(#"stop_quickrevive_logic");
@@ -198,8 +198,8 @@ function turn_revive_on() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 2, eflags: 0x1 linked
-// Checksum 0x3fe3ad35, Offset: 0x1058
+// Params 2, eflags: 0x0
+// Checksum 0x3697883b, Offset: 0x1058
 // Size: 0x664
 function function_ba808584(machine_clip, var_2d92a626) {
     if (isdefined(level.var_d627adfb) && !(isdefined(level.var_d627adfb) && level.var_d627adfb)) {
@@ -305,8 +305,8 @@ function function_ba808584(machine_clip, var_2d92a626) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 1, eflags: 0x1 linked
-// Checksum 0x54963e60, Offset: 0x16c8
+// Params 1, eflags: 0x0
+// Checksum 0xb05c4c94, Offset: 0x16c8
 // Size: 0x9c
 function function_26c49866(var_2d92a626) {
     if (!isdefined(var_2d92a626)) {
@@ -321,8 +321,8 @@ function function_26c49866(var_2d92a626) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3d572ec1, Offset: 0x1770
+// Params 0, eflags: 0x0
+// Checksum 0x8bd469b0, Offset: 0x1770
 // Size: 0x17c
 function function_faffdf64() {
     level notify(#"hash_1d63cfa4");
@@ -352,8 +352,8 @@ function function_faffdf64() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 2, eflags: 0x1 linked
-// Checksum 0x61a2b1a8, Offset: 0x18f8
+// Params 2, eflags: 0x0
+// Checksum 0xc577438b, Offset: 0x18f8
 // Size: 0x38a
 function function_934dbe0d(machine_clip, blocker_model) {
     if (level flag::exists("solo_revive") && level flag::get("solo_revive") && !level flag::get("solo_game")) {
@@ -406,8 +406,8 @@ function function_934dbe0d(machine_clip, blocker_model) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf0a8ff9d, Offset: 0x1c90
+// Params 1, eflags: 0x0
+// Checksum 0x378484d4, Offset: 0x1c90
 // Size: 0x4ea
 function function_ff716478(machine_clip) {
     if (isdefined(level.var_f1557a11) && level.var_f1557a11 && level flag::get("solo_revive") && isdefined(level.quick_revive_machine)) {
@@ -463,8 +463,8 @@ function function_ff716478(machine_clip) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0xf68599e6, Offset: 0x2188
+// Params 0, eflags: 0x0
+// Checksum 0x8fdee220, Offset: 0x2188
 // Size: 0x418
 function unhide_quickrevive() {
     while (zm_perks::players_are_in_perk_area(level.quick_revive_machine)) {
@@ -523,8 +523,8 @@ function unhide_quickrevive() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8d9d3190, Offset: 0x25a8
+// Params 0, eflags: 0x0
+// Checksum 0x868e024b, Offset: 0x25a8
 // Size: 0x112
 function restart_quickrevive() {
     triggers = getentarray("zombie_vending", "targetname");
@@ -541,8 +541,8 @@ function restart_quickrevive() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 1, eflags: 0x1 linked
-// Checksum 0x41721125, Offset: 0x26c8
+// Params 1, eflags: 0x0
+// Checksum 0x7c7073a6, Offset: 0x26c8
 // Size: 0x1c2
 function update_quickrevive_power_state(poweron) {
     foreach (item in level.powered_items) {
@@ -568,8 +568,8 @@ function update_quickrevive_power_state(poweron) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 1, eflags: 0x1 linked
-// Checksum 0x382b9450, Offset: 0x2898
+// Params 1, eflags: 0x0
+// Checksum 0x38f6842e, Offset: 0x2898
 // Size: 0xca
 function function_c092d2cc(var_ec84fec3) {
     self endon(#"death");
@@ -580,8 +580,8 @@ function function_c092d2cc(var_ec84fec3) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9bcdb899, Offset: 0x2970
+// Params 1, eflags: 0x0
+// Checksum 0x481c96ca, Offset: 0x2970
 // Size: 0xc4
 function function_5522faa5(var_f1e9b08) {
     self endon(#"death");
@@ -601,8 +601,8 @@ function function_5522faa5(var_f1e9b08) {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb9da72b1, Offset: 0x2a40
+// Params 0, eflags: 0x0
+// Checksum 0x52a802c0, Offset: 0x2a40
 // Size: 0xac
 function give_quick_revive_perk() {
     if (zm_perks::function_23ee6fc()) {
@@ -623,8 +623,8 @@ function give_quick_revive_perk() {
 }
 
 // Namespace zm_perk_quick_revive
-// Params 3, eflags: 0x1 linked
-// Checksum 0xe7d08e2b, Offset: 0x2af8
+// Params 3, eflags: 0x0
+// Checksum 0x72f8f4f4, Offset: 0x2af8
 // Size: 0x1c
 function take_quick_revive_perk(b_pause, str_perk, str_result) {
     

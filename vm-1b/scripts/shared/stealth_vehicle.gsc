@@ -1,12 +1,12 @@
 #using scripts/shared/ai_shared;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth_event;
+#using scripts/shared/stealth;
 #using scripts/shared/stealth_aware;
 #using scripts/shared/stealth_debug;
-#using scripts/shared/stealth;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth_event;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_tagging;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_vehicle;
 
@@ -94,7 +94,7 @@ function function_c5738439() {
     self ai::set_ignoreall(1);
     while (true) {
         weapon = undefined;
-        weapon, attacker = self waittill(#"cybercom_action");
+        self waittill(#"cybercom_action", weapon, attacker);
         if (isdefined(weapon)) {
             switch (weapon.name) {
             case "gadget_iff_override":

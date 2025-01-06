@@ -1,16 +1,16 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_quest_air;
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a90b643, Offset: 0x348
 // Size: 0x1ec
 function main() {
@@ -33,7 +33,7 @@ function main() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16f86a2e, Offset: 0x540
 // Size: 0xb2
 function function_97f0d6a7() {
@@ -44,15 +44,15 @@ function function_97f0d6a7() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9430c1cb, Offset: 0x600
 // Size: 0x12e
 function function_c489b40f() {
     for (i = 1; i <= 3; i++) {
-        var_387f863 = (4 - i) * 20;
+        n_move = (4 - i) * 20;
         e_ring = getent("ceiling_ring_0" + i, "targetname");
         e_ring rotateyaw(360, 1.5, 0.5, 0);
-        e_ring movez(var_387f863, 1.5, 0.5, 0);
+        e_ring movez(n_move, 1.5, 0.5, 0);
         e_ring playsound("zmb_squest_wind_ring_turn");
         e_ring waittill(#"movedone");
         e_ring playsound("zmb_squest_wind_ring_stop");
@@ -60,7 +60,7 @@ function function_c489b40f() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x66d2ffe0, Offset: 0x738
 // Size: 0x2c
 function function_fd44e0ac() {
@@ -68,7 +68,7 @@ function function_fd44e0ac() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x48475ed5, Offset: 0x770
 // Size: 0xaa
 function function_54076542() {
@@ -82,7 +82,7 @@ function function_54076542() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a82fef7, Offset: 0x828
 // Size: 0x84
 function function_d9a378d7() {
@@ -93,7 +93,7 @@ function function_d9a378d7() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3d06eafb, Offset: 0x8b8
 // Size: 0xcc
 function function_4686b585() {
@@ -106,7 +106,7 @@ function function_4686b585() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x172adbb6, Offset: 0x990
 // Size: 0xec
 function function_e9a8f60b() {
@@ -125,7 +125,7 @@ function function_e9a8f60b() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47058b13, Offset: 0xa88
 // Size: 0x10
 function function_ed5a3c20() {
@@ -133,7 +133,7 @@ function function_ed5a3c20() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b48f217, Offset: 0xaa0
 // Size: 0x346
 function function_4dd1fb51() {
@@ -147,7 +147,7 @@ function function_4dd1fb51() {
     var_104a0542 = -16 * -16;
     var_9d64b269 = 300 * 300;
     while (true) {
-        damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weaponname = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weaponname);
         if (weaponname.name == "staff_air") {
             var_a9ffa3fc = 0;
             var_234d771c = distance2dsquared(point, self.origin);
@@ -176,7 +176,7 @@ function function_4dd1fb51() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71d7637, Offset: 0xdf0
 // Size: 0xea
 function function_4d617b5a() {
@@ -188,7 +188,7 @@ function function_4d617b5a() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x361044c2, Offset: 0xee8
 // Size: 0x294
 function function_df52fcab() {
@@ -221,7 +221,7 @@ function function_df52fcab() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8f6acf75, Offset: 0x1188
 // Size: 0x1ac
 function air_puzzle_smoke() {
@@ -241,7 +241,7 @@ function air_puzzle_smoke() {
 }
 
 // Namespace zm_tomb_quest_air
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xddb8c68, Offset: 0x1340
 // Size: 0x2fa
 function function_4bcffb18() {
@@ -254,7 +254,7 @@ function function_4bcffb18() {
     self.var_ee718f9a setcandamage(1);
     var_1e198702 = 0;
     while (true) {
-        damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weaponname = self.var_ee718f9a waittill(#"damage");
+        self.var_ee718f9a waittill(#"damage", damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weaponname);
         if (weaponname.name == "staff_air") {
             level notify(#"vo_try_puzzle_air2", attacker);
             new_yaw = math::vec_to_angles(direction_vec);

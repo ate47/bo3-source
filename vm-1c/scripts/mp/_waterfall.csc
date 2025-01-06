@@ -1,17 +1,17 @@
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/water_surface;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/water_surface;
 
 #namespace waterfall;
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1a70c90f, Offset: 0x210
 // Size: 0xca
 function waterfalloverlay(localclientnum) {
@@ -22,7 +22,7 @@ function waterfalloverlay(localclientnum) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfd5d4b84, Offset: 0x2e8
 // Size: 0xca
 function waterfallmistoverlay(localclientnum) {
@@ -33,7 +33,7 @@ function waterfallmistoverlay(localclientnum) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x63426d8c, Offset: 0x3c0
 // Size: 0x44
 function waterfallmistoverlayreset(localclientnum) {
@@ -42,7 +42,7 @@ function waterfallmistoverlayreset(localclientnum) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3afb91a9, Offset: 0x410
 // Size: 0x128
 function setupwaterfallmist(localclientnum) {
@@ -50,7 +50,7 @@ function setupwaterfallmist(localclientnum) {
     level endon("setupWaterfallmist_waterfall_csc" + localclientnum);
     trigger = self;
     for (;;) {
-        trigplayer = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", trigplayer);
         if (!trigplayer islocalplayer()) {
             continue;
         }
@@ -66,7 +66,7 @@ function setupwaterfallmist(localclientnum) {
 }
 
 // Namespace waterfall
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x181d276e, Offset: 0x540
 // Size: 0x118
 function setupwaterfall(localclientnum, localowner) {
@@ -74,7 +74,7 @@ function setupwaterfall(localclientnum, localowner) {
     level endon("setupWaterfall_waterfall_csc" + localclientnum);
     trigger = self;
     for (;;) {
-        trigplayer = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", trigplayer);
         if (!trigplayer islocalplayer()) {
             continue;
         }
@@ -89,7 +89,7 @@ function setupwaterfall(localclientnum, localowner) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf395f41, Offset: 0x660
 // Size: 0xb8
 function trig_enter_waterfall(localplayer) {
@@ -104,7 +104,7 @@ function trig_enter_waterfall(localplayer) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x235a7961, Offset: 0x720
 // Size: 0x84
 function trig_leave_waterfall(localplayer) {
@@ -117,7 +117,7 @@ function trig_leave_waterfall(localplayer) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd9836bd, Offset: 0x7b0
 // Size: 0x1f0
 function trig_enter_waterfall_mist(localplayer) {
@@ -150,7 +150,7 @@ function trig_enter_waterfall_mist(localplayer) {
 }
 
 // Namespace waterfall
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8382a05c, Offset: 0x9a8
 // Size: 0x174
 function trig_leave_waterfall_mist(localplayer) {

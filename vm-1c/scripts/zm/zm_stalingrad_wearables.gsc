@@ -1,23 +1,23 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_stalingrad_ee_main;
 #using scripts/zm/zm_stalingrad_pap_quest;
 #using scripts/zm/zm_stalingrad_util;
-#using scripts/zm/zm_stalingrad_ee_main;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -26,7 +26,7 @@
 /#
 
     // Namespace zm_stalingrad_wearables
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfe5fb99d, Offset: 0xa80
     // Size: 0x54
     function function_ea91e52b() {
@@ -38,7 +38,7 @@
 #/
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc6a3072, Offset: 0xae0
 // Size: 0x4bc
 function function_eed58360() {
@@ -91,7 +91,7 @@ function function_eed58360() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5de549f, Offset: 0xfa8
 // Size: 0x96
 function function_ad78a144() {
@@ -102,7 +102,7 @@ function function_ad78a144() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x299ca586, Offset: 0x1048
 // Size: 0x8c
 function function_2436f867() {
@@ -115,7 +115,7 @@ function function_2436f867() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1ccc2213, Offset: 0x10e0
 // Size: 0x3c
 function function_793f10ed(var_908867a0) {
@@ -123,7 +123,7 @@ function function_793f10ed(var_908867a0) {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0c1bf20, Offset: 0x1128
 // Size: 0xec
 function function_8cde51de() {
@@ -139,7 +139,7 @@ function function_8cde51de() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x316d6e06, Offset: 0x1220
 // Size: 0x16a
 function function_1fc9779e() {
@@ -172,7 +172,7 @@ function function_1fc9779e() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe74d4058, Offset: 0x1398
 // Size: 0x14c
 function function_1a6de86e() {
@@ -189,7 +189,7 @@ function function_1a6de86e() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x98cd440b, Offset: 0x14f0
 // Size: 0xce
 function function_2c1e6f00(e_player) {
@@ -205,7 +205,7 @@ function function_2c1e6f00(e_player) {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x859dfed6, Offset: 0x15c8
 // Size: 0x1a8
 function function_18dda0a0() {
@@ -232,7 +232,7 @@ function function_18dda0a0() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5ac651, Offset: 0x1778
 // Size: 0x1ba
 function function_484ecd5() {
@@ -254,14 +254,14 @@ function function_484ecd5() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd59d7be6, Offset: 0x1940
 // Size: 0xc8
 function function_7e873fe6() {
     self zm_unitrigger::create_unitrigger("", 100, &function_9a167439);
     zm_unitrigger::unitrigger_force_per_player_triggers(self.s_unitrigger, 1);
     while (true) {
-        e_player = self waittill(#"trigger_activated");
+        self waittill(#"trigger_activated", e_player);
         if (e_player.var_e7d196cc === "dragon_wings") {
             e_player playsound("zmb_wearable_wing_teleport");
             e_player function_cc32e7df();
@@ -270,7 +270,7 @@ function function_7e873fe6() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8efee36, Offset: 0x1a10
 // Size: 0x66
 function function_9a167439(e_player) {
@@ -283,7 +283,7 @@ function function_9a167439(e_player) {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x685d9e82, Offset: 0x1a80
 // Size: 0x130
 function function_cc32e7df() {
@@ -302,7 +302,7 @@ function function_cc32e7df() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x664f3f91, Offset: 0x1bb8
 // Size: 0x44
 function function_588ad36a() {
@@ -312,7 +312,7 @@ function function_588ad36a() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf3a0af1a, Offset: 0x1c08
 // Size: 0xb8
 function function_42a9380e() {
@@ -330,7 +330,7 @@ function function_42a9380e() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x79843760, Offset: 0x1cc8
 // Size: 0xb8
 function function_ac75c48f() {
@@ -348,7 +348,7 @@ function function_ac75c48f() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd4f19b2d, Offset: 0x1d88
 // Size: 0x134
 function function_69f1fce3() {
@@ -364,7 +364,7 @@ function function_69f1fce3() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9565e6cd, Offset: 0x1ec8
 // Size: 0xce
 function function_449ba539(e_player) {
@@ -380,7 +380,7 @@ function function_449ba539(e_player) {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa3300b6e, Offset: 0x1fa0
 // Size: 0x190
 function function_ad641a9f() {
@@ -407,7 +407,7 @@ function function_ad641a9f() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4472df9, Offset: 0x2138
 // Size: 0xb8
 function function_fe559f6c() {
@@ -425,7 +425,7 @@ function function_fe559f6c() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9740cb5a, Offset: 0x21f8
 // Size: 0xb8
 function function_ba204ad8() {
@@ -443,7 +443,7 @@ function function_ba204ad8() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d7ce7c, Offset: 0x22b8
 // Size: 0x134
 function function_14b98ab6() {
@@ -459,7 +459,7 @@ function function_14b98ab6() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x99861f05, Offset: 0x23f8
 // Size: 0xce
 function function_a6595bd6(e_player) {
@@ -475,7 +475,7 @@ function function_a6595bd6(e_player) {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86a40f63, Offset: 0x24d0
 // Size: 0x198
 function function_f3b06f8e() {
@@ -502,7 +502,7 @@ function function_f3b06f8e() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b4b2c81, Offset: 0x2670
 // Size: 0x3c
 function function_caffcf07() {
@@ -510,7 +510,7 @@ function function_caffcf07() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8312dd2, Offset: 0x26b8
 // Size: 0x3c
 function function_20f2df00() {
@@ -518,7 +518,7 @@ function function_20f2df00() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 10, eflags: 0x1 linked
+// Params 10, eflags: 0x0
 // Checksum 0xdc35553c, Offset: 0x2700
 // Size: 0x1da
 function function_9c197fbf(e_inflictor, e_attacker, var_b2d13ae2, idflags, str_meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime) {
@@ -559,7 +559,7 @@ function function_9c197fbf(e_inflictor, e_attacker, var_b2d13ae2, idflags, str_m
 #namespace namespace_5132b4d6;
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa73cfe9a, Offset: 0x28e8
 // Size: 0x40c
 function function_19458e73() {
@@ -604,7 +604,7 @@ function function_9f500475() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5af740fc, Offset: 0x2d10
 // Size: 0x74
 function function_4052556b() {
@@ -618,7 +618,7 @@ function function_4052556b() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x22b6ff27, Offset: 0x2d90
 // Size: 0xe4
 function function_a3232de(e_attacker) {
@@ -636,7 +636,7 @@ function function_a3232de(e_attacker) {
 }
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd6a1534f, Offset: 0x2e80
 // Size: 0x1c4
 function function_5e8bb6cc() {
@@ -653,7 +653,7 @@ function function_5e8bb6cc() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f1dd508, Offset: 0x3050
 // Size: 0x2d6
 function function_70aa26aa() {
@@ -689,7 +689,7 @@ function function_70aa26aa() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7af7f947, Offset: 0x3330
 // Size: 0xb8
 function function_cf47076(e_player) {
@@ -702,7 +702,7 @@ function function_cf47076(e_player) {
 }
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a9e7da3, Offset: 0x33f0
 // Size: 0xe0
 function function_ac90554d() {
@@ -719,7 +719,7 @@ function function_ac90554d() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcab698a3, Offset: 0x34d8
 // Size: 0x1cc
 function function_771fddfa() {
@@ -742,7 +742,7 @@ function function_771fddfa() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x88b681da, Offset: 0x36b0
 // Size: 0x100
 function function_fa020cda() {
@@ -759,7 +759,7 @@ function function_fa020cda() {
 }
 
 // Namespace namespace_5132b4d6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x720c755b, Offset: 0x37b8
 // Size: 0xe0
 function function_8ad194d1(var_94c6b1d7) {

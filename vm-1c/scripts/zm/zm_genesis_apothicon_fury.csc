@@ -1,17 +1,17 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/archetype_apothicon_fury;
 #using scripts/shared/ai/zombie;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_genesis_apothicon_fury;
 
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe9ab9c79, Offset: 0x360
 // Size: 0x9a
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x41dcbda8, Offset: 0x408
 // Size: 0x14c
 function function_87fb20f7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

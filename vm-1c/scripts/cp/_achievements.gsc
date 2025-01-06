@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_skipto;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/cp/_util;
 #using scripts/shared/ai_shared;
 #using scripts/shared/array_shared;
-#using scripts/cp/_util;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace achievements;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcb5b452b, Offset: 0x588
 // Size: 0xe4
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x895db7e7, Offset: 0x678
 // Size: 0x11a
 function function_4462a8b7() {
@@ -50,10 +50,10 @@ function function_4462a8b7() {
 }
 
 // Namespace achievements
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x188ef673, Offset: 0x7a0
 // Size: 0xac
-function function_52c9c74a(str_id, var_56503a18) {
+function give_achievement(str_id, var_56503a18) {
     if (!isdefined(var_56503a18)) {
         var_56503a18 = 0;
     }
@@ -68,7 +68,7 @@ function function_52c9c74a(str_id, var_56503a18) {
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf3d0c2ed, Offset: 0x858
 // Size: 0xe8
 function on_player_connect() {
@@ -81,13 +81,13 @@ function on_player_connect() {
     self thread wall_run();
     self thread function_e587e1f2();
     while (true) {
-        str_id = self waittill(#"hash_52c9c74a");
-        function_52c9c74a(str_id);
+        self waittill(#"give_achievement", str_id);
+        give_achievement(str_id);
     }
 }
 
 // Namespace achievements
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x94943805, Offset: 0x948
 // Size: 0x74
 function function_5f2f7800(eplayer, levelname, difficulty) {
@@ -97,11 +97,11 @@ function function_5f2f7800(eplayer, levelname, difficulty) {
     if (difficulty < 2) {
         return;
     }
-    eplayer function_52c9c74a(level.var_a4d4c1e3[levelname]);
+    eplayer give_achievement(level.var_a4d4c1e3[levelname]);
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5dab7b87, Offset: 0x9c8
 // Size: 0x244
 function function_c3e7ff05(eplayer) {
@@ -124,18 +124,18 @@ function function_c3e7ff05(eplayer) {
     }
     var_98680dde = var_7941f5c8.size;
     if (var_f0ecfb92 == var_98680dde) {
-        eplayer function_52c9c74a("CP_CAMPAIGN_COMPLETE");
+        eplayer give_achievement("CP_CAMPAIGN_COMPLETE");
     }
     if (var_44a14bc7[2] + var_44a14bc7[3] + var_44a14bc7[4] == var_98680dde) {
-        eplayer function_52c9c74a("CP_HARD_COMPLETE");
+        eplayer give_achievement("CP_HARD_COMPLETE");
     }
     if (var_44a14bc7[4] == var_98680dde) {
-        eplayer function_52c9c74a("CP_REALISTIC_COMPLETE");
+        eplayer give_achievement("CP_REALISTIC_COMPLETE");
     }
 }
 
 // Namespace achievements
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x5dc98f99, Offset: 0xc18
 // Size: 0x64
 function function_733a6065(eplayer, levelname, difficulty, var_10c5a3ef) {
@@ -146,7 +146,7 @@ function function_733a6065(eplayer, levelname, difficulty, var_10c5a3ef) {
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x609cfd03, Offset: 0xc88
 // Size: 0x138
 function wall_run() {
@@ -162,7 +162,7 @@ function wall_run() {
             printtoprightln(var_3411368a, (1, 1, 1));
         #/
         if (var_3411368a >= 9843) {
-            function_52c9c74a("CP_COMPLETE_WALL_RUN");
+            give_achievement("CP_COMPLETE_WALL_RUN");
             return;
         }
         self setdstat("Achievements", "CP_COMPLETE_WALL_RUN", int(var_3411368a));
@@ -170,7 +170,7 @@ function wall_run() {
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xdc8
 // Size: 0x4
 function on_ai_spawned() {
@@ -178,7 +178,7 @@ function on_ai_spawned() {
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x94078186, Offset: 0xdd8
 // Size: 0x64
 function on_ai_damage(s_params) {
@@ -191,7 +191,7 @@ function on_ai_damage(s_params) {
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe1aeb598, Offset: 0xe48
 // Size: 0x5c
 function on_player_death(s_params) {
@@ -202,7 +202,7 @@ function on_player_death(s_params) {
 }
 
 // Namespace achievements
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x31717bfd, Offset: 0xeb0
 // Size: 0x16c
 function private function_1121f26a(var_c856ad1d, evictim) {
@@ -218,7 +218,7 @@ function private function_1121f26a(var_c856ad1d, evictim) {
             printtoprightln("<dev string:x3f>" + var_1efe785f + "<dev string:x40>" + var_46907f23, (1, 1, 1));
         #/
         if (var_46907f23 >= 5) {
-            var_c856ad1d function_52c9c74a("CP_DISTANCE_KILL");
+            var_c856ad1d give_achievement("CP_DISTANCE_KILL");
             return;
         }
         var_c856ad1d setdstat("Achievements", "CP_DISTANCE_KILL", var_46907f23);
@@ -226,7 +226,7 @@ function private function_1121f26a(var_c856ad1d, evictim) {
 }
 
 // Namespace achievements
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x82e2b9b4, Offset: 0x1028
 // Size: 0x48c
 function private function_914b8688(player, evictim, weapon, einflictor) {
@@ -245,7 +245,7 @@ function private function_914b8688(player, evictim, weapon, einflictor) {
     } else if (isdefined(player.var_75cf9e2e.var_6ce188b0) && weapon.name == "gadget_unstoppable_force" || weapon.name == "gadget_unstoppable_force_upgraded") {
         player.var_75cf9e2e.var_6ce188b0++;
         if (player.var_75cf9e2e.var_6ce188b0 >= 5) {
-            player function_52c9c74a("CP_UNSTOPPABLE_KILL");
+            player give_achievement("CP_UNSTOPPABLE_KILL");
         }
     } else if (isdefined(player.hijacked_vehicle_entity)) {
         if (isdefined(player.hijacked_vehicle_entity.killcount)) {
@@ -255,13 +255,13 @@ function private function_914b8688(player, evictim, weapon, einflictor) {
         }
         if (player.hijacked_vehicle_entity.scriptvehicletype == "wasp" && player.hijacked_vehicle_entity.killcount >= 20) {
             if (!player.var_58477d59["CP_FLYING_WASP_KILL"]) {
-                player function_52c9c74a("CP_FLYING_WASP_KILL");
+                player give_achievement("CP_FLYING_WASP_KILL");
                 player.var_58477d59["CP_FLYING_WASP_KILL"] = 1;
             }
         }
         if (player.hijacked_vehicle_entity.killcount >= 10) {
             if (!player.var_58477d59["CP_COMBAT_ROBOT_KILL"]) {
-                player function_52c9c74a("CP_COMBAT_ROBOT_KILL");
+                player give_achievement("CP_COMBAT_ROBOT_KILL");
                 player.var_58477d59["CP_COMBAT_ROBOT_KILL"] = 1;
             }
         }
@@ -273,7 +273,7 @@ function private function_914b8688(player, evictim, weapon, einflictor) {
         }
         if (einflictor.killcount >= 10) {
             if (!player.var_58477d59["CP_COMBAT_ROBOT_KILL"]) {
-                player function_52c9c74a("CP_COMBAT_ROBOT_KILL");
+                player give_achievement("CP_COMBAT_ROBOT_KILL");
                 player.var_58477d59["CP_COMBAT_ROBOT_KILL"] = 1;
             }
         }
@@ -282,12 +282,12 @@ function private function_914b8688(player, evictim, weapon, einflictor) {
         function_9dab90e7(player);
     }
     if (isdefined(player.var_75cf9e2e.var_a4fb0163) && player.var_75cf9e2e.var_a4fb0163 >= 6) {
-        player function_52c9c74a("CP_FIREFLIES_KILL");
+        player give_achievement("CP_FIREFLIES_KILL");
     }
 }
 
 // Namespace achievements
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x4f15c880, Offset: 0x14c0
 // Size: 0x17c
 function private function_2b2fb40b(player, var_aae1ed0d, weapon) {
@@ -302,12 +302,12 @@ function private function_2b2fb40b(player, var_aae1ed0d, weapon) {
     starttime = player.var_75cf9e2e.kills[startindex];
     endtime = player.var_75cf9e2e.kills[currentindex];
     if (player.var_75cf9e2e.var_940a9f6e >= 10 && endtime - starttime <= 3000) {
-        player function_52c9c74a("CP_TIMED_KILL");
+        player give_achievement("CP_TIMED_KILL");
     }
 }
 
 // Namespace achievements
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x25e2b1f9, Offset: 0x1648
 // Size: 0x18c
 function private function_b1d71bd3(player, weapon) {
@@ -327,12 +327,12 @@ function private function_b1d71bd3(player, weapon) {
         }
     }
     if (var_6c46ba29 >= 5) {
-        player function_52c9c74a("CP_DIFFERENT_GUN_KILL");
+        player give_achievement("CP_DIFFERENT_GUN_KILL");
     }
 }
 
 // Namespace achievements
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x727cb614, Offset: 0x17e0
 // Size: 0x24c
 function private function_307b3ac3(eplayer, evictim, eweapon) {
@@ -356,12 +356,12 @@ function private function_307b3ac3(eplayer, evictim, eweapon) {
         }
     }
     if (eplayer.var_75cf9e2e.var_6a670270.size >= 5) {
-        eplayer function_52c9c74a("CP_TIMED_STUNNED_KILL");
+        eplayer give_achievement("CP_TIMED_STUNNED_KILL");
     }
 }
 
 // Namespace achievements
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xc41a2fc8, Offset: 0x1a38
 // Size: 0xec
 function private function_c4f2de38(player, victim, inflictor) {
@@ -374,12 +374,12 @@ function private function_c4f2de38(player, victim, inflictor) {
         inflictor.var_9bbaef3++;
     }
     if (inflictor.var_9bbaef3 >= 3) {
-        player function_52c9c74a("CP_KILL_WASPS");
+        player give_achievement("CP_KILL_WASPS");
     }
 }
 
 // Namespace achievements
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x3027eed4, Offset: 0x1b30
 // Size: 0xc4
 function function_17ec453c(eattacker, evictim, eweapon) {
@@ -390,34 +390,34 @@ function function_17ec453c(eattacker, evictim, eweapon) {
             eattacker.killcount = 1;
         }
         if (eattacker.killcount >= 10) {
-            eattacker.var_6fb3bfc3 function_52c9c74a("CP_COMBAT_ROBOT_KILL");
+            eattacker.var_6fb3bfc3 give_achievement("CP_COMBAT_ROBOT_KILL");
         }
     }
 }
 
 // Namespace achievements
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x19cb686e, Offset: 0x1c00
 // Size: 0x7c
 function function_99d6210d(eplayer, evictim) {
     if (isdefined(evictim.var_74390712) && evictim.var_74390712 == eplayer && evictim.team !== "allies") {
-        eplayer function_52c9c74a("CP_OBSTRUCTED_KILL");
+        eplayer give_achievement("CP_OBSTRUCTED_KILL");
     }
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfce6693e, Offset: 0x1c88
 // Size: 0x5c
 function function_fbe029db(eplayer) {
     var_ba8faef8 = eplayer getmeleechaincount();
     if (2 <= var_ba8faef8) {
-        eplayer function_52c9c74a("CP_MELEE_COMBO_KILL");
+        eplayer give_achievement("CP_MELEE_COMBO_KILL");
     }
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x38b1bd89, Offset: 0x1cf0
 // Size: 0x1ac
 function on_ai_killed(s_params) {
@@ -439,7 +439,7 @@ function on_ai_killed(s_params) {
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6a438277, Offset: 0x1ea8
 // Size: 0xc
 function function_632712d7(n_count) {
@@ -447,7 +447,7 @@ function function_632712d7(n_count) {
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf271b138, Offset: 0x1ec0
 // Size: 0x60
 function private function_9dab90e7(player) {
@@ -459,32 +459,32 @@ function private function_9dab90e7(player) {
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x3d213abf, Offset: 0x1f28
 // Size: 0xac
 function private function_e587e1f2() {
     self endon(#"disconnect");
     while (true) {
-        rewardxp, attachmentindex, itemindex, rankid, islastrank = self waittill(#"gun_level_complete");
+        self waittill(#"gun_level_complete", rewardxp, attachmentindex, itemindex, rankid, islastrank);
         if (itemindex >= 1 && islastrank && itemindex <= 60) {
-            self function_52c9c74a("CP_ALL_WEAPON_ATTACHMENTS");
+            self give_achievement("CP_ALL_WEAPON_ATTACHMENTS");
             break;
         }
     }
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdb95929f, Offset: 0x1fe0
 // Size: 0x34
 function function_17dc8de7(var_e9af7d73) {
     if (var_e9af7d73 == 3) {
-        self function_52c9c74a("CP_ALL_WEAPON_CAMOS");
+        self give_achievement("CP_ALL_WEAPON_CAMOS");
     }
 }
 
 // Namespace achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31223000, Offset: 0x2020
 // Size: 0xc0
 function function_b2d1aafa() {
@@ -499,7 +499,7 @@ function function_b2d1aafa() {
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xce3ad276, Offset: 0x20e8
 // Size: 0x24
 function function_386309ce(player) {
@@ -507,7 +507,7 @@ function function_386309ce(player) {
 }
 
 // Namespace achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x536761ba, Offset: 0x2118
 // Size: 0x2e
 function function_6903d776(eai) {

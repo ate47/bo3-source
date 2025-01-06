@@ -1,21 +1,21 @@
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/gametypes/_spawnlogic;
-#using scripts/cp/gametypes/_spawning;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/_oed;
+#using scripts/codescripts/struct;
 #using scripts/cp/_objectives;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/load_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
+#using scripts/cp/_oed;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/gametypes/_spawning;
+#using scripts/cp/gametypes/_spawnlogic;
+#using scripts/shared/array_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/load_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace hacking;
 
@@ -74,18 +74,18 @@ function function_68df65d8(var_498bbabf, str_objective, str_hint_text, var_84221
         }
     }
     visuals = [];
-    var_38c85157 = gameobjects::create_use_object("any", self, visuals, (0, 0, 0), str_objective);
-    var_38c85157 gameobjects::allow_use("any");
-    var_38c85157 gameobjects::set_use_time(0.35);
-    var_38c85157 gameobjects::set_owner_team("allies");
-    var_38c85157 gameobjects::set_visible_team("any");
-    var_38c85157.onuse = &onuse;
-    var_38c85157.onbeginuse = &onbeginuse;
-    var_38c85157.onenduse = &onenduse;
-    var_38c85157.var_84221fce = var_84221fce;
-    var_38c85157.keepweapon = 1;
-    var_38c85157.var_27d1693f = var_27d1693f;
-    return var_38c85157;
+    game_object = gameobjects::create_use_object("any", self, visuals, (0, 0, 0), str_objective);
+    game_object gameobjects::allow_use("any");
+    game_object gameobjects::set_use_time(0.35);
+    game_object gameobjects::set_owner_team("allies");
+    game_object gameobjects::set_visible_team("any");
+    game_object.onuse = &onuse;
+    game_object.onbeginuse = &onbeginuse;
+    game_object.onenduse = &onenduse;
+    game_object.var_84221fce = var_84221fce;
+    game_object.keepweapon = 1;
+    game_object.var_27d1693f = var_27d1693f;
+    return game_object;
 }
 
 // Namespace hacking
@@ -93,7 +93,7 @@ function function_68df65d8(var_498bbabf, str_objective, str_hint_text, var_84221
 // Checksum 0xfcbd28cb, Offset: 0x700
 // Size: 0x20
 function trigger_wait() {
-    e_who = self waittill(#"hash_1253961");
+    self waittill(#"hash_1253961", e_who);
     return e_who;
 }
 

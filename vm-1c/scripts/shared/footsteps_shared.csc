@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/system_shared;
 
 #namespace footsteps;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace footsteps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2356d33, Offset: 0x1b0
 // Size: 0x19e
 function __init__() {
@@ -46,7 +46,7 @@ function __init__() {
 /#
 
     // Namespace footsteps
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xe57ee82, Offset: 0x358
     // Size: 0x114
     function function_ce2898b2(movetype, surfacetype) {
@@ -110,7 +110,7 @@ function function_1aa3f5bd(client_num, player, surfacetype, firstperson, quiet, 
 }
 
 // Namespace footsteps
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe83c03c1, Offset: 0x730
 // Size: 0x9c
 function function_1e9a5eeb(client_num, player, firstperson, quiet) {
@@ -123,7 +123,7 @@ function function_1e9a5eeb(client_num, player, firstperson, quiet) {
 }
 
 // Namespace footsteps
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x19e5897, Offset: 0x7d8
 // Size: 0x234
 function function_2d42a17f(movementtype, surfacetype, firstperson, var_7c95fc4) {
@@ -182,7 +182,7 @@ function function_29897e3b(client_num, var_9e38e41f, var_5305dd36, on_fire) {
 }
 
 // Namespace footsteps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e5c63dc, Offset: 0xb78
 // Size: 0x6c
 function missing_ai_footstep_callback() {
@@ -196,7 +196,7 @@ function missing_ai_footstep_callback() {
 }
 
 // Namespace footsteps
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xced7a97a, Offset: 0xbf0
 // Size: 0xe2
 function playaifootstep(client_num, pos, surface, notetrack, bone) {

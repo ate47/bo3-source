@@ -1,18 +1,18 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/craftables/_zm_craftables;
 
 #using_animtree("generic");
 
@@ -27,7 +27,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_shadowman
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c0b4543, Offset: 0x3b8
 // Size: 0x4c
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_shadowman
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfb9d61a5, Offset: 0x410
 // Size: 0x3da
 function shadowman_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -86,7 +86,7 @@ function shadowman_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace zm_genesis_shadowman
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf747eb5b, Offset: 0x7f8
 // Size: 0x74
 function function_705b696b(localclientnum, str_fx, v_origin, n_seconds) {

@@ -1,16 +1,16 @@
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/audio_shared;
-#using scripts/cp/cp_mi_cairo_aquifer_ambience;
-#using scripts/cp/cp_mi_cairo_aquifer_utility;
-#using scripts/cp/cp_mi_cairo_aquifer_sound;
-#using scripts/cp/cp_mi_cairo_aquifer_fx;
-#using scripts/cp/_util;
+#using scripts/codescripts/struct;
 #using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_aquifer_ambience;
+#using scripts/cp/cp_mi_cairo_aquifer_fx;
+#using scripts/cp/cp_mi_cairo_aquifer_sound;
+#using scripts/cp/cp_mi_cairo_aquifer_utility;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_cairo_aquifer;
 
@@ -19,7 +19,7 @@
 // Checksum 0x7e719d08, Offset: 0x360
 // Size: 0x62
 function main() {
-    util::function_57b966c8(&function_71f88fc, 11);
+    util::function_57b966c8(&force_streamer, 11);
     cp_mi_cairo_aquifer_fx::main();
     cp_mi_cairo_aquifer_sound::main();
     load::main();
@@ -30,7 +30,7 @@ function main() {
 // Params 1, eflags: 0x0
 // Checksum 0x26419970, Offset: 0x3d0
 // Size: 0x189
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         break;

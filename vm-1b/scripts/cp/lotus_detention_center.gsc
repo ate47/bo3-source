@@ -1,36 +1,36 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/cp_mi_cairo_lotus2_sound;
-#using scripts/cp/lotus_util;
-#using scripts/cp/lotus_accolades;
-#using scripts/cp/_util;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_elevator;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
 #using scripts/cp/_skipto;
 #using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_elevator;
-#using scripts/cp/_dialog;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_lotus2_sound;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/lotus_accolades;
+#using scripts/cp/lotus_util;
 #using scripts/shared/ai/phalanx;
 #using scripts/shared/ai/robot_phalanx;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
 
 #namespace lotus_detention_center;
 
@@ -1292,7 +1292,7 @@ function function_f0ce2a2f(e_inflictor, e_attacker, n_damage, n_dflags, str_mean
 // Size: 0x112
 function function_b80c1b50(var_3e32f05a) {
     if (isdefined(var_3e32f05a) && var_3e32f05a.archetype === "raps") {
-        idamage, smeansofdeath, weapon, shitloc, vdir = self waittill(#"death");
+        self waittill(#"death", idamage, smeansofdeath, weapon, shitloc, vdir);
         if (isdefined(var_3e32f05a)) {
             v_dir = anglestoforward(var_3e32f05a.angles) + anglestoup(var_3e32f05a.angles) * 0.5;
             v_dir *= 64;

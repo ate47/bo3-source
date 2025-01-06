@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_util;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_ai_wasp;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_wasp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2313690, Offset: 0x318
 // Size: 0x166
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_ai_wasp
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb8717701, Offset: 0x488
 // Size: 0x116
 function function_4c31bb81(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -54,7 +54,7 @@ function function_4c31bb81(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_wasp
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x601b8a80, Offset: 0x5a8
 // Size: 0xcc
 function parasite_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
@@ -69,7 +69,7 @@ function parasite_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f8
 }
 
 // Namespace zm_ai_wasp
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x34f33b9c, Offset: 0x680
 // Size: 0x9c
 function parasite_round_ring_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -83,7 +83,7 @@ function parasite_round_ring_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_ai_wasp
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0x3daf2eed, Offset: 0x728
 // Size: 0x64
 function private genesis_parasite_damage(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

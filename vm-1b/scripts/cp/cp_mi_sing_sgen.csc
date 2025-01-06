@@ -1,23 +1,23 @@
-#using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
+#using scripts/codescripts/struct;
 #using scripts/cp/_load;
-#using scripts/shared/exploder_shared;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen_fx;
+#using scripts/cp/cp_mi_sing_sgen_sound;
 #using scripts/shared/ai/systems/fx_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicles/_quadtank;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_sing_sgen;
 
@@ -26,7 +26,7 @@
 // Checksum 0x9cd26713, Offset: 0x1370
 // Size: 0x122
 function main() {
-    util::function_57b966c8(&function_71f88fc, 6);
+    util::function_57b966c8(&force_streamer, 6);
     init_clientfields();
     function_fe72942e();
     cp_mi_sing_sgen_fx::main();
@@ -631,7 +631,7 @@ function function_ef39e6b6(localclientnum, oldval, newval, bnewent, binitialsnap
         return;
     }
     while (true) {
-        var_e63dbf6d = self waittill(#"damage");
+        self waittill(#"damage", var_e63dbf6d);
         playfx(localclientnum, level._effect["core_impact"], var_e63dbf6d);
     }
 }
@@ -822,12 +822,12 @@ function function_1d14d4aa(localclientnum, oldval, newval, bnewent, binitialsnap
 function function_5ac1b440(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_99450f8a = getentarray(localclientnum, "pallas_elevator_probe", "targetname");
     var_8df90b18 = getentarray(localclientnum, "pallas_elevator_light", "targetname");
-    var_be31aa9a = getent(localclientnum, "boss_fight_lift", "targetname");
+    e_lift = getent(localclientnum, "boss_fight_lift", "targetname");
     foreach (light in var_99450f8a) {
-        light linkto(var_be31aa9a);
+        light linkto(e_lift);
     }
     foreach (probe in var_8df90b18) {
-        probe linkto(var_be31aa9a);
+        probe linkto(e_lift);
     }
 }
 
@@ -1111,7 +1111,7 @@ function silo_debris(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 // Params 1, eflags: 0x0
 // Checksum 0xc233ed7a, Offset: 0x4da0
 // Size: 0x2cd
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 2:
         forcestreambundle("cin_sgen_14_humanlab_3rd_sh010");

@@ -1,9 +1,9 @@
-#using scripts/cp/doa/_doa_utility;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_gibs;
-#using scripts/shared/util_shared;
+#using scripts/cp/doa/_doa_utility;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/fx_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace namespace_1a381543;
 

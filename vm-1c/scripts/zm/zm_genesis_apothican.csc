@@ -1,21 +1,21 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #using_animtree("generic");
 
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_apothican
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfc2a0099, Offset: 0x4e0
 // Size: 0x2e8
 function __init__() {
@@ -75,7 +75,7 @@ function scene_play(scene, mdl_pod) {
 }
 
 // Namespace zm_genesis_apothican
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x38d0bce1, Offset: 0x918
 // Size: 0x3c
 function function_6221b6b9(scene, mdl_pod) {
@@ -84,7 +84,7 @@ function function_6221b6b9(scene, mdl_pod) {
 }
 
 // Namespace zm_genesis_apothican
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf99edd72, Offset: 0x960
 // Size: 0x10c
 function apothicon_player_keyline(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -101,7 +101,7 @@ function apothicon_player_keyline(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_genesis_apothican
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9c38c598, Offset: 0xa78
 // Size: 0x122
 function apothicon_entry_postfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -121,7 +121,7 @@ function apothicon_entry_postfx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_genesis_apothican
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b62cac9, Offset: 0xba8
 // Size: 0x4c
 function function_e7a8756e(localclientnum) {
@@ -130,7 +130,7 @@ function function_e7a8756e(localclientnum) {
 }
 
 // Namespace zm_genesis_apothican
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa8faa3a7, Offset: 0xc00
 // Size: 0x140
 function gas_fog_bank_switch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -156,7 +156,7 @@ function gas_fog_bank_switch(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_genesis_apothican
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf845da25, Offset: 0xd48
 // Size: 0xbe
 function egg_spawn_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -171,7 +171,7 @@ function egg_spawn_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace zm_genesis_apothican
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5a378efd, Offset: 0xe10
 // Size: 0x64
 function gateworm_mtl(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

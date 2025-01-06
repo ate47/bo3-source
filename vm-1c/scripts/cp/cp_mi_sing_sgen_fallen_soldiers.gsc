@@ -1,37 +1,37 @@
-#using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen_accolades;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
-#using scripts/cp/cp_mi_sing_sgen_enter_silo;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/gametypes/_battlechatter;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
 #using scripts/cp/_load;
 #using scripts/cp/_mapping_drone;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
 #using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_accolades;
+#using scripts/cp/cp_mi_sing_sgen_enter_silo;
+#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/cp/gametypes/_battlechatter;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_sgen_fallen_soldiers;
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfaf602d4, Offset: 0x1028
 // Size: 0x324
 function function_73eb52a7(str_objective, var_74cd64bc) {
@@ -53,7 +53,7 @@ function function_73eb52a7(str_objective, var_74cd64bc) {
         objectives::complete("cp_level_sgen_locate_emf");
         objectives::set("cp_level_sgen_find_recon_drone", level.var_ea764859);
         level thread namespace_d40478f6::function_71f06599();
-        mapping_drone::function_10dad989(undefined, 0);
+        mapping_drone::spawn_drone(undefined, 0);
         playfxontag(level._effect["drone_sparks"], level.var_ea764859, "tag_origin");
         load::function_a2995f22();
     }
@@ -65,7 +65,7 @@ function function_73eb52a7(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x118256a7, Offset: 0x1358
 // Size: 0x12c
 function function_51f4af5d(str_objective, var_d6b1856a, var_e4cd2b8b, player) {
@@ -80,7 +80,7 @@ function function_51f4af5d(str_objective, var_d6b1856a, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeabc67b3, Offset: 0x1490
 // Size: 0x21c
 function main() {
@@ -107,7 +107,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x70a88d21, Offset: 0x16b8
 // Size: 0xf4
 function function_99e352d9() {
@@ -133,7 +133,7 @@ function function_568e0f1b() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x787e19de, Offset: 0x1840
 // Size: 0x1cc
 function function_2b5c3469(str_key, str_val) {
@@ -160,7 +160,7 @@ function function_2b5c3469(str_key, str_val) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x35bac656, Offset: 0x1a18
 // Size: 0x364
 function function_b2ddfb27() {
@@ -197,7 +197,7 @@ function function_b2ddfb27() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3ad078fa, Offset: 0x1d88
 // Size: 0xaa
 function function_2f485a41(a_ents) {
@@ -209,7 +209,7 @@ function function_2f485a41(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x77ffd898, Offset: 0x1e40
 // Size: 0x5c
 function function_d43d6872() {
@@ -220,7 +220,7 @@ function function_d43d6872() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3039620e, Offset: 0x1ea8
 // Size: 0xaa
 function function_1c39896e(a_ents) {
@@ -232,7 +232,7 @@ function function_1c39896e(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87dc8442, Offset: 0x1f60
 // Size: 0x34c
 function function_6596c28b() {
@@ -264,7 +264,7 @@ function function_6596c28b() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba69de56, Offset: 0x22b8
 // Size: 0x62
 function function_5ed260ac() {
@@ -274,7 +274,7 @@ function function_5ed260ac() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x302cfc14, Offset: 0x2328
 // Size: 0x9c
 function function_3dbe13f9(a_ents) {
@@ -286,7 +286,7 @@ function function_3dbe13f9(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x294a0bb0, Offset: 0x23d0
 // Size: 0x29c
 function vo() {
@@ -319,7 +319,7 @@ function vo() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd66c1529, Offset: 0x2678
 // Size: 0x74
 function function_fe403015() {
@@ -330,7 +330,7 @@ function function_fe403015() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9eca454e, Offset: 0x26f8
 // Size: 0xda
 function function_c1c96249() {
@@ -349,7 +349,7 @@ function function_c1c96249() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5252143e, Offset: 0x27e0
 // Size: 0x118
 function function_68f0b726() {
@@ -365,7 +365,7 @@ function function_68f0b726() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf97266f9, Offset: 0x2900
 // Size: 0x44
 function function_88a16751() {
@@ -375,7 +375,7 @@ function function_88a16751() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca95eb43, Offset: 0x2950
 // Size: 0x214
 function function_a43abada() {
@@ -421,7 +421,7 @@ function function_a43abada() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x28d5a57d, Offset: 0x2b70
 // Size: 0x64
 function function_edc1192b(n_timeout, str_flag) {
@@ -431,7 +431,7 @@ function function_edc1192b(n_timeout, str_flag) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc18628b4, Offset: 0x2be0
 // Size: 0xd8
 function function_7d5168cb() {
@@ -451,7 +451,7 @@ function function_7d5168cb() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xecd6999c, Offset: 0x2cc0
 // Size: 0x1fc
 function function_80a49394(var_dc854c29) {
@@ -474,7 +474,7 @@ function function_80a49394(var_dc854c29) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd672ca75, Offset: 0x2ec8
 // Size: 0xba
 function function_ae64ae2(var_f6c5842, s_scriptbundle) {
@@ -505,7 +505,7 @@ function function_31e3341a() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf194bc8, Offset: 0x3060
 // Size: 0x64
 function function_fbd51610() {
@@ -516,7 +516,7 @@ function function_fbd51610() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda385cbe, Offset: 0x30d0
 // Size: 0x11c
 function function_bebe324d() {
@@ -539,7 +539,7 @@ function function_bebe324d() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x83efbbfe, Offset: 0x31f8
 // Size: 0xa4
 function function_89ba9422() {
@@ -552,7 +552,7 @@ function function_89ba9422() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18f61498, Offset: 0x32a8
 // Size: 0x74
 function function_516039af(str_flag) {
@@ -563,7 +563,7 @@ function function_516039af(str_flag) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb09c994b, Offset: 0x3328
 // Size: 0xd0
 function function_15debd57(str_ender) {
@@ -576,7 +576,7 @@ function function_15debd57(str_ender) {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x164fa10a, Offset: 0x3400
 // Size: 0x3c
 function function_f7879f6f() {
@@ -585,7 +585,7 @@ function function_f7879f6f() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9ea5e662, Offset: 0x3448
 // Size: 0xc4
 function function_ab5cee74() {
@@ -601,7 +601,7 @@ function function_ab5cee74() {
 }
 
 // Namespace cp_mi_sing_sgen_fallen_soldiers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x19253b3e, Offset: 0x3518
 // Size: 0x74
 function drone_breadcrumb(a_ents) {

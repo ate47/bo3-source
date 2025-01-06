@@ -1,15 +1,15 @@
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace mapping_drone;
 
@@ -17,7 +17,7 @@
 // Params 2, eflags: 0x0
 // Checksum 0xc7d7d5a, Offset: 0x248
 // Size: 0x142
-function function_10dad989(var_cc525a1a, b_active) {
+function spawn_drone(var_cc525a1a, b_active) {
     if (!isdefined(b_active)) {
         b_active = 1;
     }
@@ -77,11 +77,11 @@ function function_2dde6e87() {
 // Params 1, eflags: 0x0
 // Checksum 0x69e8433f, Offset: 0x4b8
 // Size: 0x3a
-function function_74191a2(var_e3262ea5) {
-    if (!isdefined(var_e3262ea5)) {
-        var_e3262ea5 = 1;
+function function_74191a2(b_stealth) {
+    if (!isdefined(b_stealth)) {
+        b_stealth = 1;
     }
-    if (var_e3262ea5) {
+    if (b_stealth) {
         self vehicle::lights_off();
         return;
     }

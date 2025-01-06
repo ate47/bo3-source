@@ -1,21 +1,21 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
 #using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_util;
 #using scripts/shared/ai_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/scene_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/exploder_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_mi_eth_prologue;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/_dialog;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicle_shared;
 
 #namespace namespace_dccf27b3;
 
@@ -110,9 +110,9 @@ function function_4ed5ddb9(var_5b01a37b) {
 // Params 1, eflags: 0x0
 // Checksum 0x6e7c536d, Offset: 0xb68
 // Size: 0x62
-function function_b75b4d97(var_6c5c89e1) {
-    if (isdefined(var_6c5c89e1)) {
-        var_9de10fe3 = getnode(var_6c5c89e1, "targetname");
+function function_b75b4d97(str_node) {
+    if (isdefined(str_node)) {
+        var_9de10fe3 = getnode(str_node, "targetname");
         self setgoal(var_9de10fe3, 1, 16);
         return;
     }
@@ -304,8 +304,8 @@ function function_8bf0b925() {
 // Size: 0x132
 function function_e3957b4() {
     if (!isdefined(level.var_3dce3f88)) {
-        level.var_3dce3f88 = spawn("script_model", level.var_be31aa9a.origin);
-        level.var_be31aa9a linkto(level.var_3dce3f88);
+        level.var_3dce3f88 = spawn("script_model", level.e_lift.origin);
+        level.e_lift linkto(level.var_3dce3f88);
     }
     level.var_3dce3f88 movez(-36, 12.3);
     level.var_3dce3f88 waittill(#"movedone");
@@ -314,7 +314,7 @@ function function_e3957b4() {
     level thread function_8bf0b925();
     level.var_9db406db unlink();
     level.var_7b90133a stoploopsound(0.1);
-    level.var_be31aa9a playsound("evt_freight_lift_stop");
+    level.e_lift playsound("evt_freight_lift_stop");
 }
 
 // Namespace namespace_dccf27b3
@@ -322,10 +322,10 @@ function function_e3957b4() {
 // Checksum 0x9e7f7384, Offset: 0x15e8
 // Size: 0x112
 function function_f9753551() {
-    level.var_be31aa9a = getent("freight_lift", "targetname");
-    level.var_be31aa9a playsound("evt_freight_lift_start");
-    level.var_7b90133a = spawn("script_origin", level.var_be31aa9a.origin);
-    level.var_7b90133a linkto(level.var_be31aa9a);
+    level.e_lift = getent("freight_lift", "targetname");
+    level.e_lift playsound("evt_freight_lift_start");
+    level.var_7b90133a = spawn("script_origin", level.e_lift.origin);
+    level.var_7b90133a linkto(level.e_lift);
     level.var_7b90133a playloopsound("evt_freight_lift_loop");
     level.var_1dd14818 = 1;
     level.var_3dce3f88 movez(-354, 0.05);

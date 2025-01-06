@@ -1,35 +1,35 @@
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cp_mi_zurich_newworld_sound;
-#using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld_accolades;
-#using scripts/cp/cp_mi_zurich_newworld;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_hacking;
-#using scripts/cp/_dialog;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 #using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld;
+#using scripts/cp/cp_mi_zurich_newworld_accolades;
+#using scripts/cp/cp_mi_zurich_newworld_sound;
+#using scripts/cp/cp_mi_zurich_newworld_util;
+#using scripts/cp/cybercom/_cybercom_gadget;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace namespace_c7062b04;
 
@@ -181,8 +181,8 @@ function function_b7ef38e9() {
 function function_ccad2ef9(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     function_de13d6e2(1);
     wait 3;
-    newworld_util::function_bbd12ed2("cin_new_01_01_whiteinfinite_1st_intro");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_train_intro_glass_bundle");
+    newworld_util::scene_cleanup("cin_new_01_01_whiteinfinite_1st_intro");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_train_intro_glass_bundle");
 }
 
 // Namespace namespace_c7062b04
@@ -783,7 +783,7 @@ function function_fc32f54(a_ents) {
     var_f11c18b5.health = 100;
     var_f11c18b5.script_objective = "train_detach_bomb_igc";
     while (true) {
-        n_damage, attacker = var_f11c18b5 waittill(#"damage");
+        var_f11c18b5 waittill(#"damage", n_damage, attacker);
         if (n_damage > 1) {
             break;
         }
@@ -1350,10 +1350,10 @@ function function_b4baa478() {
     self endon(#"death");
     if (!(isdefined(self.var_ceb18b02) && self.var_ceb18b02)) {
         self.var_ceb18b02 = 1;
-        var_cbf4698a = self.attackeraccuracy;
+        n_attackeraccuracy = self.attackeraccuracy;
         self.attackeraccuracy = 0.05;
         wait 5;
-        self.attackeraccuracy = var_cbf4698a;
+        self.attackeraccuracy = n_attackeraccuracy;
     }
 }
 
@@ -1373,11 +1373,11 @@ function function_86f446dd() {
 // Params 1, eflags: 0x0
 // Checksum 0xb65625d6, Offset: 0x6aa0
 // Size: 0xdb
-function function_77a5804(var_6e2f783e) {
-    if (!isdefined(var_6e2f783e)) {
-        var_6e2f783e = 0;
+function function_77a5804(b_skipto) {
+    if (!isdefined(b_skipto)) {
+        b_skipto = 0;
     }
-    if (!var_6e2f783e) {
+    if (!b_skipto) {
         level flag::wait_till("player_on_top_of_train");
     }
     clientfield::set("train_brake_flaps", 0);
@@ -2288,7 +2288,7 @@ function function_8486688f() {
     level endon(#"hash_47ed8d40");
     var_f65c3861 = struct::get_array(self.target, "targetname");
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         if (isplayer(e_who) && !(isdefined(e_who.var_511157e8) && e_who.var_511157e8)) {
             e_who playsoundtoplayer("evt_plr_derez", e_who);
             e_who thread function_c24ce0f9(var_f65c3861);
@@ -2336,7 +2336,7 @@ function function_820e1ea2() {
     level endon(#"hash_a72162f1");
     e_trigger = getent("train_bad_area_robots", "targetname");
     while (true) {
-        e_who = e_trigger waittill(#"trigger");
+        e_trigger waittill(#"trigger", e_who);
         if (!isplayer(e_who)) {
             e_who kill();
         }
@@ -2351,20 +2351,20 @@ function function_f9012fc() {
     level endon(#"hash_a72162f1");
     var_32400ae0 = getent("train_grenades_make_duds", "targetname");
     foreach (player in level.players) {
-        player thread function_35048235(var_32400ae0);
+        player thread grenade_toss(var_32400ae0);
     }
-    callback::on_spawned(&function_35048235, var_32400ae0);
+    callback::on_spawned(&grenade_toss, var_32400ae0);
 }
 
 // Namespace namespace_c7062b04
 // Params 1, eflags: 0x0
 // Checksum 0x870f865d, Offset: 0xa0d8
 // Size: 0x4d
-function function_35048235(var_32400ae0) {
+function grenade_toss(var_32400ae0) {
     level endon(#"hash_a72162f1");
     self endon(#"death");
     while (true) {
-        e_grenade = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", e_grenade);
         e_grenade thread function_337c8c84(var_32400ae0);
     }
 }
@@ -2416,7 +2416,7 @@ function function_be50cfd5() {
 // Checksum 0x203d91cb, Offset: 0xa248
 // Size: 0x32
 function function_50171558() {
-    e_corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", e_corpse);
     if (isdefined(e_corpse)) {
         e_corpse clientfield::set("train_throw_robot_corpses", 1);
     }

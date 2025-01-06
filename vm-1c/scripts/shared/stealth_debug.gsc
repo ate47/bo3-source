@@ -1,15 +1,15 @@
+#using scripts/shared/stealth;
 #using scripts/shared/stealth_actor;
 #using scripts/shared/stealth_aware;
-#using scripts/shared/stealth;
-#using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_debug;
 
 /#
 
     // Namespace stealth_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8e310234, Offset: 0x110
     // Size: 0x84
     function init() {
@@ -23,7 +23,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa5846daa, Offset: 0x1a0
     // Size: 0x24
     function enabled() {
@@ -31,7 +31,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x234ae209, Offset: 0x1d0
     // Size: 0x84
     function init_debug() {
@@ -45,7 +45,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe66d7c4f, Offset: 0x260
     // Size: 0x23a
     function function_70b08fc4() {
@@ -77,7 +77,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xee996c91, Offset: 0x4a8
     // Size: 0x398
     function function_53d6792c() {
@@ -112,7 +112,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc94171c7, Offset: 0x848
     // Size: 0x2f8
     function function_2dd1012() {
@@ -153,7 +153,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 6, eflags: 0x1 linked
+    // Params 6, eflags: 0x0
     // Checksum 0x65559ce3, Offset: 0xb48
     // Size: 0x3f8
     function function_2188901b(origin, angles, fovcosine, fovcosinez, viewdist, color) {
@@ -189,7 +189,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 6, eflags: 0x1 linked
+    // Params 6, eflags: 0x0
     // Checksum 0xc53de8f7, Offset: 0xf48
     // Size: 0x478
     function function_1c1f41ef(text, color, alpha, scale, origin, life) {
@@ -231,7 +231,7 @@
     }
 
     // Namespace stealth_debug
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2db4fedc, Offset: 0x13c8
     // Size: 0xae
     function debug_text(var_37b8a117) {

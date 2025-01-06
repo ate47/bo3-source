@@ -1,30 +1,30 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/archetype_clone;
-#using scripts/zm/_zm_devgui;
-#using scripts/shared/flagsys_shared;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_behavior;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/aat_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/archetype_clone;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_behavior;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_ai_clone;
 
@@ -37,7 +37,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_clone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82d72a9f, Offset: 0x3f0
 // Size: 0x64
 function __init__() {
@@ -50,7 +50,7 @@ function __init__() {
 }
 
 // Namespace zm_ai_clone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d118d13, Offset: 0x460
 // Size: 0x14
 function __main__() {
@@ -58,7 +58,7 @@ function __main__() {
 }
 
 // Namespace zm_ai_clone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x480
 // Size: 0x4
 function register_clientfields() {
@@ -66,7 +66,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_ai_clone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf72a6783, Offset: 0x490
 // Size: 0x14
 function init() {
@@ -74,7 +74,7 @@ function init() {
 }
 
 // Namespace zm_ai_clone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x4b0
 // Size: 0x4
 function precache() {
@@ -84,7 +84,7 @@ function precache() {
 /#
 
     // Namespace zm_ai_clone
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1a73a026, Offset: 0x4c0
     // Size: 0x44
     function function_78933fc2() {
@@ -93,7 +93,7 @@ function precache() {
     }
 
     // Namespace zm_ai_clone
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x52e3cfd0, Offset: 0x510
     // Size: 0x1e6
     function function_46924c5(cmd) {

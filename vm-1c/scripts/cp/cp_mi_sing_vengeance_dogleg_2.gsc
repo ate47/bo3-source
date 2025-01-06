@@ -1,37 +1,37 @@
-#using scripts/cp/cp_mi_sing_vengeance_sound;
-#using scripts/cp/cp_mi_sing_vengeance_temple;
-#using scripts/cp/cp_mi_sing_vengeance_garage;
-#using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth;
-#using scripts/cp/_load;
+#using scripts/codescripts/struct;
 #using scripts/cp/_debug;
 #using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
+#using scripts/cp/_load;
 #using scripts/cp/_objectives;
-#using scripts/cp/_util;
+#using scripts/cp/_skipto;
 #using scripts/cp/_spawn_manager;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_vengeance_garage;
+#using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/cp/cp_mi_sing_vengeance_temple;
+#using scripts/cp/cp_mi_sing_vengeance_util;
+#using scripts/cp/gametypes/_battlechatter;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_status;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_1e5c6f29;
 
 // Namespace namespace_1e5c6f29
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x48ca5965, Offset: 0xb08
 // Size: 0x2ac
 function function_bfca9cc4(str_objective, var_74cd64bc) {
@@ -64,7 +64,7 @@ function function_bfca9cc4(str_objective, var_74cd64bc) {
 }
 
 // Namespace namespace_1e5c6f29
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xddb5ab6b, Offset: 0xdc0
 // Size: 0x58c
 function function_48a3cbba(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -106,7 +106,7 @@ function function_48a3cbba(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace namespace_1e5c6f29
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4220cf44, Offset: 0x1358
 // Size: 0x254
 function function_f20cc258(str_objective, var_74cd64bc) {
@@ -135,7 +135,7 @@ function function_f20cc258(str_objective, var_74cd64bc) {
 }
 
 // Namespace namespace_1e5c6f29
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3aa06dc9, Offset: 0x15b8
 // Size: 0x104
 function function_9d26d0d6() {
@@ -154,7 +154,7 @@ function function_9d26d0d6() {
 }
 
 // Namespace namespace_1e5c6f29
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe4e8a0e, Offset: 0x16c8
 // Size: 0x34
 function function_8aac7e91() {
@@ -164,7 +164,7 @@ function function_8aac7e91() {
 }
 
 // Namespace namespace_1e5c6f29
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89e5cffa, Offset: 0x1708
 // Size: 0x12c
 function function_b4520466() {
@@ -181,7 +181,7 @@ function function_b4520466() {
 }
 
 // Namespace namespace_1e5c6f29
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8d587180, Offset: 0x1840
 // Size: 0x28
 function function_f476518d(e_player) {

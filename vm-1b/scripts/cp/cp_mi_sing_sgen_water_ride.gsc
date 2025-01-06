@@ -1,24 +1,24 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_hazard;
-#using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hazard;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_sgen_water_ride;
 
@@ -196,7 +196,7 @@ function function_136b871d() {
     self endon(#"stop");
     var_36665ed7 = [];
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!isinarray(var_36665ed7, e_player) && isplayer(e_player)) {
             if (!isdefined(var_36665ed7)) {
                 var_36665ed7 = [];
@@ -216,7 +216,7 @@ function function_136b871d() {
 function function_29a04809() {
     level endon(#"hash_4a593615");
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!isdefined(e_player.var_9d9e6741) || isplayer(e_player) && gettime() - e_player.var_9d9e6741 > 2000) {
             e_player.var_9d9e6741 = gettime();
             e_player thread function_5f1793f0(1, 0.75);
@@ -243,7 +243,7 @@ function function_13629b3a() {
 function function_a6779dd4() {
     path_start = getvehiclenode(self.target, "targetname");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (!(isdefined(player.var_36cc7e41.var_7df4171f) && player.var_36cc7e41.var_7df4171f)) {
             player notify(#"switch_rail");
             player.var_36cc7e41 vehicle::get_on_and_go_path(path_start);

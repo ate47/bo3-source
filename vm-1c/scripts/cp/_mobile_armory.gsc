@@ -1,24 +1,24 @@
-#using scripts/cp/_skipto;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_util;
+#using scripts/codescripts/struct;
 #using scripts/cp/_bb;
-#using scripts/cp/_oed;
 #using scripts/cp/_objectives;
-#using scripts/cp/gametypes/_save;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/cp/gametypes/_loadout;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
 #using scripts/shared/flag_shared;
 #using scripts/shared/flagsys_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/gameobjects_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weapons;
 
 #namespace mobile_armory;
 
@@ -27,7 +27,7 @@
 class class_b4b9e1e4 {
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x41601d6a, Offset: 0x1c48
     // Size: 0xcc
     function function_71f6269a(var_bd13c94b) {
@@ -46,7 +46,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6f2cd033, Offset: 0x19b8
     // Size: 0x284
     function function_69cca2a0(var_ab455203) {
@@ -80,14 +80,14 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x958274b8, Offset: 0x1928
     // Size: 0x88
     function function_e76edd0b(var_ab455203) {
         self endon(#"death");
         var_ab455203 endon(#"death");
         while (true) {
-            entity = self waittill(#"trigger");
+            self waittill(#"trigger", entity);
             if (!isdefined(var_ab455203)) {
                 break;
             }
@@ -98,7 +98,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa5ac5582, Offset: 0x17a8
     // Size: 0x174
     function function_6b1fa4df(weapon) {
@@ -123,7 +123,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x90b7fa8a, Offset: 0x1730
     // Size: 0x6e
     function function_afd39ac7(e_player) {
@@ -134,7 +134,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x9adeb507, Offset: 0x1700
     // Size: 0x24
     function function_66708329(e_player) {
@@ -145,7 +145,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2b3eaf8d, Offset: 0xd60
     // Size: 0x994
     function function_ecdbdfeb(e_player) {
@@ -160,7 +160,7 @@ class class_b4b9e1e4 {
         e_player clientfield::set_to_player("mobile_armory_cac", var_9cba4a73);
         e_player flagsys::set("mobile_armory_in_use");
         var_eb5bcea7 = e_player getloadoutitemref(0, "cybercore");
-        str_menu, response = e_player waittill(#"menuresponse");
+        e_player waittill(#"menuresponse", str_menu, response);
         a_weaponlist = e_player getweaponslist();
         var_5b2a650 = e_player getloadoutweapon(e_player.class_num, "primary");
         var_95cf88cc = e_player getloadoutweapon(e_player.class_num, "secondary");
@@ -246,7 +246,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xd34dbd72, Offset: 0xd30
     // Size: 0x24
     function onuse(e_player) {
@@ -254,7 +254,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x5c5f10d9, Offset: 0xce8
     // Size: 0x3c
     function onenduse(team, e_player, b_result) {
@@ -264,7 +264,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x7389b2e6, Offset: 0xc78
     // Size: 0x64
     function onbeginuse(e_player) {
@@ -274,7 +274,7 @@ class class_b4b9e1e4 {
     }
 
     // Namespace namespace_b4b9e1e4
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x50923ccc, Offset: 0x768
     // Size: 0x504
     function function_c3b04569(var_96eb5b14) {
@@ -336,7 +336,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace mobile_armory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x811c6aa6, Offset: 0x5e8
 // Size: 0x34
 function __init__() {
@@ -344,7 +344,7 @@ function __init__() {
 }
 
 // Namespace mobile_armory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97db59a0, Offset: 0x628
 // Size: 0x112
 function __main__() {

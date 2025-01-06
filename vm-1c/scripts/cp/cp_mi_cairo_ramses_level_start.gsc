@@ -1,30 +1,30 @@
-#using scripts/cp/cp_mi_cairo_ramses_utility;
-#using scripts/cp/cp_mi_cairo_ramses_station_walk;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/shared/lui_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/compass;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
+#using scripts/cp/cp_mi_cairo_ramses_station_walk;
+#using scripts/cp/cp_mi_cairo_ramses_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/compass;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace level_start;
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xedfaa306, Offset: 0x650
 // Size: 0xb4
 function main() {
@@ -37,7 +37,7 @@ function main() {
 }
 
 // Namespace level_start
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc5bbc2cf, Offset: 0x710
 // Size: 0x64
 function function_e29f0dd6(str_objective) {
@@ -47,7 +47,7 @@ function function_e29f0dd6(str_objective) {
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1053f86d, Offset: 0x780
 // Size: 0x3c
 function function_e9d1564a() {
@@ -57,7 +57,7 @@ function function_e9d1564a() {
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39443a4a, Offset: 0x7c8
 // Size: 0x20c
 function function_51740d9d() {
@@ -68,22 +68,22 @@ function function_51740d9d() {
         wait 0.15;
     }
     var_28be2d2a = array(level.var_2fd26037);
-    self thread namespace_391e4301::function_24b86d60(var_28be2d2a, "kill_player_walkspeed_adjustment", -128, 256, 0.3, 0.8);
+    self thread ramses_util::function_24b86d60(var_28be2d2a, "kill_player_walkspeed_adjustment", -128, 256, 0.3, 0.8);
     do {
         wait 0.25;
     } while (!level.var_2fd26037 istouching(var_d30b00d2) && !self istouching(var_d30b00d2));
     self notify(#"kill_player_walkspeed_adjustment", 0);
-    self thread namespace_391e4301::function_24b86d60(var_28be2d2a, "kill_player_walkspeed_adjustment", -64, 512, 0.2, 0.6);
+    self thread ramses_util::function_24b86d60(var_28be2d2a, "kill_player_walkspeed_adjustment", -64, 512, 0.2, 0.6);
     do {
         wait 0.25;
     } while (!isdefined(level.var_9db406db) || !level flag::get("station_walk_past_stairs"));
     self notify(#"kill_player_walkspeed_adjustment", 0);
     var_28be2d2a = array(level.var_9db406db, level.var_2fd26037, level.var_7a9855f3);
-    self thread namespace_391e4301::function_24b86d60(var_28be2d2a, "kill_player_walkspeed_adjustment", -64, 512, 0.3, 0.8);
+    self thread ramses_util::function_24b86d60(var_28be2d2a, "kill_player_walkspeed_adjustment", -64, 512, 0.3, 0.8);
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1cfdd3b0, Offset: 0x9e0
 // Size: 0x4a
 function function_8ae96a69() {
@@ -94,7 +94,7 @@ function function_8ae96a69() {
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5de001d8, Offset: 0xa38
 // Size: 0x2b4
 function function_35e75862() {
@@ -102,8 +102,8 @@ function function_35e75862() {
     function_50fda83a();
     scene::add_scene_func("cin_ram_01_01_enterstation_1st_ride", &function_859915aa, "play");
     scene::add_scene_func("cin_ram_01_01_enterstation_1st_ride", &function_87629907, "play");
-    scene::add_scene_func("cin_ram_01_01_enterstation_1st_ride", &namespace_391e4301::function_3bc57aa8, "done");
-    namespace_391e4301::function_ac2b4535("cin_ram_01_01_enterstation_1st_ride", "enterstation_1st_ride_teleport");
+    scene::add_scene_func("cin_ram_01_01_enterstation_1st_ride", &ramses_util::function_3bc57aa8, "done");
+    ramses_util::function_ac2b4535("cin_ram_01_01_enterstation_1st_ride", "enterstation_1st_ride_teleport");
     load::function_c32ba481();
     util::function_46d3a558(%CP_MI_CAIRO_RAMSES_INTRO_LINE_1_FULL, "", %CP_MI_CAIRO_RAMSES_INTRO_LINE_2_FULL, %CP_MI_CAIRO_RAMSES_INTRO_LINE_2_SHORT, %CP_MI_CAIRO_RAMSES_INTRO_LINE_3_FULL, %CP_MI_CAIRO_RAMSES_INTRO_LINE_3_SHORT, %CP_MI_CAIRO_RAMSES_INTRO_LINE_4_FULL, %CP_MI_CAIRO_RAMSES_INTRO_LINE_4_FULL);
     scene::add_scene_func("cin_ram_01_01_enterstation_vign_loading", &function_ba280036, "play");
@@ -131,7 +131,7 @@ function function_1f8e97be() {
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf34634d3, Offset: 0xd40
 // Size: 0x8c
 function function_50fda83a() {
@@ -142,7 +142,7 @@ function function_50fda83a() {
 }
 
 // Namespace level_start
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbbf4445e, Offset: 0xdd8
 // Size: 0x42
 function function_859915aa(a_ents) {
@@ -152,7 +152,7 @@ function function_859915aa(a_ents) {
 }
 
 // Namespace level_start
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x857ef657, Offset: 0xe28
 // Size: 0x54
 function function_87629907(a_ents) {
@@ -170,7 +170,7 @@ function function_80df7cd(var_fcd89369) {
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x264b2f8b, Offset: 0xec0
 // Size: 0x48
 function function_b7bac40f() {
@@ -183,7 +183,7 @@ function function_b7bac40f() {
 }
 
 // Namespace level_start
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e7aa1a8, Offset: 0xf10
 // Size: 0x3c
 function function_679d413a() {
@@ -193,7 +193,7 @@ function function_679d413a() {
 }
 
 // Namespace level_start
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x534c07b6, Offset: 0xf58
 // Size: 0xfa
 function function_ba280036(a_ents) {
@@ -226,7 +226,7 @@ function function_d4fa36aa() {
 }
 
 // Namespace level_start
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x73c21ea9, Offset: 0x11a0
 // Size: 0xee
 function link_ents(str_name, str_key) {

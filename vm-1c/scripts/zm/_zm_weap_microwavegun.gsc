@@ -1,18 +1,18 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_util;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_microwavegun;
 
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x908c6f5, Offset: 0x690
 // Size: 0x304
 function __init__() {
@@ -55,7 +55,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3e82734, Offset: 0x9a0
 // Size: 0x1c
 function on_player_spawned() {
@@ -63,7 +63,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a5fffe7, Offset: 0x9c8
 // Size: 0x15e
 function function_8f95fde5() {
@@ -71,7 +71,7 @@ function function_8f95fde5() {
     self endon(#"hash_8f95fde5");
     self endon(#"disconnect");
     while (true) {
-        weapon = self waittill(#"weapon_give");
+        self waittill(#"weapon_give", weapon);
         weapon = zm_weapons::get_nonalternate_weapon(weapon);
         if (weapon == level.var_9c43352b || weapon == level.var_5736548e) {
             self clientfield::set_player_uimodel("hudItems.showDpadLeft_WaveGun", 1);
@@ -89,7 +89,7 @@ function function_8f95fde5() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0a7a079, Offset: 0xb30
 // Size: 0x100
 function function_1402f75f() {
@@ -114,7 +114,7 @@ function function_1402f75f() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb021d907, Offset: 0xc38
 // Size: 0x2c
 function function_d4224082(ent) {
@@ -122,7 +122,7 @@ function function_d4224082(ent) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf5eb938, Offset: 0xc70
 // Size: 0x2c
 function function_1ef3ad2b(ent) {
@@ -130,18 +130,18 @@ function function_1ef3ad2b(ent) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa4222416, Offset: 0xca8
 // Size: 0x38
 function function_e862b441() {
     for (;;) {
-        player = level waittill(#"connecting");
+        level waittill(#"connecting", player);
         player thread function_4717127f();
     }
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3bf57649, Offset: 0xce8
 // Size: 0x90
 function function_4717127f() {
@@ -157,7 +157,7 @@ function function_4717127f() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7c31e53d, Offset: 0xd80
 // Size: 0x4c
 function function_d570a914() {
@@ -170,7 +170,7 @@ function function_d570a914() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7368de20, Offset: 0xdd8
 // Size: 0x104
 function function_50d51913(upgraded) {
@@ -190,7 +190,7 @@ function function_50d51913(upgraded) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2f821297, Offset: 0xee8
 // Size: 0x5d4
 function function_d87e2d1a(upgraded, var_7e2828ad) {
@@ -263,7 +263,7 @@ function function_d87e2d1a(upgraded, var_7e2828ad) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbd766163, Offset: 0x14c8
 // Size: 0x8c
 function function_5724b132(msg, color) {
@@ -279,7 +279,7 @@ function function_5724b132(msg, color) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x83d8d031, Offset: 0x1560
 // Size: 0x2b4
 function function_7e749c35(player, var_fb9246e3, index) {
@@ -330,7 +330,7 @@ function function_7e749c35(player, var_fb9246e3, index) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6b8cc7fb, Offset: 0x1820
 // Size: 0x84
 function function_db28a1e3(note) {
@@ -345,7 +345,7 @@ function function_db28a1e3(note) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f0d0fe8, Offset: 0x18b0
 // Size: 0x44
 function function_51641b77() {
@@ -358,7 +358,7 @@ function function_51641b77() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xe1161be3, Offset: 0x1900
 // Size: 0x184
 function function_895f6a7(mod, damageweapon, player) {
@@ -388,7 +388,7 @@ function function_895f6a7(mod, damageweapon, player) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3157613, Offset: 0x1a90
 // Size: 0x92
 function function_2275c601(weapon) {
@@ -402,7 +402,7 @@ function function_2275c601(weapon) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc9ae30ff, Offset: 0x1b30
 // Size: 0x92
 function function_24f24c2e(weapon) {
@@ -416,7 +416,7 @@ function function_24f24c2e(weapon) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3d5487c7, Offset: 0x1bd0
 // Size: 0x4c
 function function_208fa6f4(weapon) {
@@ -425,7 +425,7 @@ function function_208fa6f4(weapon) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xacd041fa, Offset: 0x1c28
 // Size: 0xf4
 function microwavegun_zap_death_fx(weapon) {
@@ -448,7 +448,7 @@ function microwavegun_zap_death_fx(weapon) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0x6b7e186, Offset: 0x1d28
 // Size: 0xb4
 function function_6590a495(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_amount, w_weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -460,7 +460,7 @@ function function_6590a495(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_am
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x88726fca, Offset: 0x1de8
 // Size: 0xa8
 function function_a663c32a() {
@@ -479,7 +479,7 @@ function function_a663c32a() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x853f8321, Offset: 0x1e98
 // Size: 0xa0
 function function_652d52d3() {
@@ -487,7 +487,7 @@ function function_652d52d3() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7ac0d97, Offset: 0x1f40
 // Size: 0x16
 function function_760c6a2f() {
@@ -503,7 +503,7 @@ function function_c2925d0d() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5124e6f8, Offset: 0x1fc8
 // Size: 0x16
 function function_227551b1() {
@@ -532,7 +532,7 @@ function function_972820f5() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x83826ae9, Offset: 0x2100
 // Size: 0x9c
 function function_45da712(player, waittime) {
@@ -548,7 +548,7 @@ function function_45da712(player, waittime) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xba4713c1, Offset: 0x21a8
 // Size: 0x2c
 function function_5c6b11a6(entity) {
@@ -556,7 +556,7 @@ function function_5c6b11a6(entity) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbcf33dc7, Offset: 0x21e0
 // Size: 0x44
 function function_f8d8850f(entity) {

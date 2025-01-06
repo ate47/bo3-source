@@ -1,39 +1,39 @@
-#using scripts/shared/ai/archetype_warlord_interface;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom_gadget_firefly;
-#using scripts/cp/cybercom/_cybercom;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_blackstation;
+#using scripts/cp/cp_mi_sing_blackstation_accolades;
 #using scripts/cp/cp_mi_sing_blackstation_sound;
 #using scripts/cp/cp_mi_sing_blackstation_utility;
-#using scripts/cp/cp_mi_sing_blackstation_accolades;
-#using scripts/cp/cp_mi_sing_blackstation;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/cybercom/_cybercom_gadget_firefly;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/colors_shared;
 #using scripts/shared/exploder_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace cp_mi_sing_blackstation_station;
 
@@ -603,7 +603,7 @@ function function_bfa694b0() {
 function function_4472fea7() {
     self endon(#"death");
     while (true) {
-        var_e40110b0 = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", var_e40110b0);
         if (isdefined(var_e40110b0) && isdefined(self.enemy)) {
             n_dist = int(distance(self.origin, self.enemy.origin) * 0.05);
             n_range = randomintrange(n_dist * -1, n_dist);
@@ -1107,7 +1107,7 @@ function function_34a9c09e() {
 // Params 3, eflags: 0x0
 // Checksum 0xa6681c38, Offset: 0x4ce0
 // Size: 0x3f2
-function function_45f61c3c(var_62e11f41, s_start, s_end) {
+function zipline_player(var_62e11f41, s_start, s_end) {
     self endon(#"death");
     self thread namespace_79e1cd97::function_ed7faf05();
     var_ad470f8c = util::spawn_model("tag_origin", self.origin, self.angles);
@@ -1153,7 +1153,7 @@ function function_45f61c3c(var_62e11f41, s_start, s_end) {
     self enableoffhandweapons();
     self allowcrouch(1);
     self allowprone(1);
-    self thread namespace_79e1cd97::function_2c33b48e();
+    self thread namespace_79e1cd97::player_anchor();
     level flag::set("zipline_player_landed");
     wait 0.3;
     var_ad470f8c delete();
@@ -1217,7 +1217,7 @@ function function_a7b2f59e(e_player) {
     e_player namespace_79e1cd97::function_ed7faf05();
     e_player notify(#"hash_b2d41628");
     e_player util::function_16c71b8(1);
-    e_player thread function_45f61c3c(self.trigger, s_start, s_end);
+    e_player thread zipline_player(self.trigger, s_start, s_end);
     wait 1.5;
     self.trigger.b_in_use = 0;
 }
@@ -1276,7 +1276,7 @@ function function_1357e282(var_eda6085e) {
         return;
     }
     if (isplayer(var_eda6085e)) {
-        var_eda6085e thread namespace_79e1cd97::function_2c33b48e();
+        var_eda6085e thread namespace_79e1cd97::player_anchor();
         level flag::set("zipline_player_landed");
         var_eda6085e util::function_16c71b8(0);
     }

@@ -1,8 +1,8 @@
-#using scripts/shared/music_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
-#using scripts/cp/voice/voice_aquifer;
 #using scripts/codescripts/struct;
+#using scripts/cp/voice/voice_aquifer;
+#using scripts/shared/flag_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_aquifer_sound;
 

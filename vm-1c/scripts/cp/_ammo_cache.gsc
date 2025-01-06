@@ -1,13 +1,13 @@
-#using scripts/cp/_oed;
+#using scripts/codescripts/struct;
 #using scripts/cp/_objectives;
-#using scripts/shared/trigger_shared;
+#using scripts/cp/_oed;
+#using scripts/shared/array_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_util_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
+#using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace ammo_cache;
 
@@ -16,7 +16,7 @@
 class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x52045c14, Offset: 0x1008
     // Size: 0x6c
     function function_71f6269a(var_bd13c94b) {
@@ -29,7 +29,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x13613ccb, Offset: 0xe68
     // Size: 0x194
     function function_2902ab6c(var_60a09143) {
@@ -56,14 +56,14 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xd085a242, Offset: 0xdd8
     // Size: 0x88
     function function_e76edd0b(var_60a09143) {
         self endon(#"death");
         var_60a09143 endon(#"death");
         while (true) {
-            entity = self waittill(#"trigger");
+            self waittill(#"trigger", entity);
             if (!isdefined(var_60a09143)) {
                 break;
             }
@@ -74,7 +74,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa82182a2, Offset: 0xd90
     // Size: 0x3c
     function function_57e40211(w_weapon) {
@@ -86,7 +86,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x4982b758, Offset: 0xc08
     // Size: 0x17c
     function onuse(e_player) {
@@ -108,7 +108,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x39c03398, Offset: 0xbc0
     // Size: 0x3c
     function onenduse(team, e_player, b_result) {
@@ -118,7 +118,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x276b7bc3, Offset: 0xb70
     // Size: 0x44
     function onbeginuse(e_player) {
@@ -127,7 +127,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xb92ecb5b, Offset: 0xb08
     // Size: 0x5c
     function function_82b8e134(origin, angles) {
@@ -136,7 +136,7 @@ class class_1e7268a3 {
     }
 
     // Namespace namespace_1e7268a3
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x1ee86ce1, Offset: 0x5b8
     // Size: 0x544
     function function_35dd0243(var_455957d8) {
@@ -202,7 +202,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace ammo_cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x378
 // Size: 0x4
 function __init__() {
@@ -210,7 +210,7 @@ function __init__() {
 }
 
 // Namespace ammo_cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x647b572c, Offset: 0x388
 // Size: 0x204
 function __main__() {

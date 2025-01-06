@@ -1,35 +1,35 @@
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_flak_drone;
-#using scripts/mp/killstreaks/_dogs;
-#using scripts/mp/killstreaks/_airsupport;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_player;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/_util;
 #using scripts/mp/_challenges;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/killstreaks/_airsupport;
+#using scripts/mp/killstreaks/_dogs;
+#using scripts/mp/killstreaks/_flak_drone;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/weapons/_heatseekingmissile;
 #using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
 
 #using_animtree("mp_vehicles");
 
 #namespace helicopter;
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7234ca08, Offset: 0x1448
 // Size: 0x102
 function precachehelicopter(model, type) {
@@ -47,7 +47,7 @@ function precachehelicopter(model, type) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe81fd668, Offset: 0x1558
 // Size: 0x338
 function usekillstreakhelicopter(hardpointtype) {
@@ -95,7 +95,7 @@ function usekillstreakhelicopter(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf4a7e37, Offset: 0x1898
 // Size: 0x54
 function announcehelicopterinbound(hardpointtype) {
@@ -104,7 +104,7 @@ function announcehelicopterinbound(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x826bd8c9, Offset: 0x18f8
 // Size: 0x754
 function heli_path_graph() {
@@ -179,7 +179,7 @@ function heli_path_graph() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaccdb620, Offset: 0x2058
 // Size: 0x66c
 function init() {
@@ -237,7 +237,7 @@ function init() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc61d0cf, Offset: 0x26d0
 // Size: 0x55c
 function heli_update_global_dvars(debug_refresh) {
@@ -280,7 +280,7 @@ function heli_update_global_dvars(debug_refresh) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x42a4e8bb, Offset: 0x2c38
 // Size: 0x42
 function function_91077906(dvar, def) {
@@ -288,7 +288,7 @@ function function_91077906(dvar, def) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x92617f88, Offset: 0x2c88
 // Size: 0x84
 function function_c233870c(dvar, def) {
@@ -300,7 +300,7 @@ function function_c233870c(dvar, def) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x620a50a6, Offset: 0x2d18
 // Size: 0x3c
 function set_goal_pos(goalpos, stop) {
@@ -309,7 +309,7 @@ function set_goal_pos(goalpos, stop) {
 }
 
 // Namespace helicopter
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xfc201790, Offset: 0x2d60
 // Size: 0x268
 function spawn_helicopter(owner, origin, angles, model, targetname, target_offset, hardpointtype, killstreak_id) {
@@ -343,7 +343,7 @@ function spawn_helicopter(owner, origin, angles, model, targetname, target_offse
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xceada76f, Offset: 0x2fd0
 // Size: 0x8c
 function onflakdronedestroyed() {
@@ -357,7 +357,7 @@ function onflakdronedestroyed() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x395789b1, Offset: 0x3068
 // Size: 0x40
 function explodeoncontact(hardpointtype) {
@@ -370,7 +370,7 @@ function explodeoncontact(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x22d7f822, Offset: 0x30b0
 // Size: 0x18a
 function getvalidprotectlocationstart(random_path, protectlocation, destination) {
@@ -391,7 +391,7 @@ function getvalidprotectlocationstart(random_path, protectlocation, destination)
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3094ff64, Offset: 0x3248
 // Size: 0x218
 function getvalidrandomleavenode(start) {
@@ -417,7 +417,7 @@ function getvalidrandomleavenode(start) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4a59a6ed, Offset: 0x3468
 // Size: 0x130
 function getvalidrandomstartnode(dest) {
@@ -440,7 +440,7 @@ function getvalidrandomstartnode(dest) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe46217f6, Offset: 0x35a0
 // Size: 0x11c
 function getvalidrandomcrashnode(start) {
@@ -457,7 +457,7 @@ function getvalidrandomcrashnode(start) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x18420c22, Offset: 0x36c8
 // Size: 0x3c
 function configureteampost(owner, ishacked) {
@@ -466,7 +466,7 @@ function configureteampost(owner, ishacked) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2174fa3f, Offset: 0x3710
 // Size: 0xa8
 function hackedcallbackpost(hacker) {
@@ -479,7 +479,7 @@ function hackedcallbackpost(hacker) {
 }
 
 // Namespace helicopter
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x95b6bfef, Offset: 0x37c0
 // Size: 0x6dc
 function heli_think(owner, startnode, heli_team, missilesenabled, protectlocation, hardpointtype, armored, killstreak_id) {
@@ -562,7 +562,7 @@ function heli_think(owner, startnode, heli_team, missilesenabled, protectlocatio
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa5df8658, Offset: 0x3ea8
 // Size: 0x34
 function autostopsound() {
@@ -572,7 +572,7 @@ function autostopsound() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xef3f32c5, Offset: 0x3ee8
 // Size: 0x24
 function heli_existance() {
@@ -581,7 +581,7 @@ function heli_existance() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xecf9ba72, Offset: 0x3f18
 // Size: 0x94
 function create_flare_ent(offset) {
@@ -591,7 +591,7 @@ function create_flare_ent(offset) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x45119e0e, Offset: 0x3fb8
 // Size: 0x110
 function heli_missile_regen() {
@@ -616,7 +616,7 @@ function heli_missile_regen() {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x63e1f0d5, Offset: 0x40d0
 // Size: 0x740
 function heli_targeting(missilesenabled, hardpointtype) {
@@ -708,7 +708,7 @@ function heli_targeting(missilesenabled, hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3c2d61e4, Offset: 0x4818
 // Size: 0x240
 function cantargetplayer_turret(player, hardpointtype) {
@@ -752,7 +752,7 @@ function cantargetplayer_turret(player, hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa28f99de, Offset: 0x4a60
 // Size: 0x190
 function cantargetactor_turret(actor, hardpointtype) {
@@ -802,7 +802,7 @@ function getverticaltan(startorigin, endorigin) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb76d3800, Offset: 0x4ce8
 // Size: 0x2a6
 function cantargetplayer_missile(player, hardpointtype) {
@@ -852,7 +852,7 @@ function cantargetplayer_missile(player, hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x39a65b5b, Offset: 0x4f98
 // Size: 0x1b6
 function cantargetdog_turret(dog) {
@@ -886,7 +886,7 @@ function cantargetdog_turret(dog) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc655caf, Offset: 0x5158
 // Size: 0x1b6
 function cantargetdog_missile(dog) {
@@ -920,7 +920,7 @@ function cantargetdog_missile(dog) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x360ae6bc, Offset: 0x5318
 // Size: 0xf0
 function cantargettank_turret(tank) {
@@ -947,7 +947,7 @@ function cantargettank_turret(tank) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2505dc01, Offset: 0x5410
 // Size: 0x256
 function assignprimarytargets(targets) {
@@ -983,7 +983,7 @@ function assignprimarytargets(targets) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x214564fa, Offset: 0x5670
 // Size: 0x22e
 function assignsecondarytargets(targets) {
@@ -1014,7 +1014,7 @@ function assignsecondarytargets(targets) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9289c20b, Offset: 0x58a8
 // Size: 0xcc
 function heli_reset() {
@@ -1028,7 +1028,7 @@ function heli_reset() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa63952d6, Offset: 0x5980
 // Size: 0x6a
 function heli_wait(waittime) {
@@ -1042,7 +1042,7 @@ function heli_wait(waittime) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0c1a218, Offset: 0x59f8
 // Size: 0x8c
 function heli_hover() {
@@ -1056,7 +1056,7 @@ function heli_hover() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7c914a5d, Offset: 0x5a90
 // Size: 0xd0
 function wait_for_killed() {
@@ -1065,7 +1065,7 @@ function wait_for_killed() {
     self endon(#"leaving");
     self.bda = 0;
     while (true) {
-        victim = self waittill(#"killed");
+        self waittill(#"killed", victim);
         if (!isdefined(self.owner) || !isdefined(victim)) {
             continue;
         }
@@ -1080,7 +1080,7 @@ function wait_for_killed() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1f02d7e8, Offset: 0x5b68
 // Size: 0x34
 function wait_for_bda_timeout() {
@@ -1093,7 +1093,7 @@ function wait_for_bda_timeout() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf425599e, Offset: 0x5ba8
 // Size: 0xd0
 function play_bda_dialog() {
@@ -1112,7 +1112,7 @@ function play_bda_dialog() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xece16515, Offset: 0x5c80
 // Size: 0x90
 function heli_hacked_health_update(hacker) {
@@ -1125,7 +1125,7 @@ function heli_hacked_health_update(hacker) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa78ca9a8, Offset: 0x5d18
 // Size: 0xbe8
 function heli_damage_monitor(hardpointtype) {
@@ -1148,7 +1148,7 @@ function heli_damage_monitor(hardpointtype) {
         self.flareattackerdamage = [];
     }
     for (;;) {
-        damage, attacker, direction, point, type, modelname, tagname, partname, weapon, flags, inflictor, chargelevel = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, modelname, tagname, partname, weapon, flags, inflictor, chargelevel);
         if (!isdefined(attacker) || !isplayer(attacker)) {
             continue;
         }
@@ -1342,7 +1342,7 @@ function heli_damage_monitor(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca90174f, Offset: 0x6908
 // Size: 0xa4
 function init_active_camo() {
@@ -1358,7 +1358,7 @@ function init_active_camo() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64170790, Offset: 0x69b8
 // Size: 0x274
 function heli_set_active_camo_state(state) {
@@ -1401,7 +1401,7 @@ function heli_set_active_camo_state(state) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x914b74ff, Offset: 0x6c38
 // Size: 0xd4
 function heli_active_camo_damage_update(damage) {
@@ -1420,7 +1420,7 @@ function heli_active_camo_damage_update(damage) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97ea038c, Offset: 0x6d18
 // Size: 0x9c
 function heli_active_camo_damage_disable() {
@@ -1437,7 +1437,7 @@ function heli_active_camo_damage_disable() {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1dca9c4, Offset: 0x6dc0
 // Size: 0x458
 function heli_health(hardpointtype, playernotify) {
@@ -1452,7 +1452,7 @@ function heli_health(hardpointtype, playernotify) {
         self.maxhealth = tablehealth;
     }
     for (;;) {
-        damage, attacker, direction, point, type, modelname, tagname, partname, weapon = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, modelname, tagname, partname, weapon);
         wait 0.05;
         if (self.damagetaken > self.maxhealth) {
             damagestate = 0;
@@ -1489,7 +1489,7 @@ function heli_health(hardpointtype, playernotify) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc809114d, Offset: 0x7220
 // Size: 0x164
 function heli_evasive(hardpointtype) {
@@ -1516,7 +1516,7 @@ function heli_evasive(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x83970b31, Offset: 0x7390
 // Size: 0x5c
 function notify_player(player, playernotify, delay) {
@@ -1533,7 +1533,7 @@ function notify_player(player, playernotify, delay) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa9c1e7e1, Offset: 0x73f8
 // Size: 0x2c
 function play_going_down_vo(delay) {
@@ -1543,7 +1543,7 @@ function play_going_down_vo(delay) {
 }
 
 // Namespace helicopter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x796dec9e, Offset: 0x7430
 // Size: 0x4ac
 function heli_crash(hardpointtype, player, playernotify) {
@@ -1631,7 +1631,7 @@ function damagedrotorfx() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xea8d9413, Offset: 0x7920
 // Size: 0x34
 function waitthenexplode(time) {
@@ -1641,7 +1641,7 @@ function waitthenexplode(time) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x43127d8f, Offset: 0x7960
 // Size: 0x1e4
 function crashonnearestcrashpath(hardpointtype) {
@@ -1667,7 +1667,7 @@ function crashonnearestcrashpath(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4c7e7c25, Offset: 0x7b50
 // Size: 0x7e
 function checkhelicoptertag(tagname) {
@@ -1689,7 +1689,7 @@ function checkhelicoptertag(tagname) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x863dd9f1, Offset: 0x7bd8
 // Size: 0x244
 function heli_secondary_explosions() {
@@ -1712,7 +1712,7 @@ function heli_secondary_explosions() {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x58af75d3, Offset: 0x7e28
 // Size: 0x9e
 function heli_spin(speed) {
@@ -1726,7 +1726,7 @@ function heli_spin(speed) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86fec863, Offset: 0x7ed0
 // Size: 0x8c
 function spinsoundshortly() {
@@ -1740,7 +1740,7 @@ function spinsoundshortly() {
 }
 
 // Namespace helicopter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xff9a9cd0, Offset: 0x7f68
 // Size: 0x3c
 function trail_fx(trail_fx, trail_tag, stop_notify) {
@@ -1748,7 +1748,7 @@ function trail_fx(trail_fx, trail_tag, stop_notify) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x62218e3c, Offset: 0x7fb0
 // Size: 0x174
 function destroyhelicopter() {
@@ -1779,7 +1779,7 @@ function destroyhelicopter() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f2f4a66, Offset: 0x8130
 // Size: 0x19c
 function heli_explode() {
@@ -1799,7 +1799,7 @@ function heli_explode() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce89c105, Offset: 0x82d8
 // Size: 0x64
 function clear_client_flags() {
@@ -1809,7 +1809,7 @@ function clear_client_flags() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xedd27a21, Offset: 0x8348
 // Size: 0x2bc
 function heli_leave() {
@@ -1854,7 +1854,7 @@ function heli_leave() {
 }
 
 // Namespace helicopter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x12905098, Offset: 0x8610
 // Size: 0x51c
 function heli_fly(currentnode, startwait, hardpointtype) {
@@ -1931,7 +1931,7 @@ function heli_fly(currentnode, startwait, hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x86853b7d, Offset: 0x8b38
 // Size: 0x11c
 function heli_random_point_in_radius(protectdest, nodeheight) {
@@ -1946,7 +1946,7 @@ function heli_random_point_in_radius(protectdest, nodeheight) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x174f8f69, Offset: 0x8c60
 // Size: 0x118
 function heli_get_protect_spot(protectdest, nodeheight) {
@@ -1961,7 +1961,7 @@ function heli_get_protect_spot(protectdest, nodeheight) {
 }
 
 // Namespace helicopter
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xbe9fcf78, Offset: 0x8d80
 // Size: 0x46
 function function_55098db7(time, msg1, msg2, msg3) {
@@ -1973,7 +1973,7 @@ function function_55098db7(time, msg1, msg2, msg3) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfba72374, Offset: 0x8dd0
 // Size: 0xac
 function set_heli_speed_normal() {
@@ -1985,7 +1985,7 @@ function set_heli_speed_normal() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5151e8f, Offset: 0x8e88
 // Size: 0xac
 function set_heli_speed_evasive() {
@@ -1997,7 +1997,7 @@ function set_heli_speed_evasive() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x94f565c4, Offset: 0x8f40
 // Size: 0x5c
 function set_heli_speed_hover() {
@@ -2007,7 +2007,7 @@ function set_heli_speed_hover() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe594df09, Offset: 0x8fa8
 // Size: 0x5a
 function is_targeted() {
@@ -2043,7 +2043,7 @@ function heli_mobilespawn(protectdest) {
 }
 
 // Namespace helicopter
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x42fbe55, Offset: 0x9130
 // Size: 0x4f4
 function heli_protect(startnode, protectdest, hardpointtype, heli_team) {
@@ -2116,7 +2116,7 @@ function heli_protect(startnode, protectdest, hardpointtype, heli_team) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x515245ed, Offset: 0x9630
 // Size: 0x6c
 function updatespeedonlock() {
@@ -2128,7 +2128,7 @@ function updatespeedonlock() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1787ff2, Offset: 0x96a8
 // Size: 0x64
 function updatespeed() {
@@ -2140,7 +2140,7 @@ function updatespeed() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82009f8f, Offset: 0x9718
 // Size: 0xae
 function updatetargetyaw() {
@@ -2159,7 +2159,7 @@ function updatetargetyaw() {
 }
 
 // Namespace helicopter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x37c9f48c, Offset: 0x97d0
 // Size: 0x230
 function fire_missile(smissiletype, ishots, etarget) {
@@ -2200,7 +2200,7 @@ function fire_missile(smissiletype, ishots, etarget) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x90a723c, Offset: 0x9a08
 // Size: 0x74
 function check_owner(hardpointtype) {
@@ -2211,7 +2211,7 @@ function check_owner(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaa611be5, Offset: 0x9a88
 // Size: 0x4c
 function attack_targets(missilesenabled, hardpointtype) {
@@ -2222,7 +2222,7 @@ function attack_targets(missilesenabled, hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x11f9be9d, Offset: 0x9ae0
 // Size: 0x1a0
 function attack_secondary(hardpointtype) {
@@ -2257,7 +2257,7 @@ function attack_secondary(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x16146e8d, Offset: 0x9c88
 // Size: 0x122
 function turret_target_check(turrettarget, attackangle) {
@@ -2280,7 +2280,7 @@ function turret_target_check(turrettarget, attackangle) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf6c52cf2, Offset: 0x9db8
 // Size: 0x104
 function target_cone_check(target, conecosine) {
@@ -2296,7 +2296,7 @@ function target_cone_check(target, conecosine) {
 }
 
 // Namespace helicopter
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x4a59c1e7, Offset: 0x9ec8
 // Size: 0x2c2
 function missile_support(target_player, rof, instantfire, endon_notify) {
@@ -2345,7 +2345,7 @@ function missile_support(target_player, rof, instantfire, endon_notify) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x73e265b8, Offset: 0xa198
 // Size: 0x4e0
 function attack_primary(hardpointtype) {
@@ -2422,7 +2422,7 @@ function attack_primary(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x460a89ae, Offset: 0xa680
 // Size: 0x286
 function function_7b27c61a(turrettarget) {
@@ -2463,7 +2463,7 @@ function function_7b27c61a(turrettarget) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x535af45a, Offset: 0xa910
 // Size: 0x244
 function debug_print_target() {
@@ -2495,18 +2495,18 @@ function debug_print_target() {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a9badd, Offset: 0xab60
 // Size: 0x38
 function waittill_confirm_location() {
     self endon(#"emp_jammed");
     self endon(#"emp_grenaded");
-    location = self waittill(#"confirm_location");
+    self waittill(#"confirm_location", location);
     return location;
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4cbe6901, Offset: 0xaba0
 // Size: 0xca
 function selecthelicopterlocation(hardpointtype) {
@@ -2525,7 +2525,7 @@ function selecthelicopterlocation(hardpointtype) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x496f54c3, Offset: 0xac78
 // Size: 0x12c
 function processcopterassist(destroyedcopter, damagedone) {
@@ -2550,7 +2550,7 @@ function processcopterassist(destroyedcopter, damagedone) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc66e2a72, Offset: 0xadb0
 // Size: 0x74
 function function_6de97db8() {
@@ -2587,7 +2587,7 @@ function playpilotdialog(dialog, time, voice, shouldwait) {
 }
 
 // Namespace helicopter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf2172da, Offset: 0xaf30
 // Size: 0xcc
 function playpilottalking(shouldwait, soundalias) {
@@ -2607,7 +2607,7 @@ function playpilottalking(shouldwait, soundalias) {
 }
 
 // Namespace helicopter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa91713cf, Offset: 0xb008
 // Size: 0x9a
 function watchforearlyleave(chopper) {
@@ -2625,7 +2625,7 @@ function watchforearlyleave(chopper) {
 }
 
 // Namespace helicopter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x971ee825, Offset: 0xb0b0
 // Size: 0x5c
 function watchforemp() {

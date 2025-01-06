@@ -1,19 +1,19 @@
-#using scripts/mp/killstreaks/_supplydrop;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/codescripts/struct;
 #using scripts/mp/_util;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_dev;
 #using scripts/mp/gametypes/_battlechatter;
+#using scripts/mp/gametypes/_dev;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/shared/array_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/weapons/_weapon_utils;
 #using scripts/shared/weapons/_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace dogs;
 
@@ -259,7 +259,7 @@ function function_4b764fa6(owner, team, spawn_node, requireddeathcount) {
 function function_49bbd420() {
     self endon(#"death");
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (weapon_utils::isflashorstunweapon(weapon)) {
             damage_area = spawn("trigger_radius", self.origin, 0, -128, -128);
             attacker thread function_f436e711(damage_area);
@@ -528,11 +528,11 @@ function function_62d0f1eb() {
     if (!isdefined(self.script_owner)) {
         return;
     }
-    self endon(#"hash_3bf7624");
+    self endon(#"clear_owner");
     self endon(#"death");
     self.script_owner endon(#"disconnect");
     while (true) {
-        player = self waittill(#"killed");
+        self waittill(#"killed", player);
         self.script_owner notify(#"hash_18faeaac");
     }
 }
@@ -547,7 +547,7 @@ function function_e5624260() {
     regen_interval = int(self.health / 5 * interval);
     var_c5fb7989 = 2;
     for (;;) {
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags);
         self trackattackerdamage(attacker);
         self thread function_f7ae2e49(var_c5fb7989, interval, regen_interval);
     }
@@ -607,7 +607,7 @@ function function_f7ae2e49(delay, interval, regen_interval) {
 // Checksum 0x7e8e896, Offset: 0x22b0
 // Size: 0x150
 function function_67f34e48() {
-    attacker = self waittill(#"death");
+    self waittill(#"death", attacker);
     if (isdefined(attacker) && isplayer(attacker)) {
         if (isdefined(self.script_owner) && self.script_owner == attacker) {
             return;
@@ -749,7 +749,7 @@ function function_f436e711(area) {
         if (team != player.team) {
             dog.team = team;
             dog clearentityowner();
-            dog notify(#"hash_3bf7624");
+            dog notify(#"clear_owner");
         }
     }
 

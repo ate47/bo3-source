@@ -1,7 +1,7 @@
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/math_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/weapons/_weapons;
 
 #namespace namespace_fdfaa57d;
 
@@ -33,7 +33,7 @@ function autoexec function_58d5283a() {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9597f221, Offset: 0x3a8
 // Size: 0x24e
 function function_549c28ac(var_6a173bd1) {
@@ -62,7 +62,7 @@ function function_549c28ac(var_6a173bd1) {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97a564d, Offset: 0x600
 // Size: 0xea
 function function_1e2e0936(var_1010f96a) {
@@ -82,7 +82,7 @@ function function_1e2e0936(var_1010f96a) {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x93e48692, Offset: 0x6f8
 // Size: 0x890
 function function_53200e4d(var_1010f96a) {
@@ -105,7 +105,7 @@ function function_53200e4d(var_1010f96a) {
         weapon = getweapon(var_279890e8.weaponname);
         var_d9cb0358 = getrandomcompatibleattachmentsforweapon(weapon, numattachments);
     }
-    var_65ce895e = undefined;
+    acvi = undefined;
     var_2106259a = 0;
     if (isdefined(var_d9cb0358) && isarray(var_d9cb0358) && var_d9cb0358.size) {
         var_82d771df = getweapon(var_279890e8.weaponname, var_d9cb0358);
@@ -113,28 +113,28 @@ function function_53200e4d(var_1010f96a) {
             var_2106259a = 1;
             switch (var_d9cb0358.size) {
             case 8:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss(), var_d9cb0358[5], math::cointoss(), var_d9cb0358[6], math::cointoss(), var_d9cb0358[7], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss(), var_d9cb0358[5], math::cointoss(), var_d9cb0358[6], math::cointoss(), var_d9cb0358[7], math::cointoss());
                 break;
             case 7:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss(), var_d9cb0358[5], math::cointoss(), var_d9cb0358[6], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss(), var_d9cb0358[5], math::cointoss(), var_d9cb0358[6], math::cointoss());
                 break;
             case 6:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss(), var_d9cb0358[5], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss(), var_d9cb0358[5], math::cointoss());
                 break;
             case 5:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss(), var_d9cb0358[4], math::cointoss());
                 break;
             case 4:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss(), var_d9cb0358[3], math::cointoss());
                 break;
             case 3:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss(), var_d9cb0358[2], math::cointoss());
                 break;
             case 2:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss(), var_d9cb0358[1], math::cointoss());
                 break;
             case 1:
-                var_65ce895e = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss());
+                acvi = getattachmentcosmeticvariantindexes(var_82d771df, var_d9cb0358[0], math::cointoss());
                 break;
             }
         }
@@ -144,7 +144,7 @@ function function_53200e4d(var_1010f96a) {
     }
     weaponinfo = [];
     weaponinfo[0] = var_82d771df;
-    weaponinfo[1] = var_65ce895e;
+    weaponinfo[1] = acvi;
     if (randomint(100) < level.var_a9e78bf7["camochance"]) {
         weaponinfo[2] = array::random(array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 18, 19, 20, 21, 22, 23, 24, 25));
     } else {
@@ -155,7 +155,7 @@ function function_53200e4d(var_1010f96a) {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe01c7cc, Offset: 0xf90
 // Size: 0x48c
 function function_43128d49(weaponinfo, var_fe7b5ca3) {
@@ -235,7 +235,7 @@ function function_7e774306() {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x639c1fbf, Offset: 0x1588
 // Size: 0x94
 function function_be94c003() {
@@ -249,7 +249,7 @@ function function_be94c003() {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5600cdc8, Offset: 0x1628
 // Size: 0x7c
 function function_d5efb07f() {
@@ -262,7 +262,7 @@ function function_d5efb07f() {
 }
 
 // Namespace namespace_fdfaa57d
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xec9d94b6, Offset: 0x16b0
 // Size: 0x174
 function function_132d9eee(weapon) {

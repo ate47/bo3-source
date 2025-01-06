@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_fog;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_fog
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9aa1599c, Offset: 0x1c8
 // Size: 0x94
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace zm_fog
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6b3e7a5, Offset: 0x268
 // Size: 0x4c
 function __main__() {
@@ -80,7 +80,7 @@ function function_e920efc6(var_1cafad33, var_965632d6, var_ab3af963) {
 }
 
 // Namespace zm_fog
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb1d29c8d, Offset: 0x508
 // Size: 0x2c
 function function_facb5f71(var_400d18c9) {
@@ -88,7 +88,7 @@ function function_facb5f71(var_400d18c9) {
 }
 
 // Namespace zm_fog
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x669d8e70, Offset: 0x540
 // Size: 0x64
 function function_bd594680(var_965632d6, var_4780a11e) {
@@ -98,7 +98,7 @@ function function_bd594680(var_965632d6, var_4780a11e) {
 }
 
 // Namespace zm_fog
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x54e78503, Offset: 0x5b0
 // Size: 0x120
 function function_72260d3a(var_2fa24527, str_dvar, n_value, func, var_f0ee45c9) {
@@ -118,7 +118,7 @@ function function_72260d3a(var_2fa24527, str_dvar, n_value, func, var_f0ee45c9) 
 }
 
 // Namespace zm_fog
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2c08b2b, Offset: 0x6d8
 // Size: 0x116
 function function_fb5e0a7e() {
@@ -138,7 +138,7 @@ function function_fb5e0a7e() {
 /#
 
     // Namespace zm_fog
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa1c2a2e8, Offset: 0x7f8
     // Size: 0x4c
     function function_3dec91b9(n_val) {
@@ -147,7 +147,7 @@ function function_fb5e0a7e() {
     }
 
     // Namespace zm_fog
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xee07c534, Offset: 0x850
     // Size: 0x3c
     function function_49720b6e(n_val) {
@@ -156,7 +156,7 @@ function function_fb5e0a7e() {
     }
 
     // Namespace zm_fog
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6bbd5c4f, Offset: 0x898
     // Size: 0x64
     function function_124286f7(n_val) {

@@ -1,17 +1,17 @@
-#using scripts/shared/scene_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_island_dogfights;
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa0b91949, Offset: 0x3a8
 // Size: 0x19c
 function init() {
@@ -26,7 +26,7 @@ function init() {
 }
 
 // Namespace zm_island_dogfights
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2dc3da18, Offset: 0x550
 // Size: 0xa2
 function function_618223cc(a_ents) {
@@ -38,7 +38,7 @@ function function_618223cc(a_ents) {
 }
 
 // Namespace zm_island_dogfights
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3143b5b4, Offset: 0x600
 // Size: 0x11a
 function play_dogfight_scenes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -67,7 +67,7 @@ function play_dogfight_scenes(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf97be436, Offset: 0x728
 // Size: 0x68
 function function_7a1c330() {
@@ -80,7 +80,7 @@ function function_7a1c330() {
 }
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa8f5d961, Offset: 0x798
 // Size: 0x48
 function function_5daf587e() {
@@ -91,7 +91,7 @@ function function_5daf587e() {
 }
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9aa6ea39, Offset: 0x7e8
 // Size: 0x48
 function function_2737bcd8() {
@@ -102,7 +102,7 @@ function function_2737bcd8() {
 }
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x54fdb09f, Offset: 0x838
 // Size: 0x48
 function function_99236d51() {
@@ -113,7 +113,7 @@ function function_99236d51() {
 }
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4b1b31ca, Offset: 0x888
 // Size: 0x48
 function function_b9d547c() {
@@ -124,7 +124,7 @@ function function_b9d547c() {
 }
 
 // Namespace zm_island_dogfights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe83138f5, Offset: 0x8d8
 // Size: 0x68
 function function_63045f7a() {
@@ -137,7 +137,7 @@ function function_63045f7a() {
 }
 
 // Namespace zm_island_dogfights
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xbddda490, Offset: 0x948
 // Size: 0x13a
 function function_4fc200d2(str_targetname, var_595a599c, var_83ec64e2, var_193e3630) {

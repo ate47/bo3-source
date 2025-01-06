@@ -1,14 +1,14 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_unbearable;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_unbearable
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2a4bdb2, Offset: 0x288
 // Size: 0x84
 function __init__() {
@@ -33,19 +33,19 @@ function __init__() {
 }
 
 // Namespace zm_bgb_unbearable
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9eab77a, Offset: 0x318
 // Size: 0x64
 function event() {
     self endon(#"disconnect");
     self endon(#"bgb_update");
-    e_chest = self waittill(#"zm_bgb_unbearable");
+    self waittill(#"zm_bgb_unbearable", e_chest);
     self bgb::do_one_shot_use(1);
     e_chest thread function_7a5dc39b(self);
 }
 
 // Namespace zm_bgb_unbearable
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xca6cd13, Offset: 0x388
 // Size: 0x1cc
 function function_7a5dc39b(player) {
@@ -70,7 +70,7 @@ function function_7a5dc39b(player) {
 }
 
 // Namespace zm_bgb_unbearable
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcaf5b481, Offset: 0x560
 // Size: 0x114
 function function_a612a2b3() {

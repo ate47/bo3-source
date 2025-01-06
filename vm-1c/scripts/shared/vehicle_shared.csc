@@ -1,11 +1,11 @@
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace vehicle;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfb287f0, Offset: 0x6f8
 // Size: 0xd9c
 function __init__() {
@@ -74,7 +74,7 @@ function __init__() {
 }
 
 // Namespace vehicle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x205773e8, Offset: 0x14a0
 // Size: 0x3e
 function add_vehicletype_callback(vehicletype, callback) {
@@ -85,7 +85,7 @@ function add_vehicletype_callback(vehicletype, callback) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa7093b3, Offset: 0x14e8
 // Size: 0xd6
 function spawned_callback(localclientnum) {
@@ -105,7 +105,7 @@ function spawned_callback(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x63f580cd, Offset: 0x15c8
 // Size: 0x2a8
 function rumble(localclientnum) {
@@ -147,7 +147,7 @@ function rumble(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9fc38d0c, Offset: 0x1878
 // Size: 0x12
 function kill_treads_forever() {
@@ -155,7 +155,7 @@ function kill_treads_forever() {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x71f807de, Offset: 0x1898
 // Size: 0x1b4
 function play_exhaust(localclientnum) {
@@ -186,7 +186,7 @@ function play_exhaust(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb0f956f7, Offset: 0x1a58
 // Size: 0x86
 function function_49a7bb3b(localclientnum) {
@@ -202,7 +202,7 @@ function function_49a7bb3b(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc8650c06, Offset: 0x1ae8
 // Size: 0x1a
 function stop_exhaust(localclientnum) {
@@ -210,7 +210,7 @@ function stop_exhaust(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46d6b1e2, Offset: 0x1b10
 // Size: 0x2a6
 function aircraft_dustkick() {
@@ -297,7 +297,7 @@ function weapon_fired() {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x81186169, Offset: 0x1f88
 // Size: 0x7c
 function function_b7c7870e(localclientnum) {
@@ -313,7 +313,7 @@ function function_b7c7870e(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x235a4eff, Offset: 0x2010
 // Size: 0x136
 function lights_on(localclientnum, team) {
@@ -335,7 +335,7 @@ function lights_on(localclientnum, team) {
 }
 
 // Namespace vehicle
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x9e42fc82, Offset: 0x2150
 // Size: 0x112
 function addanimtolist(animitem, &liston, &listoff, playwhenoff, id, maxid) {
@@ -359,7 +359,7 @@ function addanimtolist(animitem, &liston, &listoff, playwhenoff, id, maxid) {
 }
 
 // Namespace vehicle
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x34924c8c, Offset: 0x2270
 // Size: 0x5ee
 function ambient_anim_toggle(localclientnum, groupid, ison) {
@@ -416,7 +416,7 @@ function ambient_anim_toggle(localclientnum, groupid, ison) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3c115fe6, Offset: 0x2868
 // Size: 0x5c
 function field_toggle_ambient_anim_handler1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -424,7 +424,7 @@ function field_toggle_ambient_anim_handler1(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9795c8ea, Offset: 0x28d0
 // Size: 0x5c
 function field_toggle_ambient_anim_handler2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -432,7 +432,7 @@ function field_toggle_ambient_anim_handler2(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x77f3c9f2, Offset: 0x2938
 // Size: 0x5c
 function field_toggle_ambient_anim_handler3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -448,7 +448,7 @@ function field_toggle_ambient_anim_handler4(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xbf9aa550, Offset: 0x2a08
 // Size: 0x7a2
 function lights_group_toggle(localclientnum, id, ison) {
@@ -523,7 +523,7 @@ function lights_group_toggle(localclientnum, id, ison) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb2754e46, Offset: 0x31b8
 // Size: 0x5c
 function field_toggle_lights_group_handler1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -531,7 +531,7 @@ function field_toggle_lights_group_handler1(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x29a93f2, Offset: 0x3220
 // Size: 0x5c
 function field_toggle_lights_group_handler2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -539,7 +539,7 @@ function field_toggle_lights_group_handler2(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4bfdf16a, Offset: 0x3288
 // Size: 0x5c
 function field_toggle_lights_group_handler3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -547,7 +547,7 @@ function field_toggle_lights_group_handler3(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6bfa43a9, Offset: 0x32f0
 // Size: 0x5c
 function field_toggle_lights_group_handler4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -555,7 +555,7 @@ function field_toggle_lights_group_handler4(localclientnum, oldval, newval, bnew
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1f9476d9, Offset: 0x3358
 // Size: 0x6e
 function delete_alert_lights(localclientnum) {
@@ -568,7 +568,7 @@ function delete_alert_lights(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x328f30b3, Offset: 0x33d0
 // Size: 0x84
 function lights_off(localclientnum) {
@@ -582,7 +582,7 @@ function lights_off(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x642d0fb0, Offset: 0x3460
 // Size: 0x64
 function field_toggle_emp(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -590,7 +590,7 @@ function field_toggle_emp(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf2e88636, Offset: 0x34d0
 // Size: 0x64
 function field_toggle_burn(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -598,7 +598,7 @@ function field_toggle_burn(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace vehicle
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x3fa75967, Offset: 0x3540
 // Size: 0x2ce
 function toggle_fx_bundle(localclientnum, name, turnon) {
@@ -639,7 +639,7 @@ function toggle_fx_bundle(localclientnum, name, turnon) {
 }
 
 // Namespace vehicle
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xf556ae1e, Offset: 0x3818
 // Size: 0x138
 function delayed_fx_thread(localclientnum, name, fx, tag, delay) {
@@ -661,7 +661,7 @@ function delayed_fx_thread(localclientnum, name, fx, tag, delay) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x20e365ab, Offset: 0x3958
 // Size: 0xd4
 function field_toggle_sounds(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -682,7 +682,7 @@ function field_toggle_sounds(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf54dd689, Offset: 0x3a38
 // Size: 0x64
 function field_toggle_dnidamagefx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -692,7 +692,7 @@ function field_toggle_dnidamagefx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc3fbd217, Offset: 0x3aa8
 // Size: 0x19c
 function toggle_flir_postfxbundle(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -725,7 +725,7 @@ function toggle_flir_postfxbundle(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x365c2241, Offset: 0x3c50
 // Size: 0xa0
 function shouldchangescreenpostfx(localclientnum) {
@@ -741,7 +741,7 @@ function shouldchangescreenpostfx(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xebfd0c44, Offset: 0x3cf8
 // Size: 0xd4
 function set_static_postfxbundle(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -762,7 +762,7 @@ function set_static_postfxbundle(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace vehicle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x78c212d7, Offset: 0x3dd8
 // Size: 0x84
 function update_ui_fullscreen_filter_model(localclientnum, vision_set_value) {
@@ -774,7 +774,7 @@ function update_ui_fullscreen_filter_model(localclientnum, vision_set_value) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe7fede0d, Offset: 0x3e68
 // Size: 0x234
 function field_toggle_treadfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -814,7 +814,7 @@ function field_toggle_treadfx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd22e2e61, Offset: 0x40a8
 // Size: 0xd6
 function field_use_engine_damage_sounds(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -837,7 +837,7 @@ function field_use_engine_damage_sounds(localclientnum, oldval, newval, bnewent,
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4df672a, Offset: 0x4188
 // Size: 0xbc
 function field_do_deathfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -850,7 +850,7 @@ function field_do_deathfx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4810c4fa, Offset: 0x4250
 // Size: 0x17c
 function field_do_standarddeathfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -872,7 +872,7 @@ function field_do_standarddeathfx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9968e423, Offset: 0x43d8
 // Size: 0x254
 function field_do_empdeathfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -902,7 +902,7 @@ function field_do_empdeathfx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa07ad81b, Offset: 0x4638
 // Size: 0x1d2
 function field_update_alert_level(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -936,7 +936,7 @@ function field_update_alert_level(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x57d4882, Offset: 0x4818
 // Size: 0xd4
 function field_toggle_exhaustfx_handler(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -956,7 +956,7 @@ function field_toggle_exhaustfx_handler(localclientnum, oldval, newval, bnewent,
 }
 
 // Namespace vehicle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe23fd8c9, Offset: 0x48f8
 // Size: 0x1b4
 function control_lights_groups(localclientnum, on) {
@@ -982,7 +982,7 @@ function control_lights_groups(localclientnum, on) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd5bbfc5c, Offset: 0x4ab8
 // Size: 0x104
 function field_toggle_lights_handler(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -999,7 +999,7 @@ function field_toggle_lights_handler(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd9603104, Offset: 0x4bc8
 // Size: 0x3c
 function field_toggle_lockon_handler(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1007,7 +1007,7 @@ function field_toggle_lockon_handler(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace vehicle
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x8be55db3, Offset: 0x4c10
 // Size: 0x10a
 function addfxandtagtolists(fx, tag, &fxlist, &taglist, id, maxid) {
@@ -1028,7 +1028,7 @@ function addfxandtagtolists(fx, tag, &fxlist, &taglist, id, maxid) {
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7e10159a, Offset: 0x4d28
 // Size: 0x91c
 function field_update_damage_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1106,7 +1106,7 @@ function field_update_damage_state(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe86b8c28, Offset: 0x5650
 // Size: 0x76e
 function field_death_spawn_dynents(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1164,7 +1164,7 @@ function field_death_spawn_dynents(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace vehicle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2f817e99, Offset: 0x5dc8
 // Size: 0x676
 function field_gib_spawn_dynents(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

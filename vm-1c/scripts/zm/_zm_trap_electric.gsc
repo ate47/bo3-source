@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_death;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_traps;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_audio;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_traps;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_trap_electric;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_trap_electric
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x357c8cf, Offset: 0x380
 // Size: 0x1aa
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace zm_trap_electric
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x75835fe, Offset: 0x538
 // Size: 0x174
 function trap_activate_electric() {
@@ -63,7 +63,7 @@ function trap_activate_electric() {
 }
 
 // Namespace zm_trap_electric
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde349fec, Offset: 0x6b8
 // Size: 0x11c
 function trap_audio(trap) {
@@ -81,7 +81,7 @@ function trap_audio(trap) {
 }
 
 // Namespace zm_trap_electric
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x60302e5, Offset: 0x7e0
 // Size: 0x68
 function play_electrical_sound(trap) {
@@ -93,7 +93,7 @@ function play_electrical_sound(trap) {
 }
 
 // Namespace zm_trap_electric
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5acaab79, Offset: 0x850
 // Size: 0x2c
 function player_damage() {
@@ -103,7 +103,7 @@ function player_damage() {
 }
 
 // Namespace zm_trap_electric
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcf0fb80d, Offset: 0x888
 // Size: 0x3ac
 function damage(trap) {

@@ -1,14 +1,14 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_self_medication;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99dff58a, Offset: 0x290
 // Size: 0xac
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x94de5bae, Offset: 0x348
 // Size: 0xc8
 function event() {
@@ -53,7 +53,7 @@ function event() {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x898c956d, Offset: 0x418
 // Size: 0x22
 function validation() {
@@ -64,7 +64,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20389a43, Offset: 0x448
 // Size: 0x64
 function function_5816d71a() {
@@ -77,7 +77,7 @@ function function_5816d71a() {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde13f5f, Offset: 0x4b8
 // Size: 0x74
 function actor_death_override(e_attacker) {
@@ -88,7 +88,7 @@ function actor_death_override(e_attacker) {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7ca72261, Offset: 0x538
 // Size: 0x1a4
 function function_cfc2c8d5() {
@@ -119,19 +119,19 @@ function function_cfc2c8d5() {
 }
 
 // Namespace zm_bgb_self_medication
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaff20de, Offset: 0x6e8
 // Size: 0x5c
 function function_a8fd61f4() {
     self endon(#"player_revived");
     self endon(#"disconnect");
     self endon(#"bled_out");
-    self waittill(#"hash_89eb445c");
+    self waittill(#"player_eaten_by_thrasher");
     self.thrasher kill(self.thrasher.origin, self);
 }
 
 // Namespace zm_bgb_self_medication
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x51cbb794, Offset: 0x750
 // Size: 0x7e
 function lost_perk_override(perk, var_2488e46a, var_24df4040) {
@@ -142,7 +142,7 @@ function lost_perk_override(perk, var_2488e46a, var_24df4040) {
         var_24df4040 = undefined;
     }
     if (isdefined(var_2488e46a) && isdefined(var_24df4040) && var_2488e46a == var_24df4040) {
-        self thread bgb::function_41ed378b(perk);
+        self thread bgb::revive_and_return_perk_on_bgb_activation(perk);
     }
     return false;
 }

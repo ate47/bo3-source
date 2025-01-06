@@ -1,12 +1,12 @@
-#using scripts/mp/mp_apartments_fx;
-#using scripts/mp/mp_apartments_amb;
-#using scripts/mp/_load;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/compass;
-#using scripts/mp/_util;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/mp_apartments_amb;
+#using scripts/mp/mp_apartments_fx;
+#using scripts/shared/compass;
 
 #namespace mp_apartments;
 

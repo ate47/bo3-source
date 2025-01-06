@@ -3,7 +3,7 @@
 #namespace voice_z_hypocenter;
 
 // Namespace voice_z_hypocenter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7ac7966, Offset: 0xb10
 // Size: 0x6a4
 function init_voice() {

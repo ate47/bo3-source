@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_island_fx;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfceed3b0, Offset: 0x1e58
 // Size: 0x16c
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace zm_island_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcf57d351, Offset: 0x1fd0
 // Size: 0xeaa
 function main() {
@@ -169,7 +169,7 @@ function main() {
 }
 
 // Namespace zm_island_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc64e0097, Offset: 0x2e88
 // Size: 0xac
 function do_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -184,7 +184,7 @@ function do_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_island_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbd8cfe3e, Offset: 0x2f40
 // Size: 0xac
 function do_fade_material_slow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -199,7 +199,7 @@ function do_fade_material_slow(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_island_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xabfc713c, Offset: 0x2ff8
 // Size: 0x5c
 function do_fade_material_direct(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -207,7 +207,7 @@ function do_fade_material_direct(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_island_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfefe8769, Offset: 0x3060
 // Size: 0xb4
 function do_emissive_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -222,7 +222,7 @@ function do_emissive_material(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6a7a582f, Offset: 0x3120
 // Size: 0x64
 function do_emissive_material_direct(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -230,7 +230,7 @@ function do_emissive_material_direct(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace zm_island_fx
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x1e003576, Offset: 0x3190
 // Size: 0x2ec
 function function_bea149a5(localclientnum, var_afc7cc94, var_b05b3457, b_on, n_alpha, var_abf03d83, var_c0ce8db2, var_30e780ae) {
@@ -294,7 +294,7 @@ function function_bea149a5(localclientnum, var_afc7cc94, var_b05b3457, b_on, n_a
 }
 
 // Namespace zm_island_fx
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x9c99d191, Offset: 0x3488
 // Size: 0x94
 function function_9bad5680(localclientnum, n_value, var_afc7cc94, var_519aaca5) {
@@ -313,7 +313,7 @@ function function_9bad5680(localclientnum, n_value, var_afc7cc94, var_519aaca5) 
 // Params 7, eflags: 0x0
 // Checksum 0xf500ccc8, Offset: 0x3528
 // Size: 0x64
-function function_4ff90290(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self mapshaderconstant(localclientnum, 0, "scriptVector0", newval, 0, 0, 0);
 }
 

@@ -1,20 +1,20 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_moon_achievement;
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2d7d7cb, Offset: 0x318
 // Size: 0x54
 function init() {
@@ -24,7 +24,7 @@ function init() {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x493b2ea8, Offset: 0x378
 // Size: 0x64
 function onplayerconnect() {
@@ -35,7 +35,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_moon_achievement
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x358a2d20, Offset: 0x3e8
 // Size: 0xb6
 function function_e0fadbfc(stat_name) {
@@ -52,7 +52,7 @@ function function_e0fadbfc(stat_name) {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6da61b3d, Offset: 0x4a8
 // Size: 0xbc
 function function_655a4c66() {
@@ -69,7 +69,7 @@ function function_655a4c66() {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa10f1c60, Offset: 0x570
 // Size: 0x94
 function function_42b8c382() {
@@ -83,7 +83,7 @@ function function_42b8c382() {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x325f264d, Offset: 0x610
 // Size: 0x2c
 function function_f22b525d() {
@@ -95,7 +95,7 @@ function function_f22b525d() {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b2a44d8, Offset: 0x648
 // Size: 0x68
 function function_885001e() {
@@ -111,7 +111,7 @@ function function_885001e() {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd60cb6, Offset: 0x6b8
 // Size: 0x15c
 function function_6d544bc9() {
@@ -123,7 +123,7 @@ function function_6d544bc9() {
         self.var_a375f562[var_3be8a3b8[i].script_noteworthy + "_purchased"] = 0;
     }
     while (true) {
-        perk = self waittill(#"perk_bought");
+        self waittill(#"perk_bought", perk);
         self.var_a375f562[perk + "_purchased"] = 1;
         keys = getarraykeys(self.var_a375f562);
         for (i = 0; i < keys.size; i++) {
@@ -140,7 +140,7 @@ function function_6d544bc9() {
 }
 
 // Namespace zm_moon_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97b8f5c3, Offset: 0x820
 // Size: 0xf6
 function function_b8ed20bf() {

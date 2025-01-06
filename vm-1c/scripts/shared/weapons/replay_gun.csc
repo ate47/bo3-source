@@ -1,11 +1,11 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/filter_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace replay_gun;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace replay_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc7683596, Offset: 0x200
 // Size: 0x4c
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace replay_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x22f3e668, Offset: 0x258
 // Size: 0xc2
 function player_init() {
@@ -39,12 +39,12 @@ function player_init() {
 }
 
 // Namespace replay_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd0edc5dc, Offset: 0x328
 // Size: 0x176
 function watch_lockon(localclientnum) {
     while (true) {
-        state, target = self waittill(#"lockon_changed");
+        self waittill(#"lockon_changed", state, target);
         if (!isdefined(target) || isdefined(self.replay_lock) && self.replay_lock != target) {
             self.replay_lock duplicate_render::change_dr_flags(localclientnum, undefined, "replay_locked");
             self.replay_lock = undefined;

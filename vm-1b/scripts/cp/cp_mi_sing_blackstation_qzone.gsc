@@ -1,36 +1,36 @@
-#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_blackstation;
+#using scripts/cp/cp_mi_sing_blackstation_accolades;
+#using scripts/cp/cp_mi_sing_blackstation_port;
 #using scripts/cp/cp_mi_sing_blackstation_sound;
 #using scripts/cp/cp_mi_sing_blackstation_utility;
-#using scripts/cp/cp_mi_sing_blackstation_port;
-#using scripts/cp/cp_mi_sing_blackstation_accolades;
-#using scripts/cp/cp_mi_sing_blackstation;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/coop;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace cp_mi_sing_blackstation_qzone;
 
@@ -301,8 +301,8 @@ function function_4a444ed5() {
 function function_58ded41f() {
     level waittill(#"hash_998c624d");
     level.var_2fd26037 ai::set_behavior_attribute("cqb", 1);
-    var_974cc07 = getnode("cover_warlord_engage", "targetname");
-    level.var_2fd26037 setgoal(var_974cc07, 1);
+    nd_cover = getnode("cover_warlord_engage", "targetname");
+    level.var_2fd26037 setgoal(nd_cover, 1);
     level.var_2fd26037 waittill(#"goal");
     level.var_2fd26037 clearforcedgoal();
     level.var_2fd26037 ai::set_behavior_attribute("cqb", 0);
@@ -336,7 +336,7 @@ function function_c37c7032(var_74cd64bc) {
     }
     level scene::play("cin_bla_03_warlordintro_3rd_sh010");
     level thread objectives::breadcrumb("anchor_intro_breadcrumb", "cp_level_blackstation_climb");
-    level thread cp_mi_sing_blackstation_port::function_109329ae();
+    level thread cp_mi_sing_blackstation_port::debris_mound_breadcrumb();
     level flag::wait_till("warlord_fight");
     level thread namespace_4297372::function_fa2e45b8();
     level thread function_1db3da90();
@@ -685,7 +685,7 @@ function function_43439f74() {
 // Checksum 0x8451293c, Offset: 0x32b0
 // Size: 0xba
 function function_5b06f894() {
-    level endon(#"hash_e2a9cc43");
+    level endon(#"debris_path_one_ready");
     while (getaiteamarray("axis").size) {
         wait 0.5;
     }
@@ -957,7 +957,7 @@ function function_f1376b81(str_objective, var_74cd64bc) {
         level thread namespace_79e1cd97::function_5d4fc658();
         level thread function_13820fbf();
         level thread objectives::breadcrumb("anchor_intro_breadcrumb", "cp_level_blackstation_climb");
-        level thread cp_mi_sing_blackstation_port::function_109329ae();
+        level thread cp_mi_sing_blackstation_port::debris_mound_breadcrumb();
         level thread scene::skipto_end("p7_fxanim_cp_blackstation_shelter_wind_gust_bundle");
         var_c7a78bed = spawner::simple_spawn_single("warlordintro_warlord", &function_5a4025b4);
         for (x = 0; x < 3; x++) {

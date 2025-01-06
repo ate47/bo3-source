@@ -1,33 +1,33 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen_fx;
 #using scripts/cp/cp_mi_sing_sgen_patch_c;
 #using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/shared/exploder_shared;
 #using scripts/shared/ai/systems/fx_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicles/_quadtank;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_sing_sgen;
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa93c6299, Offset: 0x1398
 // Size: 0x164
 function main() {
-    util::function_57b966c8(&function_71f88fc, 6);
+    util::function_57b966c8(&force_streamer, 6);
     init_clientfields();
     function_fe72942e();
     cp_mi_sing_sgen_fx::main();
@@ -45,7 +45,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46cf472b, Offset: 0x1508
 // Size: 0x108
 function on_player_spawned(localclientnum) {
@@ -64,7 +64,7 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x120aa837, Offset: 0x1618
 // Size: 0xd74
 function init_clientfields() {
@@ -119,7 +119,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1b349b70, Offset: 0x2398
 // Size: 0xc2
 function function_fe72942e() {
@@ -132,7 +132,7 @@ function function_fe72942e() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x407bb393, Offset: 0x2468
 // Size: 0x4e4
 function function_673254cc() {
@@ -164,7 +164,7 @@ function function_673254cc() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x72f1078e, Offset: 0x2958
 // Size: 0x14
 function function_6a18d1d4(str_objective, var_74cd64bc) {
@@ -172,7 +172,7 @@ function function_6a18d1d4(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x76b641ea, Offset: 0x2978
 // Size: 0x34
 function function_70fafd70(str_objective, var_74cd64bc) {
@@ -182,7 +182,7 @@ function function_70fafd70(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdd44438e, Offset: 0x29b8
 // Size: 0x44
 function function_12a6900b(str_objective, var_74cd64bc) {
@@ -192,7 +192,7 @@ function function_12a6900b(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x84f7fcb6, Offset: 0x2a08
 // Size: 0x34
 function function_1eba9086(str_objective, var_74cd64bc) {
@@ -200,7 +200,7 @@ function function_1eba9086(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x34e8c15a, Offset: 0x2a48
 // Size: 0x2c
 function function_c1c92a60(str_objective, var_74cd64bc) {
@@ -208,7 +208,7 @@ function function_c1c92a60(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x44f38788, Offset: 0x2a80
 // Size: 0x34
 function function_f591a5d3(str_objective, var_74cd64bc) {
@@ -218,7 +218,7 @@ function function_f591a5d3(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2484b2c1, Offset: 0x2ac0
 // Size: 0x34
 function function_41d43f98(str_objective, var_74cd64bc) {
@@ -228,7 +228,7 @@ function function_41d43f98(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4c5be7fd, Offset: 0x2b00
 // Size: 0x34
 function function_64b835d1(str_objective, var_74cd64bc) {
@@ -238,7 +238,7 @@ function function_64b835d1(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7027df8b, Offset: 0x2b40
 // Size: 0x14
 function function_8903df94(str_objective, var_74cd64bc) {
@@ -246,7 +246,7 @@ function function_8903df94(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa164809c, Offset: 0x2b60
 // Size: 0x34
 function function_b5bc2e86(str_objective, var_74cd64bc) {
@@ -256,7 +256,7 @@ function function_b5bc2e86(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdf655d44, Offset: 0x2ba0
 // Size: 0x34
 function function_d70d27cf(str_objective, var_74cd64bc) {
@@ -266,7 +266,7 @@ function function_d70d27cf(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x13f0532a, Offset: 0x2be0
 // Size: 0x34
 function function_b8453b40(str_objective, var_74cd64bc) {
@@ -276,7 +276,7 @@ function function_b8453b40(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x27b6ad21, Offset: 0x2c20
 // Size: 0x34
 function function_c9a9671f(str_objective, var_74cd64bc) {
@@ -286,7 +286,7 @@ function function_c9a9671f(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x12df905b, Offset: 0x2c60
 // Size: 0x34
 function function_69d3873d(str_objective, var_74cd64bc) {
@@ -296,7 +296,7 @@ function function_69d3873d(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x32556aab, Offset: 0x2ca0
 // Size: 0x34
 function function_7f2d460(str_objective, var_74cd64bc) {
@@ -306,7 +306,7 @@ function function_7f2d460(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xea77f8bd, Offset: 0x2ce0
 // Size: 0x34
 function function_7ed6c252(str_objective, var_74cd64bc) {
@@ -316,7 +316,7 @@ function function_7ed6c252(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x878bab9d, Offset: 0x2d20
 // Size: 0x8c
 function function_e3f81a25(str_objective, var_74cd64bc) {
@@ -331,7 +331,7 @@ function function_e3f81a25(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe4ec689f, Offset: 0x2db8
 // Size: 0x34
 function function_82a600e0(str_objective, var_74cd64bc) {
@@ -341,7 +341,7 @@ function function_82a600e0(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa0c87153, Offset: 0x2df8
 // Size: 0x14
 function function_8a68f6ae(str_objective, var_74cd64bc) {
@@ -349,7 +349,7 @@ function function_8a68f6ae(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe62058f0, Offset: 0x2e18
 // Size: 0x14
 function function_9dd018de(str_objective, var_74cd64bc) {
@@ -357,7 +357,7 @@ function function_9dd018de(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb9f28222, Offset: 0x2e38
 // Size: 0x44
 function function_6dddaec0() {
@@ -366,7 +366,7 @@ function function_6dddaec0() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x82e09b6d, Offset: 0x2e88
 // Size: 0x24
 function function_941e3519() {
@@ -374,7 +374,7 @@ function function_941e3519() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6425f6e, Offset: 0x2eb8
 // Size: 0x24
 function function_32a8709a() {
@@ -382,7 +382,7 @@ function function_32a8709a() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3dfa3670, Offset: 0x2ee8
 // Size: 0x9c
 function function_1561b96d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -394,7 +394,7 @@ function function_1561b96d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x46cb469e, Offset: 0x2f90
 // Size: 0xac
 function function_8b62fa9d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -408,7 +408,7 @@ function function_8b62fa9d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3f891635, Offset: 0x3048
 // Size: 0x74
 function disable_tmode(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -420,7 +420,7 @@ function disable_tmode(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf3ac569e, Offset: 0x30c8
 // Size: 0x86
 function function_2370f00f(localclientnum, newval, str_value, str_key) {
@@ -435,7 +435,7 @@ function function_2370f00f(localclientnum, newval, str_value, str_key) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3e6c6f5b, Offset: 0x3158
 // Size: 0x64
 function function_2f6bc99e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -443,7 +443,7 @@ function function_2f6bc99e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe400ac43, Offset: 0x31c8
 // Size: 0x5c
 function debris_bridge(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -451,7 +451,7 @@ function debris_bridge(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x689bc3bd, Offset: 0x3230
 // Size: 0x5c
 function debris_wall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -459,7 +459,7 @@ function debris_wall(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x490f630b, Offset: 0x3298
 // Size: 0x24
 function function_4b788e97() {
@@ -467,7 +467,7 @@ function function_4b788e97() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xca0f2b0c, Offset: 0x32c8
 // Size: 0x64
 function debris_fall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -477,7 +477,7 @@ function debris_fall(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x272d0c4e, Offset: 0x3338
 // Size: 0x64
 function debris_catwalk(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -487,7 +487,7 @@ function debris_catwalk(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x53644441, Offset: 0x33a8
 // Size: 0x6c
 function truck_flip(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -497,7 +497,7 @@ function truck_flip(localclientnum, oldval, newval, bnewent, binitialsnap, field
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4cb4e56e, Offset: 0x3420
 // Size: 0x5c
 function function_d69a238f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -505,7 +505,7 @@ function function_d69a238f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbcef9925, Offset: 0x3488
 // Size: 0x6c
 function silo_swim_bridge_fall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -515,7 +515,7 @@ function silo_swim_bridge_fall(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x965e6955, Offset: 0x3500
 // Size: 0x27c
 function function_fe61b5f4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -547,7 +547,7 @@ function function_fe61b5f4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb61f2e23, Offset: 0x3788
 // Size: 0x9c
 function oed_interference(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -562,7 +562,7 @@ function oed_interference(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd9c6e257, Offset: 0x3830
 // Size: 0x248
 function function_248868ae(localclientnum) {
@@ -610,7 +610,7 @@ function function_248868ae(localclientnum) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2ae92e2a, Offset: 0x3a80
 // Size: 0xd4
 function testing_lab_wires(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -623,7 +623,7 @@ function testing_lab_wires(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbb49c0c1, Offset: 0x3b60
 // Size: 0xc8
 function function_ef39e6b6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -635,13 +635,13 @@ function function_ef39e6b6(localclientnum, oldval, newval, bnewent, binitialsnap
         return;
     }
     while (true) {
-        var_e63dbf6d = self waittill(#"damage");
+        self waittill(#"damage", var_e63dbf6d);
         playfx(localclientnum, level._effect["core_impact"], var_e63dbf6d);
     }
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2f558f96, Offset: 0x3c30
 // Size: 0x6c
 function ceiling_collapse(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -651,7 +651,7 @@ function ceiling_collapse(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8f45adba, Offset: 0x3ca8
 // Size: 0x14a
 function pallas_monitors_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -679,7 +679,7 @@ function pallas_monitors_state(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x17f32832, Offset: 0x3e00
 // Size: 0x17c
 function function_cacf88e6(localclientnum) {
@@ -739,7 +739,7 @@ function function_39b5ac35() {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x54d14f5a, Offset: 0x4108
 // Size: 0x130
 function function_b84a3557(localclientnum) {
@@ -760,7 +760,7 @@ function function_b84a3557(localclientnum) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32ee39fc, Offset: 0x4240
 // Size: 0xca
 function function_6f15ec64(localclientnum) {
@@ -772,7 +772,7 @@ function function_6f15ec64(localclientnum) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdce9f7cf, Offset: 0x4318
 // Size: 0x7c
 function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -784,7 +784,7 @@ function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7107c2af, Offset: 0x43a0
 // Size: 0xf4
 function function_3fd63c17(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -800,7 +800,7 @@ function function_3fd63c17(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe8ce9bef, Offset: 0x44a0
 // Size: 0x6c
 function function_43174f13(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -810,7 +810,7 @@ function function_43174f13(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x119e3209, Offset: 0x4518
 // Size: 0x6c
 function function_1d14d4aa(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -820,23 +820,23 @@ function function_1d14d4aa(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x959d3af5, Offset: 0x4590
 // Size: 0x1e2
 function function_5ac1b440(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_99450f8a = getentarray(localclientnum, "pallas_elevator_probe", "targetname");
     var_8df90b18 = getentarray(localclientnum, "pallas_elevator_light", "targetname");
-    var_be31aa9a = getent(localclientnum, "boss_fight_lift", "targetname");
+    e_lift = getent(localclientnum, "boss_fight_lift", "targetname");
     foreach (light in var_99450f8a) {
-        light linkto(var_be31aa9a);
+        light linkto(e_lift);
     }
     foreach (probe in var_8df90b18) {
-        probe linkto(var_be31aa9a);
+        probe linkto(e_lift);
     }
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd415c06f, Offset: 0x4780
 // Size: 0x64
 function flood_defend_hallway_flood_siege(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -846,7 +846,7 @@ function flood_defend_hallway_flood_siege(localclientnum, oldval, newval, bnewen
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9506e98d, Offset: 0x47f0
 // Size: 0x1fe
 function function_a30fa29c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -878,7 +878,7 @@ function function_a30fa29c(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x124365de, Offset: 0x49f8
 // Size: 0xee
 function function_31d56bb1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -895,7 +895,7 @@ function function_31d56bb1(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x16ff1d78, Offset: 0x4af0
 // Size: 0x9c
 function observation_deck_destroy(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -910,7 +910,7 @@ function observation_deck_destroy(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x75e4fd54, Offset: 0x4b98
 // Size: 0x64
 function tower_chunks1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -918,7 +918,7 @@ function tower_chunks1(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xade1995c, Offset: 0x4c08
 // Size: 0x64
 function tower_chunks2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -926,7 +926,7 @@ function tower_chunks2(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb34f1aab, Offset: 0x4c78
 // Size: 0x64
 function tower_chunks3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -934,7 +934,7 @@ function tower_chunks3(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc218116d, Offset: 0x4ce8
 // Size: 0x5c
 function function_be719f1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -942,7 +942,7 @@ function function_be719f1(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x770476c2, Offset: 0x4d50
 // Size: 0x8c
 function play_cia_robot_rogue_control(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -954,7 +954,7 @@ function play_cia_robot_rogue_control(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x57fffb47, Offset: 0x4de8
 // Size: 0x86
 function sndSiloBG(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -966,7 +966,7 @@ function sndSiloBG(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8a1a26bd, Offset: 0x4e78
 // Size: 0x6f6
 function primarygroup(arg1, arg2, arg3) {
@@ -1041,7 +1041,7 @@ function primarygroup(arg1, arg2, arg3) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x24065c5, Offset: 0x5578
 // Size: 0x6c
 function function_c87bd675(ent1, ent2, ent3) {
@@ -1052,7 +1052,7 @@ function function_c87bd675(ent1, ent2, ent3) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2c739866, Offset: 0x55f0
 // Size: 0xc4
 function dust_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1069,7 +1069,7 @@ function dust_motes(localclientnum, oldval, newval, bnewent, binitialsnap, field
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbe996b2e, Offset: 0x56c0
 // Size: 0xc4
 function water_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1086,7 +1086,7 @@ function water_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x963804a0, Offset: 0x5790
 // Size: 0x134
 function function_a93a4b6a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1110,7 +1110,7 @@ function function_a93a4b6a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x904ef5f9, Offset: 0x58d0
 // Size: 0xc6
 function silo_debris(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1124,10 +1124,10 @@ function silo_debris(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x40a47d58, Offset: 0x59a0
 // Size: 0x2ee
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 2:
         forcestreambundle("cin_sgen_14_humanlab_3rd_sh010");
@@ -1170,7 +1170,7 @@ function function_71f88fc(n_zone) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdf95f507, Offset: 0x5c98
 // Size: 0xcc
 function weakpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1184,7 +1184,7 @@ function weakpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe2443e2a, Offset: 0x5d70
 // Size: 0x74
 function fallen_soldiers_client_fxanims(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1194,7 +1194,7 @@ function fallen_soldiers_client_fxanims(localclientnum, oldval, newval, bnewent,
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9bf2c1e9, Offset: 0x5df0
 // Size: 0x84
 function function_95af50c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1206,7 +1206,7 @@ function function_95af50c(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf9bdff7a, Offset: 0x5e80
 // Size: 0x12c
 function sndStepSet(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1223,7 +1223,7 @@ function sndStepSet(localclientnum, oldval, newval, bnewent, binitialsnap, field
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa789b8dc, Offset: 0x5fb8
 // Size: 0xd0
 function function_df9260b7(trigger, alias) {
@@ -1245,7 +1245,7 @@ function function_df9260b7(trigger, alias) {
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe4f72ac1, Offset: 0x6090
 // Size: 0xac
 function function_59c47b1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1257,7 +1257,7 @@ function function_59c47b1(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5677f476, Offset: 0x6148
 // Size: 0x13e
 function function_21197c95(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1281,7 +1281,7 @@ function function_21197c95(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x857f8e65, Offset: 0x6290
 // Size: 0x176
 function function_ff1a4bbc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1305,7 +1305,7 @@ function function_ff1a4bbc(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_sgen
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf39f43c2, Offset: 0x6410
 // Size: 0x7c
 function set_exposure_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

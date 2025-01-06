@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace tomb_magicbox;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16db8f03, Offset: 0x260
 // Size: 0x124
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace tomb_magicbox
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8d02cd90, Offset: 0x390
 // Size: 0x104
 function magicbox_leaving_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -39,7 +39,7 @@ function magicbox_leaving_fx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace tomb_magicbox
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe0cb8762, Offset: 0x4a0
 // Size: 0x20c
 function magicbox_open_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -67,7 +67,7 @@ function magicbox_open_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace tomb_magicbox
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x56ec1106, Offset: 0x6b8
 // Size: 0x8c
 function function_b714c89b(localclientnum) {
@@ -78,7 +78,7 @@ function function_b714c89b(localclientnum) {
 }
 
 // Namespace tomb_magicbox
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe6a4def0, Offset: 0x750
 // Size: 0xe4
 function function_cc36f894(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -95,7 +95,7 @@ function function_cc36f894(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace tomb_magicbox
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9fac0535, Offset: 0x840
 // Size: 0x474
 function function_ae458229(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

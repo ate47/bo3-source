@@ -1,12 +1,12 @@
 #using scripts/cp/doa/_doa_arena;
 #using scripts/cp/doa/_doa_fate;
-#using scripts/cp/doa/_doa_utility;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_utility;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
 
 #namespace namespace_2f63e553;
 
@@ -682,7 +682,7 @@ function drawcylinder(pos, rad, height, var_8bb7be29, color) {
         color = (0, 0, 0);
     }
     /#
-        self endon(#"hash_f36da0a2");
+        self endon(#"stop_cylinder");
         self endon(#"death");
         currad = rad;
         curheight = height;
@@ -733,14 +733,14 @@ function function_a0e51d80(point, timesec, size, color) {
     end = gettime() + timesec * 1000;
     halfwidth = int(size / 2);
     var_a84bd888 = point + (halfwidth * -1, 0, 0);
-    var_1a5347c3 = point + (halfwidth, 0, 0);
+    l2 = point + (halfwidth, 0, 0);
     var_5e2b69e1 = point + (0, halfwidth * -1, 0);
     var_842de44a = point + (0, halfwidth, 0);
     var_e4d48d14 = point + (0, 0, halfwidth * -1);
     var_56dbfc4f = point + (0, 0, halfwidth);
     while (end > gettime()) {
         /#
-            line(var_a84bd888, var_1a5347c3, color, 1, 0, 1);
+            line(var_a84bd888, l2, color, 1, 0, 1);
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
         #/

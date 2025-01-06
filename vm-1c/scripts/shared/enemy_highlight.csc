@@ -1,13 +1,13 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace enemy_highlight;
 
 // Namespace enemy_highlight
-// Params 7, eflags: 0x1 linked
-// Checksum 0xaf4b7203, Offset: 0x160
+// Params 7, eflags: 0x0
+// Checksum 0xe54ad02a, Offset: 0x160
 // Size: 0xac
 function function_a2489af5(localclientnum, materialname, size, var_e9190fc5, var_125eba4d, var_63949c1d, var_fe79589d) {
     self notify(#"hash_a2489af5");
@@ -17,8 +17,8 @@ function function_a2489af5(localclientnum, materialname, size, var_e9190fc5, var
 }
 
 // Namespace enemy_highlight
-// Params 3, eflags: 0x1 linked
-// Checksum 0x4db856fe, Offset: 0x218
+// Params 3, eflags: 0x0
+// Checksum 0xd6cd382c, Offset: 0x218
 // Size: 0x304
 function function_eab5058b(localclientnum, var_63949c1d, var_fe79589d) {
     self endon(#"hash_a2489af5");
@@ -62,8 +62,8 @@ function function_eab5058b(localclientnum, var_63949c1d, var_fe79589d) {
 }
 
 // Namespace enemy_highlight
-// Params 6, eflags: 0x1 linked
-// Checksum 0xbd893a80, Offset: 0x528
+// Params 6, eflags: 0x0
+// Checksum 0x83ee28f8, Offset: 0x528
 // Size: 0x964
 function function_43ee2d3f(localclientnum, materialname, size, var_e9190fc5, var_125eba4d, var_fe79589d) {
     self endon(#"hash_a2489af5");
@@ -163,8 +163,8 @@ function function_43ee2d3f(localclientnum, materialname, size, var_e9190fc5, var
 }
 
 // Namespace enemy_highlight
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5ca34da9, Offset: 0xe98
+// Params 1, eflags: 0x0
+// Checksum 0x3318d1fd, Offset: 0xe98
 // Size: 0xda
 function function_5f9074e0(localclientnum) {
     self notify(#"hash_a2489af5");
@@ -180,8 +180,8 @@ function function_5f9074e0(localclientnum) {
 }
 
 // Namespace enemy_highlight
-// Params 4, eflags: 0x1 linked
-// Checksum 0x24d1136b, Offset: 0xf80
+// Params 4, eflags: 0x0
+// Checksum 0x861e3eb6, Offset: 0xf80
 // Size: 0x1f8
 function function_dd6e51ad(localclientnum, entity, materialname, size) {
     hudelem = createluimenu(localclientnum, "HudElementImage");

@@ -1,17 +1,17 @@
-#using scripts/shared/weapons/_flashgrenades;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_flashgrenades;
 
 #namespace hacker_tool;
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe79bedd1, Offset: 0x280
 // Size: 0x94
 function init_shared() {
@@ -23,7 +23,7 @@ function init_shared() {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x990620ee, Offset: 0x320
 // Size: 0x100
 function on_localplayer_spawned(localclientnum) {
@@ -46,7 +46,7 @@ function on_localplayer_spawned(localclientnum) {
 }
 
 // Namespace hacker_tool
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x31d4f09c, Offset: 0x428
 // Size: 0x48c
 function player_hacking(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -93,7 +93,7 @@ function player_hacking(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace hacker_tool
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1dfbb7d3, Offset: 0x8c0
 // Size: 0xac
 function watchhackspeed(localclientnum, isbreachingfirewall) {
@@ -112,7 +112,7 @@ function watchhackspeed(localclientnum, isbreachingfirewall) {
 }
 
 // Namespace hacker_tool
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xcc654700, Offset: 0x978
 // Size: 0x42c
 function watchtargethack(localclientnum, player, isbreachingfirewall) {
@@ -170,7 +170,7 @@ function watchtargethack(localclientnum, player, isbreachingfirewall) {
 }
 
 // Namespace hacker_tool
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xef93bb3e, Offset: 0xdb0
 // Size: 0xac
 function watchhackerplayershutdown(localclientnum, hackerplayer, targetent) {
@@ -186,7 +186,7 @@ function watchhackerplayershutdown(localclientnum, hackerplayer, targetent) {
 }
 
 // Namespace hacker_tool
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x79ede318, Offset: 0xe68
 // Size: 0xd8
 function watchforemp(localclientnum) {

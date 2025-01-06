@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_equip_hacker;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_equip_hacker;
 
 #namespace namespace_359e846b;
 
 // Namespace namespace_359e846b
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda2b6faf, Offset: 0x180
 // Size: 0x224
 function function_862bc532() {
@@ -40,7 +40,7 @@ function function_862bc532() {
 }
 
 // Namespace namespace_359e846b
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x961c1c94, Offset: 0x3b0
 // Size: 0x8c
 function function_c9123339(hacker) {

@@ -13,7 +13,7 @@ function autoexec __init__() {
 }
 
 // Namespace struct
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x98b4dd06, Offset: 0x1a0
 // Size: 0xea
 function init_structs() {
@@ -33,7 +33,7 @@ function init_structs() {
 }
 
 // Namespace struct
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x198d4c90, Offset: 0x298
 // Size: 0x68
 function function_aa4875d1(struct) {
@@ -49,7 +49,7 @@ function function_aa4875d1(struct) {
 }
 
 // Namespace struct
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa9efca9e, Offset: 0x308
 // Size: 0x1fc
 function createstruct(struct, type, name) {
@@ -79,7 +79,7 @@ function createstruct(struct, type, name) {
 }
 
 // Namespace struct
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xaf40fd54, Offset: 0x510
 // Size: 0x54
 function function_f3b581d0(items, assettype, name) {
@@ -90,7 +90,7 @@ function function_f3b581d0(items, assettype, name) {
 }
 
 // Namespace struct
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa77f2f9, Offset: 0x570
 // Size: 0x93e
 function init() {
@@ -174,7 +174,7 @@ function init() {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf9cfb9, Offset: 0xeb8
 // Size: 0xd2
 function get(kvp_value, kvp_key) {
@@ -193,7 +193,7 @@ function get(kvp_value, kvp_key) {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6f176828, Offset: 0xf98
 // Size: 0x84
 function spawn(v_origin, v_angles) {
@@ -210,7 +210,7 @@ function spawn(v_origin, v_angles) {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x31b74458, Offset: 0x1028
 // Size: 0x6e
 function get_array(kvp_value, kvp_key) {
@@ -224,7 +224,7 @@ function get_array(kvp_value, kvp_key) {
 }
 
 // Namespace struct
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x75bce4b5, Offset: 0x10a0
 // Size: 0x1fc
 function delete() {
@@ -258,7 +258,7 @@ function delete() {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf37a50f0, Offset: 0x12a8
 // Size: 0x54
 function get_script_bundle(str_type, str_name) {
@@ -268,7 +268,7 @@ function get_script_bundle(str_type, str_name) {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8f5993ba, Offset: 0x1308
 // Size: 0x52
 function function_368120a1(str_type, str_name) {
@@ -278,7 +278,7 @@ function function_368120a1(str_type, str_name) {
 }
 
 // Namespace struct
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xacd6eaeb, Offset: 0x1368
 // Size: 0x3c
 function get_script_bundles(str_type) {
@@ -299,7 +299,7 @@ function get_script_bundle_list(str_type, str_name) {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x817c52f3, Offset: 0x1410
 // Size: 0x116
 function get_script_bundle_instances(str_type, str_name) {
@@ -318,7 +318,7 @@ function get_script_bundle_instances(str_type, str_name) {
 }
 
 // Namespace struct
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x404b2231, Offset: 0x1530
 // Size: 0x314
 function findstruct(param1, name, index) {

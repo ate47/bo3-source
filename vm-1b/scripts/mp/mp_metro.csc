@@ -1,0 +1,136 @@
+#using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_metro_fx;
+#using scripts/mp/mp_metro_sound;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/util_shared;
+
+#namespace mp_metro;
+
+// Namespace mp_metro
+// Params 0, eflags: 0x0
+// Checksum 0xbf4ed382, Offset: 0x278
+// Size: 0xea
+function main() {
+    mp_metro_fx::main();
+    mp_metro_sound::main();
+    clientfield::register("scriptmover", "mp_metro_train_timer", 1, 1, "int", &function_272a236, 1, 0);
+    load::main();
+    level.domflagbasefxoverride = &dom_flag_base_fx_override;
+    level.domflagcapfxoverride = &dom_flag_cap_fx_override;
+    util::waitforclient(0);
+    level.endgamexcamname = "ui_cam_endgame_mp_metro";
+    setdvar("phys_buoyancy", 1);
+    setdvar("phys_ragdoll_buoyancy", 1);
+}
+
+// Namespace mp_metro
+// Params 1, eflags: 0x0
+// Checksum 0xa0c88486, Offset: 0x370
+// Size: 0x31d
+function function_610d5819(localclientnum) {
+    self endon(#"entityshutdown");
+    angles = (self.angles[0], self.angles[1] * -1, 0);
+    var_29f291aa = self.origin + (cos(self.angles[1]) * 37, sin(self.angles[1]) * 37, 0);
+    var_b9aef0d0 = util::spawn_model(localclientnum, "p7_3d_txt_antiqua_bold_00_brushed_aluminum", var_29f291aa, angles);
+    var_c65b8fec = self.origin + (cos(self.angles[1]) * 37 * 2, sin(self.angles[1]) * 37 * 2, 0);
+    var_6bed63d2 = util::spawn_model(localclientnum, "p7_3d_txt_antiqua_bold_00_brushed_aluminum", var_c65b8fec, angles);
+    var_bf41c693 = self.origin - (cos(self.angles[1]) * 37, sin(self.angles[1]) * 37, 0);
+    var_55c7a409 = util::spawn_model(localclientnum, "p7_3d_txt_antiqua_bold_00_brushed_aluminum", var_bf41c693, angles);
+    var_f088cae4 = self.origin - (cos(self.angles[1]) * 37 * 2, sin(self.angles[1]) * 37 * 2, 0);
+    var_38f78f6a = util::spawn_model(localclientnum, "p7_3d_txt_antiqua_bold_00_brushed_aluminum", var_f088cae4, angles);
+    currentnumber = 1;
+    var_9a505860 = 0;
+    for (;;) {
+        currentnumber++;
+        if (currentnumber > 9) {
+            currentnumber = 0;
+        }
+        var_8a0c8642 = int(ceil(self.angles[2]));
+        if (var_8a0c8642 < 0) {
+            var_8a0c8642 += 360;
+        }
+        if (var_8a0c8642 < 0 || var_8a0c8642 > 360) {
+            var_8a0c8642 = 0;
+        }
+        var_38f78f6a setmodel("p7_3d_txt_antiqua_bold_0" + var_8a0c8642 % 10 + "_brushed_aluminum");
+        var_55c7a409 setmodel("p7_3d_txt_antiqua_bold_0" + int(var_8a0c8642 % 60 / 10) + "_brushed_aluminum");
+        var_b9aef0d0 setmodel("p7_3d_txt_antiqua_bold_0" + int(var_8a0c8642 / 60) + "_brushed_aluminum");
+        wait 0.05;
+    }
+}
+
+// Namespace mp_metro
+// Params 7, eflags: 0x0
+// Checksum 0x1f9246e3, Offset: 0x698
+// Size: 0x5a
+function function_272a236(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    if (!newval) {
+        return;
+    }
+    if (newval == 1) {
+        self thread function_610d5819(localclientnum);
+    }
+}
+
+// Namespace mp_metro
+// Params 2, eflags: 0x0
+// Checksum 0xbee74e65, Offset: 0x700
+// Size: 0xb1
+function dom_flag_base_fx_override(flag, team) {
+    switch (flag.name) {
+    case "a":
+        if (team == "neutral") {
+            return "ui/fx_dom_marker_neutral_r120";
+        } else {
+            return "ui/fx_dom_marker_team_r120";
+        }
+        break;
+    case "b":
+        if (team == "neutral") {
+            return "ui/fx_dom_marker_neutral_r120";
+        } else {
+            return "ui/fx_dom_marker_team_r120";
+        }
+        break;
+    case "c":
+        if (team == "neutral") {
+            return "ui/fx_dom_marker_neutral_r120";
+        } else {
+            return "ui/fx_dom_marker_team_r120";
+        }
+        break;
+    }
+}
+
+// Namespace mp_metro
+// Params 2, eflags: 0x0
+// Checksum 0x419e5d59, Offset: 0x7c0
+// Size: 0xb1
+function dom_flag_cap_fx_override(flag, team) {
+    switch (flag.name) {
+    case "a":
+        if (team == "neutral") {
+            return "ui/fx_dom_cap_indicator_neutral_r120";
+        } else {
+            return "ui/fx_dom_cap_indicator_team_r120";
+        }
+        break;
+    case "b":
+        if (team == "neutral") {
+            return "ui/fx_dom_cap_indicator_neutral_r120";
+        } else {
+            return "ui/fx_dom_cap_indicator_team_r120";
+        }
+        break;
+    case "c":
+        if (team == "neutral") {
+            return "ui/fx_dom_cap_indicator_neutral_r120";
+        } else {
+            return "ui/fx_dom_cap_indicator_team_r120";
+        }
+        break;
+    }
+}
+

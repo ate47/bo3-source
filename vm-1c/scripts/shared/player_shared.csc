@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace player;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac5b2152, Offset: 0x130
 // Size: 0x4c
 function __init__() {
@@ -20,7 +20,7 @@ function __init__() {
 }
 
 // Namespace player
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5e2ea3c, Offset: 0x188
 // Size: 0x5c
 function gameplay_started_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,14 +1,14 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_island_traps;
 
 // Namespace zm_island_traps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf5d7f41, Offset: 0x218
 // Size: 0x124
 function init() {
@@ -19,7 +19,7 @@ function init() {
 }
 
 // Namespace zm_island_traps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc9d4db6d, Offset: 0x348
 // Size: 0x2ee
 function proptrap_downdraft_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -48,7 +48,7 @@ function proptrap_downdraft_rumble(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_island_traps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa8befd82, Offset: 0x640
 // Size: 0x8c
 function proptrap_downdraft_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -61,7 +61,7 @@ function proptrap_downdraft_blur(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_island_traps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x27daf088, Offset: 0x6d8
 // Size: 0x2ee
 function walltrap_draft_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -90,7 +90,7 @@ function walltrap_draft_rumble(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_island_traps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x82eaeb21, Offset: 0x9d0
 // Size: 0x8c
 function walltrap_draft_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -103,7 +103,7 @@ function walltrap_draft_blur(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_island_traps
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x81875fd7, Offset: 0xa68
 // Size: 0x150
 function function_24f1be38(localclientnum, var_3f5c9bdb) {

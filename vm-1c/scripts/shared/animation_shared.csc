@@ -1,10 +1,10 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/shaderanim_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/animation_debug_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/shaderanim_shared;
+#using scripts/shared/system_shared;
 
 #namespace animation;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace animation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25da405, Offset: 0x388
 // Size: 0xc4
 function __init__() {
@@ -35,7 +35,7 @@ function first_frame(animation, v_origin_or_ent, v_angles_or_tag) {
 }
 
 // Namespace animation
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xdf4d2215, Offset: 0x4a0
 // Size: 0xe8
 function play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, n_blend_out, n_lerp, b_link) {
@@ -57,7 +57,7 @@ function play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, n
 }
 
 // Namespace animation
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x5831fc01, Offset: 0x590
 // Size: 0x3f4
 function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, n_blend_out, n_lerp, b_link) {
@@ -114,7 +114,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
 }
 
 // Namespace animation
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xc638e379, Offset: 0x990
 // Size: 0x26
 function private waittill_end() {
@@ -123,7 +123,7 @@ function private waittill_end() {
 }
 
 // Namespace animation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa063394e, Offset: 0x9c0
 // Size: 0x5c
 function _get_align_ent(e_align) {
@@ -138,7 +138,7 @@ function _get_align_ent(e_align) {
 }
 
 // Namespace animation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x60bfaee6, Offset: 0xa28
 // Size: 0x1e0
 function _get_align_pos(v_origin_or_ent, v_angles_or_tag) {
@@ -170,7 +170,7 @@ function _get_align_pos(v_origin_or_ent, v_angles_or_tag) {
 }
 
 // Namespace animation
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x4b654a82, Offset: 0xc10
 // Size: 0x158
 function play_siege(str_anim, str_shot, n_rate, b_loop) {
@@ -197,7 +197,7 @@ function play_siege(str_anim, str_shot, n_rate, b_loop) {
 }
 
 // Namespace animation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbdc28941, Offset: 0xd70
 // Size: 0x6e
 function add_notetrack_func(funcname, func) {
@@ -209,7 +209,7 @@ function add_notetrack_func(funcname, func) {
 }
 
 // Namespace animation
-// Params 3, eflags: 0x21 linked variadic
+// Params 3, eflags: 0x20 variadic
 // Checksum 0xa1d627fb, Offset: 0xde8
 // Size: 0x104
 function add_global_notetrack_handler(str_note, func, ...) {
@@ -228,7 +228,7 @@ function add_global_notetrack_handler(str_note, func, ...) {
 }
 
 // Namespace animation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe356f2bc, Offset: 0xef8
 // Size: 0x280
 function call_notetrack_handler(str_note) {
@@ -267,7 +267,7 @@ function call_notetrack_handler(str_note) {
 }
 
 // Namespace animation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17b050d, Offset: 0x1180
 // Size: 0x224
 function setup_notetracks() {
@@ -286,14 +286,14 @@ function setup_notetracks() {
 }
 
 // Namespace animation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85fa08c8, Offset: 0x13b0
 // Size: 0x7e
 function handle_notetracks() {
     level endon(#"demo_jump");
     self endon(#"entityshutdown");
     while (true) {
-        str_note = self waittill(#"_anim_notify_");
+        self waittill(#"_anim_notify_", str_note);
         if (str_note != "end" && str_note != "loop_end") {
             self thread call_notetrack_handler(str_note);
             continue;
@@ -303,7 +303,7 @@ function handle_notetracks() {
 }
 
 // Namespace animation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1e682765, Offset: 0x1438
 // Size: 0xbe
 function cracks_on(str_type) {
@@ -324,7 +324,7 @@ function cracks_on(str_type) {
 }
 
 // Namespace animation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb65b2c21, Offset: 0x1500
 // Size: 0xbe
 function cracks_off(str_type) {
@@ -345,7 +345,7 @@ function cracks_off(str_type) {
 }
 
 // Namespace animation
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbdee7454, Offset: 0x15c8
 // Size: 0x192
 function cf_cracks_on(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -368,7 +368,7 @@ function cf_cracks_on(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace animation
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa1d888f6, Offset: 0x1768
 // Size: 0x17a
 function cf_cracks_off(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

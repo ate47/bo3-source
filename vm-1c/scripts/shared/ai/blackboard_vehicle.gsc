@@ -1,11 +1,11 @@
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/shared;
 #using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/shared;
 
 #namespace blackboard;
 
 // Namespace blackboard
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x50764af7, Offset: 0x108
 // Size: 0xf4
 function registervehicleblackboardattributes() {
@@ -25,7 +25,7 @@ function registervehicleblackboardattributes() {
 }
 
 // Namespace blackboard
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc5014c38, Offset: 0x208
 // Size: 0x3a
 function bb_getspeed() {
@@ -34,7 +34,7 @@ function bb_getspeed() {
 }
 
 // Namespace blackboard
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6adacb43, Offset: 0x250
 // Size: 0x54
 function bb_vehgetenemyyaw() {
@@ -47,7 +47,7 @@ function bb_vehgetenemyyaw() {
 }
 
 // Namespace blackboard
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x935ed51a, Offset: 0x2b0
 // Size: 0x190
 function vehgetpredictedyawtoenemy(entity, lookaheadtime) {

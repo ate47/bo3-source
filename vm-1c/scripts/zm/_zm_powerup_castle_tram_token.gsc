@@ -1,23 +1,23 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_melee_weapon;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_blockers;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_melee_weapon;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_powerup_castle_tram_token;
 
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xab69cef7, Offset: 0x4e8
 // Size: 0x124
 function __init__() {
@@ -48,7 +48,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78d66c26, Offset: 0x618
 // Size: 0x154
 function register_clientfields() {
@@ -63,7 +63,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x798b76e6, Offset: 0x778
 // Size: 0x148
 function function_bcb6924e(player) {
@@ -82,7 +82,7 @@ function function_bcb6924e(player) {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb4525982, Offset: 0x8c8
 // Size: 0x44
 function function_ed4d87a3(player) {
@@ -94,7 +94,7 @@ function function_ed4d87a3(player) {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf8fbfff0, Offset: 0x918
 // Size: 0x2a
 function function_83ef471e(player) {
@@ -102,7 +102,7 @@ function function_83ef471e(player) {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1b84e3c, Offset: 0x950
 // Size: 0x8e
 function function_56739ab1() {
@@ -114,7 +114,7 @@ function function_56739ab1() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x63e22053, Offset: 0x9e8
 // Size: 0x26
 function function_4c1f0ef2() {
@@ -124,7 +124,7 @@ function function_4c1f0ef2() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6c63c548, Offset: 0xa18
 // Size: 0x54
 function function_69e0fb83(var_55ce4248, n_duration) {
@@ -134,7 +134,7 @@ function function_69e0fb83(var_55ce4248, n_duration) {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x7f685ec3, Offset: 0xa78
 // Size: 0xe4
 function private function_1cb39173(var_1d640f59, var_86a3391a, var_18bfcc38) {
@@ -154,7 +154,7 @@ function private function_1cb39173(var_1d640f59, var_86a3391a, var_18bfcc38) {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbbe942a8, Offset: 0xb68
 // Size: 0xdc
 function function_a52da515(player) {
@@ -168,7 +168,7 @@ function function_a52da515(player) {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9dabe6f2, Offset: 0xc50
 // Size: 0x10
 function on_player_connect() {
@@ -176,7 +176,7 @@ function on_player_connect() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe9ff3ae7, Offset: 0xc68
 // Size: 0x26
 function on_player_spawned() {
@@ -187,7 +187,7 @@ function on_player_spawned() {
 /#
 
     // Namespace zm_powerup_castle_tram_token
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdc3ec1ff, Offset: 0xc98
     // Size: 0x7c
     function function_6dd86f90() {
@@ -199,7 +199,7 @@ function on_player_spawned() {
     }
 
     // Namespace zm_powerup_castle_tram_token
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x4238e20d, Offset: 0xd20
     // Size: 0xb4
     function function_9293606a(cmd) {

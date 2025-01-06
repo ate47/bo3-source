@@ -1,27 +1,23 @@
-#using scripts/mp/vehicles/_siegebot_theia;
-#using scripts/mp/vehicles/_siegebot;
-#using scripts/mp/vehicles/_quadtank;
-#using scripts/mp/mp_city_sound;
-#using scripts/mp/mp_city_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_city_fx;
+#using scripts/mp/mp_city_sound;
+#using scripts/mp/vehicles/_quadtank;
+#using scripts/mp/vehicles/_siegebot;
+#using scripts/mp/vehicles/_siegebot_theia;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace mp_city;
 
 // Namespace mp_city
-// Params 0, eflags: 0x1 linked
-// Checksum 0x778bd194, Offset: 0x2d8
-// Size: 0x154
+// Params 0, eflags: 0x0
+// Checksum 0x5fdd6490, Offset: 0x2b8
+// Size: 0xf4
 function main() {
     clientfield::register("scriptmover", "ring_state", 15000, 2, "int", &function_d9f6a33c, 0, 0);
-    var_ae867510 = getdvarfloat("tu16_physicsPushOutThreshold", -1);
-    if (var_ae867510 != -1) {
-        setdvar("tu16_physicsPushOutThreshold", 10);
-    }
     mp_city_fx::main();
     mp_city_sound::main();
     load::main();
@@ -33,8 +29,8 @@ function main() {
 }
 
 // Namespace mp_city
-// Params 2, eflags: 0x1 linked
-// Checksum 0x50640e14, Offset: 0x438
+// Params 2, eflags: 0x0
+// Checksum 0x15592b49, Offset: 0x3b8
 // Size: 0x9e
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -58,8 +54,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_city
-// Params 2, eflags: 0x1 linked
-// Checksum 0xad02c336, Offset: 0x4e0
+// Params 2, eflags: 0x0
+// Checksum 0xe085db92, Offset: 0x460
 // Size: 0x9e
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
@@ -83,8 +79,8 @@ function dom_flag_cap_fx_override(flag, team) {
 }
 
 // Namespace mp_city
-// Params 7, eflags: 0x1 linked
-// Checksum 0x3adccad9, Offset: 0x588
+// Params 7, eflags: 0x0
+// Checksum 0x74f865b2, Offset: 0x508
 // Size: 0x10e
 function function_d9f6a33c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self notify(#"hash_c8ef6ef0");
@@ -108,8 +104,8 @@ function function_d9f6a33c(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace mp_city
-// Params 6, eflags: 0x1 linked
-// Checksum 0xc44f1508, Offset: 0x6a0
+// Params 6, eflags: 0x0
+// Checksum 0xb72a3c6a, Offset: 0x620
 // Size: 0x1f4
 function function_4b249f9b(localclientnum, time, var_728dd484, var_b9359340, var_1cf558a0, var_ecf795c3) {
     self endon(#"hash_c8ef6ef0");
@@ -135,8 +131,8 @@ function function_4b249f9b(localclientnum, time, var_728dd484, var_b9359340, var
 }
 
 // Namespace mp_city
-// Params 7, eflags: 0x1 linked
-// Checksum 0xeb13a841, Offset: 0x8a0
+// Params 7, eflags: 0x0
+// Checksum 0x9782e78e, Offset: 0x820
 // Size: 0x29c
 function function_6c36a9a7(localclientnum, time, var_728dd484, var_b9359340, var_1cf558a0, var_ecf795c3, total_time) {
     self endon(#"hash_c8ef6ef0");
@@ -172,8 +168,8 @@ function function_6c36a9a7(localclientnum, time, var_728dd484, var_b9359340, var
 }
 
 // Namespace mp_city
-// Params 4, eflags: 0x1 linked
-// Checksum 0xf4b5db95, Offset: 0xb48
+// Params 4, eflags: 0x0
+// Checksum 0xba125b49, Offset: 0xac8
 // Size: 0x192
 function function_211e661e(localclientnum, time, var_ecf795c3, var_1cf558a0) {
     self endon(#"entityshutdown");
@@ -198,8 +194,8 @@ function function_211e661e(localclientnum, time, var_ecf795c3, var_1cf558a0) {
 }
 
 // Namespace mp_city
-// Params 1, eflags: 0x1 linked
-// Checksum 0xe64f1d37, Offset: 0xce8
+// Params 1, eflags: 0x0
+// Checksum 0x24c83e22, Offset: 0xc68
 // Size: 0xbc
 function function_1afd2fff(localclientnum) {
     self endon(#"entityshutdown");
@@ -211,24 +207,24 @@ function function_1afd2fff(localclientnum) {
 }
 
 // Namespace mp_city
-// Params 1, eflags: 0x1 linked
-// Checksum 0x3ca4b640, Offset: 0xdb0
+// Params 1, eflags: 0x0
+// Checksum 0x53ddfc63, Offset: 0xd30
 // Size: 0x2c
 function function_e5636218(localclientnum) {
     self thread function_211e661e(localclientnum, 2000, 1, 0);
 }
 
 // Namespace mp_city
-// Params 1, eflags: 0x1 linked
-// Checksum 0x32941b30, Offset: 0xde8
+// Params 1, eflags: 0x0
+// Checksum 0x18d75edf, Offset: 0xd68
 // Size: 0x44
 function function_857cbaeb(localclientnum) {
     self thread function_4b249f9b(localclientnum, 2000, 0.25, 0.5, 0, 0.25);
 }
 
 // Namespace mp_city
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf7a58c08, Offset: 0xe38
+// Params 1, eflags: 0x0
+// Checksum 0x5d4ba8c5, Offset: 0xdb8
 // Size: 0x3c
 function function_b620184c(localclientnum) {
     self thread function_6c36a9a7(localclientnum, 90, 0, 1, 1, 0, 4200);

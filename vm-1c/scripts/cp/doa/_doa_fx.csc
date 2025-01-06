@@ -1,7 +1,7 @@
-#using scripts/shared/fx_shared;
-#using scripts/cp/doa/_doa_core;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/doa/_doa_core;
+#using scripts/shared/fx_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_eaa992c;
 

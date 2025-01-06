@@ -1,19 +1,19 @@
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
+#using scripts/codescripts/struct;
 #using scripts/cp/_turret_sentry;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_enemy;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace doa_turret;
 
@@ -26,7 +26,7 @@ function init() {
     for (i = 0; i < level.doa.mini_turrets.size; i++) {
         turret = level.doa.mini_turrets[i];
         turret.var_d211e48d = 0;
-        turret.var_56c95748 = 0;
+        turret.is_attacking = 0;
         turret.var_d2f6fb2e = level.doa.mini_turrets[i].origin;
         turret.deployed = 0;
         turret.script_delay_min = 0.25;
@@ -46,7 +46,7 @@ function init() {
     for (i = 0; i < level.doa.var_4ede341.size; i++) {
         turret = level.doa.var_4ede341[i];
         turret.var_d211e48d = 0;
-        turret.var_56c95748 = 0;
+        turret.is_attacking = 0;
         turret.var_d2f6fb2e = level.doa.var_4ede341[i].origin;
         turret.deployed = 0;
         turret.grenade = 1;
@@ -69,7 +69,7 @@ function init() {
 // Checksum 0x61b91ed1, Offset: 0x8f0
 // Size: 0x3a4
 function missile_logic(fake) {
-    missile, weap = self waittill(#"missile_fire");
+    self waittill(#"missile_fire", missile, weap);
     missile endon(#"death");
     fake thread namespace_49107f3a::function_981c685d(missile);
     missile missile_settarget(fake);
@@ -199,7 +199,7 @@ function turret_target() {
         }
         self setturrettargetent(self.e_target);
         self.var_d211e48d = 0;
-        if (!self.var_56c95748) {
+        if (!self.is_attacking) {
             self thread function_2c414dda();
         }
         self notify(#"hash_dc8a04ab");
@@ -207,7 +207,7 @@ function turret_target() {
             wait 0.5;
         }
         self notify(#"hash_ea50907d");
-        self.var_56c95748 = 0;
+        self.is_attacking = 0;
         wait 0.5;
     }
 }
@@ -249,7 +249,7 @@ function function_2c414dda() {
     self waittill(#"hash_dc8a04ab");
     self.turretrotscale = 6;
     self sentry_turret::sentry_turret_alert_sound();
-    self.var_56c95748 = 1;
+    self.is_attacking = 1;
     offset = (0, 0, 0);
     if (isdefined(self.grenade)) {
         offset = (0, 0, -56);

@@ -1,10 +1,10 @@
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
 
 #namespace _zm_weap_one_inch_punch;
 
 // Namespace _zm_weap_one_inch_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34b56d3e, Offset: 0x120
 // Size: 0x94
 function init() {
@@ -13,7 +13,7 @@ function init() {
 }
 
 // Namespace _zm_weap_one_inch_punch
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5bcc485e, Offset: 0x1c0
 // Size: 0x17c
 function oneinchpunch_impact(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -36,7 +36,7 @@ function oneinchpunch_impact(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace _zm_weap_one_inch_punch
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa4ad2197, Offset: 0x348
 // Size: 0x1d4
 function oneinchpunch_physics_launchragdoll(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

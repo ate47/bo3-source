@@ -1,62 +1,62 @@
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/raz;
+#using scripts/shared/beam_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_sentinel_drone;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_raz;
+#using scripts/zm/_zm_ai_sentinel_drone;
+#using scripts/zm/_zm_elemental_zombies;
+#using scripts/zm/_zm_pack_a_punch;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
+#using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_electric_cherry;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_perk_widows_wine;
 #using scripts/zm/_zm_powerup_carpenter;
 #using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_perk_widows_wine;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_electric_cherry;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_deadshot;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/zm_stalingrad_wearables;
-#using scripts/zm/zm_stalingrad_timer;
-#using scripts/zm/zm_stalingrad_pap_quest;
-#using scripts/zm/zm_stalingrad_mounted_mg;
-#using scripts/zm/zm_stalingrad_fx;
-#using scripts/zm/zm_stalingrad_ffotd;
-#using scripts/zm/zm_stalingrad_eye_beam_trap;
-#using scripts/zm/zm_stalingrad_ee_main;
-#using scripts/zm/zm_stalingrad_dragon_strike;
-#using scripts/zm/zm_stalingrad_dragon;
-#using scripts/zm/zm_stalingrad_craftables;
-#using scripts/zm/zm_stalingrad_challenges;
-#using scripts/zm/zm_stalingrad_audio;
-#using scripts/zm/zm_stalingrad_ambient;
-#using scripts/zm/zm_stalingrad_amb;
-#using scripts/zm/zm_siegebot_nikolai;
-#using scripts/zm/craftables/_zm_craft_shield;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_weap_dragon_strike;
-#using scripts/zm/_zm_weap_dragon_scale_shield;
-#using scripts/zm/_zm_weap_dragon_gauntlet;
-#using scripts/zm/_zm_weap_raygun_mark3;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_trap_electric;
+#using scripts/zm/_zm_utility;
 #using scripts/zm/_zm_weap_bouncingbetty;
 #using scripts/zm/_zm_weap_cymbal_monkey;
+#using scripts/zm/_zm_weap_dragon_gauntlet;
+#using scripts/zm/_zm_weap_dragon_scale_shield;
+#using scripts/zm/_zm_weap_dragon_strike;
+#using scripts/zm/_zm_weap_raygun_mark3;
 #using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_trap_electric;
-#using scripts/zm/_zm_pack_a_punch;
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/zm/_zm_ai_sentinel_drone;
-#using scripts/zm/_zm_ai_raz;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/vehicles/_sentinel_drone;
-#using scripts/shared/ai/raz;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/beam_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/craftables/_zm_craft_shield;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_siegebot_nikolai;
+#using scripts/zm/zm_stalingrad_amb;
+#using scripts/zm/zm_stalingrad_ambient;
+#using scripts/zm/zm_stalingrad_audio;
+#using scripts/zm/zm_stalingrad_challenges;
+#using scripts/zm/zm_stalingrad_craftables;
+#using scripts/zm/zm_stalingrad_dragon;
+#using scripts/zm/zm_stalingrad_dragon_strike;
+#using scripts/zm/zm_stalingrad_ee_main;
+#using scripts/zm/zm_stalingrad_eye_beam_trap;
+#using scripts/zm/zm_stalingrad_ffotd;
+#using scripts/zm/zm_stalingrad_fx;
+#using scripts/zm/zm_stalingrad_mounted_mg;
+#using scripts/zm/zm_stalingrad_pap_quest;
+#using scripts/zm/zm_stalingrad_timer;
+#using scripts/zm/zm_stalingrad_wearables;
 
 #namespace zm_stalingrad;
 
@@ -70,7 +70,7 @@ function autoexec opt_in() {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1bc0
 // Size: 0x4
 function function_8de36410() {
@@ -78,7 +78,7 @@ function function_8de36410() {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31d930, Offset: 0x1bd0
 // Size: 0x214
 function main() {
@@ -111,7 +111,7 @@ function main() {
 }
 
 // Namespace zm_stalingrad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6df4bf3e, Offset: 0x1df0
 // Size: 0xc8
 function function_1c53c4e1(a_ents) {
@@ -129,7 +129,7 @@ function function_1c53c4e1(a_ents) {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b40fd1f, Offset: 0x1ec0
 // Size: 0x6a4
 function register_clientfields() {
@@ -141,10 +141,10 @@ function register_clientfields() {
     clientfield::register("clientuimodel", "zmInventory.widget_egg", 12000, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.piece_egg", 12000, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.progress_egg", 12000, 4, "float", undefined, 0, 0);
-    clientfield::register("actor", "drop_pod_score_beam_fx", 12000, 1, "counter", &namespace_b57650e4::function_c86c0cdd, 0, 0);
-    clientfield::register("scriptmover", "drop_pod_active", 12000, 1, "int", &namespace_b57650e4::function_5858bdaf, 0, 0);
-    clientfield::register("scriptmover", "drop_pod_hp_light", 12000, 2, "int", &namespace_b57650e4::function_5e369bd2, 0, 0);
-    clientfield::register("world", "drop_pod_streaming", 12000, 1, "int", &namespace_b57650e4::drop_pod_streaming, 0, 0);
+    clientfield::register("actor", "drop_pod_score_beam_fx", 12000, 1, "counter", &zm_stalingrad_pap::function_c86c0cdd, 0, 0);
+    clientfield::register("scriptmover", "drop_pod_active", 12000, 1, "int", &zm_stalingrad_pap::function_5858bdaf, 0, 0);
+    clientfield::register("scriptmover", "drop_pod_hp_light", 12000, 2, "int", &zm_stalingrad_pap::function_5e369bd2, 0, 0);
+    clientfield::register("world", "drop_pod_streaming", 12000, 1, "int", &zm_stalingrad_pap::drop_pod_streaming, 0, 0);
     clientfield::register("toplayer", "tp_water_sheeting", 12000, 1, "int", &function_6be6da89, 0, 0);
     clientfield::register("toplayer", "sewer_landing_rumble", 12000, 1, "counter", &function_931fa0e1, 0, 0);
     clientfield::register("scriptmover", "dragon_egg_heat_fx", 12000, 1, "int", &function_3931d3fe, 0, 0);
@@ -163,7 +163,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbe52b7c9, Offset: 0x2570
 // Size: 0x34
 function include_weapons() {
@@ -172,7 +172,7 @@ function include_weapons() {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5c4870ed, Offset: 0x25b0
 // Size: 0x1072
 function setup_personality_character_exerts() {
@@ -287,7 +287,7 @@ function setup_personality_character_exerts() {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d7aab7e, Offset: 0x3630
 // Size: 0x19c
 function function_3a429aee() {
@@ -311,7 +311,7 @@ function function_3a429aee() {
 }
 
 // Namespace zm_stalingrad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1f8f77c, Offset: 0x37d8
 // Size: 0x1a4
 function function_38b57afd() {
@@ -330,7 +330,7 @@ function function_38b57afd() {
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9400e8c7, Offset: 0x3988
 // Size: 0x1b2
 function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -350,13 +350,13 @@ function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x92e8458c, Offset: 0x3b48
 // Size: 0xda
 function function_da4ab728(localclientnum, var_b81de649) {
     self endon(#"hash_e7cca3ce");
     while (true) {
-        who = var_b81de649 waittill(#"trigger");
+        var_b81de649 waittill(#"trigger", who);
         if (who islocalplayer()) {
             playsound(localclientnum, "zmb_stalingrad_sewer_pipe_exit");
             self stoploopsound(self.var_5962d89c);
@@ -368,7 +368,7 @@ function function_da4ab728(localclientnum, var_b81de649) {
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xae0ad506, Offset: 0x3c30
 // Size: 0x64
 function function_931fa0e1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -378,7 +378,7 @@ function function_931fa0e1(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd9e1b74, Offset: 0x3ca0
 // Size: 0x4e
 function function_4b1f1b87(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -386,7 +386,7 @@ function function_4b1f1b87(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2622d9d1, Offset: 0x3cf8
 // Size: 0x114
 function function_bfdc67e3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -397,7 +397,7 @@ function function_bfdc67e3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x98980533, Offset: 0x3e18
 // Size: 0xe4
 function function_10e7e603(mdl_target) {
@@ -411,7 +411,7 @@ function function_10e7e603(mdl_target) {
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x60a02a77, Offset: 0x3f08
 // Size: 0xb4
 function function_3931d3fe(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -425,7 +425,7 @@ function function_3931d3fe(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x11b68f70, Offset: 0x3fc8
 // Size: 0x7c
 function function_b116183d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -437,7 +437,7 @@ function function_b116183d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x93761c2f, Offset: 0x4050
 // Size: 0xb4
 function function_a96968f2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -451,7 +451,7 @@ function function_a96968f2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2b52df5c, Offset: 0x4110
 // Size: 0x144
 function function_21deab84(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -472,7 +472,7 @@ function function_21deab84(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xadde615e, Offset: 0x4260
 // Size: 0xfc
 function function_a431bec5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -495,7 +495,7 @@ function function_a431bec5(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x82463136, Offset: 0x4368
 // Size: 0x1d8
 function function_36666e11(e_player) {
@@ -523,7 +523,7 @@ function function_36666e11(e_player) {
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa17d2129, Offset: 0x4548
 // Size: 0x64
 function function_70b3b237(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -531,7 +531,7 @@ function function_70b3b237(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe13581c6, Offset: 0x45b8
 // Size: 0x10c
 function function_6cfcd54d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -549,7 +549,7 @@ function function_6cfcd54d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd54e9199, Offset: 0x46d0
 // Size: 0x64
 function function_bbbdcfd5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -559,7 +559,7 @@ function function_bbbdcfd5(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xefb38616, Offset: 0x4740
 // Size: 0x72
 function deactivate_ai_vox(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,21 +1,21 @@
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/lui_shared;
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/scene_shared;
-#using scripts/cp/_dialog;
-#using scripts/cp/_util;
-#using scripts/shared/exploder_shared;
-#using scripts/cp/cp_mi_cairo_aquifer_objectives;
 #using scripts/codescripts/struct;
-#using scripts/shared/vehicles/_quadtank;
+#using scripts/cp/_dialog;
 #using scripts/cp/_spawn_manager;
-#using scripts/shared/vehicle_shared;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_aquifer_objectives;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/ai_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
 #using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_cairo_aquifer_aitest;
 
@@ -679,14 +679,14 @@ function function_5d498f22() {
     level endon(#"hash_221e0b70");
     level endon(#"hash_2ba72bcb");
     var_687c3dc4 = 0;
-    var_a7254166 = [];
-    var_a7254166[var_a7254166.size] = "kane_what_the_hell_are_yo_1";
-    var_a7254166[var_a7254166.size] = "kane_where_are_you_going_1";
-    var_a7254166[var_a7254166.size] = "kane_hey_watch_my_six_0";
+    vo_array = [];
+    vo_array[vo_array.size] = "kane_what_the_hell_are_yo_1";
+    vo_array[vo_array.size] = "kane_where_are_you_going_1";
+    vo_array[vo_array.size] = "kane_hey_watch_my_six_0";
     while (true) {
         while (level flag::get("flag_kayne_vulnerable")) {
             wait 1;
-            var_69e9781d = array::random(var_a7254166);
+            var_69e9781d = array::random(vo_array);
             level.var_89ea8991 dialog::say(var_69e9781d);
             if (!var_687c3dc4) {
                 level notify(#"hash_67e6e842");
@@ -834,7 +834,7 @@ function function_34ad69d9(trig) {
 function function_ada56725() {
     struct = getent("kayne_hacking_right", "targetname");
     trig = getent("right_hack_use_trig", "targetname");
-    activator = trig waittill(#"hash_ece70538");
+    trig waittill(#"hash_ece70538", activator);
     if (isdefined(level.var_11177797)) {
         level thread [[ level.var_11177797 ]]();
     }
@@ -888,7 +888,7 @@ function function_36a1fd93() {
 function function_f9e22dfc() {
     struct = getent("kayne_hacking_left", "targetname");
     trig = getent("left_hack_use_trig", "targetname");
-    activator = trig waittill(#"hash_ece70538");
+    trig waittill(#"hash_ece70538", activator);
     struct scene::play("cin_aqu_01_20_towerleft_1st_panelrip", activator);
     level flag::set("flag_player_left_tower_done");
     thread function_9b151b9b();
@@ -933,7 +933,7 @@ function function_bd9f11ed() {
     thread function_f250176e();
     landing_zone = -1;
     while (landing_zone != 1) {
-        player, landing_zone = level waittill(#"hash_2e0c12cd");
+        level waittill(#"hash_2e0c12cd", player, landing_zone);
     }
     level.var_89ea8991 = namespace_84eb777e::function_30343b22("kayne_hack1");
     wait 1;
@@ -958,7 +958,7 @@ function function_f250176e() {
     wait 1;
     landing_zone = -1;
     while (landing_zone != 1) {
-        player, landing_zone = level waittill(#"hash_8d91bdcf");
+        level waittill(#"hash_8d91bdcf", player, landing_zone);
     }
     if (isdefined(level.var_89ea8991) && level.var_1226dab0 == 0) {
         level.var_89ea8991 delete();
@@ -987,7 +987,7 @@ function function_e3a18c56() {
     thread function_932a5979();
     landing_zone = -1;
     while (landing_zone != 2) {
-        player, landing_zone = level waittill(#"hash_2e0c12cd");
+        level waittill(#"hash_2e0c12cd", player, landing_zone);
     }
     level.var_89ea8991 = namespace_84eb777e::function_30343b22("kayne_hack2");
     wait 1;
@@ -1023,7 +1023,7 @@ function function_932a5979() {
     trigger::use("kayne_colors_right_takeoff", "targetname");
     landing_zone = -1;
     while (landing_zone != 2) {
-        player, landing_zone = level waittill(#"hash_8d91bdcf");
+        level waittill(#"hash_8d91bdcf", player, landing_zone);
     }
     if (isdefined(level.var_89ea8991) && level.var_1226dab0 == 0) {
         level.var_89ea8991 delete();
@@ -1135,7 +1135,7 @@ function function_2d0258ff() {
 function function_790839b7() {
     landing_zone = -1;
     while (landing_zone != 1) {
-        player, landing_zone = level waittill(#"hash_2e0c12cd");
+        level waittill(#"hash_2e0c12cd", player, landing_zone);
     }
     var_e27965fa = spawn_manager::function_423eae50("spawn_manager_zone01b");
     thread function_dd1c4e18(var_e27965fa);
@@ -1148,7 +1148,7 @@ function function_790839b7() {
 function function_d123f7f2() {
     landing_zone = -1;
     while (landing_zone != 2) {
-        player, landing_zone = level waittill(#"hash_2e0c12cd");
+        level waittill(#"hash_2e0c12cd", player, landing_zone);
     }
     var_e27965fa = spawn_manager::function_423eae50("spawn_manager_zone01");
     thread function_dd1c4e18(var_e27965fa);

@@ -1,33 +1,33 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue;
 #using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/cp/cp_prologue_util;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
 #using scripts/cp/cp_prologue_apc;
 #using scripts/cp/cp_prologue_hangars;
-#using scripts/cp/cp_mi_eth_prologue;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
+#using scripts/cp/cp_prologue_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/systems/shared;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicle_shared;
 
 #namespace namespace_12501af4;
 
@@ -101,8 +101,8 @@ function function_284c8a64() {
     level thread objectives::breadcrumb("breadcrumb_robot_horde");
     level thread function_96157f5d();
     a_ai_allies = cp_prologue_util::function_6ee0e1a5();
-    foreach (var_e4463170 in a_ai_allies) {
-        var_e4463170 ai::set_behavior_attribute("cqb", 1);
+    foreach (ai_ally in a_ai_allies) {
+        ai_ally ai::set_behavior_attribute("cqb", 1);
     }
     level flag::wait_till("player_in_alley");
     cp_prologue_util::function_b50f5d52();
@@ -112,9 +112,9 @@ function function_284c8a64() {
     a_ai_allies[a_ai_allies.size] = level.var_9db406db;
     a_ai_allies[a_ai_allies.size] = level.var_7f246cd7;
     a_ai_allies[a_ai_allies.size] = level.var_5d4087a6;
-    foreach (var_e4463170 in a_ai_allies) {
-        var_e4463170 ai::set_ignoreall(1);
-        var_e4463170 ai::set_ignoreme(1);
+    foreach (ai_ally in a_ai_allies) {
+        ai_ally ai::set_ignoreall(1);
+        ai_ally ai::set_ignoreme(1);
     }
     level thread spawn_robot_horde();
     level thread function_59071a25();
@@ -125,15 +125,15 @@ function function_284c8a64() {
     level.var_f58c9f31 ai::set_ignoreall(0);
     level.var_7f246cd7 ai::set_ignoreall(0);
     level.var_5d4087a6 ai::set_ignoreall(0);
-    foreach (var_e4463170 in a_ai_allies) {
-        var_e4463170 ai::set_ignoreall(0);
-        var_e4463170 thread function_54900cca();
+    foreach (ai_ally in a_ai_allies) {
+        ai_ally ai::set_ignoreall(0);
+        ai_ally thread function_54900cca();
     }
     level thread function_3d5fceb9();
     wait 8;
     level flag::set("open_fire");
-    foreach (var_e4463170 in a_ai_allies) {
-        var_e4463170 ai::set_behavior_attribute("cqb", 0);
+    foreach (ai_ally in a_ai_allies) {
+        ai_ally ai::set_behavior_attribute("cqb", 0);
     }
     level apc::function_50d6bf35("vehicle_apc_hijack_node", 0);
     level thread function_d105c430();
@@ -238,8 +238,8 @@ function function_59071a25() {
 function function_f7a7c69a() {
     t_entrance = getent("player_inside_garage", "targetname");
     a_ai_allies = cp_prologue_util::function_6ee0e1a5();
-    foreach (var_e4463170 in a_ai_allies) {
-        while (isalive(var_e4463170) && !var_e4463170 istouching(t_entrance)) {
+    foreach (ai_ally in a_ai_allies) {
+        while (isalive(ai_ally) && !ai_ally istouching(t_entrance)) {
             wait 0.1;
         }
     }
@@ -340,11 +340,11 @@ function function_d105c430() {
 // Size: 0x5a
 function function_51a9314a() {
     self endon(#"death");
-    self.var_cbf4698a = self.attackeraccuracy;
+    self.n_attackeraccuracy = self.attackeraccuracy;
     self.attackeraccuracy = 0;
     self thread function_10302408();
     level flag::wait_till("players_in_garage");
-    self.attackeraccuracy = self.var_cbf4698a;
+    self.attackeraccuracy = self.n_attackeraccuracy;
 }
 
 // Namespace namespace_12501af4

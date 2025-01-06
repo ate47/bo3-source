@@ -1,29 +1,29 @@
-#using scripts/shared/ai/zombie;
-#using scripts/shared/ai/archetype_damage_effects;
-#using scripts/shared/ai/behavior_state_machine_planners_utility;
-#using scripts/shared/ai/archetype_mocomps_utility;
-#using scripts/shared/ai/archetype_locomotion_utility;
-#using scripts/shared/ai/archetype_cover_utility;
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/animation_selector_table_evaluators;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 #using scripts/core/gametypes/frontend_zm_bgb_chance;
+#using scripts/shared/ai/animation_selector_table_evaluators;
+#using scripts/shared/ai/archetype_cover_utility;
+#using scripts/shared/ai/archetype_damage_effects;
+#using scripts/shared/ai/archetype_locomotion_utility;
+#using scripts/shared/ai/archetype_mocomps_utility;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/behavior_state_machine_planners_utility;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("all_player");
 
 #namespace frontend;
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x7f0
 // Size: 0x4
 function callback_void() {
@@ -31,7 +31,7 @@ function callback_void() {
 }
 
 // Namespace frontend
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd71a51e, Offset: 0x800
 // Size: 0x24
 function callback_actorspawnedfrontend(spawner) {
@@ -39,7 +39,7 @@ function callback_actorspawnedfrontend(spawner) {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2cabd20, Offset: 0x830
 // Size: 0x324
 function main() {
@@ -73,7 +73,7 @@ function main() {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x88cb220a, Offset: 0xb60
 // Size: 0x114
 function function_f7d50167() {
@@ -101,7 +101,7 @@ function function_f7d50167() {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf94ac8b6, Offset: 0xc80
 // Size: 0x206
 function function_78987129() {
@@ -130,7 +130,7 @@ function function_78987129() {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8d35bf, Offset: 0xe90
 // Size: 0x4c
 function callback_playerconnect() {
@@ -142,7 +142,7 @@ function callback_playerconnect() {
 }
 
 // Namespace frontend
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeda11b44, Offset: 0xee8
 // Size: 0xac
 function function_98e4f876(a_ents) {
@@ -156,13 +156,13 @@ function function_98e4f876(a_ents) {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2b9c7fd8, Offset: 0xfa0
 // Size: 0x276
 function function_c7410880() {
     self endon(#"disconnect");
     while (true) {
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         if (menu != "BlackMarket") {
             continue;
         }
@@ -209,7 +209,7 @@ function function_c7410880() {
 }
 
 // Namespace frontend
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbddac410, Offset: 0x1220
 // Size: 0x5c
 function function_888326b9(dialogalias) {
@@ -221,7 +221,7 @@ function function_888326b9(dialogalias) {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x703e9e33, Offset: 0x1288
 // Size: 0x98
 function function_c2c50a17() {
@@ -236,7 +236,7 @@ function function_c2c50a17() {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x777801b0, Offset: 0x1328
 // Size: 0x74
 function function_d9abcfe() {
@@ -249,7 +249,7 @@ function function_d9abcfe() {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd573e99, Offset: 0x13a8
 // Size: 0x74
 function function_f174105a() {
@@ -262,7 +262,7 @@ function function_f174105a() {
 }
 
 // Namespace frontend
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4e854c65, Offset: 0x1428
 // Size: 0x54
 function function_ae2deb8() {
@@ -271,7 +271,7 @@ function function_ae2deb8() {
 }
 
 // Namespace frontend
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6b767cb5, Offset: 0x1488
 // Size: 0x52
 function function_b64618f7(var_1c7f095f) {
@@ -283,7 +283,7 @@ function function_b64618f7(var_1c7f095f) {
 }
 
 // Namespace frontend
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x847c4682, Offset: 0x14e8
 // Size: 0xfc
 function function_c5205bdc(var_515c5969, var_2759f5e5, var_a12eee4f, var_27284619) {
@@ -297,7 +297,7 @@ function function_c5205bdc(var_515c5969, var_2759f5e5, var_a12eee4f, var_2728461
 }
 
 // Namespace frontend
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xde984d95, Offset: 0x15f0
 // Size: 0xe4
 function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
@@ -313,7 +313,7 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
 /#
 
     // Namespace frontend
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x95cc8cec, Offset: 0x16e0
     // Size: 0x15e
     function dailychallengedevguiinit() {
@@ -329,7 +329,7 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     }
 
     // Namespace frontend
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1cb2d5a5, Offset: 0x1848
     // Size: 0x178
     function dailychallengedevguithink() {
@@ -351,7 +351,7 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     }
 
     // Namespace frontend
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x498c0abc, Offset: 0x19c8
     // Size: 0x194
     function function_4afc218() {
@@ -378,7 +378,7 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     }
 
     // Namespace frontend
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd0c5cf35, Offset: 0x1b68
     // Size: 0x1f8
     function function_ead1dc1a() {

@@ -1,5 +1,5 @@
-#using scripts/shared/util_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/util_shared;
 
 #namespace notetracks;
 
@@ -18,7 +18,7 @@ function autoexec main() {
 }
 
 // Namespace notetracks
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xcb1d4e7f, Offset: 0x1d0
 // Size: 0x84
 function private initializenotetrackhandlers(localclientnum) {
@@ -28,7 +28,7 @@ function private initializenotetrackhandlers(localclientnum) {
 }
 
 // Namespace notetracks
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xad88a276, Offset: 0x260
 // Size: 0x4c
 function private addsurfacenotetrackfxhandler(localclientnum, notetrack, surfacetable) {
@@ -37,7 +37,7 @@ function private addsurfacenotetrackfxhandler(localclientnum, notetrack, surface
 }
 
 // Namespace notetracks
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xafa940e2, Offset: 0x2b8
 // Size: 0xb0
 function private handlesurfacenotetrackfx(localclientnum, notetrack, surfacetable) {

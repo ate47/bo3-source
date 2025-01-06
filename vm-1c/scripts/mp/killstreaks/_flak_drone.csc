@@ -1,12 +1,12 @@
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/mp/_util;
-#using scripts/mp/_helicopter_sounds;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_helicopter_sounds;
+#using scripts/mp/_util;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace flak_drone;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace flak_drone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5030f90b, Offset: 0x248
 // Size: 0x4c
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace flak_drone
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1901f080, Offset: 0x2a0
 // Size: 0x11c
 function active_camo_changed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -42,7 +42,7 @@ function active_camo_changed(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace flak_drone
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe68d7dc8, Offset: 0x3c8
 // Size: 0x164
 function doreveal(localclientnum, direction) {

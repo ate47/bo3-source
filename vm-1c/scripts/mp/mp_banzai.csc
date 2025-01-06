@@ -1,15 +1,15 @@
-#using scripts/mp/mp_banzai_sound;
-#using scripts/mp/mp_banzai_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_banzai_fx;
+#using scripts/mp/mp_banzai_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_banzai;
 
 // Namespace mp_banzai
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb8c163cc, Offset: 0x1d8
+// Params 0, eflags: 0x0
+// Checksum 0x234d5aaf, Offset: 0x1d8
 // Size: 0xcc
 function main() {
     mp_banzai_fx::main();
@@ -24,8 +24,8 @@ function main() {
 }
 
 // Namespace mp_banzai
-// Params 2, eflags: 0x1 linked
-// Checksum 0xfcab8cc6, Offset: 0x2b0
+// Params 2, eflags: 0x0
+// Checksum 0xafc590ef, Offset: 0x2b0
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -54,8 +54,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_banzai
-// Params 2, eflags: 0x1 linked
-// Checksum 0x605972ed, Offset: 0x380
+// Params 2, eflags: 0x0
+// Checksum 0xd379ad60, Offset: 0x380
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {

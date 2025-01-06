@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_util;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_jump_pad;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_jump_pad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28cd7afd, Offset: 0x250
 // Size: 0x1c
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace zm_jump_pad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x53ab579b, Offset: 0x278
 // Size: 0x194
 function jump_pad_init() {
@@ -47,7 +47,7 @@ function jump_pad_init() {
 }
 
 // Namespace zm_jump_pad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e8e3335, Offset: 0x418
 // Size: 0x1c
 function jump_pad_player_variables() {
@@ -56,7 +56,7 @@ function jump_pad_player_variables() {
 }
 
 // Namespace zm_jump_pad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16564bea, Offset: 0x440
 // Size: 0x180
 function jump_pad_think() {
@@ -78,7 +78,7 @@ function jump_pad_think() {
         level flag::wait_till(self.script_flag_wait);
     }
     while (isdefined(self)) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         if (isplayer(who)) {
             self thread delayed_jump_pad_start(who);
         }
@@ -86,7 +86,7 @@ function jump_pad_think() {
 }
 
 // Namespace zm_jump_pad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf14e5c61, Offset: 0x5c8
 // Size: 0x64
 function delayed_jump_pad_start(who) {
@@ -97,7 +97,7 @@ function delayed_jump_pad_start(who) {
 }
 
 // Namespace zm_jump_pad
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf24ace13, Offset: 0x638
 // Size: 0xc5c
 function jump_pad_start(ent_player, endon_condition) {
@@ -273,7 +273,7 @@ function jump_pad_start(ent_player, endon_condition) {
 }
 
 // Namespace zm_jump_pad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd42cb7c5, Offset: 0x12a0
 // Size: 0xe6
 function jump_pad_cancel(ent_player) {
@@ -291,7 +291,7 @@ function jump_pad_cancel(ent_player) {
 }
 
 // Namespace zm_jump_pad
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x497a3e9c, Offset: 0x1390
 // Size: 0x4dc
 function jump_pad_move(vec_direction, flt_time, struct_poi, trigger) {
@@ -369,7 +369,7 @@ function jump_pad_move(vec_direction, flt_time, struct_poi, trigger) {
 }
 
 // Namespace zm_jump_pad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6690734, Offset: 0x1878
 // Size: 0x94
 function disconnect_failsafe_pad_poi_clean() {
@@ -385,7 +385,7 @@ function disconnect_failsafe_pad_poi_clean() {
 }
 
 // Namespace zm_jump_pad
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd82f6cd4, Offset: 0x1918
 // Size: 0x94
 function failsafe_pad_poi_clean(ent_trig, ent_poi) {
@@ -402,7 +402,7 @@ function failsafe_pad_poi_clean(ent_trig, ent_poi) {
 }
 
 // Namespace zm_jump_pad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xff16e623, Offset: 0x19b8
 // Size: 0x236
 function jump_pad_enemy_follow_or_ignore(ent_poi) {
@@ -440,7 +440,7 @@ function jump_pad_enemy_follow_or_ignore(ent_poi) {
 }
 
 // Namespace zm_jump_pad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x79aa3f73, Offset: 0x1bf8
 // Size: 0x106
 function jump_pad_ignore_poi_cleanup(ent_poi) {
@@ -460,7 +460,7 @@ function jump_pad_ignore_poi_cleanup(ent_poi) {
 }
 
 // Namespace zm_jump_pad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x843afd60, Offset: 0x1d08
 // Size: 0x14a
 function stop_chasing_the_sky(ent_poi) {
@@ -486,7 +486,7 @@ function stop_chasing_the_sky(ent_poi) {
 }
 
 // Namespace zm_jump_pad
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb69ff45, Offset: 0x1e60
 // Size: 0xaa
 function jump_pad_player_overrides(st_behavior, int_clean) {

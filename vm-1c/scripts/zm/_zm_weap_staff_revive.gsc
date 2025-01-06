@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_weap_staff_common;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai/zombie_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_weap_staff_common;
 
 #namespace zm_weap_staff_revive;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_staff_revive
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb5506179, Offset: 0x2a0
 // Size: 0x24
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_staff_revive
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x30301e9a, Offset: 0x2d0
 // Size: 0x24
 function onplayerspawned() {
@@ -39,23 +39,23 @@ function onplayerspawned() {
 }
 
 // Namespace zm_weap_staff_revive
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x631868f, Offset: 0x300
 // Size: 0xc0
 function function_bd596582() {
     self endon(#"disconnect");
     while (true) {
-        e_projectile, str_weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", e_projectile, str_weapon);
         if (!(str_weapon.name == "staff_revive")) {
             continue;
         }
-        e_ent, var_836ef144, n_radius, str_name, var_94351942 = self waittill(#"projectile_impact");
+        self waittill(#"projectile_impact", e_ent, var_836ef144, n_radius, str_name, var_94351942);
         self thread function_e94d3934(var_836ef144);
     }
 }
 
 // Namespace zm_weap_staff_revive
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdaf0c075, Offset: 0x3c8
 // Size: 0x19a
 function function_e94d3934(var_836ef144) {

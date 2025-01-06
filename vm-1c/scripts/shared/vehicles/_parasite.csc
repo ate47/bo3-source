@@ -1,12 +1,12 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace parasite;
 
@@ -22,7 +22,7 @@ function autoexec main() {
 }
 
 // Namespace parasite
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xbd1acd9c, Offset: 0x380
 // Size: 0x12c
 function private function_efb89eff(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -41,7 +41,7 @@ function private function_efb89eff(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace parasite
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0x4aff30da, Offset: 0x4b8
 // Size: 0x64
 function private parasite_damage(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -51,7 +51,7 @@ function private parasite_damage(localclientnum, oldvalue, newvalue, bnewent, bi
 }
 
 // Namespace parasite
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xcf923992, Offset: 0x528
 // Size: 0xe4
 function private function_a6b394f4(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -65,7 +65,7 @@ function private function_a6b394f4(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace parasite
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9bea6617, Offset: 0x618
 // Size: 0x84
 function private _setup_(localclientnum) {

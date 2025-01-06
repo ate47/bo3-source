@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
 
 #namespace bgb_token;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace bgb_token
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x52543f79, Offset: 0x248
 // Size: 0x3c
 function private __init__() {
@@ -32,7 +32,7 @@ function private __init__() {
 }
 
 // Namespace bgb_token
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xc773b658, Offset: 0x290
 // Size: 0xfc
 function private __main__() {
@@ -69,7 +69,7 @@ function private __main__() {
 }
 
 // Namespace bgb_token
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xc86cd741, Offset: 0x398
 // Size: 0x60
 function private on_player_spawned() {
@@ -81,7 +81,7 @@ function private on_player_spawned() {
 }
 
 // Namespace bgb_token
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xded9743f, Offset: 0x400
 // Size: 0x66
 function private function_4922937f() {
@@ -112,7 +112,7 @@ function function_c2f81136(increment) {
 /#
 
     // Namespace bgb_token
-    // Params 0, eflags: 0x5 linked
+    // Params 0, eflags: 0x4
     // Checksum 0x519b1518, Offset: 0x540
     // Size: 0x8c
     function private setup_devgui() {
@@ -124,7 +124,7 @@ function function_c2f81136(increment) {
     }
 
     // Namespace bgb_token
-    // Params 0, eflags: 0x5 linked
+    // Params 0, eflags: 0x4
     // Checksum 0xd305b917, Offset: 0x5d8
     // Size: 0x88
     function private function_a29384f8() {
@@ -141,7 +141,7 @@ function function_c2f81136(increment) {
 #/
 
 // Namespace bgb_token
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa9e07aba, Offset: 0x668
 // Size: 0x12c
 function private function_32692a60() {
@@ -158,7 +158,7 @@ function private function_32692a60() {
 }
 
 // Namespace bgb_token
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfb292a0, Offset: 0x7a0
 // Size: 0x34
 function private function_2d75b98d(var_ce9d31c4) {
@@ -169,7 +169,7 @@ function private function_2d75b98d(var_ce9d31c4) {
 }
 
 // Namespace bgb_token
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9fef18d2, Offset: 0x7e0
 // Size: 0x1ec
 function function_51cf4361(var_5561679e) {

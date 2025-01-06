@@ -1,10 +1,10 @@
-#using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/music_shared;
 
 #namespace zm_genesis_amb;
 
 // Namespace zm_genesis_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33d448ff, Offset: 0xd8
 // Size: 0x14
 function main() {
@@ -12,7 +12,7 @@ function main() {
 }
 
 // Namespace zm_genesis_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba4561fa, Offset: 0xf8
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -41,7 +41,7 @@ function startzmbspawnersoundloops() {
 }
 
 // Namespace zm_genesis_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x72bff574, Offset: 0x260
 // Size: 0x16c
 function soundloopthink() {

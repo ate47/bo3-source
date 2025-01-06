@@ -1,18 +1,18 @@
-#using scripts/zm/zm_genesis_util;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/beam_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/beam_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_genesis_util;
 
 #using_animtree("zm_genesis");
 
@@ -27,7 +27,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb30dc8b1, Offset: 0x6c8
 // Size: 0x12c
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_boss
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x94b90d76, Offset: 0x800
 // Size: 0x25e
 function boss_clone_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -75,7 +75,7 @@ function boss_clone_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_boss
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9d9e9a45, Offset: 0xa68
 // Size: 0x50e
 function sophia_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -107,7 +107,7 @@ function sophia_state(localclientnum, oldval, newval, bnewent, binitialsnap, fie
         level.var_f0444f1b[localclientnum] thread animation::play("ai_zm_dlc4_sophia_down_idle");
         break;
     case 3:
-        level.var_f0444f1b[localclientnum] thread function_54a08d82(localclientnum);
+        level.var_f0444f1b[localclientnum] thread sophia_transition_fx(localclientnum);
         level.var_f0444f1b[localclientnum] setmodel("p7_zm_gen_dark_arena_sphere_metal");
         level.var_f0444f1b[localclientnum].origin = var_b19b9bc4.origin;
         level.var_f0444f1b[localclientnum] show();
@@ -121,10 +121,10 @@ function sophia_state(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace zm_genesis_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc446d7ba, Offset: 0xf80
 // Size: 0x74
-function function_54a08d82(localclientnum) {
+function sophia_transition_fx(localclientnum) {
     var_c6f38611 = playfxontag(localclientnum, level._effect["sophia_transition"], self, "tag_origin");
     wait 1.8;
     if (isdefined(var_c6f38611)) {
@@ -133,7 +133,7 @@ function function_54a08d82(localclientnum) {
 }
 
 // Namespace zm_genesis_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x95bbebf7, Offset: 0x1000
 // Size: 0x184
 function function_24b59946(localclientnum) {
@@ -150,7 +150,7 @@ function function_24b59946(localclientnum) {
 }
 
 // Namespace zm_genesis_boss
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc117e575, Offset: 0x1190
 // Size: 0x26c
 function boss_beam_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -174,7 +174,7 @@ function boss_beam_state(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm_genesis_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d9719b2, Offset: 0x1408
 // Size: 0x120
 function function_eec997a(localclientnum) {

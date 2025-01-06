@@ -1,9 +1,9 @@
-#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/systems/fx_character;
-#using scripts/shared/util_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/util_shared;
 
 #using_animtree("generic");
 
@@ -28,7 +28,7 @@ function autoexec main() {
 #namespace humanclientutils;
 
 // Namespace humanclientutils
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd40ee132, Offset: 0x1d8
 // Size: 0x8c
 function facialdialoguehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

@@ -1,14 +1,14 @@
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
 
 #namespace zm_island_spider_ee_quest;
 
 // Namespace zm_island_spider_ee_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x876d29c5, Offset: 0x210
 // Size: 0xdc
 function init() {
@@ -18,7 +18,7 @@ function init() {
 }
 
 // Namespace zm_island_spider_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf14bb4ba, Offset: 0x2f8
 // Size: 0xb4
 function spider_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -32,7 +32,7 @@ function spider_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_island_spider_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7899c6d, Offset: 0x3b8
 // Size: 0x17c
 function function_f9f39b8e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -57,7 +57,7 @@ function function_f9f39b8e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_spider_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2bba3a50, Offset: 0x540
 // Size: 0x104
 function jungle_cage_charged_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

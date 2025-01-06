@@ -1,33 +1,33 @@
-#using scripts/mp/killstreaks/_supplydrop;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/codescripts/struct;
 #using scripts/mp/_challenges;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/weapons/_heatseekingmissile;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/entityheadicons_shared;
-#using scripts/shared/ai/systems/gib;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/killstreaks/_supplydrop;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/objpoints_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_puppeteer_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/entityheadicons_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/objpoints_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicleriders_shared;
+#using scripts/shared/weapons/_heatseekingmissile;
 
 #namespace combat_robot;
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcce5922a, Offset: 0x9e8
 // Size: 0x174
 function init() {
@@ -41,7 +41,7 @@ function init() {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xed9cce1f, Offset: 0xb68
 // Size: 0x2a
 function private function_8335360e(player) {
@@ -58,7 +58,7 @@ function private function_dbe9b2f0(player) {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x1f8aea73, Offset: 0xc18
 // Size: 0x17c
 function private function_d975d303() {
@@ -78,7 +78,7 @@ function private function_d975d303() {
 }
 
 // Namespace combat_robot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x55e894b8, Offset: 0xda0
 // Size: 0x21c
 function configureteampost(player, ishacked) {
@@ -106,7 +106,7 @@ function configureteampost(player, ishacked) {
 }
 
 // Namespace combat_robot
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xadb4d1ff, Offset: 0xfc8
 // Size: 0xfc
 function private function_3ce9bd07(robot, player, ishacked) {
@@ -125,7 +125,7 @@ function private function_3ce9bd07(robot, player, ishacked) {
 }
 
 // Namespace combat_robot
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x85d73383, Offset: 0x10d0
 // Size: 0xa8
 function private function_1aab11c1(robot, position) {
@@ -137,7 +137,7 @@ function private function_1aab11c1(robot, position) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7f6199e9, Offset: 0x1180
 // Size: 0x3c
 function private function_8ba2a33(robot) {
@@ -147,7 +147,7 @@ function private function_8ba2a33(robot) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x3e8a6d29, Offset: 0x11c8
 // Size: 0xa8
 function private function_b63444c3(robot) {
@@ -163,7 +163,7 @@ function private function_b63444c3(robot) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x5071ce34, Offset: 0x1278
 // Size: 0x20e
 function private function_fdcdff00(robot) {
@@ -203,7 +203,7 @@ function private function_3620ca05(robot, enemy) {
 }
 
 // Namespace combat_robot
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x3ebd7a05, Offset: 0x1500
 // Size: 0x1b6
 function private function_8dd17cee(robot, position) {
@@ -232,7 +232,7 @@ function private function_8dd17cee(robot, position) {
 }
 
 // Namespace combat_robot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8247011, Offset: 0x16c0
 // Size: 0x3ee
 function function_122e3e3d(robot, player) {
@@ -290,7 +290,7 @@ function function_122e3e3d(robot, player) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x920d3e7e, Offset: 0x1ab8
 // Size: 0x300
 function function_337618ce(killstreak) {
@@ -332,7 +332,7 @@ function function_337618ce(killstreak) {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6096bb7, Offset: 0x1dc0
 // Size: 0x70
 function function_71cf3d3a() {
@@ -347,7 +347,7 @@ function function_71cf3d3a() {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe61dc09e, Offset: 0x1e38
 // Size: 0xe4
 function function_682f8d05(context) {
@@ -366,7 +366,7 @@ function function_682f8d05(context) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe610b521, Offset: 0x1f28
 // Size: 0x508
 function prolog(context) {
@@ -417,7 +417,7 @@ function prolog(context) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96cba5c9, Offset: 0x2438
 // Size: 0x54
 function function_74f7f285(player) {
@@ -426,7 +426,7 @@ function function_74f7f285(player) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4cc68b08, Offset: 0x2498
 // Size: 0xf4
 function epilog(context) {
@@ -444,7 +444,7 @@ function epilog(context) {
 /#
 
     // Namespace combat_robot
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x5f2834fb, Offset: 0x2598
     // Size: 0x90
     function function_5ce7891f() {
@@ -462,7 +462,7 @@ function epilog(context) {
 #/
 
 // Namespace combat_robot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7437dbeb, Offset: 0x2630
 // Size: 0x30
 function function_99494c4a(var_f191039f, delete_after_destruction_wait_time) {
@@ -473,7 +473,7 @@ function function_99494c4a(var_f191039f, delete_after_destruction_wait_time) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32095855, Offset: 0x2668
 // Size: 0x4c
 function hackedcallbackpost(hacker) {
@@ -483,7 +483,7 @@ function hackedcallbackpost(hacker) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1beeaef0, Offset: 0x26c0
 // Size: 0xa8
 function function_f298031d(helicopter) {
@@ -492,7 +492,7 @@ function function_f298031d(helicopter) {
     robot endon(#"killstreak_hacked");
     robot endon(#"combat_robot_land");
     helicopter endon(#"death");
-    hacker = helicopter waittill(#"killstreak_hacked");
+    helicopter waittill(#"killstreak_hacked", hacker);
     if (robot flagsys::get("in_vehicle") == 0) {
         return;
     }
@@ -500,7 +500,7 @@ function function_f298031d(helicopter) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb840d1fb, Offset: 0x2770
 // Size: 0x114
 function function_f91732d7(context) {
@@ -520,14 +520,14 @@ function function_f91732d7(context) {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2b6976a, Offset: 0x2890
 // Size: 0x1bc
 function function_8ce7b744() {
     combatrobot = self;
     combatrobot endon(#"combat_robot_shutdown");
     callback::remove_on_spawned(&function_74f7f285, combatrobot);
-    attacker, damagefromunderneath, weapon = combatrobot waittill(#"death");
+    combatrobot waittill(#"death", attacker, damagefromunderneath, weapon);
     attacker = self [[ level.figure_out_attacker ]](attacker);
     if (!isdefined(combatrobot.owner) || isdefined(attacker) && isplayer(attacker) && combatrobot.owner util::isenemyplayer(attacker)) {
         attacker challenges::destroyscorestreak(weapon, 0, 1);
@@ -540,7 +540,7 @@ function function_8ce7b744() {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95d76796, Offset: 0x2a58
 // Size: 0x120
 function function_6ebc9ffb() {
@@ -565,7 +565,7 @@ function function_6ebc9ffb() {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe322b6df, Offset: 0x2b80
 // Size: 0x1dc
 function function_dfd80445(player) {
@@ -587,7 +587,7 @@ function function_dfd80445(player) {
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e4e51e9, Offset: 0x2d68
 // Size: 0x84
 function function_d4f822d5(player) {
@@ -600,17 +600,17 @@ function function_d4f822d5(player) {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa055f172, Offset: 0x2df8
 // Size: 0x54
 function private function_369d3494() {
     archetype = self.archetype;
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     corpse clientfield::set("arch_actor_fire_fx", 3);
 }
 
 // Namespace combat_robot
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x376610d0, Offset: 0x2e58
 // Size: 0x1ac
 function private function_39f8e7ed(combatrobot) {
@@ -630,7 +630,7 @@ function private function_39f8e7ed(combatrobot) {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6dde25b, Offset: 0x3010
 // Size: 0x2fc
 function function_772b64d7() {
@@ -671,7 +671,7 @@ function function_772b64d7() {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x981dddb4, Offset: 0x3318
 // Size: 0x19c
 function function_e4b3aaa0() {
@@ -702,7 +702,7 @@ function function_e4b3aaa0() {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf043e63, Offset: 0x34c0
 // Size: 0x100
 function function_7d3ed5b7() {
@@ -712,7 +712,7 @@ function function_7d3ed5b7() {
     combatrobot playsoundontag("vox_robot_chatter", "j_head");
     while (true) {
         soundalias = undefined;
-        notify_string = combatrobot waittill(#"bhtn_action_notify");
+        combatrobot waittill(#"bhtn_action_notify", notify_string);
         switch (notify_string) {
         case "attack_kill":
         case "attack_melee":
@@ -729,7 +729,7 @@ function function_7d3ed5b7() {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x45b5b559, Offset: 0x35c8
 // Size: 0x54
 function function_b610d7e7() {
@@ -741,14 +741,14 @@ function function_b610d7e7() {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaee064b6, Offset: 0x3628
 // Size: 0x94
 function function_bf49f6cc() {
     combatrobot = self;
     combatrobot endon(#"combat_robot_shutdown");
     combatrobot endon(#"death");
-    falltime = combatrobot waittill(#"falling");
+    combatrobot waittill(#"falling", falltime);
     wait_time = falltime - 0.5;
     if (wait_time > 0) {
         wait wait_time;
@@ -757,7 +757,7 @@ function function_bf49f6cc() {
 }
 
 // Namespace combat_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2d7295b4, Offset: 0x36c8
 // Size: 0x64
 function function_888d5088() {
@@ -770,7 +770,7 @@ function function_888d5088() {
 }
 
 // Namespace combat_robot
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0x5e2702de, Offset: 0x3738
 // Size: 0x1a0
 function function_864f528(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {

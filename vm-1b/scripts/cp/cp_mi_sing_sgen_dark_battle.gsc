@@ -1,29 +1,29 @@
-#using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
-#using scripts/cp/cp_mi_sing_sgen_pallas;
-#using scripts/cp/cp_mi_sing_sgen_fallen_soldiers;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_fallen_soldiers;
+#using scripts/cp/cp_mi_sing_sgen_pallas;
+#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("generic");
 
@@ -98,7 +98,7 @@ function function_3cc9e129() {
 function function_d791b0a9(b_state) {
     level endon(#"Descent");
     while (isdefined(self)) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         e_player clientfield::set_to_player("oed_interference", b_state);
     }
 }
@@ -143,7 +143,7 @@ function function_6b91309b() {
     var_7667766b triggerenable(1);
     objectives::complete("cp_waypoint_breadcrumb");
     objectives::set("cp_level_sgen_lift_hendricks", level.var_2fd26037.origin);
-    var_5243a970 = var_7667766b waittill(#"trigger");
+    var_7667766b waittill(#"trigger", var_5243a970);
     objectives::complete("cp_level_sgen_lift_hendricks");
     level flag::set("player_raise_hendricks_hendricks");
     a_scene_ents = [];
@@ -426,7 +426,7 @@ function function_454f9298(s_spawn_point, n_index) {
 function function_69df7be3() {
     str_targetname = self.target;
     level thread namespace_cba4cc55::set_door_state(str_targetname, "open");
-    ent = self waittill(#"trigger");
+    self waittill(#"trigger", ent);
     if (!isdefined(level.var_b5a36ce0)) {
         level.var_b5a36ce0 = 1;
     } else {
@@ -671,7 +671,7 @@ function charging_station_trigger() {
         level flag::init("charging_chamber_spawn_gate");
     }
     self thread function_16c18dca();
-    e_player = self waittill(#"trigger");
+    self waittill(#"trigger", e_player);
     if (level.players.size == 1 && !e_player issprinting()) {
         trigger::wait_till("trig_solo_walk_spawns");
     }
@@ -922,7 +922,7 @@ function function_6027d85b() {
     level dialog::remote("kane_get_outta_there_i_g_0", 2);
     wait 5;
     level flag::wait_till_timeout(15, "weapons_research_vo_start");
-    level thread namespace_d40478f6::function_89871797();
+    level thread namespace_d40478f6::robot_hallway_underscore();
     level dialog::function_13b3b16a("plyr_you_know_this_is_sta_0");
     level dialog::remote("kane_the_chemicals_releas_0", 1);
     level dialog::remote("hend_anyone_else_sense_a_0", 0.5);

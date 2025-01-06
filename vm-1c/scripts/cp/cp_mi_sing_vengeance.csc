@@ -1,30 +1,30 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
 #using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_vengeance_fx;
 #using scripts/cp/cp_mi_sing_vengeance_patch_c;
 #using scripts/cp/cp_mi_sing_vengeance_sound;
-#using scripts/cp/cp_mi_sing_vengeance_fx;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/cp/_load;
 #using scripts/shared/audio_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/enemy_highlight;
-#using scripts/shared/stealth_client;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/enemy_highlight;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/stealth_client;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_sing_vengeance;
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x48b1c7fd, Offset: 0xbf0
 // Size: 0x244
 function main() {
-    util::function_57b966c8(&function_71f88fc, 8);
+    util::function_57b966c8(&force_streamer, 8);
     clientfield::register("toplayer", "enemy_highlight", 1, 1, "int", &function_93ef80c, 0, 0);
     init_clientfields();
     setsaveddvar("enable_global_wind", 1);
@@ -48,7 +48,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a4e5cc1, Offset: 0xe40
 // Size: 0x414
 function init_clientfields() {
@@ -70,7 +70,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc37f7, Offset: 0x1260
 // Size: 0xb4
 function function_6b145814(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -84,7 +84,7 @@ function function_6b145814(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x686b431f, Offset: 0x1320
 // Size: 0x8c
 function function_b69b9863(localclientnum, oldval, newval, bnewent, binitialsnap) {
@@ -101,7 +101,7 @@ function function_b69b9863(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xff973af, Offset: 0x13b8
 // Size: 0x106
 function function_a3bc7b7b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -131,7 +131,7 @@ function function_a3bc7b7b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9f3b2e52, Offset: 0x14c8
 // Size: 0x132
 function function_22f8ce71(localclientnum) {
@@ -147,7 +147,7 @@ function function_22f8ce71(localclientnum) {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf13e2ce8, Offset: 0x1608
 // Size: 0x10a
 function function_3ef59fde(localclientnum) {
@@ -161,7 +161,7 @@ function function_3ef59fde(localclientnum) {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdc5be058, Offset: 0x1720
 // Size: 0xc2
 function function_65a61b78(a_ents, var_6a07eb6c) {
@@ -184,7 +184,7 @@ function function_8cfdae7(localclientnum) {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2520dbad, Offset: 0x1850
 // Size: 0x74
 function function_1c33477(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -196,7 +196,7 @@ function function_1c33477(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x82f3fbfb, Offset: 0x18d0
 // Size: 0x84
 function function_ba9281fe(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -208,7 +208,7 @@ function function_ba9281fe(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa68f5db5, Offset: 0x1960
 // Size: 0x11c
 function function_93ef80c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -233,10 +233,10 @@ function function_93ef80c(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3e72f95b, Offset: 0x1a88
 // Size: 0x542
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     stopforcingstreamer();
     switch (n_zone) {
     case 0:
@@ -310,7 +310,7 @@ function function_71f88fc(n_zone) {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa8462624, Offset: 0x1fd8
 // Size: 0x84
 function function_5d084d45(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -322,7 +322,7 @@ function function_5d084d45(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf37a3d45, Offset: 0x2068
 // Size: 0xb8
 function function_23953002() {
@@ -337,7 +337,7 @@ function function_23953002() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa2d82845, Offset: 0x2128
 // Size: 0x84
 function function_1e770357(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -349,7 +349,7 @@ function function_1e770357(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x780e3a71, Offset: 0x21b8
 // Size: 0xfa
 function function_37d4d605() {
@@ -361,7 +361,7 @@ function function_37d4d605() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x599e0f75, Offset: 0x22c0
 // Size: 0x35c
 function function_be296801() {
@@ -395,7 +395,7 @@ function function_be296801() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x119b360a, Offset: 0x2628
 // Size: 0x8a
 function function_cc435ce1() {
@@ -405,7 +405,7 @@ function function_cc435ce1() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x13d5fbbb, Offset: 0x26c0
 // Size: 0x9a
 function function_5bd50680(wait_notify) {
@@ -416,7 +416,7 @@ function function_5bd50680(wait_notify) {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb78f8e3f, Offset: 0x2768
 // Size: 0x1fc
 function function_6f79b65d() {
@@ -437,7 +437,7 @@ function function_6f79b65d() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x15bac0f6, Offset: 0x2970
 // Size: 0x104
 function function_d8ca2a96() {
@@ -451,7 +451,7 @@ function function_d8ca2a96() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa53ff0c3, Offset: 0x2a80
 // Size: 0x64
 function function_b2c7b02d() {
@@ -461,7 +461,7 @@ function function_b2c7b02d() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0798a, Offset: 0x2af0
 // Size: 0xb4
 function function_8cc535c4() {
@@ -473,7 +473,7 @@ function function_8cc535c4() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd49cbc70, Offset: 0x2bb0
 // Size: 0xb4
 function function_6c85145c() {
@@ -485,7 +485,7 @@ function function_6c85145c() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xccc2d3e5, Offset: 0x2c70
 // Size: 0x37c
 function function_1401c820(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -558,7 +558,7 @@ function function_1401c820(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3041f07c, Offset: 0x2ff8
 // Size: 0x172
 function on_player_spawned(localclientnum) {

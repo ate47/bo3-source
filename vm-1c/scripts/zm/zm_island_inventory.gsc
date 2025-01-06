@@ -1,17 +1,17 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/craftables/_zm_craftables;
 
 #namespace zm_island_inventory;
 
 // Namespace zm_island_inventory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57e55c70, Offset: 0x4d0
 // Size: 0x494
 function init() {
@@ -48,7 +48,7 @@ function main() {
 }
 
 // Namespace zm_island_inventory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e3951e9, Offset: 0x980
 // Size: 0x166
 function function_1a9a4375() {
@@ -75,7 +75,7 @@ function function_1a9a4375() {
 }
 
 // Namespace zm_island_inventory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26b41f7f, Offset: 0xaf0
 // Size: 0x170
 function function_2cc6bcea() {
@@ -107,7 +107,7 @@ function function_2cc6bcea() {
 }
 
 // Namespace zm_island_inventory
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa8424f3f, Offset: 0xc68
 // Size: 0x9c
 function function_6649823b(var_ba18d83c) {
@@ -121,7 +121,7 @@ function function_6649823b(var_ba18d83c) {
 }
 
 // Namespace zm_island_inventory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87bd9d5, Offset: 0xd10
 // Size: 0x60
 function function_8801a9c5() {

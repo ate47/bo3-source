@@ -1,15 +1,15 @@
-#using scripts/mp/mp_arena_sound;
-#using scripts/mp/mp_arena_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_arena_fx;
+#using scripts/mp/mp_arena_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_arena;
 
 // Namespace mp_arena
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8dbe2465, Offset: 0x128
+// Params 0, eflags: 0x0
+// Checksum 0xebc3a690, Offset: 0x128
 // Size: 0x5c
 function main() {
     mp_arena_fx::main();

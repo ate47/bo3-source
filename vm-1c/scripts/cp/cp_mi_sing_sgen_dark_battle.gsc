@@ -1,36 +1,36 @@
-#using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
-#using scripts/cp/cp_mi_sing_sgen_pallas;
-#using scripts/cp/cp_mi_sing_sgen_fallen_soldiers;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_fallen_soldiers;
+#using scripts/cp/cp_mi_sing_sgen_pallas;
+#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("generic");
 
 #namespace cp_mi_sing_sgen_dark_battle;
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x47f0ab80, Offset: 0x1408
 // Size: 0x40c
 function function_32dc1c24(str_objective, var_74cd64bc) {
@@ -71,7 +71,7 @@ function function_32dc1c24(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46bc6120, Offset: 0x1820
 // Size: 0x1d4
 function function_3cc9e129() {
@@ -92,19 +92,19 @@ function function_3cc9e129() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xccf7ccf8, Offset: 0x1a00
 // Size: 0x60
 function function_d791b0a9(b_state) {
     level endon(#"Descent");
     while (isdefined(self)) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         e_player clientfield::set_to_player("oed_interference", b_state);
     }
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41f7bb4d, Offset: 0x1a68
 // Size: 0x6c
 function function_5d8d8c7a() {
@@ -116,7 +116,7 @@ function function_5d8d8c7a() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc0965af, Offset: 0x1ae0
 // Size: 0x54
 function function_5e6c249b() {
@@ -125,7 +125,7 @@ function function_5e6c249b() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x7f77c158, Offset: 0x1b40
 // Size: 0x24
 function function_bbb54b1a(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -133,7 +133,7 @@ function function_bbb54b1a(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6f2411b4, Offset: 0x1b70
 // Size: 0x19c
 function function_6b91309b() {
@@ -143,7 +143,7 @@ function function_6b91309b() {
     var_7667766b triggerenable(1);
     objectives::complete("cp_waypoint_breadcrumb");
     objectives::set("cp_level_sgen_lift_hendricks", level.var_2fd26037.origin);
-    var_5243a970 = var_7667766b waittill(#"trigger");
+    var_7667766b waittill(#"trigger", var_5243a970);
     objectives::complete("cp_level_sgen_lift_hendricks");
     level flag::set("player_raise_hendricks_hendricks");
     a_scene_ents = [];
@@ -153,7 +153,7 @@ function function_6b91309b() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9edb1ebe, Offset: 0x1d18
 // Size: 0xb2
 function function_f45def6e(a_scene_ents) {
@@ -166,7 +166,7 @@ function function_f45def6e(a_scene_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4adbe80e, Offset: 0x1dd8
 // Size: 0x64
 function function_e5d88bbd() {
@@ -177,7 +177,7 @@ function function_e5d88bbd() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe4e25e8b, Offset: 0x1e48
 // Size: 0x1c
 function function_731772d9() {
@@ -185,7 +185,7 @@ function function_731772d9() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29314443, Offset: 0x1e70
 // Size: 0x1cc
 function function_26c8bae0() {
@@ -210,7 +210,7 @@ function function_26c8bae0() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd60714eb, Offset: 0x2048
 // Size: 0x194
 function function_3e856999() {
@@ -229,7 +229,7 @@ function function_3e856999() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaf9c0ff6, Offset: 0x21e8
 // Size: 0x54
 function function_86c3565d(a_ents) {
@@ -238,7 +238,7 @@ function function_86c3565d(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2da38bfd, Offset: 0x2248
 // Size: 0xc4
 function function_acc5d0c6(a_ents) {
@@ -252,7 +252,7 @@ function function_acc5d0c6(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4741e1b, Offset: 0x2318
 // Size: 0xc4
 function function_d2c84b2f(a_ents) {
@@ -266,7 +266,7 @@ function function_d2c84b2f(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf259c933, Offset: 0x23e8
 // Size: 0x104
 function function_c8b6f250(a_ents) {
@@ -281,7 +281,7 @@ function function_c8b6f250(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92f43e3, Offset: 0x24f8
 // Size: 0x7c
 function function_9a64520() {
@@ -295,7 +295,7 @@ function function_9a64520() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86027323, Offset: 0x2580
 // Size: 0xc4
 function function_a8cfe9ae() {
@@ -316,7 +316,7 @@ function function_40fa24f4(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xefadf028, Offset: 0x2680
 // Size: 0x9c
 function function_c760c273() {
@@ -327,7 +327,7 @@ function function_c760c273() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18e0e2a3, Offset: 0x2728
 // Size: 0x1b4
 function function_80aab711() {
@@ -348,7 +348,7 @@ function function_80aab711() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x91380e6b, Offset: 0x28e8
 // Size: 0x45c
 function surgical_facility_spawn_trigger() {
@@ -403,7 +403,7 @@ function surgical_facility_spawn_trigger() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x278191cb, Offset: 0x2d50
 // Size: 0x174
 function function_454f9298(s_spawn_point, n_index) {
@@ -420,13 +420,13 @@ function function_454f9298(s_spawn_point, n_index) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf2d63946, Offset: 0x2ed0
 // Size: 0xcc
 function function_69df7be3() {
     str_targetname = self.target;
     level thread namespace_cba4cc55::set_door_state(str_targetname, "open");
-    ent = self waittill(#"trigger");
+    self waittill(#"trigger", ent);
     if (!isdefined(level.var_b5a36ce0)) {
         level.var_b5a36ce0 = 1;
     } else {
@@ -439,7 +439,7 @@ function function_69df7be3() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x172ef5fb, Offset: 0x2fa8
 // Size: 0x394
 function function_5f76850f(str_objective, var_74cd64bc) {
@@ -484,7 +484,7 @@ function function_5f76850f(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x83768ff4, Offset: 0x3348
 // Size: 0x24
 function function_9724b9d5(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -492,7 +492,7 @@ function function_9724b9d5(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x80718a3b, Offset: 0x3378
 // Size: 0xda
 function function_bed8321d() {
@@ -506,7 +506,7 @@ function function_bed8321d() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcab63431, Offset: 0x3460
 // Size: 0x844
 function charging_station() {
@@ -582,7 +582,7 @@ function charging_station() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1420eb, Offset: 0x3cb0
 // Size: 0x4c
 function function_f229e2b5() {
@@ -591,7 +591,7 @@ function function_f229e2b5() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfe5f8c8a, Offset: 0x3d08
 // Size: 0x42a
 function charging_station_power_on() {
@@ -631,7 +631,7 @@ function charging_station_power_on() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd627a063, Offset: 0x4140
 // Size: 0x92
 function function_fe4282f() {
@@ -641,7 +641,7 @@ function function_fe4282f() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x70d462e9, Offset: 0x41e0
 // Size: 0x54
 function function_e55310df() {
@@ -662,7 +662,7 @@ function function_5e9ba6b0(str_flag) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x66dd27d7, Offset: 0x42a8
 // Size: 0x516
 function charging_station_trigger() {
@@ -671,7 +671,7 @@ function charging_station_trigger() {
         level flag::init("charging_chamber_spawn_gate");
     }
     self thread function_16c18dca();
-    e_player = self waittill(#"trigger");
+    self waittill(#"trigger", e_player);
     if (level.players.size == 1 && !e_player issprinting()) {
         trigger::wait_till("trig_solo_walk_spawns");
     }
@@ -727,7 +727,7 @@ function charging_station_trigger() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52c97f92, Offset: 0x47c8
 // Size: 0x1f4
 function function_16c18dca() {
@@ -762,7 +762,7 @@ function function_16c18dca() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x36751b4a, Offset: 0x49c8
 // Size: 0xfc
 function function_54efd092() {
@@ -784,7 +784,7 @@ function function_54efd092() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf3fcc2f, Offset: 0x4ad0
 // Size: 0x174
 function function_e95882dc(var_c910f140) {
@@ -807,7 +807,7 @@ function function_e95882dc(var_c910f140) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb44e0dd1, Offset: 0x4c50
 // Size: 0x20c
 function charging_station_spawner() {
@@ -838,7 +838,7 @@ function charging_station_spawner() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbf34770b, Offset: 0x4e68
 // Size: 0x1ac
 function function_ef879c87() {
@@ -859,7 +859,7 @@ function function_ef879c87() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x960e602d, Offset: 0x5020
 // Size: 0x2b4
 function function_ccf8a1e1() {
@@ -897,7 +897,7 @@ function function_ccf8a1e1() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e87aaf3, Offset: 0x52e0
 // Size: 0x54
 function function_b9349771(var_e0dc8ecf) {
@@ -907,7 +907,7 @@ function function_b9349771(var_e0dc8ecf) {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x62cc186d, Offset: 0x5340
 // Size: 0x1e4
 function function_6027d85b() {
@@ -930,7 +930,7 @@ function function_6027d85b() {
 }
 
 // Namespace cp_mi_sing_sgen_dark_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5225253, Offset: 0x5530
 // Size: 0x2c
 function function_a022fef1() {

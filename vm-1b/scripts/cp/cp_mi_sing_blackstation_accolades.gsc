@@ -1,12 +1,12 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_23567e72;
 
@@ -170,7 +170,7 @@ function function_587c487b(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Checksum 0xf7e429a2, Offset: 0xd28
 // Size: 0xf4
 function function_5d3711fa() {
-    eattacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
+    self waittill(#"death", eattacker, damagefromunderneath, weapon, point, dir);
     if (level.var_76663db9 && isplayer(eattacker)) {
         foreach (player in level.activeplayers) {
             player notify(#"warlord_pistol_challenge");
@@ -345,7 +345,7 @@ function function_91f0e7d2() {
 // Checksum 0xc8309a14, Offset: 0x13d0
 // Size: 0x62
 function function_91fa5513() {
-    level waittill(#"hash_e1526d21");
+    level waittill(#"wheelhouse_breached");
     callback::on_ai_killed(&function_92bc12da);
     level flag::wait_till("barge_breach_cleared");
     callback::remove_on_ai_killed(&function_92bc12da);

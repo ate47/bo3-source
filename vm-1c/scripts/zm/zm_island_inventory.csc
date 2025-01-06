@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_utility;
+#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/postfx_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_island_inventory;
 
 // Namespace zm_island_inventory
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b6ae55a, Offset: 0x398
 // Size: 0x644
 function init() {
@@ -45,7 +45,7 @@ function main() {
 }
 
 // Namespace zm_island_inventory
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7f908ea1, Offset: 0x9f8
 // Size: 0x18c
 function function_67b53ed4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -70,7 +70,7 @@ function function_67b53ed4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_inventory
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x26c3ef99, Offset: 0xb90
 // Size: 0x100
 function function_63119d2(var_1b778cf0, var_6e653641, n_new_value) {

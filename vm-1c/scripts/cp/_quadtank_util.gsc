@@ -1,7 +1,7 @@
 #using scripts/cp/_util;
-#using scripts/shared/vehicles/_quadtank;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace namespace_855113f3;
 
@@ -26,7 +26,7 @@ function function_ea61aedc() {
     var_9a15ea97 = getweapon("launcher_standard");
     while (true) {
         self notify(#"quad_tank_trophy_hint_disable");
-        missile = self waittill(#"projectile_applyattractor");
+        self waittill(#"projectile_applyattractor", missile);
         if (missile.weapon === var_9a15ea97) {
             var_fae93870++;
             if (var_fae93870 >= var_c1df3693) {
@@ -85,7 +85,7 @@ function quad_tank_rocket_hint_disable(var_ac4390f) {
     self endon(#"death");
     self endon(#"quad_tank_rocket_hint_disable");
     while (true) {
-        n_damage, e_attacker, direction_vec, var_2f950561, damagetype, modelname, tagname, partname, weapon, idflags = var_ac4390f waittill(#"damage");
+        var_ac4390f waittill(#"damage", n_damage, e_attacker, direction_vec, var_2f950561, damagetype, modelname, tagname, partname, weapon, idflags);
         if (weapon.weapclass === "rocketlauncher" && isplayer(e_attacker)) {
             var_ac4390f notify(#"quad_tank_rocket_hint_disable");
             self notify(#"quad_tank_rocket_hint_disable");

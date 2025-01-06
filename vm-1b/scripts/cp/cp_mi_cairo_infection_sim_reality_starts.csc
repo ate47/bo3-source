@@ -1,9 +1,9 @@
-#using scripts/shared/scene_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
 
 #namespace cp_mi_cairo_infection_sim_reality_starts;
 

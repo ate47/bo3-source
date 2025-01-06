@@ -1,7 +1,7 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/cp/_util;
 #using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace _laststand;
 
@@ -22,12 +22,12 @@ function autoexec init() {
 }
 
 // Namespace _laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3627c892, Offset: 0x288
 // Size: 0xb0
 function wait_and_set_revive_shader_constant() {
     while (true) {
-        localclientnum, note = level waittill(#"notetrack");
+        level waittill(#"notetrack", localclientnum, note);
         if (note == "revive_shader_constant") {
             player = getlocalplayer(localclientnum);
             player mapshaderconstant(localclientnum, 0, "scriptVector2", 0, 1, 0, getservertime(localclientnum) / 1000);
@@ -36,7 +36,7 @@ function wait_and_set_revive_shader_constant() {
 }
 
 // Namespace _laststand
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xaa41963a, Offset: 0x340
 // Size: 0x108
 function function_c2e280cb(model, oldvalue, newvalue) {
@@ -55,7 +55,7 @@ function function_c2e280cb(model, oldvalue, newvalue) {
 }
 
 // Namespace _laststand
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6deb8153, Offset: 0x450
 // Size: 0x2b4
 function update_bleedout_timer(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

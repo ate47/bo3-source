@@ -1,39 +1,39 @@
-#using scripts/shared/ai/robot_phalanx;
-#using scripts/shared/ai/phalanx;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld;
+#using scripts/cp/cp_mi_zurich_newworld_sound;
+#using scripts/cp/cp_mi_zurich_newworld_train;
+#using scripts/cp/cp_mi_zurich_newworld_util;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/cybercom/_cybercom_gadget;
 #using scripts/cp/cybercom/_cybercom_gadget_immolation;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/cp_mi_zurich_newworld_train;
-#using scripts/cp/cp_mi_zurich_newworld_sound;
-#using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld;
-#using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_hacking;
-#using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/phalanx;
+#using scripts/shared/ai/robot_phalanx;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace namespace_2f45a7a1;
 
@@ -76,7 +76,7 @@ function function_54536d43(a_ents) {
     level endon(#"hash_3cf7368e");
     var_f6493330 = a_ents["icicle"];
     do {
-        n_damage, attacker = var_f6493330 waittill(#"damage");
+        var_f6493330 waittill(#"damage", n_damage, attacker);
     } while (n_damage <= 1);
     self thread scene::play();
     var_f6493330 thread function_1c32a954(attacker);
@@ -134,7 +134,7 @@ function function_f86fbc8c() {
     self endon(#"death");
     level endon(#"hash_3cf7368e");
     while (true) {
-        e_grenade = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", e_grenade);
         level thread function_a3720132(e_grenade);
     }
 }
@@ -149,7 +149,7 @@ function function_d2e40f97() {
     self endon(#"death");
     level endon(#"hash_3cf7368e");
     while (true) {
-        e_projectile = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", e_projectile);
         level thread function_a3720132(e_projectile);
     }
 }
@@ -160,9 +160,9 @@ function function_d2e40f97() {
 // Size: 0x5a
 function function_a3720132(e_weapon) {
     if (e_weapon.classname === "rocket") {
-        v_pos = e_weapon waittill(#"projectile_impact_explode");
+        e_weapon waittill(#"projectile_impact_explode", v_pos);
     } else {
-        v_pos = e_weapon waittill(#"explode");
+        e_weapon waittill(#"explode", v_pos);
     }
     function_13a9f3bd(v_pos);
 }
@@ -718,8 +718,8 @@ function function_c83c689a(str_objective, var_74cd64bc) {
         player thread newworld_util::function_2e7b4007();
     }
     var_a8a64a67 = getnodearray("underground_construction_cover", "script_noteworthy");
-    foreach (var_974cc07 in var_a8a64a67) {
-        setenablenode(var_974cc07, 0);
+    foreach (nd_cover in var_a8a64a67) {
+        setenablenode(nd_cover, 0);
     }
     spawner::add_spawn_function_group("wall_breaker_enemy", "targetname", &function_b4990972);
     spawner::add_spawn_function_group("construction_coop_enemies", "targetname", &function_b4990972);
@@ -866,7 +866,7 @@ function function_2bce8fc(a_ents) {
 function enhanced_vision_tutorial() {
     self endon(#"death");
     self endon(#"hash_6851db33");
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     level notify(#"begin_enhanced_vision_tutorial");
     if (isdefined(30)) {
         __s = spawnstruct();
@@ -894,7 +894,7 @@ function enhanced_vision_tutorial() {
 function function_869943d3() {
     self endon(#"death");
     self endon(#"hash_6851db33");
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     if (isdefined(30)) {
         __s = spawnstruct();
         __s endon(#"timeout");
@@ -956,8 +956,8 @@ function function_ffac3853(a_ents) {
     var_6fcf42e scene::play();
     if (isdefined(self.target)) {
         var_a8a64a67 = getnodearray(self.target, "targetname");
-        foreach (var_974cc07 in var_a8a64a67) {
-            setenablenode(var_974cc07, 1);
+        foreach (nd_cover in var_a8a64a67) {
+            setenablenode(nd_cover, 1);
         }
     }
 }
@@ -1001,8 +1001,8 @@ function function_40809e() {
     var_1f6b52e scene::play();
     if (isdefined(self.target)) {
         var_a8a64a67 = getnodearray(self.target, "targetname");
-        foreach (var_974cc07 in var_a8a64a67) {
-            setenablenode(var_974cc07, 1);
+        foreach (nd_cover in var_a8a64a67) {
+            setenablenode(nd_cover, 1);
         }
     }
 }
@@ -1028,8 +1028,8 @@ function function_9a5b95da() {
         e_bot = a_bots[i] spawner::spawn();
         if (isdefined(e_bot.target)) {
             e_bot.goalradius = -128;
-            var_22752fde = getnode(e_bot.target, "targetname");
-            e_bot setgoal(var_22752fde.origin);
+            nd_node = getnode(e_bot.target, "targetname");
+            e_bot setgoal(nd_node.origin);
             continue;
         }
         e_bot setgoal(var_d6bb42cf);
@@ -1183,11 +1183,11 @@ function function_595d8891() {
 // Params 1, eflags: 0x0
 // Checksum 0x1e3fb5c0, Offset: 0x5de8
 // Size: 0x4a
-function function_1786c095(var_6e2f783e) {
-    if (!isdefined(var_6e2f783e)) {
-        var_6e2f783e = 0;
+function function_1786c095(b_skipto) {
+    if (!isdefined(b_skipto)) {
+        b_skipto = 0;
     }
-    if (!var_6e2f783e) {
+    if (!b_skipto) {
         trigger::wait_till("pre_spawn_subwaypush");
     }
     level thread scene::init("cin_new_11_01_subway_vign_pushsubway");
@@ -1275,7 +1275,7 @@ function function_105344d6(str_objective, var_74cd64bc) {
     trigger::wait_till("start_wtp_enemies");
     level thread player_entered_wtp_vo();
     function_16cfd8ef();
-    level notify(#"hash_982eac9f");
+    level notify(#"underground_combat_complete");
     savegame::checkpoint_save();
     battlechatter::function_d9f49fba(0);
     trigger::use("color_post_water_treatment_battle");
@@ -1438,7 +1438,7 @@ function function_d3badebb() {
 // Checksum 0x898dcbcb, Offset: 0x6aa0
 // Size: 0x5a
 function function_30718875() {
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     a_players = getplayers();
     if (a_players.size == 1) {
         trigger::wait_till("t_lower_to_middle_stairs");
@@ -1451,7 +1451,7 @@ function function_30718875() {
 // Checksum 0x5c9540bb, Offset: 0x6b08
 // Size: 0x3a
 function function_e1bce305() {
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     trigger::wait_till("t_left_wallrun_attackers");
     newworld_util::function_f29e6c6d("sp_left_wallrun_attackers");
 }
@@ -1548,17 +1548,17 @@ function function_2d63d3db(open) {
         level.var_f994bf4e = 0;
     }
     var_ffdb9494 = getent("wt_gather_door", "targetname");
-    var_cbe6253d = 96;
+    move_amount = 96;
     move_speed = 0.75;
     if (open == 1 && level.var_f994bf4e == 0) {
         var_ffdb9494 playsound("evt_watertower_door_open");
-        var_ffdb9494 movez(var_cbe6253d, move_speed);
+        var_ffdb9494 movez(move_amount, move_speed);
         level.var_f994bf4e = 1;
         return;
     }
     if (open == 0 && level.var_f994bf4e == 1) {
         var_ffdb9494 playsound("evt_watertower_door_close");
-        var_ffdb9494 movez(var_cbe6253d * -1, move_speed);
+        var_ffdb9494 movez(move_amount * -1, move_speed);
         level.var_f994bf4e = 0;
     }
 }
@@ -1615,27 +1615,27 @@ function function_5240a50a(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 // Checksum 0x46453af9, Offset: 0x7278
 // Size: 0x1ea
 function function_41fc6a0f() {
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_icicles_01_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_icicles_01_h2_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_icicles_01_h3_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_icicles_01_h4_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_icicles_01_h5_bundle");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_icicles_01_h6_bundle");
-    newworld_util::function_bbd12ed2("cin_new_10_01_pinneddown_1st_explanation");
-    newworld_util::function_bbd12ed2("cin_new_11_01_subway_rollgrenade_enemy01");
-    newworld_util::function_bbd12ed2("cin_new_11_01_subway_rollgrenade_enemy02");
-    newworld_util::function_bbd12ed2("cin_new_11_01_subway_rollgrenade_enemy03");
-    newworld_util::function_bbd12ed2("cin_new_11_01_subway_rollgrenade_enemy04");
-    newworld_util::function_bbd12ed2("cin_new_11_01_subway_vign_bustout");
-    newworld_util::function_bbd12ed2("p7_fxanim_cp_newworld_plaster_walls_01_bundle");
-    newworld_util::function_bbd12ed2("cin_new_11_03_subway_aie_smash01");
-    newworld_util::function_bbd12ed2("cin_new_11_03_subway_aie_smash02");
-    newworld_util::function_bbd12ed2("cin_new_11_01_subway_vign_pushsubway");
-    newworld_util::function_bbd12ed2("cin_new_12_01_watertreatment_vign_point");
-    newworld_util::function_bbd12ed2("cin_new_12_01_watertreatment_vign_point2");
-    newworld_util::function_bbd12ed2("cin_new_12_01_watertreatment_vign_point2_coop");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_icicles_01_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_icicles_01_h2_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_icicles_01_h3_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_icicles_01_h4_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_icicles_01_h5_bundle");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_icicles_01_h6_bundle");
+    newworld_util::scene_cleanup("cin_new_10_01_pinneddown_1st_explanation");
+    newworld_util::scene_cleanup("cin_new_11_01_subway_rollgrenade_enemy01");
+    newworld_util::scene_cleanup("cin_new_11_01_subway_rollgrenade_enemy02");
+    newworld_util::scene_cleanup("cin_new_11_01_subway_rollgrenade_enemy03");
+    newworld_util::scene_cleanup("cin_new_11_01_subway_rollgrenade_enemy04");
+    newworld_util::scene_cleanup("cin_new_11_01_subway_vign_bustout");
+    newworld_util::scene_cleanup("p7_fxanim_cp_newworld_plaster_walls_01_bundle");
+    newworld_util::scene_cleanup("cin_new_11_03_subway_aie_smash01");
+    newworld_util::scene_cleanup("cin_new_11_03_subway_aie_smash02");
+    newworld_util::scene_cleanup("cin_new_11_01_subway_vign_pushsubway");
+    newworld_util::scene_cleanup("cin_new_12_01_watertreatment_vign_point");
+    newworld_util::scene_cleanup("cin_new_12_01_watertreatment_vign_point2");
+    newworld_util::scene_cleanup("cin_new_12_01_watertreatment_vign_point2_coop");
     wait 3;
-    newworld_util::function_bbd12ed2("cin_new_13_01_stagingroom_1st_guidance");
+    newworld_util::scene_cleanup("cin_new_13_01_stagingroom_1st_guidance");
 }
 
 // Namespace namespace_2f45a7a1
@@ -1907,7 +1907,7 @@ function function_ee08b005() {
 // Checksum 0x1bfec786, Offset: 0x8000
 // Size: 0x6a
 function function_a6b23a78() {
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     self endon(#"enhanced_vision_tutorial");
     self endon(#"death");
     wait 15;
@@ -1921,7 +1921,7 @@ function function_a6b23a78() {
 // Checksum 0xb399ba0c, Offset: 0x8078
 // Size: 0x52
 function function_6894d6a1() {
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     self endon(#"death");
     self flag::wait_till("enhanced_vision_tutorial");
     wait 2;
@@ -1986,7 +1986,7 @@ function function_7a5a079e() {
 function maintenance_underneath_vo() {
     var_46100e43 = getent("maintenance_underneath_vo", "targetname");
     while (true) {
-        ent = var_46100e43 waittill(#"trigger");
+        var_46100e43 waittill(#"trigger", ent);
         if (isplayer(ent) && isalive(ent)) {
             ent dialog::function_13b3b16a("plyr_taking_the_mechanic_0");
             break;
@@ -2030,7 +2030,7 @@ function player_entered_wtp_vo() {
 // Checksum 0x4882c630, Offset: 0x8450
 // Size: 0x133
 function function_afc0d3a7() {
-    level endon(#"hash_982eac9f");
+    level endon(#"underground_combat_complete");
     callback::on_actor_killed(&function_3293dfe7);
     while (true) {
         level waittill(#"hash_5308cf63");

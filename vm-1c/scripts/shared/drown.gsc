@@ -1,10 +1,10 @@
-#using scripts/shared/visionset_mgr_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/damagefeedback_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace drown;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x90f85851, Offset: 0x220
 // Size: 0x12c
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6ec5f7a5, Offset: 0x358
 // Size: 0x68
 function activate_player_health_visionset() {
@@ -46,7 +46,7 @@ function activate_player_health_visionset() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x988638a, Offset: 0x3c8
 // Size: 0x50
 function deactivate_player_health_visionset() {
@@ -57,7 +57,7 @@ function deactivate_player_health_visionset() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe64699d5, Offset: 0x420
 // Size: 0x64
 function on_player_spawned() {
@@ -68,7 +68,7 @@ function on_player_spawned() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e216765, Offset: 0x490
 // Size: 0x278
 function watch_player_drowning() {
@@ -111,7 +111,7 @@ function watch_player_drowning() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xab8ef219, Offset: 0x710
 // Size: 0x6c
 function function_cb6a2e72() {
@@ -124,7 +124,7 @@ function function_cb6a2e72() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29f3389, Offset: 0x788
 // Size: 0x6c
 function watch_game_ended() {
@@ -137,7 +137,7 @@ function watch_game_ended() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad6fe649, Offset: 0x800
 // Size: 0x42
 function is_player_drowning() {

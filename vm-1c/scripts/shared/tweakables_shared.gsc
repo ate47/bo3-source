@@ -11,7 +11,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace tweakables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcde7e501, Offset: 0x488
 // Size: 0x4cc
 function __init__() {
@@ -55,7 +55,7 @@ function __init__() {
 }
 
 // Namespace tweakables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x93066055, Offset: 0x960
 // Size: 0x1c4
 function gettweakabledvarvalue(category, name) {
@@ -94,7 +94,7 @@ function gettweakabledvarvalue(category, name) {
 }
 
 // Namespace tweakables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9f27ce84, Offset: 0xb30
 // Size: 0x1a0
 function gettweakabledvar(category, name) {
@@ -132,7 +132,7 @@ function gettweakabledvar(category, name) {
 }
 
 // Namespace tweakables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9629bce, Offset: 0xcd8
 // Size: 0x218
 function gettweakablevalue(category, name) {
@@ -174,7 +174,7 @@ function gettweakablevalue(category, name) {
 }
 
 // Namespace tweakables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x31fc11e7, Offset: 0xef8
 // Size: 0x1a0
 function gettweakablelastvalue(category, name) {
@@ -249,7 +249,7 @@ function settweakablevalue(category, name, value) {
 }
 
 // Namespace tweakables
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x17d9d3f5, Offset: 0x1250
 // Size: 0x17a
 function settweakablelastvalue(category, name, value) {
@@ -284,7 +284,7 @@ function settweakablelastvalue(category, name, value) {
 }
 
 // Namespace tweakables
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf1ccad1, Offset: 0x13d8
 // Size: 0x5ca
 function registertweakable(category, name, dvar, value) {
@@ -368,7 +368,7 @@ function registertweakable(category, name, dvar, value) {
 }
 
 // Namespace tweakables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x91310e53, Offset: 0x19b0
 // Size: 0x2a
 function setclienttweakable(category, name) {
@@ -376,7 +376,7 @@ function setclienttweakable(category, name) {
 }
 
 // Namespace tweakables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x68fae5b6, Offset: 0x19e8
 // Size: 0x12e
 function updateuitweakables(debug_refresh) {
@@ -395,7 +395,7 @@ function updateuitweakables(debug_refresh) {
 }
 
 // Namespace tweakables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe472fdd5, Offset: 0x1b20
 // Size: 0x14
 function function_13dc3b34(dvar, value) {

@@ -1,25 +1,25 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/duplicaterender_mgr;
 #using scripts/shared/flagsys_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/shared/math_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/audio_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
-#namespace namespace_df84fe46;
+#namespace cybercom_misdirection;
 
-// Namespace namespace_df84fe46
-// Params 0, eflags: 0x1 linked
+// Namespace cybercom_misdirection
+// Params 0, eflags: 0x0
 // Checksum 0xcff9dbeb, Offset: 0x2e8
 // Size: 0x14
 function init() {
     init_clientfields();
 }
 
-// Namespace namespace_df84fe46
-// Params 0, eflags: 0x1 linked
+// Namespace cybercom_misdirection
+// Params 0, eflags: 0x0
 // Checksum 0xcc0d3757, Offset: 0x308
 // Size: 0xc4
 function init_clientfields() {
@@ -28,16 +28,16 @@ function init_clientfields() {
     duplicate_render::set_dr_filter_framebuffer_duplicate("armor_pl", 0, "armor_on", undefined, 1, "mc/mtl_power_armor", 0);
 }
 
-// Namespace namespace_df84fe46
-// Params 7, eflags: 0x1 linked
+// Namespace cybercom_misdirection
+// Params 7, eflags: 0x0
 // Checksum 0x22ef6c6c, Offset: 0x3d8
 // Size: 0x54
 function function_ec87e5c5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     misdirectionenable(localclientnum, newval);
 }
 
-// Namespace namespace_df84fe46
-// Params 1, eflags: 0x1 linked
+// Namespace cybercom_misdirection
+// Params 1, eflags: 0x0
 // Checksum 0xd69d6bb, Offset: 0x438
 // Size: 0x144
 function function_2c16a75b(localclientnum) {
@@ -59,8 +59,8 @@ function function_2c16a75b(localclientnum) {
     }
 }
 
-// Namespace namespace_df84fe46
-// Params 7, eflags: 0x1 linked
+// Namespace cybercom_misdirection
+// Params 7, eflags: 0x0
 // Checksum 0xa9084d34, Offset: 0x588
 // Size: 0x38c
 function function_ac2a831d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -100,8 +100,8 @@ function function_ac2a831d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_df84fe46
-// Params 1, eflags: 0x1 linked
+// Namespace cybercom_misdirection
+// Params 1, eflags: 0x0
 // Checksum 0x8585797c, Offset: 0x920
 // Size: 0x3c
 function function_4fbb807c(sndorigin) {

@@ -1,26 +1,26 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
 #using scripts/cp/cp_mi_sing_sgen_sound;
 #using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_dialog;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_hacking;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_sgen_testing_lab_igc;
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x30974d5c, Offset: 0x958
 // Size: 0x3d6
 function function_74581061(str_objective, var_74cd64bc) {
@@ -63,7 +63,7 @@ function function_74581061(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe3e095a0, Offset: 0xd38
 // Size: 0x2f4
 function function_bfad6ceb(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -100,7 +100,7 @@ function function_bfad6ceb(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe032280e, Offset: 0x1038
 // Size: 0x7c
 function function_652f4022() {
@@ -112,7 +112,7 @@ function function_652f4022() {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x69bd6fc5, Offset: 0x10c0
 // Size: 0x142
 function function_b884ec52(a_ents) {
@@ -127,7 +127,7 @@ function function_b884ec52(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x486d902c, Offset: 0x1210
 // Size: 0x34
 function function_7a6f4571(a_ents) {
@@ -136,7 +136,7 @@ function function_7a6f4571(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2e43e404, Offset: 0x1250
 // Size: 0xf4
 function function_841ed050(a_ents) {
@@ -151,7 +151,7 @@ function function_841ed050(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x17b99d4f, Offset: 0x1350
 // Size: 0x24
 function function_5841c784(a_ents) {
@@ -159,7 +159,7 @@ function function_5841c784(a_ents) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3e0131d, Offset: 0x1380
 // Size: 0x124
 function function_d9cab9d3() {
@@ -174,7 +174,7 @@ function function_d9cab9d3() {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf323a5f4, Offset: 0x14b0
 // Size: 0x9c
 function function_474ab5c2(e_player) {
@@ -188,7 +188,7 @@ function function_474ab5c2(e_player) {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac887b3e, Offset: 0x1558
 // Size: 0x7c
 function function_e763362b() {
@@ -199,7 +199,7 @@ function function_e763362b() {
 }
 
 // Namespace cp_mi_sing_sgen_testing_lab_igc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69221cdf, Offset: 0x15e0
 // Size: 0x34
 function do_nag() {

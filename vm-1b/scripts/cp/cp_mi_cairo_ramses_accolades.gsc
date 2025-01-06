@@ -1,7 +1,7 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_38256252;
 

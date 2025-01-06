@@ -1,28 +1,28 @@
-#using scripts/cp/gametypes/_globallogic_score;
-#using scripts/shared/ai/zombie_vortex;
-#using scripts/shared/ai/systems/gib;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_enemy;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_tesla_pickup;
-#using scripts/cp/doa/_doa_vehicle_pickup;
-#using scripts/cp/doa/_doa_turret_pickup;
-#using scripts/cp/doa/_doa_shield_pickup;
-#using scripts/cp/doa/_doa_pickup_area_affect;
-#using scripts/cp/doa/_doa_chicken_pickup;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_player_utility;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_utility;
-#using scripts/shared/array_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_chicken_pickup;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_pickup_area_affect;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_shield_pickup;
+#using scripts/cp/doa/_doa_tesla_pickup;
+#using scripts/cp/doa/_doa_turret_pickup;
+#using scripts/cp/doa/_doa_utility;
+#using scripts/cp/doa/_doa_vehicle_pickup;
+#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_vortex;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_a7e6beb5;
 
@@ -83,7 +83,7 @@ function init() {
     level.doa.var_24fe9829 = "c_54i_robot_3";
     level.doa.var_9bf7e61b = "p7_doa_powerup_skull";
     level.doa.firstperson = "p7_bonuscard_perk_3_greed";
-    level.doa.coat_of_arms = "p7_zm_ctl_dg_coat_horn";
+    level.doa.var_46e741fa = "p7_zm_ctl_dg_coat_horn";
     function_58268dbd("zombietron_silver_coin", &function_9fc58738, 0, 25, 1.25, 0);
     function_58268dbd("zombietron_silver_coin", &function_9fc58738, 0, 25, 1.25, 0);
     function_58268dbd("zombietron_silver_coin", &function_9fc58738, 0, 25, 1.25, 0);
@@ -142,7 +142,7 @@ function init() {
     function_db1442f2(level.doa.var_4aa90d77, &itemspawn, 0, 21, 1, 100, 22);
     function_db1442f2(level.doa.var_ed2fb7a7, &itemspawn, 0, 22, 0.5, 100, 29);
     function_db1442f2(level.doa.var_afa6d081, &itemspawn, 0, 23, 1, 100, 26);
-    function_db1442f2(level.doa.coat_of_arms, &itemspawn, 0, 24, 3, 25, 37, undefined, (0, 0, 75));
+    function_db1442f2(level.doa.var_46e741fa, &itemspawn, 0, 24, 3, 25, 37, undefined, (0, 0, 75));
     function_db1442f2(level.doa.var_e1df04b, &itemspawn, 0, 25, 0.7, 25, 24);
     function_db1442f2(level.doa.var_24fe9829, &itemspawn, 0, 26, 1, 50, 31, undefined, (20, 0, 0), undefined, &function_d0397bc7);
     function_db1442f2(level.doa.var_3b704a85, &itemspawn, 0, 30, 1, 25, 9);
@@ -329,20 +329,20 @@ function function_9fc58738(var_742d8fb5, origin, launch, ondeath, var_b0d7c311, 
             var_c717e67d = var_ea9ba02e;
             scale = 1;
             roll = randomint(100);
-            var_75a4790f = 0;
+            inc = 0;
             if (roll > 80) {
-                var_75a4790f += var_ea9ba02e;
+                inc += var_ea9ba02e;
             }
             if (roll > 90) {
-                var_75a4790f += var_ea9ba02e;
+                inc += var_ea9ba02e;
             }
             if (roll > 95) {
-                var_75a4790f += var_ea9ba02e;
+                inc += var_ea9ba02e;
             }
             if (roll > 98) {
-                var_75a4790f += var_ea9ba02e;
+                inc += var_ea9ba02e;
             }
-            var_c717e67d += randomfloat(var_75a4790f);
+            var_c717e67d += randomfloat(inc);
             scale += var_c717e67d / var_ea9ba02e;
         }
         pickup thread pickupscale(scale);
@@ -1239,7 +1239,7 @@ function function_967df2b6(pickupdef) {
         }
     }
     if (pickupdef.type == 3) {
-        return doa_turret::canspawnturret();
+        return namespace_aa4730ec::canspawnturret();
     }
     return 1;
 }
@@ -1254,7 +1254,7 @@ function function_d526f0bb() {
     self endon(#"death");
     wait 0.4;
     while (true) {
-        player = self.trigger waittill(#"trigger");
+        self.trigger waittill(#"trigger", player);
         if (isdefined(self.player) && self.player != player) {
             continue;
         }
@@ -1369,7 +1369,7 @@ function function_d526f0bb() {
                 player namespace_5e6c5d1f::function_d35a405a();
                 break;
             case 11:
-                level thread namespace_4f1562f7::monkeyUpdate(player, self.origin);
+                level thread namespace_4f1562f7::function_159bb1dd(player, self.origin);
                 break;
             case 29:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_vortex");
@@ -1389,19 +1389,19 @@ function function_d526f0bb() {
                 break;
             case 3:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                level thread doa_turret::function_eabe8c0(player);
+                level thread namespace_aa4730ec::function_eabe8c0(player);
                 break;
             case 18:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                level thread doa_turret::function_eabe8c0(player, 1);
+                level thread namespace_aa4730ec::function_eabe8c0(player, 1);
                 break;
             case 6:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                player thread namespace_3f3eaecb::tesla_blockers_update();
+                player thread namespace_3f3eaecb::function_ca5c4134();
                 break;
             case 21:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                player thread namespace_6df66aa5::magnet_update();
+                player thread namespace_6df66aa5::function_2016b381();
                 break;
             case 28:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
@@ -1413,11 +1413,11 @@ function function_d526f0bb() {
                 break;
             case 20:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                level thread doa_turret::function_3ce8bf1c(player, self.origin);
+                level thread namespace_aa4730ec::function_3ce8bf1c(player, self.origin);
                 break;
             case 22:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                level thread doa_turret::amwsPickupUpdate(player, self.origin + (0, 0, 20));
+                level thread namespace_aa4730ec::function_62c5a5a(player, self.origin + (0, 0, 20));
                 break;
             case 14:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
@@ -1445,7 +1445,7 @@ function function_d526f0bb() {
                 break;
             case 34:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                player thread namespace_6df66aa5::boxingPickupUpdate();
+                player thread namespace_6df66aa5::function_f20d1dcf();
                 break;
             case 30:
             case 31:
@@ -1468,7 +1468,7 @@ function function_d526f0bb() {
                 break;
             case 37:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                level thread namespace_4f1562f7::teamShifterUpdate(player, self.origin);
+                level thread namespace_4f1562f7::function_ca06d008(player, self.origin);
                 break;
             default:
                 assert(0);

@@ -1,12 +1,12 @@
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace grapple;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace grapple
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8107be, Offset: 0x290
 // Size: 0x24
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace grapple
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2fafd7a3, Offset: 0x2c0
 // Size: 0xd2
 function __main__() {
@@ -39,7 +39,7 @@ function __main__() {
 }
 
 // Namespace grapple
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9cfddfe, Offset: 0x3a0
 // Size: 0x8a
 function function_c83c076b(var_893b36f7, var_c508a51e) {
@@ -47,13 +47,13 @@ function function_c83c076b(var_893b36f7, var_c508a51e) {
     self endon(#"death");
     self endon(#"spawned_player");
     while (isdefined(self)) {
-        param1, param2, param3 = self waittill(var_893b36f7);
+        self waittill(var_893b36f7, param1, param2, param3);
         self notify(var_c508a51e, var_893b36f7, param1, param2, param3);
     }
 }
 
 // Namespace grapple
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb9edc697, Offset: 0x438
 // Size: 0xfa
 function function_80c05bda() {
@@ -64,7 +64,7 @@ function function_80c05bda() {
     self thread function_c83c076b("weapon_switch_started", "grapple_weapon_change");
     self thread function_c83c076b("weapon_change_complete", "grapple_weapon_change");
     while (true) {
-        event, weapon = self waittill(#"grapple_weapon_change");
+        self waittill(#"grapple_weapon_change", event, weapon);
         if (isdefined(weapon.grappleweapon) && weapon.grappleweapon) {
             self thread watch_lockon(weapon);
             continue;
@@ -74,7 +74,7 @@ function function_80c05bda() {
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6fb44ead, Offset: 0x540
 // Size: 0x13c
 function watch_lockon(weapon) {
@@ -101,7 +101,7 @@ function watch_lockon(weapon) {
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc1854e2f, Offset: 0x688
 // Size: 0xa4
 function function_525a420a(weapon) {
@@ -121,7 +121,7 @@ function function_525a420a(weapon) {
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x614c00df, Offset: 0x738
 // Size: 0x130
 function function_4f0d1ede(weapon) {
@@ -151,7 +151,7 @@ function function_4f0d1ede(weapon) {
 }
 
 // Namespace grapple
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc3f53ac0, Offset: 0x870
 // Size: 0x186
 function function_b0a2c4bd(origin, forward, weapon) {
@@ -176,7 +176,7 @@ function function_b0a2c4bd(origin, forward, weapon) {
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb795839b, Offset: 0xa00
 // Size: 0x3cc
 function function_43c5e4e9(weapon) {
@@ -190,18 +190,18 @@ function function_43c5e4e9(weapon) {
         return undefined;
     }
     validtargets = [];
-    var_827c64dc = 0;
+    should_wait = 0;
     var_e5e6ca10 = 2;
     if (isdefined(self.var_e3c5dfe4) && self.var_e3c5dfe4) {
         var_e5e6ca10 = 4;
         self.var_e3c5dfe4 = 0;
     }
     for (i = 0; i < targets.size; i++) {
-        if (var_827c64dc >= var_e5e6ca10) {
+        if (should_wait >= var_e5e6ca10) {
             wait 0.05;
             origin = self getweaponmuzzlepoint();
             forward = self getweaponforwarddir();
-            var_827c64dc = 0;
+            should_wait = 0;
         }
         testtarget = targets[i];
         if (!is_valid_target(testtarget)) {
@@ -221,7 +221,7 @@ function function_43c5e4e9(weapon) {
             continue;
         }
         cansee = self can_see(testtarget, testorigin, origin, forward, 30);
-        var_827c64dc++;
+        should_wait++;
         if (cansee) {
             validtargets[validtargets.size] = testtarget;
         }
@@ -236,7 +236,7 @@ function function_43c5e4e9(weapon) {
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8caa6854, Offset: 0xdd8
 // Size: 0xaa
 function function_3fb56153(target) {
@@ -262,7 +262,7 @@ function function_3fb56153(target) {
 }
 
 // Namespace grapple
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xd1c3b9c, Offset: 0xe90
 // Size: 0x19a
 function function_461aeeba(target, origin, forward, var_f2af12bd, max_range) {
@@ -285,7 +285,7 @@ function function_461aeeba(target, origin, forward, var_f2af12bd, max_range) {
 }
 
 // Namespace grapple
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x86dbdecb, Offset: 0x1038
 // Size: 0x140
 function function_c0064c09(targets, origin, forward, var_f2af12bd, max_range) {
@@ -313,7 +313,7 @@ function function_c0064c09(targets, origin, forward, var_f2af12bd, max_range) {
 }
 
 // Namespace grapple
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1aebf85a, Offset: 0x1180
 // Size: 0x5c
 function trace(from, to, target) {
@@ -322,7 +322,7 @@ function trace(from, to, target) {
 }
 
 // Namespace grapple
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x2fe8a7c0, Offset: 0x11e8
 // Size: 0x178
 function can_see(target, target_origin, player_origin, player_forward, distance) {
@@ -347,7 +347,7 @@ function can_see(target, target_origin, player_origin, player_forward, distance)
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x63620f01, Offset: 0x1368
 // Size: 0x74
 function is_valid_target(ent) {
@@ -360,7 +360,7 @@ function is_valid_target(ent) {
 }
 
 // Namespace grapple
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x15deab00, Offset: 0x13e8
 // Size: 0xf8
 function function_2aaab717(testorigin, weapon, newtarget) {
@@ -395,7 +395,7 @@ function function_2718edba(targetorigin) {
 }
 
 // Namespace grapple
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3759731a, Offset: 0x1598
 // Size: 0x3a
 function function_9814bbcd(targetorigin, radius) {
@@ -403,7 +403,7 @@ function function_9814bbcd(targetorigin, radius) {
 }
 
 // Namespace grapple
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x36ef5584, Offset: 0x15e0
 // Size: 0x22
 function function_9a6421f8(target) {

@@ -1,27 +1,27 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_power;
+#using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_magicbox;
 #using scripts/zm/_zm_pack_a_punch_util;
 #using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_power;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_pack_a_punch;
 
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x994dddf, Offset: 0x760
 // Size: 0x44
 function __init__() {
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8dc97a36, Offset: 0x7b0
 // Size: 0x10c
 function __main__() {
@@ -63,7 +63,7 @@ function __main__() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x90676372, Offset: 0x8c8
 // Size: 0x484
 function private spawn_init() {
@@ -115,7 +115,7 @@ function private spawn_init() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x2df1e363, Offset: 0xd58
 // Size: 0xe8
 function private function_25b72b5f() {
@@ -133,7 +133,7 @@ function private function_25b72b5f() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xfd722404, Offset: 0xe48
 // Size: 0x24
 function private function_28497573() {
@@ -142,7 +142,7 @@ function private function_28497573() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x2fca6d05, Offset: 0xe78
 // Size: 0x4bc
 function private third_person_weapon_upgrade(current_weapon, upgrade_weapon, packa_rollers, pap_machine, trigger) {
@@ -194,7 +194,7 @@ function private third_person_weapon_upgrade(current_weapon, upgrade_weapon, pac
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe5e9c4e1, Offset: 0x1340
 // Size: 0xe6
 function private can_pack_weapon(weapon) {
@@ -220,7 +220,7 @@ function private can_pack_weapon(weapon) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x572511ff, Offset: 0x1430
 // Size: 0x100
 function private player_use_can_pack_now() {
@@ -241,7 +241,7 @@ function private player_use_can_pack_now() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x48227dce, Offset: 0x1538
 // Size: 0x144
 function private function_88d56c01() {
@@ -263,7 +263,7 @@ function private function_88d56c01() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x31e2906d, Offset: 0x1688
 // Size: 0xb88
 function private function_c101a20e() {
@@ -294,7 +294,7 @@ function private function_c101a20e() {
     self thread function_45b5c3f2();
     for (;;) {
         self.pack_player = undefined;
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (isdefined(pap_machine.state) && pap_machine.state == "leaving") {
             continue;
         }
@@ -405,7 +405,7 @@ function private function_c101a20e() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xcbc2b9b9, Offset: 0x2218
 // Size: 0xb0
 function private shutoffpapsounds(ent1, ent2, ent3) {
@@ -419,7 +419,7 @@ function private shutoffpapsounds(ent1, ent2, ent3) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x8657725f, Offset: 0x22d0
 // Size: 0x34
 function private turnonpapsounds(ent) {
@@ -428,7 +428,7 @@ function private turnonpapsounds(ent) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x1b0b260d, Offset: 0x2310
 // Size: 0x64
 function private function_45b5c3f2() {
@@ -444,7 +444,7 @@ function private function_45b5c3f2() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xdff64bf0, Offset: 0x2380
 // Size: 0x64c
 function private wait_for_player_to_take(player, weapon, packa_timer, b_weapon_supports_aat, var_ca548511) {
@@ -456,7 +456,7 @@ function private wait_for_player_to_take(player, weapon, packa_timer, b_weapon_s
     level endon(#"pack_a_punch_off");
     while (isdefined(player)) {
         packa_timer playloopsound("zmb_perks_packa_ticktock");
-        trigger_player = self waittill(#"trigger");
+        self waittill(#"trigger", trigger_player);
         if (level.pack_a_punch.grabbable_by_anyone) {
             player = trigger_player;
         }
@@ -527,7 +527,7 @@ function private wait_for_player_to_take(player, weapon, packa_timer, b_weapon_s
 }
 
 // Namespace _zm_pack_a_punch
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x36eaffd3, Offset: 0x29d8
 // Size: 0x204
 function private wait_for_timeout(weapon, packa_timer, player, var_ca548511) {
@@ -561,7 +561,7 @@ function private wait_for_timeout(weapon, packa_timer, player, var_ca548511) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6c21b74e, Offset: 0x2be8
 // Size: 0x62
 function private wait_for_disconnect(player) {
@@ -575,7 +575,7 @@ function private wait_for_disconnect(player) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xefa9743c, Offset: 0x2c58
 // Size: 0xa4
 function private destroy_weapon_in_blackout(player) {
@@ -590,7 +590,7 @@ function private destroy_weapon_in_blackout(player) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x2e8ec0da, Offset: 0x2d08
 // Size: 0x74
 function private function_4edd595f() {
@@ -601,7 +601,7 @@ function private function_4edd595f() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x783b0945, Offset: 0x2d88
 // Size: 0x13c
 function private function_bfc21a18() {
@@ -611,7 +611,7 @@ function private function_bfc21a18() {
     original_weapon = self getcurrentweapon();
     weapon = getweapon("zombie_knuckle_crack");
     if (original_weapon != level.weaponnone && !zm_utility::is_placeable_mine(original_weapon) && !zm_equipment::is_equipment(original_weapon)) {
-        self notify(#"hash_987c489b");
+        self notify(#"zmb_lost_knife");
         self takeweapon(original_weapon);
     } else {
         return;
@@ -621,7 +621,7 @@ function private function_bfc21a18() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x22bd43a8, Offset: 0x2ed0
 // Size: 0x104
 function private function_5f10c30c() {
@@ -641,7 +641,7 @@ function private function_5f10c30c() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xf4f4e538, Offset: 0x2fe0
 // Size: 0xf2
 function private function_d948efbd(delta, origin, radius) {
@@ -660,7 +660,7 @@ function private function_d948efbd(delta, origin, radius) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x221abc61, Offset: 0x30e0
 // Size: 0x42
 function private turn_on(origin, radius) {
@@ -669,7 +669,7 @@ function private turn_on(origin, radius) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x21cebb9d, Offset: 0x3130
 // Size: 0x6c
 function private turn_off(origin, radius) {
@@ -680,7 +680,7 @@ function private turn_off(origin, radius) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xb9b8c0ff, Offset: 0x31a8
 // Size: 0x22
 function private is_on() {
@@ -691,7 +691,7 @@ function private is_on() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x95727f74, Offset: 0x31d8
 // Size: 0x22
 function private get_start_state() {
@@ -702,7 +702,7 @@ function private get_start_state() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xac719ad8, Offset: 0x3208
 // Size: 0x6e
 function private cost_func() {
@@ -721,7 +721,7 @@ function private cost_func() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4a89c120, Offset: 0x3280
 // Size: 0xa4
 function private toggle_think(powered_on) {
@@ -738,7 +738,7 @@ function private toggle_think(powered_on) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xb6fb840b, Offset: 0x3330
 // Size: 0x3c
 function private pap_initial() {
@@ -747,7 +747,7 @@ function private pap_initial() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x5671f2ce, Offset: 0x3378
 // Size: 0x24
 function private pap_power_off() {
@@ -755,7 +755,7 @@ function private pap_power_off() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x922584aa, Offset: 0x33a8
 // Size: 0x9c
 function private pap_power_on() {
@@ -769,7 +769,7 @@ function private pap_power_on() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x309c4005, Offset: 0x3450
 // Size: 0xf0
 function private pap_powered() {
@@ -787,7 +787,7 @@ function private pap_powered() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x7aab39d1, Offset: 0x3548
 // Size: 0xb4
 function private pap_take_gun() {
@@ -801,7 +801,7 @@ function private pap_take_gun() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x1c6ca453, Offset: 0x3608
 // Size: 0x64
 function private pap_eject_gun() {
@@ -811,7 +811,7 @@ function private pap_eject_gun() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xbc096c7b, Offset: 0x3678
 // Size: 0x82
 function private pap_leaving() {
@@ -824,7 +824,7 @@ function private pap_leaving() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xab54eab1, Offset: 0x3708
 // Size: 0x9c
 function private pap_arriving() {
@@ -846,7 +846,7 @@ function private get_pap_zbarrier_state() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe8b5831b, Offset: 0x37c8
 // Size: 0x80
 function private set_pap_zbarrier_state(state) {
@@ -858,7 +858,7 @@ function private set_pap_zbarrier_state(state) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x91bcefc5, Offset: 0x3850
 // Size: 0x326
 function private process_pap_zbarrier_state(state) {
@@ -919,7 +919,7 @@ function private process_pap_zbarrier_state(state) {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x40cb1afe, Offset: 0x3b80
 // Size: 0x24
 function set_state_initial() {
@@ -927,7 +927,7 @@ function set_state_initial() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xadcbddb1, Offset: 0x3bb0
 // Size: 0x24
 function set_state_leaving() {
@@ -935,7 +935,7 @@ function set_state_leaving() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x788533d, Offset: 0x3be0
 // Size: 0x24
 function set_state_arriving() {
@@ -943,7 +943,7 @@ function set_state_arriving() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf57fea00, Offset: 0x3c10
 // Size: 0x24
 function set_state_power_on() {
@@ -951,7 +951,7 @@ function set_state_power_on() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3c7e32d, Offset: 0x3c40
 // Size: 0x24
 function set_state_hidden() {

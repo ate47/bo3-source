@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_utility;
 
@@ -29,7 +29,7 @@ function is_encounter() {
 }
 
 // Namespace zm_utility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb233f14b, Offset: 0x188
 // Size: 0x4c
 function round_up_to_ten(score) {
@@ -41,7 +41,7 @@ function round_up_to_ten(score) {
 }
 
 // Namespace zm_utility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2eea486c, Offset: 0x1e0
 // Size: 0x70
 function round_up_score(score, value) {
@@ -54,7 +54,7 @@ function round_up_score(score, value) {
 }
 
 // Namespace zm_utility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdd0d5faf, Offset: 0x258
 // Size: 0x3c
 function halve_score(n_score) {
@@ -84,7 +84,7 @@ function spawn_weapon_model(localclientnum, weapon, model, origin, angles, optio
 }
 
 // Namespace zm_utility
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x8b1bdca1, Offset: 0x398
 // Size: 0xb0
 function spawn_buildkit_weapon_model(localclientnum, weapon, camo, origin, angles) {
@@ -122,7 +122,7 @@ function is_gametype_active(a_gametypes) {
 }
 
 // Namespace zm_utility
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x363e5e7b, Offset: 0x520
 // Size: 0xa4
 function setinventoryuimodels(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -133,7 +133,7 @@ function setinventoryuimodels(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_utility
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3437d677, Offset: 0x5d0
 // Size: 0x84
 function setsharedinventoryuimodels(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -141,7 +141,7 @@ function setsharedinventoryuimodels(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm_utility
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa49f2bb2, Offset: 0x660
 // Size: 0xdc
 function zm_ui_infotext(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,7 +155,7 @@ function zm_ui_infotext(localclientnum, oldval, newval, bnewent, binitialsnap, f
 /#
 
     // Namespace zm_utility
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x195d843, Offset: 0x748
     // Size: 0x2b6
     function drawcylinder(pos, rad, height, color) {
@@ -174,7 +174,7 @@ function zm_ui_infotext(localclientnum, oldval, newval, bnewent, binitialsnap, f
 #/
 
 // Namespace zm_utility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf9f9b53, Offset: 0xa08
 // Size: 0xb0
 function umbra_fix_logic(localclientnum) {

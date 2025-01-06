@@ -1,32 +1,32 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_power;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_bb;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_bb;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_power;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_perks;
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6bd042e2, Offset: 0x700
 // Size: 0x32c
 function init() {
@@ -72,7 +72,7 @@ function init() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfb96891, Offset: 0xa38
 // Size: 0x3c0
 function perk_machine_think(str_key, s_custom_perk) {
@@ -112,7 +112,7 @@ function perk_machine_think(str_key, s_custom_perk) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8ee7ab53, Offset: 0xe00
 // Size: 0xae
 function default_vending_precaching() {
@@ -127,7 +127,7 @@ function default_vending_precaching() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe9d40f1c, Offset: 0xeb8
 // Size: 0x9c
 function do_initial_power_off_callback(machine_array, perkname) {
@@ -143,7 +143,7 @@ function do_initial_power_off_callback(machine_array, perkname) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa672aef8, Offset: 0xf60
 // Size: 0x90
 function function_23ee6fc() {
@@ -160,7 +160,7 @@ function function_23ee6fc() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6c27850f, Offset: 0xff8
 // Size: 0x18
 function set_power_on(state) {
@@ -168,7 +168,7 @@ function set_power_on(state) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf969ad45, Offset: 0x1018
 // Size: 0x114
 function turn_perk_off(ishidden) {
@@ -189,7 +189,7 @@ function turn_perk_off(ishidden) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x512b5493, Offset: 0x1138
 // Size: 0xac
 function play_loop_on_machine() {
@@ -205,7 +205,7 @@ function play_loop_on_machine() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xed7826d3, Offset: 0x11f0
 // Size: 0x168
 function perk_fx(fx, turnofffx) {
@@ -235,7 +235,7 @@ function perk_fx(fx, turnofffx) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc97aba4d, Offset: 0x1360
 // Size: 0x1fa
 function electric_perks_dialog() {
@@ -281,12 +281,12 @@ function electric_perks_dialog() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb4d379b8, Offset: 0x1568
 // Size: 0x13c
 function reset_vending_hint_string() {
     perk = self.script_noteworthy;
-    var_b93a49d8 = function_23ee6fc();
+    SOLO = function_23ee6fc();
     if (isdefined(level._custom_perks)) {
         if (isdefined(level._custom_perks[perk]) && isdefined(level._custom_perks[perk].cost) && isdefined(level._custom_perks[perk].hint_string)) {
             if (isfunctionptr(level._custom_perks[perk].cost)) {
@@ -300,7 +300,7 @@ function reset_vending_hint_string() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf3bcd714, Offset: 0x16b0
 // Size: 0xe6
 function vending_trigger_can_player_use(player) {
@@ -326,22 +326,22 @@ function vending_trigger_can_player_use(player) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16185baa, Offset: 0x17a0
 // Size: 0x800
 function vending_trigger_think() {
     self endon(#"death");
     wait 0.01;
     perk = self.script_noteworthy;
-    var_b93a49d8 = 0;
+    SOLO = 0;
     start_on = 0;
     level.revive_machine_is_solo = 0;
     if (isdefined(perk) && perk == "specialty_quickrevive") {
         level flag::wait_till("start_zombie_round_logic");
-        var_b93a49d8 = function_23ee6fc();
+        SOLO = function_23ee6fc();
         self endon(#"stop_quickrevive_logic");
         level.quick_revive_trigger = self;
-        if (var_b93a49d8) {
+        if (SOLO) {
             if (!(isdefined(level.revive_machine_is_solo) && level.revive_machine_is_solo)) {
                 if (!(isdefined(level.var_44ebf6d) && level.var_44ebf6d)) {
                     start_on = 1;
@@ -388,7 +388,7 @@ function vending_trigger_think() {
         self sethintstring(level._custom_perks[perk].hint_string, cost);
     }
     for (;;) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         index = zm_utility::get_player_index(player);
         if (!vending_trigger_can_player_use(player)) {
             wait 0.1;
@@ -444,7 +444,7 @@ function vending_trigger_think() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf077f3ea, Offset: 0x1fa8
 // Size: 0x214
 function vending_trigger_post_think(player, perk) {
@@ -478,7 +478,7 @@ function vending_trigger_post_think(player, perk) {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaa3bc49c, Offset: 0x21c8
 // Size: 0xa4
 function wait_give_perk(perk, bought) {
@@ -491,7 +491,7 @@ function wait_give_perk(perk, bought) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9bd0e26d, Offset: 0x2278
 // Size: 0xe2
 function function_36b1754c() {
@@ -506,7 +506,7 @@ function function_36b1754c() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xea4822dd, Offset: 0x2368
 // Size: 0x10c
 function give_perk_presentation(perk) {
@@ -526,7 +526,7 @@ function give_perk_presentation(perk) {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd8309a64, Offset: 0x2480
 // Size: 0x27c
 function give_perk(perk, bought) {
@@ -564,7 +564,7 @@ function give_perk(perk, bought) {
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd502595e, Offset: 0x2708
 // Size: 0x218
 function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
@@ -611,7 +611,7 @@ function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb0904e5b, Offset: 0x2928
 // Size: 0x204
 function check_player_has_perk(perk) {
@@ -649,7 +649,7 @@ function vending_set_hintstring(perk) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46125510, Offset: 0x2b70
 // Size: 0x2b2
 function perk_think(perk) {
@@ -692,7 +692,7 @@ function perk_think(perk) {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x18a9d516, Offset: 0x2e30
 // Size: 0x68
 function set_perk_clientfield(perk, state) {
@@ -723,7 +723,7 @@ function function_99589d97(perk, var_23d1e7f6) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa648d1f8, Offset: 0x2f48
 // Size: 0xf8
 function perk_give_bottle_begin(perk) {
@@ -740,7 +740,7 @@ function perk_give_bottle_begin(perk) {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x429504d4, Offset: 0x3048
 // Size: 0x274
 function function_938ed54c(original_weapon, perk) {
@@ -791,7 +791,7 @@ function perk_abort_drinking(post_delay) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x997b241e, Offset: 0x3330
 // Size: 0x170
 function function_57435073() {
@@ -845,7 +845,7 @@ function lose_random_perk() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95380bc6, Offset: 0x3618
 // Size: 0x8e
 function function_3da729b7() {
@@ -858,7 +858,7 @@ function function_3da729b7() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc8b4db0c, Offset: 0x36b0
 // Size: 0xae
 function quantum_bomb_give_nearest_perk_validation(position) {
@@ -873,7 +873,7 @@ function quantum_bomb_give_nearest_perk_validation(position) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd9a0c586, Offset: 0x3768
 // Size: 0x25a
 function quantum_bomb_give_nearest_perk_result(position) {
@@ -903,7 +903,7 @@ function quantum_bomb_give_nearest_perk_result(position) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3748456f, Offset: 0x39d0
 // Size: 0x1ee
 function perk_pause(perk) {
@@ -928,7 +928,7 @@ function perk_pause(perk) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8a42eecd, Offset: 0x3bc8
 // Size: 0x1da
 function perk_unpause(perk) {
@@ -954,7 +954,7 @@ function perk_unpause(perk) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x90a7c8c2, Offset: 0x3db0
 // Size: 0x122
 function perk_pause_all_perks(power_zone) {
@@ -971,7 +971,7 @@ function perk_pause_all_perks(power_zone) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x630b2e27, Offset: 0x3ee0
 // Size: 0x122
 function perk_unpause_all_perks(power_zone) {
@@ -988,7 +988,7 @@ function perk_unpause_all_perks(power_zone) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x50c1337e, Offset: 0x4010
 // Size: 0x44
 function has_perk_paused(perk) {
@@ -999,7 +999,7 @@ function has_perk_paused(perk) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xddb2db67, Offset: 0x4060
 // Size: 0x84
 function getvendingmachinenotify() {
@@ -1014,7 +1014,7 @@ function getvendingmachinenotify() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbd07b4d5, Offset: 0x40f0
 // Size: 0x294
 function perk_machine_removal(machine, replacement_model) {
@@ -1058,7 +1058,7 @@ function perk_machine_removal(machine, replacement_model) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba8c7c82, Offset: 0x4390
 // Size: 0x99e
 function perk_machine_spawn_init() {
@@ -1179,7 +1179,7 @@ function perk_machine_spawn_init() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2066c483, Offset: 0x4d38
 // Size: 0x66
 function get_perk_machine_start_state(perk) {
@@ -1194,7 +1194,7 @@ function get_perk_machine_start_state(perk) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcdf9575, Offset: 0x4da8
 // Size: 0xf6
 function perks_register_clientfield() {
@@ -1217,7 +1217,7 @@ function perks_register_clientfield() {
 // Size: 0x80
 function thread_bump_trigger() {
     for (;;) {
-        trigplayer = self waittill(#"trigger");
+        self waittill(#"trigger", trigplayer);
         trigplayer playsound(self.script_sound);
         while (zm_utility::is_player_valid(trigplayer) && trigplayer istouching(self)) {
             wait 0.5;
@@ -1226,7 +1226,7 @@ function thread_bump_trigger() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa75ea30e, Offset: 0x4f30
 // Size: 0x162
 function players_are_in_perk_area(perk_machine) {
@@ -1249,7 +1249,7 @@ function players_are_in_perk_area(perk_machine) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87b82ee5, Offset: 0x50a0
 // Size: 0x14e
 function perk_hostmigration() {
@@ -1270,7 +1270,7 @@ function perk_hostmigration() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3c7d354e, Offset: 0x51f8
 // Size: 0x132
 function host_migration_func(s_custom_perk, keyname) {
@@ -1284,7 +1284,7 @@ function host_migration_func(s_custom_perk, keyname) {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x869ca063, Offset: 0x5338
 // Size: 0x10a
 function spare_change(str_trigger, str_sound) {
@@ -1303,13 +1303,13 @@ function spare_change(str_trigger, str_sound) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x30eb634e, Offset: 0x5450
 // Size: 0xa4
 function check_for_change() {
     self endon(#"death");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player getstance() == "prone") {
             player zm_score::add_to_player_score(100);
             zm_utility::play_sound_at_pos("purchase", player.origin);
@@ -1320,7 +1320,7 @@ function check_for_change() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd119d379, Offset: 0x5500
 // Size: 0xac
 function get_perk_array() {
@@ -1337,7 +1337,7 @@ function get_perk_array() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x537dde75, Offset: 0x55b8
 // Size: 0x1c
 function function_aa9d5b3f() {
@@ -1358,7 +1358,7 @@ function register_revive_success_perk_func(revive_func) {
 }
 
 // Namespace zm_perks
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xd1bbc6ea, Offset: 0x5628
 // Size: 0x1a8
 function register_perk_basic_info(str_perk, str_alias, n_perk_cost, str_hint_string, w_perk_bottle_weapon) {
@@ -1376,7 +1376,7 @@ function register_perk_basic_info(str_perk, str_alias, n_perk_cost, str_hint_str
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6fdda2e5, Offset: 0x57d8
 // Size: 0x100
 function register_perk_machine(str_perk, func_perk_machine_setup, func_perk_machine_thread) {
@@ -1392,7 +1392,7 @@ function register_perk_machine(str_perk, func_perk_machine_setup, func_perk_mach
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4c26a367, Offset: 0x58e0
 // Size: 0xc0
 function register_perk_machine_power_override(str_perk, func_perk_machine_power_override) {
@@ -1405,7 +1405,7 @@ function register_perk_machine_power_override(str_perk, func_perk_machine_power_
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9f7294c5, Offset: 0x59a8
 // Size: 0xb4
 function register_perk_precache_func(str_perk, func_precache) {
@@ -1418,7 +1418,7 @@ function register_perk_precache_func(str_perk, func_precache) {
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x81ba92ce, Offset: 0x5a68
 // Size: 0x100
 function register_perk_threads(str_perk, func_give_player_perk, func_take_player_perk) {
@@ -1436,7 +1436,7 @@ function register_perk_threads(str_perk, func_give_player_perk, func_take_player
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa4e28c8b, Offset: 0x5b70
 // Size: 0x11c
 function register_perk_clientfields(str_perk, func_clientfield_register, func_clientfield_set) {
@@ -1453,7 +1453,7 @@ function register_perk_clientfields(str_perk, func_clientfield_register, func_cl
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfe9d97ac, Offset: 0x5c98
 // Size: 0x11c
 function register_perk_host_migration_params(str_perk, str_radiant_name, str_effect_name) {
@@ -1470,7 +1470,7 @@ function register_perk_host_migration_params(str_perk, str_radiant_name, str_eff
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97aaae8, Offset: 0x5dc0
 // Size: 0x5a
 function _register_undefined_perk(str_perk) {
@@ -1483,7 +1483,7 @@ function _register_undefined_perk(str_perk) {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3d65efe7, Offset: 0x5e28
 // Size: 0x6c
 function register_perk_damage_override_func(func_damage_override) {

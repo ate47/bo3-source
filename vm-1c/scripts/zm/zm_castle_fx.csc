@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/exploder_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_castle_fx;
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1f0
 // Size: 0x4
 function function_8d0ec42e() {
@@ -14,7 +14,7 @@ function function_8d0ec42e() {
 }
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x24fec0e7, Offset: 0x200
 // Size: 0x34
 function main() {
@@ -24,7 +24,7 @@ function main() {
 }
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf9cde396, Offset: 0x240
 // Size: 0x8e
 function function_f45953c() {
@@ -36,7 +36,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_castle_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x2d8
 // Size: 0x4
 function function_e6258024() {

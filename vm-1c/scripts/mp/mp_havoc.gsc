@@ -1,11 +1,11 @@
-#using scripts/mp/mp_havoc_sound;
-#using scripts/mp/mp_havoc_fx;
-#using scripts/mp/_util;
+#using scripts/codescripts/struct;
 #using scripts/mp/_load;
-#using scripts/shared/util_shared;
+#using scripts/mp/_util;
+#using scripts/mp/mp_havoc_fx;
+#using scripts/mp/mp_havoc_sound;
 #using scripts/shared/_oob;
 #using scripts/shared/compass;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace mp_havoc;
 

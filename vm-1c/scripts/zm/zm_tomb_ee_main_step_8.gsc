@@ -1,20 +1,20 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_ee_main;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_sidequests;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_ee_main;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_ee_main_step_8;
 
 // Namespace zm_tomb_ee_main_step_8
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3987fab8, Offset: 0x3a0
 // Size: 0x54
 function init() {
@@ -22,7 +22,7 @@ function init() {
 }
 
 // Namespace zm_tomb_ee_main_step_8
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31a9bf4d, Offset: 0x400
 // Size: 0x2c
 function init_stage() {
@@ -31,7 +31,7 @@ function init_stage() {
 }
 
 // Namespace zm_tomb_ee_main_step_8
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5f8cb43, Offset: 0x438
 // Size: 0x44c
 function function_7747c56() {
@@ -74,7 +74,7 @@ function function_7747c56() {
 }
 
 // Namespace zm_tomb_ee_main_step_8
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa50215da, Offset: 0x890
 // Size: 0x1a
 function function_cc3f3f6a(success) {
@@ -82,18 +82,18 @@ function function_cc3f3f6a(success) {
 }
 
 // Namespace zm_tomb_ee_main_step_8
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf24f90e7, Offset: 0x8b8
 // Size: 0x48
 function function_2a230352() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         level flag::set("ee_samantha_released");
     }
 }
 
 // Namespace zm_tomb_ee_main_step_8
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x751e5bf5, Offset: 0x908
 // Size: 0x206
 function function_8d684a30() {

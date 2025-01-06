@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace namespace_46de4034;
 
@@ -21,7 +21,7 @@ function autoexec precache() {
 }
 
 // Namespace namespace_46de4034
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x11ddfcb1, Offset: 0x1a8
 // Size: 0x64
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace namespace_46de4034
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xf0df0394, Offset: 0x218
 // Size: 0x108
 function private function_beea0195(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

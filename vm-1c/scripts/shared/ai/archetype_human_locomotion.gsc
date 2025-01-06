@@ -1,11 +1,11 @@
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/behavior_state_machine;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
 #using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_state_machine;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
 
 #namespace archetype_human_locomotion;
 
@@ -40,7 +40,7 @@ function autoexec registerbehaviorscriptfunctions() {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x221bbfa9, Offset: 0x900
 // Size: 0x20
 function private tacticalwalkscanterminate(entity) {
@@ -49,7 +49,7 @@ function private tacticalwalkscanterminate(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6e9ebed3, Offset: 0x928
 // Size: 0x130
 function private shouldtacticalwalkscan(entity) {
@@ -76,7 +76,7 @@ function private shouldtacticalwalkscan(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x724e8970, Offset: 0xa60
 // Size: 0x150
 function private continuetacticalwalkscan(entity) {
@@ -102,7 +102,7 @@ function private continuetacticalwalkscan(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xae808487, Offset: 0xbb8
 // Size: 0x76
 function private shouldtacticalwalkpain(entity) {
@@ -113,7 +113,7 @@ function private shouldtacticalwalkpain(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x31754bab, Offset: 0xc38
 // Size: 0x20
 function private begintacticalwalkpain(entity) {
@@ -122,7 +122,7 @@ function private begintacticalwalkpain(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd50db974, Offset: 0xc60
 // Size: 0x24
 function private shouldcontinuetacticalwalkpain(entity) {
@@ -130,7 +130,7 @@ function private shouldcontinuetacticalwalkpain(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xef2852b0, Offset: 0xc90
 // Size: 0x2a
 function private bsmlocomotionhasvalidpaininterrupt(entity) {
@@ -138,7 +138,7 @@ function private bsmlocomotionhasvalidpaininterrupt(entity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xdc6ba5ac, Offset: 0xcc8
 // Size: 0xdc
 function private shouldarriveexposed(behaviortreeentity) {
@@ -154,7 +154,7 @@ function private shouldarriveexposed(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x2ab3796a, Offset: 0xdb0
 // Size: 0x38
 function private preparetostopnearenemy(behaviortreeentity) {
@@ -163,7 +163,7 @@ function private preparetostopnearenemy(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4f1f9820, Offset: 0xdf0
 // Size: 0x38
 function private preparetomoveawayfromnearbyenemy(behaviortreeentity) {
@@ -172,7 +172,7 @@ function private preparetomoveawayfromnearbyenemy(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd9d4d520, Offset: 0xe30
 // Size: 0x1b8
 function private shouldplanarrivalintocover(behaviortreeentity) {
@@ -199,7 +199,7 @@ function private shouldplanarrivalintocover(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfe6a6802, Offset: 0xff0
 // Size: 0x146
 function private shouldswitchtotacticalwalkfromrun(behaviortreeentity) {
@@ -228,7 +228,7 @@ function private shouldswitchtotacticalwalkfromrun(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4f255d2f, Offset: 0x1140
 // Size: 0x90
 function private humannoncombatlocomotioncondition(behaviortreeentity) {
@@ -248,7 +248,7 @@ function private humannoncombatlocomotioncondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb2eb04da, Offset: 0x11d8
 // Size: 0x8c
 function private humancombatlocomotioncondition(behaviortreeentity) {
@@ -268,7 +268,7 @@ function private humancombatlocomotioncondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xacda02ef, Offset: 0x1270
 // Size: 0xc8
 function private combatlocomotionstart(behaviortreeentity) {
@@ -286,7 +286,7 @@ function private combatlocomotionstart(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb1b0623c, Offset: 0x1340
 // Size: 0xfe
 function private noncombatlocomotionupdate(behaviortreeentity) {
@@ -308,7 +308,7 @@ function private noncombatlocomotionupdate(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x77c81a0a, Offset: 0x1448
 // Size: 0xdc
 function private combatlocomotionupdate(behaviortreeentity) {
@@ -333,7 +333,7 @@ function private combatlocomotionupdate(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xde44eabb, Offset: 0x1530
 // Size: 0x38
 function private prepareformovement(behaviortreeentity) {
@@ -342,7 +342,7 @@ function private prepareformovement(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x991c0b9c, Offset: 0x1570
 // Size: 0x30
 function private isarrivingfour(arrivalangle) {
@@ -353,7 +353,7 @@ function private isarrivingfour(arrivalangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x562a9b33, Offset: 0x15a8
 // Size: 0x30
 function private isarrivingone(arrivalangle) {
@@ -364,7 +364,7 @@ function private isarrivingone(arrivalangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x77e6a1a3, Offset: 0x15e0
 // Size: 0x30
 function private isarrivingtwo(arrivalangle) {
@@ -375,7 +375,7 @@ function private isarrivingtwo(arrivalangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x11597442, Offset: 0x1618
 // Size: 0x30
 function private isarrivingthree(arrivalangle) {
@@ -386,7 +386,7 @@ function private isarrivingthree(arrivalangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x2da9b06c, Offset: 0x1650
 // Size: 0x30
 function private isarrivingsix(arrivalangle) {
@@ -397,7 +397,7 @@ function private isarrivingsix(arrivalangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xdfa41aea, Offset: 0x1688
 // Size: 0x30
 function private isfacingfour(facingangle) {
@@ -408,7 +408,7 @@ function private isfacingfour(facingangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x364207b9, Offset: 0x16c0
 // Size: 0x30
 function private isfacingeight(facingangle) {
@@ -419,7 +419,7 @@ function private isfacingeight(facingangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd3a84200, Offset: 0x16f8
 // Size: 0x2e
 function private isfacingseven(facingangle) {
@@ -430,7 +430,7 @@ function private isfacingseven(facingangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7e65c9cb, Offset: 0x1730
 // Size: 0x30
 function private isfacingsix(facingangle) {
@@ -441,7 +441,7 @@ function private isfacingsix(facingangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x8fc3cfeb, Offset: 0x1768
 // Size: 0x2e
 function private isfacingnine(facingangle) {
@@ -452,7 +452,7 @@ function private isfacingnine(facingangle) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc6224feb, Offset: 0x17a0
 // Size: 0x400
 function private shouldtacticalarrivecondition(behaviortreeentity) {
@@ -513,7 +513,7 @@ function private shouldtacticalarrivecondition(behaviortreeentity) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa6b2a3b8, Offset: 0x1ba8
 // Size: 0x3c
 function private humanshouldsprint() {
@@ -522,7 +522,7 @@ function private humanshouldsprint() {
 }
 
 // Namespace archetype_human_locomotion
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xb7b2b442, Offset: 0x1bf0
 // Size: 0x57c
 function private planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
@@ -598,7 +598,7 @@ function private planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x686df052, Offset: 0x2178
 // Size: 0x2dc
 function private checkcoverarrivalconditions(coverenterpos, coverpos) {
@@ -626,7 +626,7 @@ function private checkcoverarrivalconditions(coverenterpos, coverpos) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xe2bf33c2, Offset: 0x2460
 // Size: 0x2d6
 function private getarrivalsplittime(arrivalanim, isright) {
@@ -666,7 +666,7 @@ function private getarrivalsplittime(arrivalanim, isright) {
 }
 
 // Namespace archetype_human_locomotion
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x2d89b03d, Offset: 0x2740
 // Size: 0x9c
 function private deltarotate(delta, yaw) {

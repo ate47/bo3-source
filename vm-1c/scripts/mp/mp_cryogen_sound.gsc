@@ -3,8 +3,8 @@
 #namespace mp_cryogen_sound;
 
 // Namespace mp_cryogen_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8f1390a6, Offset: 0x118
+// Params 0, eflags: 0x0
+// Checksum 0x90657c46, Offset: 0x118
 // Size: 0x44
 function main() {
     function_4d3ba930();
@@ -13,8 +13,8 @@ function main() {
 }
 
 // Namespace mp_cryogen_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe58602aa, Offset: 0x168
+// Params 0, eflags: 0x0
+// Checksum 0xb201916, Offset: 0x168
 // Size: 0x140
 function function_4d3ba930() {
     level.var_ec494688 = [];
@@ -28,8 +28,8 @@ function function_4d3ba930() {
 }
 
 // Namespace mp_cryogen_sound
-// Params 2, eflags: 0x1 linked
-// Checksum 0x3838b6db, Offset: 0x2b0
+// Params 2, eflags: 0x0
+// Checksum 0x1793993f, Offset: 0x2b0
 // Size: 0x68
 function function_2df9c9dc(prefix, count) {
     aliases = [];
@@ -40,8 +40,8 @@ function function_2df9c9dc(prefix, count) {
 }
 
 // Namespace mp_cryogen_sound
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb693e6a5, Offset: 0x320
+// Params 0, eflags: 0x0
+// Checksum 0xb9db1e27, Offset: 0x320
 // Size: 0x54
 function function_d4d4c648() {
     level.var_6dc64e30 = function_2df9c9dc("vox_reco_announcement_general_", 30);
@@ -49,8 +49,8 @@ function function_d4d4c648() {
 }
 
 // Namespace mp_cryogen_sound
-// Params 2, eflags: 0x1 linked
-// Checksum 0x5ac3add9, Offset: 0x380
+// Params 2, eflags: 0x0
+// Checksum 0xc77f5752, Offset: 0x380
 // Size: 0x128
 function function_848fb66a(mintime, maxtime) {
     while (level.var_6dc64e30.size > 0) {
@@ -68,8 +68,8 @@ function function_848fb66a(mintime, maxtime) {
 }
 
 // Namespace mp_cryogen_sound
-// Params 1, eflags: 0x1 linked
-// Checksum 0x511042d8, Offset: 0x4b0
+// Params 1, eflags: 0x0
+// Checksum 0x9ee87adf, Offset: 0x4b0
 // Size: 0x68
 function function_5e7ad856(&aliasarray) {
     randomindex = randomint(aliasarray.size);
@@ -79,8 +79,8 @@ function function_5e7ad856(&aliasarray) {
 }
 
 // Namespace mp_cryogen_sound
-// Params 2, eflags: 0x1 linked
-// Checksum 0xf6fc5281, Offset: 0x520
+// Params 2, eflags: 0x0
+// Checksum 0x4a87045, Offset: 0x520
 // Size: 0xa2
 function function_af33668b(alias, stopalias) {
     foreach (intercom in level.var_ec494688) {
@@ -89,8 +89,8 @@ function function_af33668b(alias, stopalias) {
 }
 
 // Namespace mp_cryogen_sound
-// Params 2, eflags: 0x1 linked
-// Checksum 0xe70e134, Offset: 0x5d0
+// Params 2, eflags: 0x0
+// Checksum 0xa67609b2, Offset: 0x5d0
 // Size: 0x7c
 function function_c0a23046(alias, stopalias) {
     if (isdefined(stopalias)) {

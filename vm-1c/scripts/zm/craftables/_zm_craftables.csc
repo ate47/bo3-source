@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_craftables;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55691903, Offset: 0x188
 // Size: 0x34
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace zm_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde710676, Offset: 0x1c8
 // Size: 0x44
 function function_faa00f7e(localclientnum) {
@@ -45,7 +45,7 @@ function init() {
 }
 
 // Namespace zm_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc2bd7839, Offset: 0x240
 // Size: 0x86
 function function_8421d708(var_9967ff1) {
@@ -63,7 +63,7 @@ function function_8421d708(var_9967ff1) {
 }
 
 // Namespace zm_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9420ddf2, Offset: 0x2d0
 // Size: 0x44
 function function_5654f132() {
@@ -74,7 +74,7 @@ function function_5654f132() {
 }
 
 // Namespace zm_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89dcfc27, Offset: 0x320
 // Size: 0x36
 function function_ac4e44a7(var_9967ff1) {
@@ -85,7 +85,7 @@ function function_ac4e44a7(var_9967ff1) {
 }
 
 // Namespace zm_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf214e544, Offset: 0x360
 // Size: 0x6c
 function function_bc39c454(n_count) {

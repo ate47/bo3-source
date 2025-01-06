@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_utility;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_zod_archetype;
 
@@ -16,7 +16,7 @@ function autoexec init() {
 }
 
 // Namespace zm_zod_archetype
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x3bee7064, Offset: 0x178
 // Size: 0x216
 function private function_478e89a7() {
@@ -46,7 +46,7 @@ function private function_478e89a7() {
 }
 
 // Namespace zm_zod_archetype
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xffd17d44, Offset: 0x398
 // Size: 0x22
 function function_66c4cad4() {
@@ -57,7 +57,7 @@ function function_66c4cad4() {
 }
 
 // Namespace zm_zod_archetype
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x895c738a, Offset: 0x3c8
 // Size: 0x84
 function function_979a9287(player) {

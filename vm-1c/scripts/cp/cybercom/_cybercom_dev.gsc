@@ -1,29 +1,29 @@
 #using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/cp/cybercom/_cybercom_tactical_rig;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
 
 #namespace namespace_afd2f70b;
 
 // Namespace namespace_afd2f70b
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc5b65aea, Offset: 0x318
 // Size: 0x1c0
 function function_a0e51d80(point, timesec, size, color) {
     end = gettime() + timesec * 1000;
     halfwidth = int(size / 2);
     var_a84bd888 = point + (halfwidth * -1, 0, 0);
-    var_1a5347c3 = point + (halfwidth, 0, 0);
+    l2 = point + (halfwidth, 0, 0);
     var_5e2b69e1 = point + (0, halfwidth * -1, 0);
     var_842de44a = point + (0, halfwidth, 0);
     var_e4d48d14 = point + (0, 0, halfwidth * -1);
     var_56dbfc4f = point + (0, 0, halfwidth);
     while (end > gettime()) {
         /#
-            line(var_a84bd888, var_1a5347c3, color, 1, 0, 1);
+            line(var_a84bd888, l2, color, 1, 0, 1);
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
         #/
@@ -34,7 +34,7 @@ function function_a0e51d80(point, timesec, size, color) {
 /#
 
     // Namespace namespace_afd2f70b
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfdd5b616, Offset: 0x4e0
     // Size: 0x3c
     function function_b9907dab() {
@@ -45,7 +45,7 @@ function function_a0e51d80(point, timesec, size, color) {
 #/
 
 // Namespace namespace_afd2f70b
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85bbaa5, Offset: 0x528
 // Size: 0x108
 function function_244cbceb() {
@@ -69,7 +69,7 @@ function function_244cbceb() {
 }
 
 // Namespace namespace_afd2f70b
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x38569580, Offset: 0x638
 // Size: 0x710
 function function_7874d5f4() {

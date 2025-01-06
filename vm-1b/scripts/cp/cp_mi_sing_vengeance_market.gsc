@@ -1,40 +1,40 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_quadtank_util;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_vengeance_accolades;
 #using scripts/cp/cp_mi_sing_vengeance_garage;
 #using scripts/cp/cp_mi_sing_vengeance_sound;
 #using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/cp/_load;
-#using scripts/cp/_debug;
-#using scripts/shared/ai/archetype_warlord_interface;
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/hud_message_shared;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/vehicles/_wasp;
-#using scripts/cp/_quadtank_util;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/stealth;
-#using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
 #using scripts/shared/exploder_shared;
-#using scripts/shared/turret_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_message_shared;
 #using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/trigger_shared;
 #using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
 #using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
+#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/vehicles/_wasp;
 
 #namespace namespace_e6a038a0;
 
@@ -241,7 +241,7 @@ function function_74c7f0db() {
 function function_c5cf1c5() {
     level endon(#"quad_tank_dead");
     while (true) {
-        var_52b4a338 = level waittill(#"clonedentity");
+        level waittill(#"clonedentity", var_52b4a338);
         if (isdefined(var_52b4a338.scriptvehicletype) && var_52b4a338.scriptvehicletype == "quadtank") {
             level flag::set("quadtank_hijacked");
         }
@@ -516,7 +516,7 @@ function function_f14d81a9() {
 // Checksum 0x8f87d0b0, Offset: 0x31e8
 // Size: 0xdb
 function function_bc3db33d() {
-    level.quadtank waittill(#"hash_6530962c");
+    level.quadtank waittill(#"trophy_system_disabled");
     var_90911853 = getweapon("launcher_standard");
     foreach (e_player in level.activeplayers) {
         w_current_weapon = e_player getcurrentweapon();
@@ -532,7 +532,7 @@ function function_bc3db33d() {
 // Size: 0x105
 function function_43458bf2() {
     level.quadtank endon(#"death");
-    self endon(#"hash_6530962c");
+    self endon(#"trophy_system_disabled");
     wait 20;
     var_c823b7c6 = [];
     var_c823b7c6[0] = "hend_shoot_out_its_weak_p_1";
@@ -564,11 +564,11 @@ function function_43458bf2() {
 function function_55c599e4() {
     self endon(#"death");
     while (true) {
-        self waittill(#"hash_6530962c");
+        self waittill(#"trophy_system_disabled");
         namespace_22334037::function_73a79ca0("hend_hit_it_with_a_rocket_1");
         self waittill(#"hash_f015cdf7");
         self thread function_455f3062();
-        self waittill(#"hash_6530962c");
+        self waittill(#"trophy_system_disabled");
         namespace_22334037::function_73a79ca0("hend_defenses_down_hit_0");
     }
 }
@@ -579,7 +579,7 @@ function function_55c599e4() {
 // Size: 0x2a
 function function_455f3062() {
     self endon(#"death");
-    self endon(#"hash_6530962c");
+    self endon(#"trophy_system_disabled");
     wait 20;
     namespace_22334037::function_73a79ca0("hend_it_s_defense_system_0");
 }
@@ -592,7 +592,7 @@ function function_e955ac45() {
     self endon(#"death");
     self waittill(#"hash_f015cdf7");
     level dialog::function_13b3b16a("plyr_how_the_hell_is_this_0");
-    self waittill(#"hash_6530962c");
+    self waittill(#"trophy_system_disabled");
     self waittill(#"hash_f015cdf7");
     namespace_22334037::function_73a79ca0("hend_it_s_back_online_wa_0");
 }
@@ -838,7 +838,7 @@ function function_3a837c17() {
     objectives::hide("cp_level_vengeance_clear_plaza");
     level.var_2fd26037 battlechatter::function_d9f49fba(0);
     var_5e72d25 = getent("obj_enter_sh", "targetname");
-    var_dd05070c = struct::get(var_5e72d25.target, "targetname");
+    obj_struct = struct::get(var_5e72d25.target, "targetname");
     level thread objectives::breadcrumb("players_near_safehouse");
     objectives::show("cp_level_vengeance_go_to_safehouse");
     level thread util::function_d8eaed3d(5);
@@ -958,8 +958,8 @@ function plaza_enemies(var_74cd64bc) {
     level.var_4982c438 = var_cf09ed0e;
     level thread function_ea5edc3b(level.var_4982c438, var_8304f83c, var_f50c6777);
     spawn_manager::disable("plaza_allies_spawn_manager", 1);
-    var_3ced446f = spawn_manager::function_423eae50("plaza_allies_spawn_manager");
-    foreach (var_3b8db917 in var_3ced446f) {
+    a_allies = spawn_manager::function_423eae50("plaza_allies_spawn_manager");
+    foreach (var_3b8db917 in a_allies) {
         if (isalive(var_3b8db917)) {
             var_3b8db917 thread function_47370bbe();
         }
@@ -1120,10 +1120,10 @@ function function_688b4ed7() {
 // Params 5, eflags: 0x0
 // Checksum 0xf6b467f8, Offset: 0x5be0
 // Size: 0x17b
-function function_ea5edc3b(var_fe5aba79, var_242401fb, var_b21c92c0, var_d81f0d29, var_962b7136) {
+function function_ea5edc3b(fallback_vol, var_242401fb, var_b21c92c0, var_d81f0d29, var_962b7136) {
     a_enemies = spawner::get_ai_group_ai("plaza_enemies");
     foreach (e_enemy in a_enemies) {
-        var_3a825beb = 0;
+        b_touching = 0;
         if (!isalive(e_enemy)) {
             break;
         }
@@ -1131,19 +1131,19 @@ function function_ea5edc3b(var_fe5aba79, var_242401fb, var_b21c92c0, var_d81f0d2
             break;
         }
         if (isdefined(var_242401fb) && e_enemy istouching(var_242401fb)) {
-            var_3a825beb = 1;
+            b_touching = 1;
         }
         if (isdefined(var_b21c92c0) && e_enemy istouching(var_b21c92c0)) {
-            var_3a825beb = 1;
+            b_touching = 1;
         }
         if (isdefined(var_d81f0d29) && e_enemy istouching(var_d81f0d29)) {
-            var_3a825beb = 1;
+            b_touching = 1;
         }
         if (isdefined(var_962b7136) && e_enemy istouching(var_962b7136)) {
-            var_3a825beb = 1;
+            b_touching = 1;
         }
-        if (var_3a825beb) {
-            e_enemy setgoal(var_fe5aba79, 1);
+        if (b_touching) {
+            e_enemy setgoal(fallback_vol, 1);
         }
     }
 }
@@ -1211,7 +1211,7 @@ function function_aecb2215() {
 function function_dcf7f342() {
     level endon(#"plaza_combat_live");
     while (true) {
-        curweapon = self waittill(#"weapon_fired");
+        self waittill(#"weapon_fired", curweapon);
         if (!weaponhasattachment(curweapon, "suppressed") || curweapon.name != "ar_marksman_veng_hero_weap") {
             level flag::set("plaza_combat_live");
         }
@@ -1276,7 +1276,7 @@ function function_29587c78() {
     level endon(#"plaza_cleared");
     while (true) {
         eye = self geteye();
-        var_fd26df34 = anglestoforward(self getplayerangles());
+        eye_dir = anglestoforward(self getplayerangles());
         targets = getaiteamarray("axis");
         foreach (var_daf22616 in targets) {
             if (!isdefined(var_daf22616)) {
@@ -1290,7 +1290,7 @@ function function_29587c78() {
                 var_bbf94a49 = var_daf22616 geteye();
             }
             dir = vectornormalize(var_bbf94a49 - eye);
-            if (vectordot(var_fd26df34, dir) > 0.99) {
+            if (vectordot(eye_dir, dir) > 0.99) {
                 if (sighttracepassed(var_bbf94a49, eye, 0, undefined)) {
                     if (isalive(var_daf22616)) {
                         if (issubstr(var_daf22616.classname, "warlord")) {

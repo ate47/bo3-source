@@ -3,7 +3,7 @@
 #namespace scripted;
 
 // Namespace scripted
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31c6455e, Offset: 0x98
 // Size: 0x78
 function main() {
@@ -25,7 +25,7 @@ function init(notifyname, origin, angles, theanim, animmode, root, rate, goaltim
 }
 
 // Namespace scripted
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xea90fc5a, Offset: 0x170
 // Size: 0x20
 function end_script() {

@@ -1,28 +1,28 @@
-#using scripts/cp/cp_mi_cairo_ramses_utility;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/cp_mi_cairo_ramses_station_walk;
-#using scripts/cp/cp_mi_cairo_ramses_station_fight;
-#using scripts/cp/cp_mi_cairo_ramses_level_start;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/compass;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_level_start;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
+#using scripts/cp/cp_mi_cairo_ramses_station_fight;
+#using scripts/cp/cp_mi_cairo_ramses_station_walk;
+#using scripts/cp/cp_mi_cairo_ramses_utility;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/compass;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_cairo_ramses_nasser_interview;
 
@@ -40,11 +40,11 @@ function main(var_74cd64bc) {
         level thread cp_mi_cairo_ramses_station_walk::function_bc43c2f8(0);
         load::function_a2995f22();
         function_b760b954();
-        namespace_391e4301::function_e7ebe596();
+        ramses_util::function_e7ebe596();
     }
     function_c99967dc(1);
     scene::add_scene_func("cin_ram_02_interview_3rd_sh010", &function_57bc36e6, "play");
-    scene::add_scene_func("cin_ram_02_interview_3rd_sh270", &namespace_391e4301::function_eabc6e2f, "play");
+    scene::add_scene_func("cin_ram_02_interview_3rd_sh270", &ramses_util::function_eabc6e2f, "play");
     scene::add_scene_func("cin_ram_02_interview_3rd_sh270", &function_830dd1fa, "done");
     scene::add_scene_func("cin_ram_02_interview_3rd_sh270", &function_57bc36e6, "done", 0);
     function_bf7cc686(var_74cd64bc);
@@ -83,7 +83,7 @@ function function_2ed0dd8e() {
 // Checksum 0xbbf6e264, Offset: 0xb18
 // Size: 0x2a
 function function_1bcd464b() {
-    self notify(#"hash_638e4884");
+    self notify(#"kill_player_walkspeed_adjustment");
     self util::function_16c71b8(1);
     self setmovespeedscale(1);
 }
@@ -100,7 +100,7 @@ function function_bf7cc686(var_74cd64bc) {
     }
     function_6a80eecf();
     level flag::wait_till("dr_nasser_interview_started");
-    namespace_391e4301::function_e7ebe596(0);
+    ramses_util::function_e7ebe596(0);
     level thread namespace_e4c0c552::function_53de5c02();
     level thread namespace_bedc6a60::function_e5ed2910();
     function_e9053432();
@@ -121,12 +121,12 @@ function function_830dd1fa(a_ents) {
     function_c99967dc(2);
     objectives::complete("cp_level_ramses_interrogate_salim");
     objectives::complete("cp_level_ramses_determine_what_salim_knows");
-    namespace_391e4301::function_e7ebe596();
+    ramses_util::function_e7ebe596();
     level.var_9db406db thread function_370a5671();
     level util::clientnotify("alert_on");
     level thread function_66a8939();
     battlechatter::function_d9f49fba(1, "bc");
-    level thread cp_mi_cairo_ramses_station_walk::function_bbd12ed2(0);
+    level thread cp_mi_cairo_ramses_station_walk::scene_cleanup(0);
     level thread function_7452fdb5();
 }
 

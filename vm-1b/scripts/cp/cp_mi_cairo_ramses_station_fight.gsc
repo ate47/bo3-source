@@ -1,41 +1,41 @@
-#using scripts/shared/ai/robot_phalanx;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/gametypes/_save;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_ramses_accolades;
+#using scripts/cp/cp_mi_cairo_ramses_fx;
+#using scripts/cp/cp_mi_cairo_ramses_level_start;
 #using scripts/cp/cp_mi_cairo_ramses_nasser_interview;
+#using scripts/cp/cp_mi_cairo_ramses_sound;
 #using scripts/cp/cp_mi_cairo_ramses_station_walk;
 #using scripts/cp/cp_mi_cairo_ramses_utility;
 #using scripts/cp/cp_mi_cairo_ramses_vtol_ride;
-#using scripts/cp/cp_mi_cairo_ramses_level_start;
-#using scripts/cp/cp_mi_cairo_ramses_sound;
-#using scripts/cp/cp_mi_cairo_ramses_fx;
-#using scripts/cp/cp_mi_cairo_ramses_accolades;
-#using scripts/cp/_oed;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/shared/math_shared;
-#using scripts/cp/_dialog;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/robot_phalanx;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/vehicles/_raps;
+#using scripts/shared/colors_shared;
+#using scripts/shared/compass;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/compass;
-#using scripts/shared/colors_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_raps;
 
 #namespace namespace_bedc6a60;
 
@@ -44,12 +44,12 @@
 // Checksum 0x79acf226, Offset: 0x1760
 // Size: 0x4ca
 function init(str_objective, var_74cd64bc) {
-    callback::remove_on_spawned(&namespace_50196384::function_e9d1564a);
+    callback::remove_on_spawned(&level_start::function_e9d1564a);
     spawner::add_spawn_function_group("station_fight_scene_robot", "script_noteworthy", &function_3aea851b);
     spawner::add_spawn_function_group("station_fight_balcony_turret_steal_robot", "targetname", &function_28238a2a);
-    spawner::add_spawn_function_group("balcony_station_fight_ai", "script_noteworthy", &namespace_391e4301::function_258b9bad, "end_balcony_shields", 1);
+    spawner::add_spawn_function_group("balcony_station_fight_ai", "script_noteworthy", &ramses_util::function_258b9bad, "end_balcony_shields", 1);
     spawner::add_spawn_function_group("balcony_robot_ai", "script_string", &function_23c641de);
-    spawner::add_spawn_function_group("right_side_station_fight_ai", "script_noteworthy", &namespace_391e4301::function_258b9bad, "player_is_close", 1);
+    spawner::add_spawn_function_group("right_side_station_fight_ai", "script_noteworthy", &ramses_util::function_258b9bad, "player_is_close", 1);
     spawner::add_spawn_function_group("right_side_station_fight_ai", "script_noteworthy", &function_157bd88d);
     spawner::add_spawn_function_group("rap_drive_to_point_explode", "script_noteworthy", &function_8d670bce);
     spawner::add_spawn_function_group("station_fight_raps_jump_raps", "targetname", &function_3e73806);
@@ -59,9 +59,9 @@ function init(str_objective, var_74cd64bc) {
     spawner::add_spawn_function_group("actor_spawner_enemy_dps_robot_suppressor_mg", "classname", &function_46eb86a4);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        level cp_mi_cairo_ramses_station_walk::function_bbd12ed2(0);
+        level cp_mi_cairo_ramses_station_walk::scene_cleanup(0);
         level thread function_e5ed2910();
-        level thread namespace_391e4301::function_e950228a();
+        level thread ramses_util::function_e950228a();
         level scene::init("cin_ram_03_01_defend_1st_rapsintro");
         level thread function_91e74b85();
         level util::function_d8eaed3d(2, 1);
@@ -79,7 +79,7 @@ function init(str_objective, var_74cd64bc) {
     }
     level thread scene::play("cin_ram_02_04_interview_part04_end_loops");
     foreach (e_player in level.players) {
-        e_player thread namespace_50196384::function_8ae96a69();
+        e_player thread level_start::function_8ae96a69();
     }
     level thread scene::play("p7_fxanim_cp_ramses_lotus_towers_hunters_swarm_bundle");
     namespace_38256252::function_6f52c808();
@@ -147,14 +147,14 @@ function function_bb2cfd0f() {
     s_start = struct::get(self.target, "targetname");
     var_305876e1 = spawn("script_model", s_start.origin);
     var_305876e1 setmodel("veh_t7_drone_raps");
-    self function_9e35fc47(s_start, var_305876e1);
+    self _drop(s_start, var_305876e1);
 }
 
 // Namespace namespace_bedc6a60
 // Params 2, eflags: 0x0
 // Checksum 0xaf88b9b4, Offset: 0x1ec0
 // Size: 0xf2
-function function_9e35fc47(s_start, var_305876e1) {
+function _drop(s_start, var_305876e1) {
     self endon(#"death");
     var_a0e1464d = struct::get_array(s_start.target, "targetname");
     s_end = var_a0e1464d[randomint(var_a0e1464d.size)];
@@ -329,7 +329,7 @@ function function_785ac501() {
     var_93cb1c05 = spawn("trigger_radius", self.origin, 0, s_obj.radius, -128);
     var_93cb1c05.script_objective = "vtol_ride";
     e_turret = self;
-    self thread namespace_391e4301::function_b0ef4ae7(s_obj);
+    self thread ramses_util::function_b0ef4ae7(s_obj);
     level waittill(#"hash_eae489c0");
     e_turret function_6727bc7f(s_obj, var_93cb1c05);
 }
@@ -361,7 +361,7 @@ function function_2217e3ee(var_70345f7f, s_obj, var_93cb1c05) {
     self.origin = var_70345f7f.origin;
     self.angles = var_70345f7f.angles;
     var_70345f7f delete();
-    self thread namespace_391e4301::function_b0ef4ae7(s_obj);
+    self thread ramses_util::function_b0ef4ae7(s_obj);
     if (!level flag::get("station_fight_completed")) {
         self thread function_6727bc7f(s_obj, var_93cb1c05);
     }
@@ -373,10 +373,10 @@ function function_2217e3ee(var_70345f7f, s_obj, var_93cb1c05) {
 // Size: 0x4a2
 function function_bedc6a60() {
     var_1bd4d1f2 = getent("station_fight_raps_jump", "targetname");
-    var_1bd4d1f2 namespace_391e4301::function_486f25d(2, 1);
+    var_1bd4d1f2 ramses_util::function_486f25d(2, 1);
     spawn_manager::enable("sm_initial_balcony_spawn");
     spawn_manager::enable("sm_balcony_robots");
-    level thread namespace_391e4301::function_8afb19cc("sm_balcony_robots", "sm_initial_balcony_spawn");
+    level thread ramses_util::function_8afb19cc("sm_balcony_robots", "sm_initial_balcony_spawn");
     level waittill(#"hash_3e9d30d3");
     spawn_manager::enable("sm_initial_recovery_right_spawn");
     level thread spawner::simple_spawn("custom_raps");
@@ -389,7 +389,7 @@ function function_bedc6a60() {
     wait 3;
     spawn_manager::enable("sm_ceiling_fight_server_robots");
     spawn_manager::enable("sm_server_fights_ceiling_ally");
-    level thread namespace_391e4301::function_8afb19cc("sm_ceiling_fight_server_robots", "sm_server_fights_ceiling_ally");
+    level thread ramses_util::function_8afb19cc("sm_ceiling_fight_server_robots", "sm_server_fights_ceiling_ally");
     wait 3;
     level thread function_d44417a0();
     util::wait_network_frame();
@@ -444,7 +444,7 @@ function function_91e74b85() {
     level flag::wait_till("all_players_connected");
     level flag::init("station_fight_started");
     spawner::add_spawn_function_group("initial_station_fight_ai", "script_noteworthy", &function_d0f8bc28, "station_fight_started");
-    spawner::add_spawn_function_group("initial_station_fight_ai", "script_noteworthy", &namespace_391e4301::function_258b9bad, "ceiling_collapse_complete", 1);
+    spawner::add_spawn_function_group("initial_station_fight_ai", "script_noteworthy", &ramses_util::function_258b9bad, "ceiling_collapse_complete", 1);
     spawn_manager::enable("station_fight_wave1_robots_left");
     spawn_manager::enable("sm_initial_arch_spawn_left");
     spawn_manager::enable("station_fight_wave1_robots_right");
@@ -452,8 +452,8 @@ function function_91e74b85() {
     spawn_manager::enable("sm_initial_recovery_left_spawn");
     level thread function_97cdc17e();
     level flag::wait_till("station_fight_started");
-    level thread namespace_391e4301::function_8afb19cc("station_fight_wave1_robots_left", "sm_initial_arch_spawn_left");
-    level thread namespace_391e4301::function_8afb19cc("station_fight_wave1_robots_right", "sm_initial_arch_spawn_right");
+    level thread ramses_util::function_8afb19cc("station_fight_wave1_robots_left", "sm_initial_arch_spawn_left");
+    level thread ramses_util::function_8afb19cc("station_fight_wave1_robots_right", "sm_initial_arch_spawn_right");
     level thread function_845b69ec("sm_initial_arch_spawn_right", "sm_initial_arch_spawn_left");
 }
 
@@ -489,8 +489,8 @@ function function_d0f8bc28(str_flag) {
 // Checksum 0xfd798f6c, Offset: 0x30f0
 // Size: 0x139
 function function_52111922() {
-    var_3ced446f = getaiteamarray("allies");
-    var_3f8fb967 = array::exclude(var_3ced446f, level.heroes);
+    a_allies = getaiteamarray("allies");
+    var_3f8fb967 = array::exclude(a_allies, level.heroes);
     var_3f8fb967 = array::remove_dead(var_3f8fb967);
     var_1d1c81b8 = getnodearray("station_fight_end_patrol", "targetname");
     if (var_1d1c81b8.size > var_3f8fb967.size) {
@@ -571,13 +571,13 @@ function function_46eb86a4() {
     self endon(#"death");
     level flag::wait_till("ceiling_collapse_complete");
     while (true) {
-        e_target = self waittill(#"failed_melee_mbs");
+        self waittill(#"failed_melee_mbs", e_target);
         if (e_target == level.var_9db406db || e_target == level.var_2fd26037) {
-            self notify(#"hash_9b484394");
+            self notify(#"ram_kill_mb");
             continue;
         }
         if (e_target != level.var_9db406db && e_target != level.var_2fd26037 && !isplayer(e_target)) {
-            e_target notify(#"hash_9b484394");
+            e_target notify(#"ram_kill_mb");
         }
     }
 }
@@ -668,8 +668,8 @@ function function_cbcb2bb() {
     [[ var_a3decff ]]->initialize("phanalx_wedge", v_start_position, var_e2ea1b3f, 2, 3);
     var_61a19dc6 = arraycombine(arraycombine(var_a3decff.tier1robots_, var_a3decff.tier2robots_, 0, 0), var_a3decff.tier3robots_, 0, 0);
     foreach (var_6104a93b in var_61a19dc6) {
-        var_6104a93b thread namespace_391e4301::function_258b9bad("gap_soldiers_dead", 1, "station_right_phalanx_scatter");
-        var_6104a93b thread namespace_391e4301::function_258b9bad("player_is_close", 1, "station_right_phalanx_scatter");
+        var_6104a93b thread ramses_util::function_258b9bad("gap_soldiers_dead", 1, "station_right_phalanx_scatter");
+        var_6104a93b thread ramses_util::function_258b9bad("player_is_close", 1, "station_right_phalanx_scatter");
     }
     level thread function_3da9f438(var_e2ea1b3f);
     var_a3decff thread function_32800c59("station_right_phalanx_scatter");
@@ -816,7 +816,7 @@ function function_658e0c1a() {
     self ai::set_ignoreall(1);
     self ai::set_ignoreme(1);
     self.var_69dd5d62 = 1;
-    self namespace_391e4301::function_258b9bad("out_of_pod", 1);
+    self ramses_util::function_258b9bad("out_of_pod", 1);
 }
 
 // Namespace namespace_bedc6a60
@@ -842,8 +842,8 @@ function function_588f1876() {
     }
     var_b200e7a3 = getent("station_fight_allies_near_goal", "targetname");
     level.var_2fd26037 setgoal(var_b200e7a3);
-    var_3ced446f = getactorarray("recovery_room_allies", "script_aigroup");
-    foreach (ai in var_3ced446f) {
+    a_allies = getactorarray("recovery_room_allies", "script_aigroup");
+    foreach (ai in a_allies) {
         ai setgoal(var_b200e7a3, 1);
     }
     level flag::wait_till("drop_pod_opened_and_spawned");
@@ -866,7 +866,7 @@ function function_845b69ec(var_b5a8817e, var_8fa60715) {
     var_f91ffbc4 = array::randomize(var_f91ffbc4);
     foreach (var_5abbae22 in var_f91ffbc4) {
         if (isdefined(var_5abbae22)) {
-            var_5abbae22 notify(#"hash_9b484394");
+            var_5abbae22 notify(#"ram_kill_mb");
         }
         wait 2;
     }
@@ -973,7 +973,7 @@ function raps_intro() {
     level thread function_370bd9a9();
     scene::add_scene_func("cin_ram_03_01_defend_1st_rapsintro", &function_d10a6306, "play");
     scene::add_scene_func("cin_ram_03_01_defend_1st_rapsintro", &function_3b3f857a, "done");
-    namespace_391e4301::function_ac2b4535("cin_ram_03_01_defend_1st_rapsintro", "defend_ramses_station");
+    ramses_util::function_ac2b4535("cin_ram_03_01_defend_1st_rapsintro", "defend_ramses_station");
     foreach (player in level.players) {
         player.ignoreme = 1;
     }
@@ -1188,7 +1188,7 @@ function function_316c9fe0() {
 // Size: 0x1a
 function function_fea402e8() {
     level waittill(#"hash_a2d108ca");
-    level namespace_391e4301::function_e950228a(0);
+    level ramses_util::function_e950228a(0);
 }
 
 // Namespace namespace_bedc6a60
@@ -1278,7 +1278,7 @@ function function_1bac4fcc(s_obj, var_93cb1c05) {
     level endon(#"station_fight_completed");
     self endon(#"death");
     while (isdefined(self)) {
-        e_player = var_93cb1c05 waittill(#"trigger");
+        var_93cb1c05 waittill(#"trigger", e_player);
         while (isdefined(var_93cb1c05) && isalive(e_player) && e_player istouching(var_93cb1c05)) {
             wait 0.1;
         }
@@ -1382,11 +1382,11 @@ function function_f21c9162(str_state) {
     var_d4a391c5 = getentarray("station_clutter" + str_state, "script_noteworthy");
     var_c160029e = getentarray("station_clutter_collision" + str_state, "targetname");
     var_9adf475b = getentarray("station_stairs" + str_state, "targetname");
-    var_522666ed namespace_391e4301::hide_ents(1);
-    var_522666ed namespace_391e4301::function_41f6f501();
-    var_d4a391c5 namespace_391e4301::hide_ents(1);
-    var_c160029e namespace_391e4301::function_41f6f501();
-    var_9adf475b namespace_391e4301::hide_ents();
+    var_522666ed ramses_util::hide_ents(1);
+    var_522666ed ramses_util::function_41f6f501();
+    var_d4a391c5 ramses_util::hide_ents(1);
+    var_c160029e ramses_util::function_41f6f501();
+    var_9adf475b ramses_util::hide_ents();
 }
 
 // Namespace namespace_bedc6a60
@@ -1402,13 +1402,13 @@ function function_c5b9bd41(str_state) {
     var_d4a391c5 = getentarray("station_clutter" + str_state, "script_noteworthy");
     var_c160029e = getentarray("station_clutter_collision" + str_state, "targetname");
     var_9adf475b = getentarray("station_stairs" + str_state, "targetname");
-    var_522666ed namespace_391e4301::make_solid();
-    var_c160029e namespace_391e4301::make_solid();
-    var_522666ed namespace_391e4301::show_ents(1);
-    var_d4a391c5 namespace_391e4301::show_ents(1);
-    var_9adf475b namespace_391e4301::show_ents();
+    var_522666ed ramses_util::make_solid();
+    var_c160029e ramses_util::make_solid();
+    var_522666ed ramses_util::show_ents(1);
+    var_d4a391c5 ramses_util::show_ents(1);
+    var_9adf475b ramses_util::show_ents();
     var_27da165 = struct::get_array("station_clutter" + str_state, "targetname");
-    var_27da165 namespace_391e4301::function_c3458a6();
+    var_27da165 ramses_util::function_c3458a6();
 }
 
 // Namespace namespace_bedc6a60
@@ -1450,7 +1450,7 @@ function function_eede49df(str_state, var_f5b4e706) {
 // Size: 0x3a
 function function_f7abd273() {
     var_6a205876 = getentarray("station_defend_after", "script_noteworthy");
-    var_6a205876 namespace_391e4301::hide_ents();
+    var_6a205876 ramses_util::hide_ents();
 }
 
 // Namespace namespace_bedc6a60
@@ -1459,7 +1459,7 @@ function function_f7abd273() {
 // Size: 0x123
 function function_e5ed2910() {
     var_dbe7a735 = getentarray("station_defend_after", "script_noteworthy");
-    var_dbe7a735 namespace_391e4301::show_ents(1);
+    var_dbe7a735 ramses_util::show_ents(1);
     util::wait_network_frame();
     var_c1633987 = getentarray("station_defend_before", "script_noteworthy");
     array::delete_all(var_c1633987);

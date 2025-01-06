@@ -1,35 +1,35 @@
-#using scripts/cp/cp_mi_sing_sgen_revenge_igc;
-#using scripts/cp/cp_mi_sing_sgen_dark_battle;
-#using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_oed;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/cp/gametypes/_globallogic_ui;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_dark_battle;
+#using scripts/cp/cp_mi_sing_sgen_revenge_igc;
+#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_globallogic_ui;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_sgen_pallas;
 
@@ -88,8 +88,8 @@ function function_1f2baf43(str_objective, var_74cd64bc) {
         objectives::set("cp_level_sgen_confront_pallas");
         function_4ef8cf79();
         function_6e72c0ab("back", "open");
-        var_be31aa9a = getent("boss_fight_lift", "targetname");
-        var_be31aa9a movez(-1750, 0.1);
+        e_lift = getent("boss_fight_lift", "targetname");
+        e_lift movez(-1750, 0.1);
         load::function_a2995f22();
         level thread function_3a855484();
         array::thread_all(level.players, &clientfield::set_to_player, "pallas_monitors_state", 2);
@@ -129,7 +129,7 @@ function function_5a8d1289(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 // Checksum 0x5b6ee163, Offset: 0x1de8
 // Size: 0x3b0
 function function_bf36708e(str_objective, var_74cd64bc) {
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
+    e_lift = getent("boss_fight_lift", "targetname");
     level thread function_3452571c();
     if (var_74cd64bc) {
         sgen::function_bff1a867(str_objective);
@@ -145,7 +145,7 @@ function function_bf36708e(str_objective, var_74cd64bc) {
         objectives::complete("cp_level_sgen_confront_pallas");
         function_4ef8cf79();
         function_6e72c0ab("back", "open");
-        var_be31aa9a movez(-1750, 0.05);
+        e_lift movez(-1750, 0.05);
         level thread scene::init("cin_sgen_19_ghost_3rd_sh010");
         load::function_a2995f22();
     } else {
@@ -299,9 +299,9 @@ function function_b8e4148d() {
 function function_5ac1b440() {
     var_8df90b18 = getentarray("pallas_elevator_probe", "targetname");
     var_99450f8a = getentarray("pallas_elevator_light", "script_noteworthy");
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
-    array::run_all(var_99450f8a, &linkto, var_be31aa9a);
-    array::run_all(var_8df90b18, &linkto, var_be31aa9a);
+    e_lift = getent("boss_fight_lift", "targetname");
+    array::run_all(var_99450f8a, &linkto, e_lift);
+    array::run_all(var_8df90b18, &linkto, e_lift);
 }
 
 // Namespace cp_mi_sing_sgen_pallas
@@ -546,16 +546,16 @@ function function_39072821() {
 // Checksum 0x75a980c5, Offset: 0x3200
 // Size: 0x162
 function function_4ef8cf79() {
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
-    var_be31aa9a setmovingplatformenabled(1);
-    var_be31aa9a.a_e_doors = [];
-    var_be31aa9a.a_e_doors["front"] = getent("pallas_lift_front", "targetname");
-    var_be31aa9a.a_e_doors["front"].str_state = "close";
-    var_be31aa9a.a_e_doors["back"] = getent("pallas_lift_back", "targetname");
-    var_be31aa9a.a_e_doors["back"].str_state = "close";
-    array::run_all(var_be31aa9a.a_e_doors, &linkto, var_be31aa9a);
-    var_be31aa9a.a_e_doors["front"] clientfield::set("sm_elevator_door_state", 1);
-    var_be31aa9a.a_e_doors["back"] clientfield::set("sm_elevator_door_state", 2);
+    e_lift = getent("boss_fight_lift", "targetname");
+    e_lift setmovingplatformenabled(1);
+    e_lift.a_e_doors = [];
+    e_lift.a_e_doors["front"] = getent("pallas_lift_front", "targetname");
+    e_lift.a_e_doors["front"].str_state = "close";
+    e_lift.a_e_doors["back"] = getent("pallas_lift_back", "targetname");
+    e_lift.a_e_doors["back"].str_state = "close";
+    array::run_all(e_lift.a_e_doors, &linkto, e_lift);
+    e_lift.a_e_doors["front"] clientfield::set("sm_elevator_door_state", 1);
+    e_lift.a_e_doors["back"] clientfield::set("sm_elevator_door_state", 2);
 }
 
 // Namespace cp_mi_sing_sgen_pallas
@@ -563,22 +563,22 @@ function function_4ef8cf79() {
 // Checksum 0xa67562d8, Offset: 0x3370
 // Size: 0x1c2
 function function_6e72c0ab(str_side, str_state) {
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
-    if (!(var_be31aa9a.a_e_doors[str_side].str_state === str_state)) {
-        var_be31aa9a.a_e_doors[str_side].str_state = str_state;
-        var_be31aa9a.a_e_doors[str_side] unlink();
+    e_lift = getent("boss_fight_lift", "targetname");
+    if (!(e_lift.a_e_doors[str_side].str_state === str_state)) {
+        e_lift.a_e_doors[str_side].str_state = str_state;
+        e_lift.a_e_doors[str_side] unlink();
         var_c49c82b9 = -106;
         if (str_state === "open") {
             var_c49c82b9 *= -1;
         }
-        var_be31aa9a.a_e_doors[str_side] movez(var_c49c82b9, 3.94737, 3.94737 * 0.1, 3.94737 * 0.25);
+        e_lift.a_e_doors[str_side] movez(var_c49c82b9, 3.94737, 3.94737 * 0.1, 3.94737 * 0.25);
         if (str_state == "open") {
-            var_be31aa9a.a_e_doors[str_side] playsound("veh_lift_doors_open");
+            e_lift.a_e_doors[str_side] playsound("veh_lift_doors_open");
         } else {
-            var_be31aa9a.a_e_doors[str_side] playsound("veh_lift_doors_close");
+            e_lift.a_e_doors[str_side] playsound("veh_lift_doors_close");
         }
-        var_be31aa9a.a_e_doors[str_side] waittill(#"movedone");
-        var_be31aa9a.a_e_doors[str_side] linkto(var_be31aa9a);
+        e_lift.a_e_doors[str_side] waittill(#"movedone");
+        e_lift.a_e_doors[str_side] linkto(e_lift);
         if (str_state == "open") {
             level flag::set("pallas_lift_" + str_side + "_open");
             return;
@@ -592,9 +592,9 @@ function function_6e72c0ab(str_side, str_state) {
 // Checksum 0xa2595ef, Offset: 0x3540
 // Size: 0x11b
 function function_fe851f75(str_state) {
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
-    if (!(var_be31aa9a.var_631a2015["left"].str_state === str_state)) {
-        foreach (var_b018a7fa in var_be31aa9a.var_631a2015) {
+    e_lift = getent("boss_fight_lift", "targetname");
+    if (!(e_lift.var_631a2015["left"].str_state === str_state)) {
+        foreach (var_b018a7fa in e_lift.var_631a2015) {
             var_42c0d741 = var_b018a7fa.script_vector;
             if (str_state == "close") {
                 var_42c0d741 *= -1;
@@ -611,24 +611,24 @@ function function_fe851f75(str_state) {
 // Size: 0x232
 function function_aab7d2d8(str_direction) {
     array::run_all(level.players, &util::function_16c71b8, 1);
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
-    var_be31aa9a.str_direction = str_direction;
+    e_lift = getent("boss_fight_lift", "targetname");
+    e_lift.str_direction = str_direction;
     var_d838974e = getent("decon_fx_origin", "targetname");
-    var_d838974e linkto(var_be31aa9a);
+    var_d838974e linkto(e_lift);
     playfxontag(level._effect["decon_mist"], var_d838974e, "tag_origin");
     var_d838974e playsound("veh_lift_mist");
     var_c49c82b9 = 1750;
     if (str_direction == "down") {
         var_c49c82b9 *= -1;
     }
-    var_be31aa9a movez(var_c49c82b9, 48.6111, 48.6111 * 0.1, 48.6111 * 0.25);
-    var_be31aa9a playsound("veh_lift_start");
-    var_be2ea7e9 = spawn("script_origin", var_be31aa9a.origin);
-    var_be2ea7e9 linkto(var_be31aa9a);
+    e_lift movez(var_c49c82b9, 48.6111, 48.6111 * 0.1, 48.6111 * 0.25);
+    e_lift playsound("veh_lift_start");
+    var_be2ea7e9 = spawn("script_origin", e_lift.origin);
+    var_be2ea7e9 linkto(e_lift);
     var_be2ea7e9 playloopsound("veh_lift_loop", 0.5);
-    var_be31aa9a waittill(#"movedone");
+    e_lift waittill(#"movedone");
     var_be2ea7e9 stoploopsound(0.5);
-    var_be31aa9a playsound("veh_lift_stop");
+    e_lift playsound("veh_lift_stop");
     var_be2ea7e9 delete();
     array::run_all(level.players, &util::function_16c71b8, 0);
 }
@@ -638,8 +638,8 @@ function function_aab7d2d8(str_direction) {
 // Checksum 0xd5ba68a2, Offset: 0x38a8
 // Size: 0x4a
 function function_2a8da7f0(n_state) {
-    var_be31aa9a = getent("boss_fight_lift", "targetname");
-    var_be31aa9a clientfield::set("sm_elevator_shader", n_state);
+    e_lift = getent("boss_fight_lift", "targetname");
+    e_lift clientfield::set("sm_elevator_shader", n_state);
 }
 
 // Namespace cp_mi_sing_sgen_pallas
@@ -685,8 +685,8 @@ function function_dda88b2e() {
 function function_4aa034ed(var_74cd64bc) {
     function_6e72c0ab("back", "close");
     if (!var_74cd64bc) {
-        var_be31aa9a = getent("boss_fight_lift", "targetname");
-        var_be31aa9a.origin += (0, 0, 1750);
+        e_lift = getent("boss_fight_lift", "targetname");
+        e_lift.origin += (0, 0, 1750);
     }
     function_6e72c0ab("front", "open");
 }
@@ -811,7 +811,7 @@ function function_c88aca45() {
         }
         var_fd110328 = 0;
         while (!var_fd110328) {
-            e_player = var_589f8c88 waittill(#"trigger");
+            var_589f8c88 waittill(#"trigger", e_player);
             if (!e_player laststand::player_is_in_laststand()) {
                 var_fd110328 = 1;
                 e_player enableinvulnerability();
@@ -1078,7 +1078,7 @@ function function_f63f5d7a() {
     self clientfield::set("cooling_tower_damage", 1);
     objectives::set("cp_level_sgen_destroy_tower", self.origin + (0, 0, 18));
     while (self.health > 0) {
-        damage, attacker, direction, point = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point);
         playfx(level._effect["weakspot_impact"], point, direction * -1);
         attacker damagefeedback::update();
     }

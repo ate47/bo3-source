@@ -1,45 +1,45 @@
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cp_mi_sing_sgen_flood;
-#using scripts/cp/cp_mi_sing_sgen_water_ride;
-#using scripts/cp/cp_mi_sing_sgen_uw_battle;
-#using scripts/cp/cp_mi_sing_sgen_silo_swim;
-#using scripts/cp/cp_mi_sing_sgen_revenge_igc;
-#using scripts/cp/cp_mi_sing_sgen_pallas;
-#using scripts/cp/cp_mi_sing_sgen_fallen_soldiers;
-#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
+#using scripts/codescripts/struct;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_load;
+#using scripts/cp/_mobile_armory;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen_accolades;
 #using scripts/cp/cp_mi_sing_sgen_dark_battle;
 #using scripts/cp/cp_mi_sing_sgen_enter_silo;
 #using scripts/cp/cp_mi_sing_sgen_exterior;
-#using scripts/cp/cp_mi_sing_sgen_accolades;
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_fallen_soldiers;
+#using scripts/cp/cp_mi_sing_sgen_flood;
 #using scripts/cp/cp_mi_sing_sgen_fx;
+#using scripts/cp/cp_mi_sing_sgen_pallas;
+#using scripts/cp/cp_mi_sing_sgen_revenge_igc;
+#using scripts/cp/cp_mi_sing_sgen_silo_swim;
+#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_testing_lab_igc;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/cp/cp_mi_sing_sgen_uw_battle;
+#using scripts/cp/cp_mi_sing_sgen_water_ride;
+#using scripts/cp/cybercom/_cybercom;
 #using scripts/cp/cybercom/_cybercom_tactical_rig;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/_collectibles;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_mobile_armory;
-#using scripts/cp/_load;
-#using scripts/cp/_ammo_cache;
-#using scripts/shared/visionset_mgr_shared;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace sgen;
 
@@ -421,7 +421,7 @@ function function_5dd1ccff(b_enable, var_5b1ec2c2, e_player) {
     level endon(#"Descent");
     while (true) {
         if (var_5b1ec2c2) {
-            e_player = self waittill(#"trigger");
+            self waittill(#"trigger", e_player);
         }
         if (!isdefined(e_player.var_1e983b11)) {
             e_player.var_1e983b11 = level.var_1e983b11;
@@ -493,7 +493,7 @@ function function_e860d344(a_ents) {
 // Size: 0x4d
 function function_db43be1e() {
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!(isdefined(e_player.is_in_water) && e_player.is_in_water)) {
             self thread function_8084e40a(e_player);
         }

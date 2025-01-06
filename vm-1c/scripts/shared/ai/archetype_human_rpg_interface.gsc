@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/archetype_human_rpg;
+#using scripts/shared/ai/systems/ai_interface;
 
 #namespace humanrpginterface;
 
 // Namespace humanrpginterface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x262765a2, Offset: 0x118
 // Size: 0x11c
 function registerhumanrpginterfaceattributes() {

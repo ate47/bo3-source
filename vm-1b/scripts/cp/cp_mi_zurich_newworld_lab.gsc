@@ -1,19 +1,19 @@
-#using scripts/cp/cp_mi_zurich_newworld_train;
-#using scripts/cp/cp_mi_zurich_newworld_sound;
-#using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld;
+#using scripts/cp/cp_mi_zurich_newworld_sound;
+#using scripts/cp/cp_mi_zurich_newworld_train;
+#using scripts/cp/cp_mi_zurich_newworld_util;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_d2831417;
 
@@ -35,13 +35,13 @@ function function_6383d314(str_objective, var_74cd64bc) {
         load::function_73adcefc();
         namespace_c7062b04::function_c63fb1d();
         load::function_a2995f22();
-        level thread namespace_ce0e5f06::function_30ec5bf7(1);
+        level thread newworld_util::function_30ec5bf7(1);
     }
-    namespace_ce0e5f06::player_snow_fx();
+    newworld_util::player_snow_fx();
     level scene::init("cin_new_17_01_wakingup_1st_reveal");
     level scene::init("p7_fxanim_cp_newworld_curtain_bundle");
     util::function_d8eaed3d(10);
-    namespace_ce0e5f06::function_83a7d040();
+    newworld_util::function_83a7d040();
     util::streamer_wait();
     function_c3e8639();
     level thread namespace_e38c3c58::function_9c65cf9a();

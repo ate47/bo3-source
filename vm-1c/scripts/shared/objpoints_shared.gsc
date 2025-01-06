@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace objpoints;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace objpoints
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7831ea7c, Offset: 0x138
 // Size: 0x70
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace objpoints
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x2fe5353d, Offset: 0x1b0
 // Size: 0x2ba
 function create(name, origin, team, shader, alpha, scale) {
@@ -73,7 +73,7 @@ function create(name, origin, team, shader, alpha, scale) {
 }
 
 // Namespace objpoints
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb116f0ad, Offset: 0x478
 // Size: 0x1a4
 function delete(var_68ec4683) {
@@ -97,7 +97,7 @@ function delete(var_68ec4683) {
 }
 
 // Namespace objpoints
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ee1ae52, Offset: 0x628
 // Size: 0x80
 function function_88e59487(origin) {
@@ -122,7 +122,7 @@ function function_a93964e(name, origin) {
 }
 
 // Namespace objpoints
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x67d97810, Offset: 0x710
 // Size: 0x36
 function function_c120f6a5(name) {
@@ -133,7 +133,7 @@ function function_c120f6a5(name) {
 }
 
 // Namespace objpoints
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf9c082c5, Offset: 0x750
 // Size: 0x3e
 function function_3ec05698(index) {
@@ -165,7 +165,7 @@ function function_3ae8114() {
 }
 
 // Namespace objpoints
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xff3d7255, Offset: 0x858
 // Size: 0x1c
 function function_a51dc9ba() {

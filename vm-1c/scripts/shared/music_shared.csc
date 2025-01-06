@@ -1,5 +1,5 @@
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace music;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace music
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6154177e, Offset: 0x108
 // Size: 0x5c
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace music
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x87e0bba1, Offset: 0x170
 // Size: 0x64
 function musiccmdhandler(clientnum, state, oldstate) {

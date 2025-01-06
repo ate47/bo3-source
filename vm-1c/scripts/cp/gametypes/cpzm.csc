@@ -1,5 +1,5 @@
-#using scripts/cp/gametypes/coop;
 #using scripts/codescripts/struct;
+#using scripts/cp/gametypes/coop;
 
 #namespace cpzm;
 

@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_altbody_beast;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_altbody_beast;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #using_animtree("generic");
 
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_zod_transformer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x896f7415, Offset: 0x350
 // Size: 0x74
 function __main__() {
@@ -36,7 +36,7 @@ function __main__() {
 }
 
 // Namespace zm_zod_transformer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb15d153a, Offset: 0x3d0
 // Size: 0x132
 function init_transformers() {
@@ -51,13 +51,13 @@ function init_transformers() {
 }
 
 // Namespace zm_zod_transformer
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd720bc3b, Offset: 0x510
 // Size: 0x14c
 function function_7734548b(var_b46b59df) {
     assert(isdefined(self.script_int), "<dev string:x28>" + self.origin);
     n_power_index = self.script_int;
-    self thread namespace_215602b6::function_c5c7aef3(var_b46b59df);
+    self thread zm_altbody_beast::function_c5c7aef3(var_b46b59df);
     self clientfield::set("bminteract", 2);
     level flag::wait_till("power_on" + n_power_index);
     self thread scene::play("p7_fxanim_zm_zod_power_box_bundle", self);

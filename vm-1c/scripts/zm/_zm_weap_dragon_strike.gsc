@@ -1,36 +1,36 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_placeable_mine;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
+#using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/zm/_util;
 #using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_placeable_mine;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace dragon_strike;
 
 // Namespace dragon_strike
 // Params 0, eflags: 0x2
-// Checksum 0xaa9d02de, Offset: 0x648
+// Checksum 0xe5e01dc9, Offset: 0x648
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("zm_weap_dragon_strike", &__init__, &__main__, undefined);
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x79a02a78, Offset: 0x690
+// Params 0, eflags: 0x0
+// Checksum 0x16f28517, Offset: 0x690
 // Size: 0x2ec
 function __init__() {
     clientfield::register("scriptmover", "dragon_strike_spawn_fx", 12000, 1, "int");
@@ -53,8 +53,8 @@ function __init__() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x97a6bf5c, Offset: 0x988
+// Params 0, eflags: 0x0
+// Checksum 0x522f0cc, Offset: 0x988
 // Size: 0xc4
 function __main__() {
     zm_placeable_mine::add_mine_type("launcher_dragon_strike");
@@ -69,8 +69,8 @@ function __main__() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc8b8c2c1, Offset: 0xa58
+// Params 0, eflags: 0x0
+// Checksum 0xadba46c9, Offset: 0xa58
 // Size: 0x4c
 function on_player_connect() {
     self thread function_2d8749cd();
@@ -79,8 +79,8 @@ function on_player_connect() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x77392b1f, Offset: 0xab0
+// Params 0, eflags: 0x0
+// Checksum 0xf7ef1555, Offset: 0xab0
 // Size: 0xb4
 function on_player_spawned() {
     if (!self flag::exists("show_dragon_strike_reticule")) {
@@ -94,8 +94,8 @@ function on_player_spawned() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x689ddb37, Offset: 0xb70
+// Params 0, eflags: 0x0
+// Checksum 0x5816d350, Offset: 0xb70
 // Size: 0x58
 function function_1939853d() {
     self endon(#"disconnect");
@@ -109,8 +109,8 @@ function function_1939853d() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0xa588a6af, Offset: 0xbd0
+// Params 0, eflags: 0x0
+// Checksum 0x3028027e, Offset: 0xbd0
 // Size: 0xfc
 function add_ammo() {
     var_5a0c399b = self zm_utility::get_player_placeable_mine();
@@ -130,8 +130,8 @@ function add_ammo() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x93de40f1, Offset: 0xcd8
+// Params 0, eflags: 0x0
+// Checksum 0xeb7630ff, Offset: 0xcd8
 // Size: 0x1e0
 function function_ff07e778() {
     a_players = getplayers();
@@ -153,8 +153,8 @@ function function_ff07e778() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0xd8d3c78c, Offset: 0xec0
+// Params 0, eflags: 0x0
+// Checksum 0x8dabd792, Offset: 0xec0
 // Size: 0x94
 function on_player_disconnect() {
     self waittill(#"disconnect");
@@ -167,8 +167,8 @@ function on_player_disconnect() {
 }
 
 // Namespace dragon_strike
-// Params 11, eflags: 0x1 linked
-// Checksum 0x228f1a6c, Offset: 0xf60
+// Params 11, eflags: 0x0
+// Checksum 0x85652a4, Offset: 0xf60
 // Size: 0xd6
 function function_43b5419a(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
     if (einflictor.item == getweapon("launcher_dragon_fire") || isdefined(einflictor) && isdefined(einflictor.item) && einflictor.item == getweapon("launcher_dragon_fire_upgraded")) {
@@ -178,13 +178,13 @@ function function_43b5419a(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x908059b5, Offset: 0x1040
+// Params 0, eflags: 0x0
+// Checksum 0xee52a88d, Offset: 0x1040
 // Size: 0x74
 function function_2d8749cd() {
     self endon(#"disconnect");
     while (isdefined(self)) {
-        weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", weapon);
         if (weapon == getweapon("launcher_dragon_strike")) {
             break;
         }
@@ -193,13 +193,13 @@ function function_2d8749cd() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x22fbbac7, Offset: 0x10c0
+// Params 0, eflags: 0x0
+// Checksum 0x3e536af9, Offset: 0x10c0
 // Size: 0x110
 function function_d5acc054() {
     self endon(#"disconnect");
     while (true) {
-        weapon, previous_weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", weapon, previous_weapon);
         if (function_9e0c324b(weapon)) {
             if (self.var_8660deae === 0) {
                 self playsoundtoplayer("fly_dragon_strike_ui_error", self);
@@ -217,13 +217,13 @@ function function_d5acc054() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x52f2eb5c, Offset: 0x11d8
+// Params 0, eflags: 0x0
+// Checksum 0xf973abe5, Offset: 0x11d8
 // Size: 0x90
 function function_3e8c94e3() {
     self endon(#"disconnect");
     while (true) {
-        weapon = self waittill(#"specify_weapon_request");
+        self waittill(#"specify_weapon_request", weapon);
         if (self getammocount(weapon) == 0 || function_9e0c324b(weapon) && self.var_8660deae === 0) {
             self clientfield::increment_uimodel("dragon_strike_invalid_use");
         }
@@ -231,8 +231,8 @@ function function_3e8c94e3() {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x747969fa, Offset: 0x1270
+// Params 1, eflags: 0x0
+// Checksum 0xd3fb12d7, Offset: 0x1270
 // Size: 0x58
 function function_9e0c324b(w_check) {
     if (w_check == getweapon("launcher_dragon_strike") || w_check == getweapon("launcher_dragon_strike_upgraded")) {
@@ -242,8 +242,8 @@ function function_9e0c324b(w_check) {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x8643bb48, Offset: 0x12d0
+// Params 1, eflags: 0x0
+// Checksum 0x8d7dcf80, Offset: 0x12d0
 // Size: 0x21c
 function function_8ad253d8(previous_weapon) {
     self endon(#"hash_85e0a572");
@@ -271,8 +271,8 @@ function function_8ad253d8(previous_weapon) {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8acc8f4a, Offset: 0x14f8
+// Params 0, eflags: 0x0
+// Checksum 0x1e5db088, Offset: 0x14f8
 // Size: 0x18
 function function_f80cd2c9() {
     if (isdefined(self.var_be00572f)) {
@@ -282,8 +282,8 @@ function function_f80cd2c9() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x5d7c7884, Offset: 0x1518
+// Params 0, eflags: 0x0
+// Checksum 0xeb39b139, Offset: 0x1518
 // Size: 0x8c
 function function_2864e2c1() {
     self endon(#"disconnect");
@@ -297,8 +297,8 @@ function function_2864e2c1() {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0xdafd301f, Offset: 0x15b0
+// Params 1, eflags: 0x0
+// Checksum 0xdf0fdee5, Offset: 0x15b0
 // Size: 0x4c
 function function_42ab5fbb(var_5d020ece) {
     self clientfield::set("dragon_strike_spawn_fx", 1);
@@ -306,8 +306,8 @@ function function_42ab5fbb(var_5d020ece) {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x210e2adf, Offset: 0x1608
+// Params 1, eflags: 0x0
+// Checksum 0x17aa93ee, Offset: 0x1608
 // Size: 0x1cc
 function function_a3b69ec0(var_5d020ece) {
     self endon(#"disconnect");
@@ -333,8 +333,8 @@ function function_a3b69ec0(var_5d020ece) {
 }
 
 // Namespace dragon_strike
-// Params 5, eflags: 0x1 linked
-// Checksum 0x9a90bc54, Offset: 0x17e0
+// Params 5, eflags: 0x0
+// Checksum 0x8c5609c3, Offset: 0x17e0
 // Size: 0x242
 function function_9af893e8(e_player, var_5d020ece, b_upgraded, var_35ab0c48, w_fire) {
     var_2fcea154 = util::spawn_anim_model("c_zom_dlc3_dragon_body_airstrike", var_5d020ece.var_53d81d57, var_5d020ece.angles + (25, 0, 0));
@@ -362,8 +362,8 @@ function function_9af893e8(e_player, var_5d020ece, b_upgraded, var_35ab0c48, w_f
 }
 
 // Namespace dragon_strike
-// Params 4, eflags: 0x1 linked
-// Checksum 0xa1f298ea, Offset: 0x1a30
+// Params 4, eflags: 0x0
+// Checksum 0xc2b88d80, Offset: 0x1a30
 // Size: 0x17a
 function function_a6d19957(b_upgraded, var_aa911866, v_hitloc, n_range) {
     while (isdefined(var_aa911866)) {
@@ -384,8 +384,8 @@ function function_a6d19957(b_upgraded, var_aa911866, v_hitloc, n_range) {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x76b7f19d, Offset: 0x1bb8
+// Params 0, eflags: 0x0
+// Checksum 0x4c8a78ab, Offset: 0x1bb8
 // Size: 0x6e
 function function_adac83c4() {
     var_8eae13b3 = randomintrange(-50, 50);
@@ -395,8 +395,8 @@ function function_adac83c4() {
 }
 
 // Namespace dragon_strike
-// Params 2, eflags: 0x1 linked
-// Checksum 0x28d76c74, Offset: 0x1c30
+// Params 2, eflags: 0x0
+// Checksum 0x8df7853a, Offset: 0x1c30
 // Size: 0x1ac
 function function_6efadb82(var_825b87b9, var_5a0c399b) {
     self clientfield::set("dragon_strike_flare_fx", 1);
@@ -424,8 +424,8 @@ function function_6efadb82(var_825b87b9, var_5a0c399b) {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7a5604f8, Offset: 0x1de8
+// Params 1, eflags: 0x0
+// Checksum 0x59986e5c, Offset: 0x1de8
 // Size: 0x8c
 function function_22664e38(e_attacker) {
     if (self.damageweapon === getweapon("launcher_dragon_fire") || isdefined(self) && self.damageweapon === getweapon("launcher_dragon_fire_upgraded")) {
@@ -436,8 +436,8 @@ function function_22664e38(e_attacker) {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x636146c0, Offset: 0x1e80
+// Params 0, eflags: 0x0
+// Checksum 0xcacdf1f0, Offset: 0x1e80
 // Size: 0x34
 function function_604af93b() {
     self waittill(#"scriptedanim");
@@ -446,8 +446,8 @@ function function_604af93b() {
 }
 
 // Namespace dragon_strike
-// Params 0, eflags: 0x1 linked
-// Checksum 0x46958819, Offset: 0x1ec0
+// Params 0, eflags: 0x0
+// Checksum 0x118cf8f0, Offset: 0x1ec0
 // Size: 0x354
 function function_7fcb14a8() {
     self notify(#"hash_26b100ad");
@@ -495,8 +495,8 @@ function function_7fcb14a8() {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7d7dc027, Offset: 0x2220
+// Params 1, eflags: 0x0
+// Checksum 0xa1adcf0e, Offset: 0x2220
 // Size: 0x2da
 function function_c7832a90(v_loc) {
     var_feed8b5b = 0;
@@ -522,8 +522,8 @@ function function_c7832a90(v_loc) {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x510127d9, Offset: 0x2508
+// Params 1, eflags: 0x0
+// Checksum 0x15ffbbb6, Offset: 0x2508
 // Size: 0x5e
 function function_5a9be7d8(var_854898eb) {
     self.mdl_target clientfield::increment(var_854898eb);
@@ -532,8 +532,8 @@ function function_5a9be7d8(var_854898eb) {
 }
 
 // Namespace dragon_strike
-// Params 1, eflags: 0x1 linked
-// Checksum 0x6a6625bf, Offset: 0x2570
+// Params 1, eflags: 0x0
+// Checksum 0x92a69549, Offset: 0x2570
 // Size: 0xc4
 function function_6c8dfca2(w_weapon) {
     if (!isdefined(w_weapon) || zm_utility::is_hero_weapon(w_weapon)) {

@@ -1,9 +1,9 @@
-#using scripts/mp/_util;
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weapons;
 
 #namespace explosive_bolt;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace explosive_bolt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf806a4a7, Offset: 0x180
 // Size: 0x24
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace explosive_bolt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec314c6c, Offset: 0x1b0
 // Size: 0x1c
 function on_player_spawned() {
@@ -32,7 +32,7 @@ function on_player_spawned() {
 }
 
 // Namespace explosive_bolt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x355c3886, Offset: 0x1d8
 // Size: 0x138
 function begin_other_grenade_tracking() {
@@ -42,7 +42,7 @@ function begin_other_grenade_tracking() {
     self endon(#"bolttrackingstart");
     weapon_bolt = getweapon("explosive_bolt");
     for (;;) {
-        grenade, weapon, cooktime = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon, cooktime);
         if (grenade util::ishacked()) {
             continue;
         }
@@ -56,7 +56,7 @@ function begin_other_grenade_tracking() {
 }
 
 // Namespace explosive_bolt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcb036af0, Offset: 0x318
 // Size: 0xc
 function function_c0dabb0c(owner) {

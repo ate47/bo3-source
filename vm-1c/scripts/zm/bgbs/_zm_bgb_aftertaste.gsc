@@ -1,13 +1,13 @@
-#using scripts/shared/ai/systems/gib;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_lightning_chain;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_lightning_chain;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_aftertaste;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_aftertaste
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0eca87a, Offset: 0x218
 // Size: 0x7c
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_aftertaste
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x259233de, Offset: 0x2a0
 // Size: 0x9c
 function lost_perk_override(perk, var_2488e46a, var_24df4040) {
@@ -52,7 +52,7 @@ function lost_perk_override(perk, var_2488e46a, var_24df4040) {
 }
 
 // Namespace zm_bgb_aftertaste
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7705807e, Offset: 0x348
 // Size: 0x58
 function event() {

@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_powerup_island_seed;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f371ebf, Offset: 0x1f0
 // Size: 0x44
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_island_seed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa130375c, Offset: 0x240
 // Size: 0x14c
 function register_clientfields() {

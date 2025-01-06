@@ -1,30 +1,30 @@
-#using scripts/cp/lotus_security_station;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_lotus_sound;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/ai/phalanx;
-#using scripts/shared/colors_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/cp/lotus_security_station;
 #using scripts/cp/lotus_util;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/ai/phalanx;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace lotus_start_riot;
 
@@ -372,7 +372,7 @@ function function_54e4839a() {
 // Size: 0x1aa
 function function_c1943fd(a_ents) {
     ai_enemy = a_ents["scuffle_guard"];
-    var_14c918e8 = a_ents["scuffle_civ"];
+    ai_civ = a_ents["scuffle_civ"];
     ai_enemy ai::set_ignoreall(1);
     ai_enemy ai::set_ignoreme(1);
     trigger::wait_till("riots_wave_one");
@@ -386,12 +386,12 @@ function function_c1943fd(a_ents) {
         }
         wait 0.25;
     }
-    if (isalive(var_14c918e8)) {
+    if (isalive(ai_civ)) {
         level thread scene::play("cin_lot_02_01_startriots_vign_scuffle_cuvrun");
         wait 1;
-        if (isalive(var_14c918e8)) {
-            var_14c918e8 setgoal(getnode("scuffle_retreat_goal", "targetname"), 1);
-            var_14c918e8 thread lotus_util::function_c8849158(500, 15);
+        if (isalive(ai_civ)) {
+            ai_civ setgoal(getnode("scuffle_retreat_goal", "targetname"), 1);
+            ai_civ thread lotus_util::function_c8849158(500, 15);
         }
     }
 }
@@ -668,8 +668,8 @@ function function_cd0fea70(a_ents) {
         }
     }
     level.var_9db406db ai::set_behavior_attribute("sprint", 0);
-    var_a8015c01 = getnode("post_door_open_khalil", "targetname");
-    level.var_9db406db setgoal(var_a8015c01, 1);
+    nd_end = getnode("post_door_open_khalil", "targetname");
+    level.var_9db406db setgoal(nd_end, 1);
     level.var_9db406db waittill(#"goal");
     wait 0.5;
     level.var_9db406db ai::set_ignoreme(0);
@@ -892,7 +892,7 @@ function function_80bcd913(a_ents) {
 // Checksum 0xa5b5af6d, Offset: 0x44f0
 // Size: 0x18a
 function function_caba12d2(a_ents) {
-    level endon(#"hash_402e6fa1");
+    level endon(#"start_atrium_battle");
     var_ac318b32 = getnodearray("toss_retreat_goals", "targetname");
     var_52177c84 = 0;
     foreach (ent in a_ents) {
@@ -921,7 +921,7 @@ function function_caba12d2(a_ents) {
 // Checksum 0x6c49e92e, Offset: 0x4688
 // Size: 0x92
 function function_461f82a0(a_ents, s_scene) {
-    level endon(#"hash_402e6fa1");
+    level endon(#"start_atrium_battle");
     array::wait_any(a_ents, "death");
     if (isalive(a_ents["assassination_nrc"])) {
         a_ents["assassination_nrc"] ai::set_ignoreme(0);
@@ -980,8 +980,8 @@ function function_11c401c8() {
         level clientfield::set("sndHakimPaVox", 5);
         level.var_6bd6767c stopsounds();
         level.var_6bd6767c notify(#"hash_87b505ea");
-        level.var_6bd6767c notify(#"hash_3962ec94");
-        level.var_6bd6767c notify(#"hash_ad4a3c97");
+        level.var_6bd6767c notify(#"kill_pending_dialog");
+        level.var_6bd6767c notify(#"cancel speaking");
     }
 }
 

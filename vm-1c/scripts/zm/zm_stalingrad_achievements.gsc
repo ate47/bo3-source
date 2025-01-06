@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_achievements;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xea67b9d9, Offset: 0x278
 // Size: 0x54
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6044a79, Offset: 0x2d8
 // Size: 0xc4
 function on_player_connect() {
@@ -40,7 +40,7 @@ function on_player_connect() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa321952e, Offset: 0x3a8
 // Size: 0x44
 function function_73d8758f() {
@@ -49,7 +49,7 @@ function function_73d8758f() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbeb66235, Offset: 0x3f8
 // Size: 0x3c
 function function_69021ea7() {
@@ -59,7 +59,7 @@ function function_69021ea7() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x367d7c03, Offset: 0x440
 // Size: 0x44
 function function_42b2ae41() {
@@ -68,7 +68,7 @@ function function_42b2ae41() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c8fa777, Offset: 0x490
 // Size: 0x3c
 function function_35e5c39b() {
@@ -78,7 +78,7 @@ function function_35e5c39b() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc7c9333, Offset: 0x4d8
 // Size: 0x3c
 function function_68cad44c() {
@@ -88,7 +88,7 @@ function function_68cad44c() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc007367, Offset: 0x520
 // Size: 0x3c
 function function_77f84ddb() {
@@ -98,13 +98,13 @@ function function_77f84ddb() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc451b59, Offset: 0x568
 // Size: 0x6a
 function function_3a3c9cc6() {
     self endon(#"death");
     while (true) {
-        n_kill_count = self waittill(#"hash_c925c266");
+        self waittill(#"hash_c925c266", n_kill_count);
         if (n_kill_count >= 20) {
             self giveachievement("ZM_STALINGRAD_BEAM_KILL");
             return;
@@ -113,13 +113,13 @@ function function_3a3c9cc6() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x45cca3b4, Offset: 0x5e0
 // Size: 0x6a
 function function_b6e817dd() {
     self endon(#"death");
     while (true) {
-        n_kill_count = self waittill(#"hash_ddb84fad");
+        self waittill(#"hash_ddb84fad", n_kill_count);
         if (n_kill_count >= 8) {
             self giveachievement("ZM_STALINGRAD_STRIKE_DRAGON");
             return;
@@ -128,13 +128,13 @@ function function_b6e817dd() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b84fe90, Offset: 0x658
 // Size: 0x6a
 function function_bdcf8e90() {
     self endon(#"death");
     while (true) {
-        n_kill_count = self waittill(#"hash_8c80a390");
+        self waittill(#"hash_8c80a390", n_kill_count);
         if (n_kill_count >= 10) {
             self giveachievement("ZM_STALINGRAD_FAFNIR_KILL");
             return;
@@ -143,7 +143,7 @@ function function_bdcf8e90() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb2e9eacd, Offset: 0x6d0
 // Size: 0x3c
 function function_54dbe534() {
@@ -152,14 +152,14 @@ function function_54dbe534() {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb42d02c0, Offset: 0x718
 // Size: 0x7e
 function function_99a5ed1a(n_target_kills) {
     self endon(#"death");
     self endon(#"hash_c43b59a6");
     while (true) {
-        n_kill_count = self waittill(#"hash_e442448");
+        self waittill(#"hash_e442448", n_kill_count);
         if (n_kill_count >= n_target_kills) {
             self giveachievement("ZM_STALINGRAD_AIR_ZOMBIES");
             self notify(#"hash_c43b59a6");
@@ -168,14 +168,14 @@ function function_99a5ed1a(n_target_kills) {
 }
 
 // Namespace zm_stalingrad_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf2cc378b, Offset: 0x7a0
 // Size: 0x7e
 function function_60593db9(n_target_kills) {
     self endon(#"death");
     self endon(#"hash_c43b59a6");
     while (true) {
-        n_kill_count = self waittill(#"hash_f7608efe");
+        self waittill(#"hash_f7608efe", n_kill_count);
         if (n_kill_count >= n_target_kills) {
             self giveachievement("ZM_STALINGRAD_AIR_ZOMBIES");
             self notify(#"hash_c43b59a6");

@@ -1,29 +1,29 @@
-#using scripts/zm/zm_moon_wasteland;
-#using scripts/zm/zm_moon_utility;
-#using scripts/zm/zm_moon_gravity;
-#using scripts/zm/zm_moon;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_ai_dogs;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_dogs;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_moon;
+#using scripts/zm/zm_moon_gravity;
+#using scripts/zm/zm_moon_utility;
+#using scripts/zm/zm_moon_wasteland;
 
 #namespace zm_moon_teleporter;
 
 // Namespace zm_moon_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x71416f55, Offset: 0x668
 // Size: 0x5d4
 function function_a19db598(name) {
@@ -120,7 +120,7 @@ function function_a19db598(name) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a62766b, Offset: 0xc48
 // Size: 0x1c2
 function function_78f5cb79() {
@@ -138,13 +138,13 @@ function function_78f5cb79() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0fbc440, Offset: 0xe18
 // Size: 0xa8
 function function_6454df1b() {
     var_c35f7190 = getent("t_stream_hint_nml_player", "targetname");
     while (true) {
-        e_player = var_c35f7190 waittill(#"trigger");
+        var_c35f7190 waittill(#"trigger", e_player);
         if (!(isdefined(e_player.var_a31e4590) && e_player.var_a31e4590)) {
             e_player.var_a31e4590 = 1;
             e_player thread function_7305cc9b(var_c35f7190);
@@ -153,7 +153,7 @@ function function_6454df1b() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89f3749, Offset: 0xec8
 // Size: 0x114
 function function_7305cc9b(var_34ef544f) {
@@ -172,7 +172,7 @@ function function_7305cc9b(var_34ef544f) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x542fc195, Offset: 0xfe8
 // Size: 0x8c
 function function_5a9a4cac() {
@@ -187,7 +187,7 @@ function function_5a9a4cac() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x23ee375d, Offset: 0x1080
 // Size: 0xb6
 function function_f46a2050(player) {
@@ -213,7 +213,7 @@ function function_f46a2050(player) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf010ab88, Offset: 0x1140
 // Size: 0x166
 function function_cad30bb(var_51fda60f, name) {
@@ -245,7 +245,7 @@ function function_26330297() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdc724815, Offset: 0x12f0
 // Size: 0x1d4
 function function_7c968094(player, var_27b2670f) {
@@ -274,7 +274,7 @@ function function_7c968094(player, var_27b2670f) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9781be34, Offset: 0x14d0
 // Size: 0x30
 function function_1684fdd() {
@@ -285,7 +285,7 @@ function function_1684fdd() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x982b4321, Offset: 0x1508
 // Size: 0xc4
 function function_b9f2a774(var_51fda60f) {
@@ -303,7 +303,7 @@ function function_b9f2a774(var_51fda60f) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d724c4e, Offset: 0x15d8
 // Size: 0x188
 function function_b190610() {
@@ -330,7 +330,7 @@ function function_b190610() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41da3b23, Offset: 0x1768
 // Size: 0x8c
 function function_2f6b6897() {
@@ -348,7 +348,7 @@ function function_2f6b6897() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb2ba7cd1, Offset: 0x1800
 // Size: 0x444
 function function_a0d5bb7c() {
@@ -401,7 +401,7 @@ function function_a0d5bb7c() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb9565ea9, Offset: 0x1c50
 // Size: 0x4bc
 function function_cf379b01(var_51fda60f, var_e7383480) {
@@ -464,7 +464,7 @@ function function_cf379b01(var_51fda60f, var_e7383480) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd69c16d7, Offset: 0x2118
 // Size: 0x1bc
 function function_986fd39c() {
@@ -490,7 +490,7 @@ function function_986fd39c() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7689065, Offset: 0x22e0
 // Size: 0x1c
 function function_1b34e6b5() {
@@ -498,7 +498,7 @@ function function_1b34e6b5() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe38cc944, Offset: 0x2308
 // Size: 0x29c
 function function_af9ff3f5(var_24a83bb) {
@@ -536,7 +536,7 @@ function function_af9ff3f5(var_24a83bb) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc71e5ab7, Offset: 0x25b0
 // Size: 0x7e
 function function_da3cd0f6() {
@@ -548,7 +548,7 @@ function function_da3cd0f6() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a70b08d, Offset: 0x2638
 // Size: 0x56
 function function_d4d1fff() {
@@ -558,7 +558,7 @@ function function_d4d1fff() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd8e2256, Offset: 0x2698
 // Size: 0x56
 function function_c500da1b() {
@@ -568,7 +568,7 @@ function function_c500da1b() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc73bf0f, Offset: 0x26f8
 // Size: 0x30c
 function function_2b222584() {
@@ -627,7 +627,7 @@ function function_2b222584() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe07e2da7, Offset: 0x2a10
 // Size: 0xc8
 function function_10b88629() {
@@ -649,7 +649,7 @@ function function_10b88629() {
 }
 
 // Namespace zm_moon_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc01daaf1, Offset: 0x2ae0
 // Size: 0x274
 function function_8b4490c2(var_24a83bb) {
@@ -683,7 +683,7 @@ function function_8b4490c2(var_24a83bb) {
 }
 
 // Namespace zm_moon_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc46abd6f, Offset: 0x2d60
 // Size: 0x4c
 function function_7481262b() {

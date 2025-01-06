@@ -1,10 +1,10 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/abilities/gadgets/_gadget_armor;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/killstreaks_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace damagefeedback;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace damagefeedback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x512f8a1a, Offset: 0x4a0
 // Size: 0x44
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace damagefeedback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x4f0
 // Size: 0x4
 function init() {
@@ -34,7 +34,7 @@ function init() {
 }
 
 // Namespace damagefeedback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaee135b6, Offset: 0x500
 // Size: 0x1a4
 function on_player_connect() {
@@ -59,7 +59,7 @@ function on_player_connect() {
 }
 
 // Namespace damagefeedback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2c4ef333, Offset: 0x6b0
 // Size: 0x66
 function should_play_sound(mod) {
@@ -79,7 +79,7 @@ function should_play_sound(mod) {
 }
 
 // Namespace damagefeedback
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd46f59ff, Offset: 0x720
 // Size: 0x810
 function update(mod, inflictor, perkfeedback, weapon, victim, psoffsettime, shitloc) {
@@ -219,7 +219,7 @@ function update(mod, inflictor, perkfeedback, weapon, victim, psoffsettime, shit
 }
 
 // Namespace damagefeedback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x84feb203, Offset: 0xf38
 // Size: 0xf2
 function damage_feedback_get_stage(victim) {
@@ -242,7 +242,7 @@ function damage_feedback_get_stage(victim) {
 }
 
 // Namespace damagefeedback
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x9ef09f7c, Offset: 0x1038
 // Size: 0xee
 function damage_feedback_get_dead(victim, mod, weapon, stage) {
@@ -250,7 +250,7 @@ function damage_feedback_get_dead(victim, mod, weapon, stage) {
 }
 
 // Namespace damagefeedback
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x124420a5, Offset: 0x1130
 // Size: 0x1b8
 function damage_feedback_growth(victim, mod, weapon) {
@@ -274,7 +274,7 @@ function damage_feedback_growth(victim, mod, weapon) {
 }
 
 // Namespace damagefeedback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9954625d, Offset: 0x12f0
 // Size: 0x80
 function kill_hitmarker_fade() {
@@ -288,7 +288,7 @@ function kill_hitmarker_fade() {
 }
 
 // Namespace damagefeedback
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x96fde0, Offset: 0x1378
 // Size: 0x160
 function update_override(icon, sound, additional_icon) {
@@ -341,7 +341,7 @@ function function_7fef183e(hitent) {
 }
 
 // Namespace damagefeedback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa662c161, Offset: 0x15d8
 // Size: 0x17e
 function function_353402e0(hitent) {
@@ -374,7 +374,7 @@ function function_353402e0(hitent) {
 }
 
 // Namespace damagefeedback
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x9ad3c964, Offset: 0x1760
 // Size: 0xbe
 function dodamagefeedback(weapon, einflictor, idamage, smeansofdeath) {
@@ -398,7 +398,7 @@ function dodamagefeedback(weapon, einflictor, idamage, smeansofdeath) {
 }
 
 // Namespace damagefeedback
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfc86bb54, Offset: 0x1828
 // Size: 0x80
 function istacticalhitmarker(weapon, smeansofdeath, idamage) {

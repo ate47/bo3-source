@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_powerup_zombie_blood;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_zombie_blood
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc45ce0b, Offset: 0x330
 // Size: 0x12c
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_zombie_blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5958323f, Offset: 0x468
 // Size: 0x64
 function function_a0b86d2c(localclientnum) {
@@ -44,7 +44,7 @@ function function_a0b86d2c(localclientnum) {
 }
 
 // Namespace zm_powerup_zombie_blood
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x78770197, Offset: 0x4d8
 // Size: 0x1b6
 function toggle_player_zombie_blood_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

@@ -1,20 +1,20 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_melee_weapon;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_melee_weapon;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_bowie;
 
 // Namespace _zm_weap_bowie
 // Params 0, eflags: 0x2
-// Checksum 0xc02d18dd, Offset: 0x198
+// Checksum 0x40193374, Offset: 0x198
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("bowie_knife", &__init__, &__main__, undefined);
 }
 
 // Namespace _zm_weap_bowie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x99ec1590, Offset: 0x1e0
 // Size: 0x4
 function private __init__() {
@@ -22,8 +22,8 @@ function private __init__() {
 }
 
 // Namespace _zm_weap_bowie
-// Params 0, eflags: 0x5 linked
-// Checksum 0xfa717a6e, Offset: 0x1f0
+// Params 0, eflags: 0x4
+// Checksum 0xd2db652e, Offset: 0x1f0
 // Size: 0x104
 function private __main__() {
     if (isdefined(level.bowie_cost)) {

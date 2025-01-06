@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/music_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_prototype_amb;
 
 // Namespace zm_prototype_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x22d1981b, Offset: 0x1b8
 // Size: 0x1c
 function main() {
@@ -27,12 +27,12 @@ function function_c9207335() {
 }
 
 // Namespace zm_prototype_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1b3fbae, Offset: 0x260
 // Size: 0x94
 function function_60a32834() {
     while (true) {
-        trigplayer = self waittill(#"trigger");
+        self waittill(#"trigger", trigplayer);
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
@@ -45,7 +45,7 @@ function function_60a32834() {
 }
 
 // Namespace zm_prototype_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x231f953e, Offset: 0x300
 // Size: 0xf8
 function function_d667714e() {
@@ -54,7 +54,7 @@ function function_d667714e() {
     level.var_eb526c90 = spawn(0, (0, 0, 0), "script_origin");
     level.var_9433cf5a = level.var_eb526c90 playloopsound(level.var_b6342abd, 2);
     while (true) {
-        location = level waittill(#"hash_51d7bc7c");
+        level waittill(#"hash_51d7bc7c", location);
         level.var_6d9d81aa = "mus_prototype_underscore_" + location;
         if (level.var_6d9d81aa != level.var_b6342abd) {
             level thread function_b234849(level.var_6d9d81aa);
@@ -64,7 +64,7 @@ function function_d667714e() {
 }
 
 // Namespace zm_prototype_amb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8d55a209, Offset: 0x400
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
@@ -75,7 +75,7 @@ function function_b234849(var_6d9d81aa) {
 }
 
 // Namespace zm_prototype_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeae27673, Offset: 0x470
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -104,7 +104,7 @@ function startzmbspawnersoundloops() {
 }
 
 // Namespace zm_prototype_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdb06ac4f, Offset: 0x5d8
 // Size: 0x16c
 function soundloopthink() {

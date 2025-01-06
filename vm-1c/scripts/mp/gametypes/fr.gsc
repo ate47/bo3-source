@@ -1,18 +1,18 @@
-#using scripts/mp/_util;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
 #using scripts/mp/_pickup_items;
-#using scripts/shared/system_shared;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
 #using scripts/shared/callbacks_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/popups_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
 #using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace fr;
 
@@ -203,7 +203,7 @@ function on_player_connect() {
 function on_menu_response() {
     self endon(#"disconnect");
     for (;;) {
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         if (response == "fr_restart") {
             self playsoundtoplayer("uin_freerun_reset", self);
             self thread function_b7a29f53();
@@ -326,7 +326,7 @@ function function_53fb4d3b(trackindex) {
     function_913ea0f5();
     pickup_items::respawn_all_pickups();
     self unfreeze();
-    self.var_81008cb = undefined;
+    self.respawn_position = undefined;
     function_d79de9c3();
     function_6a8c051b();
     level.var_25665cdb.var_b05f45d8.var_25839439 thread function_4161e0ad(self);
@@ -392,7 +392,7 @@ function function_22b5bb47(player) {
 // Checksum 0xecee3e93, Offset: 0x2798
 // Size: 0x284
 function function_fcf737dc() {
-    player = self waittill(#"trigger");
+    self waittill(#"trigger", player);
     if (isplayer(player)) {
         if (level.var_25665cdb.var_a73ed5e6 != self) {
             checkpoint_index = self.var_6ae4cd19;
@@ -430,7 +430,7 @@ function function_fcf737dc() {
 // Size: 0x58
 function function_543f1f48() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (isplayer(player)) {
             player function_8f0e1bf3();
         }
@@ -480,7 +480,7 @@ function function_60fab53d(player) {
 function function_1d665b6d() {
     level notify(#"hash_32735085");
     level endon(#"hash_32735085");
-    player = self waittill(#"trigger");
+    self waittill(#"trigger", player);
     if (isplayer(player)) {
         player playsoundtoplayer("uin_freerun_finish", player);
         player function_5d8cefb2(1, 0);
@@ -490,7 +490,7 @@ function function_1d665b6d() {
             player setdstat("freerunTracksCompleted", level.var_25665cdb.trackindex);
         }
         player recordgameevent("completion");
-        player.var_81008cb = self.origin;
+        player.respawn_position = self.origin;
         player thread freeze();
         player thread function_b7a29f53(0);
         player function_64134457();
@@ -584,7 +584,7 @@ function function_c7cec620() {
 function function_1d349946(weaponobject) {
     self endon(#"death");
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (level.var_25665cdb.var_a73ed5e6 != self.checkpoint) {
             continue;
         }
@@ -876,7 +876,7 @@ function function_8f77a706(weapon) {
 function function_f32cd29e() {
     self endon(#"disconnect");
     while (true) {
-        weapon = self waittill(#"weapon_fired");
+        self waittill(#"weapon_fired", weapon);
         if (weapon == level.weaponbasemeleeheld) {
             continue;
         }
@@ -903,7 +903,7 @@ function function_41e3cbf7(position) {
 // Size: 0x54
 function function_4161e0ad(player) {
     level endon(#"activate_track");
-    trigger_ent = self waittill(#"trigger");
+    self waittill(#"trigger", trigger_ent);
     if (trigger_ent == player) {
         player function_a802497e();
     }
@@ -919,8 +919,8 @@ function function_3c68059c() {
     pickup_items::respawn_all_pickups();
     function_6a8c051b();
     self playsoundtoplayer("evt_freerun_respawn", self);
-    if (isdefined(self.var_81008cb)) {
-        self setorigin(self.var_81008cb);
+    if (isdefined(self.respawn_position)) {
+        self setorigin(self.respawn_position);
         self setvelocity((0, 0, 0));
     } else if (isdefined(level.var_25665cdb.var_a73ed5e6.spawnpoint)) {
         self setorigin(level.var_25665cdb.var_a73ed5e6.spawnpoint.origin);
@@ -1189,7 +1189,7 @@ function function_45fad1d5() {
 function function_b2a3d954() {
     level endon(#"hash_79aa8b11");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (isplayer(player)) {
             player thread function_ef3ed1a8(self.script_noteworthy);
             self triggerenable(0);

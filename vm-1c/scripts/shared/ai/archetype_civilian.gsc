@@ -1,11 +1,11 @@
-#using scripts/shared/spawner_shared;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/behavior_state_machine;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_state_machine;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
+#using scripts/shared/spawner_shared;
 
 #namespace archetype_civilian;
 
@@ -20,7 +20,7 @@ function autoexec main() {
 #namespace archetypecivilian;
 
 // Namespace archetypecivilian
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9a35315c, Offset: 0x2c8
 // Size: 0x1a4
 function registerbehaviorscriptfunctions() {
@@ -36,7 +36,7 @@ function registerbehaviorscriptfunctions() {
 }
 
 // Namespace archetypecivilian
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x625ab7ad, Offset: 0x478
 // Size: 0x13c
 function private civilianblackboardinit() {
@@ -62,7 +62,7 @@ function private civilianblackboardinit() {
 }
 
 // Namespace archetypecivilian
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x357563bd, Offset: 0x5c0
 // Size: 0xbc
 function private function_f0d98b47() {
@@ -74,7 +74,7 @@ function private function_f0d98b47() {
 }
 
 // Namespace archetypecivilian
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x59ad0bc9, Offset: 0x688
 // Size: 0x36
 function private function_e0be6cd5() {
@@ -85,7 +85,7 @@ function private function_e0be6cd5() {
 }
 
 // Namespace archetypecivilian
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x81c13565, Offset: 0x6c8
 // Size: 0x34
 function private civilianonanimscriptedcallback(entity) {
@@ -94,7 +94,7 @@ function private civilianonanimscriptedcallback(entity) {
 }
 
 // Namespace archetypecivilian
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xd7523d1d, Offset: 0x708
 // Size: 0x58
 function private civilianmoveactioninitialize(entity, asmstatename) {
@@ -104,7 +104,7 @@ function private civilianmoveactioninitialize(entity, asmstatename) {
 }
 
 // Namespace archetypecivilian
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x2dfdced8, Offset: 0x768
 // Size: 0x68
 function private civilianmoveactionfinalize(entity, asmstatename) {
@@ -115,7 +115,7 @@ function private civilianmoveactionfinalize(entity, asmstatename) {
 }
 
 // Namespace archetypecivilian
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xcfa539e, Offset: 0x7d8
 // Size: 0xc8
 function private function_d752eb0e(entity, asmstatename) {
@@ -132,7 +132,7 @@ function private function_d752eb0e(entity, asmstatename) {
 }
 
 // Namespace archetypecivilian
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xae944285, Offset: 0x8a8
 // Size: 0x34
 function private civilianispanicked(entity) {
@@ -140,7 +140,7 @@ function private civilianispanicked(entity) {
 }
 
 // Namespace archetypecivilian
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x58b3c3ee, Offset: 0x8e8
 // Size: 0x30
 function private civilianPanic(entity) {

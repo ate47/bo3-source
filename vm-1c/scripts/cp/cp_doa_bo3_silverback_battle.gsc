@@ -1,34 +1,34 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_util;
 #using scripts/cp/cp_doa_bo3_enemy;
-#using scripts/shared/statemachine_shared;
-#using scripts/cp/doa/_doa_enemy_boss;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_arena;
 #using scripts/cp/doa/_doa_chicken_pickup;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_core;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_enemy_boss;
 #using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_hazard;
 #using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
-#using scripts/shared/spawner_shared;
-#using scripts/cp/_util;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai/systems/ai_blackboard;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("generic");
 
@@ -303,7 +303,7 @@ function function_28eb6914(ent) {
         ent endon(#"death");
         while (true) {
             lasthealth = ent.health;
-            damage, attacker = ent waittill(#"damage");
+            ent waittill(#"damage", damage, attacker);
             data = namespace_49107f3a::clamp(ent.health / ent.maxhealth, 0, 1);
             level clientfield::set("pumpBannerBar", data);
         }
@@ -954,7 +954,7 @@ function function_b830b6d7(linktag, silverback) {
 function private function_c2d22e21() {
     self endon(#"death");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isplayer(guy)) {
             if (!isdefined(guy.var_18098213) || gettime() > guy.var_18098213) {
                 guy notify(#"hash_9132a424");

@@ -1,21 +1,21 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_infection_sound;
 #using scripts/cp/cp_mi_cairo_infection_util;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/shared/exploder_shared;
+#using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/player_shared;
+#using scripts/shared/exploder_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace sgen_test_chamber;
 
@@ -129,7 +129,7 @@ function function_c568c95b(str_objective, var_74cd64bc) {
     level clientfield::set("sgen_test_chamber_pod_graphics", 1);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        array::thread_all(level.players, &namespace_36cbf523::function_9f10c537);
+        array::thread_all(level.players, &infection_util::function_9f10c537);
         level thread scene::init("cin_inf_04_humanlabdeath_3rd_sh010");
         load::function_a2995f22();
     }
@@ -185,7 +185,7 @@ function function_21e8c919(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
         level util::function_d8eaed3d(9);
-        array::thread_all(level.players, &namespace_36cbf523::function_9f10c537);
+        array::thread_all(level.players, &infection_util::function_9f10c537);
         load::function_a2995f22();
     }
     videostart("cp_infection_env_raventimelapse_ravens", 1);
@@ -296,7 +296,7 @@ function function_621e0975(str_objective, var_74cd64bc) {
     videostart("cp_infection_env_timelapse_fail", 1);
     if (var_74cd64bc) {
         util::screen_fade_out(0, "white");
-        array::thread_all(level.players, &namespace_36cbf523::function_9f10c537);
+        array::thread_all(level.players, &infection_util::function_9f10c537);
     }
     level thread util::screen_fade_in(1.5, "white");
     if (isdefined(level.var_f31e5abc)) {

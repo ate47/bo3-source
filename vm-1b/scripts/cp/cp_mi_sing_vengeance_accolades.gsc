@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_accolades;
-#using scripts/shared/stealth_level;
-#using scripts/shared/stealth;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_level;
 #using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_523da15d;
 
@@ -351,7 +351,7 @@ function function_2cb00a9b() {
     self endon(#"death");
     level endon(#"garage_enemies_dead");
     while (true) {
-        damage, attacker = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker);
         if (isdefined(attacker.script_aigroup) && attacker.script_aigroup == "garage_snipers") {
             self.var_78485064 = 1;
         }

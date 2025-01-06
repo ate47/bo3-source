@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_bgb_anywhere_but_here;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_anywhere_but_here
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x872df9d7, Offset: 0x350
 // Size: 0xd4
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_anywhere_but_here
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x68ee913a, Offset: 0x430
 // Size: 0x534
 function activation() {
@@ -97,7 +97,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_anywhere_but_here
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x63f86335, Offset: 0x970
 // Size: 0x24
 function validation() {
@@ -108,7 +108,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_anywhere_but_here
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x24692623, Offset: 0x9a0
 // Size: 0x2f0
 function function_728dfe3() {

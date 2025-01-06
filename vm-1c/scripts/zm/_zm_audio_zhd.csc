@@ -1,11 +1,11 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/beam_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/beam_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_audio_zhd;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x839bd7d2, Offset: 0x630
 // Size: 0xfc
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace zm_audio_zhd
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf6f1245, Offset: 0x738
 // Size: 0x10c
 function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -47,7 +47,7 @@ function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_audio_zhd
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4d78cb81, Offset: 0x850
 // Size: 0x7c
 function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -57,7 +57,7 @@ function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_audio_zhd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43dc65dd, Offset: 0x8d8
 // Size: 0x4da
 function setup_personality_character_exerts() {

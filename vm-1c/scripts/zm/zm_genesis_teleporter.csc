@@ -1,11 +1,11 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace zm_genesis_teleporter;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34fc89d8, Offset: 0x2f8
 // Size: 0xe4
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1fe45154, Offset: 0x3e8
 // Size: 0x126
 function function_29d1f2fd() {
@@ -49,31 +49,31 @@ function function_29d1f2fd() {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x912d161a, Offset: 0x518
 // Size: 0x100
 function function_c8f25330() {
     var_80e1b4d8 = -1;
     while (true) {
-        localclientnum = level waittill(#"black_box_start");
+        level waittill(#"black_box_start", localclientnum);
         assert(isdefined(localclientnum));
         var_438e3d44 = getvisionsetnaked(localclientnum);
         playsound(0, "evt_teleport_2d_fnt", (0, 0, 0));
         visionsetnaked(localclientnum, "default", 0);
         while (var_80e1b4d8 != localclientnum) {
-            var_80e1b4d8 = level waittill(#"black_box_end");
+            level waittill(#"black_box_end", var_80e1b4d8);
         }
         visionsetnaked(localclientnum, var_438e3d44, 0);
     }
 }
 
 // Namespace zm_genesis_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc454fcd8, Offset: 0x620
 // Size: 0xc6
 function function_80009f4() {
     while (true) {
-        localclientnum = level waittill(#"tae");
+        level waittill(#"tae", localclientnum);
         if (getdvarstring("genesisAftereffectOverride") == "-1") {
             self thread [[ level.teleport_ae_funcs[randomint(level.teleport_ae_funcs.size)] ]](localclientnum);
             continue;
@@ -83,7 +83,7 @@ function function_80009f4() {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa60904fe, Offset: 0x6f0
 // Size: 0x14
 function function_ef0e774f(localclientnum) {
@@ -91,7 +91,7 @@ function function_ef0e774f(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2ea1af97, Offset: 0x710
 // Size: 0x14
 function function_fd27ac1b(localclientnum) {
@@ -99,7 +99,7 @@ function function_fd27ac1b(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x86c61373, Offset: 0x730
 // Size: 0xda
 function function_f710e21c(localclientnum) {
@@ -114,7 +114,7 @@ function function_f710e21c(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x41a1454, Offset: 0x818
 // Size: 0x9c
 function function_340c1c45(localclientnum) {
@@ -126,7 +126,7 @@ function function_340c1c45(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x16e56de9, Offset: 0x8c0
 // Size: 0x9c
 function function_2c0612f7(localclientnum) {
@@ -138,7 +138,7 @@ function function_2c0612f7(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd7c7fc32, Offset: 0x968
 // Size: 0xdc
 function function_5716654b(localclientnum) {
@@ -154,7 +154,7 @@ function function_5716654b(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97ae5704, Offset: 0xa50
 // Size: 0x9c
 function function_9fcee6e8(localclientnum) {
@@ -166,7 +166,7 @@ function function_9fcee6e8(localclientnum) {
 }
 
 // Namespace zm_genesis_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfa4265bd, Offset: 0xaf8
 // Size: 0xde
 function player_shadowman_teleport_hijack_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -184,7 +184,7 @@ function player_shadowman_teleport_hijack_fx(localclientnum, oldval, newval, bne
 }
 
 // Namespace zm_genesis_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb1c6acf3, Offset: 0xbe0
 // Size: 0x4c
 function function_bad0a94c(localclientnum) {

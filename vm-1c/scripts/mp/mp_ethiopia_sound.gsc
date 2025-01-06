@@ -1,5 +1,5 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace mp_ethiopia_sound;
 
@@ -23,7 +23,7 @@ function function_a601dc4f() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (isplayer(who)) {
             trigger playsound("amb_monkey_shot");
             wait 15;
@@ -41,7 +41,7 @@ function function_c7368d93() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (isplayer(who)) {
             trigger playsound("amb_cheeta_shot");
             wait 15;
@@ -59,7 +59,7 @@ function function_f6802baa() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (isplayer(who)) {
             trigger playsound("amb_boar_shot");
             wait 15;

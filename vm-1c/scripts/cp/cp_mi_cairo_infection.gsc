@@ -1,23 +1,23 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_infection_accolades;
+#using scripts/cp/cp_mi_cairo_infection_fx;
 #using scripts/cp/cp_mi_cairo_infection_patch;
 #using scripts/cp/cp_mi_cairo_infection_sgen_test_chamber;
 #using scripts/cp/cp_mi_cairo_infection_sim_reality_starts;
+#using scripts/cp/cp_mi_cairo_infection_sound;
 #using scripts/cp/cp_mi_cairo_infection_theia_battle;
 #using scripts/cp/cp_mi_cairo_infection_util;
-#using scripts/cp/cp_mi_cairo_infection_sound;
-#using scripts/cp/cp_mi_cairo_infection_fx;
-#using scripts/cp/cp_mi_cairo_infection_accolades;
-#using scripts/cp/_accolades;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_ammo_cache;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/cp/gametypes/_save;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_infection;
 
@@ -31,7 +31,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7f9b70, Offset: 0x690
 // Size: 0x2a4
 function main() {
@@ -66,7 +66,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3dfdae5d, Offset: 0x940
 // Size: 0x34
 function init_clientfields() {
@@ -74,7 +74,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaffe0d9d, Offset: 0x980
 // Size: 0x13a
 function on_player_spawned() {
@@ -107,7 +107,7 @@ function on_player_spawned() {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe31c5c56, Offset: 0xac8
 // Size: 0xb4
 function function_4fbaf6d6() {
@@ -120,7 +120,7 @@ function function_4fbaf6d6() {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d8c7f9d, Offset: 0xb88
 // Size: 0x4c
 function function_376778e8(n_id) {
@@ -130,7 +130,7 @@ function function_376778e8(n_id) {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x44f55dd8, Offset: 0xbe0
 // Size: 0x214
 function function_a1a20c49() {
@@ -146,7 +146,7 @@ function function_a1a20c49() {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf89bc712, Offset: 0xe00
 // Size: 0x44
 function function_1173196e(str_objective, var_74cd64bc) {
@@ -156,7 +156,7 @@ function function_1173196e(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_infection
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4e46ef4c, Offset: 0xe50
 // Size: 0x44
 function function_377593d7(str_objective, var_74cd64bc) {

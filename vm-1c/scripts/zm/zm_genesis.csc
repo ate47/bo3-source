@@ -1,81 +1,81 @@
-#using scripts/zm/zm_genesis_undercroft_low_grav;
-#using scripts/zm/zm_genesis_timer;
-#using scripts/zm/zm_genesis_wearables;
-#using scripts/zm/zm_genesis_wasp;
-#using scripts/zm/zm_genesis_traps;
-#using scripts/zm/zm_genesis_spiders;
-#using scripts/zm/zm_genesis_sound;
-#using scripts/zm/zm_genesis_skull_turret;
-#using scripts/zm/zm_genesis_shadowman;
-#using scripts/zm/zm_genesis_power;
-#using scripts/zm/zm_genesis_portals;
-#using scripts/zm/zm_genesis_wisps;
-#using scripts/zm/zm_genesis_minor_ee;
-#using scripts/zm/zm_genesis_mechz;
-#using scripts/zm/zm_genesis_keeper_companion;
-#using scripts/zm/zm_genesis_keeper;
-#using scripts/zm/zm_genesis_hope;
-#using scripts/zm/zm_genesis_fx;
-#using scripts/zm/zm_genesis_flingers;
-#using scripts/zm/zm_genesis_ffotd;
-#using scripts/zm/zm_genesis_ee_quest;
-#using scripts/zm/zm_genesis_challenges;
-#using scripts/zm/zm_genesis_boss;
-#using scripts/zm/zm_genesis_arena;
-#using scripts/zm/zm_genesis_apothicon_god;
-#using scripts/zm/zm_genesis_apothicon_fury;
-#using scripts/zm/zm_genesis_apothican;
-#using scripts/zm/zm_genesis_amb;
-#using scripts/zm/zm_genesis_ai_spawning;
-#using scripts/zm/archetype_genesis_keeper_companion;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_weap_thundergun;
-#using scripts/zm/_zm_weap_octobomb;
-#using scripts/zm/_zm_weap_idgun;
-#using scripts/zm/_zm_weap_gravityspikes;
-#using scripts/zm/_zm_weap_dragon_scale_shield;
-#using scripts/zm/_zm_weap_bouncingbetty;
-#using scripts/zm/_zm_weap_ball;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_shadow_zombie;
-#using scripts/zm/_zm_powerup_genesis_random_weapon;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/margwa;
+#using scripts/shared/ai/mechz;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_spider;
+#using scripts/zm/_electroball_grenade;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_margwa_elemental;
+#using scripts/zm/_zm_ai_mechz;
+#using scripts/zm/_zm_fog;
+#using scripts/zm/_zm_genesis_spiders;
+#using scripts/zm/_zm_grappler;
+#using scripts/zm/_zm_light_zombie;
+#using scripts/zm/_zm_pack_a_punch;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
+#using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_electric_cherry;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_perk_widows_wine;
 #using scripts/zm/_zm_powerup_carpenter;
 #using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_perk_electric_cherry;
-#using scripts/zm/_zm_perk_deadshot;
-#using scripts/zm/_zm_perk_widows_wine;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_pack_a_punch;
-#using scripts/zm/_zm_light_zombie;
-#using scripts/zm/_zm_grappler;
-#using scripts/zm/_zm_genesis_spiders;
-#using scripts/zm/_zm_fog;
-#using scripts/zm/_zm_ai_mechz;
-#using scripts/zm/_zm_ai_margwa_elemental;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/zm/_electroball_grenade;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_genesis_random_weapon;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_shadow_zombie;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_ball;
+#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_weap_dragon_scale_shield;
+#using scripts/zm/_zm_weap_gravityspikes;
+#using scripts/zm/_zm_weap_idgun;
+#using scripts/zm/_zm_weap_octobomb;
+#using scripts/zm/_zm_weap_thundergun;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/archetype_genesis_keeper_companion;
 #using scripts/zm/craftables/_zm_craft_shield;
 #using scripts/zm/craftables/_zm_craftables;
-#using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/vehicles/_spider;
-#using scripts/shared/ai/mechz;
-#using scripts/shared/ai/margwa;
-#using scripts/codescripts/struct;
+#using scripts/zm/zm_genesis_ai_spawning;
+#using scripts/zm/zm_genesis_amb;
+#using scripts/zm/zm_genesis_apothican;
+#using scripts/zm/zm_genesis_apothicon_fury;
+#using scripts/zm/zm_genesis_apothicon_god;
+#using scripts/zm/zm_genesis_arena;
+#using scripts/zm/zm_genesis_boss;
+#using scripts/zm/zm_genesis_challenges;
+#using scripts/zm/zm_genesis_ee_quest;
+#using scripts/zm/zm_genesis_ffotd;
+#using scripts/zm/zm_genesis_flingers;
+#using scripts/zm/zm_genesis_fx;
+#using scripts/zm/zm_genesis_hope;
+#using scripts/zm/zm_genesis_keeper;
+#using scripts/zm/zm_genesis_keeper_companion;
+#using scripts/zm/zm_genesis_mechz;
+#using scripts/zm/zm_genesis_minor_ee;
+#using scripts/zm/zm_genesis_portals;
+#using scripts/zm/zm_genesis_power;
+#using scripts/zm/zm_genesis_shadowman;
+#using scripts/zm/zm_genesis_skull_turret;
+#using scripts/zm/zm_genesis_sound;
+#using scripts/zm/zm_genesis_spiders;
+#using scripts/zm/zm_genesis_timer;
+#using scripts/zm/zm_genesis_traps;
+#using scripts/zm/zm_genesis_undercroft_low_grav;
+#using scripts/zm/zm_genesis_wasp;
+#using scripts/zm/zm_genesis_wearables;
+#using scripts/zm/zm_genesis_wisps;
 
 #namespace zm_genesis;
 
@@ -90,7 +90,7 @@ function autoexec opt_in() {
 }
 
 // Namespace zm_genesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x321aa31d, Offset: 0x17b8
 // Size: 0x21c
 function main() {
@@ -119,7 +119,7 @@ function main() {
 }
 
 // Namespace zm_genesis
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x281d24c9, Offset: 0x19e0
 // Size: 0x24
 function on_player_connected(var_6575414d) {
@@ -127,7 +127,7 @@ function on_player_connected(var_6575414d) {
 }
 
 // Namespace zm_genesis
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x374ad294, Offset: 0x1a10
 // Size: 0x198
 function sun_flame(var_6575414d) {
@@ -154,7 +154,7 @@ function sun_flame(var_6575414d) {
 }
 
 // Namespace zm_genesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4ca3379, Offset: 0x1bb0
 // Size: 0x34
 function include_weapons() {
@@ -163,7 +163,7 @@ function include_weapons() {
 }
 
 // Namespace zm_genesis
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6db0a5e6, Offset: 0x1bf0
 // Size: 0x1072
 function setup_personality_character_exerts() {

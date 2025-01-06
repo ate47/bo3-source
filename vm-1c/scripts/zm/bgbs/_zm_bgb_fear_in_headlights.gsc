@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_fear_in_headlights;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5eb6920c, Offset: 0x230
 // Size: 0x64
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x45567d84, Offset: 0x2a0
 // Size: 0x84
 function private function_b13c2f15() {
@@ -43,7 +43,7 @@ function private function_b13c2f15() {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x12dc37be, Offset: 0x330
 // Size: 0xac
 function private freeze_ai(ai) {
@@ -57,7 +57,7 @@ function private freeze_ai(ai) {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4053149d, Offset: 0x3e8
 // Size: 0xa8
 function private function_31a2964e(ai) {
@@ -74,7 +74,7 @@ function private function_31a2964e(ai) {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xaa2beebd, Offset: 0x498
 // Size: 0x1b2
 function private function_723d94f5(allai, trace, degree) {
@@ -95,7 +95,7 @@ function private function_723d94f5(allai, trace, degree) {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x528443d1, Offset: 0x658
 // Size: 0x26
 function validation() {
@@ -106,7 +106,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe94cb83f, Offset: 0x688
 // Size: 0xa2
 function activation() {
@@ -120,7 +120,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb4d3ac8, Offset: 0x738
 // Size: 0x318
 function function_deeb696f() {
@@ -157,7 +157,7 @@ function function_deeb696f() {
 }
 
 // Namespace zm_bgb_fear_in_headlights
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95068479, Offset: 0xa58
 // Size: 0x11a
 function kill_fear_in_headlights() {

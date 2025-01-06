@@ -1,10 +1,10 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/gametypes/_globallogic;
 #using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace battlechatter;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49ce9f9b, Offset: 0x898
 // Size: 0x64
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8adf613, Offset: 0x908
 // Size: 0x64
 function init() {
@@ -39,12 +39,12 @@ function init() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa863678f, Offset: 0x978
 // Size: 0x138
 function function_ec97233e() {
     while (true) {
-        clone, vehentnum = level waittill(#"clonedentity");
+        level waittill(#"clonedentity", clone, vehentnum);
         if (isdefined(clone) && isdefined(clone.archetype)) {
             vehiclename = clone.archetype;
             if (vehiclename == "wasp") {
@@ -65,7 +65,7 @@ function function_ec97233e() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x874e044c, Offset: 0xab8
 // Size: 0x2f4
 function function_53474d87() {
@@ -112,7 +112,7 @@ function function_53474d87() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcffdf2c7, Offset: 0xdb8
 // Size: 0xd8
 function function_c8397d24() {
@@ -130,7 +130,7 @@ function function_c8397d24() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9db3b3dd, Offset: 0xe98
 // Size: 0xd7e
 function function_9f9445a7() {
@@ -138,7 +138,7 @@ function function_9f9445a7() {
     self endon(#"disconnect");
     level endon(#"game_ended");
     while (true) {
-        notify_string = self waittill(#"bhtn_action_notify");
+        self waittill(#"bhtn_action_notify", notify_string);
         switch (notify_string) {
         case "pain":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
@@ -338,7 +338,7 @@ function function_9f9445a7() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce7dfc51, Offset: 0x1c20
 // Size: 0x68
 function function_73f2f03f() {
@@ -346,13 +346,13 @@ function function_73f2f03f() {
     self endon(#"disconnect");
     level endon(#"game_ended");
     while (true) {
-        var_daeabe55 = self waittill(#"hash_2605e152");
+        self waittill(#"hash_2605e152", var_daeabe55);
         level thread function_f3de557b(self, var_daeabe55);
     }
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x484cc03e, Offset: 0x1c90
 // Size: 0x84
 function function_bf2c3663() {
@@ -367,7 +367,7 @@ function function_bf2c3663() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93b2f612, Offset: 0x1d20
 // Size: 0x20
 function function_23b803bd() {
@@ -377,14 +377,14 @@ function function_23b803bd() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x366e049d, Offset: 0x1d48
 // Size: 0xf8
 function function_5980aba1() {
     self endon(#"death");
     self endon(#"disconnect");
     while (true) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         if (weapon.name == "frag_grenade" || weapon.name == "frag_grenade_invisible") {
             if (randomintrange(0, 100) <= 80 && !isplayer(self)) {
                 level thread function_f3de557b(self, "grenade_toss");
@@ -395,7 +395,7 @@ function function_5980aba1() {
 }
 
 // Namespace battlechatter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x688ae3fc, Offset: 0x1e48
 // Size: 0xf4
 function function_e94dcde5(thrower, grenade) {
@@ -416,7 +416,7 @@ function function_e94dcde5(thrower, grenade) {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x995f7d5, Offset: 0x1f48
 // Size: 0xa4
 function function_3920250c() {
@@ -424,7 +424,7 @@ function function_3920250c() {
     self endon(#"disconnect");
     self endon(#"hash_7985ffa");
     while (true) {
-        grenade = self waittill(#"grenade_stuck");
+        self waittill(#"grenade_stuck", grenade);
         if (isdefined(grenade)) {
             grenade.stucktoplayer = self;
         }
@@ -436,12 +436,12 @@ function function_3920250c() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6dda1d1c, Offset: 0x1ff8
 // Size: 0x9c
 function function_897d1130() {
     self endon(#"disconnect");
-    attacker, meansofdeath = self waittill(#"death");
+    self waittill(#"death", attacker, meansofdeath);
     if (isdefined(attacker) && !isplayer(attacker)) {
         if (meansofdeath == "MOD_MELEE") {
             attacker notify(#"bhtn_action_notify", "meleeKill");
@@ -452,12 +452,12 @@ function function_897d1130() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0b1a4f0, Offset: 0x20a0
 // Size: 0x38c
 function function_f921f5a3() {
     self endon(#"disconnect");
-    attacker, meansofdeath = self waittill(#"death");
+    self waittill(#"death", attacker, meansofdeath);
     if (isdefined(self)) {
         meleeassassinate = isdefined(meansofdeath) && meansofdeath == "MOD_MELEE_ASSASSINATE";
         if (isdefined(self.archetype) && self.archetype == "warlord") {
@@ -500,7 +500,7 @@ function function_f921f5a3() {
 }
 
 // Namespace battlechatter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x506c278f, Offset: 0x2438
 // Size: 0xc4
 function function_bf5d6349(object, type) {
@@ -516,7 +516,7 @@ function function_bf5d6349(object, type) {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x80159f15, Offset: 0x2508
 // Size: 0x4b2
 function function_66309b54() {
@@ -581,7 +581,7 @@ function function_66309b54() {
 }
 
 // Namespace battlechatter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbad40e49, Offset: 0x29c8
 // Size: 0x74
 function getyawtospot(spot) {
@@ -592,7 +592,7 @@ function getyawtospot(spot) {
 }
 
 // Namespace battlechatter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6b19c29c, Offset: 0x2a48
 // Size: 0x42
 function getyaw(org) {
@@ -601,7 +601,7 @@ function getyaw(org) {
 }
 
 // Namespace battlechatter
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x4bcd9115, Offset: 0x2a98
 // Size: 0x16c
 function function_f3de557b(ai, line, var_25c2125b, category, var_9d50be70) {
@@ -626,7 +626,7 @@ function function_f3de557b(ai, line, var_25c2125b, category, var_9d50be70) {
 }
 
 // Namespace battlechatter
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x418de78f, Offset: 0x2c10
 // Size: 0x21c
 function function_81d8fcf2(soundalias, var_9d50be70, response, category) {
@@ -673,7 +673,7 @@ function function_81d8fcf2(soundalias, var_9d50be70, response, category) {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8115231e, Offset: 0x2e38
 // Size: 0x50
 function function_20dcacc5() {
@@ -687,7 +687,7 @@ function function_20dcacc5() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfc78a1dc, Offset: 0x2e90
 // Size: 0x30
 function function_1af43712() {
@@ -698,7 +698,7 @@ function function_1af43712() {
 }
 
 // Namespace battlechatter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa3be1cc8, Offset: 0x2ec8
 // Size: 0x96
 function function_710804d(str_category) {
@@ -715,7 +715,7 @@ function function_710804d(str_category) {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9705872b, Offset: 0x2f68
 // Size: 0xbc
 function on_player_spawned() {
@@ -732,7 +732,7 @@ function on_player_spawned() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3964d763, Offset: 0x3030
 // Size: 0x82
 function function_a19a4a61() {
@@ -740,7 +740,7 @@ function function_a19a4a61() {
     self endon(#"disconnect");
     level endon(#"game_ended");
     while (true) {
-        notify_string = self waittill(#"bhtn_action_notify");
+        self waittill(#"bhtn_action_notify", notify_string);
         switch (notify_string) {
         case "firefly_deploy":
             break;
@@ -765,14 +765,14 @@ function function_e6d1a282(suffix) {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25938fe3, Offset: 0x3170
 // Size: 0x100
 function pain_vox() {
     self endon(#"death");
     self endon(#"disconnect");
     while (true) {
-        meansofdeath = self waittill(#"hash_b6c93e47");
+        self waittill(#"hash_b6c93e47", meansofdeath);
         if (randomintrange(0, 100) <= 100) {
             if (isalive(self)) {
                 if (meansofdeath == "MOD_DROWN") {
@@ -791,13 +791,13 @@ function pain_vox() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6ccc3fa, Offset: 0x3278
 // Size: 0xc0
 function function_7c4151cc() {
     self endon(#"death");
     self endon(#"disconnect");
-    self endon(#"hash_d1d64fcc");
+    self endon(#"snd_gasp");
     level endon(#"game_ended");
     self.var_54d33b1a = 0;
     while (true) {
@@ -805,14 +805,14 @@ function function_7c4151cc() {
             self.var_9fcbfcc0 = 0;
             self.var_54d33b1a = 1;
             self thread function_81d8fcf2("vox_pm1_gas_gasp", 1);
-            self notify(#"hash_d1d64fcc");
+            self notify(#"snd_gasp");
         }
         wait 0.5;
     }
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa05d64ed, Offset: 0x3340
 // Size: 0x58
 function function_a01d72bd() {
@@ -826,7 +826,7 @@ function function_a01d72bd() {
 }
 
 // Namespace battlechatter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9e652fe, Offset: 0x33a0
 // Size: 0x68
 function function_7e9c7abd() {
@@ -841,7 +841,7 @@ function function_7e9c7abd() {
 }
 
 // Namespace battlechatter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5f424b52, Offset: 0x3410
 // Size: 0xa8
 function wait_playback_time(soundalias, timeout) {
@@ -860,7 +860,7 @@ function wait_playback_time(soundalias, timeout) {
 }
 
 // Namespace battlechatter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xddf5be60, Offset: 0x34c0
 // Size: 0x37e
 function function_c0d9abd6(var_77415466, maxdist) {
@@ -901,7 +901,7 @@ function function_c0d9abd6(var_77415466, maxdist) {
 }
 
 // Namespace battlechatter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf3730a1a, Offset: 0x3848
 // Size: 0x216
 function function_5c9a0c2(team, object, maxdist) {
@@ -939,7 +939,7 @@ function function_5c9a0c2(team, object, maxdist) {
 }
 
 // Namespace battlechatter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb9e6b090, Offset: 0x3a68
 // Size: 0x66
 function function_d9f49fba(b_allow, str_category) {

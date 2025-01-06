@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_equipment;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_equip_gasmask;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x66f61c76, Offset: 0x330
 // Size: 0x12c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c492b5e, Offset: 0x468
 // Size: 0x4c
 function __main__() {
@@ -43,7 +43,7 @@ function __main__() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x743cba77, Offset: 0x4c0
 // Size: 0xdc
 function on_player_spawned() {
@@ -58,7 +58,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc63e9c3d, Offset: 0x5a8
 // Size: 0x160
 function function_7cd9aa57() {
@@ -89,7 +89,7 @@ function function_7cd9aa57() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3eeb0a44, Offset: 0x710
 // Size: 0x4ee
 function function_28d41431() {
@@ -162,7 +162,7 @@ function function_28d41431() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa52ff89, Offset: 0xc08
 // Size: 0xe8
 function function_4933258e() {
@@ -170,7 +170,7 @@ function function_4933258e() {
     self endon(#"hash_17dade16");
     self endon(#"disconnect");
     while (true) {
-        equipment = self waittill(#"player_given");
+        self waittill(#"player_given", equipment);
         if (equipment == level.var_f486078e) {
             self clientfield::set_player_uimodel("hudItems.showDpadDown_PES", 1);
         }
@@ -186,7 +186,7 @@ function function_4933258e() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10fd02fc, Offset: 0xcf8
 // Size: 0xe0
 function function_86a7986e() {
@@ -202,7 +202,7 @@ function function_86a7986e() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9eafe79, Offset: 0xde0
 // Size: 0x64
 function function_ec63e67() {
@@ -215,7 +215,7 @@ function function_ec63e67() {
 }
 
 // Namespace zm_equip_gasmask
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8c59d722, Offset: 0xe50
 // Size: 0x22
 function function_7dd87435() {
@@ -241,7 +241,7 @@ function function_7dd87435() {
 #/
 
 // Namespace zm_equip_gasmask
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x8a00934, Offset: 0xf18
 // Size: 0xbc
 function function_7cb416b(var_226f0a45, w_curr, var_d79c9dc0, str_notify) {

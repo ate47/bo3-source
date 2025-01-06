@@ -1,41 +1,41 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_remote_weapons;
-#using scripts/mp/killstreaks/_rcbomb;
-#using scripts/mp/killstreaks/_qrdrone;
+#using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_shellshock;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/killstreaks/_airsupport;
+#using scripts/mp/killstreaks/_helicopter;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
 #using scripts/mp/killstreaks/_killstreakrules;
 #using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_helicopter;
-#using scripts/mp/killstreaks/_airsupport;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_shellshock;
-#using scripts/mp/_util;
-#using scripts/shared/weapons/_heatseekingmissile;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicles/_wasp;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
+#using scripts/mp/killstreaks/_qrdrone;
+#using scripts/mp/killstreaks/_rcbomb;
+#using scripts/mp/killstreaks/_remote_weapons;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/killstreaks_shared;
 #using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_wasp;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_heatseekingmissile;
 
 #namespace sentinel;
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d54f382, Offset: 0x928
 // Size: 0x204
 function init() {
@@ -51,7 +51,7 @@ function init() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a8ac52b, Offset: 0xb38
 // Size: 0x42c
 function function_eb0ba513() {
@@ -94,7 +94,7 @@ function function_eb0ba513() {
 }
 
 // Namespace sentinel
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3a58b10a, Offset: 0xf70
 // Size: 0x24
 function function_65f548d5(params) {
@@ -102,7 +102,7 @@ function function_65f548d5(params) {
 }
 
 // Namespace sentinel
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xed3673f6, Offset: 0xfa0
 // Size: 0x228
 function drone_pain_for_time(time, stablizeparam, restorelookpoint, weapon) {
@@ -134,7 +134,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint, weapon) {
 }
 
 // Namespace sentinel
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x805a21a5, Offset: 0x11d0
 // Size: 0x12c
 function drone_pain(eattacker, damagetype, hitpoint, hitdirection, hitlocationinfo, partname, weapon) {
@@ -148,7 +148,7 @@ function drone_pain(eattacker, damagetype, hitpoint, hitdirection, hitlocationin
 }
 
 // Namespace sentinel
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0xc6b944b6, Offset: 0x1308
 // Size: 0x1a4
 function function_f20212e(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -165,7 +165,7 @@ function function_f20212e(einflictor, eattacker, idamage, idflags, smeansofdeath
 }
 
 // Namespace sentinel
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4ca3557e, Offset: 0x14b8
 // Size: 0x60
 function destroyed_cb(attacker, weapon) {
@@ -175,7 +175,7 @@ function destroyed_cb(attacker, weapon) {
 }
 
 // Namespace sentinel
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x23c8bff8, Offset: 0x1520
 // Size: 0x58
 function low_health_cb(attacker, weapon) {
@@ -186,7 +186,7 @@ function low_health_cb(attacker, weapon) {
 }
 
 // Namespace sentinel
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7e776746, Offset: 0x1580
 // Size: 0x3a6
 function calcspawnorigin(origin, angles) {
@@ -236,7 +236,7 @@ function calcspawnorigin(origin, angles) {
 }
 
 // Namespace sentinel
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa4f2c4b9, Offset: 0x1930
 // Size: 0x5a0
 function function_95a79a4a(killstreaktype) {
@@ -300,7 +300,7 @@ function function_95a79a4a(killstreaktype) {
 }
 
 // Namespace sentinel
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6432553d, Offset: 0x1ed8
 // Size: 0xfc
 function hackedcallbackpre(hacker) {
@@ -316,7 +316,7 @@ function hackedcallbackpre(hacker) {
 }
 
 // Namespace sentinel
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x98b7de2d, Offset: 0x1fe0
 // Size: 0x70
 function hackedcallbackpost(hacker) {
@@ -327,7 +327,7 @@ function hackedcallbackpost(hacker) {
 }
 
 // Namespace sentinel
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd5a772ff, Offset: 0x2058
 // Size: 0x3c
 function configureteampost(owner, ishacked) {
@@ -336,7 +336,7 @@ function configureteampost(owner, ishacked) {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd5e002ce, Offset: 0x20a0
 // Size: 0x64
 function watchgameended() {
@@ -349,7 +349,7 @@ function watchgameended() {
 }
 
 // Namespace sentinel
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5519bf89, Offset: 0x2110
 // Size: 0x21c
 function function_56b12a24(sentinel) {
@@ -377,7 +377,7 @@ function function_56b12a24(sentinel) {
 }
 
 // Namespace sentinel
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd681704f, Offset: 0x2338
 // Size: 0x17c
 function function_c3f9c5bd(sentinel, exitrequestedbyowner) {
@@ -403,7 +403,7 @@ function function_c3f9c5bd(sentinel, exitrequestedbyowner) {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca5ce99e, Offset: 0x24c0
 // Size: 0x124
 function ontimeout() {
@@ -420,7 +420,7 @@ function ontimeout() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e4a38de, Offset: 0x25f0
 // Size: 0x94
 function function_c3616f87() {
@@ -438,7 +438,7 @@ function function_c3616f87() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3dc76b9, Offset: 0x2690
 // Size: 0x24
 function function_5ed8df92() {
@@ -447,12 +447,12 @@ function function_5ed8df92() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1748cc30, Offset: 0x26c0
 // Size: 0x23c
 function watchdeath() {
     sentinel = self;
-    attacker, damagefromunderneath, weapon, point, dir, modtype = sentinel waittill(#"death");
+    sentinel waittill(#"death", attacker, damagefromunderneath, weapon, point, dir, modtype);
     sentinel notify(#"sentinel_shutdown");
     attacker = self [[ level.figure_out_attacker ]](attacker);
     if (!isdefined(self.owner) || isdefined(attacker) && self.owner util::isenemyplayer(attacker)) {
@@ -473,7 +473,7 @@ function watchdeath() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1ede6b09, Offset: 0x2908
 // Size: 0x84
 function watchteamchange() {
@@ -486,7 +486,7 @@ function watchteamchange() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7855fbee, Offset: 0x2998
 // Size: 0xc8
 function watchwater() {
@@ -503,7 +503,7 @@ function watchwater() {
 }
 
 // Namespace sentinel
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x261d5f6e, Offset: 0x2a68
 // Size: 0x16c
 function watchshutdown() {

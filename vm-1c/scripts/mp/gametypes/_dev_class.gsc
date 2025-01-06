@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/_util;
 #using scripts/mp/gametypes/_dev;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace dev_class;
 
 /#
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc80a5cad, Offset: 0xe8
     // Size: 0x630
     function dev_cac_init() {
@@ -111,7 +111,7 @@
     }
 
     // Namespace dev_class
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x91fc1279, Offset: 0x720
     // Size: 0xdc
     function dev_cac_camera(on) {
@@ -127,7 +127,7 @@
     }
 
     // Namespace dev_class
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xd5250500, Offset: 0x808
     // Size: 0x1fc
     function dev_cac_dpad_think(part_name, cycle_function, tag) {
@@ -159,7 +159,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x926eaf23, Offset: 0xa10
     // Size: 0xb2
     function next_in_list(value, list) {
@@ -180,7 +180,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xa0202941, Offset: 0xad0
     // Size: 0xbc
     function prev_in_list(value, list) {
@@ -201,7 +201,7 @@
     }
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1b90951a, Offset: 0xb98
     // Size: 0x1a
     function dev_cac_set_player_model() {
@@ -210,7 +210,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x3c550183, Offset: 0xbc0
     // Size: 0xf4
     function dev_cac_cycle_body(forward, tag) {
@@ -228,7 +228,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x28bbd674, Offset: 0xcc0
     // Size: 0x10c
     function dev_cac_cycle_head(forward, tag) {
@@ -247,7 +247,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x23be81ab, Offset: 0xdd8
     // Size: 0x10c
     function dev_cac_cycle_character(forward, tag) {
@@ -266,7 +266,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xc16cee3e, Offset: 0xef0
     // Size: 0x54
     function dev_cac_cycle_render_options(forward, tag) {
@@ -277,7 +277,7 @@
     }
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1a42d779, Offset: 0xf50
     // Size: 0x2e
     function dev_cac_player_valid() {
@@ -285,7 +285,7 @@
     }
 
     // Namespace dev_class
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6cc2019a, Offset: 0xf88
     // Size: 0xe2
     function dev_cac_cycle_player(forward) {
@@ -305,7 +305,7 @@
     }
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4f345c3c, Offset: 0x1078
     // Size: 0x44
     function highlight_player() {
@@ -315,7 +315,7 @@
     }
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xcd91ad7d, Offset: 0x10c8
     // Size: 0x64
     function dev_cac_overlay_think() {
@@ -326,7 +326,7 @@
     }
 
     // Namespace dev_class
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x9368dfd2, Offset: 0x1138
     // Size: 0x10
     function dev_cac_overlay_update(hud) {
@@ -334,7 +334,7 @@
     }
 
     // Namespace dev_class
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x312aec, Offset: 0x1150
     // Size: 0xa4
     function dev_cac_overlay_destroy(hud) {
@@ -346,7 +346,7 @@
     }
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xaf3b9c1d, Offset: 0x1200
     // Size: 0xd94
     function dev_cac_overlay_create() {
@@ -430,12 +430,12 @@
     }
 
     // Namespace dev_class
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x849c748c, Offset: 0x2050
     // Size: 0x1a6
     function dev_cac_gdt_update_think() {
         for (;;) {
-            asset, keyvalue = level waittill(#"gdt_update");
+            level waittill(#"gdt_update", asset, keyvalue);
             keyvalue = strtok(keyvalue, "<dev string:x423>");
             key = keyvalue[0];
             switch (key) {
@@ -470,7 +470,7 @@
     }
 
     // Namespace dev_class
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x7d635622, Offset: 0x2200
     // Size: 0xd0
     function sort_greatest(func, attribute, greatest) {
@@ -485,7 +485,7 @@
     }
 
     // Namespace dev_class
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xdca35cc6, Offset: 0x22d8
     // Size: 0xd0
     function sort_least(func, attribute, least) {
@@ -500,7 +500,7 @@
     }
 
     // Namespace dev_class
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xcfd29b40, Offset: 0x23b0
     // Size: 0xc4
     function dev_cac_set_model_range(sort_function, attribute) {

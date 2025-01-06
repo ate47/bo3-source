@@ -1,19 +1,19 @@
-#using scripts/zm/zm_genesis_util;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_genesis_util;
 
 #using_animtree("generic");
 
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_arena
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86409fd2, Offset: 0x8b8
 // Size: 0x7ac
 function __init__() {
@@ -63,7 +63,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa9179433, Offset: 0x1070
 // Size: 0x124
 function summoning_key_charge_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -76,7 +76,7 @@ function summoning_key_charge_state(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd00ef7da, Offset: 0x11a0
 // Size: 0x12a
 function arena_timeout_warning(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -92,7 +92,7 @@ function arena_timeout_warning(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4e2c699c, Offset: 0x12d8
 // Size: 0x12c
 function elec_wall_tell(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -113,7 +113,7 @@ function elec_wall_tell(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8e5c403e, Offset: 0x1410
 // Size: 0x176
 function runeprison_rock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -137,7 +137,7 @@ function runeprison_rock_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_genesis_arena
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdbda4f78, Offset: 0x1590
 // Size: 0x118
 function function_79854312(localclientnum) {
@@ -159,7 +159,7 @@ function function_79854312(localclientnum) {
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3973cc21, Offset: 0x16b0
 // Size: 0x7c
 function runeprison_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -169,7 +169,7 @@ function runeprison_explode_fx(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x21e9d9f7, Offset: 0x1738
 // Size: 0x5c
 function basin_state_0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -177,7 +177,7 @@ function basin_state_0(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbf945907, Offset: 0x17a0
 // Size: 0x5c
 function basin_state_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -185,7 +185,7 @@ function basin_state_1(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x86561420, Offset: 0x1808
 // Size: 0x5c
 function basin_state_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -193,7 +193,7 @@ function basin_state_2(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbadf53eb, Offset: 0x1870
 // Size: 0x5c
 function basin_state_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -201,7 +201,7 @@ function basin_state_3(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_arena
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xad58c89c, Offset: 0x18d8
 // Size: 0xaee
 function function_bb70f55a(localclientnum, newval, var_549b41ba) {
@@ -333,7 +333,7 @@ function function_4c31bb81(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x93a36279, Offset: 0x24f0
 // Size: 0xb4
 function summoning_circle_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -347,7 +347,7 @@ function summoning_circle_fx(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x40e29b38, Offset: 0x25b0
 // Size: 0x466
 function summoning_key_pickup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -394,7 +394,7 @@ function summoning_key_pickup(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x372afd03, Offset: 0x2a20
 // Size: 0xca
 function arena_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -418,7 +418,7 @@ function arena_state(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x93cccae4, Offset: 0x2af8
 // Size: 0x20e
 function circle_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -462,7 +462,7 @@ function circle_state(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace zm_genesis_arena
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x60312c7d, Offset: 0x2d10
 // Size: 0x24
 function function_8fbd23f4(localclientnum) {
@@ -470,7 +470,7 @@ function function_8fbd23f4(localclientnum) {
 }
 
 // Namespace zm_genesis_arena
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd53e48e7, Offset: 0x2d40
 // Size: 0x19c
 function function_244d3483(localclientnum) {
@@ -546,7 +546,7 @@ function function_5ce8eb7d(n_height) {
 }
 
 // Namespace zm_genesis_arena
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1b08a6a4, Offset: 0x31c8
 // Size: 0x1de
 function function_fad1f25a(n_height) {
@@ -581,7 +581,7 @@ function function_99a05235(b_on) {
 }
 
 // Namespace zm_genesis_arena
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcb4859e1, Offset: 0x3408
 // Size: 0xc4
 function function_7277f824(n_index, b_on) {
@@ -707,7 +707,7 @@ function function_2bcc6bd2(state, e_model) {
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x64f401c8, Offset: 0x3ce8
 // Size: 0x1ce
 function function_b9c422c3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -727,7 +727,7 @@ function function_b9c422c3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x469db4b7, Offset: 0x3ec0
 // Size: 0x54
 function arena_margwa_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -735,7 +735,7 @@ function arena_margwa_init(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc8265b11, Offset: 0x3f20
 // Size: 0x7c
 function electricity_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -747,7 +747,7 @@ function electricity_postfx_set(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x893202b, Offset: 0x3fa8
 // Size: 0x7c
 function darkness_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -759,7 +759,7 @@ function darkness_postfx_set(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x46dc7963, Offset: 0x4030
 // Size: 0x7c
 function fire_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -771,7 +771,7 @@ function fire_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x91814dc1, Offset: 0x40b8
 // Size: 0xbe
 function fire_column(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -784,7 +784,7 @@ function fire_column(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_genesis_arena
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbb9d48bb, Offset: 0x4180
 // Size: 0xd4
 function player_screen_fx(localclientnum, newval) {
@@ -801,7 +801,7 @@ function player_screen_fx(localclientnum, newval) {
 }
 
 // Namespace zm_genesis_arena
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc65774aa, Offset: 0x4260
 // Size: 0xa4
 function function_df81c23d(localclientnum, newval) {
@@ -815,7 +815,7 @@ function function_df81c23d(localclientnum, newval) {
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x18559008, Offset: 0x4310
 // Size: 0xe4
 function light_challenge_floor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -830,7 +830,7 @@ function light_challenge_floor(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2c40c50c, Offset: 0x4400
 // Size: 0xac
 function arena_tornado(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -844,7 +844,7 @@ function arena_tornado(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_arena
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1a0a0ec1, Offset: 0x44b8
 // Size: 0xac
 function arena_shadow_pillar(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

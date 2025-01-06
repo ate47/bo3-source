@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/fx_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_ramses_fx;
 
 // Namespace cp_mi_cairo_ramses_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d6db820, Offset: 0x108
 // Size: 0x94
 function main() {
@@ -14,7 +14,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_ramses_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5cc72003, Offset: 0x1a8
 // Size: 0xce
 function function_c109794d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -27,7 +27,7 @@ function function_c109794d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_ramses_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc03e9b45, Offset: 0x280
 // Size: 0xc6
 function function_d36983d1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

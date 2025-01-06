@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_load;
-#using scripts/shared/audio_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/system_shared;
+#using scripts/shared/audio_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/flag_shared;
 #using scripts/shared/scene_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
 
 #namespace aquifer_ambience;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf1e6420, Offset: 0x470
 // Size: 0x1cc
 function __init__() {
@@ -41,7 +41,7 @@ function main(localclientnum) {
 }
 
 // Namespace aquifer_ambience
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6d3a76b3, Offset: 0x660
 // Size: 0x172
 function start_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +58,7 @@ function start_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace aquifer_ambience
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x385f71ec, Offset: 0x7e0
 // Size: 0x2cc
 function stop_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -85,7 +85,7 @@ function stop_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace aquifer_ambience
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x91e51f21, Offset: 0xab8
 // Size: 0x344
 function kill_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -116,7 +116,7 @@ function kill_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97e01c72, Offset: 0xe08
 // Size: 0x23e
 function function_ca056d7e() {
@@ -147,7 +147,7 @@ function function_ca056d7e() {
 }
 
 // Namespace aquifer_ambience
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x127d9830, Offset: 0x1050
 // Size: 0x54
 function function_5794dab9(s_bundle, delay) {
@@ -159,7 +159,7 @@ function function_5794dab9(s_bundle, delay) {
 }
 
 // Namespace aquifer_ambience
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3110c74d, Offset: 0x10b0
 // Size: 0xa4
 function hide_sand_storm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -170,7 +170,7 @@ function hide_sand_storm(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace aquifer_ambience
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4d1ad5dd, Offset: 0x1160
 // Size: 0xa4
 function show_sand_storm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -181,7 +181,7 @@ function show_sand_storm(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace aquifer_ambience
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x802451d1, Offset: 0x1210
 // Size: 0x44
 function visible(bool) {
@@ -193,7 +193,7 @@ function visible(bool) {
 }
 
 // Namespace aquifer_ambience
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8a4a502, Offset: 0x1260
 // Size: 0xec
 function play_trucks(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -208,7 +208,7 @@ function play_trucks(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace aquifer_ambience
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33e438b1, Offset: 0x1358
 // Size: 0x34
 function function_89b52898() {

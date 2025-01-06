@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/fx_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_zurich_newworld_fx;
 
 // Namespace cp_mi_zurich_newworld_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9baaa0ab, Offset: 0xf8
 // Size: 0x4c
 function main() {
@@ -13,7 +13,7 @@ function main() {
 }
 
 // Namespace cp_mi_zurich_newworld_fx
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xad1477c8, Offset: 0x150
 // Size: 0x12e
 function set_fog_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

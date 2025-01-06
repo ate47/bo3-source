@@ -1,29 +1,29 @@
-#using scripts/cp/cp_mi_sing_blackstation_station;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_blackstation_comm_relay;
+#using scripts/cp/cp_mi_sing_blackstation_station;
 #using scripts/cp/cp_mi_sing_blackstation_utility;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/colors_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_blackstation_cross_debris;
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x67738285, Offset: 0x7b0
 // Size: 0x1ec
 function function_e9acb08(str_objective, var_74cd64bc) {
@@ -51,7 +51,7 @@ function function_e9acb08(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x81fa9cc7, Offset: 0x9a8
 // Size: 0x84
 function function_508330ae(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -62,7 +62,7 @@ function function_508330ae(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3502254a, Offset: 0xa38
 // Size: 0x194
 function function_b0ed4f4f() {
@@ -79,7 +79,7 @@ function function_b0ed4f4f() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb6011feb, Offset: 0xbd8
 // Size: 0x74
 function function_52065393() {
@@ -90,7 +90,7 @@ function function_52065393() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2dfe892e, Offset: 0xc58
 // Size: 0x9c
 function function_5fae6516() {
@@ -102,7 +102,7 @@ function function_5fae6516() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1de3d93c, Offset: 0xd00
 // Size: 0xfc
 function function_289b95f6() {
@@ -117,7 +117,7 @@ function function_289b95f6() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6919d44, Offset: 0xe08
 // Size: 0xfc
 function function_9ead7187() {
@@ -134,7 +134,7 @@ function function_9ead7187() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa1111c3f, Offset: 0xf10
 // Size: 0x44
 function function_8bcb3a1b(a_ents) {
@@ -142,7 +142,7 @@ function function_8bcb3a1b(a_ents) {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x503e241, Offset: 0xf60
 // Size: 0x1d6
 function function_7e62fe5e() {
@@ -163,7 +163,7 @@ function function_7e62fe5e() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41d64e5f, Offset: 0x1140
 // Size: 0x254
 function function_6ffde259() {
@@ -188,7 +188,7 @@ function function_6ffde259() {
 }
 
 // Namespace cp_mi_sing_blackstation_cross_debris
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96ea6acd, Offset: 0x13a0
 // Size: 0xba
 function function_beaf4ba6(a_ents) {

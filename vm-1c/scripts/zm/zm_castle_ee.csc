@@ -1,13 +1,13 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/duplicaterender_mgr;
 #using scripts/shared/postfx_shared;
-#using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_castle_ee;
 
 // Namespace zm_castle_ee
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x865b57d3, Offset: 0x340
 // Size: 0x7a
 function main() {
@@ -18,7 +18,7 @@ function main() {
 }
 
 // Namespace zm_castle_ee
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x12d87735, Offset: 0x3c8
 // Size: 0x264
 function register_clientfields() {
@@ -34,7 +34,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xff6ca0c8, Offset: 0x638
 // Size: 0x74
 function ghost_actor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -43,7 +43,7 @@ function ghost_actor(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3c4c1426, Offset: 0x6b8
 // Size: 0x1ac
 function function_2a1f20f9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -72,7 +72,7 @@ function function_2a1f20f9(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdcf41dcb, Offset: 0x870
 // Size: 0x23c
 function channeling_stone_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -107,7 +107,7 @@ function channeling_stone_glow(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3386fe12, Offset: 0xab8
 // Size: 0x64
 function function_3c1114e8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -115,7 +115,7 @@ function function_3c1114e8(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xad443d69, Offset: 0xb28
 // Size: 0x64
 function flip_skybox(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -125,7 +125,7 @@ function flip_skybox(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x72fdfad2, Offset: 0xb98
 // Size: 0xfc
 function sndDeathRayToMoon(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -141,7 +141,7 @@ function sndDeathRayToMoon(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9518b936, Offset: 0xca0
 // Size: 0xb4
 function outro_lighting_banks(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,7 +155,7 @@ function outro_lighting_banks(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_castle_ee
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xda5e6685, Offset: 0xd60
 // Size: 0x84
 function moon_explosion_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

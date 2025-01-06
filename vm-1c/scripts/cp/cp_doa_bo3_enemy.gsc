@@ -1,31 +1,31 @@
-#using scripts/cp/doa/_doa_enemy_boss;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_sfx;
+#using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_core;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_enemy_boss;
 #using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_hazard;
 #using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
-#using scripts/cp/_util;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/flagsys_shared;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_51bd792;
 
@@ -207,11 +207,11 @@ function function_a0d7d949(spawner, loc, def) {
 // Checksum 0xd9f3c085, Offset: 0x1960
 // Size: 0x288
 function function_bb3b0416(spawner, loc, def) {
-    var_a47b1f6f = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
-    if (level.doa.spawners[var_a47b1f6f]["wolf"].size == 0) {
+    spawn_set = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
+    if (level.doa.spawners[spawn_set]["wolf"].size == 0) {
         return;
     }
-    loc = level.doa.spawners[var_a47b1f6f]["wolf"][randomint(level.doa.spawners[var_a47b1f6f]["wolf"].size)];
+    loc = level.doa.spawners[spawn_set]["wolf"][randomint(level.doa.spawners[spawn_set]["wolf"].size)];
     ai = doa_enemy::function_a4e16560(spawner, loc, isdefined(def) ? isdefined(def.forcespawn) && def.forcespawn : 0);
     if (isdefined(ai)) {
         ai.spawner = spawner;
@@ -278,7 +278,7 @@ function function_8b898788() {
     self.var_b9f32367 enablelinkto();
     self.var_b9f32367 linkto(self);
     while (isdefined(self)) {
-        guy = self.var_b9f32367 waittill(#"trigger");
+        self.var_b9f32367 waittill(#"trigger", guy);
         if (!isdefined(guy)) {
             continue;
         }
@@ -811,7 +811,7 @@ function function_deb6cf13() {
     origin = self.origin;
     self.takedamage = 1;
     while (true) {
-        damage = self waittill(#"damage");
+        self waittill(#"damage", damage);
         /#
             namespace_49107f3a::debugmsg("<dev string:x40>" + damage + "<dev string:x56>" + self.health);
         #/
@@ -871,7 +871,7 @@ function function_e0df2a3e() {
 function function_8fe0340c() {
     self endon(#"death");
     while (true) {
-        origin = level waittill(#"hash_842cebcb");
+        level waittill(#"hash_842cebcb", origin);
         distsq = distancesquared(self.origin, origin);
         if (distsq < 72 * 72) {
             self notify(#"hatchNow");
@@ -1412,7 +1412,7 @@ function private function_2f0633b5() {
 function private function_7c9f5521(zombie, spot) {
     zombie endon(#"rise_anim_finished");
     while (isdefined(zombie) && isdefined(zombie.health) && zombie.health > 1) {
-        amount = zombie waittill(#"damage");
+        zombie waittill(#"damage", amount);
     }
     if (isdefined(zombie)) {
         zombie.deathanim = "zm_rise_death_in";
@@ -1789,13 +1789,13 @@ function private function_c0147a11() {
     self thread function_13109fad();
     /#
         if (isdefined(level.doa.var_33749c8)) {
-            self thread DOA_BOSS::function_76b30cc1();
+            self thread namespace_4973e019::function_76b30cc1();
         }
     #/
     if (isdefined(level.doa.margwa) && level.doa.margwa == self) {
         while (self.health > 0) {
             lasthealth = self.health;
-            damage, attacker = self waittill(#"damage");
+            self waittill(#"damage", damage, attacker);
             data = namespace_49107f3a::clamp(self.health / self.maxhealth, 0, 1);
             level clientfield::set("pumpBannerBar", data);
             if (isdefined(attacker) && isplayer(attacker)) {
@@ -1894,7 +1894,7 @@ function private function_1c99c7cd() {
     trigger thread namespace_49107f3a::function_783519c1("exit_taken", 1);
     trigger thread namespace_49107f3a::function_981c685d(self);
     while (isdefined(self)) {
-        guy = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", guy);
         if (isdefined(self)) {
             guy dodamage(665, guy.origin, self, self);
         }

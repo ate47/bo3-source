@@ -1,5 +1,5 @@
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace art;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace art
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7133ad0, Offset: 0x1e8
 // Size: 0x234
 function __init__() {
@@ -60,7 +60,7 @@ function __init__() {
 #/
 
 // Namespace art
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5585d4b9, Offset: 0x478
 // Size: 0xd4
 function strtok_loc(string, par1) {
@@ -106,7 +106,7 @@ function setfogsliders() {
 /#
 
     // Namespace art
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdb784f0b, Offset: 0x718
     // Size: 0x960
     function tweakart() {
@@ -200,7 +200,7 @@ function setfogsliders() {
 #/
 
 // Namespace art
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa95277c2, Offset: 0x1080
 // Size: 0x2d4
 function fovslidercheck() {
@@ -233,7 +233,7 @@ function fovslidercheck() {
 /#
 
     // Namespace art
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2c6d0dd2, Offset: 0x1360
     // Size: 0x404
     function dumpsettings() {

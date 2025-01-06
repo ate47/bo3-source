@@ -1,16 +1,16 @@
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace sentry_turret;
 
@@ -512,7 +512,7 @@ function sentry_turret_death() {
         return;
     }
     self notify(#"nodeath_thread");
-    attacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
+    self waittill(#"death", attacker, damagefromunderneath, weapon, point, dir);
     if (!isdefined(self)) {
         return;
     }

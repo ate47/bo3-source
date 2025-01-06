@@ -1,19 +1,19 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/lotus_util;
-#using scripts/cp/cp_mi_cairo_lotus_sound;
-#using scripts/cp/cp_mi_cairo_lotus_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_lotus_fx;
+#using scripts/cp/cp_mi_cairo_lotus_sound;
+#using scripts/cp/lotus_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_cairo_lotus;
 
@@ -22,7 +22,7 @@
 // Checksum 0xc16a0261, Offset: 0x930
 // Size: 0xb2
 function main() {
-    util::function_57b966c8(&function_71f88fc, 3);
+    util::function_57b966c8(&force_streamer, 3);
     init_clientfields();
     cp_mi_cairo_lotus_fx::main();
     cp_mi_cairo_lotus_sound::main();
@@ -57,7 +57,7 @@ function function_f61f00f(localclientnum) {
         return;
     }
     e_trigger._localclientnum = localclientnum;
-    trigplayer = e_trigger waittill(#"trigger");
+    e_trigger waittill(#"trigger", trigplayer);
     e_trigger thread trigger::function_thread(trigplayer, &function_df453073);
 }
 
@@ -115,7 +115,7 @@ function function_29c8893e(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 1, eflags: 0x0
 // Checksum 0x8de5299, Offset: 0x1028
 // Size: 0x1c9
-function function_71f88fc(n_index) {
+function force_streamer(n_index) {
     switch (n_index) {
     case 1:
         forcestreambundle("cin_lot_01_planb_3rd_sh020");

@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_pack_a_punch_util;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_pack_a_punch_util;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_bgb_arms_grace;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_arms_grace
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6faa7cb9, Offset: 0x228
 // Size: 0x6c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_arms_grace
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x38795b6c, Offset: 0x2a0
 // Size: 0x50
 function event() {
@@ -45,7 +45,7 @@ function event() {
 }
 
 // Namespace zm_bgb_arms_grace
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43beadfe, Offset: 0x2f8
 // Size: 0x5c
 function givestartloadout() {
@@ -60,7 +60,7 @@ function givestartloadout() {
 }
 
 // Namespace zm_bgb_arms_grace
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9c90067d, Offset: 0x360
 // Size: 0x35c
 function function_f1adaf91(player) {

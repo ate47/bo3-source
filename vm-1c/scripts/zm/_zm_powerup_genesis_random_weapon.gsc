@@ -1,23 +1,23 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_devgui;
 #using scripts/zm/_zm_magicbox;
 #using scripts/zm/_zm_melee_weapon;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_blockers;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_powerup_genesis_random_weapon;
 
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_genesis_random_weapon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe32e26b0, Offset: 0x520
 // Size: 0x144
 function __init__() {
@@ -57,7 +57,7 @@ function function_f99a1ed4() {
 }
 
 // Namespace zm_powerup_genesis_random_weapon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x77c9a73f, Offset: 0x680
 // Size: 0x674
 function function_984a38e(e_player) {
@@ -127,7 +127,7 @@ function function_89d232d2() {
 /#
 
     // Namespace zm_powerup_genesis_random_weapon
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x22d31693, Offset: 0xd48
     // Size: 0x64
     function function_15732f56() {
@@ -138,7 +138,7 @@ function function_89d232d2() {
     }
 
     // Namespace zm_powerup_genesis_random_weapon
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2a273be5, Offset: 0xdb8
     // Size: 0xa4
     function function_9677023e(cmd) {

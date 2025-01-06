@@ -1,36 +1,36 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_mapping_drone;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
 #using scripts/cp/cp_mi_sing_sgen_exterior;
 #using scripts/cp/cp_mi_sing_sgen_sound;
 #using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_load;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_mapping_drone;
-#using scripts/cp/_hacking;
-#using scripts/cp/_oed;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/ai/archetype_warlord_interface;
 #using scripts/shared/ai/warlord;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/lui_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_sgen_enter_silo;
 
@@ -71,7 +71,7 @@ function function_aa390943(str_objective, var_74cd64bc) {
     level thread util::function_d8eaed3d(6);
     level util::delay(2, undefined, &function_2f312deb);
     level flag::wait_till("data_recovered");
-    namespace_2afd69a::function_10dad989();
+    mapping_drone::spawn_drone();
     level scene::add_scene_func("cin_sgen_06_01_followleader_vign_activate_eac_hendricks", &function_8e9806c5);
     level scene::add_scene_func("cin_sgen_06_01_followleader_vign_activate_eac_drone", &function_8cf3dc94);
     level thread scene::play("cin_sgen_06_01_followleader_vign_activate_eac_drone");
@@ -214,7 +214,7 @@ function function_ab1ca63f() {
 function function_17b49f2c(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         sgen::function_bff1a867(str_objective);
-        namespace_2afd69a::function_10dad989("nd_post_discover_data");
+        mapping_drone::spawn_drone("nd_post_discover_data");
         level.var_2fd26037 ai::set_behavior_attribute("cqb", 1);
         level.var_2fd26037 ai::set_behavior_attribute("sprint", 0);
         bm_discover_data_player_clip = getent("bm_discover_data_player_clip", "targetname");
@@ -360,7 +360,7 @@ function function_8e0d5dae() {
     var_4fee738e = getent("dust_fx", "targetname");
     var_4fee738e endon(#"death");
     while (true) {
-        who = var_4fee738e waittill(#"trigger");
+        var_4fee738e waittill(#"trigger", who);
         if (isplayer(who)) {
             var_4fee738e setinvisibletoplayer(who);
             who clientfield::set_to_player("dust_motes", 1);
@@ -393,7 +393,7 @@ function function_d3711d76() {
 function function_ab2e4091(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         sgen::function_bff1a867(str_objective);
-        namespace_2afd69a::function_10dad989("nd_start_gen_lab");
+        mapping_drone::spawn_drone("nd_start_gen_lab");
         objectives::complete("cp_level_sgen_enter_sgen_no_pointer");
         objectives::complete("cp_level_sgen_investigate_sgen");
         objectives::complete("cp_level_sgen_locate_emf");
@@ -514,7 +514,7 @@ function function_7d0e1b80() {
     self ai::set_ignoreme(1);
     level flag::wait_till("gen_lab_gone_hot");
     if (self.active_camo === 1) {
-        self waittill(#"hash_1d75a6cc");
+        self waittill(#"active_camo_off");
     }
     self ai::set_ignoreme(0);
 }
@@ -743,7 +743,7 @@ function function_532aa385() {
 function function_d26cae1c(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         sgen::function_bff1a867(str_objective);
-        mapping_drone::function_10dad989("nd_post_gen_lab_start");
+        mapping_drone::spawn_drone("nd_post_gen_lab_start");
         objectives::complete("cp_level_sgen_enter_sgen_no_pointer");
         objectives::complete("cp_level_sgen_investigate_sgen");
         objectives::complete("cp_level_sgen_locate_emf");
@@ -846,7 +846,7 @@ function function_a6226aba() {
 function function_f6774f56(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         sgen::function_bff1a867(str_objective);
-        mapping_drone::function_10dad989("nd_follow_chem_lab");
+        mapping_drone::spawn_drone("nd_follow_chem_lab");
         objectives::complete("cp_level_sgen_enter_sgen_no_pointer");
         objectives::complete("cp_level_sgen_investigate_sgen");
         objectives::complete("cp_level_sgen_locate_emf");
@@ -1003,7 +1003,7 @@ function function_4843e971(str_objective, var_74cd64bc) {
         level.var_2fd26037 ai::set_behavior_attribute("cqb", 1);
         level.var_2fd26037 ai::set_behavior_attribute("sprint", 0);
         level flag::set("player_in_chem_lab");
-        mapping_drone::function_10dad989("nd_pre_ambush");
+        mapping_drone::spawn_drone("nd_pre_ambush");
         level.var_ea764859 thread function_3054092d();
         level.var_2fd26037 thread function_abf124c5();
         objectives::complete("cp_level_sgen_enter_sgen_no_pointer");
@@ -1102,7 +1102,7 @@ function function_6926cd7f(str_objective, var_74cd64bc) {
         level.var_2fd26037 ai::set_behavior_attribute("cqb", 1);
         level.var_2fd26037 ai::set_behavior_attribute("sprint", 0);
         level.var_2fd26037 thread function_fe2615a5();
-        mapping_drone::function_10dad989("nd_highlight_grate");
+        mapping_drone::spawn_drone("nd_highlight_grate");
         level.var_ea764859 thread function_fdbec74b();
         objectives::complete("cp_level_sgen_enter_sgen_no_pointer");
         objectives::complete("cp_level_sgen_investigate_sgen");
@@ -1355,7 +1355,7 @@ function function_73a47766(b_state) {
 function function_77964ef1(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         sgen::function_bff1a867(str_objective);
-        mapping_drone::function_10dad989("nd_silo_grate");
+        mapping_drone::spawn_drone("nd_silo_grate");
         level.var_ea764859 thread function_e6e2c015();
         level scene::skipto_end("p7_fxanim_cp_sgen_bridge_silo_edge_break_bundle");
         scene::add_scene_func("cin_sgen_11_02_silofloor_vign_notice_hendricks", &function_2e68b5db, "init");

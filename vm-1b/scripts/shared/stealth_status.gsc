@@ -1,10 +1,10 @@
-#using scripts/shared/stealth_debug;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_player;
-#using scripts/shared/stealth_aware;
 #using scripts/shared/stealth;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_debug;
+#using scripts/shared/stealth_player;
+#using scripts/shared/stealth_tagging;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_status;
 

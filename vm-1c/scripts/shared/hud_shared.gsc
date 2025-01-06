@@ -1,7 +1,7 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/system_shared;
 
 #namespace hud;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace hud
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67b6b5b9, Offset: 0x168
 // Size: 0x24
 function __init__() {
@@ -22,7 +22,7 @@ function __init__() {
 }
 
 // Namespace hud
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcea92629, Offset: 0x198
 // Size: 0x384
 function init() {
@@ -86,7 +86,7 @@ function init() {
 }
 
 // Namespace hud
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d41364, Offset: 0x528
 // Size: 0x44
 function function_1ad5c13d() {
@@ -97,7 +97,7 @@ function function_1ad5c13d() {
 }
 
 // Namespace hud
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x225808c6, Offset: 0x578
 // Size: 0x174
 function function_5e2578bc(player) {
@@ -129,7 +129,7 @@ function function_5e2578bc(player) {
 }
 
 // Namespace hud
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x2d9af48c, Offset: 0x6f8
 // Size: 0x74
 function fade_to_black_for_x_sec(startwait, blackscreenwait, fadeintime, fadeouttime, shadername) {
@@ -141,7 +141,7 @@ function fade_to_black_for_x_sec(startwait, blackscreenwait, fadeintime, fadeout
 }
 
 // Namespace hud
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc469113f, Offset: 0x778
 // Size: 0x24
 function screen_fade_in(fadeintime) {

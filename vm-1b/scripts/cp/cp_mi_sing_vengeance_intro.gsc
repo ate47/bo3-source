@@ -1,35 +1,35 @@
-#using scripts/cp/cp_mi_sing_vengeance_killing_streets;
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_vengeance_accolades;
-#using scripts/shared/stealth;
-#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/cp_mi_sing_vengeance_killing_streets;
 #using scripts/cp/cp_mi_sing_vengeance_sound;
 #using scripts/cp/cp_mi_sing_vengeance_util;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/shared/turret_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/animation_shared;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/cp/_load;
-#using scripts/cp/_debug;
+#using scripts/cp/gametypes/_battlechatter;
 #using scripts/cp/gametypes/_save;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/cp/_dialog;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace namespace_8776ed6e;
 
@@ -85,7 +85,7 @@ function apartment_light_fire_fx() {
     level endon(#"start_takedown_igc");
     trigger = getent("apartment_light_fire_trigger", "targetname");
     while (true) {
-        e_other = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", e_other);
         if (e_other == self && isplayer(self)) {
             while (isdefined(self) && self istouching(trigger)) {
                 if (!isdefined(self.apartment_light_fire)) {
@@ -190,8 +190,8 @@ function function_21e6e30e() {
 // Params 3, eflags: 0x0
 // Checksum 0xb0615a5e, Offset: 0x27c8
 // Size: 0x52
-function function_a1d4e729(var_6fbdf20, wait_flag, breadcrumb) {
-    level endon(var_6fbdf20);
+function function_a1d4e729(endon_flag, wait_flag, breadcrumb) {
+    level endon(endon_flag);
     level flag::wait_till(wait_flag);
     level objectives::breadcrumb(breadcrumb);
     level flag::set(breadcrumb);
@@ -353,8 +353,8 @@ function function_8fc34056() {
 // Params 2, eflags: 0x0
 // Checksum 0x90ccd5d2, Offset: 0x30c0
 // Size: 0x32
-function function_d5df9cca(var_6fbdf20, var_1e583720) {
-    level endon(var_6fbdf20);
+function function_d5df9cca(endon_flag, var_1e583720) {
+    level endon(endon_flag);
     level.var_2fd26037 waittill(var_1e583720);
     level flag::set(var_1e583720);
 }
@@ -593,12 +593,12 @@ function function_5ef7fdc2() {
 // Params 2, eflags: 0x0
 // Checksum 0x67d0325b, Offset: 0x40f0
 // Size: 0xb9
-function function_4e050c10(trigger, var_6fbdf20) {
+function function_4e050c10(trigger, endon_flag) {
     self endon(#"death");
     self endon(#"disconnect");
     level endon(#"player_looking");
-    if (isdefined(var_6fbdf20)) {
-        level endon(var_6fbdf20);
+    if (isdefined(endon_flag)) {
+        level endon(endon_flag);
     }
     trigger_target = struct::get(trigger.target, "targetname");
     while (true) {
@@ -698,7 +698,7 @@ function function_fb5e09cf() {
 function function_5a4b0113() {
     self endon(#"death");
     level endon(#"synckill_scene_complete");
-    state = self waittill(#"alert");
+    self waittill(#"alert", state);
     if (!level flag::get("apartment_enemies_alerted")) {
         level flag::set("apartment_enemies_alerted");
     }
@@ -762,8 +762,8 @@ function function_c55b72a5() {
     bedroom_audio_origin = getent("bedroom_audio_origin", "targetname");
     level thread function_a5bf9c17(bedroom_audio_origin);
     level flag::wait_till_any(array("apartment_enemies_alerted", "syncshot_lookat_failsafe"));
-    level notify(#"hash_3962ec94");
-    bedroom_audio_origin notify(#"hash_3962ec94");
+    level notify(#"kill_pending_dialog");
+    bedroom_audio_origin notify(#"kill_pending_dialog");
 }
 
 // Namespace namespace_8776ed6e

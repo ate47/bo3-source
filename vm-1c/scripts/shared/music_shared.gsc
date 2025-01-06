@@ -1,6 +1,6 @@
 #using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace music;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace music
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8bb88893, Offset: 0x130
 // Size: 0x5c
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace music
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa2eaa94d, Offset: 0x198
 // Size: 0xa8
 function setmusicstate(state, player) {
@@ -44,7 +44,7 @@ function setmusicstate(state, player) {
 }
 
 // Namespace music
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x201531c3, Offset: 0x248
 // Size: 0x9c
 function on_player_spawned() {

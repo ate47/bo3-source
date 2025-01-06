@@ -1,11 +1,11 @@
-#using scripts/shared/math_shared;
+#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/filter_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace drown;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x840f6871, Offset: 0x260
 // Size: 0x17c
 function __init__() {
@@ -34,7 +34,7 @@ function __init__() {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78e0d25, Offset: 0x3e8
 // Size: 0x3c0
 function setup_radius_values() {
@@ -65,7 +65,7 @@ function setup_radius_values() {
 }
 
 // Namespace drown
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x526a1f7f, Offset: 0x7b0
 // Size: 0x54
 function player_spawned(localclientnum) {
@@ -77,7 +77,7 @@ function player_spawned(localclientnum) {
 }
 
 // Namespace drown
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39402047, Offset: 0x810
 // Size: 0x40
 function player_init_drown_values() {
@@ -90,7 +90,7 @@ function player_init_drown_values() {
 }
 
 // Namespace drown
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x87be34c2, Offset: 0x858
 // Size: 0x4c
 function player_watch_drown_shutdown(localclientnum) {
@@ -99,7 +99,7 @@ function player_watch_drown_shutdown(localclientnum) {
 }
 
 // Namespace drown
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd41a63c, Offset: 0x8b0
 // Size: 0x9c
 function enable_drown(localclientnum, stage) {
@@ -112,7 +112,7 @@ function enable_drown(localclientnum, stage) {
 }
 
 // Namespace drown
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x577fe723, Offset: 0x958
 // Size: 0x24
 function disable_drown(localclientnum) {
@@ -120,7 +120,7 @@ function disable_drown(localclientnum) {
 }
 
 // Namespace drown
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf743e8f6, Offset: 0x988
 // Size: 0x2c8
 function player_drown_fx(localclientnum, stage) {
@@ -150,7 +150,7 @@ function player_drown_fx(localclientnum, stage) {
 }
 
 // Namespace drown
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeba819f9, Offset: 0xc58
 // Size: 0x1f4
 function player_fade_out_drown_fx(localclientnum) {
@@ -175,7 +175,7 @@ function player_fade_out_drown_fx(localclientnum) {
 }
 
 // Namespace drown
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x51b7e3d, Offset: 0xe58
 // Size: 0xcc
 function drown_stage_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

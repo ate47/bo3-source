@@ -1,30 +1,30 @@
-#using scripts/mp/_util;
 #using scripts/mp/_challenges;
-#using scripts/mp/gametypes/_spectating;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_defaults;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/_util;
 #using scripts/mp/gametypes/_battlechatter;
-#using scripts/shared/abilities/gadgets/_gadget_resurrect;
-#using scripts/mp/gametypes/_globallogic_spawn;
 #using scripts/mp/gametypes/_dogtags;
-#using scripts/shared/util_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/scoreevents_shared;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_defaults;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/gametypes/_spectating;
+#using scripts/shared/abilities/gadgets/_gadget_resurrect;
+#using scripts/shared/demo_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/medals_shared;
 #using scripts/shared/popups_shared;
 #using scripts/shared/rank_shared;
-#using scripts/shared/medals_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/demo_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/util_shared;
 
 #namespace sd;
 
@@ -550,7 +550,7 @@ function setbomboverheatingafterweaponchange(useobject, overheated, heat) {
     self endon(#"disconnect");
     self endon(#"joined_team");
     self endon(#"joined_spectators");
-    weapon = self waittill(#"weapon_change");
+    self waittill(#"weapon_change", weapon);
     if (weapon == useobject.useweapon) {
         self setweaponoverheating(overheated, heat, weapon);
     }

@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace mirg2000;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace mirg2000
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x536a33d7, Offset: 0x518
 // Size: 0x2da
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace mirg2000
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5f993857, Offset: 0x800
 // Size: 0x1de
 function function_23a70949(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -70,7 +70,7 @@ function function_23a70949(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace mirg2000
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa6e33b24, Offset: 0x9e8
 // Size: 0xbc
 function function_15ad909d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -84,7 +84,7 @@ function function_15ad909d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace mirg2000
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfe84fcff, Offset: 0xab0
 // Size: 0xbc
 function function_1d3d9723(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -98,7 +98,7 @@ function function_1d3d9723(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace mirg2000
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe0f014d9, Offset: 0xb78
 // Size: 0xce
 function mirg2000_fire_button_held_sound(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -117,7 +117,7 @@ function mirg2000_fire_button_held_sound(localclientnum, oldval, newval, bnewent
 }
 
 // Namespace mirg2000
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf8d3e9ce, Offset: 0xc50
 // Size: 0x1b6
 function mirg2000_charge_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

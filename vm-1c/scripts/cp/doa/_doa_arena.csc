@@ -1,16 +1,16 @@
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/cp/_util;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/doa/_doa_camera;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_camera;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_3ca3c537;
 
@@ -416,7 +416,7 @@ function killweather(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd86cd486, Offset: 0x23a8
 // Size: 0x54
-function killfog(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function function_9977953(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setworldfogactivebank(localclientnum, 0);
 }
 

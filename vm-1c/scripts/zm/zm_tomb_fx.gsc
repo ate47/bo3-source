@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_tomb_fx;
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6ee5416, Offset: 0x10e0
 // Size: 0x3c
 function main() {
@@ -16,7 +16,7 @@ function main() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1a06d3d, Offset: 0x1128
 // Size: 0x382
 function function_f45953c() {
@@ -55,7 +55,7 @@ function function_f45953c() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x390a24e2, Offset: 0x14b8
 // Size: 0x40e
 function function_e6258024() {
@@ -99,7 +99,7 @@ function function_e6258024() {
 }
 
 // Namespace zm_tomb_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2e65d39, Offset: 0x18d0
 // Size: 0x102
 function function_f205a5f1() {

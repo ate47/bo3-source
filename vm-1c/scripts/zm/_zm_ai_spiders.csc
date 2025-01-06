@@ -1,11 +1,11 @@
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/fx_shared;
-#using scripts/zm/_zm;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm;
 
 #namespace zm_ai_spiders;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9231c098, Offset: 0x5c8
 // Size: 0x164
 function __init__() {
@@ -37,7 +37,7 @@ function __init__() {
 }
 
 // Namespace zm_ai_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x738
 // Size: 0x4
 function __main__() {
@@ -45,7 +45,7 @@ function __main__() {
 }
 
 // Namespace zm_ai_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf282ed5a, Offset: 0x748
 // Size: 0x264
 function register_clientfields() {
@@ -60,7 +60,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_ai_spiders
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5fc1c07b, Offset: 0x9b8
 // Size: 0x2c
 function function_7c1ef59b(localclientnum) {
@@ -69,7 +69,7 @@ function function_7c1ef59b(localclientnum) {
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd917f427, Offset: 0x9f0
 // Size: 0x124
 function spider_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
@@ -87,7 +87,7 @@ function spider_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80,
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3dbfb6ee, Offset: 0xb20
 // Size: 0x64
 function spider_end_of_round_reset(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -97,7 +97,7 @@ function spider_end_of_round_reset(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa444230f, Offset: 0xb90
 // Size: 0x9c
 function spider_round_ring_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -111,7 +111,7 @@ function spider_round_ring_fx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xea21b61b, Offset: 0xc38
 // Size: 0x2d4
 function function_bea149a5(localclientnum, var_afc7cc94, var_b05b3457, b_on, n_alpha, var_abf03d83, var_c0ce8db2) {
@@ -172,7 +172,7 @@ function function_bea149a5(localclientnum, var_afc7cc94, var_b05b3457, b_on, n_a
 }
 
 // Namespace zm_ai_spiders
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x2589e5e, Offset: 0xf18
 // Size: 0x54
 function function_9bad5680(localclientnum, n_value, var_afc7cc94) {
@@ -180,7 +180,7 @@ function function_9bad5680(localclientnum, n_value, var_afc7cc94) {
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd6855bc2, Offset: 0xf78
 // Size: 0x64
 function set_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -188,7 +188,7 @@ function set_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7168e1f, Offset: 0xfe8
 // Size: 0xb4
 function web_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -204,7 +204,7 @@ function web_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x735967e2, Offset: 0x10a8
 // Size: 0x74
 function play_grenade_stuck_in_web_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -214,7 +214,7 @@ function play_grenade_stuck_in_web_fx(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xedeea937, Offset: 0x1128
 // Size: 0x224
 function play_spider_web_tear_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -252,7 +252,7 @@ function play_spider_web_tear_fx(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbe7a484f, Offset: 0x1358
 // Size: 0x11c
 function play_spider_web_tear_complete_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

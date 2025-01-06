@@ -1,19 +1,19 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/fx_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_tomb_ambient_scripts;
 
 // Namespace zm_tomb_ambient_scripts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb9151ec8, Offset: 0x348
 // Size: 0x34
 function function_c6ff3260() {
@@ -21,7 +21,7 @@ function function_c6ff3260() {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84934736, Offset: 0x388
 // Size: 0x9c
 function main() {
@@ -31,7 +31,7 @@ function main() {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x40ce1a5f, Offset: 0x430
 // Size: 0xd8
 function function_f903959b(str_script_noteworthy, str_ender) {
@@ -48,7 +48,7 @@ function function_f903959b(str_script_noteworthy, str_ender) {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8db9a111, Offset: 0x510
 // Size: 0x1e0
 function function_68c49762(a_structs) {
@@ -69,7 +69,7 @@ function function_68c49762(a_structs) {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x370dba90, Offset: 0x6f8
 // Size: 0x190
 function function_f779394c(a_structs) {
@@ -97,7 +97,7 @@ function function_f779394c(a_structs) {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20a75e48, Offset: 0x890
 // Size: 0x16c
 function function_add29756() {
@@ -120,7 +120,7 @@ function function_add29756() {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8cbbd44e, Offset: 0xa08
 // Size: 0x70
 function function_b6165329() {
@@ -132,7 +132,7 @@ function function_b6165329() {
 }
 
 // Namespace zm_tomb_ambient_scripts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbf47243d, Offset: 0xa80
 // Size: 0x230
 function function_511ab91d() {

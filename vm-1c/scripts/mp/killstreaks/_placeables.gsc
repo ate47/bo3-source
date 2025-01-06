@@ -1,16 +1,16 @@
+#using scripts/codescripts/struct;
+#using scripts/mp/_util;
 #using scripts/mp/killstreaks/_killstreak_detect;
 #using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/_oob;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/util_shared;
 
 #namespace placeables;
 
 // Namespace placeables
-// Params 18, eflags: 0x1 linked
+// Params 18, eflags: 0x0
 // Checksum 0x27eac78d, Offset: 0x280
 // Size: 0x598
 function spawnplaceable(killstreakref, killstreakid, onplacecallback, oncancelcallback, onmovecallback, onshutdowncallback, ondeathcallback, onempcallback, model, validmodel, invalidmodel, spawnsvehicle, pickupstring, timeout, health, empdamage, placehintstring, invalidlocationhintstring) {
@@ -84,7 +84,7 @@ function updateplacementmodels(model, validmodel, invalidmodel) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e0b9d2b, Offset: 0x890
 // Size: 0x194
 function carryplaceable(placeable) {
@@ -107,7 +107,7 @@ function carryplaceable(placeable) {
 }
 
 // Namespace placeables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3be2826e, Offset: 0xa30
 // Size: 0xf6
 function innoplacementtrigger() {
@@ -133,7 +133,7 @@ function innoplacementtrigger() {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3fc29f68, Offset: 0xb30
 // Size: 0x738
 function watchplacement(placeable) {
@@ -230,7 +230,7 @@ function watchplacement(placeable) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xabedf147, Offset: 0x1270
 // Size: 0xb4
 function watchcarrycancelevents(placeable) {
@@ -243,7 +243,7 @@ function watchcarrycancelevents(placeable) {
 }
 
 // Namespace placeables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10fd1f65, Offset: 0x1330
 // Size: 0x94
 function ontimeout() {
@@ -257,7 +257,7 @@ function ontimeout() {
 }
 
 // Namespace placeables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6a028a6d, Offset: 0x13d0
 // Size: 0x64
 function ondeath(attacker, weapon) {
@@ -269,7 +269,7 @@ function ondeath(attacker, weapon) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x38509692, Offset: 0x1440
 // Size: 0x4c
 function onemp(attacker) {
@@ -280,7 +280,7 @@ function onemp(attacker) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3163d31b, Offset: 0x1498
 // Size: 0xa4
 function cancelonplayerdisconnect(placeable) {
@@ -294,7 +294,7 @@ function cancelonplayerdisconnect(placeable) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x756003f4, Offset: 0x1548
 // Size: 0x40
 function cancelongameend(placeable) {
@@ -305,7 +305,7 @@ function cancelongameend(placeable) {
 }
 
 // Namespace placeables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb3238835, Offset: 0x1590
 // Size: 0x13c
 function spawnmovetrigger(placeable, player) {
@@ -320,7 +320,7 @@ function spawnmovetrigger(placeable, player) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9ff025ca, Offset: 0x16d8
 // Size: 0x7c
 function watchmovetriggershutdown(placeable) {
@@ -330,7 +330,7 @@ function watchmovetriggershutdown(placeable) {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x70f36f9f, Offset: 0x1760
 // Size: 0x342
 function watchpickup(player) {
@@ -340,7 +340,7 @@ function watchpickup(player) {
     assert(isdefined(placeable.pickuptrigger));
     trigger = placeable.pickuptrigger;
     while (true) {
-        player = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", player);
         if (!isalive(player)) {
             continue;
         }
@@ -375,7 +375,7 @@ function watchpickup(player) {
 }
 
 // Namespace placeables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ccdb335, Offset: 0x1ab0
 // Size: 0x34
 function forceshutdown() {
@@ -385,7 +385,7 @@ function forceshutdown() {
 }
 
 // Namespace placeables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2abb45e, Offset: 0x1af0
 // Size: 0xa4
 function watchownergameevents() {
@@ -401,7 +401,7 @@ function watchownergameevents() {
 }
 
 // Namespace placeables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a8c8713, Offset: 0x1ba0
 // Size: 0x264
 function shutdownoncancelevent(placeable) {

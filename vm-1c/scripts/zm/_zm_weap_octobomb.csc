@@ -1,23 +1,23 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_octobomb;
 
 // Namespace _zm_weap_octobomb
 // Params 0, eflags: 0x2
-// Checksum 0x985a7ddb, Offset: 0x4d0
+// Checksum 0x517eedfb, Offset: 0x4d0
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("zm_weap_octobomb", &__init__, &__main__, undefined);
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x58926304, Offset: 0x518
+// Params 0, eflags: 0x0
+// Checksum 0x6ee8ce99, Offset: 0x518
 // Size: 0x25c
 function __init__() {
     clientfield::register("scriptmover", "octobomb_fx", 1, 2, "int", &octobomb_fx, 1, 0);
@@ -32,8 +32,8 @@ function __init__() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x7c903e32, Offset: 0x780
+// Params 0, eflags: 0x0
+// Checksum 0x3267a05e, Offset: 0x780
 // Size: 0x162
 function __main__() {
     if (!zm_weapons::is_weapon_included(getweapon("octobomb"))) {
@@ -53,8 +53,8 @@ function __main__() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 7, eflags: 0x1 linked
-// Checksum 0xf3095520, Offset: 0x8f0
+// Params 7, eflags: 0x0
+// Checksum 0x8d171363, Offset: 0x8f0
 // Size: 0xb6
 function octobomb_tentacle_hit_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -68,8 +68,8 @@ function octobomb_tentacle_hit_fx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace _zm_weap_octobomb
-// Params 7, eflags: 0x1 linked
-// Checksum 0xce09d5e3, Offset: 0x9b0
+// Params 7, eflags: 0x0
+// Checksum 0x7b8b94c4, Offset: 0x9b0
 // Size: 0x13e
 function octobomb_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
@@ -88,8 +88,8 @@ function octobomb_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace _zm_weap_octobomb
-// Params 7, eflags: 0x1 linked
-// Checksum 0xa859bdf8, Offset: 0xaf8
+// Params 7, eflags: 0x0
+// Checksum 0xc4a9f8a2, Offset: 0xaf8
 // Size: 0x64
 function octobomb_spores_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -98,8 +98,8 @@ function octobomb_spores_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace _zm_weap_octobomb
-// Params 2, eflags: 0x1 linked
-// Checksum 0x51e4c726, Offset: 0xb68
+// Params 2, eflags: 0x0
+// Checksum 0x3066f8be, Offset: 0xb68
 // Size: 0x19c
 function function_f9535d61(localclientnum, var_a1e9c985) {
     self endon(#"entityshutdown");
@@ -121,8 +121,8 @@ function function_f9535d61(localclientnum, var_a1e9c985) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 7, eflags: 0x1 linked
-// Checksum 0x638d76f9, Offset: 0xd10
+// Params 7, eflags: 0x0
+// Checksum 0xf54ca7df, Offset: 0xd10
 // Size: 0x9c
 function octobomb_zombie_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (util::is_mature() && !util::is_gib_restricted_build()) {
@@ -131,8 +131,8 @@ function octobomb_zombie_explode_fx(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace _zm_weap_octobomb
-// Params 7, eflags: 0x1 linked
-// Checksum 0x5563010, Offset: 0xdb8
+// Params 7, eflags: 0x0
+// Checksum 0x4f11cf14, Offset: 0xdb8
 // Size: 0xb4
 function octobomb_spit_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 2) {
@@ -144,8 +144,8 @@ function octobomb_spit_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace _zm_weap_octobomb
-// Params 4, eflags: 0x1 linked
-// Checksum 0xf284848b, Offset: 0xe78
+// Params 4, eflags: 0x0
+// Checksum 0xa2293d04, Offset: 0xe78
 // Size: 0x84
 function function_a034a6b1(localclientnum, v_origin, v_angles, var_9ee6a794) {
     fx_id = playfx(localclientnum, var_9ee6a794, v_origin, anglestoup(v_angles));

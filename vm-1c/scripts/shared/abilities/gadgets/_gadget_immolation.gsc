@@ -1,12 +1,12 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace _gadget_immolation;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_immolation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59833e95, Offset: 0x238
 // Size: 0x104
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace _gadget_immolation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1e575ea3, Offset: 0x348
 // Size: 0x2a
 function function_b024aecb(slot) {
@@ -41,7 +41,7 @@ function function_b024aecb(slot) {
 }
 
 // Namespace _gadget_immolation
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x820d46fb, Offset: 0x380
 // Size: 0x52
 function function_a881191b(slot) {
@@ -52,7 +52,7 @@ function function_a881191b(slot) {
 }
 
 // Namespace _gadget_immolation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x531734ba, Offset: 0x3e0
 // Size: 0x5c
 function function_51e92cc6(slot, weapon) {
@@ -62,7 +62,7 @@ function function_51e92cc6(slot, weapon) {
 }
 
 // Namespace _gadget_immolation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa6f7de5c, Offset: 0x448
 // Size: 0x5c
 function function_f4ff64c1(slot, weapon) {
@@ -72,7 +72,7 @@ function function_f4ff64c1(slot, weapon) {
 }
 
 // Namespace _gadget_immolation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb09f633c, Offset: 0x4b0
 // Size: 0x5c
 function function_6947e88b(slot, weapon) {
@@ -82,7 +82,7 @@ function function_6947e88b(slot, weapon) {
 }
 
 // Namespace _gadget_immolation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x628157dd, Offset: 0x518
 // Size: 0x44
 function function_44821bc0() {
@@ -92,7 +92,7 @@ function function_44821bc0() {
 }
 
 // Namespace _gadget_immolation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x42c86d5e, Offset: 0x568
 // Size: 0x7c
 function gadget_immolation_on(slot, weapon) {
@@ -103,7 +103,7 @@ function gadget_immolation_on(slot, weapon) {
 }
 
 // Namespace _gadget_immolation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd44c22cd, Offset: 0x5f0
 // Size: 0x7c
 function function_43d6ec7f(slot, weapon) {
@@ -114,7 +114,7 @@ function function_43d6ec7f(slot, weapon) {
 }
 
 // Namespace _gadget_immolation
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x77610fcb, Offset: 0x678
 // Size: 0x5c
 function function_77bcc634(slot, weapon) {

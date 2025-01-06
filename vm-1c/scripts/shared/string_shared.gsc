@@ -5,7 +5,7 @@
 /#
 
     // Namespace string
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xa8cce6fe, Offset: 0x98
     // Size: 0x10c
     function function_8e23acba(str_input, n_length, var_c50670d5) {

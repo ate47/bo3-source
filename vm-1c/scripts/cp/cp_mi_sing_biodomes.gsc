@@ -1,49 +1,49 @@
-#using scripts/cp/cp_mi_sing_biodomes_patch;
-#using scripts/cp/cp_mi_sing_biodomes_util;
-#using scripts/cp/cp_mi_sing_biodomes_fighttothedome;
-#using scripts/cp/cp_mi_sing_biodomes_cloudmountain;
-#using scripts/cp/cp_mi_sing_biodomes_warehouse;
-#using scripts/cp/cp_mi_sing_biodomes_markets;
-#using scripts/cp/cp_mi_sing_biodomes_sound;
-#using scripts/cp/cp_mi_sing_biodomes_init_spawn;
-#using scripts/cp/cp_mi_sing_biodomes_fx;
-#using scripts/cp/cp_mi_sing_biodomes_accolades;
-#using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/_objectives;
-#using scripts/cp/_ammo_cache;
-#using scripts/cp/_util;
-#using scripts/cp/_squad_control;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_mobile_armory;
-#using scripts/cp/_collectibles;
-#using scripts/shared/ai/archetype_warlord_interface;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/teamgather_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/gametypes/_save;
 #using scripts/codescripts/struct;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_mobile_armory;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_squad_control;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_biodomes_accolades;
+#using scripts/cp/cp_mi_sing_biodomes_cloudmountain;
+#using scripts/cp/cp_mi_sing_biodomes_fighttothedome;
+#using scripts/cp/cp_mi_sing_biodomes_fx;
+#using scripts/cp/cp_mi_sing_biodomes_init_spawn;
+#using scripts/cp/cp_mi_sing_biodomes_markets;
+#using scripts/cp/cp_mi_sing_biodomes_patch;
+#using scripts/cp/cp_mi_sing_biodomes_sound;
+#using scripts/cp/cp_mi_sing_biodomes_util;
+#using scripts/cp/cp_mi_sing_biodomes_warehouse;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/teamgather_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_sing_biodomes;
 
@@ -57,7 +57,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57caed2f, Offset: 0x1330
 // Size: 0x1fc
 function main() {
@@ -91,7 +91,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6d18cc7, Offset: 0x1538
 // Size: 0x2ec
 function function_673254cc() {
@@ -114,7 +114,7 @@ function function_673254cc() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7ed9c1d6, Offset: 0x1830
 // Size: 0x3a
 function precache() {
@@ -123,7 +123,7 @@ function precache() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4ab9d247, Offset: 0x1878
 // Size: 0x334
 function function_b37230e4() {
@@ -147,7 +147,7 @@ function function_b37230e4() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x65026df, Offset: 0x1bb8
 // Size: 0x644
 function flag_init() {
@@ -204,7 +204,7 @@ function flag_init() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4030068, Offset: 0x2208
 // Size: 0x254
 function level_init() {
@@ -227,7 +227,7 @@ function level_init() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e2d767, Offset: 0x2468
 // Size: 0x1c
 function function_8b005d7f() {
@@ -236,7 +236,7 @@ function function_8b005d7f() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20743967, Offset: 0x2490
 // Size: 0x44
 function on_player_connect() {
@@ -246,7 +246,7 @@ function on_player_connect() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x48df4ed7, Offset: 0x24e0
 // Size: 0x154
 function on_player_spawned() {
@@ -267,7 +267,7 @@ function on_player_spawned() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc54052fe, Offset: 0x2640
 // Size: 0x28
 function function_f1059e87() {
@@ -277,7 +277,7 @@ function function_f1059e87() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x306cfb5b, Offset: 0x2670
 // Size: 0x12c
 function function_cef897cf(str_objective, var_23d9a41a) {
@@ -295,7 +295,7 @@ function function_cef897cf(str_objective, var_23d9a41a) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa63134ca, Offset: 0x27a8
 // Size: 0x48
 function function_2ec137d9() {
@@ -307,7 +307,7 @@ function function_2ec137d9() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x208247de, Offset: 0x27f8
 // Size: 0xcc
 function function_f952ddcc(var_b35e56d0) {
@@ -323,7 +323,7 @@ function function_f952ddcc(var_b35e56d0) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeaadf4b9, Offset: 0x28d0
 // Size: 0x7a4
 function function_69468f09(var_f45807af) {
@@ -403,7 +403,7 @@ function function_69468f09(var_f45807af) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc8870bb, Offset: 0x3080
 // Size: 0x44
 function function_8013ff12() {
@@ -414,7 +414,7 @@ function function_8013ff12() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x274e9373, Offset: 0x30d0
 // Size: 0x204
 function function_b361ad8b(a_ents) {
@@ -439,7 +439,7 @@ function function_b361ad8b(a_ents) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a5a529d, Offset: 0x32e0
 // Size: 0x74
 function function_9cebd80e() {
@@ -451,7 +451,7 @@ function function_9cebd80e() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd56d88bb, Offset: 0x3360
 // Size: 0x1c4
 function function_5cb44f79(var_d83ebd04, var_42c1bd32, var_ae7d184a) {
@@ -484,7 +484,7 @@ function function_5cb44f79(var_d83ebd04, var_42c1bd32, var_ae7d184a) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x98df7cb7, Offset: 0x3530
 // Size: 0x4c
 function function_e4f0cf99() {
@@ -494,7 +494,7 @@ function function_e4f0cf99() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfd9b5d6, Offset: 0x3588
 // Size: 0x9a
 function function_484bc3aa(b_enable) {
@@ -504,7 +504,7 @@ function function_484bc3aa(b_enable) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4c60050, Offset: 0x3630
 // Size: 0x94
 function function_df65aec6(a_ents) {
@@ -516,7 +516,7 @@ function function_df65aec6(a_ents) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbc9520ef, Offset: 0x36d0
 // Size: 0xf4
 function function_7b5ce9a8(scene) {
@@ -530,7 +530,7 @@ function function_7b5ce9a8(scene) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb7eb69b6, Offset: 0x37d0
 // Size: 0x22c
 function function_c506a743(str_objective, var_23d9a41a) {
@@ -557,7 +557,7 @@ function function_c506a743(str_objective, var_23d9a41a) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c4f9335, Offset: 0x3a08
 // Size: 0x74
 function function_a673776d() {
@@ -569,7 +569,7 @@ function function_a673776d() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x920691ac, Offset: 0x3a88
 // Size: 0x54
 function function_2a7e0c30() {
@@ -582,7 +582,7 @@ function function_2a7e0c30() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7563b3a2, Offset: 0x3ae8
 // Size: 0x9c
 function objective_igc(str_objective, var_74cd64bc) {
@@ -595,7 +595,7 @@ function objective_igc(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xd1115f68, Offset: 0x3b90
 // Size: 0x44
 function objective_igc_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -605,7 +605,7 @@ function objective_igc_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8aae305f, Offset: 0x3be0
 // Size: 0xee
 function function_1fbdb441() {
@@ -620,7 +620,7 @@ function function_1fbdb441() {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf0cd2ab5, Offset: 0x3cd8
 // Size: 0x15a
 function function_ca12a0a4(var_b324ff00, v_source) {
@@ -636,7 +636,7 @@ function function_ca12a0a4(var_b324ff00, v_source) {
 }
 
 // Namespace cp_mi_sing_biodomes
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x515f51e2, Offset: 0x3e40
 // Size: 0x74
 function function_1a9d89e5(str_objective, var_74cd64bc) {

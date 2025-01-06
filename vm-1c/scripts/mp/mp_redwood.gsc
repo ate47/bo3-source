@@ -1,12 +1,12 @@
-#using scripts/shared/_oob;
-#using scripts/mp/gametypes/_ball_utils;
-#using scripts/mp/mp_redwood_sound;
-#using scripts/mp/mp_redwood_fx;
-#using scripts/mp/_util;
+#using scripts/codescripts/struct;
 #using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_ball_utils;
+#using scripts/mp/mp_redwood_fx;
+#using scripts/mp/mp_redwood_sound;
+#using scripts/shared/_oob;
 #using scripts/shared/compass;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace mp_redwood;
 
@@ -88,7 +88,7 @@ function watchkilltrigger() {
     level endon(#"game_ended");
     trigger = self;
     while (true) {
-        player = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", player);
         player dodamage(1000, trigger.origin + (0, 0, 0), trigger, trigger, "none", "MOD_SUICIDE", 0);
     }
 }

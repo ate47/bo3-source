@@ -1,25 +1,25 @@
-#using scripts/cp/cp_mi_zurich_coalescence_sound;
-#using scripts/cp/cp_mi_zurich_coalescence_root_cinematics;
-#using scripts/cp/cp_mi_zurich_coalescence_util;
-#using scripts/cp/cp_mi_zurich_coalescence_accolades;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/gametypes/_save;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_coalescence_accolades;
+#using scripts/cp/cp_mi_zurich_coalescence_root_cinematics;
+#using scripts/cp/cp_mi_zurich_coalescence_sound;
+#using scripts/cp/cp_mi_zurich_coalescence_util;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace root_singapore;
 
@@ -30,7 +30,7 @@
 function main() {
     init_clientfields();
     level flag::init("sing_root_depthcharges");
-    var_b2a6f229 = getentarray("root_singapore_spawners", "script_noteworthy");
+    ai_spawners = getentarray("root_singapore_spawners", "script_noteworthy");
     level._effect["depth_charge_explosion"] = "explosions/fx_exp_underwater_depth_charge";
     level._effect["depth_charge_spawn"] = "player/fx_ai_raven_teleport";
     level._effect["vortex_explode"] = "player/fx_ai_dni_rez_in_hero_clean";
@@ -149,7 +149,7 @@ function function_95b88092(str_objective, var_74cd64bc) {
     }
     var_8fb0849a = zurich_util::function_a1851f86(str_objective);
     var_8fb0849a waittill(#"hash_40b1a9d9");
-    level thread namespace_bbb4ee72::function_b319df2(str_objective, var_8fb0849a.var_90971f20.e_player);
+    level thread namespace_bbb4ee72::play_scene(str_objective, var_8fb0849a.var_90971f20.e_player);
     videostop("cp_zurich_env_corvusmonitor");
     util::clientnotify("stp_mus");
 }
@@ -360,8 +360,8 @@ function function_258afdfc() {
         assert(isdefined(s_cover.target), "<dev string:x6b>");
         if (isdefined(s_cover.script_string)) {
             var_a8a64a67 = getnodearray(s_cover.script_string, "targetname");
-            foreach (var_974cc07 in var_a8a64a67) {
-                setenablenode(var_974cc07, 0);
+            foreach (nd_cover in var_a8a64a67) {
+                setenablenode(nd_cover, 0);
             }
         }
     }
@@ -417,8 +417,8 @@ function function_14bb726e() {
 function function_e8047245() {
     var_a8a64a67 = getnodearray(self.script_string, "targetname");
     self waittill(#"movedone");
-    foreach (var_974cc07 in var_a8a64a67) {
-        setenablenode(var_974cc07, 1);
+    foreach (nd_cover in var_a8a64a67) {
+        setenablenode(nd_cover, 1);
     }
 }
 
@@ -523,7 +523,7 @@ function function_32d3b286(player) {
     self endon(#"hash_4735ec09");
     player endon(#"death");
     while (true) {
-        var_4a36ffac = self waittill(#"trigger");
+        self waittill(#"trigger", var_4a36ffac);
         if (var_4a36ffac == player && !(isdefined(player.var_1cd4d4e6) && player.var_1cd4d4e6)) {
             player.var_1cd4d4e6 = 1;
             player thread function_b8c35195(self);
@@ -588,7 +588,7 @@ function function_9ea9bed() {
     self endon(#"death");
     self endon(#"hash_4735ec09");
     while (true) {
-        var_480743 = self waittill(#"trigger");
+        self waittill(#"trigger", var_480743);
         if (isalive(var_480743) && var_480743.team == "axis" && !(isdefined(var_480743.var_284432c3) && var_480743.var_284432c3)) {
             var_480743.var_284432c3 = 1;
             var_480743 thread function_3de3b792(self);
@@ -650,7 +650,7 @@ function function_26a0a902() {
         if (isdefined(var_2d4569cf)) {
             s_target = struct::get(self.target, "targetname");
             if (isdefined(s_target)) {
-                var_2d4569cf thread function_c51242e1(s_target);
+                var_2d4569cf thread handle_movement(s_target);
             }
             var_2d4569cf.targetname = "depth_charger_dive";
             var_2d4569cf thread function_f788b8ae();
@@ -711,7 +711,7 @@ function function_dabb79d8() {
 // Params 2, eflags: 0x0
 // Checksum 0x3f5ce519, Offset: 0x3280
 // Size: 0xda
-function function_c51242e1(s_target, var_253d1f97) {
+function handle_movement(s_target, var_253d1f97) {
     self endon(#"death");
     while (isdefined(s_target)) {
         n_distance = distance(self.origin, s_target.origin);
@@ -734,7 +734,7 @@ function function_c51242e1(s_target, var_253d1f97) {
 // Size: 0x52
 function function_9e34c3b5() {
     self endon(#"death");
-    damage, e_attacker = self waittill(#"damage");
+    self waittill(#"damage", damage, e_attacker);
     self function_6493f00e(isdefined(e_attacker) && isplayer(e_attacker));
 }
 

@@ -3,7 +3,7 @@
 #namespace voice_sgen;
 
 // Namespace voice_sgen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x65491528, Offset: 0x4f48
 // Size: 0x3504
 function init_voice() {

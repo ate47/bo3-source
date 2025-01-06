@@ -1,16 +1,16 @@
-#using scripts/zm/_util;
-#using scripts/zm/gametypes/_spawnlogic;
-#using scripts/zm/gametypes/_globallogic_utils;
-#using scripts/zm/gametypes/_globallogic_score;
-#using scripts/zm/gametypes/_globallogic_audio;
-#using scripts/zm/gametypes/_globallogic;
-#using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/math_shared;
+#using scripts/zm/_util;
+#using scripts/zm/gametypes/_globallogic;
+#using scripts/zm/gametypes/_globallogic_audio;
+#using scripts/zm/gametypes/_globallogic_score;
+#using scripts/zm/gametypes/_globallogic_utils;
+#using scripts/zm/gametypes/_spawnlogic;
 
 #namespace globallogic_defaults;
 
 // Namespace globallogic_defaults
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x14d14d3d, Offset: 0x2b0
 // Size: 0x32
 function getwinningteamfromloser(losing_team) {
@@ -21,7 +21,7 @@ function getwinningteamfromloser(losing_team) {
 }
 
 // Namespace globallogic_defaults
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xae330b20, Offset: 0x2f0
 // Size: 0x2c4
 function default_onforfeit(team) {
@@ -60,7 +60,7 @@ function default_onforfeit(team) {
 }
 
 // Namespace globallogic_defaults
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5fbead3, Offset: 0x5c0
 // Size: 0x184
 function default_ondeadevent(team) {
@@ -83,7 +83,7 @@ function default_ondeadevent(team) {
 }
 
 // Namespace globallogic_defaults
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4f978bc1, Offset: 0x750
 // Size: 0xc
 function default_onalivecountchange(team) {
@@ -91,7 +91,7 @@ function default_onalivecountchange(team) {
 }
 
 // Namespace globallogic_defaults
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xccd9333a, Offset: 0x768
 // Size: 0x10
 function default_onroundendgame(winner) {
@@ -99,7 +99,7 @@ function default_onroundendgame(winner) {
 }
 
 // Namespace globallogic_defaults
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb23bc7ee, Offset: 0x780
 // Size: 0x16e
 function default_ononeleftevent(team) {
@@ -128,7 +128,7 @@ function default_ononeleftevent(team) {
 }
 
 // Namespace globallogic_defaults
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49f6d004, Offset: 0x8f8
 // Size: 0x124
 function default_ontimelimit() {
@@ -151,7 +151,7 @@ function default_ontimelimit() {
 }
 
 // Namespace globallogic_defaults
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97efaffd, Offset: 0xa28
 // Size: 0x138
 function default_onscorelimit() {
@@ -178,7 +178,7 @@ function default_onscorelimit() {
 }
 
 // Namespace globallogic_defaults
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8cf46196, Offset: 0xb68
 // Size: 0xfc
 function default_onspawnspectator(origin, angles) {
@@ -194,7 +194,7 @@ function default_onspawnspectator(origin, angles) {
 }
 
 // Namespace globallogic_defaults
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x36a195a3, Offset: 0xc70
 // Size: 0xbc
 function default_onspawnintermission() {
@@ -211,7 +211,7 @@ function default_onspawnintermission() {
 }
 
 // Namespace globallogic_defaults
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xed10c520, Offset: 0xd38
 // Size: 0x3a
 function default_gettimelimit() {

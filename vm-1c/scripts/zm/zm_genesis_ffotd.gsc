@@ -1,20 +1,20 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
 #using scripts/zm/_zm_utility;
 #using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_genesis_ffotd;
 
 // Namespace zm_genesis_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbf7c2db2, Offset: 0x358
 // Size: 0xc8
 function main_start() {
@@ -26,7 +26,7 @@ function main_start() {
 }
 
 // Namespace zm_genesis_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7d649f02, Offset: 0x428
 // Size: 0x10c
 function main_end() {
@@ -39,7 +39,7 @@ function main_end() {
 }
 
 // Namespace zm_genesis_ffotd
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x82d8d4a, Offset: 0x540
 // Size: 0x210
 function function_dce2d8a9(str_zone) {
@@ -69,7 +69,7 @@ function function_dce2d8a9(str_zone) {
 }
 
 // Namespace zm_genesis_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x11154f23, Offset: 0x758
 // Size: 0xd6
 function function_d51867e() {
@@ -86,7 +86,7 @@ function function_d51867e() {
 }
 
 // Namespace zm_genesis_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4d7a0aba, Offset: 0x838
 // Size: 0x188
 function function_8921895f() {
@@ -110,7 +110,7 @@ function function_8921895f() {
 }
 
 // Namespace zm_genesis_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcf32072c, Offset: 0x9c8
 // Size: 0x45c
 function function_d7b99564() {

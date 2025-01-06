@@ -1,9 +1,9 @@
-#using scripts/shared/ai/systems/blackboard;
 #using scripts/codescripts/struct;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 
 #namespace ai_sniper;
@@ -110,7 +110,7 @@ function function_6a517a0a() {
     self endon(#"hash_6a517a0a");
     self endon(#"death");
     while (true) {
-        node = self waittill(#"patrol_goal");
+        self waittill(#"patrol_goal", node);
         self function_b61dfa9e(node);
     }
 }
@@ -142,7 +142,7 @@ function function_8d1875dc() {
     self endon(#"death");
     while (true) {
         var_360359e4 = 0;
-        node = self waittill(#"hash_50b88a46");
+        self waittill(#"hash_50b88a46", node);
         if (isdefined(node.var_57357d16)) {
             self thread function_6840179(node.var_57357d16);
         } else {

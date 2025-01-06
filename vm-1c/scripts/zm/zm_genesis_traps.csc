@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 #using scripts/zm/_zm_trap_electric;
 
 #namespace zm_genesis_traps;
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_traps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b717a1a, Offset: 0x178
 // Size: 0x14
 function __init__() {
@@ -22,7 +22,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_traps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x198
 // Size: 0x4
 function __main__() {
@@ -30,7 +30,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_traps
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5606d67, Offset: 0x1a8
 // Size: 0x1e
 function function_f45953c() {

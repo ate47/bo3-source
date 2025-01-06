@@ -1,5 +1,5 @@
-#using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/fx_shared;
 
 #namespace mp_crucible_fx;
 

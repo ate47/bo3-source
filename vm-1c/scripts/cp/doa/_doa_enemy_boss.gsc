@@ -1,20 +1,20 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/cp_doa_bo3_enemy;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_round;
-#using scripts/cp/doa/_doa_hazard;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_dev;
 #using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_dev;
 #using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_hazard;
 #using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_round;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -55,11 +55,11 @@ function private function_d95d34bd(spawner) {
                 }
             }
         }
-        var_a47b1f6f = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
-        if (level.doa.spawners[var_a47b1f6f]["boss"].size == 0) {
+        spawn_set = level.doa.arenas[level.doa.var_90873830].name + "_enemy_spawn";
+        if (level.doa.spawners[spawn_set]["boss"].size == 0) {
             continue;
         }
-        loc = level.doa.spawners[var_a47b1f6f]["boss"][randomint(level.doa.spawners[var_a47b1f6f]["boss"].size)];
+        loc = level.doa.spawners[spawn_set]["boss"][randomint(level.doa.spawners[spawn_set]["boss"].size)];
         level.doa.boss = namespace_51bd792::function_36aa8b6c(loc);
         if (getdvarint("scr_boss_debug", 0) && isdefined(spawner)) {
             level thread namespace_2f63e553::function_5e6b8376(spawner.origin, 20, 500, (0, 0, 1));
@@ -96,7 +96,7 @@ function private function_555608c7() {
     self endon(#"death");
     self.takedamage = 1;
     while (true) {
-        amount, attacker = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker);
         if (isdefined(attacker) && isplayer(attacker)) {
             break;
         }
@@ -190,7 +190,7 @@ function function_ce73145c() {
     trigger thread namespace_49107f3a::function_981c685d(self);
     trigger.silverback = 1;
     while (isdefined(self)) {
-        guy = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", guy);
         if (!isdefined(guy)) {
             continue;
         }

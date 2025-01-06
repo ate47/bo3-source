@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/weapons/_weaponobjects;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace weaponobjects;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace weaponobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa9cd6a7a, Offset: 0x210
 // Size: 0x34
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace weaponobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x609c463a, Offset: 0x250
 // Size: 0x44
 function start_gametype() {
@@ -37,7 +37,7 @@ function start_gametype() {
 }
 
 // Namespace weaponobjects
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57416167, Offset: 0x2a0
 // Size: 0x94
 function on_player_spawned() {

@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #namespace debug_menu;
 

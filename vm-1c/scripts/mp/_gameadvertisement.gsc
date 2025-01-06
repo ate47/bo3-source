@@ -1,13 +1,13 @@
-#using scripts/mp/_util;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_dev;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_dev;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/shared/util_shared;
 
 #namespace gameadvertisement;
 
 // Namespace gameadvertisement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x133c82, Offset: 0x1c0
 // Size: 0xbc
 function init() {
@@ -23,7 +23,7 @@ function init() {
 }
 
 // Namespace gameadvertisement
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7eb5c38d, Offset: 0x288
 // Size: 0x34
 function setadvertisedstatus(onoff) {
@@ -34,7 +34,7 @@ function setadvertisedstatus(onoff) {
 }
 
 // Namespace gameadvertisement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6eeb7dd5, Offset: 0x2c8
 // Size: 0x10a
 function sessionadvertisementcheck() {
@@ -58,7 +58,7 @@ function sessionadvertisementcheck() {
 }
 
 // Namespace gameadvertisement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca41a4e3, Offset: 0x3e0
 // Size: 0x42
 function function_4dc43066() {
@@ -72,7 +72,7 @@ function function_4dc43066() {
 }
 
 // Namespace gameadvertisement
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb4bc0d5f, Offset: 0x448
 // Size: 0x1bc
 function teamscorelimitcheck(rulescorepercent, debug_count) {
@@ -104,7 +104,7 @@ function teamscorelimitcheck(rulescorepercent, debug_count) {
 }
 
 // Namespace gameadvertisement
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x320b7bcd, Offset: 0x610
 // Size: 0x5e
 function timelimitcheck(ruletimeleft) {
@@ -119,7 +119,7 @@ function timelimitcheck(ruletimeleft) {
 }
 
 // Namespace gameadvertisement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b5cb881, Offset: 0x678
 // Size: 0x414
 function default_rules() {
@@ -197,7 +197,7 @@ function default_rules() {
 }
 
 // Namespace gameadvertisement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5df7879, Offset: 0xa98
 // Size: 0x188
 function function_b19057a9() {
@@ -233,7 +233,7 @@ function function_b19057a9() {
 /#
 
     // Namespace gameadvertisement
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x6675cc85, Offset: 0xc28
     // Size: 0x172
     function sessionadvertismentcreatedebughud(linenum, alignx) {
@@ -255,7 +255,7 @@ function function_b19057a9() {
     }
 
     // Namespace gameadvertisement
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x63a72a81, Offset: 0xda8
     // Size: 0xce
     function updatedebughud(hudindex, text, value) {
@@ -281,7 +281,7 @@ function function_b19057a9() {
     }
 
     // Namespace gameadvertisement
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbebb20e3, Offset: 0xe80
     // Size: 0x650
     function sessionadvertismentupdatedebughud() {

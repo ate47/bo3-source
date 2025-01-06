@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_island_side_ee_spore_hallucinations;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33f5b985, Offset: 0x340
 // Size: 0x1da
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb8e48930, Offset: 0x528
 // Size: 0x1ea
 function hallucinate_bloody_walls(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -56,7 +56,7 @@ function hallucinate_bloody_walls(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x133b1b78, Offset: 0x720
 // Size: 0x12a
 function hallucinate_spooky_sounds(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -77,7 +77,7 @@ function hallucinate_spooky_sounds(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5965ccaf, Offset: 0x858
 // Size: 0x80
 function function_13d64112() {

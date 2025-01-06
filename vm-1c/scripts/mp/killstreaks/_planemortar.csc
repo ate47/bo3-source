@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace planemortar;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace planemortar
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x527c0c8, Offset: 0x180
 // Size: 0x5c
 function __init__() {
@@ -22,7 +22,7 @@ function __init__() {
 }
 
 // Namespace planemortar
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfe15e5f4, Offset: 0x1e8
 // Size: 0x84
 function planemortar_contrail(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

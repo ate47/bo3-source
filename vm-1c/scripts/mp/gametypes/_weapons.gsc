@@ -1,24 +1,24 @@
-#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/codescripts/struct;
+#using scripts/mp/_challenges;
+#using scripts/mp/_scoreevents;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_loadout;
+#using scripts/mp/gametypes/_shellshock;
+#using scripts/mp/gametypes/_weapon_utils;
+#using scripts/mp/gametypes/_weaponobjects;
+#using scripts/mp/killstreaks/_dogs;
 #using scripts/mp/killstreaks/_killstreak_weapons;
 #using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_dogs;
-#using scripts/mp/_util;
-#using scripts/mp/_scoreevents;
-#using scripts/mp/_challenges;
-#using scripts/mp/gametypes/_weaponobjects;
-#using scripts/mp/gametypes/_weapon_utils;
-#using scripts/mp/gametypes/_shellshock;
-#using scripts/mp/gametypes/_loadout;
-#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/killstreaks/_supplydrop;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/weapons/_weapons;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace weapons;
 
@@ -31,7 +31,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e70bb25, Offset: 0x3e0
 // Size: 0x14
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7736f1df, Offset: 0x400
 // Size: 0xc
 function function_1146dd0e(weapon) {
@@ -47,7 +47,7 @@ function function_1146dd0e(weapon) {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6d3a70d9, Offset: 0x418
 // Size: 0x1c
 function function_5be8b6af(weapon, options, acvi) {
@@ -129,7 +129,7 @@ function bestweapon_get() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2203524, Offset: 0x900
 // Size: 0x38e
 function showcaseweapon_get() {

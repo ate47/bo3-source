@@ -1,18 +1,18 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/cp_doa_bo3_enemy;
-#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_dev;
 #using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_arena;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
+#using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
 #using scripts/shared/math_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_d88e3a06;
 
@@ -300,7 +300,7 @@ function private function_323a3e31() {
     self endon(#"hash_323a3e31");
     self endon(#"hash_3c011e06");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isdefined(guy.takedamage) && isdefined(guy) && isalive(guy) && guy.takedamage && !(isdefined(guy.boss) && guy.boss) && !(isdefined(guy.in_water) && guy.in_water)) {
             if (isplayer(guy)) {
                 if (isdefined(guy.doa) && isdefined(guy.doa.vehicle)) {
@@ -322,7 +322,7 @@ function private function_6ec8176a() {
     self endon(#"hash_6ec8176a");
     self endon(#"hash_3c011e06");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isdefined(guy.takedamage) && isdefined(guy) && isalive(guy) && guy.takedamage && !(isdefined(guy.boss) && guy.boss)) {
             if (isdefined(self.script_noteworthy)) {
                 switch (self.script_noteworthy) {
@@ -354,7 +354,7 @@ function private function_70dbf276() {
     self endon(#"hash_70dbf276");
     self endon(#"hash_3c011e06");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isdefined(guy)) {
             var_c99d2b6d = "spawn_at_safe";
             if (isdefined(self.script_parameters)) {
@@ -512,7 +512,7 @@ function private function_8a97d2c0(trigger) {
     self endon(#"death");
     trigger endon(#"death");
     while (true) {
-        guy = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", guy);
         if (isdefined(self.active) && isdefined(guy) && self.active) {
             if (!isdefined(guy.doa)) {
                 continue;
@@ -638,7 +638,7 @@ function function_d8d20160() {
         self.death_func = &function_193a95a6;
         level.doa.var_7817fe3c[level.doa.var_7817fe3c.size] = self;
         while (isdefined(self)) {
-            damage, attacker, direction_vec, point, meansofdeath, tagname, modelname, partname, weapon = self waittill(#"damage");
+            self waittill(#"damage", damage, attacker, direction_vec, point, meansofdeath, tagname, modelname, partname, weapon);
             if (isdefined(meansofdeath) && meansofdeath == "MOD_BURNED") {
                 damage = int(max(self.health * 0.5, damage));
             }

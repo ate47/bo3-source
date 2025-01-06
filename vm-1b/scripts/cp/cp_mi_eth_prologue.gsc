@@ -1,52 +1,52 @@
-#using scripts/cp/voice/voice_prologue;
-#using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_prologue_ending;
-#using scripts/cp/cp_prologue_player_sacrifice;
-#using scripts/cp/cp_prologue_apc;
-#using scripts/cp/cp_prologue_robot_reveal;
-#using scripts/cp/cp_prologue_bridge;
-#using scripts/cp/cp_prologue_dark_battle;
-#using scripts/cp/cp_prologue_hangars;
-#using scripts/cp/cp_prologue_cyber_soldiers;
-#using scripts/cp/cp_prologue_hostage_rescue;
-#using scripts/cp/cp_prologue_security_camera;
-#using scripts/cp/cp_prologue_enter_base;
-#using scripts/cp/cp_prologue_intro;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cybercom/_cybercom_tactical_rig;
-#using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_collectibles;
-#using scripts/cp/_util;
-#using scripts/cp/_turret_sentry;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_ammo_cache;
-#using scripts/cp/_accolades;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_turret_sentry;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue_accolades;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/cp_prologue_bridge;
+#using scripts/cp/cp_prologue_cyber_soldiers;
+#using scripts/cp/cp_prologue_dark_battle;
+#using scripts/cp/cp_prologue_ending;
+#using scripts/cp/cp_prologue_enter_base;
+#using scripts/cp/cp_prologue_hangars;
+#using scripts/cp/cp_prologue_hostage_rescue;
+#using scripts/cp/cp_prologue_intro;
+#using scripts/cp/cp_prologue_player_sacrifice;
+#using scripts/cp/cp_prologue_robot_reveal;
+#using scripts/cp/cp_prologue_security_camera;
+#using scripts/cp/cp_prologue_util;
+#using scripts/cp/cybercom/_cybercom_gadget;
+#using scripts/cp/cybercom/_cybercom_tactical_rig;
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/voice/voice_prologue;
+#using scripts/shared/ai/systems/shared;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace cp_mi_eth_prologue;
 
@@ -687,10 +687,10 @@ function function_8b6d4df5(str_objective, var_74cd64bc) {
         level.var_9db406db = util::function_740f8516("khalil");
         skipto::teleport_ai(str_objective, level.heroes);
         namespace_e80bc418::function_d4734ff1();
-        level.var_be31aa9a = getent("freight_lift", "targetname");
+        level.e_lift = getent("freight_lift", "targetname");
         if (!isdefined(level.var_3dce3f88)) {
-            level.var_3dce3f88 = spawn("script_model", level.var_be31aa9a.origin);
-            level.var_be31aa9a linkto(level.var_3dce3f88);
+            level.var_3dce3f88 = spawn("script_model", level.e_lift.origin);
+            level.e_lift linkto(level.var_3dce3f88);
         }
         load::function_a2995f22();
         namespace_dccf27b3::function_f9753551();
@@ -741,8 +741,8 @@ function function_5eddb104(str_objective, var_74cd64bc) {
         level.var_4d5a4697 = util::function_740f8516("minister");
         level.var_7f246cd7 = util::function_740f8516("pallas");
         skipto::teleport_ai(str_objective, level.heroes);
-        level.var_be31aa9a = getent("freight_lift", "targetname");
-        level.var_be31aa9a movez(100, 0.05);
+        level.e_lift = getent("freight_lift", "targetname");
+        level.e_lift movez(100, 0.05);
         load::function_a2995f22();
     }
     level thread objectives::breadcrumb("hangar_breadcrumb_start");
@@ -811,7 +811,7 @@ function function_9af4a8ed(name, var_74cd64bc, var_e4cd2b8b, player) {
     umbragate_set("umbra_gate_hangar_03", 0);
     umbragate_set("umbra_gate_hangar_04", 0);
     if (name == "skipto_jeep_alley" && var_74cd64bc) {
-        namespace_30207c6f::function_fcc9ed10();
+        jeep_alley::function_fcc9ed10();
     }
     level notify(#"hash_73facd66");
     function_77d9dff("vtol_collapse_done");
@@ -837,7 +837,7 @@ function function_ddf114c9(str_objective, var_74cd64bc) {
     }
     level thread scene::play("p7_fxanim_cp_prologue_plane_hanger_pristine_bundle");
     function_77d9dff("objective_jeep_alley_init");
-    namespace_30207c6f::function_910f2aa();
+    jeep_alley::function_910f2aa();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -867,8 +867,8 @@ function function_d714762b(str_objective, var_74cd64bc) {
         level.var_4d5a4697 = util::function_740f8516("minister");
         level.var_2fd26037 = util::function_740f8516("hendricks");
         skipto::teleport_ai(str_objective, level.heroes);
-        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &namespace_30207c6f::function_cf946de6);
-        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &namespace_30207c6f::function_7af067f4, "done");
+        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &jeep_alley::function_cf946de6);
+        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &jeep_alley::function_7af067f4, "done");
         level thread scene::skipto_end("cin_pro_11_01_jeepalley_vign_engage_attack", undefined, undefined, 0.8);
         scene::play("p7_fxanim_cp_prologue_plane_hanger_explode_bundle");
         level.var_35c12e63 = struct::get("bridge_obj", "targetname");
@@ -877,7 +877,7 @@ function function_d714762b(str_objective, var_74cd64bc) {
         trigger::use("jeep_alley_allies_move", "targetname");
     }
     function_77d9dff("objective_bridge_battle_init");
-    namespace_dc79b4d3::function_b86981e6();
+    bridge_battle::function_b86981e6();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -930,7 +930,7 @@ function function_32dc1c24(str_objective, var_74cd64bc) {
         skipto::teleport_ai(str_objective, level.heroes);
     }
     function_77d9dff("objective_dark_battle_init");
-    namespace_36e484c6::function_6feca657();
+    dark_battle::function_6feca657();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -1001,7 +1001,7 @@ function function_30f4cc7b(str_objective, var_74cd64bc) {
         level.var_4d5a4697 = util::function_740f8516("minister");
         var_61b253a2 = getweapon("sniper_fastbolt_hero", "extclip", "fastreload");
         level.var_5d4087a6 shared::stowweapon(var_61b253a2, (-8, 4, 14), (90, 0, 0));
-        level thread namespace_36e484c6::function_25c6144e();
+        level thread dark_battle::function_25c6144e();
         level scene::init("p7_fxanim_cp_prologue_vtol_tackle_windows_bundle");
         load::function_a2995f22();
         array::thread_all(level.players, &clientfield::set_to_player, "turn_off_tacmode_vfx", 1);

@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_quad;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie_quad;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_moon_ai_quad;
 
@@ -33,7 +33,7 @@ function autoexec init() {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa4112eb7, Offset: 0x668
 // Size: 0x174
 function private function_e9b3dfb0() {
@@ -49,7 +49,7 @@ function private function_e9b3dfb0() {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x500b30f7, Offset: 0x7e8
 // Size: 0x39c
 function private quadPhasingService(entity) {
@@ -98,7 +98,7 @@ function private quadPhasingService(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb53c5092, Offset: 0xb90
 // Size: 0x22c
 function private shouldPhase(entity) {
@@ -141,7 +141,7 @@ function private shouldPhase(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7bc2833c, Offset: 0xdc8
 // Size: 0x7c
 function private phaseActionStart(entity) {
@@ -156,7 +156,7 @@ function private phaseActionStart(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x682f8065, Offset: 0xe50
 // Size: 0x2c
 function private phaseActionTerminate(entity) {
@@ -165,7 +165,7 @@ function private phaseActionTerminate(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb4d12f1d, Offset: 0xe88
 // Size: 0x2e
 function private function_3679b8f9(entity) {
@@ -173,7 +173,7 @@ function private function_3679b8f9(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4f24dc7b, Offset: 0xec0
 // Size: 0x2e
 function private function_8defac52(entity) {
@@ -181,7 +181,7 @@ function private function_8defac52(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x53349f2e, Offset: 0xef8
 // Size: 0x44
 function private function_51ab54f7(entity) {
@@ -190,7 +190,7 @@ function private function_51ab54f7(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xa29b838f, Offset: 0xf48
 // Size: 0x44
 function private function_428f351c(entity) {
@@ -199,7 +199,7 @@ function private function_428f351c(entity) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xe29d6ad6, Offset: 0xf98
 // Size: 0x4c
 function private function_4e0a671e(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -207,7 +207,7 @@ function private function_4e0a671e(entity, mocompanim, mocompanimblendouttime, m
 }
 
 // Namespace zm_moon_ai_quad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c6524ed, Offset: 0xff0
 // Size: 0x17e
 function function_5076473f() {
@@ -237,7 +237,7 @@ function function_e23e8d13() {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x498f4ad1, Offset: 0x11d8
 // Size: 0x164
 function function_11b04bf0(animname, var_1f230408) {
@@ -246,7 +246,7 @@ function function_11b04bf0(animname, var_1f230408) {
     self thread function_734565f2(var_1f230408);
     self thread function_73d82859(var_1f230408);
     while (true) {
-        note = self waittill(animname);
+        self waittill(animname, note);
         if (note == "phase_start") {
             self thread function_4474334d("quad_phasing_out");
             self playsound("zmb_quad_phase_out");
@@ -264,7 +264,7 @@ function function_11b04bf0(animname, var_1f230408) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x256543ad, Offset: 0x1348
 // Size: 0x2a
 function function_1fe01b05() {
@@ -275,7 +275,7 @@ function function_1fe01b05() {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x45746c11, Offset: 0x1380
 // Size: 0x92
 function function_734565f2(var_1f230408) {
@@ -289,7 +289,7 @@ function function_734565f2(var_1f230408) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4a91a0b, Offset: 0x1420
 // Size: 0x6a
 function function_73d82859(var_1f230408) {
@@ -302,7 +302,7 @@ function function_73d82859(var_1f230408) {
 }
 
 // Namespace zm_moon_ai_quad
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8bb9db1, Offset: 0x1498
 // Size: 0x54
 function function_4474334d(var_99a8589b) {

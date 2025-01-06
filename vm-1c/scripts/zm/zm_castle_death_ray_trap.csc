@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/beam_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/beam_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_castle_death_ray_trap;
 
 // Namespace zm_castle_death_ray_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe332f20f, Offset: 0x3d8
 // Size: 0x264
 function main() {
@@ -27,7 +27,7 @@ function main() {
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7e36bedb, Offset: 0x648
 // Size: 0x124
 function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -48,7 +48,7 @@ function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc26ab0d, Offset: 0x778
 // Size: 0x4c
 function function_7772592b(localclientnum) {
@@ -59,7 +59,7 @@ function function_7772592b(localclientnum) {
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb62d7854, Offset: 0x7d0
 // Size: 0x52
 function function_51adc559(localclientnum) {
@@ -71,7 +71,7 @@ function function_51adc559(localclientnum) {
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x68d17467, Offset: 0x830
 // Size: 0xc6
 function death_ray_shock_eye_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -86,7 +86,7 @@ function death_ray_shock_eye_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc097a2b8, Offset: 0x900
 // Size: 0x6c
 function death_ray_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -94,16 +94,16 @@ function death_ray_explode_fx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2cc74244, Offset: 0x978
 // Size: 0x17c
 function death_ray_status_light(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     v_forward = anglestoright(self.angles);
     v_forward *= -1;
     v_up = anglestoup(self.angles);
-    if (isdefined(self.var_b99efa04)) {
-        deletefx(localclientnum, self.var_b99efa04, 1);
-        self.var_b99efa04 = undefined;
+    if (isdefined(self.status_fx)) {
+        deletefx(localclientnum, self.status_fx, 1);
+        self.status_fx = undefined;
     }
     switch (newval) {
     case 0:
@@ -117,11 +117,11 @@ function death_ray_status_light(localclientnum, oldval, newval, bnewent, binitia
         tag = "tag_fx_light_red";
         break;
     }
-    self.var_b99efa04 = playfxontag(localclientnum, level._effect[str_fx_name], self, tag);
+    self.status_fx = playfxontag(localclientnum, level._effect[str_fx_name], self, tag);
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1abb6518, Offset: 0xb00
 // Size: 0x13c
 function function_200eea36(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -138,7 +138,7 @@ function function_200eea36(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4e3ee856, Offset: 0xc48
 // Size: 0xfc
 function function_ec4ecaed(localclientnum, s_source, str_beam) {
@@ -150,7 +150,7 @@ function function_ec4ecaed(localclientnum, s_source, str_beam) {
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8e946630, Offset: 0xd50
 // Size: 0x1d4
 function tesla_beam_mechz(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -175,7 +175,7 @@ function tesla_beam_mechz(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa92b0a90, Offset: 0xf30
 // Size: 0x4c
 function function_3c5fc735(localclientnum) {
@@ -186,7 +186,7 @@ function function_3c5fc735(localclientnum) {
 }
 
 // Namespace zm_castle_death_ray_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ec0dc46, Offset: 0xf88
 // Size: 0x8a
 function function_1139a457(localclientnum) {

@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace trigger;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1bd073ab, Offset: 0x420
 // Size: 0x6a8
 function __init__() {
@@ -27,23 +27,23 @@ function __init__() {
     if (!isdefined(level.trigger_flags)) {
         init_flags();
     }
-    var_b4443147 = [];
-    var_b4443147["trigger_unlock"] = &trigger_unlock;
-    var_b4443147["flag_set"] = &flag_set_trigger;
-    var_b4443147["flag_clear"] = &flag_clear_trigger;
-    var_b4443147["flag_set_touching"] = &flag_set_touching;
-    var_b4443147["friendly_respawn_trigger"] = &friendly_respawn_trigger;
-    var_b4443147["friendly_respawn_clear"] = &friendly_respawn_clear;
-    var_b4443147["trigger_delete"] = &trigger_turns_off;
-    var_b4443147["trigger_delete_on_touch"] = &trigger_delete_on_touch;
-    var_b4443147["trigger_off"] = &trigger_turns_off;
-    var_b4443147["delete_link_chain"] = &delete_link_chain;
-    var_b4443147["no_crouch_or_prone"] = &function_5c8525c5;
-    var_b4443147["no_prone"] = &function_555e49a2;
-    var_b4443147["flood_spawner"] = &spawner::flood_trigger_think;
-    var_b4443147["trigger_spawner"] = &trigger_spawner;
-    var_b4443147["trigger_hint"] = &trigger_hint;
-    var_b4443147["exploder"] = &function_c52b5655;
+    trigger_funcs = [];
+    trigger_funcs["trigger_unlock"] = &trigger_unlock;
+    trigger_funcs["flag_set"] = &flag_set_trigger;
+    trigger_funcs["flag_clear"] = &flag_clear_trigger;
+    trigger_funcs["flag_set_touching"] = &flag_set_touching;
+    trigger_funcs["friendly_respawn_trigger"] = &friendly_respawn_trigger;
+    trigger_funcs["friendly_respawn_clear"] = &friendly_respawn_clear;
+    trigger_funcs["trigger_delete"] = &trigger_turns_off;
+    trigger_funcs["trigger_delete_on_touch"] = &trigger_delete_on_touch;
+    trigger_funcs["trigger_off"] = &trigger_turns_off;
+    trigger_funcs["delete_link_chain"] = &delete_link_chain;
+    trigger_funcs["no_crouch_or_prone"] = &function_5c8525c5;
+    trigger_funcs["no_prone"] = &function_555e49a2;
+    trigger_funcs["flood_spawner"] = &spawner::flood_trigger_think;
+    trigger_funcs["trigger_spawner"] = &trigger_spawner;
+    trigger_funcs["trigger_hint"] = &trigger_hint;
+    trigger_funcs["exploder"] = &function_c52b5655;
     foreach (trig in get_all("trigger_radius", "trigger_multiple", "trigger_once", "trigger_box")) {
         if (isdefined(trig.spawnflags) && (trig.spawnflags & 256) == 256) {
             level thread trigger_look(trig);
@@ -91,15 +91,15 @@ function __init__() {
             level thread kill_spawner_trigger(trig);
         }
         if (isdefined(trig.targetname)) {
-            if (isdefined(var_b4443147[trig.targetname])) {
-                level thread [[ var_b4443147[trig.targetname] ]](trig);
+            if (isdefined(trigger_funcs[trig.targetname])) {
+                level thread [[ trigger_funcs[trig.targetname] ]](trig);
             }
         }
     }
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd35d35ab, Offset: 0xad0
 // Size: 0xce
 function function_ad8ffc08() {
@@ -108,7 +108,7 @@ function function_ad8ffc08() {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc5736642, Offset: 0xba8
 // Size: 0x130
 function trigger_unlock(trigger) {
@@ -116,29 +116,29 @@ function trigger_unlock(trigger) {
     if (isdefined(trigger.script_noteworthy)) {
         noteworthy = trigger.script_noteworthy;
     }
-    var_467768ba = getentarray(trigger.target, "targetname");
+    target_triggers = getentarray(trigger.target, "targetname");
     trigger thread trigger_unlock_death(trigger.target);
     while (true) {
-        array::run_all(var_467768ba, &triggerenable, 0);
+        array::run_all(target_triggers, &triggerenable, 0);
         trigger waittill(#"trigger");
-        array::run_all(var_467768ba, &triggerenable, 1);
-        wait_for_an_unlocked_trigger(var_467768ba, noteworthy);
-        array::notify_all(var_467768ba, "relock");
+        array::run_all(target_triggers, &triggerenable, 1);
+        wait_for_an_unlocked_trigger(target_triggers, noteworthy);
+        array::notify_all(target_triggers, "relock");
     }
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x54bdfe14, Offset: 0xce0
 // Size: 0x64
 function trigger_unlock_death(target) {
     self waittill(#"death");
-    var_467768ba = getentarray(target, "targetname");
-    array::run_all(var_467768ba, &triggerenable, 0);
+    target_triggers = getentarray(target, "targetname");
+    array::run_all(target_triggers, &triggerenable, 0);
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdd915932, Offset: 0xd50
 // Size: 0xb0
 function wait_for_an_unlocked_trigger(triggers, noteworthy) {
@@ -152,7 +152,7 @@ function wait_for_an_unlocked_trigger(triggers, noteworthy) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc11723ab, Offset: 0xe08
 // Size: 0x4c
 function report_trigger(ent, noteworthy) {
@@ -163,7 +163,7 @@ function report_trigger(ent, noteworthy) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad36b5f5, Offset: 0xe60
 // Size: 0x200
 function get_trigger_look_target() {
@@ -194,7 +194,7 @@ function get_trigger_look_target() {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee18704e, Offset: 0x1068
 // Size: 0x2c0
 function trigger_look(trigger) {
@@ -209,7 +209,7 @@ function trigger_look(trigger) {
     }
     b_ads_check = isinarray(a_parameters, "check_ads");
     while (true) {
-        e_other = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", e_other);
         if (isplayer(e_other)) {
             while (isdefined(e_other) && e_other istouching(trigger)) {
                 if (!b_ads_check || e_other util::is_looking_at(e_target, trigger.script_dot, isdefined(trigger.script_trace) && trigger.script_trace) && !e_other util::is_ads()) {
@@ -232,7 +232,7 @@ function trigger_look(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x72c17349, Offset: 0x1330
 // Size: 0x12a
 function trigger_spawner(trigger) {
@@ -248,7 +248,7 @@ function trigger_spawner(trigger) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb21063d5, Offset: 0x1468
 // Size: 0x54
 function trigger_spawner_spawn() {
@@ -259,7 +259,7 @@ function trigger_spawner_spawn() {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf2a9d991, Offset: 0x14c8
 // Size: 0x114
 function trigger_notify(trigger, msg) {
@@ -275,7 +275,7 @@ function trigger_notify(trigger, msg) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7b311f80, Offset: 0x15e8
 // Size: 0xf8
 function flag_set_trigger(trigger, str_flag) {
@@ -296,7 +296,7 @@ function flag_set_trigger(trigger, str_flag) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x21cbd72b, Offset: 0x16e8
 // Size: 0xf8
 function flag_clear_trigger(trigger, str_flag) {
@@ -317,7 +317,7 @@ function flag_clear_trigger(trigger, str_flag) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e202bb, Offset: 0x17e8
 // Size: 0x92
 function add_tokens_to_trigger_flags(tokens) {
@@ -331,7 +331,7 @@ function add_tokens_to_trigger_flags(tokens) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8eb2322e, Offset: 0x1888
 // Size: 0x6c
 function function_83ff7020(trigger) {
@@ -341,7 +341,7 @@ function function_83ff7020(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x268a7e3f, Offset: 0x1900
 // Size: 0x6c
 function function_f1980fe1(trigger) {
@@ -351,7 +351,7 @@ function function_f1980fe1(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x341eb30f, Offset: 0x1978
 // Size: 0x178
 function friendly_respawn_trigger(trigger) {
@@ -375,7 +375,7 @@ function friendly_respawn_trigger(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f0b2f06, Offset: 0x1af8
 // Size: 0x58
 function friendly_respawn_clear(trigger) {
@@ -388,7 +388,7 @@ function friendly_respawn_clear(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1182bf94, Offset: 0x1b58
 // Size: 0xee
 function trigger_turns_off(trigger) {
@@ -404,7 +404,7 @@ function trigger_turns_off(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf9f49d54, Offset: 0x1c50
 // Size: 0x1d8
 function script_flag_set_touching(trigger) {
@@ -443,7 +443,7 @@ function script_flag_set_touching(trigger) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7c5eef1f, Offset: 0x1e30
 // Size: 0x34
 function _detect_touched() {
@@ -455,12 +455,12 @@ function _detect_touched() {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1bd21478, Offset: 0x1e70
 // Size: 0x50
 function trigger_delete_on_touch(trigger) {
     while (true) {
-        other = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", other);
         if (isdefined(other)) {
             other delete();
         }
@@ -468,7 +468,7 @@ function trigger_delete_on_touch(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5df9bef3, Offset: 0x1ec8
 // Size: 0x100
 function flag_set_touching(trigger) {
@@ -477,7 +477,7 @@ function flag_set_touching(trigger) {
         level flag::init(str_flag, undefined, 1);
     }
     while (true) {
-        other = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", other);
         level flag::set(str_flag);
         while (isalive(other) && other istouching(trigger) && isdefined(trigger)) {
             wait 0.25;
@@ -487,7 +487,7 @@ function flag_set_touching(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd3332659, Offset: 0x1fd0
 // Size: 0xf4
 function trigger_once(trig) {
@@ -510,7 +510,7 @@ function trigger_once(trig) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf3289391, Offset: 0x20d0
 // Size: 0x174
 function trigger_hint(trigger) {
@@ -521,7 +521,7 @@ function trigger_hint(trigger) {
     }
     waittillframeend();
     assert(isdefined(level.trigger_hint_string[trigger.script_hint]), "<dev string:x1cb>" + trigger.script_hint + "<dev string:x1e3>");
-    other = trigger waittill(#"trigger");
+    trigger waittill(#"trigger", other);
     assert(isplayer(other), "<dev string:x238>");
     if (isdefined(level.displayed_hints[trigger.script_hint])) {
         return;
@@ -531,7 +531,7 @@ function trigger_hint(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaa1fc07c, Offset: 0x2250
 // Size: 0x60
 function function_c52b5655(trigger) {
@@ -545,7 +545,7 @@ function function_c52b5655(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8ea8bf47, Offset: 0x22b8
 // Size: 0xb4
 function display_hint(hint) {
@@ -563,7 +563,7 @@ function display_hint(hint) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7022df29, Offset: 0x2378
 // Size: 0x394
 function function_bd4fb8ef(string, var_6647cf0c) {
@@ -614,7 +614,7 @@ function function_bd4fb8ef(string, var_6647cf0c) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8a4ef5c5, Offset: 0x2718
 // Size: 0x82
 function function_5f1a1049(length, var_6647cf0c) {
@@ -632,7 +632,7 @@ function function_5f1a1049(length, var_6647cf0c) {
 }
 
 // Namespace trigger
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0xc998fa6d, Offset: 0x27a8
 // Size: 0x524
 function get_all(type1, var_70753f2d, var_4a72c4c4, var_24704a5b, var_fe6dcff2, var_d86b5589, var_b268db20, var_ec8e0747, var_c68b8cde) {
@@ -690,7 +690,7 @@ function get_all(type1, var_70753f2d, var_4a72c4c4, var_24704a5b, var_fe6dcff2, 
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96a071c8, Offset: 0x2cd8
 // Size: 0x82
 function function_73e50955(type) {
@@ -712,7 +712,7 @@ function function_73e50955(type) {
 }
 
 // Namespace trigger
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x851ab05d, Offset: 0x2d68
 // Size: 0x1fc
 function wait_till(str_name, str_key, e_entity, b_assert) {
@@ -738,7 +738,7 @@ function wait_till(str_name, str_key, e_entity, b_assert) {
             } else {
                 s_tracker = spawnstruct();
                 array::thread_all(triggers, &_trigger_wait_think, s_tracker, e_entity);
-                e_other, trigger_hit = s_tracker waittill(#"trigger");
+                s_tracker waittill(#"trigger", e_other, trigger_hit);
                 trigger_hit.who = e_other;
             }
             return trigger_hit;
@@ -754,7 +754,7 @@ function wait_till(str_name, str_key, e_entity, b_assert) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcf084cc5, Offset: 0x2f70
 // Size: 0x202
 function _trigger_wait(e_entity) {
@@ -771,21 +771,21 @@ function _trigger_wait(e_entity) {
     #/
     while (true) {
         if (is_look_trigger(self)) {
-            e_other = self waittill(#"trigger_look");
+            self waittill(#"trigger_look", e_other);
             if (isdefined(e_entity)) {
                 if (e_other !== e_entity) {
                     continue;
                 }
             }
         } else if (self.classname === "trigger_damage") {
-            e_other = self waittill(#"trigger");
+            self waittill(#"trigger", e_other);
             if (isdefined(e_entity)) {
                 if (e_other !== e_entity) {
                     continue;
                 }
             }
         } else {
-            e_other = self waittill(#"trigger");
+            self waittill(#"trigger", e_other);
             if (isdefined(e_entity)) {
                 if (isarray(e_entity)) {
                     if (!array::is_touching(e_entity, self)) {
@@ -803,7 +803,7 @@ function _trigger_wait(e_entity) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd47961f6, Offset: 0x3180
 // Size: 0x64
 function _trigger_wait_think(s_tracker, e_entity) {
@@ -814,7 +814,7 @@ function _trigger_wait_think(s_tracker, e_entity) {
 }
 
 // Namespace trigger
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe767be6f, Offset: 0x31f0
 // Size: 0x184
 function use(str_name, str_key, ent, b_assert) {
@@ -852,7 +852,7 @@ function use(str_name, str_key, ent, b_assert) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x661e9565, Offset: 0x3380
 // Size: 0x94
 function set_flag_permissions(msg) {
@@ -864,7 +864,7 @@ function set_flag_permissions(msg) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27fd0f50, Offset: 0x3420
 // Size: 0x15c
 function update_based_on_flags() {
@@ -894,7 +894,7 @@ function update_based_on_flags() {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4925b55f, Offset: 0x3588
 // Size: 0x10
 function init_flags() {
@@ -902,7 +902,7 @@ function init_flags() {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb8e393b9, Offset: 0x35a0
 // Size: 0x64
 function is_look_trigger(trig) {
@@ -910,7 +910,7 @@ function is_look_trigger(trig) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x294be86e, Offset: 0x3610
 // Size: 0x5e
 function is_trigger_once(trig) {
@@ -918,7 +918,7 @@ function is_trigger_once(trig) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbcee7960, Offset: 0x3678
 // Size: 0x11e
 function wait_for_either(str_targetname1, str_targetname2) {
@@ -929,12 +929,12 @@ function wait_for_either(str_targetname1, str_targetname2) {
     for (i = 0; i < array.size; i++) {
         ent thread _ent_waits_for_trigger(array[i]);
     }
-    var_2df9fcc1 = ent waittill(#"done");
+    ent waittill(#"done", var_2df9fcc1);
     return var_2df9fcc1;
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d82ad59, Offset: 0x37a0
 // Size: 0x36
 function _ent_waits_for_trigger(trigger) {
@@ -943,7 +943,7 @@ function _ent_waits_for_trigger(trigger) {
 }
 
 // Namespace trigger
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xacbe479e, Offset: 0x37e0
 // Size: 0x8c
 function wait_or_timeout(n_time, str_name, str_key) {
@@ -993,7 +993,7 @@ function multiple_waits(str_trigger_name, str_trigger_notify) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8309a95, Offset: 0x3a38
 // Size: 0x2a
 function multiple_wait(str_trigger_notify) {
@@ -1003,7 +1003,7 @@ function multiple_wait(str_trigger_notify) {
 }
 
 // Namespace trigger
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0x1f41c007, Offset: 0x3a70
 // Size: 0x84
 function add_function(trigger, str_remove_on, func, param_1, param_2, param_3, param_4, param_5, param_6) {
@@ -1011,7 +1011,7 @@ function add_function(trigger, str_remove_on, func, param_1, param_2, param_3, p
 }
 
 // Namespace trigger
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0x541f3141, Offset: 0x3b00
 // Size: 0xf8
 function _do_trigger_function(trigger, str_remove_on, func, param_1, param_2, param_3, param_4, param_5, param_6) {
@@ -1031,7 +1031,7 @@ function _do_trigger_function(trigger, str_remove_on, func, param_1, param_2, pa
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xed3a87ab, Offset: 0x3c00
 // Size: 0x1ba
 function kill_spawner_trigger(trigger) {
@@ -1049,7 +1049,7 @@ function kill_spawner_trigger(trigger) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x738183e4, Offset: 0x3dc8
 // Size: 0xda
 function get_script_linkto_targets() {
@@ -1069,7 +1069,7 @@ function get_script_linkto_targets() {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x670ce103, Offset: 0x3eb0
 // Size: 0x64
 function delete_link_chain(trigger) {
@@ -1079,7 +1079,7 @@ function delete_link_chain(trigger) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4084765, Offset: 0x3f20
 // Size: 0x5c
 function delete_links_then_self() {
@@ -1089,12 +1089,12 @@ function delete_links_then_self() {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x24cf126d, Offset: 0x3f88
 // Size: 0xd8
 function function_5c8525c5(trigger) {
     while (true) {
-        other = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", other);
         if (!isplayer(other)) {
             continue;
         }
@@ -1109,12 +1109,12 @@ function function_5c8525c5(trigger) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2d266001, Offset: 0x4068
 // Size: 0xa8
 function function_555e49a2(trigger) {
     while (true) {
-        other = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", other);
         if (!isplayer(other)) {
             continue;
         }
@@ -1127,7 +1127,7 @@ function function_555e49a2(trigger) {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x543f1e8d, Offset: 0x4118
 // Size: 0x54
 function trigger_group() {
@@ -1138,18 +1138,18 @@ function trigger_group() {
 }
 
 // Namespace trigger
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb072aa90, Offset: 0x4178
 // Size: 0x44
 function trigger_group_remove() {
-    trigger = level waittill("trigger_group_" + self.script_trigger_group);
+    level waittill("trigger_group_" + self.script_trigger_group, trigger);
     if (self != trigger) {
         self delete();
     }
 }
 
 // Namespace trigger
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd35fe7b1, Offset: 0x41c8
 // Size: 0xfc
 function function_thread(ent, on_enter_payload, on_exit_payload) {
@@ -1173,7 +1173,7 @@ function function_thread(ent, on_enter_payload, on_exit_payload) {
 }
 
 // Namespace trigger
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x81a3626a, Offset: 0x42d0
 // Size: 0x70
 function ent_already_in(trig) {
@@ -1190,7 +1190,7 @@ function ent_already_in(trig) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x69912a81, Offset: 0x4348
 // Size: 0x62
 function add_to_ent(ent, trig) {
@@ -1201,7 +1201,7 @@ function add_to_ent(ent, trig) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2ab5f476, Offset: 0x43b8
 // Size: 0x82
 function remove_from_ent(ent, trig) {

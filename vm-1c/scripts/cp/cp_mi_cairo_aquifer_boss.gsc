@@ -1,46 +1,46 @@
-#using scripts/cp/cp_mi_cairo_aquifer_interior;
-#using scripts/cp/cp_mi_cairo_aquifer_utility;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cp_mi_cairo_aquifer_objectives;
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_aquifer;
+#using scripts/cp/cp_mi_cairo_aquifer_interior;
+#using scripts/cp/cp_mi_cairo_aquifer_objectives;
 #using scripts/cp/cp_mi_cairo_aquifer_sound;
+#using scripts/cp/cp_mi_cairo_aquifer_utility;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/lui_shared;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai_shared;
+#using scripts/shared/ai_sniper_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/exploder_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/spawner_shared;
 #using scripts/shared/flag_shared;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
 #using scripts/shared/trigger_shared;
 #using scripts/shared/turret_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/ai_sniper_shared;
-#using scripts/codescripts/struct;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
-#using scripts/cp/_debug;
-#using scripts/cp/_objectives;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/cp/_hacking;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_cairo_aquifer_boss;
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x35061e4e, Offset: 0xd28
 // Size: 0x5c
-function function_998c817d() {
+function start_boss() {
     thread function_510d0407();
     level flag::wait_till("start_battle");
     thread function_5358c20("hendricks");
@@ -67,7 +67,7 @@ function function_5f8efef1(ent) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdd93b2f0, Offset: 0xea8
 // Size: 0xd4
 function function_5358c20(name) {
@@ -94,7 +94,7 @@ function function_5dd0c951(arr) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe1526964, Offset: 0xfe8
 // Size: 0x56
 function function_519d76bc(array, num) {
@@ -107,7 +107,7 @@ function function_519d76bc(array, num) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc4556447, Offset: 0x1048
 // Size: 0xec
 function function_f9d87307(name) {
@@ -128,7 +128,7 @@ function function_f9d87307(name) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x14d9780e, Offset: 0x1140
 // Size: 0x54
 function function_7c54d87d() {
@@ -138,7 +138,7 @@ function function_7c54d87d() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ba7f72e, Offset: 0x11a0
 // Size: 0x830
 function function_a54075c1() {
@@ -180,7 +180,7 @@ function function_a54075c1() {
     level.var_d56cb109 = -1;
     var_a4d5f340 = 7;
     level.var_8f1f476d = "wave_a";
-    var_d7c34d98 = 0;
+    new_spot = 0;
     level.sniper_boss show();
     level.turret turret::enable_laser(1, 0);
     level.var_c987bca = 1;
@@ -207,7 +207,7 @@ function function_a54075c1() {
     function_e9aa8887();
     thread function_6ea369f7();
     for (reset = 1; !level flag::get("end_battle"); reset = 0) {
-        if (var_d7c34d98) {
+        if (new_spot) {
             switch (level.var_f1ee7b0e) {
             case 1:
                 break;
@@ -221,7 +221,7 @@ function function_a54075c1() {
                 }
                 break;
             }
-            var_d7c34d98 = 0;
+            new_spot = 0;
         }
         event = level.sniper_boss util::waittill_any_timeout(var_a4d5f340, "sniper_suppressed", "sniper_disabled", "fire");
         if (event == "fire") {
@@ -235,7 +235,7 @@ function function_a54075c1() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe0c6e4c0, Offset: 0x19d8
 // Size: 0x4c
 function function_60e39f29(var_39c2c150) {
@@ -244,7 +244,7 @@ function function_60e39f29(var_39c2c150) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x76660800, Offset: 0x1a30
 // Size: 0xfc
 function function_479d0795(var_81c506ec) {
@@ -263,7 +263,7 @@ function function_479d0795(var_81c506ec) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6879d669, Offset: 0x1b38
 // Size: 0xfc
 function function_e9aa8887() {
@@ -282,7 +282,7 @@ function function_e9aa8887() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0006fdf, Offset: 0x1c40
 // Size: 0x14
 function function_f1889e69() {
@@ -341,7 +341,7 @@ function function_5e9e2b2e() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1a5f6f03, Offset: 0x1f60
 // Size: 0xf4
 function function_eea4755(index) {
@@ -380,7 +380,7 @@ function function_38600307() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3effbb83, Offset: 0x20e0
 // Size: 0x10e
 function function_6485b136(player, delay) {
@@ -442,7 +442,7 @@ function function_c5ba7a9b(e1, e2) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc5c8742, Offset: 0x23e0
 // Size: 0x154
 function end_battle() {
@@ -460,7 +460,7 @@ function end_battle() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2732c65, Offset: 0x2540
 // Size: 0x534
 function function_479374a3() {
@@ -531,7 +531,7 @@ function function_479374a3() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x51f8085e, Offset: 0x2a80
 // Size: 0x2c
 function function_f3ee81ce(a_ents) {
@@ -539,7 +539,7 @@ function function_f3ee81ce(a_ents) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa422202, Offset: 0x2ab8
 // Size: 0x5c
 function function_2a39915e() {
@@ -550,7 +550,7 @@ function function_2a39915e() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdae8e5b1, Offset: 0x2b20
 // Size: 0xc2
 function function_510d0407() {
@@ -562,7 +562,7 @@ function function_510d0407() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e0965f0, Offset: 0x2bf0
 // Size: 0x204
 function function_d1b143ce() {
@@ -623,7 +623,7 @@ function function_e146f6ef() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3675e211, Offset: 0x3038
 // Size: 0xe6
 function function_ca9c8f2b(org) {
@@ -638,7 +638,7 @@ function function_ca9c8f2b(org) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc06d7518, Offset: 0x3128
 // Size: 0x1cc
 function function_329f82a0() {
@@ -662,13 +662,13 @@ function function_329f82a0() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9f2ad4a, Offset: 0x3300
 // Size: 0xd4
 function function_6ea369f7() {
     trig = getent("sniper_alley", "targetname");
     while (!level flag::get("end_battle")) {
-        who = trig waittill(#"trigger");
+        trig waittill(#"trigger", who);
         if (isplayer(who) && isalive(who)) {
             if (!isdefined(level.sniper_boss.player_target)) {
                 function_6485b136(who, 2);
@@ -678,7 +678,7 @@ function function_6ea369f7() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e3aee9, Offset: 0x33e0
 // Size: 0x2ec
 function function_6800ac1d() {
@@ -712,7 +712,7 @@ function function_6800ac1d() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x668c82c7, Offset: 0x36d8
 // Size: 0x1a
 function function_e9c4785f(gameobj) {
@@ -720,7 +720,7 @@ function function_e9c4785f(gameobj) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5065867, Offset: 0x3700
 // Size: 0x142
 function function_dae6fcbf(name) {
@@ -739,7 +739,7 @@ function function_dae6fcbf(name) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x24f15820, Offset: 0x3850
 // Size: 0x480
 function function_a354fb63(num) {
@@ -748,7 +748,7 @@ function function_a354fb63(num) {
     while (!b_success) {
         level.hacking flag::wait_till("in_progress");
         thread function_41ca61ef(num);
-        b_success = level waittill(#"hash_221e0b70");
+        level waittill(#"hash_221e0b70", b_success);
         if (!b_success) {
             level notify(#"hash_90029dea");
         }
@@ -798,7 +798,7 @@ function function_a354fb63(num) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xefbd91a2, Offset: 0x3cd8
 // Size: 0x5c
 function function_339776e2(name) {
@@ -809,7 +809,7 @@ function function_339776e2(name) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf4bc9fb2, Offset: 0x3d40
 // Size: 0x14e
 function function_41ca61ef(num) {
@@ -829,7 +829,7 @@ function function_41ca61ef(num) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4e15c84c, Offset: 0x3e98
 // Size: 0x54
 function function_567a5fa() {
@@ -841,7 +841,7 @@ function function_567a5fa() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84b478ef, Offset: 0x3ef8
 // Size: 0xf4
 function boss_taunt1() {
@@ -857,7 +857,7 @@ function boss_taunt1() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f9666b, Offset: 0x3ff8
 // Size: 0x13c
 function boss_taunt2() {
@@ -876,7 +876,7 @@ function boss_taunt2() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85064da4, Offset: 0x4140
 // Size: 0xc4
 function function_80b6b7eb() {
@@ -892,7 +892,7 @@ function function_80b6b7eb() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb0d0fcb, Offset: 0x4210
 // Size: 0x24
 function function_5e1c1c41() {
@@ -901,7 +901,7 @@ function function_5e1c1c41() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb26722a1, Offset: 0x4240
 // Size: 0xc8
 function boss_vo(str_line, n_timeout) {
@@ -923,7 +923,7 @@ function boss_vo(str_line, n_timeout) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xb064fa55, Offset: 0x4310
 // Size: 0xb6
 function function_4463326b(var_d44c15f4, var_aa750b18, n_timeout, str_endon_notify) {
@@ -942,7 +942,7 @@ function function_4463326b(var_d44c15f4, var_aa750b18, n_timeout, str_endon_noti
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcad9a3bd, Offset: 0x43d0
 // Size: 0x17c
 function function_269260a3() {
@@ -971,7 +971,7 @@ function function_269260a3() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad13c5bd, Offset: 0x4558
 // Size: 0xfc
 function function_86fc21bb() {
@@ -992,7 +992,7 @@ function function_86fc21bb() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x62d99b0d, Offset: 0x4660
 // Size: 0xfc
 function function_c3af0181() {
@@ -1013,7 +1013,7 @@ function function_c3af0181() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd437b39d, Offset: 0x4768
 // Size: 0x148
 function function_ae438739(var_ecd4dcd7) {
@@ -1024,10 +1024,10 @@ function function_ae438739(var_ecd4dcd7) {
     nags[1] = "hend_watch_it_1";
     nags[2] = "hend_watch_that_laser_1";
     while (level.var_6343f89f < nags.size) {
-        amount, attacker, dir, point, mod = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, dir, point, mod);
         if (attacker == level.sniper_boss && gettime() > level.var_9ef3831c + var_ecd4dcd7 * 1000) {
-            var_f0c8f3cf = level.hendricks boss_vo(nags[level.var_6343f89f], 2);
-            if (var_f0c8f3cf) {
+            said_line = level.hendricks boss_vo(nags[level.var_6343f89f], 2);
+            if (said_line) {
                 level.var_9ef3831c = gettime();
                 level.var_6343f89f++;
             }
@@ -1036,7 +1036,7 @@ function function_ae438739(var_ecd4dcd7) {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x802e4abc, Offset: 0x48b8
 // Size: 0xaa
 function function_7a57d63a() {
@@ -1048,7 +1048,7 @@ function function_7a57d63a() {
 }
 
 // Namespace cp_mi_cairo_aquifer_boss
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb34a7035, Offset: 0x4970
 // Size: 0x15c
 function function_3375c23() {

@@ -1,20 +1,20 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_filter;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
 #using scripts/zm/zm_genesis_teleporter;
 #using scripts/zm/zm_genesis_util;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/zm/_filter;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x669fdcbe, Offset: 0x490
 // Size: 0x2e6
 function __init__() {
@@ -47,7 +47,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x79e851a6, Offset: 0x780
 // Size: 0xa6
 function ee_quest_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -68,7 +68,7 @@ function ee_quest_state(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb7a52eba, Offset: 0x830
 // Size: 0x74
 function function_2b5ef9a6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -77,7 +77,7 @@ function function_2b5ef9a6(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9d1043a, Offset: 0x8b0
 // Size: 0xb4
 function function_ede1c539(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -91,7 +91,7 @@ function function_ede1c539(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8c699c1f, Offset: 0x970
 // Size: 0xd6
 function function_52d5d371(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -105,7 +105,7 @@ function function_52d5d371(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x137c0fa, Offset: 0xa50
 // Size: 0xb6
 function sophia_transition_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -120,7 +120,7 @@ function sophia_transition_fx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5589e835, Offset: 0xb10
 // Size: 0x1a4
 function sophia_follow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -146,7 +146,7 @@ function sophia_follow(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd3126c43, Offset: 0xcc0
 // Size: 0x64
 function sophia_eye_on(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -154,7 +154,7 @@ function sophia_eye_on(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe66d3847, Offset: 0xd30
 // Size: 0xf0
 function function_36666e11(e_player) {
@@ -172,7 +172,7 @@ function function_36666e11(e_player) {
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x56574bf4, Offset: 0xe28
 // Size: 0xb4
 function sophia_delete_local(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -184,7 +184,7 @@ function sophia_delete_local(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm_genesis_ee_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x85835e3f, Offset: 0xee8
 // Size: 0x84
 function GenesisEndGameEE(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

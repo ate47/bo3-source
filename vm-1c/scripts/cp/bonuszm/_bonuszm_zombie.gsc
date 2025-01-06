@@ -1,28 +1,28 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/archetype_locomotion_utility;
+#using scripts/shared/ai/archetype_mocomps_utility;
+#using scripts/shared/ai/archetype_utility;
 #using scripts/shared/ai/archetype_zombie_interface;
 #using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/ai/archetype_mocomps_utility;
-#using scripts/codescripts/struct;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/archetype_locomotion_utility;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
 
 #namespace _bonuszm_zombie;
 
@@ -37,7 +37,7 @@ function autoexec init() {
 }
 
 // Namespace _bonuszm_zombie
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7944fe09, Offset: 0x640
 // Size: 0x316
 function private bonuszmZombieTraversalDoesAnimationExist(entity) {
@@ -80,7 +80,7 @@ function private bonuszmZombieTraversalDoesAnimationExist(entity) {
 }
 
 // Namespace _bonuszm_zombie
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0xf705e76, Offset: 0x960
 // Size: 0x80
 function private function_88e9d5da(entity, asmstatename) {
@@ -92,7 +92,7 @@ function private function_88e9d5da(entity, asmstatename) {
 }
 
 // Namespace _bonuszm_zombie
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x7f09f25d, Offset: 0x9e8
 // Size: 0x68
 function private function_dd1fc89b(entity, asmstatename) {
@@ -103,7 +103,7 @@ function private function_dd1fc89b(entity, asmstatename) {
 }
 
 // Namespace _bonuszm_zombie
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xc47bc402, Offset: 0xa58
 // Size: 0x1d0
 function private function_26c42b09(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -128,7 +128,7 @@ function private function_26c42b09(entity, mocompanim, mocompanimblendouttime, m
 }
 
 // Namespace _bonuszm_zombie
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x22257f19, Offset: 0xc30
 // Size: 0xbc
 function private function_47268b78(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {

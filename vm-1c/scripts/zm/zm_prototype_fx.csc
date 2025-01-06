@@ -1,7 +1,7 @@
 #namespace zm_prototype_fx;
 
 // Namespace zm_prototype_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6922e1cb, Offset: 0x398
 // Size: 0x54
 function main() {
@@ -12,7 +12,7 @@ function main() {
 }
 
 // Namespace zm_prototype_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2de1dd6, Offset: 0x3f8
 // Size: 0x17e
 function function_f45953c() {

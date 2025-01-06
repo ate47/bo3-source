@@ -1,8 +1,8 @@
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/archetype_mannequin_interface;
-#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/behavior_tree_utility;
 #using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/spawner_shared;
 
 #namespace mannequinbehavior;
@@ -32,7 +32,7 @@ function autoexec init() {
 }
 
 // Namespace mannequinbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc9c59dc4, Offset: 0x3e8
 // Size: 0x9c
 function mannequincollisionservice(entity) {
@@ -44,7 +44,7 @@ function mannequincollisionservice(entity) {
 }
 
 // Namespace mannequinbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xedd38cba, Offset: 0x490
 // Size: 0xc
 function mannequinspawnsetup(entity) {
@@ -52,7 +52,7 @@ function mannequinspawnsetup(entity) {
 }
 
 // Namespace mannequinbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xeb636fa1, Offset: 0x4a8
 // Size: 0x18c
 function private mannequinshouldmelee(entity) {

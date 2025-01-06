@@ -1,10 +1,10 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace mp_western_sound;
 
 // Namespace mp_western_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10308117, Offset: 0xd8
 // Size: 0x1c
 function main() {
@@ -12,7 +12,7 @@ function main() {
 }
 
 // Namespace mp_western_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19a59b5, Offset: 0x100
 // Size: 0x94
 function function_d87d721e() {

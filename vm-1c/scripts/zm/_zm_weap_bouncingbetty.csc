@@ -1,9 +1,9 @@
-#using scripts/zm/_util;
-#using scripts/shared/weapons/_bouncingbetty;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_bouncingbetty;
+#using scripts/zm/_util;
 
 #namespace bouncingbetty;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace bouncingbetty
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xec6360ff, Offset: 0x188
 // Size: 0x1c
 function __init__(localclientnum) {

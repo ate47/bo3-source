@@ -1,8 +1,8 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
 
 #namespace exploder;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8e5afef, Offset: 0x328
 // Size: 0x34
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x41006843, Offset: 0x368
 // Size: 0xc24
 function player_init(clientnum) {
@@ -162,7 +162,7 @@ function player_init(clientnum) {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6418f9de, Offset: 0xf98
 // Size: 0xa0
 function getexploderid(ent) {
@@ -178,7 +178,7 @@ function getexploderid(ent) {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8c320123, Offset: 0x1040
 // Size: 0x38
 function reportexploderids() {
@@ -189,7 +189,7 @@ function reportexploderids() {
 }
 
 // Namespace exploder
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4a12393a, Offset: 0x1080
 // Size: 0x64
 function exploder(exploder_id, var_e0ad73a3) {
@@ -201,7 +201,7 @@ function exploder(exploder_id, var_e0ad73a3) {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6d5f153c, Offset: 0x10f0
 // Size: 0xf4
 function activate_exploder(num) {
@@ -219,7 +219,7 @@ function activate_exploder(num) {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18524af9, Offset: 0x11f0
 // Size: 0xdc
 function activate_individual_exploder() {
@@ -239,7 +239,7 @@ function activate_individual_exploder() {
 }
 
 // Namespace exploder
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa54fcef2, Offset: 0x12d8
 // Size: 0x86
 function activate_radiant_exploder(string, var_e0ad73a3) {
@@ -253,7 +253,7 @@ function activate_radiant_exploder(string, var_e0ad73a3) {
 }
 
 // Namespace exploder
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe5868dcf, Offset: 0x1368
 // Size: 0x1d6
 function stop_exploder(exploder_id, var_e0ad73a3) {
@@ -285,7 +285,7 @@ function stop_exploder(exploder_id, var_e0ad73a3) {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x17d07fd4, Offset: 0x1548
 // Size: 0x94
 function kill_exploder(exploder_id) {
@@ -299,7 +299,7 @@ function kill_exploder(exploder_id) {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc3e1ae6, Offset: 0x15e8
 // Size: 0xfc
 function exploder_delay() {
@@ -320,7 +320,7 @@ function exploder_delay() {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb00b34f, Offset: 0x16f0
 // Size: 0x6c
 function exploder_playsound() {
@@ -331,7 +331,7 @@ function exploder_playsound() {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe92537b5, Offset: 0x1768
 // Size: 0xac
 function exploder_earthquake() {
@@ -343,7 +343,7 @@ function exploder_earthquake() {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5679a701, Offset: 0x1820
 // Size: 0x64
 function exploder_is_lightning_exploder(num) {
@@ -385,7 +385,7 @@ function stoplightloopexploder(exploderindex) {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x32e63af2, Offset: 0x1a40
 // Size: 0x170
 function playlightloopexploder(exploderindex) {
@@ -409,7 +409,7 @@ function playlightloopexploder(exploderindex) {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x992d271e, Offset: 0x1bb8
 // Size: 0x76
 function createexploder(fxid) {
@@ -420,7 +420,7 @@ function createexploder(fxid) {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1ccc439, Offset: 0x1c38
 // Size: 0x2d4
 function cannon_effect() {
@@ -458,7 +458,7 @@ function cannon_effect() {
 }
 
 // Namespace exploder
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x753b1149, Offset: 0x1f18
 // Size: 0x266
 function fire_effect() {
@@ -492,7 +492,7 @@ function fire_effect() {
 }
 
 // Namespace exploder
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x618cef46, Offset: 0x2188
 // Size: 0xda
 function playexploderfx(clientnum) {
@@ -511,7 +511,7 @@ function playexploderfx(clientnum) {
 }
 
 // Namespace exploder
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf119375b, Offset: 0x2270
 // Size: 0x34
 function stop_after_duration(name, duration) {

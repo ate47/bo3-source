@@ -1,17 +1,17 @@
-#using scripts/shared/ai_sniper_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/ai_sniper_shared;
+#using scripts/shared/array_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_actor;
 #using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_vo;
 #using scripts/shared/stealth_debug;
 #using scripts/shared/stealth_player;
-#using scripts/shared/stealth_actor;
-#using scripts/shared/stealth;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_level;
 
@@ -157,7 +157,7 @@ function function_7bf2f7ba() {
 function function_49a3f37d() {
     self endon(#"death");
     while (true) {
-        other = self waittill(#"trigger");
+        self waittill(#"trigger", other);
         if (!isalive(other)) {
             continue;
         }

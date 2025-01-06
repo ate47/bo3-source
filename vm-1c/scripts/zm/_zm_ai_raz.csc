@@ -1,6 +1,6 @@
 #using scripts/shared/ai_shared;
-#using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace zm_ai_raz;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_raz
-// Params 0, eflags: 0x3 linked
+// Params 0, eflags: 0x2
 // Checksum 0xe7fe6fe9, Offset: 0x168
 // Size: 0x44
 function autoexec __init__() {
@@ -22,7 +22,7 @@ function autoexec __init__() {
 }
 
 // Namespace zm_ai_raz
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1b8
 // Size: 0x4
 function __main__() {
@@ -30,7 +30,7 @@ function __main__() {
 }
 
 // Namespace zm_ai_raz
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbb8f5c6b, Offset: 0x1c8
 // Size: 0x34
 function function_f87a1709(localclientnum) {

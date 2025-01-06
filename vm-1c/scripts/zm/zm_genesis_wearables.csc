@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_genesis_wearables;
 
 // Namespace zm_genesis_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf78e7320, Offset: 0x160
 // Size: 0xf4
 function function_ad78a144() {
@@ -17,7 +17,7 @@ function function_ad78a144() {
 }
 
 // Namespace zm_genesis_wearables
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x58548947, Offset: 0x260
 // Size: 0x19c
 function function_f51349bf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

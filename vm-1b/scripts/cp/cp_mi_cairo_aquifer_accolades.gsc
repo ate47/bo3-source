@@ -1,9 +1,9 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_b5b83650;
 
@@ -330,7 +330,7 @@ function function_deee0b62(params) {
     self.var_80329ae2 = 0;
     while (true) {
         if (isdefined(self.var_8fedf36c)) {
-            damage, attacker, direction_vec, point, meansofdeath, tagname, modelname, partname, weapon = self.var_8fedf36c waittill(#"damage");
+            self.var_8fedf36c waittill(#"damage", damage, attacker, direction_vec, point, meansofdeath, tagname, modelname, partname, weapon);
             if (weapon.type != "bullet") {
                 self.var_80329ae2 = 1;
             }
@@ -408,7 +408,7 @@ function function_c2ba8da() {
     level endon(#"hash_2899a2c7");
     attacker = self;
     while (attacker != level.sniper_boss) {
-        damage, attacker, dir, loc, type, model, tag, part, weapon, flags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, dir, loc, type, model, tag, part, weapon, flags);
     }
     self notify(#"sniper_boss_damage");
 }

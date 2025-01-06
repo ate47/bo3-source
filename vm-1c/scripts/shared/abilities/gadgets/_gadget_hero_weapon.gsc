@@ -1,12 +1,12 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace _gadget_hero_weapon;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87386b55, Offset: 0x280
 // Size: 0xe4
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5d54ba9, Offset: 0x370
 // Size: 0x22
 function gadget_hero_weapon_is_inuse(slot) {
@@ -40,7 +40,7 @@ function gadget_hero_weapon_is_inuse(slot) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x709d7d04, Offset: 0x3a0
 // Size: 0x22
 function gadget_hero_weapon_is_flickering(slot) {
@@ -48,7 +48,7 @@ function gadget_hero_weapon_is_flickering(slot) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xce16c13b, Offset: 0x3d0
 // Size: 0x14
 function function_967bd520(slot, weapon) {
@@ -56,7 +56,7 @@ function function_967bd520(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xac8f379b, Offset: 0x3f0
 // Size: 0x194
 function gadget_hero_weapon_on_give(slot, weapon) {
@@ -80,7 +80,7 @@ function gadget_hero_weapon_on_give(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8ac5dcb9, Offset: 0x590
 // Size: 0x14
 function gadget_hero_weapon_on_take(slot, weapon) {
@@ -104,7 +104,7 @@ function function_c4a7cc89() {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xabb89c15, Offset: 0x5d0
 // Size: 0x84
 function gadget_hero_weapon_on_activate(slot, weapon) {
@@ -118,7 +118,7 @@ function gadget_hero_weapon_on_activate(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x63ff5311, Offset: 0x660
 // Size: 0x44
 function gadget_hero_weapon_on_off(slot, weapon) {
@@ -128,7 +128,7 @@ function gadget_hero_weapon_on_off(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5b045b9a, Offset: 0x6b0
 // Size: 0x44
 function gadget_hero_weapon_ready(slot, weapon) {
@@ -138,7 +138,7 @@ function gadget_hero_weapon_ready(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdaa9a4ef, Offset: 0x700
 // Size: 0x54
 function hero_give_ammo(slot, weapon) {
@@ -147,7 +147,7 @@ function hero_give_ammo(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x48a25928, Offset: 0x760
 // Size: 0x74
 function hero_handle_ammo_save(slot, weapon) {
@@ -157,7 +157,7 @@ function hero_handle_ammo_save(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xece65a54, Offset: 0x7e0
 // Size: 0x7c
 function function_20226d3a(slot, weapon) {
@@ -171,7 +171,7 @@ function function_20226d3a(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa86036a7, Offset: 0x868
 // Size: 0x64
 function hero_wait_for_death(slot, weapon) {
@@ -183,7 +183,7 @@ function hero_wait_for_death(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd369c5fb, Offset: 0x8d8
 // Size: 0x44
 function hero_save_ammo(slot, weapon) {
@@ -191,7 +191,7 @@ function hero_save_ammo(slot, weapon) {
 }
 
 // Namespace _gadget_hero_weapon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb33d04fa, Offset: 0x928
 // Size: 0xc4
 function hero_wait_for_out_of_ammo(slot, weapon) {

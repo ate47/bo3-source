@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_equipment;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_perk_random;
 
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x206aede0, Offset: 0x718
 // Size: 0x24c
 function __init__() {
@@ -46,7 +46,7 @@ function __init__() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d3d518b, Offset: 0x970
 // Size: 0x6c
 function __main__() {
@@ -63,7 +63,7 @@ function __main__() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x29725061, Offset: 0x9e8
 // Size: 0x7c
 function private setup_perk_random_machines() {
@@ -75,7 +75,7 @@ function private setup_perk_random_machines() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xff6f285f, Offset: 0xa70
 // Size: 0x14c
 function perk_random_machine_init() {
@@ -95,7 +95,7 @@ function perk_random_machine_init() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x5368a774, Offset: 0xbc8
 // Size: 0x13e
 function private init_starting_perk_random_machine_location() {
@@ -113,7 +113,7 @@ function private init_starting_perk_random_machine_location() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9eec7698, Offset: 0xd10
 // Size: 0x184
 function create_perk_random_machine_unitrigger_stub() {
@@ -132,7 +132,7 @@ function create_perk_random_machine_unitrigger_stub() {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd97ebdea, Offset: 0xea0
 // Size: 0x90
 function perk_random_machine_trigger_update_prompt(player) {
@@ -148,7 +148,7 @@ function perk_random_machine_trigger_update_prompt(player) {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc8e560f2, Offset: 0xf38
 // Size: 0x278
 function perk_random_machine_stub_update_prompt(player) {
@@ -199,7 +199,7 @@ function perk_random_machine_stub_update_prompt(player) {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x94d5f785, Offset: 0x11b8
 // Size: 0x128
 function trigger_visible_to_player(player) {
@@ -223,7 +223,7 @@ function trigger_visible_to_player(player) {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x562888af, Offset: 0x12e8
 // Size: 0x58
 function player_has_all_available_perks() {
@@ -236,7 +236,7 @@ function player_has_all_available_perks() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb038d85, Offset: 0x1348
 // Size: 0xa4
 function can_buy_perk() {
@@ -257,19 +257,19 @@ function can_buy_perk() {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xae8bbd88, Offset: 0x13f8
 // Size: 0x54
 function perk_random_unitrigger_think(player) {
     self endon(#"kill_trigger");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         self.stub.trigger_target notify(#"trigger", player);
     }
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x731ed4dd, Offset: 0x1458
 // Size: 0x670
 function machine_think() {
@@ -299,7 +299,7 @@ function machine_think() {
     level.bottle_spawn_location.angles = self.angles;
     level.bottle_spawn_location.origin += (0, 0, 65);
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         level flag::clear("machine_can_reset");
         if (!player zm_score::can_player_purchase(level._random_zombie_perk_cost)) {
             self playsound("evt_perk_deny");
@@ -357,14 +357,14 @@ function machine_think() {
 }
 
 // Namespace zm_perk_random
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x55e29fc7, Offset: 0x1ad0
 // Size: 0x264
 function grab_check(player, random_perk) {
     self endon(#"time_out_check");
     perk_is_bought = 0;
     while (!perk_is_bought) {
-        e_triggerer = self waittill(#"trigger");
+        self waittill(#"trigger", e_triggerer);
         if (e_triggerer == player) {
             if (isdefined(player.is_drinking) && player.is_drinking > 0) {
                 wait 0.1;
@@ -397,7 +397,7 @@ function grab_check(player, random_perk) {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd421cc, Offset: 0x1d40
 // Size: 0x54
 function monitor_when_player_acquires_perk() {
@@ -406,7 +406,7 @@ function monitor_when_player_acquires_perk() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x12de3ca4, Offset: 0x1da0
 // Size: 0x44
 function time_out_check() {
@@ -417,7 +417,7 @@ function time_out_check() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8046828, Offset: 0x1df0
 // Size: 0xb4
 function wait_for_power() {
@@ -433,7 +433,7 @@ function wait_for_power() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfab2b03e, Offset: 0x1eb0
 // Size: 0xc4
 function machine_selector() {
@@ -452,7 +452,7 @@ function machine_selector() {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4c75a994, Offset: 0x1f80
 // Size: 0x92
 function include_perk_in_random_rotation(perk) {
@@ -468,7 +468,7 @@ function include_perk_in_random_rotation(perk) {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x16337b5b, Offset: 0x2020
 // Size: 0x14c
 function get_weighted_random_perk(player) {
@@ -492,7 +492,7 @@ function get_weighted_random_perk(player) {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0a1d78c, Offset: 0x2178
 // Size: 0x204
 function perk_bottle_motion() {
@@ -512,7 +512,7 @@ function perk_bottle_motion() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x960585fd, Offset: 0x2388
 // Size: 0x132
 function start_perk_bottle_cycling() {
@@ -533,7 +533,7 @@ function start_perk_bottle_cycling() {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e78a539, Offset: 0x24c8
 // Size: 0x92
 function get_perk_weapon_model(perk) {
@@ -545,7 +545,7 @@ function get_perk_weapon_model(perk) {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56780c85, Offset: 0x2568
 // Size: 0xcc
 function perk_random_vending() {
@@ -559,7 +559,7 @@ function perk_random_vending() {
 }
 
 // Namespace zm_perk_random
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xaee353e3, Offset: 0x2640
 // Size: 0xe4
 function perk_random_loop_anim(n_piece, s_anim_1, s_anim_2) {
@@ -578,7 +578,7 @@ function perk_random_loop_anim(n_piece, s_anim_1, s_anim_2) {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd893acd1, Offset: 0x2730
 // Size: 0x7c
 function perk_random_vend_sfx() {
@@ -598,7 +598,7 @@ function perk_random_initial() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b4e25ad, Offset: 0x27e8
 // Size: 0xa4
 function perk_random_idle() {
@@ -615,7 +615,7 @@ function perk_random_idle() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf77b5b, Offset: 0x2898
 // Size: 0x42
 function perk_random_arrive() {
@@ -626,7 +626,7 @@ function perk_random_arrive() {
 }
 
 // Namespace zm_perk_random
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcbe865e, Offset: 0x28e8
 // Size: 0x5c
 function perk_random_leaving() {
@@ -638,7 +638,7 @@ function perk_random_leaving() {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4c476de6, Offset: 0x2950
 // Size: 0x88
 function set_perk_random_machine_state(state) {
@@ -651,7 +651,7 @@ function set_perk_random_machine_state(state) {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e554a56, Offset: 0x29e0
 // Size: 0x49a
 function process_perk_random_machine_state(state) {
@@ -736,7 +736,7 @@ function machine_sounds() {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbbb789e8, Offset: 0x2f78
 // Size: 0x1a
 function getweaponmodel(weapon) {
@@ -744,7 +744,7 @@ function getweaponmodel(weapon) {
 }
 
 // Namespace zm_perk_random
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1c2efd0a, Offset: 0x2fa0
 // Size: 0xb4
 function is_power_on(n_power_index) {
@@ -762,7 +762,7 @@ function is_power_on(n_power_index) {
 /#
 
     // Namespace zm_perk_random
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x596226e0, Offset: 0x3060
     // Size: 0x1c
     function setup_devgui() {
@@ -770,7 +770,7 @@ function is_power_on(n_power_index) {
     }
 
     // Namespace zm_perk_random
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xaf975650, Offset: 0x3088
     // Size: 0x1d6
     function wunderfizz_devgui_callback(cmd) {

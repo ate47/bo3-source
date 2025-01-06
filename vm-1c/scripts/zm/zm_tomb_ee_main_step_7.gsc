@@ -1,19 +1,19 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_ee_main;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_sidequests;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_ee_main;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_ee_main_step_7;
 
 // Namespace zm_tomb_ee_main_step_7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3560a554, Offset: 0x2a0
 // Size: 0x54
 function init() {
@@ -21,7 +21,7 @@ function init() {
 }
 
 // Namespace zm_tomb_ee_main_step_7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9db3fba0, Offset: 0x300
 // Size: 0x20
 function init_stage() {
@@ -30,7 +30,7 @@ function init_stage() {
 }
 
 // Namespace zm_tomb_ee_main_step_7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaaa60187, Offset: 0x328
 // Size: 0x94
 function function_7747c56() {
@@ -44,7 +44,7 @@ function function_7747c56() {
 }
 
 // Namespace zm_tomb_ee_main_step_7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbd8c55d0, Offset: 0x3c8
 // Size: 0x1a
 function function_cc3f3f6a(success) {
@@ -52,7 +52,7 @@ function function_cc3f3f6a(success) {
 }
 
 // Namespace zm_tomb_ee_main_step_7
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xdc7252bc, Offset: 0x3f0
 // Size: 0x1a4
 function function_116238af(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime) {
@@ -73,7 +73,7 @@ function function_116238af(einflictor, attacker, idamage, smeansofdeath, sweapon
 }
 
 // Namespace zm_tomb_ee_main_step_7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29a31f6, Offset: 0x5a0
 // Size: 0x178
 function function_1efeda5d() {

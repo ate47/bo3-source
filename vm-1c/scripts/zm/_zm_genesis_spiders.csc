@@ -1,11 +1,11 @@
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/fx_shared;
-#using scripts/zm/_zm;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm;
 
 #namespace zm_ai_spiders;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_ai_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3efc832b, Offset: 0x4c8
 // Size: 0x164
 function __init__() {
@@ -37,7 +37,7 @@ function __init__() {
 }
 
 // Namespace zm_ai_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x638
 // Size: 0x4
 function __main__() {
@@ -45,7 +45,7 @@ function __main__() {
 }
 
 // Namespace zm_ai_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb64d9ac7, Offset: 0x648
 // Size: 0xdc
 function register_clientfields() {
@@ -55,7 +55,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_ai_spiders
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa6a88e9, Offset: 0x730
 // Size: 0x2c
 function function_7c1ef59b(localclientnum) {
@@ -64,7 +64,7 @@ function function_7c1ef59b(localclientnum) {
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8568a821, Offset: 0x768
 // Size: 0x124
 function spider_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
@@ -82,7 +82,7 @@ function spider_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80,
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc9a29df5, Offset: 0x898
 // Size: 0x64
 function spider_end_of_round_reset(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -92,7 +92,7 @@ function spider_end_of_round_reset(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_ai_spiders
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xccf6013f, Offset: 0x908
 // Size: 0x9c
 function spider_round_ring_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

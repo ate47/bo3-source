@@ -1,31 +1,31 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/_util;
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_airsupport;
-#using scripts/mp/gametypes/_globallogic_audio;
 #using scripts/mp/gametypes/_battlechatter;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/killstreaks/_airsupport;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/hostmigration_shared;
 #using scripts/shared/killstreaks_shared;
 #using scripts/shared/math_shared;
 #using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_heatseekingmissile;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_heatseekingmissile;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace satellite;
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5038038d, Offset: 0x660
 // Size: 0x1fc
 function init() {
@@ -48,7 +48,7 @@ function init() {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5cc4a00e, Offset: 0x868
 // Size: 0x56
 function onplayerconnect() {
@@ -60,7 +60,7 @@ function onplayerconnect() {
 }
 
 // Namespace satellite
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5207fbae, Offset: 0x8c8
 // Size: 0x2c
 function onplayerspawned(local_client_num) {
@@ -70,7 +70,7 @@ function onplayerspawned(local_client_num) {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x65f060b6, Offset: 0x900
 // Size: 0x5d0
 function function_861da8b9() {
@@ -123,7 +123,7 @@ function function_861da8b9() {
 }
 
 // Namespace satellite
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xae48f69, Offset: 0xed8
 // Size: 0x34
 function hackedprefunction(hacker) {
@@ -132,7 +132,7 @@ function hackedprefunction(hacker) {
 }
 
 // Namespace satellite
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2b51bf9b, Offset: 0xf18
 // Size: 0xc4
 function configureteampost(owner, ishacked) {
@@ -147,7 +147,7 @@ function configureteampost(owner, ishacked) {
 }
 
 // Namespace satellite
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x73d307ac, Offset: 0xfe8
 // Size: 0x46
 function rotate(duration) {
@@ -159,7 +159,7 @@ function rotate(duration) {
 }
 
 // Namespace satellite
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc671d950, Offset: 0x1038
 // Size: 0x14
 function onlowhealth(attacker, weapon) {
@@ -167,7 +167,7 @@ function onlowhealth(attacker, weapon) {
 }
 
 // Namespace satellite
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x48980dbe, Offset: 0x1058
 // Size: 0x2c
 function onteamchange(entnum, event) {
@@ -175,7 +175,7 @@ function onteamchange(entnum, event) {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4d283a7, Offset: 0x1090
 // Size: 0xac
 function ontimeout() {
@@ -191,7 +191,7 @@ function ontimeout() {
 }
 
 // Namespace satellite
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaf65671a, Offset: 0x1148
 // Size: 0x3c
 function function_d6c6626b(attacker, arg) {
@@ -199,7 +199,7 @@ function function_d6c6626b(attacker, arg) {
 }
 
 // Namespace satellite
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd78f71ef, Offset: 0x1190
 // Size: 0x244
 function function_7ea6b1cc(attacker, weapon) {
@@ -236,7 +236,7 @@ function function_7ea6b1cc(attacker, weapon) {
 }
 
 // Namespace satellite
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc3aa1a61, Offset: 0x13e0
 // Size: 0x1c
 function hassatellite(team_or_entnum) {
@@ -244,7 +244,7 @@ function hassatellite(team_or_entnum) {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9e878859, Offset: 0x1408
 // Size: 0x5a
 function function_e4c6d41f() {
@@ -258,7 +258,7 @@ function function_e4c6d41f() {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdcc394b2, Offset: 0x1470
 // Size: 0x44
 function function_2a11ce46() {
@@ -267,7 +267,7 @@ function function_2a11ce46() {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad92d74, Offset: 0x14c0
 // Size: 0x16a
 function function_5ae5cc6b() {
@@ -291,7 +291,7 @@ function function_5ae5cc6b() {
 }
 
 // Namespace satellite
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18ad5962, Offset: 0x1638
 // Size: 0x18a
 function function_d3974478() {
@@ -314,7 +314,7 @@ function function_d3974478() {
 }
 
 // Namespace satellite
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf45c8ceb, Offset: 0x17d0
 // Size: 0xe4
 function function_3b2f36a8(player) {
@@ -328,7 +328,7 @@ function function_3b2f36a8(player) {
 }
 
 // Namespace satellite
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0x7ebaf75d, Offset: 0x18c0
 // Size: 0xa0
 function killstreakdamagemodifier(damage, attacker, direction, point, smeansofdeath, tagname, modelname, partname, weapon, flags, inflictor, chargelevel) {

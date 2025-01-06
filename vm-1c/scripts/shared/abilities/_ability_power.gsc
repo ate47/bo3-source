@@ -1,11 +1,11 @@
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/abilities/_ability_gadgets;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_gadgets;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/system_shared;
 
 #namespace ability_power;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace ability_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcb703d1d, Offset: 0x2c8
 // Size: 0x24
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 /#
 
     // Namespace ability_power
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x8576c243, Offset: 0x2f8
     // Size: 0x10c
     function cpower_print(slot, str) {
@@ -48,7 +48,7 @@ function __init__() {
 #/
 
 // Namespace ability_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x410
 // Size: 0x4
 function on_player_connect() {
@@ -56,7 +56,7 @@ function on_player_connect() {
 }
 
 // Namespace ability_power
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfa7262e4, Offset: 0x420
 // Size: 0x1e
 function power_is_hero_ability(gadget) {
@@ -64,7 +64,7 @@ function power_is_hero_ability(gadget) {
 }
 
 // Namespace ability_power
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x80a20107, Offset: 0x448
 // Size: 0x68
 function is_weapon_or_variant_same_as_gadget(weapon, gadget) {
@@ -80,7 +80,7 @@ function is_weapon_or_variant_same_as_gadget(weapon, gadget) {
 }
 
 // Namespace ability_power
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xdced7892, Offset: 0x4b8
 // Size: 0x24e
 function power_gain_event_score(eattacker, score, weapon, var_ce8a30c7) {
@@ -158,7 +158,7 @@ function power_gain_event_killed_actor(eattacker, meansofdeath) {
 }
 
 // Namespace ability_power
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x637b828a, Offset: 0x938
 // Size: 0xf4
 function power_gain_event(slot, eattacker, val, source) {
@@ -175,7 +175,7 @@ function power_gain_event(slot, eattacker, val, source) {
 }
 
 // Namespace ability_power
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xef257ace, Offset: 0xa38
 // Size: 0x196
 function power_loss_event_took_damage(eattacker, einflictor, weapon, smeansofdeath, idamage) {
@@ -201,7 +201,7 @@ function power_loss_event_took_damage(eattacker, einflictor, weapon, smeansofdea
 }
 
 // Namespace ability_power
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xa4806b6f, Offset: 0xbd8
 // Size: 0xd4
 function power_loss_event(slot, eattacker, val, source) {
@@ -224,7 +224,7 @@ function power_drain_completely(slot) {
 }
 
 // Namespace ability_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa06fe933, Offset: 0xd18
 // Size: 0x6e
 function ismovingpowerloss() {
@@ -234,7 +234,7 @@ function ismovingpowerloss() {
 }
 
 // Namespace ability_power
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9750aea3, Offset: 0xd90
 // Size: 0x240
 function power_consume_timer_think(slot, weapon) {

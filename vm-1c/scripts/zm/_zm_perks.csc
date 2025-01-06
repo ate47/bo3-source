@@ -1,15 +1,15 @@
-#using scripts/zm/_filter;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_filter;
 
 #namespace zm_perks;
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x75eda150, Offset: 0x1b8
 // Size: 0x54
 function init() {
@@ -20,7 +20,7 @@ function init() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x44be60e2, Offset: 0x218
 // Size: 0x11c
 function perks_register_clientfield() {
@@ -39,7 +39,7 @@ function perks_register_clientfield() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8bec9b24, Offset: 0x340
 // Size: 0xb6
 function perk_init_code_callbacks() {
@@ -55,7 +55,7 @@ function perk_init_code_callbacks() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e4514fa, Offset: 0x400
 // Size: 0x1c
 function init_custom_perks() {
@@ -65,7 +65,7 @@ function init_custom_perks() {
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x21f6a8d4, Offset: 0x428
 // Size: 0xa4
 function register_perk_clientfields(str_perk, func_clientfield_register, func_code_callback) {
@@ -79,7 +79,7 @@ function register_perk_clientfields(str_perk, func_clientfield_register, func_co
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf69d5707, Offset: 0x4d8
 // Size: 0x64
 function register_perk_effects(str_perk, str_light_effect) {
@@ -90,7 +90,7 @@ function register_perk_effects(str_perk, str_light_effect) {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xdad231df, Offset: 0x548
 // Size: 0x64
 function register_perk_init_thread(str_perk, func_init_thread) {
@@ -101,7 +101,7 @@ function register_perk_init_thread(str_perk, func_init_thread) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb86bb0d3, Offset: 0x5b8
 // Size: 0xae
 function init_perk_custom_threads() {
@@ -116,7 +116,7 @@ function init_perk_custom_threads() {
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6acc932b, Offset: 0x670
 // Size: 0x5a
 function _register_undefined_perk(str_perk) {
@@ -129,7 +129,7 @@ function _register_undefined_perk(str_perk) {
 }
 
 // Namespace zm_perks
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdcfab8c5, Offset: 0x6d8
 // Size: 0xac
 function perk_meteor_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -143,7 +143,7 @@ function perk_meteor_fx(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x12efd45c, Offset: 0x790
 // Size: 0x74
 function init_perk_machines_fx(localclientnum) {
@@ -156,7 +156,7 @@ function init_perk_machines_fx(localclientnum) {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x15419e0, Offset: 0x810
 // Size: 0x142
 function perk_start_up() {
@@ -164,7 +164,7 @@ function perk_start_up() {
         power_zone = self.script_int;
         int = undefined;
         while (int != power_zone) {
-            int = level waittill(#"power_on");
+            level waittill(#"power_on", int);
         }
     } else {
         level waittill(#"power_on");
@@ -185,7 +185,7 @@ function perk_start_up() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc4a0758, Offset: 0x960
 // Size: 0x76
 function vending_machine_flicker_light(fx_light, duration) {
@@ -196,7 +196,7 @@ function vending_machine_flicker_light(fx_light, duration) {
 }
 
 // Namespace zm_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb34faa2c, Offset: 0x9e0
 // Size: 0xcc
 function play_perk_fx_on_client(client_num, fx_light, duration) {

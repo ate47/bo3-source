@@ -1,19 +1,19 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/killcam_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/ai/systems/gib;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/killcam_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace hive_gun;
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x433c8a4f, Offset: 0x600
 // Size: 0x2a4
 function init_shared() {
@@ -45,7 +45,7 @@ function init_shared() {
 /#
 
     // Namespace hive_gun
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb3962c5a, Offset: 0x8b0
     // Size: 0x88
     function update_dvars() {
@@ -60,7 +60,7 @@ function init_shared() {
 #/
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9355c1f7, Offset: 0x940
 // Size: 0x94
 function register() {
@@ -70,7 +70,7 @@ function register() {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x54dab11b, Offset: 0x9e0
 // Size: 0x1f0
 function function_2347c7c7() {
@@ -99,7 +99,7 @@ function function_2347c7c7() {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1c6e6f67, Offset: 0xbd8
 // Size: 0xa4
 function function_545b9a44(watcher, owner) {
@@ -125,7 +125,7 @@ function function_6182a7b6() {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcfd5eb45, Offset: 0xcc8
 // Size: 0x1c
 function function_726a1213() {
@@ -134,7 +134,7 @@ function function_726a1213() {
 }
 
 // Namespace hive_gun
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x9889e0cb, Offset: 0xcf0
 // Size: 0x4e
 function function_602b5d20(eattacker, einflictor, weapon, meansofdeath, damage) {
@@ -144,7 +144,7 @@ function function_602b5d20(eattacker, einflictor, weapon, meansofdeath, damage) 
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe28aaa6, Offset: 0xd48
 // Size: 0x21c
 function function_205d8156() {
@@ -170,18 +170,18 @@ function function_205d8156() {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39898357, Offset: 0xf70
 // Size: 0xa8
 function function_fba7b282() {
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         self thread function_90fba777();
     }
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x62c835e5, Offset: 0x1020
 // Size: 0x5c
 function function_596f2ad1() {
@@ -194,7 +194,7 @@ function function_596f2ad1() {
 }
 
 // Namespace hive_gun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc75d01b8, Offset: 0x1088
 // Size: 0x184
 function function_3bf629e7(attacker, weapon, target) {
@@ -217,7 +217,7 @@ function function_3bf629e7(attacker, weapon, target) {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc14e9337, Offset: 0x1218
 // Size: 0xbc
 function function_27f1ba88() {
@@ -232,7 +232,7 @@ function function_27f1ba88() {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc54307b, Offset: 0x12e0
 // Size: 0x84
 function function_729c2b24(position, time) {
@@ -247,7 +247,7 @@ function function_729c2b24(position, time) {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa80568e, Offset: 0x1370
 // Size: 0x54
 function function_38d25df7() {
@@ -258,7 +258,7 @@ function function_38d25df7() {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5f80c162, Offset: 0x13d0
 // Size: 0x90
 function function_654599bc(position, time) {
@@ -271,7 +271,7 @@ function function_654599bc(position, time) {
 }
 
 // Namespace hive_gun
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x8f4acd32, Offset: 0x1468
 // Size: 0xd6
 function function_c628a642(target, position, time, percent) {
@@ -287,7 +287,7 @@ function function_c628a642(target, position, time, percent) {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6a159a27, Offset: 0x1548
 // Size: 0x48
 function function_ad9f7ffe(angles, time) {
@@ -297,7 +297,7 @@ function function_ad9f7ffe(angles, time) {
 }
 
 // Namespace hive_gun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf8989617, Offset: 0x1598
 // Size: 0x148
 function function_3a089bb(target, move_to, time) {
@@ -318,7 +318,7 @@ function function_3a089bb(target, move_to, time) {
 }
 
 // Namespace hive_gun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7681b6ce, Offset: 0x16e8
 // Size: 0x88
 function function_83614051(degrees, radius, height) {
@@ -329,7 +329,7 @@ function function_83614051(degrees, radius, height) {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47639ef1, Offset: 0x1778
 // Size: 0x6a
 function function_b89d2a69() {
@@ -384,7 +384,7 @@ function function_e78bffe3(degrees, increment, radius) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1a8e06c9, Offset: 0x1ae8
 // Size: 0x2c8
 function function_c4fb08f0(target) {
@@ -427,7 +427,7 @@ function function_c4fb08f0(target) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfaaea03f, Offset: 0x1db8
 // Size: 0xcc
 function function_7453793f(target) {
@@ -443,7 +443,7 @@ function function_7453793f(target) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x80cc0fe0, Offset: 0x1e90
 // Size: 0xac
 function function_7f55c5c4(target) {
@@ -457,7 +457,7 @@ function function_7f55c5c4(target) {
 }
 
 // Namespace hive_gun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e2a705b, Offset: 0x1f48
 // Size: 0x14c
 function function_90fba777() {
@@ -477,7 +477,7 @@ function function_90fba777() {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x83010d30, Offset: 0x20a0
 // Size: 0x34
 function function_c3149187(killcament) {
@@ -488,7 +488,7 @@ function function_c3149187(killcament) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xab9381fb, Offset: 0x20e0
 // Size: 0x7c
 function function_187ecda(target) {
@@ -501,7 +501,7 @@ function function_187ecda(target) {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbcbcd5a4, Offset: 0x2168
 // Size: 0x204
 function function_d15aaa87(target, state) {
@@ -535,7 +535,7 @@ function function_d15aaa87(target, state) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb466ff50, Offset: 0x2378
 // Size: 0xaa
 function function_961e63c3(target) {
@@ -554,7 +554,7 @@ function function_961e63c3(target) {
 /#
 
     // Namespace hive_gun
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x5b9bfcd5, Offset: 0x2430
     // Size: 0x154
     function function_37137eb(target) {
@@ -581,7 +581,7 @@ function function_961e63c3(target) {
 #/
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xab284d2e, Offset: 0x2590
 // Size: 0x19e
 function function_f43c3dfc(target) {
@@ -613,7 +613,7 @@ function function_f43c3dfc(target) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5ddb3c, Offset: 0x2738
 // Size: 0x88
 function function_7a614bfa(target) {
@@ -628,7 +628,7 @@ function function_7a614bfa(target) {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3497311d, Offset: 0x27c8
 // Size: 0x4c
 function function_3bca47af(position, target) {
@@ -637,7 +637,7 @@ function function_3bca47af(position, target) {
 }
 
 // Namespace hive_gun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x146b36a, Offset: 0x2820
 // Size: 0x2f0
 function function_fb950047(target) {
@@ -683,7 +683,7 @@ function function_fb950047(target) {
 }
 
 // Namespace hive_gun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xcce2d3c4, Offset: 0x2b18
 // Size: 0x20c
 function function_cfecc4d1(start_pos, target, linked) {
@@ -721,7 +721,7 @@ function function_cfecc4d1(start_pos, target, linked) {
 }
 
 // Namespace hive_gun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5349593b, Offset: 0x2d30
 // Size: 0x204
 function function_79871484(attacker, target) {
@@ -746,7 +746,7 @@ function function_79871484(attacker, target) {
 }
 
 // Namespace hive_gun
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1271cf06, Offset: 0x2f40
 // Size: 0x80
 function function_878bc806(watcher, attacker, weapon, damage) {

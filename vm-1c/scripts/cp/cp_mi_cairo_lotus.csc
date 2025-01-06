@@ -1,29 +1,29 @@
-#using scripts/cp/cp_mi_cairo_lotus_patch_c;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/lotus_util;
-#using scripts/cp/cp_mi_cairo_lotus_sound;
-#using scripts/cp/cp_mi_cairo_lotus_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_lotus_fx;
+#using scripts/cp/cp_mi_cairo_lotus_patch_c;
+#using scripts/cp/cp_mi_cairo_lotus_sound;
+#using scripts/cp/lotus_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_cairo_lotus;
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd069524f, Offset: 0x958
 // Size: 0xd4
 function main() {
-    util::function_57b966c8(&function_71f88fc, 3);
+    util::function_57b966c8(&force_streamer, 3);
     init_clientfields();
     cp_mi_cairo_lotus_fx::main();
     cp_mi_cairo_lotus_sound::main();
@@ -36,7 +36,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee7ac811, Offset: 0xa38
 // Size: 0xb4
 function on_player_spawned(localclientnum) {
@@ -48,7 +48,7 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x67d23501, Offset: 0xaf8
 // Size: 0xd4
 function function_f61f00f(localclientnum) {
@@ -59,12 +59,12 @@ function function_f61f00f(localclientnum) {
         return;
     }
     e_trigger._localclientnum = localclientnum;
-    trigplayer = e_trigger waittill(#"trigger");
+    e_trigger waittill(#"trigger", trigplayer);
     e_trigger thread trigger::function_thread(trigplayer, &function_df453073);
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5690d9fc, Offset: 0xbd8
 // Size: 0x4b4
 function init_clientfields() {
@@ -88,7 +88,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x95edfd09, Offset: 0x1098
 // Size: 0x94
 function function_448b79a2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -100,7 +100,7 @@ function function_448b79a2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf1137f94, Offset: 0x1138
 // Size: 0xd4
 function function_29c8893e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -114,10 +114,10 @@ function function_29c8893e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x54a33e9c, Offset: 0x1218
 // Size: 0x1ca
-function function_71f88fc(n_index) {
+function force_streamer(n_index) {
     switch (n_index) {
     case 1:
         forcestreambundle("cin_lot_01_planb_3rd_sh020");
@@ -147,7 +147,7 @@ function function_71f88fc(n_index) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa5a23df, Offset: 0x13f0
 // Size: 0x414
 function function_673254cc() {
@@ -177,7 +177,7 @@ function function_673254cc() {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x94d723d, Offset: 0x1810
 // Size: 0x14
 function function_6a18d1d4(str_objective, var_74cd64bc) {
@@ -185,7 +185,7 @@ function function_6a18d1d4(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5402ad65, Offset: 0x1830
 // Size: 0x6c
 function start_the_riots(str_objective, var_74cd64bc) {
@@ -196,7 +196,7 @@ function start_the_riots(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xecb68dc2, Offset: 0x18a8
 // Size: 0x94
 function general_hakim(str_objective, var_74cd64bc) {
@@ -208,7 +208,7 @@ function general_hakim(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x87be6775, Offset: 0x1948
 // Size: 0x2b2
 function swap_crowd_to_riot(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -231,7 +231,7 @@ function swap_crowd_to_riot(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xec09ddaf, Offset: 0x1c08
 // Size: 0xfc
 function crowd_anims_off(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -243,7 +243,7 @@ function crowd_anims_off(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa09412df, Offset: 0x1d10
 // Size: 0x94
 function atrium_battle(str_objective, var_74cd64bc) {
@@ -255,7 +255,7 @@ function atrium_battle(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd42a4fb6, Offset: 0x1db0
 // Size: 0x84
 function function_df453073(trigplayer) {
@@ -265,7 +265,7 @@ function function_df453073(trigplayer) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfce688b3, Offset: 0x1e40
 // Size: 0x94
 function to_security_station(str_objective, var_74cd64bc) {
@@ -277,7 +277,7 @@ function to_security_station(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcac3e820, Offset: 0x1ee0
 // Size: 0x5c
 function hs_fxinit_vent(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
@@ -285,7 +285,7 @@ function hs_fxinit_vent(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, 
 }
 
 // Namespace cp_mi_cairo_lotus
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa9e267c, Offset: 0x1f48
 // Size: 0x84
 function hs_fxanim_vent(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {

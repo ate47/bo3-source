@@ -1,13 +1,13 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_hacker_tool;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_hacker_tool;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace threat_detector;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace threat_detector
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc727a561, Offset: 0x2a0
 // Size: 0x54
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace threat_detector
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26dbcc5f, Offset: 0x300
 // Size: 0xcc
 function function_22766af5() {
@@ -44,7 +44,7 @@ function function_22766af5() {
 }
 
 // Namespace threat_detector
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe7b5e964, Offset: 0x3d8
 // Size: 0x104
 function function_8a24ecfd(watcher, player) {
@@ -60,7 +60,7 @@ function function_8a24ecfd(watcher, player) {
 }
 
 // Namespace threat_detector
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7d336d0d, Offset: 0x4e8
 // Size: 0x74
 function function_5aadfa85(owner) {
@@ -88,7 +88,7 @@ function function_eaae596a(victim) {
 }
 
 // Namespace threat_detector
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9fff7f31, Offset: 0x5f0
 // Size: 0x104
 function function_eee03df4(attacker, weapon, target) {
@@ -106,7 +106,7 @@ function function_eee03df4(attacker, weapon, target) {
 }
 
 // Namespace threat_detector
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xabd7ef3c, Offset: 0x700
 // Size: 0x34a
 function function_7b7421df(watcher) {
@@ -120,7 +120,7 @@ function function_7b7421df(watcher) {
     while (true) {
         self.maxhealth = 100000;
         self.health = self.maxhealth;
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags);
         if (!isdefined(attacker) || !isplayer(attacker)) {
             continue;
         }

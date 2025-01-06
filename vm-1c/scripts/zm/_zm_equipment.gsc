@@ -1,19 +1,19 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_equipment;
 
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69a7e10d, Offset: 0x3f8
 // Size: 0x8c
 function __init__() {
@@ -42,7 +42,7 @@ function __init__() {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8d7699d, Offset: 0x490
 // Size: 0x14
 function __main__() {
@@ -69,7 +69,7 @@ function signal_activated(val) {
 }
 
 // Namespace zm_equipment
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xf5dd2e73, Offset: 0x578
 // Size: 0x214
 function register(equipment_name, hint, howto_hint, hint_icon, equipmentvo) {
@@ -97,7 +97,7 @@ function register(equipment_name, hint, howto_hint, hint_icon, equipmentvo) {
 }
 
 // Namespace zm_equipment
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc4be46f9, Offset: 0x798
 // Size: 0x26
 function register_slot_watcher_override(str_equipment, func_slot_watcher_override) {
@@ -105,7 +105,7 @@ function register_slot_watcher_override(str_equipment, func_slot_watcher_overrid
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x810281d, Offset: 0x7c8
 // Size: 0x6a
 function is_included(equipment) {
@@ -119,7 +119,7 @@ function is_included(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3408ee79, Offset: 0x840
 // Size: 0x46
 function include(equipment_name) {
@@ -130,7 +130,7 @@ function include(equipment_name) {
 }
 
 // Namespace zm_equipment
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x3a45c4a9, Offset: 0x890
 // Size: 0xc0
 function set_ammo_driven(equipment_name, start, refill_max_ammo) {
@@ -158,7 +158,7 @@ function limit(equipment_name, limited) {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1184d38, Offset: 0x9f8
 // Size: 0x186
 function init_upgrade() {
@@ -176,7 +176,7 @@ function init_upgrade() {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8e1f0d08, Offset: 0xb88
 // Size: 0x5a
 function get_hint(equipment) {
@@ -185,7 +185,7 @@ function get_hint(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x940ed5f8, Offset: 0xbf0
 // Size: 0x5a
 function get_howto_hint(equipment) {
@@ -203,7 +203,7 @@ function get_icon(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a59121d, Offset: 0xcc0
 // Size: 0x5a
 function get_notify_strings(equipment) {
@@ -212,7 +212,7 @@ function get_notify_strings(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x59ebeb44, Offset: 0xd28
 // Size: 0xce
 function add_to_trigger_list(equipment) {
@@ -222,12 +222,12 @@ function add_to_trigger_list(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xed756491, Offset: 0xe00
 // Size: 0x1b4
 function equipment_spawn_think() {
     for (;;) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger() || player.is_drinking > 0) {
             wait 0.1;
             continue;
@@ -251,7 +251,7 @@ function equipment_spawn_think() {
 }
 
 // Namespace zm_equipment
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1554c7f1, Offset: 0xfc0
 // Size: 0x10e
 function set_equipment_invisibility_to_player(equipment, invisible) {
@@ -270,7 +270,7 @@ function set_equipment_invisibility_to_player(equipment, invisible) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x28cc6dcf, Offset: 0x10d8
 // Size: 0x2c4
 function take(equipment) {
@@ -317,7 +317,7 @@ function take(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaacb9b56, Offset: 0x13a8
 // Size: 0x1fe
 function give(equipment) {
@@ -346,7 +346,7 @@ function give(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb057e5fc, Offset: 0x15b0
 // Size: 0x134
 function buy(equipment) {
@@ -365,7 +365,7 @@ function buy(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e3e4753, Offset: 0x16f0
 // Size: 0x1fe
 function slot_watcher(equipment) {
@@ -374,7 +374,7 @@ function slot_watcher(equipment) {
     self endon(#"disconnect");
     notify_strings = get_notify_strings(equipment);
     while (true) {
-        curr_weapon, prev_weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", curr_weapon, prev_weapon);
         if (self.sessionstate != "spectator") {
             self.prev_weapon_before_equipment_change = undefined;
             if (isdefined(prev_weapon) && level.weaponnone != prev_weapon) {
@@ -404,7 +404,7 @@ function slot_watcher(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5c64fe1a, Offset: 0x18f8
 // Size: 0x64
 function is_limited(equipment) {
@@ -419,7 +419,7 @@ function is_limited(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x80407886, Offset: 0x1968
 // Size: 0xbe
 function limited_in_use(equipment) {
@@ -437,7 +437,7 @@ function limited_in_use(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf106b9f, Offset: 0x1a30
 // Size: 0xa4
 function setup_limited(equipment) {
@@ -450,7 +450,7 @@ function setup_limited(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6025489a, Offset: 0x1ae0
 // Size: 0xce
 function release_limited_on_taken(equipment) {
@@ -464,7 +464,7 @@ function release_limited_on_taken(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe822426d, Offset: 0x1bb8
 // Size: 0xde
 function release_limited_on_disconnect(equipment) {
@@ -480,7 +480,7 @@ function release_limited_on_disconnect(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa213c068, Offset: 0x1ca0
 // Size: 0x40
 function is_active(equipment) {
@@ -491,7 +491,7 @@ function is_active(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x6208e859, Offset: 0x1ce8
 // Size: 0x88
 function init_hint_hudelem(x, y, alignx, aligny, fontscale, alpha) {
@@ -505,7 +505,7 @@ function init_hint_hudelem(x, y, alignx, aligny, fontscale, alpha) {
 }
 
 // Namespace zm_equipment
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x330ccd4e, Offset: 0x1d78
 // Size: 0x184
 function setup_client_hintelem(ypos, font_scale) {
@@ -532,7 +532,7 @@ function setup_client_hintelem(ypos, font_scale) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x802e970a, Offset: 0x1f08
 // Size: 0x9c
 function show_hint(equipment) {
@@ -549,7 +549,7 @@ function show_hint(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc37718b9, Offset: 0x1fb0
 // Size: 0x204
 function show_hint_text(text, show_for_time, font_scale, ypos) {
@@ -582,7 +582,7 @@ function show_hint_text(text, show_for_time, font_scale, ypos) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1e644da1, Offset: 0x21c0
 // Size: 0xc6
 function start_ammo(equipment) {
@@ -599,7 +599,7 @@ function start_ammo(equipment) {
 }
 
 // Namespace zm_equipment
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x259f0b05, Offset: 0x2290
 // Size: 0x13e
 function change_ammo(equipment, change) {
@@ -618,7 +618,7 @@ function change_ammo(equipment, change) {
 }
 
 // Namespace zm_equipment
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x72d1db37, Offset: 0x23d8
 // Size: 0xa4
 function function_c9a8ab09(origin, fx, angles) {
@@ -635,7 +635,7 @@ function function_c9a8ab09(origin, fx, angles) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9f63b46a, Offset: 0x2488
 // Size: 0x72
 function register_for_level(weaponname) {
@@ -650,7 +650,7 @@ function register_for_level(weaponname) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5fa83105, Offset: 0x2508
 // Size: 0x3a
 function is_equipment(weapon) {
@@ -661,7 +661,7 @@ function is_equipment(weapon) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1457048a, Offset: 0x2550
 // Size: 0x22
 function is_equipment_that_blocks_purchase(weapon) {
@@ -669,7 +669,7 @@ function is_equipment_that_blocks_purchase(weapon) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5f65dd1, Offset: 0x2580
 // Size: 0x38
 function is_player_equipment(weapon) {
@@ -680,7 +680,7 @@ function is_player_equipment(weapon) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xef940f56, Offset: 0x25c0
 // Size: 0x8c
 function has_deployed_equipment(weapon) {
@@ -696,7 +696,7 @@ function has_deployed_equipment(weapon) {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc142b145, Offset: 0x2658
 // Size: 0x3a
 function has_player_equipment(weapon) {
@@ -704,7 +704,7 @@ function has_player_equipment(weapon) {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e468e0e, Offset: 0x26a0
 // Size: 0x34
 function get_player_equipment() {
@@ -716,7 +716,7 @@ function get_player_equipment() {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f7d3de2, Offset: 0x26e0
 // Size: 0x2a
 function hacker_active() {
@@ -724,7 +724,7 @@ function hacker_active() {
 }
 
 // Namespace zm_equipment
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xec523a7e, Offset: 0x2718
 // Size: 0x98
 function set_player_equipment(weapon) {
@@ -745,7 +745,7 @@ function set_player_equipment(weapon) {
 }
 
 // Namespace zm_equipment
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9db95f43, Offset: 0x27b8
 // Size: 0x24
 function init_player_equipment() {
@@ -755,7 +755,7 @@ function init_player_equipment() {
 /#
 
     // Namespace zm_equipment
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x43d090f1, Offset: 0x27e8
     // Size: 0x1e0
     function function_f30ee99e() {
@@ -784,7 +784,7 @@ function init_player_equipment() {
     }
 
     // Namespace zm_equipment
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x373f622d, Offset: 0x29d0
     // Size: 0xac
     function function_de79cac6(equipment) {

@@ -1,18 +1,18 @@
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
 
 #namespace zm_factory_ffotd;
 
 // Namespace zm_factory_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf9d6b859, Offset: 0x2d8
 // Size: 0x10
 function main_start() {
@@ -20,7 +20,7 @@ function main_start() {
 }
 
 // Namespace zm_factory_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6a0efd2, Offset: 0x2f0
 // Size: 0x4b4
 function main_end() {
@@ -49,7 +49,7 @@ function main_end() {
 }
 
 // Namespace zm_factory_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f3cf534, Offset: 0x7b0
 // Size: 0x148
 function function_1c45822c() {

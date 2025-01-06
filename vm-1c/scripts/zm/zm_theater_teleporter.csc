@@ -1,9 +1,9 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace zm_theater_teleporter;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_theater_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xceecf62e, Offset: 0x3c0
 // Size: 0x1dc
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_theater_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f4cceec, Offset: 0x5a8
 // Size: 0x34
 function main() {
@@ -39,7 +39,7 @@ function main() {
 }
 
 // Namespace zm_theater_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x463b6e93, Offset: 0x5e8
 // Size: 0x4c
 function function_f03654b2() {
@@ -50,11 +50,11 @@ function function_f03654b2() {
 }
 
 // Namespace zm_theater_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56ef38d0, Offset: 0x640
 // Size: 0x24c
 function function_7de9450a() {
-    clientnum = level waittill(#"pack_clock_start");
+    level waittill(#"pack_clock_start", clientnum);
     curr_time = getsystemtime();
     hours = curr_time[0];
     if (hours > 12) {
@@ -86,7 +86,7 @@ function function_7de9450a() {
 }
 
 // Namespace zm_theater_teleporter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9ecd1a5b, Offset: 0x898
 // Size: 0x14c
 function function_cb983f5b(time_values) {
@@ -109,7 +109,7 @@ function function_cb983f5b(time_values) {
 }
 
 // Namespace zm_theater_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x24325f55, Offset: 0x9f0
 // Size: 0x2e2
 function function_667aa0b4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -141,7 +141,7 @@ function function_667aa0b4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x385109b8, Offset: 0xce0
 // Size: 0xfc
 function function_a8255fab(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -155,7 +155,7 @@ function function_a8255fab(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x503edeef, Offset: 0xde8
 // Size: 0x13a
 function function_2b23adc9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -167,7 +167,7 @@ function function_2b23adc9(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x98cfce89, Offset: 0xf30
 // Size: 0x27a
 function function_6776dea9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -185,7 +185,7 @@ function function_6776dea9(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_theater_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3fd1e314, Offset: 0x11b8
 // Size: 0x174
 function play_fly_me_to_the_moon_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -204,7 +204,7 @@ function play_fly_me_to_the_moon_fx(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm_theater_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x70a23f31, Offset: 0x1338
 // Size: 0x9c
 function teleporter_link_cable_mtl(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

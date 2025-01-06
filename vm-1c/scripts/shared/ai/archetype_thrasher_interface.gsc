@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/ai_interface;
 #using scripts/shared/ai/archetype_thrasher;
+#using scripts/shared/ai/systems/ai_interface;
 
 #namespace namespace_66565bbf;
 
 // Namespace namespace_66565bbf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfae534bd, Offset: 0x118
 // Size: 0xcc
 function function_347a8745() {

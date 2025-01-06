@@ -1,34 +1,34 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/mp/killstreaks/_remote_weapons;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_detect;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/gametypes/_shellshock;
+#using scripts/codescripts/struct;
 #using scripts/mp/_util;
-#using scripts/shared/vehicle_ai_shared;
+#using scripts/mp/gametypes/_shellshock;
 #using scripts/mp/killstreaks/_airsupport;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_detect;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
 #using scripts/mp/killstreaks/_qrdrone;
-#using scripts/shared/weapons/_heatseekingmissile;
+#using scripts/mp/killstreaks/_remote_weapons;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/killstreaks_shared;
 #using scripts/shared/math_shared;
+#using scripts/shared/popups_shared;
 #using scripts/shared/scoreevents_shared;
-#using scripts/shared/weapons/_hacker_tool;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_death_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/weapons/_hacker_tool;
+#using scripts/shared/weapons/_heatseekingmissile;
 
 #namespace dart;
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e2b748d, Offset: 0x7f8
 // Size: 0x254
 function init() {
@@ -46,7 +46,7 @@ function init() {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb767c07d, Offset: 0xa58
 // Size: 0x4e
 function wait_dart_timed_out(time) {
@@ -59,7 +59,7 @@ function wait_dart_timed_out(time) {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x907e2727, Offset: 0xab0
 // Size: 0x90
 function wait_for_throw_status() {
@@ -72,7 +72,7 @@ function wait_for_throw_status() {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8bd11924, Offset: 0xb48
 // Size: 0x24c
 function activatedart(killstreaktype) {
@@ -109,7 +109,7 @@ function activatedart(killstreaktype) {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a6f17d0, Offset: 0xda0
 // Size: 0x44
 function cleanup_grenade() {
@@ -118,7 +118,7 @@ function cleanup_grenade() {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x14fafc2a, Offset: 0xdf0
 // Size: 0x314
 function watchthrow(missileweapon) {
@@ -130,7 +130,7 @@ function watchthrow(missileweapon) {
     player endon(#"dart_putaway");
     level endon(#"game_ended");
     player.waitingondartthrow = 1;
-    grenade, weapon = player waittill(#"grenade_fire");
+    player waittill(#"grenade_fire", grenade, weapon);
     player.waitingondartthrow = 0;
     if (weapon != missileweapon) {
         self notify(#"dart_throw_failed");
@@ -162,7 +162,7 @@ function watchthrow(missileweapon) {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd451b56, Offset: 0x1110
 // Size: 0x16c
 function hackedprefunction(hacker) {
@@ -180,7 +180,7 @@ function hackedprefunction(hacker) {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4528778a, Offset: 0x1288
 // Size: 0x8c
 function hackedpostfunction(hacker) {
@@ -192,7 +192,7 @@ function hackedpostfunction(hacker) {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x924639ec, Offset: 0x1320
 // Size: 0x58
 function dart_hacked_health_update(hacker) {
@@ -203,7 +203,7 @@ function dart_hacked_health_update(hacker) {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb7e1234f, Offset: 0x1380
 // Size: 0xca
 function check_launch_space(origin) {
@@ -215,7 +215,7 @@ function check_launch_space(origin) {
 }
 
 // Namespace dart
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4193edac, Offset: 0x1458
 // Size: 0x538
 function spawndart(grenade, killstreak_id, spawn_origin) {
@@ -287,7 +287,7 @@ function debug_origin() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34a4f797, Offset: 0x19f8
 // Size: 0xf2
 function waitremotecontrol() {
@@ -308,7 +308,7 @@ function waitremotecontrol() {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf99ddc1d, Offset: 0x1af8
 // Size: 0x23c
 function startdartremotecontrol(dart) {
@@ -339,7 +339,7 @@ function startdartremotecontrol(dart) {
 }
 
 // Namespace dart
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1f530dec, Offset: 0x1d40
 // Size: 0x2c
 function enddartremotecontrol(dart, exitrequestedbyowner) {
@@ -347,7 +347,7 @@ function enddartremotecontrol(dart, exitrequestedbyowner) {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9fb65301, Offset: 0x1d78
 // Size: 0x14
 function dartdistancefailure() {
@@ -355,7 +355,7 @@ function dartdistancefailure() {
 }
 
 // Namespace dart
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9c5c942, Offset: 0x1d98
 // Size: 0x18c
 function stop_remote_weapon(attacker, weapon) {
@@ -375,7 +375,7 @@ function stop_remote_weapon(attacker, weapon) {
 }
 
 // Namespace dart
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x8fe941b1, Offset: 0x1f30
 // Size: 0x154
 function dartdamageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -389,7 +389,7 @@ function dartdamageoverride(einflictor, eattacker, idamage, idflags, smeansofdea
 }
 
 // Namespace dart
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfc09f7e3, Offset: 0x2090
 // Size: 0x44
 function emp_damage_cb(attacker, weapon) {
@@ -398,13 +398,13 @@ function emp_damage_cb(attacker, weapon) {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3264f7ca, Offset: 0x20e0
 // Size: 0x94
 function darpredictedcollision() {
     self endon(#"death");
     while (true) {
-        velocity, normal, ent, stype = self waittill(#"veh_predictedcollision");
+        self waittill(#"veh_predictedcollision", velocity, normal, ent, stype);
         self notify(#"veh_collision", velocity, normal, ent, stype);
         if (stype == "glass") {
             continue;
@@ -414,7 +414,7 @@ function darpredictedcollision() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55c3de3a, Offset: 0x2180
 // Size: 0xfc
 function watchcollision() {
@@ -423,7 +423,7 @@ function watchcollision() {
     dart.owner endon(#"disconnect");
     dart thread darpredictedcollision();
     while (true) {
-        velocity, normal, ent, stype = dart waittill(#"veh_collision");
+        dart waittill(#"veh_collision", velocity, normal, ent, stype);
         if (stype === "glass") {
             continue;
         }
@@ -435,7 +435,7 @@ function watchcollision() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1898584b, Offset: 0x2288
 // Size: 0x6c
 function watchdeath() {
@@ -448,7 +448,7 @@ function watchdeath() {
 }
 
 // Namespace dart
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9df30af7, Offset: 0x2300
 // Size: 0xbc
 function watchownernondeathevents(endcondition1, endcondition2) {
@@ -462,7 +462,7 @@ function watchownernondeathevents(endcondition1, endcondition2) {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7d1b2f4f, Offset: 0x23c8
 // Size: 0x44
 function watchforgameend() {
@@ -473,7 +473,7 @@ function watchforgameend() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6005f80, Offset: 0x2418
 // Size: 0x258
 function watchammo() {
@@ -518,7 +518,7 @@ function watchammo() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb95b2a16, Offset: 0x2678
 // Size: 0x7d4
 function leave_dart() {
@@ -631,7 +631,7 @@ function deleteonconditions(condition) {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xea573b45, Offset: 0x2ec8
 // Size: 0x3c
 function waitthendelete(waittime) {
@@ -642,7 +642,7 @@ function waitthendelete(waittime) {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7e736bc7, Offset: 0x2f10
 // Size: 0x106
 function play_bda_dialog(pilotindex) {
@@ -664,7 +664,7 @@ function play_bda_dialog(pilotindex) {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x70e743f4, Offset: 0x3020
 // Size: 0xcc
 function enabledartmissilelocking() {
@@ -679,7 +679,7 @@ function enabledartmissilelocking() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x574daa6b, Offset: 0x30f8
 // Size: 0x6c
 function disabledartmissilelocking() {
@@ -693,7 +693,7 @@ function disabledartmissilelocking() {
 }
 
 // Namespace dart
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad709d95, Offset: 0x3170
 // Size: 0x6c
 function getdartmissiletargets() {
@@ -703,7 +703,7 @@ function getdartmissiletargets() {
 }
 
 // Namespace dart
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa869999b, Offset: 0x31e8
 // Size: 0x14e
 function isvaliddartmissiletarget(ent) {
@@ -732,7 +732,7 @@ function isvaliddartmissiletarget(ent) {
 }
 
 // Namespace dart
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6d667b69, Offset: 0x3340
 // Size: 0x1c6
 function isstillvaliddartmissiletarget(ent, weapon) {

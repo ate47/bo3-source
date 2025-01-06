@@ -1,10 +1,10 @@
-#using scripts/shared/_explode;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/_explode;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace gravity_spikes;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace gravity_spikes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x32f41fa7, Offset: 0x258
 // Size: 0x7c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 /#
 
     // Namespace gravity_spikes
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe49c692f, Offset: 0x2e0
     // Size: 0x48
     function updatedvars() {
@@ -46,7 +46,7 @@ function __init__() {
 #/
 
 // Namespace gravity_spikes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x15ce607b, Offset: 0x330
 // Size: 0x150
 function watchforgravityspikeexplosion() {
@@ -55,7 +55,7 @@ function watchforgravityspikeexplosion() {
     }
     weapon_proximity = getweapon("hero_gravityspikes");
     while (true) {
-        localclientnum, position, mod, weapon, owner_cent = level waittill(#"explode");
+        level waittill(#"explode", localclientnum, position, mod, weapon, owner_cent);
         if (weapon.rootweapon != weapon_proximity) {
             continue;
         }
@@ -68,7 +68,7 @@ function watchforgravityspikeexplosion() {
 }
 
 // Namespace gravity_spikes
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xad2da60e, Offset: 0x488
 // Size: 0x136
 function do_gravity_spike_fx(localclientnum, owner, weapon, position) {
@@ -87,7 +87,7 @@ function do_gravity_spike_fx(localclientnum, owner, weapon, position) {
 }
 
 // Namespace gravity_spikes
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xa44848da, Offset: 0x5c8
 // Size: 0xb6
 function getideallocationforfx(startpos, fxindex, fxcount, defaultdistance, rotation) {
@@ -98,7 +98,7 @@ function getideallocationforfx(startpos, fxindex, fxcount, defaultdistance, rota
 }
 
 // Namespace gravity_spikes
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8d1f62e, Offset: 0x688
 // Size: 0xe2
 function randomizelocation(startpos, max_x_offset, max_y_offset) {
@@ -110,7 +110,7 @@ function randomizelocation(startpos, max_x_offset, max_y_offset) {
 }
 
 // Namespace gravity_spikes
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd67a59cc, Offset: 0x778
 // Size: 0x72
 function ground_trace(startpos, owner) {
@@ -120,7 +120,7 @@ function ground_trace(startpos, owner) {
 }
 
 // Namespace gravity_spikes
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x3a90e4e5, Offset: 0x7f8
 // Size: 0x24e
 function do_gravity_spike_fx_circle(localclientnum, owner, center, radius, count) {

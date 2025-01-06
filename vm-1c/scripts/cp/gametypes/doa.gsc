@@ -1,16 +1,16 @@
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
 #using scripts/cp/_callbacks;
-#using scripts/cp/gametypes/_spawnlogic;
-#using scripts/cp/gametypes/_spawning;
-#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
 #using scripts/cp/gametypes/_globallogic;
+#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/cp/gametypes/_spawning;
+#using scripts/cp/gametypes/_spawnlogic;
 #using scripts/shared/ai/margwa;
-#using scripts/shared/throttle_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/throttle_shared;
 
 #namespace doa;
 
@@ -38,7 +38,7 @@ function autoexec ignore_systems() {
 }
 
 // Namespace doa
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5fcc44bf, Offset: 0x4d8
 // Size: 0x2d0
 function main() {
@@ -79,7 +79,7 @@ function main() {
 }
 
 // Namespace doa
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4677315d, Offset: 0x7b0
 // Size: 0x208
 function onstartgametype() {
@@ -104,7 +104,7 @@ function onstartgametype() {
 }
 
 // Namespace doa
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf9e97f2d, Offset: 0x9c0
 // Size: 0x3c
 function onspawnplayer(predictedspawn, question) {
@@ -113,7 +113,7 @@ function onspawnplayer(predictedspawn, question) {
 }
 
 // Namespace doa
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x497b97d5, Offset: 0xa08
 // Size: 0x24
 function onendgame(winningteam) {
@@ -121,7 +121,7 @@ function onendgame(winningteam) {
 }
 
 // Namespace doa
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0xa0ec98e8, Offset: 0xa38
 // Size: 0x4c
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -129,7 +129,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 }
 
 // Namespace doa
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8dd79b36, Offset: 0xa90
 // Size: 0x8
 function wait_to_spawn() {
@@ -137,7 +137,7 @@ function wait_to_spawn() {
 }
 
 // Namespace doa
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb4b721c, Offset: 0xaa0
 // Size: 0x8
 function function_16220a9c() {

@@ -1,38 +1,38 @@
-#using scripts/cp/cp_mi_cairo_aquifer_patch;
-#using scripts/cp/cp_mi_cairo_aquifer_accolades;
-#using scripts/shared/compass;
-#using scripts/cp/cp_mi_cairo_aquifer_ambience;
-#using scripts/cp/cp_mi_cairo_aquifer_objectives;
-#using scripts/cp/cp_mi_cairo_aquifer_aitest;
-#using scripts/cp/_objectives;
-#using scripts/shared/exploder_shared;
-#using scripts/cp/cp_mi_cairo_aquifer_utility;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/cp/cp_mi_cairo_aquifer_sound;
-#using scripts/cp/cp_mi_cairo_aquifer_fx;
-#using scripts/cp/cp_mi_cairo_aquifer_boss;
-#using scripts/cp/cp_mi_cairo_aquifer_interior;
-#using scripts/cp/gametypes/_save;
+#using scripts/codescripts/struct;
+#using scripts/cp/_collectibles;
 #using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hacking;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
 #using scripts/cp/_skipto;
 #using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/cp/_collectibles;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/cp/_hacking;
-#using scripts/cp/_dialog;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
+#using scripts/cp/cp_mi_cairo_aquifer_accolades;
+#using scripts/cp/cp_mi_cairo_aquifer_aitest;
+#using scripts/cp/cp_mi_cairo_aquifer_ambience;
+#using scripts/cp/cp_mi_cairo_aquifer_boss;
+#using scripts/cp/cp_mi_cairo_aquifer_fx;
+#using scripts/cp/cp_mi_cairo_aquifer_interior;
+#using scripts/cp/cp_mi_cairo_aquifer_objectives;
+#using scripts/cp/cp_mi_cairo_aquifer_patch;
+#using scripts/cp/cp_mi_cairo_aquifer_sound;
+#using scripts/cp/cp_mi_cairo_aquifer_utility;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/compass;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_cairo_aquifer;
 
@@ -46,7 +46,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x397bd361, Offset: 0x1008
 // Size: 0x304
 function main() {
@@ -89,7 +89,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb6a296ca, Offset: 0x1318
 // Size: 0x364
 function init_flags() {
@@ -123,7 +123,7 @@ function init_flags() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc075c1c6, Offset: 0x1688
 // Size: 0x34
 function function_4b0a421() {
@@ -131,7 +131,7 @@ function function_4b0a421() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4930cbc8, Offset: 0x16c8
 // Size: 0x5a8
 function function_a1a20c49() {
@@ -189,7 +189,7 @@ function function_e4ca7f5e() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e1550a0, Offset: 0x1f88
 // Size: 0x47c
 function precache() {
@@ -235,7 +235,7 @@ function precache() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x302122fb, Offset: 0x2410
 // Size: 0xa6
 function function_c2c4ea75() {
@@ -248,7 +248,7 @@ function function_c2c4ea75() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7bc405c, Offset: 0x24c0
 // Size: 0x14
 function on_finalize_initialization() {
@@ -256,7 +256,7 @@ function on_finalize_initialization() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3af90646, Offset: 0x24e0
 // Size: 0x5c
 function function_8f9628e0() {
@@ -267,7 +267,7 @@ function function_8f9628e0() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2df0040b, Offset: 0x2548
 // Size: 0x3d4
 function on_player_connected() {
@@ -301,7 +301,7 @@ function on_player_connected() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ffcd030, Offset: 0x2928
 // Size: 0x64
 function function_47c53384() {
@@ -311,7 +311,7 @@ function function_47c53384() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3bd3a9f2, Offset: 0x2998
 // Size: 0x2c
 function function_178d800() {
@@ -321,7 +321,7 @@ function function_178d800() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbf1de6bd, Offset: 0x29d0
 // Size: 0x114
 function on_player_spawned() {
@@ -340,7 +340,7 @@ function on_player_spawned() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a72048c, Offset: 0x2af0
 // Size: 0x8c
 function on_player_loadout() {
@@ -355,7 +355,7 @@ function on_player_loadout() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcce9d08b, Offset: 0x2b88
 // Size: 0x2c
 function on_player_death() {
@@ -364,7 +364,7 @@ function on_player_death() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x2bc0
 // Size: 0x4
 function function_48694c4a() {
@@ -372,7 +372,7 @@ function function_48694c4a() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49f5b632, Offset: 0x2bd0
 // Size: 0x20
 function function_f141f41c() {
@@ -382,7 +382,7 @@ function function_f141f41c() {
 }
 
 // Namespace cp_mi_cairo_aquifer
-// Params 11, eflags: 0x1 linked
+// Params 11, eflags: 0x0
 // Checksum 0x6abf9f10, Offset: 0x2bf8
 // Size: 0x14c
 function function_6d9a8286(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {

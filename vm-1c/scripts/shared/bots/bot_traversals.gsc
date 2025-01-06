@@ -1,17 +1,17 @@
-#using scripts/shared/bots/bot_buttons;
+#using scripts/shared/array_shared;
 #using scripts/shared/bots/_bot;
+#using scripts/shared/bots/bot_buttons;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/weapons/_weapons;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 
 #namespace bot;
 
 // Namespace bot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc0fa4637, Offset: 0x1e8
 // Size: 0x2e4
 function callback_botentereduseredge(startnode, endnode) {
@@ -56,7 +56,7 @@ function function_e6661162() {
 }
 
 // Namespace bot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x78d7d076, Offset: 0x560
 // Size: 0xd0
 function function_46343d89(startnode, endnode) {
@@ -76,7 +76,7 @@ function function_46343d89(startnode, endnode) {
 }
 
 // Namespace bot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x402f9fdf, Offset: 0x638
 // Size: 0x7c
 function function_6185fafe(startnode, endnode) {
@@ -89,7 +89,7 @@ function function_6185fafe(startnode, endnode) {
 }
 
 // Namespace bot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9934ed08, Offset: 0x6c0
 // Size: 0x2f4
 function jump_up_traversal(startnode, endnode) {
@@ -133,7 +133,7 @@ function jump_up_traversal(startnode, endnode) {
 }
 
 // Namespace bot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x83c67b84, Offset: 0x9c0
 // Size: 0x3f4
 function jump_down_traversal(startnode, endnode) {
@@ -171,7 +171,7 @@ function jump_down_traversal(startnode, endnode) {
 }
 
 // Namespace bot
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd9f82b86, Offset: 0xdc0
 // Size: 0x1cc
 function function_b5d37467(startnode, endnode, vector) {
@@ -190,7 +190,7 @@ function function_b5d37467(startnode, endnode, vector) {
 }
 
 // Namespace bot
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x6fb6c82c, Offset: 0xf98
 // Size: 0x174
 function function_dd501ea(startnode, endnode, wallnormal, var_88fb49cd) {
@@ -214,7 +214,7 @@ function function_dd501ea(startnode, endnode, wallnormal, var_88fb49cd) {
 }
 
 // Namespace bot
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xce6e2cbd, Offset: 0x1118
 // Size: 0x3b2
 function function_30486e13(startnode, endnode, wallnormal, var_c1dc8db1) {
@@ -262,7 +262,7 @@ function function_30486e13(startnode, endnode, wallnormal, var_c1dc8db1) {
 }
 
 // Namespace bot
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x803d52f2, Offset: 0x14d8
 // Size: 0x254
 function jump_to(target, vector) {
@@ -309,7 +309,7 @@ function function_6581f3cc(target) {
 }
 
 // Namespace bot
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9dc7c993, Offset: 0x17a8
 // Size: 0x192
 function function_6918d9ba(target) {
@@ -333,7 +333,7 @@ function function_6918d9ba(target) {
 }
 
 // Namespace bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d967e2d, Offset: 0x1948
 // Size: 0x54
 function function_a2e25eae() {
@@ -343,7 +343,7 @@ function function_a2e25eae() {
 }
 
 // Namespace bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x177dd094, Offset: 0x19a8
 // Size: 0x8c
 function function_2c357c23() {
@@ -359,7 +359,7 @@ function function_2c357c23() {
 }
 
 // Namespace bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4b194b02, Offset: 0x1a40
 // Size: 0x9c
 function function_fe1ccdcd() {
@@ -378,7 +378,7 @@ function function_fe1ccdcd() {
 }
 
 // Namespace bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe44b6d65, Offset: 0x1ae8
 // Size: 0x64
 function function_f0530225() {
@@ -392,7 +392,7 @@ function function_f0530225() {
 }
 
 // Namespace bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2cd6aef7, Offset: 0x1b58
 // Size: 0x6c
 function function_4c7b12b7() {

@@ -65,7 +65,7 @@ function function_fe2dfe37(clientnum, set, newent) {
 // Size: 0x218
 function function_c19e773d(clientnum) {
     while (true) {
-        clientnum = level waittill(#"cool_fx");
+        level waittill(#"cool_fx", clientnum);
         players = getlocalplayers();
         if (level.var_aef21231[clientnum] == 0) {
             fx_pos = undefined;
@@ -134,7 +134,7 @@ function function_4d04821d() {
 // Size: 0x50
 function function_80009f4() {
     while (true) {
-        clientnum = level waittill(#"ae1");
+        level waittill(#"ae1", clientnum);
         visionsetnaked(clientnum, "flare", 0.4);
     }
 }

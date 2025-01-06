@@ -1,12 +1,12 @@
-#using scripts/shared/scene_shared;
-#using scripts/mp/mp_veiled_sound;
-#using scripts/mp/mp_veiled_fx;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/compass;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/mp_veiled_fx;
+#using scripts/mp/mp_veiled_sound;
+#using scripts/shared/compass;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace mp_veiled;
 

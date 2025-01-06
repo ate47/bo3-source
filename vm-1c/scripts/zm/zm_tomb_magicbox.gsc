@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_magicbox;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace tomb_magicbox;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaefcf4f1, Offset: 0x288
 // Size: 0x1a4
 function __init__() {
@@ -38,7 +38,7 @@ function __init__() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x438
 // Size: 0x4
 function function_61903aae() {
@@ -46,7 +46,7 @@ function function_61903aae() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x448
 // Size: 0x4
 function function_e4e60ea() {
@@ -54,7 +54,7 @@ function function_e4e60ea() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3ebab52, Offset: 0x458
 // Size: 0x1de
 function custom_joker_movement() {
@@ -78,7 +78,7 @@ function custom_joker_movement() {
 }
 
 // Namespace tomb_magicbox
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64ba8f14, Offset: 0x640
 // Size: 0xcc
 function custom_magic_box_timer_til_despawn(magic_box) {
@@ -93,7 +93,7 @@ function custom_magic_box_timer_til_despawn(magic_box) {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f337fce, Offset: 0x718
 // Size: 0xc
 function function_c6955e8b() {
@@ -101,7 +101,7 @@ function function_c6955e8b() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xff0846be, Offset: 0x730
 // Size: 0xea
 function function_40fd7924() {
@@ -117,7 +117,7 @@ function function_40fd7924() {
 }
 
 // Namespace tomb_magicbox
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8deb4968, Offset: 0x828
 // Size: 0x2be
 function set_magic_box_zbarrier_state(state) {
@@ -167,7 +167,7 @@ function set_magic_box_zbarrier_state(state) {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e4f1856, Offset: 0xaf0
 // Size: 0x4c
 function function_fea04511() {
@@ -177,7 +177,7 @@ function function_fea04511() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3f37cb33, Offset: 0xb48
 // Size: 0x12c
 function function_4831fb0d() {
@@ -199,7 +199,7 @@ function function_4831fb0d() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x64f0eda5, Offset: 0xc80
 // Size: 0x188
 function function_fd5f77b3() {
@@ -226,7 +226,7 @@ function function_fd5f77b3() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf61d9dc9, Offset: 0xe10
 // Size: 0xb4
 function function_63e09f12() {
@@ -241,7 +241,7 @@ function function_63e09f12() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4fa48284, Offset: 0xed0
 // Size: 0x98
 function function_e0c48214() {
@@ -257,7 +257,7 @@ function function_e0c48214() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4e92e672, Offset: 0xf70
 // Size: 0xe2
 function function_fe30a0c8() {
@@ -274,7 +274,7 @@ function function_fe30a0c8() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd61bd07, Offset: 0x1060
 // Size: 0x16c
 function custom_magic_box_do_weapon_rise() {
@@ -297,7 +297,7 @@ function custom_magic_box_do_weapon_rise() {
 }
 
 // Namespace tomb_magicbox
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfbf850b3, Offset: 0x11d8
 // Size: 0x15a
 function function_178f38e8() {

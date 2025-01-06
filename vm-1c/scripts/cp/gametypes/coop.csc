@@ -1,5 +1,5 @@
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
 
 #namespace coop;
 
@@ -37,7 +37,7 @@ function onstartgametype() {
 }
 
 // Namespace coop
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x175a42be, Offset: 0x1b0
 // Size: 0xd4
 function function_9f1677e1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +55,7 @@ function function_9f1677e1(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace coop
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd464b116, Offset: 0x290
 // Size: 0x8c
 function function_d630ecfc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

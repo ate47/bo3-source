@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_powerup_castle_tram_token;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc95fe51b, Offset: 0x290
 // Size: 0x5e
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b5c23b2, Offset: 0x2f8
 // Size: 0x1ac
 function register_clientfields() {
@@ -41,7 +41,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_powerup_castle_tram_token
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa5bea765, Offset: 0x4b0
 // Size: 0x84
 function function_4f546258(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

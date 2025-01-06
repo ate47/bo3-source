@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_equip_hacker;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equip_hacker;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace namespace_bcde73b7;
 
 // Namespace namespace_bcde73b7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x652e047d, Offset: 0x2b0
 // Size: 0x18c
 function box_hacks() {
@@ -32,7 +32,7 @@ function box_hacks() {
 }
 
 // Namespace namespace_bcde73b7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa557a71d, Offset: 0x448
 // Size: 0x90
 function function_3ac0f8de() {
@@ -50,7 +50,7 @@ function function_3ac0f8de() {
 }
 
 // Namespace namespace_bcde73b7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x585c6d2d, Offset: 0x4e0
 // Size: 0x12e
 function function_2ee71e1() {
@@ -79,7 +79,7 @@ function function_2ee71e1() {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2b0bba81, Offset: 0x618
 // Size: 0xac
 function function_2c13f75d(chance) {
@@ -99,7 +99,7 @@ function function_2c13f75d(chance) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7b64e692, Offset: 0x6d0
 // Size: 0x34
 function function_8dd9f05f(chest, player) {
@@ -107,7 +107,7 @@ function function_8dd9f05f(chest, player) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa48e1934, Offset: 0x710
 // Size: 0x154
 function function_df3b7399(chest, player) {
@@ -126,7 +126,7 @@ function function_df3b7399(chest, player) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x78d59b9b, Offset: 0x870
 // Size: 0x1ec
 function function_1358747(hacker) {
@@ -150,7 +150,7 @@ function function_1358747(hacker) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9b8e2cc8, Offset: 0xa68
 // Size: 0x24
 function function_bf34b3e4(hacker) {
@@ -158,7 +158,7 @@ function function_bf34b3e4(hacker) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8c0d3e9, Offset: 0xa98
 // Size: 0x40
 function function_b9f3574d(player) {
@@ -169,7 +169,7 @@ function function_b9f3574d(player) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2bfa7a76, Offset: 0xae0
 // Size: 0x34
 function function_ebd3992d(chest, player) {
@@ -177,7 +177,7 @@ function function_ebd3992d(chest, player) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x781a6c5, Offset: 0xb20
 // Size: 0x154
 function function_a624f359(chest, player) {
@@ -196,7 +196,7 @@ function function_a624f359(chest, player) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb56e1aac, Offset: 0xc80
 // Size: 0x1ec
 function function_a7222c18(hacker) {
@@ -216,7 +216,7 @@ function function_a7222c18(hacker) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa7fbca3f, Offset: 0xe78
 // Size: 0x270
 function function_71eaab63(weapon1, weapon2) {
@@ -243,7 +243,7 @@ function function_71eaab63(weapon1, weapon2) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1d842d09, Offset: 0x10f0
 // Size: 0x164
 function function_4dccfd98(weapon1, weapon2) {
@@ -281,7 +281,7 @@ function function_4dccfd98(weapon1, weapon2) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfc9f3c41, Offset: 0x1260
 // Size: 0x96
 function function_a464ab90() {
@@ -293,7 +293,7 @@ function function_a464ab90() {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x92091288, Offset: 0x1300
 // Size: 0x176
 function function_fcdcbf3d(create) {
@@ -321,7 +321,7 @@ function function_fcdcbf3d(create) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb9e7d356, Offset: 0x1480
 // Size: 0x15c
 function function_35ff58ad(hacker) {
@@ -343,7 +343,7 @@ function function_35ff58ad(hacker) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5d81b593, Offset: 0x15e8
 // Size: 0x54
 function summon_box(hacker) {
@@ -354,7 +354,7 @@ function summon_box(hacker) {
 }
 
 // Namespace namespace_bcde73b7
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x71eb61ef, Offset: 0x1648
 // Size: 0x6a
 function function_163fb8bf(player) {

@@ -3,7 +3,7 @@
 #namespace voice_lotus1;
 
 // Namespace voice_lotus1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9050be3f, Offset: 0x1100
 // Size: 0xb24
 function init_voice() {

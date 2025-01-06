@@ -3,7 +3,7 @@
 #namespace zm_temple_sq;
 
 // Namespace zm_temple_sq
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa114242e, Offset: 0xa0
 // Size: 0x64
 function init_clientfields() {

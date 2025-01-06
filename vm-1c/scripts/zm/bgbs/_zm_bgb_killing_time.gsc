@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/zm/_zm;
 #using scripts/zm/_zm_bgb;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_killing_time;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde1d1345, Offset: 0x2c8
 // Size: 0x12c
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa7f568d7, Offset: 0x400
 // Size: 0x1c
 function activation() {
@@ -44,7 +44,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x76f082ab, Offset: 0x428
 // Size: 0x44
 function validation() {
@@ -58,7 +58,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 13, eflags: 0x5 linked
+// Params 13, eflags: 0x4
 // Checksum 0xaafc20f0, Offset: 0x478
 // Size: 0x1fe
 function private actor_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
@@ -88,7 +88,7 @@ function private actor_damage_override(einflictor, eattacker, idamage, idflags, 
 }
 
 // Namespace zm_bgb_killing_time
-// Params 15, eflags: 0x5 linked
+// Params 15, eflags: 0x4
 // Checksum 0xb76ca299, Offset: 0x680
 // Size: 0x19e
 function private vehicle_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -112,7 +112,7 @@ function private vehicle_damage_override(einflictor, eattacker, idamage, idflags
 }
 
 // Namespace zm_bgb_killing_time
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8f430f8, Offset: 0x828
 // Size: 0x19a
 function function_eb0b4e74() {
@@ -135,7 +135,7 @@ function function_eb0b4e74() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7493596e, Offset: 0x9d0
 // Size: 0x27c
 function function_f2925308() {

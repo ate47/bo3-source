@@ -1,22 +1,22 @@
-#using scripts/zm/zm_tomb_tank;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_behavior;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
 #using scripts/shared/ai/systems/animation_state_machine_notetracks;
 #using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/math_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_behavior;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_tomb_tank;
 
 #namespace zm_tomb_zombie;
 
@@ -33,7 +33,7 @@ function autoexec init() {
 }
 
 // Namespace zm_tomb_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa4fe2cfe, Offset: 0x528
 // Size: 0x234
 function private function_b5da43f3() {
@@ -54,7 +54,7 @@ function private function_b5da43f3() {
 }
 
 // Namespace zm_tomb_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb56819e3, Offset: 0x768
 // Size: 0x1c
 function function_59f740e7() {
@@ -62,7 +62,7 @@ function function_59f740e7() {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb84ed822, Offset: 0x790
 // Size: 0x64
 function function_e24c6a3f(entity) {
@@ -72,7 +72,7 @@ function function_e24c6a3f(entity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd827ecde, Offset: 0x800
 // Size: 0x3a
 function function_901a96ec(behaviortreeentity) {
@@ -83,7 +83,7 @@ function function_901a96ec(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7eaf6d4c, Offset: 0x848
 // Size: 0x3a
 function function_7ae408dd(behaviortreeentity) {
@@ -94,7 +94,7 @@ function function_7ae408dd(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8bb749c9, Offset: 0x890
 // Size: 0x3a
 function function_a8b7161f(behaviortreeentity) {
@@ -105,7 +105,7 @@ function function_a8b7161f(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xda16385, Offset: 0x8d8
 // Size: 0x3a
 function wasKilledOnTank(behaviortreeentity) {
@@ -113,7 +113,7 @@ function wasKilledOnTank(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x77e38544, Offset: 0x920
 // Size: 0x3a
 function function_1beccbaf(behaviortreeentity) {
@@ -124,7 +124,7 @@ function function_1beccbaf(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x80ebbcc8, Offset: 0x968
 // Size: 0x3a
 function function_4638613d(behaviortreeentity) {
@@ -135,7 +135,7 @@ function function_4638613d(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5cff1286, Offset: 0x9b0
 // Size: 0x3a
 function zombieShouldWhirlwind(behaviortreeentity) {
@@ -146,7 +146,7 @@ function zombieShouldWhirlwind(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9ffe38d3, Offset: 0x9f8
 // Size: 0x1c
 function zombieStunLightningActionEnd(behaviortreeentity) {
@@ -154,7 +154,7 @@ function zombieStunLightningActionEnd(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x50c2bc42, Offset: 0xa20
 // Size: 0x1c
 function zombieStunFireActionEnd(behaviortreeentity) {
@@ -162,7 +162,7 @@ function zombieStunFireActionEnd(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7d2b2d4e, Offset: 0xa48
 // Size: 0x6c
 function tombOnTankDeathActionStart(behaviortreeentity) {
@@ -173,7 +173,7 @@ function tombOnTankDeathActionStart(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f2a062a, Offset: 0xac0
 // Size: 0x74
 function function_fe0480d9() {
@@ -191,7 +191,7 @@ function function_fe0480d9() {
 }
 
 // Namespace zm_tomb_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x80781915, Offset: 0xb40
 // Size: 0x16
 function function_57039dd1() {
@@ -200,17 +200,17 @@ function function_57039dd1() {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc7b6e9e, Offset: 0xb60
 // Size: 0x44
 function function_66e3edec(var_25c21be0) {
     var_25c21be0 endon(#"hash_57039dd1");
-    e_corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", e_corpse);
     e_corpse hide();
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7be2b94b, Offset: 0xbb0
 // Size: 0xfa
 function private function_ce3464b9(players) {
@@ -284,7 +284,7 @@ function private function_3394e22d(origin, players) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xc67e7ae9, Offset: 0xf28
 // Size: 0x1f8
 function private function_72e6c1d6() {
@@ -314,7 +314,7 @@ function private function_72e6c1d6() {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcbe841e9, Offset: 0x1128
 // Size: 0x3c
 function tombSetFindFleshState(behaviortreeentity) {
@@ -323,7 +323,7 @@ function tombSetFindFleshState(behaviortreeentity) {
 }
 
 // Namespace zm_tomb_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x66f5bb4f, Offset: 0x1170
 // Size: 0x36
 function tombClearFindFleshState(behaviortreeentity) {

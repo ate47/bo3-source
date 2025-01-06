@@ -1,16 +1,16 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/shared/math_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("critter");
 
@@ -112,7 +112,7 @@ function add_a_chicken(model, scale, var_c34952ed, var_5c667593) {
     if (self.doa.var_3cdd8203.size > getdvarint("scr_doa_max_chickens", 5)) {
         foreach (chicken in self.doa.var_3cdd8203) {
             if (!(isdefined(chicken.special) && chicken.special)) {
-                chicken notify(#"hash_19b593a8");
+                chicken notify(#"spin_out");
                 break;
             }
         }
@@ -142,7 +142,7 @@ function function_8397461e() {
         if (isdefined(bird.special) && bird.special) {
             continue;
         }
-        bird notify(#"hash_19b593a8", 1);
+        bird notify(#"spin_out", 1);
     }
 }
 
@@ -160,7 +160,7 @@ function function_d7142cd(player) {
         self delete();
         return;
     }
-    self notify(#"hash_19b593a8");
+    self notify(#"spin_out");
 }
 
 // Namespace namespace_5e6c5d1f
@@ -174,9 +174,9 @@ function function_3118ca4d(player) {
     self notify(#"hash_3118ca4d");
     self endon(#"hash_3118ca4d");
     self endon(#"death");
-    immediate = self waittill(#"hash_19b593a8");
+    self waittill(#"spin_out", immediate);
     waittillframeend();
-    self notify(#"hash_46cd614a");
+    self notify(#"spinning_out");
     arrayremovevalue(player.doa.var_3cdd8203, self);
     if (!(isdefined(immediate) && immediate)) {
         self.var_3424aae1 = 1;
@@ -246,7 +246,7 @@ function function_e636d9c5(player) {
 // Size: 0x398
 function function_44ff9baa(player) {
     self endon(#"death");
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     var_137307 = 0;
     next_index = var_137307 + 1;
     var_a16e9241 = getdvarint("scr_doa_max_chicken_points", 5);
@@ -302,7 +302,7 @@ function function_44ff9baa(player) {
 // Checksum 0x44f069a7, Offset: 0x1828
 // Size: 0x17e
 function function_8b81d592(player) {
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     self endon(#"death");
     time = level.doa.rules.var_da7e08a6 * 1000;
     if (player.doa.fate == 3 || player.doa.fate == 12) {
@@ -312,17 +312,17 @@ function function_8b81d592(player) {
     timeout = gettime() + time;
     while (gettime() < timeout) {
         if (!isdefined(player)) {
-            self notify(#"hash_19b593a8");
+            self notify(#"spin_out");
         }
         if (level flag::get("doa_game_is_over")) {
-            self notify(#"hash_19b593a8");
+            self notify(#"spin_out");
         }
         wait 0.05;
     }
     while (isdefined(self.var_efa2b784) && (isdefined(self.var_a732885d) && self.var_a732885d || self.var_efa2b784)) {
         wait 1;
     }
-    self notify(#"hash_19b593a8");
+    self notify(#"spin_out");
 }
 
 // Namespace namespace_5e6c5d1f
@@ -381,7 +381,7 @@ function function_be58e20c(player) {
             msg = player util::waittill_any_timeout(0.1, "weapon_fired", "gunner_weapon_fired", "disconnect");
         }
         if (isdefined(msg) && msg != "timeout") {
-            self notify(#"hash_4148f7d1");
+            self notify(#"chicken_fire");
         }
     }
 }
@@ -392,10 +392,10 @@ function function_be58e20c(player) {
 // Size: 0xe8
 function function_8fb467a7(player) {
     self endon(#"death");
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     self thread function_be58e20c(player);
     while (true) {
-        self waittill(#"hash_4148f7d1");
+        self waittill(#"chicken_fire");
         if (isdefined(self.var_18845184) && self.var_18845184) {
             continue;
         }
@@ -432,7 +432,7 @@ function private function_cea0c915(player, weapon) {
 // Checksum 0x7fe37564, Offset: 0x1f48
 // Size: 0xb8
 function function_da8e9c9b() {
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     self endon(#"death");
     while (isdefined(self)) {
         rand = randomintrange(0, 100);
@@ -452,7 +452,7 @@ function function_da8e9c9b() {
 // Size: 0x88
 function function_4ef3ec52() {
     self endon(#"death");
-    self waittill(#"hash_46cd614a");
+    self waittill(#"spinning_out");
     while (isdefined(self)) {
         self thread namespace_1a381543::function_90118d8c("zmb_dblshot_wingflap");
         self thread namespace_1a381543::function_90118d8c("zmb_dblshot_death");
@@ -470,7 +470,7 @@ function function_9d2031fa() {
     msg = self util::waittill_any_return("death", "disconnect", "chicken_disconnect_watch");
     foreach (chicken in self.doa.var_3cdd8203) {
         if (msg == "disconnect" || !(isdefined(chicken.special) && chicken.special)) {
-            chicken notify(#"hash_19b593a8");
+            chicken notify(#"spin_out");
         }
     }
 }
@@ -532,7 +532,7 @@ function function_bd97e9ba(player) {
 // Size: 0x1b2
 function function_c397fab3(player) {
     self endon(#"death");
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     while (true) {
         player waittill(#"player_died");
         /#
@@ -562,7 +562,7 @@ function function_c397fab3(player) {
 // Size: 0x3a0
 function function_cff32183(player) {
     self endon(#"death");
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     self.var_fe6ede28 = 0;
     self.var_5c667593 = 1;
     self thread function_c397fab3(player);
@@ -623,7 +623,7 @@ function function_cff32183(player) {
 // Size: 0x4b2
 function function_2d0f96ef(player) {
     self endon(#"death");
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     /#
         namespace_49107f3a::debugmsg("<dev string:x89>" + self getentitynumber());
     #/
@@ -683,7 +683,7 @@ function function_2d0f96ef(player) {
 // Size: 0x254
 function private function_5af02c44(target, num, offset) {
     self endon(#"death");
-    self endon(#"hash_46cd614a");
+    self endon(#"spinning_out");
     self.var_efa2b784 = 1;
     self.var_18845184 = 1;
     anim_ang = vectortoangles(target.origin - self.origin);

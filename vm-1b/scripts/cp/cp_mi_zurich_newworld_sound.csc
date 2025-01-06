@@ -1,5 +1,5 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace cp_mi_zurich_newworld_sound;
 
@@ -24,7 +24,7 @@ function security_det() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_security_detector", (-10363, -24283, 9450));
             break;
@@ -42,7 +42,7 @@ function function_cfd80c1b() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_train_horn_distant", (21054, -3421, -6031));
             break;
@@ -60,7 +60,7 @@ function train_horn_dist() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_train_horn_distant", (-13099, -18453, 10228));
             break;

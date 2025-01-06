@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace friendicons;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd33beb90, Offset: 0x160
 // Size: 0x24
 function __init__() {
@@ -21,7 +21,7 @@ function __init__() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56ace878, Offset: 0x190
 // Size: 0x136
 function init() {
@@ -43,7 +43,7 @@ function init() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5dcee5cd, Offset: 0x2d0
 // Size: 0x20
 function on_player_killed() {
@@ -52,7 +52,7 @@ function on_player_killed() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3cf82493, Offset: 0x2f8
 // Size: 0x24
 function on_player_spawned() {
@@ -61,7 +61,7 @@ function on_player_spawned() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa94cf75, Offset: 0x328
 // Size: 0x54
 function showfriendicon() {
@@ -73,7 +73,7 @@ function showfriendicon() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf5c97e9, Offset: 0x388
 // Size: 0x54
 function updatefriendiconsettings() {
@@ -85,7 +85,7 @@ function updatefriendiconsettings() {
 }
 
 // Namespace friendicons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x714bbaca, Offset: 0x3e8
 // Size: 0x1b0
 function updatefriendicons() {

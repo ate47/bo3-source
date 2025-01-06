@@ -1,8 +1,8 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #using_animtree("mp_autoturret");
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace autoturret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc95b1f34, Offset: 0x218
 // Size: 0x104
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace autoturret
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x56c9f524, Offset: 0x328
 // Size: 0xc4
 function turret_init_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -41,7 +41,7 @@ function turret_init_anim(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace autoturret
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9d508bd6, Offset: 0x3f8
 // Size: 0x9c
 function turret_open(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -53,7 +53,7 @@ function turret_open(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace autoturret
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa01ff616, Offset: 0x4a0
 // Size: 0x9c
 function turret_close_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

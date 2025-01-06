@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_eye_candy;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a707045, Offset: 0x458
 // Size: 0x334
 function __init__() {
@@ -47,7 +47,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x84ac0683, Offset: 0x798
 // Size: 0x94
 function function_7021da92(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -60,7 +60,7 @@ function function_7021da92(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd4bee5d, Offset: 0x838
 // Size: 0xfa
 function function_a358ec33(localclientnum) {
@@ -73,7 +73,7 @@ function function_a358ec33(localclientnum) {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb88f3161, Offset: 0x940
 // Size: 0xea
 function function_c1a20a24(localclientnum) {
@@ -87,7 +87,7 @@ function function_c1a20a24(localclientnum) {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x722d2435, Offset: 0xa38
 // Size: 0x124
 function function_697cc62(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -107,7 +107,7 @@ function function_697cc62(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x743fdb2f, Offset: 0xb68
 // Size: 0xac
 function function_56029f33(localclientnum, b_enabled, var_73021e86) {

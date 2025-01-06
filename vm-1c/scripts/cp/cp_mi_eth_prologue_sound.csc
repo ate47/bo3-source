@@ -1,10 +1,10 @@
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
 
 #namespace cp_mi_eth_prologue_sound;
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28a3cb86, Offset: 0x218
 // Size: 0xf4
 function main() {
@@ -21,7 +21,7 @@ function main() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcbbbe1a0, Offset: 0x318
 // Size: 0xa4
 function function_4b8b96fe() {
@@ -32,7 +32,7 @@ function function_4b8b96fe() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x94cfb865, Offset: 0x3c8
 // Size: 0x114
 function function_aca4761() {
@@ -40,14 +40,14 @@ function function_aca4761() {
     level audio::playloopat("evt_firehose", (581, -857, -126));
     level waittill(#"sndCloseFT");
     level audio::playloopat("amb_firetruck_close_alarm", (-169, -585, -95));
-    level waittill(#"hash_da4c530f");
+    level waittill(#"sndStopFiretruck");
     level audio::stoploopat("amb_firetruck_distant_alarm", (-1287, -1872, 535));
     level audio::stoploopat("amb_firetruck_close_alarm", (-169, -585, -95));
     level audio::stoploopat("evt_firehose", (-169, -585, -95));
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdaf665e6, Offset: 0x4e8
 // Size: 0x54
 function function_669e0ca5() {
@@ -56,7 +56,7 @@ function function_669e0ca5() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2173ca22, Offset: 0x548
 // Size: 0x2c
 function function_6ce0e63() {
@@ -75,7 +75,7 @@ function function_eddf6028() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x5e0
 // Size: 0x4
 function function_35acdae6() {
@@ -83,7 +83,7 @@ function function_35acdae6() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6ea67287, Offset: 0x5f0
 // Size: 0xfc
 function function_9806d032() {
@@ -105,7 +105,7 @@ function function_9806d032() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x682ab48b, Offset: 0x6f8
 // Size: 0x4c
 function function_ab91e7b9(location) {
@@ -114,7 +114,7 @@ function function_ab91e7b9(location) {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9cb278cc, Offset: 0x750
 // Size: 0x74
 function function_c943c5e5() {
@@ -126,7 +126,7 @@ function function_c943c5e5() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56a57403, Offset: 0x7d0
 // Size: 0x74
 function function_7ec0e1ae() {
@@ -138,7 +138,7 @@ function function_7ec0e1ae() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa8ca2e, Offset: 0x850
 // Size: 0x64
 function function_eb4e50fb() {
@@ -149,7 +149,7 @@ function function_eb4e50fb() {
 }
 
 // Namespace cp_mi_eth_prologue_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda0c9e29, Offset: 0x8c0
 // Size: 0x294
 function function_889a9ace() {

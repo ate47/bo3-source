@@ -1,31 +1,31 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_bb;
-#using scripts/cp/_scoreevents;
-#using scripts/cp/_friendlyfire;
 #using scripts/cp/_challenges;
-#using scripts/shared/_burnplayer;
-#using scripts/cp/gametypes/_weapons;
-#using scripts/cp/gametypes/_globallogic_utils;
-#using scripts/cp/gametypes/_globallogic_score;
-#using scripts/cp/gametypes/_globallogic_player;
-#using scripts/cp/gametypes/_globallogic;
+#using scripts/cp/_friendlyfire;
+#using scripts/cp/_scoreevents;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/ai/systems/gib;
+#using scripts/cp/gametypes/_globallogic;
+#using scripts/cp/gametypes/_globallogic_player;
+#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/cp/gametypes/_globallogic_utils;
+#using scripts/cp/gametypes/_weapons;
+#using scripts/shared/_burnplayer;
 #using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/systems/shared;
 #using scripts/shared/ammo_shared;
-#using scripts/shared/weapons/_weapon_utils;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/challenges_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/weapons/_weapon_utils;
+#using scripts/shared/weapons_shared;
 
 #namespace globallogic_actor;
 
 // Namespace globallogic_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x438ffa1b, Offset: 0x4c0
 // Size: 0x54
 function callback_actorspawned(spawner) {
@@ -35,7 +35,7 @@ function callback_actorspawned(spawner) {
 }
 
 // Namespace globallogic_actor
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0xd82bb613, Offset: 0x520
 // Size: 0xb24
 function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, modelindex, surfacetype, surfacenormal) {
@@ -173,7 +173,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
 }
 
 // Namespace globallogic_actor
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x6e40b69d, Offset: 0x1050
 // Size: 0x5dc
 function callback_actorkilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -194,7 +194,7 @@ function callback_actorkilled(einflictor, eattacker, idamage, smeansofdeath, wea
         smeansofdeath = "MOD_HEAD_SHOT";
     }
     if (isdefined(eattacker) && isplayer(eattacker)) {
-        eattacker notify(#"hash_c56ba9f7", self, smeansofdeath, weapon);
+        eattacker notify(#"killed_ai", self, smeansofdeath, weapon);
         globallogic_score::inctotalkills(eattacker.team);
         eattacker thread globallogic_score::givekillstats(smeansofdeath, weapon, self);
         if (smeansofdeath == "MOD_MELEE" || smeansofdeath == "MOD_MELEE_ASSASSINATE" || smeansofdeath == "MOD_MELEE_WEAPON_BUTT") {
@@ -241,7 +241,7 @@ function callback_actorkilled(einflictor, eattacker, idamage, smeansofdeath, wea
 }
 
 // Namespace globallogic_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3000d06e, Offset: 0x1638
 // Size: 0x3c
 function callback_actorcloned(original) {
@@ -250,7 +250,7 @@ function callback_actorcloned(original) {
 }
 
 // Namespace globallogic_actor
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xafc071f5, Offset: 0x1680
 // Size: 0x164
 function function_64fed33(einflictor, eattacker, weapon, lpattackteam) {

@@ -1,22 +1,22 @@
-#using scripts/shared/vehicles/_raps;
-#using scripts/shared/drown;
-#using scripts/shared/player_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/doors_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/debug_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/debug_shared;
+#using scripts/shared/doors_shared;
+#using scripts/shared/drown;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_raps;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace load;
 
@@ -39,7 +39,7 @@ function autoexec first_frame() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5398dec, Offset: 0x708
 // Size: 0x3c4
 function __init__() {
@@ -87,7 +87,7 @@ function __init__() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ed8d3f1, Offset: 0xad8
 // Size: 0x64
 function function_b018f2a7() {
@@ -98,7 +98,7 @@ function function_b018f2a7() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba8c27c7, Offset: 0xb48
 // Size: 0x38
 function count_network_frames() {
@@ -110,7 +110,7 @@ function count_network_frames() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b6582a7, Offset: 0xb88
 // Size: 0x24
 function keep_time() {
@@ -136,7 +136,7 @@ function keep_time() {
     }
 
     // Namespace load
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdec56495, Offset: 0xc40
     // Size: 0xfc
     function function_bce02ad1() {
@@ -150,7 +150,7 @@ function keep_time() {
     }
 
     // Namespace load
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x362b6a9d, Offset: 0xd48
     // Size: 0x110
     function level_notify_listener() {
@@ -172,7 +172,7 @@ function keep_time() {
     }
 
     // Namespace load
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8820c67, Offset: 0xe60
     // Size: 0x88
     function client_notify_listener() {
@@ -187,7 +187,7 @@ function keep_time() {
     }
 
     // Namespace load
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3c5e9af4, Offset: 0xef0
     // Size: 0x40
     function load_checkpoint_on_notify() {
@@ -199,7 +199,7 @@ function keep_time() {
     }
 
     // Namespace load
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x59e2e37e, Offset: 0xf38
     // Size: 0x30
     function save_checkpoint_on_notify() {
@@ -212,7 +212,7 @@ function keep_time() {
 #/
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xddaaca7c, Offset: 0xf70
 // Size: 0x23e
 function weapon_ammo() {
@@ -246,7 +246,7 @@ function weapon_ammo() {
 }
 
 // Namespace load
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d039a56, Offset: 0x11b8
 // Size: 0x74
 function badplace_think(badplace) {
@@ -258,12 +258,12 @@ function badplace_think(badplace) {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1b47364c, Offset: 0x1238
 // Size: 0x58
 function playerdamagerumble() {
     while (true) {
-        amount = self waittill(#"damage");
+        self waittill(#"damage", amount);
         if (isdefined(self.specialdamage)) {
             continue;
         }
@@ -272,7 +272,7 @@ function playerdamagerumble() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec502c05, Offset: 0x1298
 // Size: 0x74
 function map_is_early_in_the_game() {
@@ -290,7 +290,7 @@ function map_is_early_in_the_game() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x77c3f75a, Offset: 0x1318
 // Size: 0x88
 function player_throwgrenade_timer() {
@@ -318,7 +318,7 @@ function function_cebdcdf7() {
     if (issplitscreen() || util::coopgame()) {
         return;
     }
-    attacker, cause, weapon, var_75db6cbf = self waittill(#"death");
+    self waittill(#"death", attacker, cause, weapon, var_75db6cbf);
     if (cause != "MOD_GAS" && cause != "MOD_GRENADE" && cause != "MOD_GRENADE_SPLASH" && cause != "MOD_SUICIDE" && cause != "MOD_EXPLOSIVE" && cause != "MOD_PROJECTILE" && cause != "MOD_PROJECTILE_SPLASH") {
         return;
     }
@@ -409,7 +409,7 @@ function function_fed824a2(var_a211332b, var_3009c3f0) {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5bb0eba9, Offset: 0x1a38
 // Size: 0x284
 function function_49fc0e66() {
@@ -445,7 +445,7 @@ function function_49fc0e66() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b0c41cb, Offset: 0x1cc8
 // Size: 0x284
 function function_f67aaa2d() {
@@ -553,7 +553,7 @@ function function_a2ec9313() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49103b34, Offset: 0x2478
 // Size: 0x17c
 function function_8229d210() {
@@ -577,7 +577,7 @@ function function_8229d210() {
 }
 
 // Namespace load
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x23c483ff, Offset: 0x2600
 // Size: 0x5c
 function function_69110cf3(var_10b2f152, var_ad2b839c) {
@@ -588,7 +588,7 @@ function function_69110cf3(var_10b2f152, var_ad2b839c) {
 }
 
 // Namespace load
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xf8f3d539, Offset: 0x2668
 // Size: 0x1c4
 function function_e152ebb3(shader, iwidth, var_40c0cdd3, fdelay, x, y) {
@@ -621,7 +621,7 @@ function function_e152ebb3(shader, iwidth, var_40c0cdd3, fdelay, x, y) {
 }
 
 // Namespace load
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee24e4c9, Offset: 0x2838
 // Size: 0x3c
 function function_90e3bbdb(overlay) {
@@ -631,7 +631,7 @@ function function_90e3bbdb(overlay) {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbfb5c250, Offset: 0x2880
 // Size: 0x448
 function water_think() {
@@ -653,7 +653,7 @@ function water_think() {
                 players[i] allowstand(1);
             }
         }
-        other = self waittill(#"trigger");
+        self waittill(#"trigger", other);
         if (!isplayer(other)) {
             continue;
         }
@@ -752,7 +752,7 @@ function calculate_map_center() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b709e43, Offset: 0x3008
 // Size: 0x94
 function set_objective_text_colors() {
@@ -809,7 +809,7 @@ function set_fog_progress(progress) {
 #/
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x45af9438, Offset: 0x3300
 // Size: 0x15c
 function all_players_spawned() {
@@ -840,7 +840,7 @@ function all_players_spawned() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x875110ec, Offset: 0x3468
 // Size: 0x1e0
 function shock_onpain() {
@@ -852,7 +852,7 @@ function shock_onpain() {
     }
     while (true) {
         oldhealth = self.health;
-        damage, attacker, direction_vec, point, mod = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, mod);
         if (isdefined(level.shock_onpain) && !level.shock_onpain) {
             continue;
         }
@@ -876,7 +876,7 @@ function shock_onpain() {
 }
 
 // Namespace load
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x80405272, Offset: 0x3650
 // Size: 0xc2
 function shock_onexplosion(damage) {
@@ -897,7 +897,7 @@ function shock_onexplosion(damage) {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xabb7bf06, Offset: 0x3720
 // Size: 0x7a
 function shock_ondeath() {
@@ -917,7 +917,7 @@ function shock_ondeath() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcab53541, Offset: 0x37a8
 // Size: 0x80
 function on_spawned() {
@@ -934,7 +934,7 @@ function on_spawned() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa913f354, Offset: 0x3830
 // Size: 0xfa
 function link_ents() {
@@ -950,7 +950,7 @@ function link_ents() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4fe714b4, Offset: 0x3938
 // Size: 0x242
 function art_review() {

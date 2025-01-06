@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/aat_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_aat_dead_wire;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_dead_wire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b92a17, Offset: 0x1c0
 // Size: 0xfe
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_dead_wire
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbd3e1b38, Offset: 0x2c8
 // Size: 0xae
 function function_522b211a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -42,7 +42,7 @@ function function_522b211a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_aat_dead_wire
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2930a5a2, Offset: 0x380
 // Size: 0xfe
 function function_f1245d3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,29 +1,29 @@
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_flood;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
 #using scripts/cp/_hazard;
 #using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_flood;
+#using scripts/cp/cp_mi_sing_sgen_util;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_sing_sgen_uw_battle;
 
 // Namespace cp_mi_sing_sgen_uw_battle
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf95c4d8a, Offset: 0x570
 // Size: 0x2c4
 function function_297ca3c6(str_objective, var_74cd64bc) {
@@ -57,7 +57,7 @@ function function_297ca3c6(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_sgen_uw_battle
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xfb8219ce, Offset: 0x840
 // Size: 0x24
 function function_ceb4ae50(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -65,7 +65,7 @@ function function_ceb4ae50(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 }
 
 // Namespace cp_mi_sing_sgen_uw_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59b45a80, Offset: 0x870
 // Size: 0x134
 function function_dbfa8dae() {
@@ -84,7 +84,7 @@ function function_dbfa8dae() {
 }
 
 // Namespace cp_mi_sing_sgen_uw_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5408ce87, Offset: 0x9b0
 // Size: 0xd4
 function function_b980dc78() {
@@ -98,7 +98,7 @@ function function_b980dc78() {
 }
 
 // Namespace cp_mi_sing_sgen_uw_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x889a9052, Offset: 0xa90
 // Size: 0x18c
 function function_48cb67f6() {
@@ -114,7 +114,7 @@ function function_48cb67f6() {
 }
 
 // Namespace cp_mi_sing_sgen_uw_battle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b6a0997, Offset: 0xc28
 // Size: 0x9a
 function function_77b723a3() {

@@ -1,18 +1,18 @@
-#using scripts/mp/mp_nuketown_x_sound;
-#using scripts/mp/mp_nuketown_x_fx;
-#using scripts/mp/_nuketown_mannequin;
-#using scripts/mp/_destructible;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/lui_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/compass;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_destructible;
+#using scripts/mp/_load;
+#using scripts/mp/_nuketown_mannequin;
+#using scripts/mp/_util;
+#using scripts/mp/mp_nuketown_x_fx;
+#using scripts/mp/mp_nuketown_x_sound;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/compass;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace mp_nuketown_x;
 

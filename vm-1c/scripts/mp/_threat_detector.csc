@@ -1,11 +1,11 @@
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_decoy;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_decoy;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace threat_detector;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace threat_detector
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x557bb153, Offset: 0x238
 // Size: 0x64
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace threat_detector
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x40232c5, Offset: 0x2a8
 // Size: 0x1cc
 function function_82ee334b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -51,7 +51,7 @@ function function_82ee334b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace threat_detector
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb00a786c, Offset: 0x480
 // Size: 0x21c
 function function_aa1a4765(var_f0a669b2, var_f8f606cd, localclientnum) {
@@ -81,7 +81,7 @@ function function_aa1a4765(var_f0a669b2, var_f8f606cd, localclientnum) {
 }
 
 // Namespace threat_detector
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x88204c4f, Offset: 0x6a8
 // Size: 0x1aa
 function function_8490a224(var_f0a669b2, var_f8f606cd, localclientnum) {

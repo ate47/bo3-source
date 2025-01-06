@@ -1,33 +1,33 @@
-#using scripts/cp/_load;
-#using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/cp/cp_mi_sing_vengeance_sound;
-#using scripts/cp/cp_mi_sing_vengeance_market;
+#using scripts/codescripts/struct;
 #using scripts/cp/_debug;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/stealth;
 #using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
+#using scripts/cp/_load;
 #using scripts/cp/_objectives;
-#using scripts/cp/_util;
+#using scripts/cp/_skipto;
 #using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_vengeance_market;
+#using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/cp/cp_mi_sing_vengeance_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
 #using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/gameobjects_shared;
-#using scripts/shared/turret_shared;
 #using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/trigger_shared;
 #using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
 #using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_ce9d9fc1;
 
@@ -273,7 +273,7 @@ function function_be8594ba() {
 // Params 5, eflags: 0x0
 // Checksum 0xd212b3cc, Offset: 0x1bd8
 // Size: 0xd6
-function function_2196c10e(scriptbundle, var_2d7613bb, trigger, delay, var_199e0d00) {
+function function_2196c10e(scriptbundle, var_2d7613bb, trigger, delay, end_notify) {
     assert(isdefined(scriptbundle), "<dev string:x28>");
     if (isdefined(var_2d7613bb)) {
         var_5b01a37b = struct::get(var_2d7613bb, "targetname");
@@ -289,8 +289,8 @@ function function_2196c10e(scriptbundle, var_2d7613bb, trigger, delay, var_199e0
     } else {
         level scene::play(scriptbundle);
     }
-    if (isdefined(var_199e0d00)) {
-        level notify(var_199e0d00);
+    if (isdefined(end_notify)) {
+        level notify(end_notify);
     }
 }
 
@@ -340,14 +340,14 @@ function function_422af9d() {
 // Size: 0x16a
 function function_c50ccfbd() {
     wait 1;
-    level thread function_2d58165a();
+    level thread big_shake();
     wait 3;
     level thread function_d39f39b7();
     trigger::wait_till("shake_stairwell", "targetname");
     thread cp_mi_sing_vengeance_sound::function_c4ece2ab();
     level util::clientnotify("start_debris_fall");
     level notify(#"hash_9bd485a5");
-    level thread function_2d58165a();
+    level thread big_shake();
     wait 1.5;
     var_136e3a27 = getentarray("sh_stairs_glass_remove", "targetname");
     array::delete_all(var_136e3a27);
@@ -357,7 +357,7 @@ function function_c50ccfbd() {
     level thread function_d39f39b7();
     trigger::wait_till("shake_ready_room", "targetname");
     level notify(#"hash_9bd485a5");
-    level thread function_2d58165a();
+    level thread big_shake();
     wait 3;
     level thread function_d39f39b7();
 }
@@ -384,7 +384,7 @@ function function_d39f39b7() {
 // Params 0, eflags: 0x0
 // Checksum 0x9ec88173, Offset: 0x2088
 // Size: 0xdb
-function function_2d58165a() {
+function big_shake() {
     var_ab2048f4 = randomfloatrange(4, 5);
     var_68397497 = 4.5;
     foreach (e_player in level.activeplayers) {

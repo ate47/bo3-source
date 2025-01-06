@@ -1,10 +1,10 @@
-#using scripts/mp/_util;
-#using scripts/shared/weapons/_tacticalinsertion;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_tacticalinsertion;
 
 #namespace tacticalinsertion;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace tacticalinsertion
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdb1e9492, Offset: 0x1b0
 // Size: 0x14
 function __init__() {

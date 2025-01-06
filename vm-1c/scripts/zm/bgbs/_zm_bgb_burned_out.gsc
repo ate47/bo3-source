@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_burned_out;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_burned_out
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x867604fe, Offset: 0x2a0
 // Size: 0x154
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_burned_out
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46f389b1, Offset: 0x400
 // Size: 0x150
 function event() {
@@ -44,7 +44,7 @@ function event() {
     var_63a08f52 = 0;
     self thread bgb::set_timer(2, 2);
     for (;;) {
-        amount, attacker, direction_vec, point, type = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, direction_vec, point, type);
         if ("MOD_MELEE" != type || !isai(attacker)) {
             continue;
         }
@@ -61,7 +61,7 @@ function event() {
 }
 
 // Namespace zm_bgb_burned_out
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3104a3f, Offset: 0x558
 // Size: 0x326
 function result() {

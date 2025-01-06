@@ -3,7 +3,7 @@
 #namespace cp_mi_eth_prologue_fx;
 
 // Namespace cp_mi_eth_prologue_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbbbe6f0c, Offset: 0x2d0
 // Size: 0x136
 function main() {

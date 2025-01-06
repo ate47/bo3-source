@@ -1,13 +1,13 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace flashgrenades;
 
 // Namespace flashgrenades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8fafa1f, Offset: 0x180
 // Size: 0x54
 function init_shared() {
@@ -18,7 +18,7 @@ function init_shared() {
 }
 
 // Namespace flashgrenades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xff5c74e, Offset: 0x1e0
 // Size: 0x80
 function flashrumbleloop(duration) {
@@ -33,10 +33,10 @@ function flashrumbleloop(duration) {
 }
 
 // Namespace flashgrenades
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xefab220d, Offset: 0x268
 // Size: 0x3e4
-function function_8e149bc3(amount_distance, var_b5b15795, attacker, var_b4b1c76e) {
+function function_8e149bc3(amount_distance, amount_angle, attacker, var_b4b1c76e) {
     hurtattacker = 0;
     hurtvictim = 1;
     duration = amount_distance * 3.5;
@@ -95,7 +95,7 @@ function function_8e149bc3(amount_distance, var_b5b15795, attacker, var_b4b1c76e
 }
 
 // Namespace flashgrenades
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f99d114, Offset: 0x658
 // Size: 0xa0
 function monitorflash() {
@@ -103,11 +103,11 @@ function monitorflash() {
     self endon(#"hash_15683a6d");
     self.flashendtime = 0;
     while (true) {
-        amount_distance, var_b5b15795, attacker = self waittill(#"flashbang");
+        self waittill(#"flashbang", amount_distance, amount_angle, attacker);
         if (!isalive(self)) {
             continue;
         }
-        self function_8e149bc3(amount_distance, var_b5b15795, attacker, 1);
+        self function_8e149bc3(amount_distance, amount_angle, attacker, 1);
     }
 }
 
@@ -119,17 +119,17 @@ function function_de4f854a() {
     self endon(#"death");
     self.flashendtime = 0;
     while (true) {
-        amount_distance, var_b5b15795, attacker = self waittill(#"flashbang");
+        self waittill(#"flashbang", amount_distance, amount_angle, attacker);
         driver = self getseatoccupant(0);
         if (!isdefined(driver) || !isalive(driver)) {
             continue;
         }
-        driver function_8e149bc3(amount_distance, var_b5b15795, attacker, 0);
+        driver function_8e149bc3(amount_distance, amount_angle, attacker, 0);
     }
 }
 
 // Namespace flashgrenades
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x5e910e82, Offset: 0x7d0
 // Size: 0x14e
 function applyflash(duration, rumbleduration, attacker) {
@@ -156,7 +156,7 @@ function applyflash(duration, rumbleduration, attacker) {
 }
 
 // Namespace flashgrenades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb469a9ee, Offset: 0x928
 // Size: 0x154
 function function_125a6838(duration) {
@@ -179,7 +179,7 @@ function function_125a6838(duration) {
 }
 
 // Namespace flashgrenades
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d8194b, Offset: 0xa88
 // Size: 0x3c
 function deleteentonownerdeath(owner) {

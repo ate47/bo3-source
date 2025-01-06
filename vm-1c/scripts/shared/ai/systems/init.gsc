@@ -1,17 +1,17 @@
-#using scripts/shared/ai/systems/weaponlist;
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/shared;
 #using scripts/shared/ai/systems/debug;
-#using scripts/shared/util_shared;
-#using scripts/shared/name_shared;
+#using scripts/shared/ai/systems/shared;
+#using scripts/shared/ai/systems/weaponlist;
 #using scripts/shared/gameskill_shared;
+#using scripts/shared/name_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("generic");
 
 #namespace init;
 
 // Namespace init
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x49bea41e, Offset: 0x238
 // Size: 0xe8
 function initweapon(weapon) {
@@ -26,7 +26,7 @@ function initweapon(weapon) {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e702d00, Offset: 0x328
 // Size: 0x564
 function main() {
@@ -214,7 +214,7 @@ function gettranssplittime(approachtype, dir) {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa42ba06f, Offset: 0xdd8
 // Size: 0x16c
 function firstinit() {
@@ -249,7 +249,7 @@ function onplayerconnect() {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd36ab55d, Offset: 0xf90
 // Size: 0x156
 function setnextplayergrenadetime() {
@@ -273,7 +273,7 @@ function setnextplayergrenadetime() {
 }
 
 // Namespace init
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x320caed, Offset: 0x10f0
 // Size: 0xc4
 function addtomissiles(grenade) {
@@ -293,7 +293,7 @@ function addtomissiles(grenade) {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e31397b, Offset: 0x11c0
 // Size: 0xb8
 function function_b44e1bfd() {
@@ -304,7 +304,7 @@ function function_b44e1bfd() {
     self thread function_48cec971();
     self thread function_a86baa0f();
     for (;;) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         grenade.owner = self;
         grenade.weapon = weapon;
         level thread addtomissiles(grenade);
@@ -312,13 +312,13 @@ function function_b44e1bfd() {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcad206b4, Offset: 0x1280
 // Size: 0x78
 function function_48cec971() {
     self endon(#"death");
     for (;;) {
-        grenade, weapon = self waittill(#"grenade_launcher_fire");
+        self waittill(#"grenade_launcher_fire", grenade, weapon);
         grenade.owner = self;
         grenade.weapon = weapon;
         level thread addtomissiles(grenade);
@@ -326,13 +326,13 @@ function function_48cec971() {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8657850, Offset: 0x1300
 // Size: 0x78
 function function_a86baa0f() {
     self endon(#"death");
     for (;;) {
-        grenade, weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", grenade, weapon);
         grenade.owner = self;
         grenade.weapon = weapon;
         level thread addtomissiles(grenade);
@@ -340,19 +340,19 @@ function function_a86baa0f() {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x623988c7, Offset: 0x1380
 // Size: 0x50
 function begingrenadetracking() {
     self endon(#"death");
     for (;;) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         grenade thread grenade_earthquake();
     }
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x653fca96, Offset: 0x13d8
 // Size: 0x1e
 function endondeath() {
@@ -362,19 +362,19 @@ function endondeath() {
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56af4433, Offset: 0x1400
 // Size: 0x84
 function grenade_earthquake() {
     self thread endondeath();
     self endon(#"end_explode");
-    position = self waittill(#"explode");
+    self waittill(#"explode", position);
     playrumbleonposition("grenade_rumble", position);
     earthquake(0.3, 0.5, position, 400);
 }
 
 // Namespace init
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1490
 // Size: 0x4
 function end_script() {

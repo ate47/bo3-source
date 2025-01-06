@@ -1,6 +1,6 @@
 #using scripts/shared/callbacks_shared;
-#using scripts/shared/filter_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
 #using scripts/shared/system_shared;
 
 #namespace oob;
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace oob
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x62af9bde, Offset: 0x1b8
 // Size: 0x144
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace oob
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6d22b931, Offset: 0x308
 // Size: 0x6c
 function on_localplayer_connect(localclientnum) {
@@ -45,7 +45,7 @@ function on_localplayer_connect(localclientnum) {
 }
 
 // Namespace oob
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa06fb2af, Offset: 0x380
 // Size: 0x3c
 function on_localplayer_spawned(localclientnum) {
@@ -54,7 +54,7 @@ function on_localplayer_spawned(localclientnum) {
 }
 
 // Namespace oob
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbd01f527, Offset: 0x3c8
 // Size: 0x44
 function on_localplayer_shutdown(localclientnum) {
@@ -65,7 +65,7 @@ function on_localplayer_shutdown(localclientnum) {
 }
 
 // Namespace oob
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfe4045da, Offset: 0x418
 // Size: 0x33c
 function onoutofboundschange(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -106,7 +106,7 @@ function onoutofboundschange(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace oob
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb0c56ca4, Offset: 0x760
 // Size: 0xfe
 function stopoutofboundseffects(localclientnum, localplayer) {
@@ -124,7 +124,7 @@ function stopoutofboundseffects(localclientnum, localplayer) {
 }
 
 // Namespace oob
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xce4ef0f2, Offset: 0x868
 // Size: 0x4a
 function getoobuimodel(localclientnum) {

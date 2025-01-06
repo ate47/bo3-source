@@ -1,35 +1,35 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_vengeance_accolades;
 #using scripts/cp/cp_mi_sing_vengeance_market;
 #using scripts/cp/cp_mi_sing_vengeance_sound;
 #using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/cp/_load;
-#using scripts/cp/_debug;
-#using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/stealth;
-#using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
 #using scripts/shared/exploder_shared;
-#using scripts/shared/turret_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/trigger_shared;
 #using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
 #using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace namespace_22334037;
 
@@ -650,7 +650,7 @@ function function_a28bf30a(technical, flag) {
     if (var_f1709cab == 1) {
         level flag::set(flag);
     } else {
-        player, seat = technical waittill(#"enter_vehicle");
+        technical waittill(#"enter_vehicle", player, seat);
         level flag::set(flag);
     }
     level notify(#"technical_used");
@@ -708,7 +708,7 @@ function garage_damage_trigger() {
     var_ec523dd5 = getent(self.target, "targetname");
     var_83442ffa = getentarray(self.script_noteworthy, "targetname");
     var_7d044b82 = struct::get(var_ec523dd5.target, "targetname");
-    e_other = self waittill(#"trigger");
+    self waittill(#"trigger", e_other);
     playsoundatposition("evt_garage_debris", self.origin);
     exploder::exploder(self.script_noteworthy);
     foreach (e_damage in var_83442ffa) {

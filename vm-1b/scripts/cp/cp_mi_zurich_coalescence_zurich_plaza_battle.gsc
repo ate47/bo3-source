@@ -1,36 +1,36 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_quadtank_util;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_zurich_coalescence_sound;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
-#using scripts/cp/cp_mi_zurich_coalescence_zurich_hq;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_city;
+#using scripts/cp/cp_mi_zurich_coalescence_zurich_hq;
+#using scripts/cp/gametypes/_battlechatter;
 #using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/coop;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_quadtank_util;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_debug;
 #using scripts/shared/_oob;
-#using scripts/shared/vehicles/_siegebot;
-#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/vehicles/_siegebot;
 
 #namespace namespace_ca56958;
 
@@ -222,7 +222,7 @@ function function_e204c270() {
     self endon(#"hash_1f15947d");
     level endon(#"plaza_battle_cleared");
     do {
-        var_81ad4fd7 = self waittill(#"weapon_change_complete");
+        self waittill(#"weapon_change_complete", var_81ad4fd7);
     } while (!(isdefined(var_81ad4fd7.isheroweapon) && var_81ad4fd7.isheroweapon));
     self waittill(#"weapon_change_complete");
     while (!(isdefined(self.var_a2168b36) && self.var_a2168b36)) {
@@ -242,7 +242,7 @@ function function_2df89aaf() {
     self endon(#"hash_1f15947d");
     level endon(#"plaza_battle_cleared");
     while (!(isdefined(self.var_a2168b36) && self.var_a2168b36)) {
-        var_81ad4fd7 = self waittill(#"weapon_change_complete");
+        self waittill(#"weapon_change_complete", var_81ad4fd7);
         if (isdefined(var_81ad4fd7.isheroweapon) && var_81ad4fd7.isheroweapon) {
             self.var_a2168b36 = 1;
             self notify(#"hash_1f15947d");
@@ -926,7 +926,7 @@ function function_b8380f70() {
 function function_fbbb5f09() {
     self endon(#"death");
     while (true) {
-        n_damage, e_attacker, _, _, str_damage_type = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker, _, _, str_damage_type);
         self.health = self.health + n_damage;
         var_a4a673a9 = str_damage_type == "MOD_PROJECTILE" || str_damage_type === "MOD_EXPLOSIVE";
         if (isplayer(e_attacker) && var_a4a673a9) {
@@ -1557,7 +1557,7 @@ function function_7d540ef1() {
     self endon(#"death");
     var_b711578c = getweapon("quadtank_main_turret_rocketpods_javelin");
     while (true) {
-        e_projectile = self waittill(#"weapon_fired");
+        self waittill(#"weapon_fired", e_projectile);
         if (var_b711578c === e_projectile.item) {
             e_projectile thread javelin_think();
         }
@@ -1877,8 +1877,8 @@ function function_baaaa286() {
     var_8ba55d7b = spawn_manager::function_423eae50("plaza_battle_boss_wasp_spawn_manager");
     var_b3b33e02 = arraycombine(var_b3b33e02, var_8ba55d7b, 0, 0);
     foreach (var_aaefedf3 in var_b3b33e02) {
-        if (!(isdefined(var_aaefedf3.var_56c95748) && var_aaefedf3.var_56c95748)) {
-            var_aaefedf3.var_56c95748 = 1;
+        if (!(isdefined(var_aaefedf3.is_attacking) && var_aaefedf3.is_attacking)) {
+            var_aaefedf3.is_attacking = 1;
             if (!isdefined(self.var_439c885e)) {
                 return;
             }
@@ -2003,7 +2003,7 @@ function function_a2b45d70() {
     var_b711578c = getweapon("quadtank_main_turret_rocketpods_javelin");
     level flag::wait_till("plaza_battle_train_exit_reached");
     while (true) {
-        _, _, _, _, _, _, _, _, var_e285ce7a = self waittill(#"damage");
+        self waittill(#"damage", _, _, _, _, _, _, _, _, var_e285ce7a);
         if (var_e285ce7a === var_b711578c) {
             radiusdamage(self.origin, 64, 1200, 1100, self);
             self delete();

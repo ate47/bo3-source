@@ -1,18 +1,18 @@
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_amb;
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0a1cd81, Offset: 0x348
 // Size: 0xbc
 function main() {
@@ -27,7 +27,7 @@ function main() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89d2d487, Offset: 0x410
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -56,7 +56,7 @@ function startzmbspawnersoundloops() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc55634, Offset: 0x578
 // Size: 0x16c
 function soundloopthink() {
@@ -93,7 +93,7 @@ function soundloopthink() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6172f94, Offset: 0x6f0
 // Size: 0xa4
 function function_bab3ea62() {
@@ -106,12 +106,12 @@ function function_bab3ea62() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xed5900c3, Offset: 0x7a0
 // Size: 0xc4
 function sndMusicTrig() {
     while (true) {
-        trigplayer = self waittill(#"trigger");
+        self waittill(#"trigger", trigplayer);
         if (trigplayer islocalplayer()) {
             if (self.script_sound == "pavlov") {
                 level notify(#"hash_51d7bc7c", level.var_98f2b64e);
@@ -128,7 +128,7 @@ function sndMusicTrig() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7aa98ef6, Offset: 0x870
 // Size: 0xf8
 function function_53b9afad() {
@@ -137,7 +137,7 @@ function function_53b9afad() {
     level.var_eb526c90 = spawn(0, (0, 0, 0), "script_origin");
     level.var_9433cf5a = level.var_eb526c90 playloopsound(level.var_b6342abd, 2);
     while (true) {
-        location = level waittill(#"hash_51d7bc7c");
+        level waittill(#"hash_51d7bc7c", location);
         level.var_6d9d81aa = "mus_stalingrad_underscore_" + location;
         if (level.var_6d9d81aa != level.var_b6342abd) {
             level thread function_51d7bc7c(level.var_6d9d81aa);
@@ -147,7 +147,7 @@ function function_53b9afad() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x72365af7, Offset: 0x970
 // Size: 0x64
 function function_51d7bc7c(var_6d9d81aa) {
@@ -158,12 +158,12 @@ function function_51d7bc7c(var_6d9d81aa) {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78556f5d, Offset: 0x9e0
 // Size: 0x92
 function function_8620d917() {
     while (true) {
-        level waittill(#"hash_8874917e");
+        level waittill(#"sndPD");
         if (level.var_98f2b64e == "pavlov") {
             level.var_98f2b64e = "pavlov_defend";
         } else {
@@ -181,7 +181,7 @@ function function_8620d917() {
 // Size: 0x92
 function function_a2a905a5() {
     while (true) {
-        level waittill(#"hash_c9bd87a8");
+        level waittill(#"sndEED");
         if (level.var_98f2b64e == "pavlov" || level.var_98f2b64e == "pavlov_defend") {
             level.var_98f2b64e = "pavlov_ee_koth";
         }
@@ -192,7 +192,7 @@ function function_a2a905a5() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xae4659f4, Offset: 0xb20
 // Size: 0x50
 function function_b21d9845() {
@@ -203,7 +203,7 @@ function function_b21d9845() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71f66d34, Offset: 0xb78
 // Size: 0x7c
 function function_d4a3f122() {
@@ -213,7 +213,7 @@ function function_d4a3f122() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf600dd06, Offset: 0xc00
 // Size: 0x50
 function function_daa9b420() {
@@ -224,7 +224,7 @@ function function_daa9b420() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdad07f90, Offset: 0xc58
 // Size: 0xa0
 function function_75cde2e7() {
@@ -237,7 +237,7 @@ function function_75cde2e7() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89a7976e, Offset: 0xd00
 // Size: 0x94
 function function_157aa38() {
@@ -249,7 +249,7 @@ function function_157aa38() {
 }
 
 // Namespace zm_stalingrad_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaaf6b4f3, Offset: 0xda0
 // Size: 0xa0
 function function_1e68a892() {

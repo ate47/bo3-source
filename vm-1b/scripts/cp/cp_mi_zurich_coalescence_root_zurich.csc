@@ -1,9 +1,9 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace root_zurich;
 
@@ -50,8 +50,8 @@ function zurich_vinewall_init(localclientnum, oldval, newval, bnewent, binitials
             return;
         }
         level.var_77350bac[localclientnum] = 1;
-        scene::add_scene_func("p7_fxanim_cp_zurich_root_wall_01_bundle", &namespace_8e9083ff::function_4dd02a03, "done", "root_zurich_vine_cleanup");
-        scene::add_scene_func("p7_fxanim_cp_zurich_root_wall_02_bundle", &namespace_8e9083ff::function_4dd02a03, "done", "root_zurich_vine_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_root_wall_01_bundle", &zurich_util::function_4dd02a03, "done", "root_zurich_vine_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_root_wall_02_bundle", &zurich_util::function_4dd02a03, "done", "root_zurich_vine_cleanup");
         var_d6e8ed16 = getentarray(localclientnum, "zurich_mazewall_trig", "targetname");
         array::thread_all(var_d6e8ed16, &function_abbe84dc, localclientnum);
     }

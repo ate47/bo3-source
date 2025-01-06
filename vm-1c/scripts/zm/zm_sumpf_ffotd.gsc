@@ -1,17 +1,17 @@
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
 
 #namespace zm_sumpf_ffotd;
 
 // Namespace zm_sumpf_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f665b91, Offset: 0x288
 // Size: 0x1c
 function main_start() {
@@ -19,7 +19,7 @@ function main_start() {
 }
 
 // Namespace zm_sumpf_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9de33bef, Offset: 0x2b0
 // Size: 0x464
 function main_end() {
@@ -44,7 +44,7 @@ function main_end() {
 }
 
 // Namespace zm_sumpf_ffotd
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ff83a99, Offset: 0x720
 // Size: 0x3a
 function function_b620b1d6() {

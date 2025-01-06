@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
 
 #namespace demo;
 
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace demo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x88053449, Offset: 0x100
 // Size: 0x1c
 function __init__() {
@@ -20,7 +20,7 @@ function __init__() {
 }
 
 // Namespace demo
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x78ed5eac, Offset: 0x128
 // Size: 0x4c
 function initactorbookmarkparams(killtimescount, killtimemsec, killtimedelay) {
@@ -31,7 +31,7 @@ function initactorbookmarkparams(killtimescount, killtimemsec, killtimedelay) {
 }
 
 // Namespace demo
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xd1c7724, Offset: 0x180
 // Size: 0x1f4
 function bookmark(type, time, var_77c06e36, var_224b1b43, eventpriority, var_f3f73ee4, overrideentitycamera, var_9468a9d3) {
@@ -68,7 +68,7 @@ function bookmark(type, time, var_77c06e36, var_224b1b43, eventpriority, var_f3f
 }
 
 // Namespace demo
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6ecab4bf, Offset: 0x380
 // Size: 0x104
 function function_e2be394(type, winningteamindex, losingteamindex) {
@@ -90,7 +90,7 @@ function function_e2be394(type, winningteamindex, losingteamindex) {
 }
 
 // Namespace demo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e6623ad, Offset: 0x490
 // Size: 0x74
 function reset_actor_bookmark_kill_times() {
@@ -107,7 +107,7 @@ function reset_actor_bookmark_kill_times() {
 }
 
 // Namespace demo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a208869, Offset: 0x510
 // Size: 0xf2
 function add_actor_bookmark_kill_time() {
@@ -134,7 +134,7 @@ function add_actor_bookmark_kill_time() {
 }
 
 // Namespace demo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde0286c9, Offset: 0x610
 // Size: 0x1f6
 function watch_actor_bookmarks() {

@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_utility;
 
 #namespace dragon;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28899976, Offset: 0x990
 // Size: 0xb4
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace dragon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1dff18e, Offset: 0xa50
 // Size: 0x3cc
 function init_clientfields() {
@@ -53,7 +53,7 @@ function init_clientfields() {
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x60b3ddb5, Offset: 0xe28
 // Size: 0x172
 function function_d28f5c87(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +81,7 @@ function function_d28f5c87(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4f4a53ed, Offset: 0xfa8
 // Size: 0x12a
 function function_9b0f57cf(localclientnum, newval) {
@@ -107,7 +107,7 @@ function function_9b0f57cf(localclientnum, newval) {
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x35236f2e, Offset: 0x10e0
 // Size: 0x156
 function dragon_mouth_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
@@ -124,7 +124,7 @@ function dragon_mouth_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138,
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xac1488b9, Offset: 0x1240
 // Size: 0xb2
 function function_d6856592(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -140,14 +140,14 @@ function function_d6856592(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcbd9c71c, Offset: 0x1300
 // Size: 0x19e
 function function_2ce58010(var_6575414d) {
     self endon(#"entityshutdown");
     level endon(#"hash_a35dee4e");
     while (true) {
-        e_attacker, var_333883d9, var_778fe70f, var_77cbbb1b = self waittill(#"damage");
+        self waittill(#"damage", e_attacker, var_333883d9, var_778fe70f, var_77cbbb1b);
         if (level.var_ef6a691 > 0) {
             foreach (var_61c194b7 in level.var_61699bd7[level.var_ef6a691]) {
                 if (var_61c194b7 == var_77cbbb1b) {
@@ -170,7 +170,7 @@ function function_2ce58010(var_6575414d) {
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x28a7f27b, Offset: 0x14a8
 // Size: 0x8c
 function function_cb9fb04a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -183,7 +183,7 @@ function function_cb9fb04a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe5929d24, Offset: 0x1540
 // Size: 0x74
 function function_bb6d58d0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -195,7 +195,7 @@ function function_bb6d58d0(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf12eed22, Offset: 0x15c0
 // Size: 0x33c
 function function_bd038ea4(var_6575414d, var_2c17cb9d, var_116b515b) {
@@ -258,7 +258,7 @@ function function_bd038ea4(var_6575414d, var_2c17cb9d, var_116b515b) {
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9673c58b, Offset: 0x1908
 // Size: 0x3ee
 function function_47d133a9(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
@@ -311,7 +311,7 @@ function function_47d133a9(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed13
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3af728c8, Offset: 0x1d00
 // Size: 0x124
 function function_2d57594b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -330,7 +330,7 @@ function function_2d57594b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc3ec6ed0, Offset: 0x1e30
 // Size: 0xec
 function function_b4311e07(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -343,7 +343,7 @@ function function_b4311e07(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x898dd5e1, Offset: 0x1f28
 // Size: 0x74
 function function_50d62870(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -354,7 +354,7 @@ function function_50d62870(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa9d71553, Offset: 0x1fa8
 // Size: 0xc4
 function function_fa043827(localclientnum) {
@@ -367,7 +367,7 @@ function function_fa043827(localclientnum) {
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xab5da6f2, Offset: 0x2078
 // Size: 0xc4
 function function_87fcc8ec(localclientnum) {
@@ -380,7 +380,7 @@ function function_87fcc8ec(localclientnum) {
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa9a3ea0c, Offset: 0x2148
 // Size: 0x15a
 function function_6865d0d5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -397,7 +397,7 @@ function function_6865d0d5(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd4a3669f, Offset: 0x22b0
 // Size: 0x3c
 function function_ae0e995e(a_ents) {
@@ -406,7 +406,7 @@ function function_ae0e995e(a_ents) {
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2176542b, Offset: 0x22f8
 // Size: 0xc4
 function dragon_transportation_exploders(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -420,7 +420,7 @@ function dragon_transportation_exploders(localclientnum, oldval, newval, bnewent
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xef11d185, Offset: 0x23c8
 // Size: 0x154
 function function_9f54e892(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -441,7 +441,7 @@ function function_9f54e892(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace dragon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x27effd77, Offset: 0x2528
 // Size: 0x10e
 function dragon_boss_guts(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

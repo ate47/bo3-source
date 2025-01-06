@@ -1,12 +1,12 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/craftables/_zm_craftables;
 
 #namespace zm_castle_craftables;
 
 // Namespace zm_castle_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16f96cc6, Offset: 0x298
 // Size: 0x7a
 function function_95743e9f() {
@@ -18,7 +18,7 @@ function function_95743e9f() {
 }
 
 // Namespace zm_castle_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d739fd5, Offset: 0x320
 // Size: 0x1c
 function function_3ebec56b() {
@@ -26,7 +26,7 @@ function function_3ebec56b() {
 }
 
 // Namespace zm_castle_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf67e8b33, Offset: 0x348
 // Size: 0x2ac
 function register_clientfields() {
@@ -43,7 +43,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_castle_craftables
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x99fdfdad, Offset: 0x600
 // Size: 0xbe
 function function_f1838e49(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +58,7 @@ function function_f1838e49(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_craftables
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5e317d00, Offset: 0x6c8
 // Size: 0x7c
 function function_a43a3438(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

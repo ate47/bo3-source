@@ -1,37 +1,37 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue;
 #using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/shared/ai_shared;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/cp_prologue_cyber_soldiers;
 #using scripts/cp/cp_prologue_hangars;
 #using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_prologue_apc;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/cp_mi_eth_prologue;
-#using scripts/cp/_skipto;
-#using scripts/shared/lui_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/doors_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_prologue_cyber_soldiers;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/doors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicle_shared;
 
 #namespace namespace_ab720c84;
 
@@ -310,8 +310,8 @@ function function_672c874() {
         e_trigger notify(#"trigger");
     }
     function_1ddfda41();
-    var_22752fde = getnode("nd_fueling_tunnel_exit", "targetname");
-    self setgoal(var_22752fde.origin);
+    nd_node = getnode("nd_fueling_tunnel_exit", "targetname");
+    self setgoal(nd_node.origin);
     self.goalradius = 64;
     self util::waittill_notify_or_timeout("goal", 15);
     self thread function_c9d7d48a();
@@ -347,8 +347,8 @@ function function_1ddfda41() {
         self getperfectinfo(a_enemy[i], 1);
         a_enemy[i].overrideactordamage = &function_e93a75b6;
     }
-    var_22752fde = getnode("nd_fueling_tunnel_top_stairs", "targetname");
-    self setgoal(var_22752fde.origin);
+    nd_node = getnode("nd_fueling_tunnel_top_stairs", "targetname");
+    self setgoal(nd_node.origin);
     self.goalradius = 64;
     self waittill(#"goal");
     while (true) {
@@ -372,8 +372,8 @@ function function_50d18609() {
     level waittill(#"hash_bf9ccb51");
     a_nodes = getnodearray("nd_fueling_end", "targetname");
     for (i = 0; i < a_nodes.size; i++) {
-        var_22752fde = a_nodes[i];
-        setenablenode(var_22752fde, 0);
+        nd_node = a_nodes[i];
+        setenablenode(nd_node, 0);
     }
     wait 2;
     cp_prologue_util::function_8f7b1e06(undefined, "info_fuel_tunnel_fallback_end", "info_fueling_flush_out_volume");
@@ -389,10 +389,10 @@ function function_8b6e6abe() {
     level thread function_1479714d();
     self ai::set_behavior_attribute("can_melee", 0);
     self colors::disable();
-    var_22752fde = getnode("nd_hendricks_attack_fueling_start_guys", "targetname");
+    nd_node = getnode("nd_hendricks_attack_fueling_start_guys", "targetname");
     self.perfectaim = 1;
     self.goalradius = 32;
-    self ai::force_goal(var_22752fde);
+    self ai::force_goal(nd_node);
     wait 1;
     a_enemy = spawner::get_ai_group_ai("tunnel_1st_contact_guys");
     foreach (enemy in a_enemy) {
@@ -672,8 +672,8 @@ function function_771ca4c3() {
 // Checksum 0x95cf0252, Offset: 0x4528
 // Size: 0xa2
 function function_299a41be() {
-    var_22752fde = getnode("nd_hendricks_jail_setup", "targetname");
-    self setgoal(var_22752fde, 1);
+    nd_node = getnode("nd_hendricks_jail_setup", "targetname");
+    self setgoal(nd_node, 1);
     self waittill(#"goal");
     level flag::wait_till("post_up_minister_breach");
     level thread function_a1ad4aa7();
@@ -1049,9 +1049,9 @@ function function_4fd5aaec() {
     a_ai = getentarray("sp_armory_lift_area_1st_attacker", "targetname");
     for (i = 0; i < a_ai.size; i++) {
         e_ent = a_ai[i] spawner::spawn();
-        var_22752fde = getnode(e_ent.target, "targetname");
+        nd_node = getnode(e_ent.target, "targetname");
         e_ent.goalradius = 64;
-        e_ent setgoal(var_22752fde.origin);
+        e_ent setgoal(nd_node.origin);
         e_ent thread cp_prologue_util::function_8e9f617f(256, 1);
     }
     e_volume = getent("info_armory_enemy_pushup", "targetname");
@@ -1123,9 +1123,9 @@ function function_473b7de8() {
     scene::add_scene_func("cin_pro_07_01_securitydesk_vign_weapons", &function_d4401b52);
     scene::play("cin_pro_07_01_securitydesk_vign_weapons");
     level notify(#"hash_69db142c");
-    var_22752fde = getnode("nd_khalil_armory_battle", "targetname");
+    nd_node = getnode("nd_khalil_armory_battle", "targetname");
     level.var_9db406db.goalradius = 64;
-    level.var_9db406db setgoal(var_22752fde.origin);
+    level.var_9db406db setgoal(nd_node.origin);
     level.var_9db406db waittill(#"goal");
     level.var_9db406db.goalradius = 512;
 }
@@ -1521,15 +1521,15 @@ function function_a3dbf6a2() {
     level notify(#"hash_3e51db3e");
     level thread function_45ed0d4b(0, 1.5);
     level waittill(#"hash_9e4059e6");
-    level.var_be31aa9a = getent("freight_lift", "targetname");
-    level.var_be31aa9a setmovingplatformenabled(1);
-    level.var_be31aa9a playsound("evt_freight_lift_start");
-    level.var_7b90133a = spawn("script_origin", level.var_be31aa9a.origin);
-    level.var_7b90133a linkto(level.var_be31aa9a);
+    level.e_lift = getent("freight_lift", "targetname");
+    level.e_lift setmovingplatformenabled(1);
+    level.e_lift playsound("evt_freight_lift_start");
+    level.var_7b90133a = spawn("script_origin", level.e_lift.origin);
+    level.var_7b90133a linkto(level.e_lift);
     level.var_7b90133a playloopsound("evt_freight_lift_loop");
     level thread function_4d214c02(1);
     level thread function_e19320a1(1);
-    level.var_be31aa9a thread scene::play("cin_pro_09_01_intro_1st_cybersoldiers_elevator");
+    level.e_lift thread scene::play("cin_pro_09_01_intro_1st_cybersoldiers_elevator");
     level.var_3dce3f88 movez(270, 16.3);
     level.var_3dce3f88 thread function_5bd223b0();
     wait 16.3 - 2;
@@ -1755,11 +1755,11 @@ function function_8949fadf() {
 // Checksum 0x61f9b441, Offset: 0x7948
 // Size: 0x3f2
 function function_51da5fc6() {
-    level.var_be31aa9a = getent("freight_lift", "targetname");
-    level.var_3dce3f88 = spawn("script_model", level.var_be31aa9a.origin);
-    level.var_be31aa9a linkto(level.var_3dce3f88);
-    level.var_be31aa9a setmovingplatformenabled(1);
-    level.var_be31aa9a thread function_f2f20b35();
+    level.e_lift = getent("freight_lift", "targetname");
+    level.var_3dce3f88 = spawn("script_model", level.e_lift.origin);
+    level.e_lift linkto(level.var_3dce3f88);
+    level.e_lift setmovingplatformenabled(1);
+    level.e_lift thread function_f2f20b35();
     exploder::exploder("light_exploder_lift_inside");
     function_dfbe3c61();
     a_spawners = getentarray("sp_lift_reinforcements", "targetname");
@@ -1770,15 +1770,15 @@ function function_51da5fc6() {
     v_down = (0, 0, -1);
     dist = 354;
     move_time = 5;
-    var_519d9482 = level.var_be31aa9a.origin + v_down * dist;
+    var_519d9482 = level.e_lift.origin + v_down * dist;
     level.var_3dce3f88 moveto(var_519d9482, move_time);
-    level.var_be31aa9a = getent("freight_lift", "targetname");
-    level.var_be31aa9a playsound("evt_freight_lift_start");
-    var_7b90133a = spawn("script_origin", level.var_be31aa9a.origin);
-    var_7b90133a linkto(level.var_be31aa9a);
+    level.e_lift = getent("freight_lift", "targetname");
+    level.e_lift playsound("evt_freight_lift_start");
+    var_7b90133a = spawn("script_origin", level.e_lift.origin);
+    var_7b90133a linkto(level.e_lift);
     var_7b90133a playloopsound("evt_freight_lift_loop");
     level.var_3dce3f88 waittill(#"movedone");
-    level.var_3dce3f88 scene::init("cin_pro_08_01_liftescape_vign_lift_doorsopen", level.var_be31aa9a);
+    level.var_3dce3f88 scene::init("cin_pro_08_01_liftescape_vign_lift_doorsopen", level.e_lift);
     var_7b90133a stoploopsound(0.1);
     setdvar("grenadeAllowRigidBodyPhysics", "0");
     open_time = 1.5;
@@ -1800,11 +1800,11 @@ function function_51da5fc6() {
 // Params 1, eflags: 0x0
 // Checksum 0xc1de545c, Offset: 0x7d48
 // Size: 0x56
-function function_c6db42e4(var_22752fde) {
+function function_c6db42e4(nd_node) {
     self endon(#"death");
     self util::stop_magic_bullet_shield();
     self.goalradius = 64;
-    self setgoal(var_22752fde.origin);
+    self setgoal(nd_node.origin);
     self waittill(#"goal");
     self.goalradius = 1024;
 }
@@ -1916,23 +1916,23 @@ function function_45ed0d4b(open_door, move_time) {
     var_507d66a5 = getent("lift_door_top", "targetname");
     var_3d3eb4dd = getent("lift_door_bottom", "targetname");
     v_up = (0, 0, 1);
-    var_cbe6253d = 100;
+    move_amount = 100;
     if (open_door) {
         if (level.var_1dd14818 == 1) {
             return;
         }
-        v_dest = var_507d66a5.origin + v_up * var_cbe6253d;
+        v_dest = var_507d66a5.origin + v_up * move_amount;
         var_507d66a5 moveto(v_dest, move_time);
-        v_dest = var_3d3eb4dd.origin + v_up * var_cbe6253d * -1;
+        v_dest = var_3d3eb4dd.origin + v_up * move_amount * -1;
         var_3d3eb4dd moveto(v_dest, move_time);
         level.var_1dd14818 = 1;
     } else {
         if (level.var_1dd14818 == 0) {
             return;
         }
-        v_dest = var_507d66a5.origin + v_up * var_cbe6253d * -1;
+        v_dest = var_507d66a5.origin + v_up * move_amount * -1;
         var_507d66a5 moveto(v_dest, move_time);
-        v_dest = var_3d3eb4dd.origin + v_up * var_cbe6253d;
+        v_dest = var_3d3eb4dd.origin + v_up * move_amount;
         var_3d3eb4dd moveto(v_dest, move_time);
         level.var_1dd14818 = 0;
     }
@@ -1944,10 +1944,10 @@ function function_45ed0d4b(open_door, move_time) {
     var_3d3eb4dd playsound("evt_freight_elev_door_stop");
     var_cc8ae729 stoploopsound(0.1);
     if (open_door) {
-        level.var_3dce3f88 scene::play("cin_pro_08_01_liftescape_vign_lift_doorsopen", level.var_be31aa9a);
+        level.var_3dce3f88 scene::play("cin_pro_08_01_liftescape_vign_lift_doorsopen", level.e_lift);
         return;
     }
-    level.var_3dce3f88 scene::play("cin_pro_08_01_liftescape_vign_lift_doorsclose", level.var_be31aa9a);
+    level.var_3dce3f88 scene::play("cin_pro_08_01_liftescape_vign_lift_doorsclose", level.e_lift);
 }
 
 // Namespace namespace_e80bc418
@@ -1962,7 +1962,7 @@ function function_5517d018() {
     level waittill(#"crane_in_position");
     level flag::set("crane_in_position");
     e_trigger triggerenable(1);
-    e_who = e_trigger waittill(#"trigger");
+    e_trigger waittill(#"trigger", e_who);
     e_trigger delete();
     level thread scene::play("p7_fxanim_cp_prologue_ceiling_underground_crane_shot_bundle");
     level waittill(#"hash_1cda5581");

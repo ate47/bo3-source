@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_theater_achievements;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_theater_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x964055a2, Offset: 0x288
 // Size: 0x5c
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_theater_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x12c0b4d0, Offset: 0x2f0
 // Size: 0xac
 function achievement_sound_func(var_43e4662) {
@@ -45,7 +45,7 @@ function achievement_sound_func(var_43e4662) {
 }
 
 // Namespace zm_theater_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x885fde47, Offset: 0x3a8
 // Size: 0x4c
 function onplayerconnect() {
@@ -55,7 +55,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_theater_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1dd48b2, Offset: 0x400
 // Size: 0x134
 function function_f2597520() {
@@ -67,7 +67,7 @@ function function_f2597520() {
     }
     level flag::wait_till("power_on");
     while (self.var_3ac4b03d.size > 0) {
-        n_loc = self waittill(#"hash_62857917");
+        self waittill(#"hash_62857917", n_loc);
         if (isdefined(n_loc) && isint(n_loc) && isinarray(self.var_3ac4b03d, n_loc)) {
             arrayremovevalue(self.var_3ac4b03d, n_loc);
         }
@@ -79,7 +79,7 @@ function function_f2597520() {
 }
 
 // Namespace zm_theater_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcbb3cf96, Offset: 0x540
 // Size: 0x104
 function function_24b05d89() {
@@ -91,7 +91,7 @@ function function_24b05d89() {
     }
     level flag::wait_till("power_on");
     while (self.var_597e831d.size > 0) {
-        var_2be4351a = level waittill(#"play_movie");
+        level waittill(#"play_movie", var_2be4351a);
         if (isdefined(var_2be4351a) && isinarray(self.var_597e831d, var_2be4351a)) {
             arrayremovevalue(self.var_597e831d, var_2be4351a);
         }
@@ -101,7 +101,7 @@ function function_24b05d89() {
 }
 
 // Namespace zm_theater_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x630e90ce, Offset: 0x650
 // Size: 0x94
 function function_6c831509() {
@@ -117,7 +117,7 @@ function function_6c831509() {
 }
 
 // Namespace zm_theater_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f9a6e84, Offset: 0x6f0
 // Size: 0x144
 function function_1abfde35(e_attacker) {

@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_genesis_util;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf2873db, Offset: 0x448
 // Size: 0x3dc
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x830
 // Size: 0x4
 function __main__() {
@@ -48,7 +48,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x38d77b9e, Offset: 0x840
 // Size: 0x292
 function player_rumble_and_shake(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -90,7 +90,7 @@ function player_rumble_and_shake(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm_genesis_util
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x32db5bc7, Offset: 0xae0
 // Size: 0x204
 function function_878b1e6c(localclientnum, var_6bd691d0, var_10ba4a4c) {
@@ -130,7 +130,7 @@ function function_878b1e6c(localclientnum, var_6bd691d0, var_10ba4a4c) {
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x64355709, Offset: 0xcf0
 // Size: 0x22e
 function emit_smoke(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -171,7 +171,7 @@ function function_ed6c6bcf(localclientnum, str_fx_name, var_bec640ba) {
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc37e986d, Offset: 0x1010
 // Size: 0x186
 function fire_trap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -195,7 +195,7 @@ function fire_trap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace zm_genesis_util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xeaf8a08, Offset: 0x11a0
 // Size: 0x64
 function function_379d49e8(localclientnum, n_delay) {
@@ -210,7 +210,7 @@ function function_379d49e8(localclientnum, n_delay) {
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9aee19bc, Offset: 0x1210
 // Size: 0x74
 function fire_trap_ignite_enemy(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -260,7 +260,7 @@ function function_267f859f(localclientnum, fx_id, b_on, var_afcc5d76, str_tag) {
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbd27b902, Offset: 0x1428
 // Size: 0xfc
 function rq_gateworm_magic(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -276,7 +276,7 @@ function rq_gateworm_magic(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x190937ae, Offset: 0x1530
 // Size: 0x140
 function rq_gateworm_dissolve(localclientnum, var_9304bb31) {
@@ -298,7 +298,7 @@ function rq_gateworm_dissolve(localclientnum, var_9304bb31) {
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf8d076e9, Offset: 0x1678
 // Size: 0x5c
 function rq_gateworm_dissolve_finish(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -306,7 +306,7 @@ function rq_gateworm_dissolve_finish(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace zm_genesis_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc55f258, Offset: 0x16e0
 // Size: 0x136
 function rq_rune_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

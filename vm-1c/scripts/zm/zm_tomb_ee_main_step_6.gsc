@@ -1,20 +1,20 @@
-#using scripts/zm/_zm_weap_one_inch_punch;
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_ee_main;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_sidequests;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_weap_one_inch_punch;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_ee_main;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_ee_main_step_6;
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x371b8720, Offset: 0x2f8
 // Size: 0x54
 function init() {
@@ -22,7 +22,7 @@ function init() {
 }
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6bd11303, Offset: 0x358
 // Size: 0x34
 function init_stage() {
@@ -31,7 +31,7 @@ function init_stage() {
 }
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcbee04c9, Offset: 0x398
 // Size: 0x7c
 function function_7747c56() {
@@ -44,7 +44,7 @@ function function_7747c56() {
 }
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4f9359c8, Offset: 0x420
 // Size: 0x1a
 function function_cc3f3f6a(success) {
@@ -52,7 +52,7 @@ function function_cc3f3f6a(success) {
 }
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc8cf38d2, Offset: 0x448
 // Size: 0x240
 function function_4aee6e96() {
@@ -64,7 +64,7 @@ function function_4aee6e96() {
         self clientfield::set("ee_zombie_fist_fx", 1);
         self.var_1c6bd2ab = 1;
         while (isalive(self)) {
-            amount, inflictor, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+            self waittill(#"damage", amount, inflictor, direction, point, type, tagname, modelname, partname, weapon, idflags);
             if (!isdefined(inflictor.var_1d9d8a6e)) {
                 inflictor.var_1d9d8a6e = 0;
                 inflictor.var_21412003 = 0;
@@ -83,7 +83,7 @@ function function_4aee6e96() {
 }
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x73dbbd53, Offset: 0x690
 // Size: 0x5ec
 function function_3bcfc005(v_origin, e_player) {
@@ -137,7 +137,7 @@ function function_3bcfc005(v_origin, e_player) {
 }
 
 // Namespace zm_tomb_ee_main_step_6
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5af0206f, Offset: 0xc88
 // Size: 0x44
 function function_9507beaf() {

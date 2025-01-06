@@ -1,19 +1,19 @@
+#using scripts/codescripts/struct;
+#using scripts/mp/_util;
 #using scripts/mp/killstreaks/_killstreak_bundles;
 #using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/_util;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/killstreaks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace killstreak_hacking;
 
 // Namespace killstreak_hacking
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9a316672, Offset: 0x218
 // Size: 0x1f0
 function enable_hacking(killstreakname, prehackfunction, posthackfunction) {
@@ -46,7 +46,7 @@ function disable_hacking() {
 }
 
 // Namespace killstreak_hacking
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9f1cc764, Offset: 0x440
 // Size: 0x6c
 function hackerfx() {
@@ -57,7 +57,7 @@ function hackerfx() {
 }
 
 // Namespace killstreak_hacking
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9ea8bc02, Offset: 0x4b8
 // Size: 0x6c
 function hackerloopfx() {
@@ -68,7 +68,7 @@ function hackerloopfx() {
 }
 
 // Namespace killstreak_hacking
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x287bdd31, Offset: 0x530
 // Size: 0x1e4
 function private _hacked_callback(hacker) {
@@ -109,7 +109,7 @@ function override_hacked_killstreak_reference(killstreakref) {
 }
 
 // Namespace killstreak_hacking
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19ecf789, Offset: 0x758
 // Size: 0x98
 function get_hacked_timeout_duration_ms() {
@@ -123,7 +123,7 @@ function get_hacked_timeout_duration_ms() {
 }
 
 // Namespace killstreak_hacking
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x74ad9713, Offset: 0x7f8
 // Size: 0x6a
 function set_vehicle_drivable_time_starting_now(killstreak, duration_ms) {
@@ -137,7 +137,7 @@ function set_vehicle_drivable_time_starting_now(killstreak, duration_ms) {
 }
 
 // Namespace killstreak_hacking
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x11725507, Offset: 0x870
 // Size: 0xec
 function _update_health(hacker) {
@@ -162,7 +162,7 @@ function _update_health(hacker) {
 /#
 
     // Namespace killstreak_hacking
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x620fb7d2, Offset: 0x968
     // Size: 0x28
     function killstreak_switch_team_end() {
@@ -171,7 +171,7 @@ function _update_health(hacker) {
     }
 
     // Namespace killstreak_hacking
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xe90c2a8d, Offset: 0x998
     // Size: 0x202
     function killstreak_switch_team(owner) {

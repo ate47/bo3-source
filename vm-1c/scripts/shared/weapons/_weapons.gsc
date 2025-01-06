@@ -1,31 +1,31 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_weapon_utils;
-#using scripts/shared/weapons/_trophy_system;
-#using scripts/shared/weapons/_tabun;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/bb_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/loadout_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_empgrenade;
+#using scripts/shared/weapons/_flashgrenades;
+#using scripts/shared/weapons/_hacker_tool;
+#using scripts/shared/weapons/_hive_gun;
+#using scripts/shared/weapons/_proximity_grenade;
 #using scripts/shared/weapons/_riotshield;
 #using scripts/shared/weapons/_sticky_grenade;
-#using scripts/shared/weapons/_proximity_grenade;
-#using scripts/shared/weapons/_hacker_tool;
-#using scripts/shared/weapons/_flashgrenades;
-#using scripts/shared/weapons/_empgrenade;
-#using scripts/shared/weapons/_hive_gun;
+#using scripts/shared/weapons/_tabun;
+#using scripts/shared/weapons/_trophy_system;
+#using scripts/shared/weapons/_weapon_utils;
+#using scripts/shared/weapons/_weaponobjects;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/loadout_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/bb_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace weapons;
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67f617a7, Offset: 0x838
 // Size: 0x154
 function init_shared() {
@@ -45,7 +45,7 @@ function init_shared() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1b7ac9b, Offset: 0x998
 // Size: 0x9c
 function init() {
@@ -60,7 +60,7 @@ function init() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x841aa62a, Offset: 0xa40
 // Size: 0x3c
 function on_player_connect() {
@@ -71,7 +71,7 @@ function on_player_connect() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa35ecfdc, Offset: 0xa88
 // Size: 0xec
 function on_player_spawned() {
@@ -93,7 +93,7 @@ function on_player_spawned() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29b51c90, Offset: 0xb80
 // Size: 0xf6
 function function_fd4b8044() {
@@ -103,7 +103,7 @@ function function_fd4b8044() {
     self.lastweaponchange = 0;
     while (true) {
         previous_weapon = self getcurrentweapon();
-        newweapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", newweapon);
         if (may_drop(newweapon)) {
             self.lastdroppableweapon = newweapon;
             self.lastweaponchange = gettime();
@@ -116,7 +116,7 @@ function function_fd4b8044() {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcf883187, Offset: 0xc80
 // Size: 0xf0
 function update_last_held_weapon_timings(newtime) {
@@ -136,7 +136,7 @@ function update_last_held_weapon_timings(newtime) {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x43065e59, Offset: 0xd78
 // Size: 0x39e
 function update_timings(newtime) {
@@ -198,7 +198,7 @@ function update_timings(newtime) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b04ba21, Offset: 0x1120
 // Size: 0x1ba
 function track() {
@@ -228,7 +228,7 @@ function track() {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbd01174b, Offset: 0x12e8
 // Size: 0xa8
 function may_drop(weapon) {
@@ -254,7 +254,7 @@ function may_drop(weapon) {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1be08f36, Offset: 0x1398
 // Size: 0x4cc
 function drop_for_death(attacker, sweapon, smeansofdeath) {
@@ -348,7 +348,7 @@ function drop_for_death(attacker, sweapon, smeansofdeath) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd0354c9, Offset: 0x1870
 // Size: 0x34
 function delete_pickup_after_awhile() {
@@ -361,13 +361,13 @@ function delete_pickup_after_awhile() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x465ee9cc, Offset: 0x18b0
 // Size: 0x3bc
 function watch_pickup() {
     self endon(#"death");
     weapon = self.item;
-    player, droppeditem, pickedupontouch = self waittill(#"trigger");
+    self waittill(#"trigger", player, droppeditem, pickedupontouch);
     if (true) {
         if (isdefined(player) && isplayer(player)) {
             if (isdefined(player.weaponpickupscount)) {
@@ -418,7 +418,7 @@ function watch_pickup() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b6443b6, Offset: 0x1c78
 // Size: 0x19c
 function function_1748a15e() {
@@ -426,7 +426,7 @@ function function_1748a15e() {
     self endon(#"disconnect");
     level endon(#"game_ended");
     for (;;) {
-        curweapon = self waittill(#"weapon_fired");
+        self waittill(#"weapon_fired", curweapon);
         self.lastfiretime = gettime();
         self.hasdonecombat = 1;
         switch (curweapon.weapclass) {
@@ -460,7 +460,7 @@ function function_1748a15e() {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb04e0e19, Offset: 0x1e20
 // Size: 0x1f4
 function track_fire(curweapon) {
@@ -491,7 +491,7 @@ function track_fire(curweapon) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde5e77f8, Offset: 0x2020
 // Size: 0x158
 function function_ae346b89() {
@@ -504,7 +504,7 @@ function function_ae346b89() {
     self thread function_f01938c2();
     self thread function_4c2ae355();
     for (;;) {
-        weapon = self waittill(#"grenade_pullback");
+        self waittill(#"grenade_pullback", weapon);
         self addweaponstat(weapon, "shots", 1, self.class_num);
         self.hasdonecombat = 1;
         self.throwinggrenade = 1;
@@ -518,7 +518,7 @@ function function_ae346b89() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3989661d, Offset: 0x2180
 // Size: 0xc0
 function function_b486caf3() {
@@ -526,7 +526,7 @@ function function_b486caf3() {
     self endon(#"disconnect");
     level endon(#"game_ended");
     for (;;) {
-        missile, weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", missile, weapon);
         self.hasdonecombat = 1;
         assert(isdefined(missile));
         level.missileentities[level.missileentities.size] = missile;
@@ -536,7 +536,7 @@ function function_b486caf3() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf60bcbb, Offset: 0x2248
 // Size: 0x2c
 function watch_missile_death() {
@@ -545,7 +545,7 @@ function watch_missile_death() {
 }
 
 // Namespace weapons
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe02b04ba, Offset: 0x2280
 // Size: 0x112
 function drop_all_to_ground(origin, radius) {
@@ -572,7 +572,7 @@ function drop_grenades_to_ground(origin, radius) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7be0457, Offset: 0x2478
 // Size: 0xa2
 function watch_grenade_cancel() {
@@ -582,7 +582,7 @@ function watch_grenade_cancel() {
     waittillframeend();
     weapon = level.weaponnone;
     while (self isthrowinggrenade() && weapon == level.weaponnone) {
-        weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", weapon);
     }
     self.throwinggrenade = 0;
     self.gotpullbacknotify = 0;
@@ -590,7 +590,7 @@ function watch_grenade_cancel() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5fda6edd, Offset: 0x2528
 // Size: 0xc4
 function watch_offhand_end() {
@@ -608,7 +608,7 @@ function watch_offhand_end() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfb180180, Offset: 0x25f8
 // Size: 0x5a
 function function_bd108e58() {
@@ -622,7 +622,7 @@ function function_bd108e58() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e39c0ee, Offset: 0x2660
 // Size: 0x3a4
 function begin_grenade_tracking() {
@@ -631,7 +631,7 @@ function begin_grenade_tracking() {
     self endon(#"grenade_throw_cancelled");
     starttime = gettime();
     self thread watch_grenade_cancel();
-    grenade, weapon, cooktime = self waittill(#"grenade_fire");
+    self waittill(#"grenade_fire", grenade, weapon, cooktime);
     assert(isdefined(grenade));
     level.missileentities[level.missileentities.size] = grenade;
     grenade.weapon = weapon;
@@ -685,7 +685,7 @@ function begin_grenade_tracking() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x83e9e592, Offset: 0x2a10
 // Size: 0x1c6
 function begin_other_grenade_tracking() {
@@ -693,7 +693,7 @@ function begin_other_grenade_tracking() {
     self endon(#"hash_1e4ca7f2");
     self endon(#"disconnect");
     for (;;) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         if (grenade util::ishacked()) {
             continue;
         }
@@ -722,12 +722,12 @@ function begin_other_grenade_tracking() {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc8b7655b, Offset: 0x2be0
 // Size: 0xd0
 function check_stuck_to_player(deleteonteamchange, awardscoreevent, weapon) {
     self endon(#"death");
-    player = self waittill(#"stuck_to_player");
+    self waittill(#"stuck_to_player", player);
     if (isdefined(player)) {
         if (deleteonteamchange) {
             self thread stuck_to_player_team_change(player);
@@ -742,7 +742,7 @@ function check_stuck_to_player(deleteonteamchange, awardscoreevent, weapon) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d0fa64c, Offset: 0x2cb8
 // Size: 0x34
 function check_hatchet_bounce() {
@@ -753,7 +753,7 @@ function check_hatchet_bounce() {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a84f380, Offset: 0x2cf8
 // Size: 0x9a
 function stuck_to_player_team_change(player) {
@@ -770,14 +770,14 @@ function stuck_to_player_team_change(player) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd8a9ff1, Offset: 0x2da0
 // Size: 0xa8
 function function_aea44179() {
     self endon(#"death");
     self endon(#"disconnect");
     for (;;) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         if (self.gotpullbacknotify) {
             self.gotpullbacknotify = 0;
             continue;
@@ -803,7 +803,7 @@ function wait_and_delete_dud(waittime) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe56ccb7f, Offset: 0x2e98
 // Size: 0x20
 function gettimefromlevelstart() {
@@ -814,7 +814,7 @@ function gettimefromlevelstart() {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa95f8633, Offset: 0x2ec0
 // Size: 0x154
 function turn_grenade_into_a_dud(weapon, isthrowngrenade, player) {
@@ -836,27 +836,27 @@ function turn_grenade_into_a_dud(weapon, isthrowngrenade, player) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78a51e6c, Offset: 0x3020
 // Size: 0x70
 function function_f01938c2() {
     self endon(#"spawned_player");
     self endon(#"disconnect");
     while (true) {
-        grenade, weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon);
         grenade turn_grenade_into_a_dud(weapon, 1, self);
     }
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5967a361, Offset: 0x3098
 // Size: 0xc8
 function function_4c2ae355() {
     self endon(#"spawned_player");
     self endon(#"disconnect");
     while (true) {
-        grenade, weapon = self waittill(#"grenade_launcher_fire");
+        self waittill(#"grenade_launcher_fire", grenade, weapon);
         grenade turn_grenade_into_a_dud(weapon, 0, self);
         assert(isdefined(grenade));
         level.missileentities[level.missileentities.size] = grenade;
@@ -964,7 +964,7 @@ function get_damageable_ents(pos, radius, dolos, startradius) {
 }
 
 // Namespace weapons
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x2b576490, Offset: 0x3988
 // Size: 0x62
 function damage_trace_passed(from, to, startradius, ignore) {
@@ -973,7 +973,7 @@ function damage_trace_passed(from, to, startradius, ignore) {
 }
 
 // Namespace weapons
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc65b159b, Offset: 0x39f8
 // Size: 0x1e0
 function damage_trace(from, to, startradius, ignore) {
@@ -1020,7 +1020,7 @@ function damage_ent(einflictor, eattacker, idamage, smeansofdeath, weapon, damag
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf09abcd7, Offset: 0x3d88
 // Size: 0x6e
 function debugline(a, b, color) {
@@ -1033,7 +1033,7 @@ function debugline(a, b, color) {
 }
 
 // Namespace weapons
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xf272a1a7, Offset: 0x3e00
 // Size: 0x27e
 function on_damage(eattacker, einflictor, weapon, meansofdeath, damage) {
@@ -1080,7 +1080,7 @@ function on_damage(eattacker, einflictor, weapon, meansofdeath, damage) {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1b40f140, Offset: 0x4088
 // Size: 0x154
 function play_concussion_sound(duration) {
@@ -1103,7 +1103,7 @@ function play_concussion_sound(duration) {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9c673764, Offset: 0x41e8
 // Size: 0x3c
 function delete_ent_on_owner_death(owner) {
@@ -1113,7 +1113,7 @@ function delete_ent_on_owner_death(owner) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf2d68ebf, Offset: 0x4230
 // Size: 0x358
 function function_43de9900() {
@@ -1125,7 +1125,7 @@ function function_43de9900() {
     team = self.pers["team"];
     playerclass = self.pers["class"];
     while (true) {
-        newweapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", newweapon);
         if (self ismantling()) {
             continue;
         }
@@ -1211,7 +1211,7 @@ function loadout_get_offhand_count(stat) {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5869c852, Offset: 0x4710
 // Size: 0x50
 function flash_scavenger_icon() {
@@ -1221,12 +1221,12 @@ function flash_scavenger_icon() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95fc46e8, Offset: 0x4768
 // Size: 0x58a
 function scavenger_think() {
     self endon(#"death");
-    player = self waittill(#"scavenger");
+    self waittill(#"scavenger", player);
     primary_weapons = player getweaponslistprimaries();
     offhand_weapons_and_alts = array::exclude(player getweaponslist(1), primary_weapons);
     arrayremovevalue(offhand_weapons_and_alts, level.weaponbasemelee);
@@ -1297,7 +1297,7 @@ function scavenger_think() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x291b7df8, Offset: 0x4d00
 // Size: 0x34
 function function_e5ed7d9b() {
@@ -1308,7 +1308,7 @@ function function_e5ed7d9b() {
 }
 
 // Namespace weapons
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf56d679b, Offset: 0x4d40
 // Size: 0x17c
 function scavenger_hud_create() {
@@ -1337,7 +1337,7 @@ function scavenger_hud_create() {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc489457, Offset: 0x4ec8
 // Size: 0xec
 function drop_scavenger_for_death(attacker) {
@@ -1361,7 +1361,7 @@ function drop_scavenger_for_death(attacker) {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6b27d1b4, Offset: 0x4fc0
 // Size: 0x74
 function add_limited_weapon(weapon, owner, num_drops) {
@@ -1372,7 +1372,7 @@ function add_limited_weapon(weapon, owner, num_drops) {
 }
 
 // Namespace weapons
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xff173157, Offset: 0x5040
 // Size: 0x7a
 function should_drop_limited_weapon(weapon, owner) {
@@ -1390,7 +1390,7 @@ function should_drop_limited_weapon(weapon, owner) {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6e0524d, Offset: 0x50c8
 // Size: 0xac
 function drop_limited_weapon(weapon, owner, item) {
@@ -1407,12 +1407,12 @@ function drop_limited_weapon(weapon, owner, item) {
 }
 
 // Namespace weapons
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x522e4688, Offset: 0x5180
 // Size: 0x5c
 function limited_pickup(limited_info) {
     self endon(#"death");
-    player, item = self waittill(#"trigger");
+    self waittill(#"trigger", player, item);
     if (!isdefined(item)) {
         return;
     }
@@ -1420,19 +1420,19 @@ function limited_pickup(limited_info) {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa05ee6f5, Offset: 0x51e8
 // Size: 0x8c
 function track_cooked_detonation(attacker, weapon, cooktime) {
     self endon(#"trophy_destroyed");
-    origin, surface = self waittill(#"explode");
+    self waittill(#"explode", origin, surface);
     if (weapon.rootweapon == level.weaponflashgrenade) {
         level thread ninebang_doninebang(attacker, weapon, origin, cooktime);
     }
 }
 
 // Namespace weapons
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xcd8d71a9, Offset: 0x5280
 // Size: 0x4a6
 function ninebang_doninebang(attacker, weapon, pos, cooktime) {
@@ -1491,7 +1491,7 @@ function ninebang_doninebang(attacker, weapon, pos, cooktime) {
 }
 
 // Namespace weapons
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xffc45f1d, Offset: 0x5730
 // Size: 0xb0
 function function_3bb8b559(startpos, range) {
@@ -1520,7 +1520,7 @@ function function_3a93d5a6(player, weapon, position) {
 }
 
 // Namespace weapons
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xa6e55a88, Offset: 0x5928
 // Size: 0xaa
 function function_4c3bee5(ent, pos, radiussq, dolos, startradius) {
@@ -1530,12 +1530,12 @@ function function_4c3bee5(ent, pos, radiussq, dolos, startradius) {
 }
 
 // Namespace weapons
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb7daf205, Offset: 0x59e0
 // Size: 0x196
 function track_multi_detonation(ownerent, weapon, cooktime) {
     self endon(#"trophy_destroyed");
-    origin, surface = self waittill(#"explode");
+    self waittill(#"explode", origin, surface);
     if (weapon.rootweapon == getweapon("frag_grenade_grenade")) {
         for (i = 0; i < weapon.multidetonation; i++) {
             if (!isdefined(ownerent)) {
@@ -1552,7 +1552,7 @@ function track_multi_detonation(ownerent, weapon, cooktime) {
 }
 
 // Namespace weapons
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb813bc3c, Offset: 0x5b80
 // Size: 0x8c
 function multi_detonation_get_cluster_launch_dir(index, multival) {
@@ -1564,7 +1564,7 @@ function multi_detonation_get_cluster_launch_dir(index, multival) {
 }
 
 // Namespace weapons
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x73c8f2ee, Offset: 0x5c18
 // Size: 0xec
 function function_f9895d7a(weapon, inflictor) {

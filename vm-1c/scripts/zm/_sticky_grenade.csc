@@ -1,11 +1,11 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace _sticky_grenade;
 
 // Namespace _sticky_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe389ef65, Offset: 0x128
 // Size: 0x1e
 function main() {
@@ -13,7 +13,7 @@ function main() {
 }
 
 // Namespace _sticky_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x14e3a2cb, Offset: 0x150
 // Size: 0x44
 function spawned(localclientnum) {
@@ -24,7 +24,7 @@ function spawned(localclientnum) {
 }
 
 // Namespace _sticky_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x39e3a1fc, Offset: 0x1a0
 // Size: 0x12c
 function fx_think(localclientnum) {
@@ -42,7 +42,7 @@ function fx_think(localclientnum) {
 }
 
 // Namespace _sticky_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2d1ddc93, Offset: 0x2d8
 // Size: 0x6c
 function start_light_fx(localclientnum) {
@@ -51,7 +51,7 @@ function start_light_fx(localclientnum) {
 }
 
 // Namespace _sticky_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbd4eae3a, Offset: 0x350
 // Size: 0x4e
 function stop_light_fx(localclientnum) {
@@ -62,7 +62,7 @@ function stop_light_fx(localclientnum) {
 }
 
 // Namespace _sticky_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb8bf10a4, Offset: 0x3a8
 // Size: 0xf4
 function fullscreen_fx(localclientnum) {

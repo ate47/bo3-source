@@ -9,7 +9,7 @@ function autoexec initanimationmocomps() {
 }
 
 // Namespace animationstatenetwork
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xb8f8acde, Offset: 0xe0
 // Size: 0x13c
 function runanimationmocomp(mocompname, var_cc9d849e, var_5a40c933, mocompanim, mocompanimblendouttime, mocompduration) {
@@ -27,7 +27,7 @@ function runanimationmocomp(mocompname, var_cc9d849e, var_5a40c933, mocompanim, 
 }
 
 // Namespace animationstatenetwork
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x789731e0, Offset: 0x228
 // Size: 0x234
 function registeranimationmocomp(mocompname, startfuncptr, updatefuncptr, terminatefuncptr) {
@@ -52,7 +52,7 @@ function registeranimationmocomp(mocompname, startfuncptr, updatefuncptr, termin
 }
 
 // Namespace animationstatenetwork
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x2cf62241, Offset: 0x468
 // Size: 0x2c
 function animationmocompemptyfunc(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {

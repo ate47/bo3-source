@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace _claymore;
 
 // Namespace _claymore
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3d9a17fe, Offset: 0xe8
 // Size: 0x26
 function init(localclientnum) {
@@ -12,7 +12,7 @@ function init(localclientnum) {
 }
 
 // Namespace _claymore
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6f4fcf8c, Offset: 0x118
 // Size: 0xc0
 function spawned(localclientnum) {

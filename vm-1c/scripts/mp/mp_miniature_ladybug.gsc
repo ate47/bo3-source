@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/scene_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace mp_miniature_ladybug;
 
 // Namespace mp_miniature_ladybug
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb750ebe4, Offset: 0x4f8
 // Size: 0x27a
 function main() {
@@ -24,18 +24,16 @@ function main() {
 }
 
 // Namespace mp_miniature_ladybug
-// Params 2, eflags: 0x1 linked
-// Checksum 0xe82ec69a, Offset: 0x780
-// Size: 0x12c
+// Params 2, eflags: 0x0
+// Checksum 0xa747e608, Offset: 0x780
+// Size: 0x11c
 function function_edb97aef(a_ents, str_id) {
     if (!isdefined(self.var_3bb24e3d)) {
         self.var_3bb24e3d = 0;
     }
     var_58380ee9 = a_ents["ladybug_" + str_id];
     var_58380ee9.takedamage = 1;
-    if (self.var_3bb24e3d != 0) {
-        var_58380ee9 util::waittill_notify_or_timeout("damage", randomintrange(10, 20));
-    }
+    var_58380ee9 util::waittill_notify_or_timeout("damage", randomintrange(10, 20));
     self.var_3bb24e3d++;
     if (self.var_3bb24e3d >= level.var_760ab2f[str_id].size) {
         self.var_3bb24e3d = 1;

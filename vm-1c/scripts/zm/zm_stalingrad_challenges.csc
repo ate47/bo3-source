@@ -1,9 +1,9 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_challenges;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a3d9fc6, Offset: 0x3f0
 // Size: 0x3e4
 function __init__() {
@@ -41,7 +41,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe83b2096, Offset: 0x7e0
 // Size: 0x166
 function function_5d17d17c() {
@@ -57,7 +57,7 @@ function function_5d17d17c() {
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8774c0a6, Offset: 0x950
 // Size: 0x1f6
 function function_6f749a23(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -78,7 +78,7 @@ function function_6f749a23(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2af06309, Offset: 0xb50
 // Size: 0xa4
 function function_87a462eb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -89,7 +89,7 @@ function function_87a462eb(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8eb9f25b, Offset: 0xc00
 // Size: 0x25a
 function function_93efc4ef(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -116,7 +116,7 @@ function function_93efc4ef(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3f4a4969, Offset: 0xe68
 // Size: 0x37a
 function function_553225f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,7 +155,7 @@ function function_553225f(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x568e291a, Offset: 0x11f0
 // Size: 0x1fc
 function function_20880e24(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -175,7 +175,7 @@ function function_20880e24(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc5947c59, Offset: 0x13f8
 // Size: 0xbc
 function function_e28f1c4a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -187,7 +187,7 @@ function function_e28f1c4a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7d99140a, Offset: 0x14c0
 // Size: 0xac
 function function_d4db02b2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -199,7 +199,7 @@ function function_d4db02b2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5c5b9777, Offset: 0x1578
 // Size: 0xbc
 function function_4ff59189(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_asylum_achievements;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9694411, Offset: 0x288
 // Size: 0x74
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x81ab4fb3, Offset: 0x308
 // Size: 0xac
 function achievement_sound_func(var_43e4662) {
@@ -47,7 +47,7 @@ function achievement_sound_func(var_43e4662) {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6537573d, Offset: 0x3c0
 // Size: 0x34
 function onplayerconnect() {
@@ -56,7 +56,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x14f87900, Offset: 0x400
 // Size: 0x8a
 function function_fa4b9452() {
@@ -72,7 +72,7 @@ function function_fa4b9452() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x301f0a68, Offset: 0x498
 // Size: 0x28
 function function_64c5daf7() {
@@ -82,7 +82,7 @@ function function_64c5daf7() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x424269c7, Offset: 0x4c8
 // Size: 0x5c
 function function_a90f7ab8() {
@@ -96,7 +96,7 @@ function function_a90f7ab8() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81abb22a, Offset: 0x530
 // Size: 0x4c
 function function_9c59bc3() {
@@ -110,7 +110,7 @@ function function_9c59bc3() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad0fc81b, Offset: 0x588
 // Size: 0x56
 function function_a366eb3e() {
@@ -124,7 +124,7 @@ function function_a366eb3e() {
 }
 
 // Namespace zm_asylum_achievements
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x38ff8fe9, Offset: 0x5e8
 // Size: 0x24c
 function function_1abfde35(e_attacker) {

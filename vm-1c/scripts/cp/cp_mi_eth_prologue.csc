@@ -1,28 +1,28 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_oed;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue_fx;
 #using scripts/cp/cp_mi_eth_prologue_patch_c;
 #using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_oed;
-#using scripts/cp/_load;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/duplicaterender_mgr;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_eth_prologue;
 
 // Namespace cp_mi_eth_prologue
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f3da00b, Offset: 0xa80
 // Size: 0x104
 function main() {
-    util::function_57b966c8(&function_71f88fc, 7);
+    util::function_57b966c8(&force_streamer, 7);
     function_f45953c();
     function_b37230e4();
     cp_mi_eth_prologue_fx::main();
@@ -36,7 +36,7 @@ function main() {
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x45e3de9e, Offset: 0xb90
 // Size: 0x1e
 function function_f45953c() {
@@ -44,7 +44,7 @@ function function_f45953c() {
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc24811e, Offset: 0xbb8
 // Size: 0x6a4
 function function_b37230e4() {
@@ -75,10 +75,10 @@ function function_b37230e4() {
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x37c8da34, Offset: 0x1268
 // Size: 0x106
-function function_71f88fc(n_index) {
+function force_streamer(n_index) {
     switch (n_index) {
     case 1:
         break;
@@ -102,7 +102,7 @@ function function_71f88fc(n_index) {
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcc40aa1f, Offset: 0x1378
 // Size: 0xa4
 function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -112,7 +112,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5c186a64, Offset: 0x1428
 // Size: 0x94
 function apc_speed_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -124,7 +124,7 @@ function apc_speed_blur(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1abcc81d, Offset: 0x14c8
 // Size: 0x94
 function function_d376a908(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -136,7 +136,7 @@ function function_d376a908(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2533a992, Offset: 0x1568
 // Size: 0x64
 function tunnel_wall_explode(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -146,7 +146,7 @@ function tunnel_wall_explode(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe1be65c9, Offset: 0x15d8
 // Size: 0xbc
 function function_9e6eac31(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -160,7 +160,7 @@ function function_9e6eac31(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd31a259b, Offset: 0x16a0
 // Size: 0x154
 function function_a014174b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -179,7 +179,7 @@ function function_a014174b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x651506de, Offset: 0x1800
 // Size: 0x254
 function function_5f6dad34(localclientnum, b_on) {
@@ -213,7 +213,7 @@ function function_5f6dad34(localclientnum, b_on) {
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x125b6dd, Offset: 0x1a60
 // Size: 0xd4
 function function_9fd7493(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -231,7 +231,7 @@ function function_9fd7493(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5f0c3479, Offset: 0x1b40
 // Size: 0x124
 function set_cam_lookat_object(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -250,7 +250,7 @@ function set_cam_lookat_object(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x465380df, Offset: 0x1c70
 // Size: 0x19e
 function sndCameraScanner(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -280,7 +280,7 @@ function sndCameraScanner(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb47fc66f, Offset: 0x1e18
 // Size: 0x39c
 function setup_security_cameras(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -313,7 +313,7 @@ function setup_security_cameras(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x25c245fc, Offset: 0x21c0
 // Size: 0x7c
 function function_c9395227(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -325,7 +325,7 @@ function function_c9395227(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe7a57c7, Offset: 0x2248
 // Size: 0xa4
 function function_b0867fa6(localclientnum, str_camera, var_81a24d4e, var_6516b558) {
@@ -364,7 +364,7 @@ function function_cd98eb8d() {
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbe19cf5e, Offset: 0x2420
 // Size: 0x112
 function function_a1ad4aa7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -375,7 +375,7 @@ function function_a1ad4aa7(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc9a24a4e, Offset: 0x2540
 // Size: 0x12c
 function blend_in_cleanup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -390,7 +390,7 @@ function blend_in_cleanup(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x37f7099e, Offset: 0x2678
 // Size: 0x9c
 function fuel_depot_truck_explosion(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -400,7 +400,7 @@ function fuel_depot_truck_explosion(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7569db4, Offset: 0x2720
 // Size: 0x6c
 function apc_rail_tower_collapse(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -410,7 +410,7 @@ function apc_rail_tower_collapse(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x602fe7f3, Offset: 0x2798
 // Size: 0x94
 function vtol_missile_explode_trash_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -421,7 +421,7 @@ function vtol_missile_explode_trash_fx(localclientnum, oldval, newval, bnewent, 
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2f643157, Offset: 0x2838
 // Size: 0x50
 function function_7e8cf38d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -431,7 +431,7 @@ function function_7e8cf38d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x640a373a, Offset: 0x2890
 // Size: 0x84
 function function_35a91904(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -443,7 +443,7 @@ function function_35a91904(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_eth_prologue
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4807b2aa, Offset: 0x2920
 // Size: 0x84
 function function_a7b0883f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

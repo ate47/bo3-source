@@ -1,7 +1,7 @@
 #namespace loadout;
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa8dce69b, Offset: 0x78
 // Size: 0xe
 function is_warlord_perk(itemindex) {
@@ -9,7 +9,7 @@ function is_warlord_perk(itemindex) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2c4d7a5f, Offset: 0x90
 // Size: 0x78
 function is_item_excluded(itemindex) {
@@ -26,7 +26,7 @@ function is_item_excluded(itemindex) {
 }
 
 // Namespace loadout
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcf017f4f, Offset: 0x110
 // Size: 0x78
 function getloadoutitemfromddlstats(customclassnum, loadoutslot) {
@@ -38,7 +38,7 @@ function getloadoutitemfromddlstats(customclassnum, loadoutslot) {
 }
 
 // Namespace loadout
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46e5e5ef, Offset: 0x190
 // Size: 0x24
 function initweaponattachments(weapon) {

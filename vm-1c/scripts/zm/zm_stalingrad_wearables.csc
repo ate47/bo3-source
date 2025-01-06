@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_utility;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_stalingrad_wearables;
 
 // Namespace zm_stalingrad_wearables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d8137b3, Offset: 0x110
 // Size: 0xbe
 function function_ad78a144() {
@@ -16,7 +16,7 @@ function function_ad78a144() {
 }
 
 // Namespace zm_stalingrad_wearables
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7bafacf6, Offset: 0x1d8
 // Size: 0x54
 function show_wearable(localclientnum, oldval, newval) {

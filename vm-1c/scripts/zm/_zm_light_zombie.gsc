@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/zm/_zm_devgui;
 #using scripts/codescripts/struct;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/archetype_utility;
 #using scripts/shared/_burnplayer;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_elemental_zombies;
 
 #namespace zm_light_zombie;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf548679, Offset: 0x458
 // Size: 0x2c
 function __init__() {
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x660078b6, Offset: 0x490
 // Size: 0x94
 function private register_clientfields() {
@@ -53,7 +53,7 @@ function private register_clientfields() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdcea95c4, Offset: 0x530
 // Size: 0x11c
 function function_a35db70f() {
@@ -72,7 +72,7 @@ function function_a35db70f() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b185d59, Offset: 0x658
 // Size: 0x34
 function function_cb744db7() {
@@ -82,7 +82,7 @@ function function_cb744db7() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb0d7002a, Offset: 0x698
 // Size: 0x78
 function function_68da949() {
@@ -98,12 +98,12 @@ function function_68da949() {
 }
 
 // Namespace zm_light_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd1349829, Offset: 0x718
 // Size: 0x1fc
 function light_zombie_death() {
     ai_zombie = self;
-    attacker = ai_zombie waittill(#"death");
+    ai_zombie waittill(#"death", attacker);
     if (!isdefined(ai_zombie) || ai_zombie.nuked === 1) {
         return;
     }
@@ -123,14 +123,14 @@ function light_zombie_death() {
 }
 
 // Namespace zm_light_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7d16cc23, Offset: 0x920
 // Size: 0x194
-function function_4745b0a9(var_ed7f4cc6) {
+function function_4745b0a9(flash_origin) {
     self endon(#"death");
     self endon(#"disconnect");
     player = self;
-    dist_sq = distancesquared(player.origin, var_ed7f4cc6);
+    dist_sq = distancesquared(player.origin, flash_origin);
     var_bfff29b1 = 16384;
     var_1536d9e9 = 4096;
     var_b79af7d4 = var_bfff29b1 - var_1536d9e9;
@@ -150,7 +150,7 @@ function function_4745b0a9(var_ed7f4cc6) {
 }
 
 // Namespace zm_light_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc3b9d835, Offset: 0xac0
 // Size: 0x7c
 function function_2335214f(var_9bde339b) {
@@ -166,7 +166,7 @@ function function_2335214f(var_9bde339b) {
 /#
 
     // Namespace zm_light_zombie
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x9b395481, Offset: 0xb48
     // Size: 0x228
     function function_ff8b7145() {

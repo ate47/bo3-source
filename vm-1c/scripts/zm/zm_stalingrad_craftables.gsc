@@ -1,25 +1,25 @@
-#using scripts/zm/zm_stalingrad_vo;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_audio;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
 #using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_stalingrad_vo;
 
 #namespace zm_stalingrad_craftables;
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd679755, Offset: 0x580
 // Size: 0x384
 function function_3ebec56b() {
@@ -46,7 +46,7 @@ function function_3ebec56b() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2bc26657, Offset: 0x910
 // Size: 0x3c
 function function_16bbd78d() {
@@ -54,7 +54,7 @@ function function_16bbd78d() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd644cb81, Offset: 0x958
 // Size: 0x84
 function function_95743e9f() {
@@ -65,7 +65,7 @@ function function_95743e9f() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87cdb941, Offset: 0x9e8
 // Size: 0x17c
 function register_clientfields() {
@@ -79,7 +79,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x39e83562, Offset: 0xb70
 // Size: 0x1f4
 function function_6545e739(player) {
@@ -108,7 +108,7 @@ function function_6545e739(player) {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xef7f0bb2, Offset: 0xd70
 // Size: 0x5c
 function function_7de936c2(player) {
@@ -119,7 +119,7 @@ function function_7de936c2(player) {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c4c03b0, Offset: 0xdd8
 // Size: 0xb8
 function function_39c3c699() {
@@ -141,7 +141,7 @@ function function_7b29071e(player) {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd193a5a1, Offset: 0xec8
 // Size: 0x54
 function function_69e0fb83(var_55ce4248, n_duration) {
@@ -156,7 +156,7 @@ function function_69e0fb83(var_55ce4248, n_duration) {
 // Size: 0xa4
 function function_f5b7f61a() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger()) {
             continue;
         }
@@ -172,7 +172,7 @@ function function_f5b7f61a() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x48497906, Offset: 0xfd8
 // Size: 0x14
 function function_59a8fb49(var_91089b66, player) {
@@ -180,12 +180,12 @@ function function_59a8fb49(var_91089b66, player) {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5251d626, Offset: 0xff8
 // Size: 0xb8
 function function_d7eb8f21() {
     while (true) {
-        e_who = level waittill(#"shield_built");
+        level waittill(#"shield_built", e_who);
         if (e_who.characterindex == 0) {
             var_4c5a66ad = 4;
         } else {

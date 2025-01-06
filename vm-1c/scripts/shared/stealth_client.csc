@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/cp/_load;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_client;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace stealth_client
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0ab345b, Offset: 0x1b0
 // Size: 0x2c
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace stealth_client
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xedee5511, Offset: 0x1e8
 // Size: 0x94
 function init_clientfields() {
@@ -34,7 +34,7 @@ function init_clientfields() {
 }
 
 // Namespace stealth_client
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd459bdd0, Offset: 0x288
 // Size: 0xa2
 function function_f35fe4e2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,7 +50,7 @@ function function_f35fe4e2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace stealth_client
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3fae3892, Offset: 0x338
 // Size: 0x94
 function function_b1ff0e4c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -66,7 +66,7 @@ function function_b1ff0e4c(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace stealth_client
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c15178a, Offset: 0x3d8
 // Size: 0x9e
 function function_b557fc53() {
@@ -86,7 +86,7 @@ function function_b557fc53() {
 }
 
 // Namespace stealth_client
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x568f94c3, Offset: 0x480
 // Size: 0x76
 function function_d473128e() {

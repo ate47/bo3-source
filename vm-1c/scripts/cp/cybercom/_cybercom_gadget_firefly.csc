@@ -1,15 +1,15 @@
-#using scripts/shared/array_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_fbc778c5;
 
 // Namespace namespace_fbc778c5
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc45e0c15, Offset: 0x428
 // Size: 0x162
 function init() {
@@ -29,7 +29,7 @@ function init() {
 }
 
 // Namespace namespace_fbc778c5
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9e1cc2, Offset: 0x598
 // Size: 0x94
 function init_clientfields() {
@@ -38,7 +38,7 @@ function init_clientfields() {
 }
 
 // Namespace namespace_fbc778c5
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x88f23bf1, Offset: 0x638
 // Size: 0x370
 function firefly_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -86,7 +86,7 @@ function firefly_state(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace namespace_fbc778c5
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd8a5393, Offset: 0x9b0
 // Size: 0x308
 function function_595dab90(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

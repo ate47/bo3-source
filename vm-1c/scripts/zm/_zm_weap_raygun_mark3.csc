@@ -1,11 +1,11 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace _zm_weap_raygun_mark3;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeaa6cf0, Offset: 0x4a8
 // Size: 0x2c4
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8322bb81, Offset: 0x778
 // Size: 0x34
 function function_b08b743e(weapon) {
@@ -51,14 +51,14 @@ function function_b08b743e(weapon) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe800478a, Offset: 0x7b8
 // Size: 0x100
 function function_b6be5f5d(var_6575414d) {
     player = getlocalplayer(var_6575414d);
     player endon(#"death");
     while (true) {
-        weapon = player waittill(#"weapon_change");
+        player waittill(#"weapon_change", weapon);
         if (function_b08b743e(weapon)) {
             player mapshaderconstant(var_6575414d, 0, "scriptVector2", 0, 1, 0, 0);
             player thread function_e6f6c7dd(var_6575414d);
@@ -70,7 +70,7 @@ function function_b6be5f5d(var_6575414d) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb9a9b102, Offset: 0x8c0
 // Size: 0xc8
 function function_e6f6c7dd(var_6575414d) {
@@ -86,14 +86,14 @@ function function_e6f6c7dd(var_6575414d) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6f4bed28, Offset: 0x990
 // Size: 0x58
 function function_2797cc03(str_notetrack) {
     self endon(#"hash_e6f6c7dd");
     self endon(#"death");
     while (true) {
-        str_note = self waittill(#"notetrack");
+        self waittill(#"notetrack", str_note);
         if (str_note == str_notetrack) {
             return;
         }
@@ -101,7 +101,7 @@ function function_2797cc03(str_notetrack) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6714f73, Offset: 0x9f0
 // Size: 0x134
 function slow_vortex_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
@@ -120,7 +120,7 @@ function slow_vortex_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, 
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x71253cc3, Offset: 0xb30
 // Size: 0x154
 function ai_slow_vortex_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
@@ -141,7 +141,7 @@ function ai_slow_vortex_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed13
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe0070e9f, Offset: 0xc90
 // Size: 0xa0
 function vortex_shake_and_rumble(var_6575414d, var_fbdacb94) {
@@ -160,7 +160,7 @@ function vortex_shake_and_rumble(var_6575414d, var_fbdacb94) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x921731ec, Offset: 0xd38
 // Size: 0x120
 function function_cfe69f7a(var_6575414d, var_dfd13974) {
@@ -184,7 +184,7 @@ function function_cfe69f7a(var_6575414d, var_dfd13974) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc9f7296, Offset: 0xe60
 // Size: 0x124
 function ai_disintegrate(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {

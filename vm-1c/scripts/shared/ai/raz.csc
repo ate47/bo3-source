@@ -1,6 +1,6 @@
-#using scripts/shared/postfx_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/postfx_shared;
 
 #using_animtree("generic");
 
@@ -8,7 +8,7 @@
 
 // Namespace raz
 // Params 0, eflags: 0x2
-// Checksum 0xb023007a, Offset: 0x828
+// Checksum 0xec9cc4c9, Offset: 0x828
 // Size: 0x2fc
 function autoexec main() {
     clientfield::register("scriptmover", "raz_detonate_ground_torpedo", 12000, 1, "int", &namespace_18051440::function_c863523a, 0, 0);
@@ -26,7 +26,7 @@ function autoexec main() {
 
 // Namespace raz
 // Params 0, eflags: 0x2
-// Checksum 0xbf086ab2, Offset: 0xb30
+// Checksum 0xf7860abd, Offset: 0xb30
 // Size: 0x70e
 function autoexec precache() {
     level._effect["fx_mech_foot_step"] = "dlc1/castle/fx_mech_foot_step";
@@ -127,8 +127,8 @@ function autoexec precache() {
 #namespace namespace_18051440;
 
 // Namespace namespace_18051440
-// Params 1, eflags: 0x5 linked
-// Checksum 0xec8806fa, Offset: 0x1248
+// Params 1, eflags: 0x4
+// Checksum 0xcb1b6099, Offset: 0x1248
 // Size: 0x74
 function private function_7d543cc5(localclientnum) {
     level._footstepcbfuncs[self.archetype] = &function_50a63da9;
@@ -138,8 +138,8 @@ function private function_7d543cc5(localclientnum) {
 }
 
 // Namespace namespace_18051440
-// Params 1, eflags: 0x5 linked
-// Checksum 0xe6f629e5, Offset: 0x12c8
+// Params 1, eflags: 0x4
+// Checksum 0xfcac9bef, Offset: 0x12c8
 // Size: 0x88
 function private function_568564ac(localclientnum) {
     self endon(#"death");
@@ -152,8 +152,8 @@ function private function_568564ac(localclientnum) {
 }
 
 // Namespace namespace_18051440
-// Params 1, eflags: 0x5 linked
-// Checksum 0x51f41f28, Offset: 0x1358
+// Params 1, eflags: 0x4
+// Checksum 0x47b95dfe, Offset: 0x1358
 // Size: 0x70
 function private function_24f717d3(localclientnum) {
     self endon(#"death");
@@ -164,8 +164,8 @@ function private function_24f717d3(localclientnum) {
 }
 
 // Namespace namespace_18051440
-// Params 1, eflags: 0x5 linked
-// Checksum 0x3d2059a8, Offset: 0x13d0
+// Params 1, eflags: 0x4
+// Checksum 0x9a291190, Offset: 0x13d0
 // Size: 0x100
 function private function_641f53cd(localclientnum) {
     self endon(#"hash_72520958");
@@ -184,8 +184,8 @@ function private function_641f53cd(localclientnum) {
 }
 
 // Namespace namespace_18051440
-// Params 1, eflags: 0x5 linked
-// Checksum 0x48bc00b8, Offset: 0x14d8
+// Params 1, eflags: 0x4
+// Checksum 0x913d0257, Offset: 0x14d8
 // Size: 0x3c
 function private function_da40a496(localclientnum) {
     self waittill(#"hash_72520958");
@@ -195,8 +195,8 @@ function private function_da40a496(localclientnum) {
 }
 
 // Namespace namespace_18051440
-// Params 5, eflags: 0x1 linked
-// Checksum 0xccde52c4, Offset: 0x1520
+// Params 5, eflags: 0x0
+// Checksum 0xac242e75, Offset: 0x1520
 // Size: 0x238
 function function_50a63da9(localclientnum, pos, surface, notetrack, bone) {
     e_player = getlocalplayer(localclientnum);
@@ -228,24 +228,24 @@ function function_50a63da9(localclientnum, pos, surface, notetrack, bone) {
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x5 linked
-// Checksum 0xd1b3cbba, Offset: 0x1760
+// Params 7, eflags: 0x4
+// Checksum 0x6e2c6bb9, Offset: 0x1760
 // Size: 0x78
 function private function_c863523a(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     fx = playfx(localclientnum, level._effect["fx_raz_mc_shockwave_projectile_impact"], self.origin);
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x5 linked
-// Checksum 0xd9dc20de, Offset: 0x17e0
+// Params 7, eflags: 0x4
+// Checksum 0xd277068f, Offset: 0x17e0
 // Size: 0x78
 function private function_758ead37(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     fx = playfx(localclientnum, level._effect["fx_bul_impact_concrete_xtreme"], self.origin);
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x5 linked
-// Checksum 0xc04015ea, Offset: 0x1860
+// Params 7, eflags: 0x4
+// Checksum 0x8b518e65, Offset: 0x1860
 // Size: 0xd4
 function private function_630145e6(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue == 0 && isdefined(self.var_3b99e5c2)) {
@@ -258,8 +258,8 @@ function private function_630145e6(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x5 linked
-// Checksum 0x830464fb, Offset: 0x1940
+// Params 7, eflags: 0x4
+// Checksum 0xb79bafba, Offset: 0x1940
 // Size: 0x1bc
 function private function_776cfd62(localclientnum, model, pos, angles, hitpos, var_9474878, direction) {
     if (!isdefined(var_9474878)) {
@@ -272,22 +272,22 @@ function private function_776cfd62(localclientnum, model, pos, angles, hitpos, v
     var_829e8366 = vectornormalize(velocity);
     var_b02fd9f = length(velocity);
     if (isdefined(direction) && direction == "back") {
-        var_f3114f24 = anglestoforward(self.angles) * -1;
+        launch_dir = anglestoforward(self.angles) * -1;
     } else {
-        var_f3114f24 = anglestoforward(self.angles);
+        launch_dir = anglestoforward(self.angles);
     }
     var_b02fd9f *= 0.1;
     if (var_b02fd9f < 10) {
         var_b02fd9f = 10;
     }
-    var_f3114f24 = var_f3114f24 * 0.5 + var_829e8366 * 0.5;
-    var_f3114f24 *= var_b02fd9f;
-    createdynentandlaunch(localclientnum, model, pos, angles, self.origin, var_f3114f24 * var_9474878);
+    launch_dir = launch_dir * 0.5 + var_829e8366 * 0.5;
+    launch_dir *= var_b02fd9f;
+    createdynentandlaunch(localclientnum, model, pos, angles, self.origin, launch_dir * var_9474878);
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x5 linked
-// Checksum 0x443be85e, Offset: 0x1b08
+// Params 7, eflags: 0x4
+// Checksum 0x5a69a0a4, Offset: 0x1b08
 // Size: 0x1dc
 function private function_5e763aa7(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     fx = playfxontag(localclientnum, level._effect["fx_raz_dest_weak_point_exp"], self, "TAG_FX_Shoulder_RI_GIB");
@@ -301,16 +301,16 @@ function private function_5e763aa7(localclientnum, oldvalue, newvalue, bnewent, 
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x5 linked
-// Checksum 0xd6bcc010, Offset: 0x1cf0
+// Params 7, eflags: 0x4
+// Checksum 0xfa8d97a2, Offset: 0x1cf0
 // Size: 0x78
 function private function_77178dcd(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     fx = playfxontag(localclientnum, level._effect["fx_raz_dmg_weak_point"], self, "j_shoulder_ri");
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x1 linked
-// Checksum 0xeeefb1b4, Offset: 0x1d70
+// Params 7, eflags: 0x0
+// Checksum 0x118c2a4f, Offset: 0x1d70
 // Size: 0x174
 function function_e4d9298e(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     pos = self gettagorigin("j_elbow_ri");
@@ -322,8 +322,8 @@ function function_e4d9298e(localclientnum, oldvalue, newvalue, bnewent, binitial
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x1 linked
-// Checksum 0x10a865a, Offset: 0x1ef0
+// Params 7, eflags: 0x0
+// Checksum 0xa08c6597, Offset: 0x1ef0
 // Size: 0x144
 function function_72baa781(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     pos = self gettagorigin("j_spine4_attach");
@@ -334,8 +334,8 @@ function function_72baa781(localclientnum, oldvalue, newvalue, bnewent, binitial
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x1 linked
-// Checksum 0xc652729e, Offset: 0x2040
+// Params 7, eflags: 0x0
+// Checksum 0x83b541f4, Offset: 0x2040
 // Size: 0x144
 function function_d9d44375(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     pos = self gettagorigin("j_shouldertwist_le_attach");
@@ -346,8 +346,8 @@ function function_d9d44375(localclientnum, oldvalue, newvalue, bnewent, binitial
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x1 linked
-// Checksum 0x178e3010, Offset: 0x2190
+// Params 7, eflags: 0x0
+// Checksum 0xc40d7c52, Offset: 0x2190
 // Size: 0x144
 function function_714df297(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     pos = self gettagorigin("j_hiptwist_le_attach");
@@ -358,8 +358,8 @@ function function_714df297(localclientnum, oldvalue, newvalue, bnewent, binitial
 }
 
 // Namespace namespace_18051440
-// Params 7, eflags: 0x1 linked
-// Checksum 0xbc4d8806, Offset: 0x22e0
+// Params 7, eflags: 0x0
+// Checksum 0x4e4b077d, Offset: 0x22e0
 // Size: 0x144
 function function_7528da2a(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     pos = self gettagorigin("j_hiptwist_ri_attach");
@@ -370,8 +370,8 @@ function function_7528da2a(localclientnum, oldvalue, newvalue, bnewent, binitial
 }
 
 // Namespace namespace_18051440
-// Params 2, eflags: 0x5 linked
-// Checksum 0x7b9dbef9, Offset: 0x2430
+// Params 2, eflags: 0x4
+// Checksum 0x76a7bab8, Offset: 0x2430
 // Size: 0xd4
 function private applynewfaceanim(localclientnum, animation) {
     self endon(#"disconnect");
@@ -387,8 +387,8 @@ function private applynewfaceanim(localclientnum, animation) {
 }
 
 // Namespace namespace_18051440
-// Params 1, eflags: 0x5 linked
-// Checksum 0x6e1f871b, Offset: 0x2510
+// Params 1, eflags: 0x4
+// Checksum 0xdaa067e6, Offset: 0x2510
 // Size: 0x7e
 function private clearcurrentfacialanim(localclientnum) {
     if (isdefined(self._currentfaceanim) && self hasdobj(localclientnum) && self hasanimtree()) {

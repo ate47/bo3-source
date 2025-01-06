@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/medals_shared;
+#using scripts/shared/persistence_shared;
+#using scripts/shared/rank_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/weapons/_weapons;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/rank_shared;
-#using scripts/shared/persistence_shared;
-#using scripts/shared/medals_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace popups;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace popups
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x867e07c8, Offset: 0x288
 // Size: 0x24
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace popups
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d47a933, Offset: 0x2b8
 // Size: 0x1fc
 function init() {
@@ -61,7 +61,7 @@ function init() {
 }
 
 // Namespace popups
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x545a4f4d, Offset: 0x4c0
 // Size: 0x44
 function on_player_connect() {
@@ -75,7 +75,7 @@ function on_player_connect() {
 /#
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb34eb0a6, Offset: 0x510
     // Size: 0x54
     function devgui_notif_getgunleveltablename() {
@@ -89,7 +89,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa0aab2c2, Offset: 0x570
     // Size: 0x4e
     function devgui_notif_getchallengestablecount() {
@@ -103,7 +103,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x6cfda47e, Offset: 0x5c8
     // Size: 0x8a
     function devgui_notif_getchallengestablename(tableid) {
@@ -117,7 +117,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xeb7d1c2f, Offset: 0x660
     // Size: 0x44
     function function_2358da67() {
@@ -127,7 +127,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbed6750f, Offset: 0x6b0
     // Size: 0x206
     function devgui_create_weapon_levels_table() {
@@ -155,7 +155,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xeb16da80, Offset: 0x8c0
     // Size: 0x114
     function function_9a14a686() {
@@ -178,7 +178,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6c6630a3, Offset: 0x9e0
     // Size: 0xec
     function devgui_notif_init() {
@@ -198,7 +198,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa431cf3, Offset: 0xad8
     // Size: 0x124
     function notif_devgui_rank() {
@@ -221,7 +221,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x71c447b5, Offset: 0xc08
     // Size: 0x96
     function notif_devgui_rank_up_think() {
@@ -238,7 +238,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3982cb3b, Offset: 0xca8
     // Size: 0x7fc
     function notif_devgui_gun_rank() {
@@ -320,7 +320,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7df47c8f, Offset: 0x14b0
     // Size: 0x156
     function notif_devgui_gun_level_think() {
@@ -343,7 +343,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe91159f8, Offset: 0x1610
     // Size: 0x32c
     function notif_devgui_challenges() {
@@ -374,7 +374,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb79669bd, Offset: 0x1948
     // Size: 0x346
     function notif_devgui_challenges_think() {
@@ -421,7 +421,7 @@ function on_player_connect() {
     }
 
     // Namespace popups
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7829fcca, Offset: 0x1c98
     // Size: 0x6a8
     function popupsfromconsole() {
@@ -519,7 +519,7 @@ function on_player_connect() {
 #/
 
 // Namespace popups
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2092ebe5, Offset: 0x2348
 // Size: 0x8c
 function displaykillstreakteammessagetoall(killstreak, player) {
@@ -534,7 +534,7 @@ function displaykillstreakteammessagetoall(killstreak, player) {
 }
 
 // Namespace popups
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x88cd6a5f, Offset: 0x23e0
 // Size: 0x8c
 function displaykillstreakhackedteammessagetoall(killstreak, player) {
@@ -549,7 +549,7 @@ function displaykillstreakhackedteammessagetoall(killstreak, player) {
 }
 
 // Namespace popups
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb7681166, Offset: 0x2478
 // Size: 0x2c
 function shoulddisplayteammessages() {
@@ -560,7 +560,7 @@ function shoulddisplayteammessages() {
 }
 
 // Namespace popups
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2d8e08c5, Offset: 0x24b0
 // Size: 0x136
 function displayteammessagetoall(message, player) {
@@ -584,7 +584,7 @@ function displayteammessagetoall(message, player) {
 }
 
 // Namespace popups
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa1846b22, Offset: 0x25f0
 // Size: 0x156
 function displayteammessagetoteam(message, player, team) {
@@ -611,7 +611,7 @@ function displayteammessagetoteam(message, player, team) {
 }
 
 // Namespace popups
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xacf6b28a, Offset: 0x2750
 // Size: 0x150
 function function_57624cb5() {
@@ -641,7 +641,7 @@ function function_57624cb5() {
 }
 
 // Namespace popups
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x928d1eb1, Offset: 0x28a8
 // Size: 0x29a
 function function_d3829eca() {

@@ -1,19 +1,19 @@
-#using scripts/shared/system_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #using_animtree("generic");
 
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_portals
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x970e7e6f, Offset: 0x5a8
 // Size: 0x464
 function __init__() {
@@ -51,7 +51,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_portals
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5b09edd, Offset: 0xa18
 // Size: 0xde
 function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -69,7 +69,7 @@ function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_genesis_portals
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5924945f, Offset: 0xb00
 // Size: 0x4c
 function function_e7a8756e(localclientnum) {
@@ -78,7 +78,7 @@ function function_e7a8756e(localclientnum) {
 }
 
 // Namespace zm_genesis_portals
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x90f4ca8c, Offset: 0xb58
 // Size: 0x1de
 function player_light_exploder(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -117,7 +117,7 @@ function player_light_exploder(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_genesis_portals
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x146146c6, Offset: 0xd40
 // Size: 0xb4
 function genesis_light_exposure(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -131,7 +131,7 @@ function genesis_light_exposure(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_genesis_portals
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x25b6ec63, Offset: 0xe00
 // Size: 0x7c
 function function_44c843d5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -143,7 +143,7 @@ function function_44c843d5(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_portals
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdc270e20, Offset: 0xe88
 // Size: 0x262
 function function_7e1ae25a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

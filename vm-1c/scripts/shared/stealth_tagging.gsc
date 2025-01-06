@@ -1,13 +1,13 @@
 #using scripts/cp/_oed;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/stealth;
-#using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_tagging;
 
 // Namespace stealth_tagging
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x148
 // Size: 0x4
 function init() {
@@ -15,7 +15,7 @@ function init() {
 }
 
 // Namespace stealth_tagging
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce06e423, Offset: 0x158
 // Size: 0x20
 function enabled() {
@@ -89,7 +89,7 @@ function function_fe19d58d() {
 }
 
 // Namespace stealth_tagging
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdf939e08, Offset: 0x768
 // Size: 0xbc
 function function_a10a834e(tagged) {
@@ -107,7 +107,7 @@ function function_a10a834e(tagged) {
 }
 
 // Namespace stealth_tagging
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd87d8997, Offset: 0x830
 // Size: 0x114
 function function_980170b6(var_10387988, enemy) {

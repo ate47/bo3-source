@@ -1,5 +1,5 @@
-#using scripts/shared/callbacks_shared;
 #using scripts/cp/gametypes/coop;
+#using scripts/shared/callbacks_shared;
 
 #namespace cpzm;
 

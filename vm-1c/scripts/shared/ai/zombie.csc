@@ -1,5 +1,5 @@
-#using scripts/shared/ai_shared;
 #using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai_shared;
 #using scripts/shared/clientfield_shared;
 
 #namespace zombie;
@@ -26,7 +26,7 @@ function autoexec main() {
 #namespace zombieclientutils;
 
 // Namespace zombieclientutils
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2000701f, Offset: 0x4b0
 // Size: 0x184
 function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -45,7 +45,7 @@ function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap
 }
 
 // Namespace zombieclientutils
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x1d4b1da8, Offset: 0x640
 // Size: 0xc6
 function private _gibcallback(localclientnum, entity, gibflag) {
@@ -63,7 +63,7 @@ function private _gibcallback(localclientnum, entity, gibflag) {
 }
 
 // Namespace zombieclientutils
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3e5013c9, Offset: 0x710
 // Size: 0xfc
 function zombiespecialdayeffectshandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -77,7 +77,7 @@ function zombiespecialdayeffectshandler(localclientnum, oldvalue, newvalue, bnew
 }
 
 // Namespace zombieclientutils
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2dd457df, Offset: 0x818
 // Size: 0x14e
 function zombie_override_burn_fx(localclientnum) {

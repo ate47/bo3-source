@@ -1,17 +1,16 @@
-#using scripts/mp/mp_western_sound;
-#using scripts/mp/mp_western_fx;
-#using scripts/mp/_util;
+#using scripts/codescripts/struct;
 #using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_western_fx;
+#using scripts/mp/mp_western_sound;
 #using scripts/shared/compass;
 #using scripts/shared/util_shared;
-#using scripts/shared/_oob;
-#using scripts/codescripts/struct;
 
 #namespace mp_western;
 
 // Namespace mp_western
-// Params 0, eflags: 0x1 linked
-// Checksum 0x100e9159, Offset: 0x170
+// Params 0, eflags: 0x0
+// Checksum 0xe8b09aa1, Offset: 0x158
 // Size: 0xfc
 function main() {
     precache();
@@ -24,8 +23,8 @@ function main() {
 }
 
 // Namespace mp_western
-// Params 0, eflags: 0x1 linked
-// Checksum 0x99ec1590, Offset: 0x278
+// Params 0, eflags: 0x0
+// Checksum 0x99ec1590, Offset: 0x260
 // Size: 0x4
 function precache() {
     

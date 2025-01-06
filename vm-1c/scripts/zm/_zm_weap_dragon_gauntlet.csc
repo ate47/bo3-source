@@ -1,9 +1,9 @@
 #using scripts/shared/callbacks_shared;
-#using scripts/zm/_callbacks;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicles/_dragon_whelp;
+#using scripts/zm/_callbacks;
 
 #namespace zm_weap_dragon_gauntlet;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x14b25167, Offset: 0x538
 // Size: 0x24
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x79cc3a39, Offset: 0x568
 // Size: 0x24
 function player_on_spawned(localclientnum) {
@@ -32,7 +32,7 @@ function player_on_spawned(localclientnum) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xceb2ebf0, Offset: 0x598
 // Size: 0x18e
 function watch_weapon_changes(localclientnum) {
@@ -41,7 +41,7 @@ function watch_weapon_changes(localclientnum) {
     self.dragon_gauntlet = getweapon("dragon_gauntlet_flamethrower");
     self.var_dd5c3be0 = getweapon("dragon_gauntlet");
     while (isdefined(self)) {
-        weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", weapon);
         if (weapon === self.dragon_gauntlet) {
             self thread function_7645efdb(localclientnum);
             self thread function_6c7c9327(localclientnum);
@@ -61,7 +61,7 @@ function watch_weapon_changes(localclientnum) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7052a51b, Offset: 0x730
 // Size: 0x16e
 function function_6c7c9327(localclientnum) {
@@ -79,7 +79,7 @@ function function_6c7c9327(localclientnum) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x14c08406, Offset: 0x8a8
 // Size: 0x2be
 function function_a8ac2d1d(localclientnum) {
@@ -103,7 +103,7 @@ function function_a8ac2d1d(localclientnum) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1485465f, Offset: 0xb70
 // Size: 0xb2
 function function_99aba1a5(localclientnum) {
@@ -115,7 +115,7 @@ function function_99aba1a5(localclientnum) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6cbd7e65, Offset: 0xc30
 // Size: 0xb2
 function function_7645efdb(localclientnum) {
@@ -127,7 +127,7 @@ function function_7645efdb(localclientnum) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbb81351a, Offset: 0xcf0
 // Size: 0x31e
 function function_3011ccf6(localclientnum) {
@@ -138,7 +138,7 @@ function function_3011ccf6(localclientnum) {
     self notify(#"hash_8d98e9db");
     self endon(#"hash_8d98e9db");
     while (isdefined(self)) {
-        note = self waittill(#"notetrack");
+        self waittill(#"notetrack", note);
         if (note === "dragon_gauntlet_115_punch_fx_start") {
             if (!isdefined(self.var_4d73e75b)) {
                 self.var_4d73e75b = [];

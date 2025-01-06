@@ -1,32 +1,32 @@
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_aquifer_objectives;
-#using scripts/cp/cp_mi_cairo_aquifer_utility;
 #using scripts/cp/cp_mi_cairo_aquifer_sound;
+#using scripts/cp/cp_mi_cairo_aquifer_utility;
+#using scripts/cp/gametypes/_battlechatter;
 #using scripts/cp/gametypes/_save;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/scene_shared;
 #using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai_shared;
 #using scripts/shared/animation_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/cp/_debug;
-#using scripts/cp/_skipto;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_aquifer_interior;
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6c0236f, Offset: 0xa20
 // Size: 0xfc
 function function_608c4683() {
@@ -44,7 +44,7 @@ function function_608c4683() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x10ae76fe, Offset: 0xb28
 // Size: 0x1fc
 function function_afb6fe67() {
@@ -66,7 +66,7 @@ function function_afb6fe67() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2fd97059, Offset: 0xd30
 // Size: 0x4c
 function function_2fde871a() {
@@ -75,7 +75,7 @@ function function_2fde871a() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xacb8793d, Offset: 0xd88
 // Size: 0xce
 function function_2fc2978c() {
@@ -102,7 +102,7 @@ function function_a4c59129() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6e19f7a, Offset: 0xf18
 // Size: 0x6c
 function function_bd50ac83() {
@@ -123,7 +123,7 @@ function function_3fd5eb17() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28aa47dc, Offset: 0xfe8
 // Size: 0x314
 function function_3a330f78() {
@@ -157,7 +157,7 @@ function function_3a330f78() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x26f720b3, Offset: 0x1308
 // Size: 0xec
 function function_1d5b05a(var_74cd64bc) {
@@ -179,7 +179,7 @@ function function_1d5b05a(var_74cd64bc) {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9642f7c4, Offset: 0x1400
 // Size: 0x276
 function function_ff024877() {
@@ -193,20 +193,20 @@ function function_ff024877() {
     array::run_all(level.activeplayers, &setmovespeedscale, 0.7);
     thread function_291b34c9();
     thread function_c48c4f99();
-    thread function_25357c2e();
+    thread escape_vo();
     thread function_3a77d1bf();
-    var_8a6d11 = function_246476fd(0, "cin_aqu_07_10_escape_vign_run_hendricks_a", "cin_aqu_07_10_escape_vign_wait_hendricks_a", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_a");
-    var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_b", "cin_aqu_07_10_escape_vign_wait_hendricks_b", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_b");
-    var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_c", "cin_aqu_07_10_escape_vign_wait_hendricks_c", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_c");
-    var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_d", "cin_aqu_07_10_escape_vign_wait_hendricks_d", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic2", 1, "hend_runout_d");
-    if (var_8a6d11) {
-        var_8a6d11 = function_246476fd(var_8a6d11, "cin_aqu_07_10_escape_vign_run_hendricks_e", undefined, undefined, "run_out_cinematic2", 0, undefined);
+    do_intro = function_246476fd(0, "cin_aqu_07_10_escape_vign_run_hendricks_a", "cin_aqu_07_10_escape_vign_wait_hendricks_a", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_a");
+    do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_b", "cin_aqu_07_10_escape_vign_wait_hendricks_b", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_b");
+    do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_c", "cin_aqu_07_10_escape_vign_wait_hendricks_c", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic1", 1, "hend_runout_c");
+    do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_d", "cin_aqu_07_10_escape_vign_wait_hendricks_d", "cin_aqu_07_10_escape_vign_wait_loop_hendricks_a", "run_out_cinematic2", 1, "hend_runout_d");
+    if (do_intro) {
+        do_intro = function_246476fd(do_intro, "cin_aqu_07_10_escape_vign_run_hendricks_e", undefined, undefined, "run_out_cinematic2", 0, undefined);
     }
     level.hendricks.n_script_anim_rate = undefined;
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x541d4435, Offset: 0x1680
 // Size: 0x94
 function function_3a77d1bf() {
@@ -230,7 +230,7 @@ function function_64386226() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2dfeda84, Offset: 0x1768
 // Size: 0x278
 function function_291b34c9() {
@@ -254,7 +254,7 @@ function function_291b34c9() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c046076, Offset: 0x19e8
 // Size: 0x1ea
 function function_c48c4f99() {
@@ -288,7 +288,7 @@ function function_e916ac0e() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb2f4ec3b, Offset: 0x1c50
 // Size: 0x5c
 function function_397e963e() {
@@ -298,14 +298,14 @@ function function_397e963e() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1d736380, Offset: 0x1cb8
 // Size: 0x292
-function function_246476fd(var_8a6d11, var_f17304b7, var_75422735, var_b6b983f4, var_426bda58, var_2d3b4a98, var_6bf6eac8) {
-    struct = getent(var_426bda58, "targetname");
+function function_246476fd(do_intro, var_f17304b7, var_75422735, var_b6b983f4, struct_name, var_2d3b4a98, var_6bf6eac8) {
+    struct = getent(struct_name, "targetname");
     var_482ba61c = 1.2;
     level.hendricks.n_script_anim_rate = var_482ba61c;
-    if (var_8a6d11) {
+    if (do_intro) {
         struct scene::init(var_f17304b7, level.hendricks);
         level waittill(#"hash_20aa8e12");
     }
@@ -330,7 +330,7 @@ function function_246476fd(var_8a6d11, var_f17304b7, var_75422735, var_b6b983f4,
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf132ea5c, Offset: 0x1f58
 // Size: 0x1a
 function function_8ed6a39f(a_ents) {
@@ -338,7 +338,7 @@ function function_8ed6a39f(a_ents) {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27fcafd7, Offset: 0x1f80
 // Size: 0x114
 function function_a8f7f041() {
@@ -354,10 +354,10 @@ function function_a8f7f041() {
 }
 
 // Namespace cp_mi_cairo_aquifer_interior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa760b906, Offset: 0x20a0
 // Size: 0x34e
-function function_25357c2e() {
+function escape_vo() {
     var_296988d3 = [];
     if (!isdefined(var_296988d3)) {
         var_296988d3 = [];

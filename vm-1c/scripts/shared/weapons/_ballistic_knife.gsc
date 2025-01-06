@@ -1,14 +1,14 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace ballistic_knife;
 
 // Namespace ballistic_knife
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x79ad53c6, Offset: 0x1c8
 // Size: 0x24
 function init_shared() {
@@ -16,14 +16,14 @@ function init_shared() {
 }
 
 // Namespace ballistic_knife
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb6f9f2bc, Offset: 0x1f8
 // Size: 0x334
 function onspawn(watcher, player) {
     player endon(#"death");
     player endon(#"disconnect");
     level endon(#"game_ended");
-    endpos, normal, angles, attacker, prey, bone = self waittill(#"stationary");
+    self waittill(#"stationary", endpos, normal, angles, attacker, prey, bone);
     isfriendly = 0;
     if (isdefined(endpos)) {
         retrievable_model = spawn("script_model", endpos);
@@ -63,7 +63,7 @@ function onspawn(watcher, player) {
 }
 
 // Namespace ballistic_knife
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbed08e73, Offset: 0x538
 // Size: 0x44
 function watch_shutdown() {
@@ -75,14 +75,14 @@ function watch_shutdown() {
 }
 
 // Namespace ballistic_knife
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x33386e08, Offset: 0x588
 // Size: 0x32c
 function onspawnretrievetrigger(watcher, player) {
     player endon(#"death");
     player endon(#"disconnect");
     level endon(#"game_ended");
-    retrievable_model, normal, prey = player waittill(#"ballistic_knife_stationary");
+    player waittill(#"ballistic_knife_stationary", retrievable_model, normal, prey);
     if (!isdefined(retrievable_model)) {
         return;
     }
@@ -113,7 +113,7 @@ function onspawnretrievetrigger(watcher, player) {
 }
 
 // Namespace ballistic_knife
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xa5c5fe6c, Offset: 0x8c0
 // Size: 0x2ce
 function function_35579833(trigger, model, callback, playersoundonuse, npcsoundonuse) {
@@ -122,7 +122,7 @@ function function_35579833(trigger, model, callback, playersoundonuse, npcsoundo
     level endon(#"game_ended");
     max_ammo = level.weaponballisticknife.maxammo + 1;
     while (true) {
-        player = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", player);
         if (!isalive(player)) {
             continue;
         }
@@ -142,11 +142,11 @@ function function_35579833(trigger, model, callback, playersoundonuse, npcsoundo
         if (!isdefined(var_e22a57bc)) {
             continue;
         }
-        var_f9d374f8 = player getweaponammostock(var_e22a57bc);
-        var_b58eae98 = player getweaponammoclip(var_e22a57bc);
-        total_ammo = var_f9d374f8 + var_b58eae98;
+        ammo_stock = player getweaponammostock(var_e22a57bc);
+        ammo_clip = player getweaponammoclip(var_e22a57bc);
+        total_ammo = ammo_stock + ammo_clip;
         var_34eba11f = 1;
-        if (total_ammo > 0 && var_f9d374f8 == total_ammo) {
+        if (total_ammo > 0 && ammo_stock == total_ammo) {
             var_34eba11f = 0;
         }
         if (total_ammo >= max_ammo || !var_34eba11f) {
@@ -164,7 +164,7 @@ function function_35579833(trigger, model, callback, playersoundonuse, npcsoundo
 }
 
 // Namespace ballistic_knife
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf774c980, Offset: 0xb98
 // Size: 0x18c
 function pick_up(player) {
@@ -190,7 +190,7 @@ function pick_up(player) {
 }
 
 // Namespace ballistic_knife
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa5eff024, Offset: 0xd30
 // Size: 0x5c
 function destroy_ent() {
@@ -204,19 +204,19 @@ function destroy_ent() {
 }
 
 // Namespace ballistic_knife
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x748f31aa, Offset: 0xd98
 // Size: 0x58
 function dropknivestoground() {
     self endon(#"death");
     for (;;) {
-        origin, radius = level waittill(#"drop_objects_to_ground");
+        level waittill(#"drop_objects_to_ground", origin, radius);
         self droptoground(origin, radius);
     }
 }
 
 // Namespace ballistic_knife
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf9503a0b, Offset: 0xdf8
 // Size: 0x7c
 function droptoground(origin, radius) {
@@ -227,7 +227,7 @@ function droptoground(origin, radius) {
 }
 
 // Namespace ballistic_knife
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4cdefeb9, Offset: 0xe80
 // Size: 0x84
 function updateretrievetrigger() {
@@ -239,7 +239,7 @@ function updateretrievetrigger() {
 }
 
 // Namespace ballistic_knife
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34016e70, Offset: 0xf10
 // Size: 0x94
 function createballisticknifewatcher() {

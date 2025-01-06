@@ -1,21 +1,21 @@
-#using scripts/mp/_util;
 #using scripts/mp/_teamops;
+#using scripts/mp/_util;
 #using scripts/mp/gametypes/_dogtags;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_globallogic_spawn;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_audio;
 #using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_spawn;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/killstreaks/_killstreaks;
 #using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace tdm;
 
 // Namespace tdm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd4f84cad, Offset: 0x388
 // Size: 0x284
 function main() {
@@ -45,7 +45,7 @@ function main() {
 }
 
 // Namespace tdm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8187eb7d, Offset: 0x618
 // Size: 0x3d8
 function onstartgametype() {
@@ -96,7 +96,7 @@ function onstartgametype() {
 }
 
 // Namespace tdm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x16a7f1b4, Offset: 0x9f8
 // Size: 0x5c
 function onspawnplayer(predictedspawn) {
@@ -118,7 +118,7 @@ function onendgame(winningteam) {
 }
 
 // Namespace tdm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe911d08, Offset: 0xab0
 // Size: 0xba
 function onroundswitch() {
@@ -131,7 +131,7 @@ function onroundswitch() {
 }
 
 // Namespace tdm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc8f6e546, Offset: 0xb78
 // Size: 0xb6
 function onroundendgame(roundwinner) {
@@ -144,7 +144,7 @@ function onroundendgame(roundwinner) {
 }
 
 // Namespace tdm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x320d4b1d, Offset: 0xc38
 // Size: 0x1c2
 function onscoreclosemusic() {
@@ -177,7 +177,7 @@ function onscoreclosemusic() {
 }
 
 // Namespace tdm
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0x6ea1cd2a, Offset: 0xe08
 // Size: 0x204
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {

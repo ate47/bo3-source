@@ -1,7 +1,7 @@
-#using scripts/shared/trigger_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
 
 #namespace cp_mi_zurich_coalescence_sound;
 

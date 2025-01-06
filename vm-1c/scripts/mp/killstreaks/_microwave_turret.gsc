@@ -1,38 +1,38 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_turret;
-#using scripts/mp/killstreaks/_remote_weapons;
-#using scripts/mp/killstreaks/_placeables;
-#using scripts/mp/killstreaks/_killstreak_hacking;
-#using scripts/mp/killstreaks/_killstreak_bundles;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/killstreaks/_killstreakrules;
-#using scripts/mp/killstreaks/_emp;
-#using scripts/mp/killstreaks/_airsupport;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/_util;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/killstreaks/_airsupport;
+#using scripts/mp/killstreaks/_emp;
+#using scripts/mp/killstreaks/_killstreak_bundles;
+#using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/mp/killstreaks/_killstreakrules;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/killstreaks/_placeables;
+#using scripts/mp/killstreaks/_remote_weapons;
+#using scripts/mp/killstreaks/_turret;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #using_animtree("mp_microwaveturret");
 
 #namespace microwave_turret;
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5964803c, Offset: 0x970
 // Size: 0x23c
 function init() {
@@ -51,7 +51,7 @@ function init() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xada05fe9, Offset: 0xbb8
 // Size: 0x14c
 function initturretvehicle() {
@@ -71,7 +71,7 @@ function initturretvehicle() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5febb9c, Offset: 0xd10
 // Size: 0x1c
 function on_player_spawned() {
@@ -79,7 +79,7 @@ function on_player_spawned() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd795acc2, Offset: 0xd38
 // Size: 0x1c
 function on_vehicle_spawned() {
@@ -87,7 +87,7 @@ function on_vehicle_spawned() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb875df0, Offset: 0xd60
 // Size: 0x16
 function reset_being_microwaved() {
@@ -96,7 +96,7 @@ function reset_being_microwaved() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3db8207b, Offset: 0xd80
 // Size: 0x2c8
 function function_a6ec3693() {
@@ -124,7 +124,7 @@ function function_a6ec3693() {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe5113736, Offset: 0x1050
 // Size: 0x424
 function onplaceturret(turret) {
@@ -160,7 +160,7 @@ function onplaceturret(turret) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd89a2a45, Offset: 0x1480
 // Size: 0x9c
 function hackedprefunction(hacker) {
@@ -171,7 +171,7 @@ function hackedprefunction(hacker) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x284327a6, Offset: 0x1528
 // Size: 0x3c
 function hackedpostfunction(hacker) {
@@ -180,7 +180,7 @@ function hackedpostfunction(hacker) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x74cf63c, Offset: 0x1570
 // Size: 0x1c
 function oncancelplacement(turret) {
@@ -188,7 +188,7 @@ function oncancelplacement(turret) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x444df70e, Offset: 0x1598
 // Size: 0xcc
 function onpickupturret(turret) {
@@ -201,7 +201,7 @@ function onpickupturret(turret) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb643856f, Offset: 0x1670
 // Size: 0x34
 function function_18ab2c03(wait_time) {
@@ -211,7 +211,7 @@ function function_18ab2c03(wait_time) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x19110e16, Offset: 0x16b0
 // Size: 0x1c
 function onemp(attacker) {
@@ -219,7 +219,7 @@ function onemp(attacker) {
 }
 
 // Namespace microwave_turret
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x2294d9ae, Offset: 0x16d8
 // Size: 0x138
 function onturretdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -230,7 +230,7 @@ function onturretdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, 
 }
 
 // Namespace microwave_turret
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x3bf8aa93, Offset: 0x1818
 // Size: 0x32c
 function onturretdeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -261,7 +261,7 @@ function onturretdeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vd
 }
 
 // Namespace microwave_turret
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x3cf83048, Offset: 0x1b50
 // Size: 0xe4
 function function_397de1fe(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -278,7 +278,7 @@ function function_397de1fe(einflictor, eattacker, idamage, smeansofdeath, weapon
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x95d65599, Offset: 0x1c40
 // Size: 0x8c
 function onshutdown(turret) {
@@ -291,7 +291,7 @@ function onshutdown(turret) {
 }
 
 // Namespace microwave_turret
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc31fff4d, Offset: 0x1cd8
 // Size: 0x54
 function function_dd009dff(killstreak_id, team) {
@@ -301,7 +301,7 @@ function function_dd009dff(killstreak_id, team) {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xefa9cfd6, Offset: 0x1d38
 // Size: 0x19c
 function startmicrowave() {
@@ -324,7 +324,7 @@ function startmicrowave() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x704aed9e, Offset: 0x1ee0
 // Size: 0x160
 function stopmicrowave() {
@@ -351,7 +351,7 @@ function stopmicrowave() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4ffeed07, Offset: 0x2048
 // Size: 0x74
 function turretdebugwatch() {
@@ -368,7 +368,7 @@ function turretdebugwatch() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x83388755, Offset: 0x20c8
 // Size: 0x12c
 function turretdebug() {
@@ -383,7 +383,7 @@ function turretdebug() {
 }
 
 // Namespace microwave_turret
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd51ce19, Offset: 0x2200
 // Size: 0x110
 function turretthink() {
@@ -393,7 +393,7 @@ function turretthink() {
     turret.trigger endon(#"delete");
     turret.turret_vehicle_entnum = turret.vehicle getentitynumber();
     while (true) {
-        ent = turret.trigger waittill(#"trigger");
+        turret.trigger waittill(#"trigger", ent);
         if (ent == turret) {
             continue;
         }
@@ -407,7 +407,7 @@ function turretthink() {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2b0869d7, Offset: 0x2318
 // Size: 0xa8
 function microwaveentitypostshutdowncleanup(entity) {
@@ -424,7 +424,7 @@ function microwaveentitypostshutdowncleanup(entity) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46c49b69, Offset: 0x23c8
 // Size: 0x6f8
 function microwaveentity(entity) {
@@ -504,7 +504,7 @@ function microwaveentity(entity) {
 }
 
 // Namespace microwave_turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf232e13, Offset: 0x2ac8
 // Size: 0x2ba
 function microwaveturretaffectsentity(entity) {

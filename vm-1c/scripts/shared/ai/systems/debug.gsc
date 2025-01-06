@@ -14,7 +14,7 @@
     }
 
     // Namespace as_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc334b472, Offset: 0x100
     // Size: 0x1c
     function __init__() {
@@ -22,7 +22,7 @@
     }
 
     // Namespace as_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8ed8704a, Offset: 0x128
     // Size: 0x50
     function debugdvars() {
@@ -35,7 +35,7 @@
     }
 
     // Namespace as_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x24117f0f, Offset: 0x180
     // Size: 0x4c
     function isdebugon() {
@@ -43,7 +43,7 @@
     }
 
     // Namespace as_debug
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0xdccef656, Offset: 0x1d8
     // Size: 0x76
     function drawdebuglineinternal(frompoint, topoint, color, durationframes) {
@@ -64,7 +64,7 @@
     }
 
     // Namespace as_debug
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x5d0ba0d, Offset: 0x2c8
     // Size: 0x7e
     function debugline(frompoint, topoint, color, durationframes) {
@@ -107,7 +107,7 @@
     }
 
     // Namespace as_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x32300c78, Offset: 0x550
     // Size: 0x104
     function updatedebuginfointernal() {
@@ -250,7 +250,7 @@
     }
 
     // Namespace as_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc670a3b3, Offset: 0xfc0
     // Size: 0x44
     function debugclearstate() {
@@ -317,7 +317,7 @@
     }
 
     // Namespace as_debug
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xca208ae4, Offset: 0x1290
     // Size: 0x174
     function debugdrawweightedpoint(entity, point, weight, lowestvalue, highestvalue) {
@@ -337,7 +337,7 @@
     }
 
     // Namespace as_debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x99621017, Offset: 0x1410
     // Size: 0xda
     function delete_all_ai_corpses() {

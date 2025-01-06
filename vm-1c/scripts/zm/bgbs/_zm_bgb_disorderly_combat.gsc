@@ -1,18 +1,18 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_bgb_disorderly_combat;
 
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa7c8b1c, Offset: 0x400
 // Size: 0x94
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x53464231, Offset: 0x4a0
 // Size: 0x2c
 function __main__() {
@@ -50,7 +50,7 @@ function __main__() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7bcfe5e3, Offset: 0x4d8
 // Size: 0x3c
 function enable() {
@@ -61,7 +61,7 @@ function enable() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf5dec5e0, Offset: 0x520
 // Size: 0x14
 function disable() {
@@ -69,7 +69,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7db249be, Offset: 0x540
 // Size: 0xfc
 function function_32710943() {
@@ -92,7 +92,7 @@ function function_a2ab8d19(var_390e457) {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1601f055, Offset: 0x680
 // Size: 0x54
 function function_32818605() {
@@ -102,7 +102,7 @@ function function_32818605() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a61de60, Offset: 0x6e0
 // Size: 0x34e
 function function_7039f685() {
@@ -157,7 +157,7 @@ function function_7039f685() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99d0311d, Offset: 0xa38
 // Size: 0x4c
 function function_dedb7bff() {
@@ -169,7 +169,7 @@ function function_dedb7bff() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26973370, Offset: 0xa90
 // Size: 0x68
 function disable_weapons() {
@@ -185,7 +185,7 @@ function disable_weapons() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xce0c0f39, Offset: 0xb00
 // Size: 0x1a8
 function function_4035ce17(n_index, b_upgraded, var_77bd95a) {
@@ -214,7 +214,7 @@ function function_4035ce17(n_index, b_upgraded, var_77bd95a) {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x102ef4d5, Offset: 0xcb0
 // Size: 0x96
 function function_f0cecf3c() {
@@ -237,7 +237,7 @@ function function_f0cecf3c() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xebf79993, Offset: 0xd50
 // Size: 0x182
 function function_bd7f98af() {
@@ -266,7 +266,7 @@ function function_bd7f98af() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcbec705c, Offset: 0xee0
 // Size: 0x2e
 function function_be4232bc() {
@@ -277,7 +277,7 @@ function function_be4232bc() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x460964ed, Offset: 0xf18
 // Size: 0x22
 function function_1f90c35a() {
@@ -288,7 +288,7 @@ function function_1f90c35a() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18eb50ed, Offset: 0xf48
 // Size: 0xd4
 function function_8a5ef15f() {
@@ -298,7 +298,7 @@ function function_8a5ef15f() {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf6b7c8f0, Offset: 0x1028
 // Size: 0xba
 function function_c7d73bac(str_name) {
@@ -313,7 +313,7 @@ function function_c7d73bac(str_name) {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x575cfa8c, Offset: 0x10f0
 // Size: 0xbe
 function has_weapon(w_check) {
@@ -330,7 +330,7 @@ function has_weapon(w_check) {
 }
 
 // Namespace zm_bgb_disorderly_combat
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1c90ca94, Offset: 0x11b8
 // Size: 0x56
 function function_7087df78(e_player) {

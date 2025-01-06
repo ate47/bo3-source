@@ -1,18 +1,18 @@
 #using scripts/mp/_util;
-#using scripts/mp/gametypes/_wager;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hostmigration;
-#using scripts/mp/gametypes/_globallogic_score;
 #using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/weapons/_weapon_utils;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/persistence_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hostmigration_shared;
-#using scripts/shared/gameobjects_shared;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_hostmigration;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/gametypes/_wager;
 #using scripts/shared/array_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hostmigration_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/persistence_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/weapons/_weapon_utils;
 
 #namespace shrp;
 
@@ -427,7 +427,7 @@ function function_f4e09ebe() {
     self endon(#"disconnect");
     self endon(#"death");
     for (;;) {
-        newweapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", newweapon);
         if (newweapon != level.weaponnone) {
             break;
         }

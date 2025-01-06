@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/audio_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_castle_rocket_trap;
 
 // Namespace zm_castle_rocket_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x102861ed, Offset: 0x270
 // Size: 0x14
 function main() {
@@ -13,7 +13,7 @@ function main() {
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f7bc4b5, Offset: 0x290
 // Size: 0x124
 function register_clientfields() {
@@ -24,7 +24,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbc4e0b2e, Offset: 0x3c0
 // Size: 0x1be
 function rocket_trap_warning_smoke(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -46,7 +46,7 @@ function rocket_trap_warning_smoke(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3d4737cd, Offset: 0x588
 // Size: 0x1dc
 function rocket_trap_warning_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -70,7 +70,7 @@ function rocket_trap_warning_fire(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfe04f401, Offset: 0x770
 // Size: 0x1bc
 function rocket_trap_blast(localclientnum) {
@@ -88,7 +88,7 @@ function rocket_trap_blast(localclientnum) {
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfa2d34a0, Offset: 0x938
 // Size: 0xdc
 function rocket_trap_side_blast(localclientnum) {
@@ -101,7 +101,7 @@ function rocket_trap_side_blast(localclientnum) {
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbea0761d, Offset: 0xa20
 // Size: 0x104
 function sndRocketAlarm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -118,7 +118,7 @@ function sndRocketAlarm(localclientnum, oldval, newval, bnewent, binitialsnap, f
 }
 
 // Namespace zm_castle_rocket_trap
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x65b9e015, Offset: 0xb30
 // Size: 0x1e4
 function sndRocketTrap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

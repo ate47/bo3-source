@@ -1,30 +1,30 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_placeable_mine;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_placeable_mine;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_powerup_full_ammo;
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x2
-// Checksum 0xd3f246e4, Offset: 0x2a8
+// Checksum 0x8234df96, Offset: 0x2a8
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_powerup_full_ammo", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_full_ammo
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdefd7360, Offset: 0x2e8
+// Params 0, eflags: 0x0
+// Checksum 0x88fdbaa6, Offset: 0x2e8
 // Size: 0x9c
 function __init__() {
     zm_powerups::register_powerup("full_ammo", &grab_full_ammo);
@@ -34,8 +34,8 @@ function __init__() {
 }
 
 // Namespace zm_powerup_full_ammo
-// Params 1, eflags: 0x1 linked
-// Checksum 0x4051e8d1, Offset: 0x390
+// Params 1, eflags: 0x0
+// Checksum 0xfaa1681d, Offset: 0x390
 // Size: 0x44
 function grab_full_ammo(player) {
     level thread full_ammo_powerup(self, player);
@@ -43,8 +43,8 @@ function grab_full_ammo(player) {
 }
 
 // Namespace zm_powerup_full_ammo
-// Params 2, eflags: 0x1 linked
-// Checksum 0xb43e3ee0, Offset: 0x3e0
+// Params 2, eflags: 0x0
+// Checksum 0x14f064c5, Offset: 0x3e0
 // Size: 0x2f4
 function full_ammo_powerup(drop_item, player) {
     players = getplayers(player.team);
@@ -63,7 +63,7 @@ function full_ammo_powerup(drop_item, player) {
         }
         primary_weapons = players[i] getweaponslist(1);
         players[i] notify(#"zmb_max_ammo");
-        players[i] notify(#"hash_987c489b");
+        players[i] notify(#"zmb_lost_knife");
         players[i] zm_placeable_mine::disable_all_prompts_for_player();
         for (x = 0; x < primary_weapons.size; x++) {
             if (level.headshots_only && zm_utility::is_lethal_grenade(primary_weapons[x])) {
@@ -87,8 +87,8 @@ function full_ammo_powerup(drop_item, player) {
 }
 
 // Namespace zm_powerup_full_ammo
-// Params 2, eflags: 0x1 linked
-// Checksum 0xc26af102, Offset: 0x6e0
+// Params 2, eflags: 0x0
+// Checksum 0xb88dc32b, Offset: 0x6e0
 // Size: 0x94
 function full_ammo_on_hud(drop_item, player_team) {
     players = getplayers(player_team);

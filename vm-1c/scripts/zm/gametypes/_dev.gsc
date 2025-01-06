@@ -1,16 +1,16 @@
-#using scripts/zm/_util;
-#using scripts/zm/gametypes/_globallogic_utils;
-#using scripts/zm/gametypes/_globallogic_score;
-#using scripts/zm/gametypes/_globallogic;
-#using scripts/shared/bots/_bot;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/dev_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/bots/_bot;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/dev_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/gametypes/_globallogic;
+#using scripts/zm/gametypes/_globallogic_score;
+#using scripts/zm/gametypes/_globallogic_utils;
 
 #namespace dev;
 
@@ -25,7 +25,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb8beaf42, Offset: 0x270
     // Size: 0x2c
     function __init__() {
@@ -33,7 +33,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8da1e1de, Offset: 0x2a8
     // Size: 0x400
     function init() {
@@ -88,7 +88,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x278095a5, Offset: 0x6b0
     // Size: 0x8
     function on_player_connect() {
@@ -96,7 +96,7 @@
     }
 
     // Namespace dev
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x73878099, Offset: 0x6c0
     // Size: 0x54
     function warpalltohost(team) {
@@ -105,7 +105,7 @@
     }
 
     // Namespace dev
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xac4b34d4, Offset: 0x720
     // Size: 0x374
     function warpalltoplayer(team, player) {
@@ -214,7 +214,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf469b382, Offset: 0xf00
     // Size: 0x1dc6
     function updatedevsettings() {
@@ -567,7 +567,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x7fef9bc0, Offset: 0x2cd0
     // Size: 0x18c
     function devgui_spawn_think() {
@@ -596,7 +596,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb80672c5, Offset: 0x2e68
     // Size: 0x14a
     function devgui_unlimited_ammo() {
@@ -620,7 +620,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xc615b559, Offset: 0x2fc0
     // Size: 0x11e
     function devgui_unlimited_momentum() {
@@ -645,7 +645,7 @@
     }
 
     // Namespace dev
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x5de7df38, Offset: 0x30e8
     // Size: 0x112
     function devgui_increase_momentum(score) {
@@ -722,7 +722,7 @@
     }
 
     // Namespace dev
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x6cc04f7a, Offset: 0x35f8
     // Size: 0x144
     function xkillsy(attackername, victimname) {
@@ -744,7 +744,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb5a5361c, Offset: 0x3748
     // Size: 0x24
     function testscriptruntimeerrorassert() {
@@ -753,7 +753,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6c7aa9b3, Offset: 0x3778
     // Size: 0x44
     function testscriptruntimeerror2() {
@@ -764,7 +764,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xaf449b5, Offset: 0x37c8
     // Size: 0x1c
     function testscriptruntimeerror1() {
@@ -772,7 +772,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1dab855b, Offset: 0x37f0
     // Size: 0xcc
     function testscriptruntimeerror() {
@@ -794,7 +794,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xd2497c9a, Offset: 0x38c8
     // Size: 0xf4
     function testdvars() {
@@ -814,7 +814,7 @@
     }
 
     // Namespace dev
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xf9836abd, Offset: 0x39c8
     // Size: 0x58e
     function showonespawnpoint(spawn_point, color, notification, height, print) {
@@ -867,7 +867,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa1f683b7, Offset: 0x3f60
     // Size: 0xe8
     function showspawnpoints() {
@@ -885,7 +885,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa335972a, Offset: 0x4050
     // Size: 0x18
     function hidespawnpoints() {
@@ -894,7 +894,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x565bebb1, Offset: 0x4070
     // Size: 0x222
     function showstartspawnpoints() {
@@ -923,7 +923,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3320c390, Offset: 0x42a0
     // Size: 0x18
     function hidestartspawnpoints() {
@@ -932,7 +932,7 @@
     }
 
     // Namespace dev
-    // Params 6, eflags: 0x1 linked
+    // Params 6, eflags: 0x0
     // Checksum 0xbaf713b1, Offset: 0x42c0
     // Size: 0x70
     function print3duntilnotified(origin, text, color, alpha, scale, notification) {
@@ -944,7 +944,7 @@
     }
 
     // Namespace dev
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0x5e25762e, Offset: 0x4338
     // Size: 0x68
     function lineuntilnotified(start, end, color, depthtest, notification) {
@@ -983,7 +983,7 @@
     }
 
     // Namespace dev
-    // Params 7, eflags: 0x1 linked
+    // Params 7, eflags: 0x0
     // Checksum 0x16ddc577, Offset: 0x44b0
     // Size: 0x1a2
     function set_hudelem(text, x, y, scale, alpha, sort, debug_hudelem) {
@@ -1017,7 +1017,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa797b16d, Offset: 0x4660
     // Size: 0x10
     function function_d99660db() {
@@ -1088,7 +1088,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfc0a9f7f, Offset: 0x4a30
     // Size: 0x11c
     function print_weapon_name() {
@@ -1096,10 +1096,10 @@
         self endon(#"print_weapon_name");
         wait 0.2;
         if (self isswitchingweapons()) {
-            weapon = self waittill(#"weapon_change_complete");
+            self waittill(#"weapon_change_complete", weapon);
             fail_safe = 0;
             while (weapon == level.weaponnone) {
-                weapon = self waittill(#"weapon_change_complete");
+                self waittill(#"weapon_change_complete", weapon);
                 wait 0.05;
                 fail_safe++;
                 if (fail_safe > 120) {
@@ -1116,7 +1116,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x99911c09, Offset: 0x4b58
     // Size: 0x18a
     function set_equipment_list() {
@@ -1136,7 +1136,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe61b4e5d, Offset: 0x4cf0
     // Size: 0x1b2
     function set_grenade_list() {
@@ -1157,7 +1157,7 @@
     }
 
     // Namespace dev
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x52574342, Offset: 0x4eb0
     // Size: 0xb6
     function take_all_grenades_and_equipment(player) {
@@ -1170,7 +1170,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xde08c1bb, Offset: 0x4f70
     // Size: 0x128
     function equipment_dev_gui() {
@@ -1191,7 +1191,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1a1db87a, Offset: 0x50a0
     // Size: 0x128
     function grenade_dev_gui() {
@@ -1212,7 +1212,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa0feab5d, Offset: 0x51d0
     // Size: 0x49a
     function devstraferunpathdebugdraw() {
@@ -1294,7 +1294,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x49642bbd, Offset: 0x5678
     // Size: 0x3c0
     function devhelipathdebugdraw() {
@@ -1366,7 +1366,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2f4ef59e, Offset: 0x5a40
     // Size: 0x114
     function draworiginlines() {
@@ -1379,7 +1379,7 @@
     }
 
     // Namespace dev
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x2250e984, Offset: 0x5b60
     // Size: 0x74
     function drawtargetnametext(textcolor, textalpha, textscale, textoffset) {
@@ -1390,7 +1390,7 @@
     }
 
     // Namespace dev
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0xe47be90, Offset: 0x5be0
     // Size: 0x74
     function drawnoteworthytext(textcolor, textalpha, textscale, textoffset) {
@@ -1401,7 +1401,7 @@
     }
 
     // Namespace dev
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x4e1414b4, Offset: 0x5c60
     // Size: 0xc4
     function draworigintext(textcolor, textalpha, textscale, textoffset) {
@@ -1413,7 +1413,7 @@
     }
 
     // Namespace dev
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0x6290d8ae, Offset: 0x5d30
     // Size: 0xdc
     function drawspeedacceltext(textcolor, textalpha, textscale, textoffset) {
@@ -1426,7 +1426,7 @@
     }
 
     // Namespace dev
-    // Params 7, eflags: 0x1 linked
+    // Params 7, eflags: 0x0
     // Checksum 0x70c8acfb, Offset: 0x5e18
     // Size: 0x154
     function drawpath(linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -1447,7 +1447,7 @@
     }
 
     // Namespace dev
-    // Params 8, eflags: 0x1 linked
+    // Params 8, eflags: 0x0
     // Checksum 0x6013eaa1, Offset: 0x5f78
     // Size: 0x124
     function drawpathsegment(enttarget, linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -1464,7 +1464,7 @@
     }
 
     // Namespace dev
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x7b3efdb4, Offset: 0x60a8
     // Size: 0xc6
     function get_lookat_origin(player) {
@@ -1477,7 +1477,7 @@
     }
 
     // Namespace dev
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x7ddcffeb, Offset: 0x6178
     // Size: 0x74
     function draw_pathnode(node, color) {
@@ -1488,7 +1488,7 @@
     }
 
     // Namespace dev
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xdf9a0cfc, Offset: 0x61f8
     // Size: 0x48
     function draw_pathnode_think(node, color) {
@@ -1500,7 +1500,7 @@
     }
 
     // Namespace dev
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x3ba9e3fc, Offset: 0x6248
     // Size: 0x1a
     function draw_pathnodes_stop() {
@@ -1509,7 +1509,7 @@
     }
 
     // Namespace dev
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xff2042af, Offset: 0x6270
     // Size: 0x120
     function node_get(player) {
@@ -1568,7 +1568,7 @@
     }
 
     // Namespace dev
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x98e37d0a, Offset: 0x6548
     // Size: 0x5c
     function draw_point(origin, color) {
@@ -1579,7 +1579,7 @@
     }
 
     // Namespace dev
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa73e3740, Offset: 0x65b0
     // Size: 0xa0
     function point_get(player) {

@@ -1,36 +1,36 @@
-#using scripts/cp/cybercom/_cybercom_gadget_security_breach;
-#using scripts/cp/cybercom/_cybercom;
-#using scripts/shared/turret_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/ai_sniper_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/hud_message_shared;
+#using scripts/codescripts/struct;
 #using scripts/cp/_dialog;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/cp/cybercom/_cybercom;
+#using scripts/cp/cybercom/_cybercom_gadget_security_breach;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai_shared;
+#using scripts/shared/ai_sniper_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicles/_hunter;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/stealth;
-#using scripts/shared/animation_shared;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/shared/spawner_shared;
-#using scripts/cp/_util;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace namespace_63b4601c;
 
@@ -147,8 +147,8 @@ function function_3f4f84e(str_key, str_val, b_enable) {
         b_enable = 1;
     }
     a_nodes = getnodearray(str_key, str_val);
-    foreach (var_22752fde in a_nodes) {
-        setenablenode(var_22752fde, b_enable);
+    foreach (nd_node in a_nodes) {
+        setenablenode(nd_node, b_enable);
     }
 }
 
@@ -171,11 +171,11 @@ function function_258b9bad(var_fcc15a0, var_1086d941, var_ed2ece1e) {
 // Checksum 0xc4cef09f, Offset: 0x12a0
 // Size: 0x7b
 function function_968476a4(var_fcc15a0, var_ed2ece1e) {
-    self endon(#"hash_9b484394");
+    self endon(#"ram_kill_mb");
     self endon(var_fcc15a0);
     level endon(var_fcc15a0);
     while (true) {
-        amount, attacker = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker);
         if (isplayer(attacker)) {
             if (isdefined(var_ed2ece1e)) {
                 level notify(var_ed2ece1e);
@@ -509,7 +509,7 @@ function function_d468b73d(var_3390909e, a_ents, var_36ebf819) {
 function function_8ffbd7bf() {
     self endon(#"death");
     while (true) {
-        state = self waittill(#"alert");
+        self waittill(#"alert", state);
         if (isdefined(state) && state == "combat") {
             self ai::set_ignoreme(0);
             break;
@@ -706,14 +706,14 @@ function function_d16e8674(point, do_trace) {
     }
     scanner = self.var_5772ae4;
     var_e8663043 = point - scanner.origin;
-    var_a641ce84 = lengthsquared(var_e8663043) <= 1024 * 1024;
-    if (var_a641ce84) {
-        var_a641ce84 = util::within_fov(scanner.origin, scanner.angles, point, cos(35));
+    in_view = lengthsquared(var_e8663043) <= 1024 * 1024;
+    if (in_view) {
+        in_view = util::within_fov(scanner.origin, scanner.angles, point, cos(35));
     }
-    if (isdefined(do_trace) && var_a641ce84 && do_trace && isdefined(self.enemy)) {
-        var_a641ce84 = sighttracepassed(scanner.origin, point, 0, self.enemy);
+    if (isdefined(do_trace) && in_view && do_trace && isdefined(self.enemy)) {
+        in_view = sighttracepassed(scanner.origin, point, 0, self.enemy);
     }
-    return var_a641ce84;
+    return in_view;
 }
 
 // Namespace namespace_63b4601c
@@ -813,14 +813,14 @@ function function_18fb105e(var_3470f459) {
 // Params 3, eflags: 0x0
 // Checksum 0x81475347, Offset: 0x33d0
 // Size: 0x75
-function function_ab876b5a(video, var_2d0f3d61, var_199e0d00) {
+function function_ab876b5a(video, var_2d0f3d61, end_notify) {
     level endon(#"hash_92bd0e81");
     while (true) {
         level waittill(var_2d0f3d61);
         videostop(video);
         wait 3;
         videostart(video, 1);
-        level waittill(var_199e0d00);
+        level waittill(end_notify);
         videostop(video);
     }
 }
@@ -902,7 +902,7 @@ function function_76bdbf62() {
 // Params 4, eflags: 0x0
 // Checksum 0x48618180, Offset: 0x3758
 // Size: 0x12a
-function function_3d5f97bd(node, var_41178307, var_37730a64, distance) {
+function function_3d5f97bd(node, should_die, var_37730a64, distance) {
     self endon(#"death");
     self clearforcedgoal();
     self cleargoalvolume();
@@ -914,7 +914,7 @@ function function_3d5f97bd(node, var_41178307, var_37730a64, distance) {
         result = self util::waittill_any_timeout(15, "goal", "near_goal", "bad_path");
     }
     if (result == "goal" || isdefined(result) && result == "near_goal") {
-        delete_ai(self, var_41178307, distance);
+        delete_ai(self, should_die, distance);
         return;
     }
     delete_ai(self, undefined, distance);
@@ -924,8 +924,8 @@ function function_3d5f97bd(node, var_41178307, var_37730a64, distance) {
 // Params 3, eflags: 0x0
 // Checksum 0x4d3e417a, Offset: 0x3890
 // Size: 0x72
-function delete_ai(ai, var_41178307, distance) {
-    if (isdefined(var_41178307) && var_41178307) {
+function delete_ai(ai, should_die, distance) {
+    if (isdefined(should_die) && should_die) {
         ai kill();
         return;
     }
@@ -1050,7 +1050,7 @@ function function_12a1b6a0() {
         }
         wait 0.05;
     }
-    w_current = self waittill(#"weapon_change_complete");
+    self waittill(#"weapon_change_complete", w_current);
     self thread function_51caee84("dogleg_1_end");
 }
 
@@ -1058,17 +1058,17 @@ function function_12a1b6a0() {
 // Params 1, eflags: 0x0
 // Checksum 0xf553795d, Offset: 0x3d78
 // Size: 0xb2
-function function_51caee84(var_6fbdf20) {
+function function_51caee84(endon_flag) {
     self endon(#"death");
     self endon(#"disconnect");
     level endon(#"stealth_discovered");
-    if (isdefined(var_6fbdf20)) {
-        level endon(var_6fbdf20);
+    if (isdefined(endon_flag)) {
+        level endon(endon_flag);
     }
     weap = getweapon("ar_marksman_veng_hero_weap");
     if (self getcurrentweapon() == weap) {
         while (true) {
-            w_current = self waittill(#"weapon_change_complete");
+            self waittill(#"weapon_change_complete", w_current);
             if (w_current == weap) {
                 continue;
             }
@@ -1087,7 +1087,7 @@ function function_51caee84(var_6fbdf20) {
 function function_b9785164() {
     self endon(#"disconnect");
     while (isdefined(self)) {
-        w_current = self waittill(#"weapon_change_complete");
+        self waittill(#"weapon_change_complete", w_current);
         if (w_current.name == "launcher_standard") {
             self thread function_fbd02062();
             self notify(#"hash_b8804640");
@@ -1129,7 +1129,7 @@ function function_bce5a9e() {
     self ai::set_ignoreall(1);
     self ai::set_ignoreme(1);
     self.var_fb7ce72a = &function_a7507be6;
-    var_52b4a338, vehentnum = level waittill(#"clonedentity");
+    level waittill(#"clonedentity", var_52b4a338, vehentnum);
     if (var_52b4a338.targetname === "remote_snipers_ai") {
         var_52b4a338.owner thread function_749b8ef8();
     }
@@ -1287,7 +1287,7 @@ function function_80d50798() {
     self endon(#"death");
     self endon(#"disconnect");
     while (true) {
-        victim, smeansofdeath, weapon = self waittill(#"hash_c56ba9f7");
+        self waittill(#"killed_ai", victim, smeansofdeath, weapon);
         if (isactor(victim)) {
             if (randomfloat(100) > 50) {
                 gibserverutils::gibhead(victim);
@@ -1425,7 +1425,7 @@ function function_b88d5e7(var_6971862e) {
         return;
     }
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (!isplayer(player)) {
             continue;
         }
@@ -1482,7 +1482,7 @@ function function_9856bfc7(molotov) {
 function function_c7b05b81(var_6971862e) {
     self endon(#"death");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (!isplayer(player)) {
             continue;
         }
@@ -1591,9 +1591,9 @@ function function_f9c94344() {
 // Params 2, eflags: 0x0
 // Checksum 0x99b88ef1, Offset: 0x5380
 // Size: 0x4a
-function function_e3420328(scene, var_6fbdf20) {
+function function_e3420328(scene, endon_flag) {
     level thread scene::play(scene);
-    level flag::wait_till(var_6fbdf20);
+    level flag::wait_till(endon_flag);
     level thread scene::stop(scene, 1);
 }
 
@@ -1615,14 +1615,14 @@ function function_65a61b78(a_ents, var_6a07eb6c) {
 // Params 1, eflags: 0x0
 // Checksum 0x22ad5d0e, Offset: 0x54b8
 // Size: 0xc2
-function function_638bf7ab(var_6fbdf20) {
+function function_638bf7ab(endon_flag) {
     model = spawn("script_model", self.origin);
     model.angles = self.angles;
     model setmodel(self.model);
     model thread scene::play(self.script_noteworthy, model);
     wait 0.1;
     model animation::detach_weapon();
-    level flag::wait_till(var_6fbdf20);
+    level flag::wait_till(endon_flag);
     if (isdefined(model)) {
         model stopanimscripted();
         model delete();

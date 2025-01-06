@@ -1,12 +1,12 @@
-#using scripts/zm/zm_tomb_craftables;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_game_module;
+#using scripts/zm/_zm_magicbox;
 #using scripts/zm/craftables/_zm_craftables;
 #using scripts/zm/gametypes/_zm_gametype;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_game_module;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/zm_tomb_craftables;
 
 #namespace zm_tomb_classic;
 

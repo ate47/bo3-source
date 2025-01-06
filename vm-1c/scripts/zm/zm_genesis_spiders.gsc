@@ -1,30 +1,30 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/zm/zm_genesis_ai_spawning;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
 #using scripts/zm/_zm_audio;
 #using scripts/zm/_zm_genesis_spiders;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_genesis_ai_spawning;
 
 #namespace zm_genesis_spiders;
 
 // Namespace zm_genesis_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a9048da, Offset: 0x348
 // Size: 0x3c
 function function_56aaef97() {
@@ -35,7 +35,7 @@ function function_56aaef97() {
 }
 
 // Namespace zm_genesis_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9fd5a688, Offset: 0x390
 // Size: 0x174
 function function_33aa4940() {
@@ -56,7 +56,7 @@ function function_33aa4940() {
         s_spawn_point = function_99f6dbf1(var_aa671dd4);
         assert(isdefined(s_spawn_point), "<dev string:x28>");
         level.var_718361fb = function_3f180afe();
-        namespace_27f8b154::function_f4bd92a2(1, s_spawn_point);
+        zm_ai_spiders::function_f4bd92a2(1, s_spawn_point);
     }
     if (!var_c0692329) {
         var_c0692329 = zm_genesis_ai_spawning::function_fd8b24f5();
@@ -65,7 +65,7 @@ function function_33aa4940() {
 }
 
 // Namespace zm_genesis_spiders
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4e8e678d, Offset: 0x510
 // Size: 0xb0
 function function_99f6dbf1(var_aa671dd4) {
@@ -83,7 +83,7 @@ function function_99f6dbf1(var_aa671dd4) {
 }
 
 // Namespace zm_genesis_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4ee86d7a, Offset: 0x5c8
 // Size: 0x9a
 function function_3f180afe() {

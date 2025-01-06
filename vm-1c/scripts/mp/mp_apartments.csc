@@ -1,9 +1,9 @@
-#using scripts/mp/mp_apartments_lighting;
-#using scripts/mp/mp_apartments_fx;
-#using scripts/mp/mp_apartments_amb;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/mp_apartments_amb;
+#using scripts/mp/mp_apartments_fx;
+#using scripts/mp/mp_apartments_lighting;
+#using scripts/shared/util_shared;
 
 #namespace mp_apartments;
 

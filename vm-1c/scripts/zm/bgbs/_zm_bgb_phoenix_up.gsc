@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_phoenix_up;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_phoenix_up
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x74fcaac7, Offset: 0x228
 // Size: 0x94
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_phoenix_up
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcc00651f, Offset: 0x2c8
 // Size: 0x114
 function validation() {
@@ -52,7 +52,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_phoenix_up
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1aa846b, Offset: 0x3e8
 // Size: 0x172
 function activation() {
@@ -74,7 +74,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_phoenix_up
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd209b7eb, Offset: 0x568
 // Size: 0x5e
 function lost_perk_override(perk, var_2488e46a, var_24df4040) {
@@ -84,7 +84,7 @@ function lost_perk_override(perk, var_2488e46a, var_24df4040) {
     if (!isdefined(var_24df4040)) {
         var_24df4040 = undefined;
     }
-    self thread bgb::function_41ed378b(perk);
+    self thread bgb::revive_and_return_perk_on_bgb_activation(perk);
     return false;
 }
 

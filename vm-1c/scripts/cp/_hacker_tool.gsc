@@ -1,9 +1,9 @@
-#using scripts/cp/_util;
-#using scripts/shared/weapons/_hacker_tool;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_hacker_tool;
 
 #namespace hacker_tool;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace hacker_tool
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8c5eaf7, Offset: 0x178
 // Size: 0x14
 function __init__() {

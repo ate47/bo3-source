@@ -1,24 +1,24 @@
-#using scripts/cp/voice/voice_prologue;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_objectives;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/gametypes/_spawning;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/cp/voice/voice_prologue;
 #using scripts/shared/ai_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace cp_prologue_util;
 
@@ -226,10 +226,10 @@ function function_8abaca05() {
     self endon(#"death");
     self.goalradius = 64;
     self.ignoreall = 1;
-    for (var_22752fde = getnode(self.script_string, "targetname"); true; var_22752fde = getnode(var_22752fde.script_string, "targetname")) {
-        self setgoal(var_22752fde.origin);
+    for (nd_node = getnode(self.script_string, "targetname"); true; nd_node = getnode(nd_node.script_string, "targetname")) {
+        self setgoal(nd_node.origin);
         self waittill(#"goal");
-        if (!isdefined(var_22752fde.script_string)) {
+        if (!isdefined(nd_node.script_string)) {
             break;
         }
     }
@@ -240,8 +240,8 @@ function function_8abaca05() {
 // Checksum 0x48bad10f, Offset: 0x1160
 // Size: 0x4c
 function function_67877d47(goal) {
-    var_22752fde = getnode(goal, "targetname");
-    self setgoal(var_22752fde, 1);
+    nd_node = getnode(goal, "targetname");
+    self setgoal(nd_node, 1);
     self waittill(#"goal");
 }
 
@@ -645,8 +645,8 @@ function vehicle_rumble(var_11fed455, var_74584a64, var_48f82942, n_period, n_ra
 // Size: 0xa3
 function function_47a62798(var_de243c2) {
     level.var_2fd26037 ai::set_behavior_attribute("cqb", var_de243c2);
-    var_3ced446f = function_6ee0e1a5();
-    foreach (var_3b8db917 in var_3ced446f) {
+    a_allies = function_6ee0e1a5();
+    foreach (var_3b8db917 in a_allies) {
         var_3b8db917 ai::set_behavior_attribute("cqb", var_de243c2);
     }
 }
@@ -659,8 +659,8 @@ function function_a5398264(str_mode) {
     level.var_2fd26037 ai::set_behavior_attribute("move_mode", str_mode);
     level.var_9db406db ai::set_behavior_attribute("move_mode", str_mode);
     level.var_4d5a4697 ai::set_behavior_attribute("move_mode", str_mode);
-    var_3ced446f = function_6ee0e1a5();
-    foreach (var_3b8db917 in var_3ced446f) {
+    a_allies = function_6ee0e1a5();
+    foreach (var_3b8db917 in a_allies) {
         var_3b8db917 ai::set_behavior_attribute("move_mode", str_mode);
     }
 }
@@ -673,8 +673,8 @@ function function_db027040(var_eb6e3c93) {
     level.var_2fd26037.perfectaim = var_eb6e3c93;
     level.var_9db406db.perfectaim = var_eb6e3c93;
     level.var_4d5a4697.perfectaim = var_eb6e3c93;
-    var_3ced446f = function_6ee0e1a5();
-    foreach (var_3b8db917 in var_3ced446f) {
+    a_allies = function_6ee0e1a5();
+    foreach (var_3b8db917 in a_allies) {
         var_3b8db917.perfectaim = var_eb6e3c93;
     }
 }
@@ -734,7 +734,7 @@ function function_e0fb6da9(str_struct, close_dist, wait_time, var_d1b83750, max_
     var_7d22b48e = getent(var_98e9bc46, "targetname");
     v_forward = anglestoforward(s_struct.angles);
     s_struct.start_time = undefined;
-    var_cc06a93d = 0;
+    num_charges = 0;
     while (true) {
         e_player = getplayers()[0];
         v_dir = s_struct.origin - e_player.origin;
@@ -773,8 +773,8 @@ function function_e0fb6da9(str_struct, close_dist, wait_time, var_d1b83750, max_
                     a_touching[i].var_db552f4 = 1;
                 }
                 s_struct.start_time = undefined;
-                var_cc06a93d++;
-                if (var_cc06a93d >= var_a70db4af) {
+                num_charges++;
+                if (num_charges >= var_a70db4af) {
                     return;
                 }
             }
@@ -990,7 +990,7 @@ function function_e0f9fe98(str_door_name, b_state) {
     level endon("stop_door_" + str_door_name);
     self endon(#"death");
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         if (isplayer(e_who)) {
             if (!isdefined(e_who.a_doors)) {
                 e_who.a_doors = [];
@@ -1012,7 +1012,7 @@ function function_e010251d(str_door_name, b_state, var_5abbae22) {
     }
     var_5abbae22.a_doors[str_door_name] = 0;
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         if (isai(e_who) && e_who == var_5abbae22) {
             if (!isdefined(e_who.a_doors)) {
                 e_who.a_doors = [];

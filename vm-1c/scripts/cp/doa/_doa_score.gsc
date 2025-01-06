@@ -1,13 +1,13 @@
-#using scripts/cp/gametypes/_globallogic_score;
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/shared/math_shared;
+#using scripts/cp/gametypes/_globallogic_score;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_64c6b720;
 
@@ -72,7 +72,7 @@ function function_676edeb7() {
         }
         var_24b562d = (self.doa.var_db3637c0 << 2) + (self.doa.respawning ? 1 : 0);
         multiplier = self.doa.multiplier + self.doa.var_a3f61a60;
-        max = level.doa.rules.var_385b385d;
+        max = level.doa.rules.max_multiplier;
         if (self.doa.fate == 11) {
             max++;
         }
@@ -109,7 +109,7 @@ function function_80eb303(points, var_c979daec) {
     }
     if (!(isdefined(var_c979daec) && var_c979daec)) {
         multiplier = self.doa.multiplier + self.doa.var_a3f61a60;
-        max = level.doa.rules.var_385b385d;
+        max = level.doa.rules.max_multiplier;
         if (self.doa.fate == 11) {
             max++;
         }
@@ -151,7 +151,7 @@ function function_80eb303(points, var_c979daec) {
 // Checksum 0xb80dd6e7, Offset: 0xae8
 // Size: 0x166
 function function_126dc996(multiplier) {
-    max = level.doa.rules.var_385b385d;
+    max = level.doa.rules.max_multiplier;
     if (self.doa.fate == 11) {
         max += 1;
     }

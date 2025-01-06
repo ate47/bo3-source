@@ -1,7 +1,7 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
 #using scripts/cp/gametypes/_perplayer;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace _teargrenades;
 
@@ -98,7 +98,7 @@ function tear(pos) {
     self thread function_700f69bc();
     self endon(#"hash_dcd5f169");
     while (true) {
-        player = trig waittill(#"trigger");
+        trig waittill(#"trigger", player);
         if (player.sessionstate != "playing") {
             continue;
         }

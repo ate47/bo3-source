@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
 
 #namespace _zm_weap_raygun_mark3;
 
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6cd86ae, Offset: 0x428
 // Size: 0x294
 function __init__() {
@@ -45,7 +45,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x6c8
 // Size: 0x4
 function __main__() {
@@ -53,7 +53,7 @@ function __main__() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a416114, Offset: 0x6d8
 // Size: 0x34
 function function_b2cc2acc(weapon) {
@@ -64,7 +64,7 @@ function function_b2cc2acc(weapon) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdea183e6, Offset: 0x718
 // Size: 0x34
 function function_b08b743e(weapon) {
@@ -75,7 +75,7 @@ function function_b08b743e(weapon) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x53f7ac4f, Offset: 0x758
 // Size: 0x76
 function function_4dc74fe3(var_48ea2f27) {
@@ -89,13 +89,13 @@ function function_4dc74fe3(var_48ea2f27) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf442aeec, Offset: 0x7d8
 // Size: 0xd8
 function function_3aef849c() {
     self endon(#"disconnect");
     while (true) {
-        w_weapon, v_pos, n_radius, e_projectile, v_normal = self waittill(#"projectile_impact");
+        self waittill(#"projectile_impact", w_weapon, v_pos, n_radius, e_projectile, v_normal);
         var_7efa7e23 = function_4dc74fe3(v_pos + v_normal * 32);
         if (function_b2cc2acc(w_weapon)) {
             self thread function_ec91716c(w_weapon, v_pos, var_7efa7e23, n_radius, e_projectile, v_normal);
@@ -104,7 +104,7 @@ function function_3aef849c() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x49eb2492, Offset: 0x8b8
 // Size: 0x18c
 function function_ec91716c(w_weapon, v_pos, var_7efa7e23, n_radius, e_attacker, v_normal) {
@@ -124,7 +124,7 @@ function function_ec91716c(w_weapon, v_pos, var_7efa7e23, n_radius, e_attacker, 
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xea3fdb37, Offset: 0xa50
 // Size: 0x444
 function function_64a32180(e_owner, w_weapon) {
@@ -185,7 +185,7 @@ function function_64a32180(e_owner, w_weapon) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xae61586b, Offset: 0xea0
 // Size: 0xbc
 function player_vortex_visionset() {
@@ -200,14 +200,14 @@ function player_vortex_visionset() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a0afb37, Offset: 0xf68
 // Size: 0x1c8
 function function_38237edc() {
     self endon(#"death");
     self playloopsound("wpn_mk3_orb_loop");
     while (true) {
-        n_damage, e_attacker, v_direction, v_point, str_means_of_death, str_tag_name, str_model_name, var_829b9480, w_weapon = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker, v_direction, v_point, str_means_of_death, str_tag_name, str_model_name, var_829b9480, w_weapon);
         if (function_b08b743e(w_weapon)) {
             self stoploopsound();
             self setmodel("tag_origin");
@@ -226,7 +226,7 @@ function function_38237edc() {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0xb6669e31, Offset: 0x1138
 // Size: 0x154
 function function_aa1813ba(str_mod, var_5afff096, var_7c5a4ee4, e_player, n_amount, w_weapon, v_direction, str_tag, str_model, str_part, n_flags, e_inflictor, var_9780eb62) {
@@ -248,7 +248,7 @@ function function_aa1813ba(str_mod, var_5afff096, var_7c5a4ee4, e_player, n_amou
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa395dba5, Offset: 0x1298
 // Size: 0x164
 function apply_vortex_fx(var_dfb28a5a, n_time) {
@@ -275,7 +275,7 @@ function apply_vortex_fx(var_dfb28a5a, n_time) {
 }
 
 // Namespace _zm_weap_raygun_mark3
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfc7ca3bc, Offset: 0x1408
 // Size: 0x1ac
 function function_43cd4a49(e_inflictor, e_attacker, w_weapon) {

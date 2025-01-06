@@ -1,7 +1,7 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/music_shared;
 #using scripts/shared/ai/archetype_mannequin;
 #using scripts/shared/ai_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_723e3352;
 

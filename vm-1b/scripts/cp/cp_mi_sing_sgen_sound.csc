@@ -1,7 +1,7 @@
-#using scripts/shared/trigger_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/trigger_shared;
 
 #namespace cp_mi_sing_sgen_sound;
 
@@ -177,7 +177,7 @@ function sndScares() {
 function function_bccbeb90() {
     target = struct::get(self.target, "targetname");
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, self.script_sound, target.origin);
             break;
@@ -203,7 +203,7 @@ function sndJumpLand() {
 // Size: 0x3d
 function function_c2d4afb7() {
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         self thread trigger::function_thread(who, &function_c2f42d4e);
     }
 }
@@ -233,7 +233,7 @@ function function_4e5472a7() {
 // Checksum 0xd0345458, Offset: 0xab0
 // Size: 0x75
 function function_45100b4d() {
-    level endon(#"hash_a8bf0d73");
+    level endon(#"kw");
     level waittill(#"sw");
     while (true) {
         playsound(0, "vox_walla_call", (-1045, -4195, 564));
@@ -248,7 +248,7 @@ function function_45100b4d() {
 // Checksum 0xe79bbdf9, Offset: 0xb30
 // Size: 0x2a
 function function_2b64c5fe() {
-    level waittill(#"hash_a8bf0d73");
+    level waittill(#"kw");
     playsound(0, "vox_walla_battlecry", (-138, -4871, 311));
 }
 

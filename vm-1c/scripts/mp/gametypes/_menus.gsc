@@ -1,9 +1,9 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/_util;
 #using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/system_shared;
-#using scripts/shared/rank_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/rank_shared;
+#using scripts/shared/system_shared;
 
 #namespace menus;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc954a3, Offset: 0x2e8
 // Size: 0x44
 function __init__() {
@@ -25,7 +25,7 @@ function __init__() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7acf8462, Offset: 0x338
 // Size: 0x130
 function init() {
@@ -43,7 +43,7 @@ function init() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa44618e0, Offset: 0x470
 // Size: 0x1c
 function on_player_connect() {
@@ -51,13 +51,13 @@ function on_player_connect() {
 }
 
 // Namespace menus
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb0582b3, Offset: 0x498
 // Size: 0x448
 function on_menu_response() {
     self endon(#"disconnect");
     for (;;) {
-        menu, response = self waittill(#"menuresponse");
+        self waittill(#"menuresponse", menu, response);
         if (response == "back") {
             self closeingamemenu();
             if (level.console) {

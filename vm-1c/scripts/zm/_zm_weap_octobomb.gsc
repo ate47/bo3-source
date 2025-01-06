@@ -1,37 +1,37 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_clone;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/debug;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
 #using scripts/shared/animation_shared;
 #using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/zm/_zm_clone;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace _zm_weap_octobomb;
 
 // Namespace _zm_weap_octobomb
 // Params 0, eflags: 0x2
-// Checksum 0x47da3b30, Offset: 0x628
+// Checksum 0x51ace1ea, Offset: 0x628
 // Size: 0x3c
 function autoexec function_2dc19561() {
     system::register("zm_weap_octobomb", &__init__, &__main__, undefined);
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x62c288c6, Offset: 0x670
+// Params 0, eflags: 0x0
+// Checksum 0x4dfb5d0, Offset: 0x670
 // Size: 0x13c
 function __init__() {
     clientfield::register("scriptmover", "octobomb_fx", 1, 2, "int");
@@ -46,8 +46,8 @@ function __init__() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x6b609d77, Offset: 0x7b8
+// Params 0, eflags: 0x0
+// Checksum 0xf33bb175, Offset: 0x7b8
 // Size: 0xe0
 function __main__() {
     level.var_90b60862 = getweapon("octobomb");
@@ -63,16 +63,16 @@ function __main__() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x391018f1, Offset: 0x8a0
+// Params 0, eflags: 0x0
+// Checksum 0x66860b28, Offset: 0x8a0
 // Size: 0x24
 function function_ae90088b() {
     self function_82e4a388("octobomb_upgraded");
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0xffee7782, Offset: 0x8d0
+// Params 1, eflags: 0x0
+// Checksum 0x6bbe70ae, Offset: 0x8d0
 // Size: 0xdc
 function function_82e4a388(str_weapon) {
     if (!isdefined(str_weapon)) {
@@ -89,8 +89,8 @@ function function_82e4a388(str_weapon) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x17995136, Offset: 0x9b8
+// Params 0, eflags: 0x0
+// Checksum 0xbc22068e, Offset: 0x9b8
 // Size: 0xf8
 function function_964187bf() {
     self notify(#"hash_69fff51d");
@@ -117,8 +117,8 @@ function function_964187bf() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0xd491f4ef, Offset: 0xab8
+// Params 1, eflags: 0x0
+// Checksum 0x1dc08bc5, Offset: 0xab8
 // Size: 0xae
 function show_briefly(showtime) {
     self endon(#"show_owner");
@@ -137,8 +137,8 @@ function show_briefly(showtime) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5dbbb3e7, Offset: 0xb70
+// Params 1, eflags: 0x0
+// Checksum 0x6eb61a86, Offset: 0xb70
 // Size: 0x80
 function show_owner_on_attack(owner) {
     owner endon(#"hide_owner");
@@ -155,7 +155,7 @@ function show_owner_on_attack(owner) {
 
 // Namespace _zm_weap_octobomb
 // Params 1, eflags: 0x0
-// Checksum 0xe990615a, Offset: 0xbf8
+// Checksum 0x3f16585c, Offset: 0xbf8
 // Size: 0x22c
 function hide_owner(owner) {
     owner notify(#"hide_owner");
@@ -183,8 +183,8 @@ function hide_owner(owner) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa3db895e, Offset: 0xe30
+// Params 1, eflags: 0x0
+// Checksum 0xcad41153, Offset: 0xe30
 // Size: 0x80
 function fakelinkto(var_968690f) {
     self notify(#"fakelinkto");
@@ -198,8 +198,8 @@ function fakelinkto(var_968690f) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 2, eflags: 0x1 linked
-// Checksum 0x3d989760, Offset: 0xeb8
+// Params 2, eflags: 0x0
+// Checksum 0xf1b25d27, Offset: 0xeb8
 // Size: 0x184
 function grenade_planted(grenade, model) {
     var_e97bad1e = undefined;
@@ -226,8 +226,8 @@ function grenade_planted(grenade, model) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdfc8f2fb, Offset: 0x1048
+// Params 0, eflags: 0x0
+// Checksum 0xacd4817c, Offset: 0x1048
 // Size: 0x74
 function function_ca9c42b2() {
     self endon(#"death");
@@ -241,8 +241,8 @@ function function_ca9c42b2() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 4, eflags: 0x1 linked
-// Checksum 0x40a2cdeb, Offset: 0x10c8
+// Params 4, eflags: 0x0
+// Checksum 0xe43c1baf, Offset: 0x10c8
 // Size: 0x61c
 function function_f2ee3a8f(e_grenade, num_attractors, max_attract_dist, var_dcb46b6f) {
     self endon(#"hash_69fff51d");
@@ -267,7 +267,7 @@ function function_f2ee3a8f(e_grenade, num_attractors, max_attract_dist, var_dcb4
     e_grenade.var_499ed1ba = util::spawn_model(e_grenade.model, e_grenade.origin, e_grenade.angles);
     e_grenade.var_499ed1ba linkto(e_grenade);
     e_grenade thread function_76874e09();
-    v_position, v_normal = e_grenade waittill(#"stationary");
+    e_grenade waittill(#"stationary", v_position, v_normal);
     e_grenade thread function_ca9c42b2();
     self thread grenade_planted(e_grenade, e_grenade.var_499ed1ba);
     e_grenade resetmissiledetonationtime();
@@ -312,8 +312,8 @@ function function_f2ee3a8f(e_grenade, num_attractors, max_attract_dist, var_dcb4
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x1ca9b5db, Offset: 0x16f0
+// Params 0, eflags: 0x0
+// Checksum 0x215730c8, Offset: 0x16f0
 // Size: 0xf4
 function is_on_navmesh() {
     self endon(#"death");
@@ -335,8 +335,8 @@ function is_on_navmesh() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x454c4c6e, Offset: 0x17f0
+// Params 1, eflags: 0x0
+// Checksum 0x4e4583a9, Offset: 0x17f0
 // Size: 0x1b4
 function function_a74e7f10(is_upgraded) {
     self endon(#"death");
@@ -359,8 +359,8 @@ function function_a74e7f10(is_upgraded) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x335b06b9, Offset: 0x19b0
+// Params 0, eflags: 0x0
+// Checksum 0xa4b302b0, Offset: 0x19b0
 // Size: 0x1da
 function function_704217d1() {
     v_orig = self.origin;
@@ -382,8 +382,8 @@ function function_704217d1() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x9cf99476, Offset: 0x1b98
+// Params 1, eflags: 0x0
+// Checksum 0x2b271fdb, Offset: 0x1b98
 // Size: 0x2fc
 function grenade_stolen_by_sam(e_grenade) {
     if (!isdefined(e_grenade)) {
@@ -422,8 +422,8 @@ function grenade_stolen_by_sam(e_grenade) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x6e45b1f0, Offset: 0x1ea0
+// Params 0, eflags: 0x0
+// Checksum 0xd9072a32, Offset: 0x1ea0
 // Size: 0xcc
 function function_76874e09() {
     while (true) {
@@ -448,11 +448,11 @@ function function_76874e09() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0xa4824667, Offset: 0x1f78
+// Params 0, eflags: 0x0
+// Checksum 0x1469fe2f, Offset: 0x1f78
 // Size: 0xc4
 function function_8ba4840c() {
-    position = self waittill(#"explode");
+    self waittill(#"explode", position);
     level notify(#"grenade_exploded", position, 100, 5000, 450);
     var_e653671 = -1;
     for (i = 0; i < level.var_9baa9723.size; i++) {
@@ -467,8 +467,8 @@ function function_8ba4840c() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 2, eflags: 0x1 linked
-// Checksum 0xff22596f, Offset: 0x2048
+// Params 2, eflags: 0x0
+// Checksum 0x321c0a6c, Offset: 0x2048
 // Size: 0x288
 function function_de45c38c(e_player, is_upgraded) {
     self endon(#"explode");
@@ -504,8 +504,8 @@ function function_de45c38c(e_player, is_upgraded) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 3, eflags: 0x1 linked
-// Checksum 0x7b194cf6, Offset: 0x22d8
+// Params 3, eflags: 0x0
+// Checksum 0x605d82e8, Offset: 0x22d8
 // Size: 0x14c
 function function_19a0e723(e_player, e_grenade, is_upgraded) {
     self endon(#"death");
@@ -532,8 +532,8 @@ function function_19a0e723(e_player, e_grenade, is_upgraded) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x695e2a9e, Offset: 0x2430
+// Params 0, eflags: 0x0
+// Checksum 0xd42bfe1c, Offset: 0x2430
 // Size: 0x64
 function function_7692d210() {
     self waittill(#"death");
@@ -546,8 +546,8 @@ function function_7692d210() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 2, eflags: 0x1 linked
-// Checksum 0x8b4378ea, Offset: 0x24a0
+// Params 2, eflags: 0x0
+// Checksum 0x8c57e552, Offset: 0x24a0
 // Size: 0x380
 function function_25521204(e_player, is_upgraded) {
     self endon(#"death");
@@ -602,8 +602,8 @@ function function_25521204(e_player, is_upgraded) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0xaa2b963b, Offset: 0x2828
+// Params 0, eflags: 0x0
+// Checksum 0xd03fc6fb, Offset: 0x2828
 // Size: 0x74
 function function_1a8c5dc7() {
     gibserverutils::gibhead(self);
@@ -616,8 +616,8 @@ function function_1a8c5dc7() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 2, eflags: 0x1 linked
-// Checksum 0x249819b7, Offset: 0x28a8
+// Params 2, eflags: 0x0
+// Checksum 0xcd367f35, Offset: 0x28a8
 // Size: 0x350
 function function_55721dd7(e_player, max_attract_dist) {
     self endon(#"death");
@@ -653,8 +653,8 @@ function function_55721dd7(e_player, max_attract_dist) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0xf36b0ced, Offset: 0x2c00
+// Params 1, eflags: 0x0
+// Checksum 0x4ac33718, Offset: 0x2c00
 // Size: 0x60
 function function_63e3acb6(e_grenade) {
     self endon(#"death");
@@ -667,8 +667,8 @@ function function_63e3acb6(e_grenade) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x4b2e9071, Offset: 0x2c68
+// Params 1, eflags: 0x0
+// Checksum 0xbf318b1a, Offset: 0x2c68
 // Size: 0x7c
 function function_dd34ace2(e_player) {
     self endon(#"death");
@@ -682,8 +682,8 @@ function function_dd34ace2(e_player) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x365f2abb, Offset: 0x2cf0
+// Params 0, eflags: 0x0
+// Checksum 0x66612a2e, Offset: 0x2cf0
 // Size: 0x22e
 function function_5f8a3880() {
     self.var_662cce0a = self.origin + (0, 0, 80);
@@ -715,8 +715,8 @@ function function_5f8a3880() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7adbf606, Offset: 0x2f28
+// Params 1, eflags: 0x0
+// Checksum 0xd738a365, Offset: 0x2f28
 // Size: 0xf4
 function function_fd0d2dc8(e_grenade) {
     self endon(#"death");
@@ -735,8 +735,8 @@ function function_fd0d2dc8(e_grenade) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1da0d818, Offset: 0x3028
+// Params 1, eflags: 0x0
+// Checksum 0xa3e24b1f, Offset: 0x3028
 // Size: 0x1d0
 function function_729653c3(e_grenade) {
     self endon(#"death");
@@ -769,8 +769,8 @@ function function_729653c3(e_grenade) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0xe4e5c975, Offset: 0x3200
+// Params 1, eflags: 0x0
+// Checksum 0x61a6c658, Offset: 0x3200
 // Size: 0x260
 function function_77d36058(e_grenade) {
     e_grenade endon(#"death");
@@ -810,8 +810,8 @@ function function_77d36058(e_grenade) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x224d2e80, Offset: 0x3468
+// Params 0, eflags: 0x0
+// Checksum 0x1a76b328, Offset: 0x3468
 // Size: 0x58
 function sndattackvox() {
     self endon(#"explode");
@@ -824,14 +824,14 @@ function sndattackvox() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x14853a57, Offset: 0x34c8
+// Params 0, eflags: 0x0
+// Checksum 0xa00e9117, Offset: 0x34c8
 // Size: 0xb8
 function function_9e041fe() {
     self endon(#"death");
     self endon(#"hash_69fff51d");
     while (true) {
-        e_grenade, w_weapon = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", e_grenade, w_weapon);
         if (w_weapon == level.var_90b60862 || w_weapon == level.var_5327e29d) {
             e_grenade.use_grenade_special_long_bookmark = 1;
             e_grenade.grenade_multiattack_bookmark_count = 1;
@@ -843,16 +843,16 @@ function function_9e041fe() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe8f8fd5b, Offset: 0x3588
+// Params 0, eflags: 0x0
+// Checksum 0x188abbd, Offset: 0x3588
 // Size: 0x1a
 function function_4ffaebc7() {
     return zm_weapons::is_weapon_included(level.var_90b60862);
 }
 
 // Namespace _zm_weap_octobomb
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8002c04c, Offset: 0x35b0
+// Params 0, eflags: 0x0
+// Checksum 0xfaa6a6a7, Offset: 0x35b0
 // Size: 0x9c
 function function_60df0cfd() {
     for (i = 0; i < 4; i++) {
@@ -862,8 +862,8 @@ function function_60df0cfd() {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 5, eflags: 0x5 linked
-// Checksum 0x922c8022, Offset: 0x3658
+// Params 5, eflags: 0x4
+// Checksum 0xe4fd05db, Offset: 0x3658
 // Size: 0x120
 function private function_72260d3a(var_2fa24527, str_dvar, n_value, func, var_f0ee45c9) {
     if (!isdefined(var_f0ee45c9)) {
@@ -882,8 +882,8 @@ function private function_72260d3a(var_2fa24527, str_dvar, n_value, func, var_f0
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x3dc3ce8f, Offset: 0x3780
+// Params 1, eflags: 0x0
+// Checksum 0x35598070, Offset: 0x3780
 // Size: 0xf2
 function function_283c5c9(n_player_index) {
     players = getplayers();
@@ -900,8 +900,8 @@ function function_283c5c9(n_player_index) {
 }
 
 // Namespace _zm_weap_octobomb
-// Params 1, eflags: 0x1 linked
-// Checksum 0x6343b229, Offset: 0x3880
+// Params 1, eflags: 0x0
+// Checksum 0x6b955389, Offset: 0x3880
 // Size: 0x8c
 function function_e53a7954(player) {
     player clientfield::set_to_player("octobomb_state", 3);

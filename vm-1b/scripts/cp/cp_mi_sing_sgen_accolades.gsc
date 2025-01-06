@@ -1,12 +1,12 @@
-#using scripts/cp/_accolades;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_99202726;
 
@@ -424,7 +424,7 @@ function function_962154a7() {
     self endon(#"death");
     level endon(#"hash_1e73602d");
     while (true) {
-        damage, attacker = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker);
         if (isdefined(attacker.scoretype)) {
             if (attacker.scoretype == "_depth_charge") {
                 self.var_bae308b3 = 1;

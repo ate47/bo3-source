@@ -1,32 +1,32 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_pers_upgrades_system;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_pers_upgrades_system;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_perk_additionalprimaryweapon;
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x2
-// Checksum 0x786dd918, Offset: 0x3f8
+// Checksum 0x30b0fd44, Offset: 0x3f8
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_perk_additionalprimaryweapon", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb675cfd1, Offset: 0x438
+// Params 0, eflags: 0x0
+// Checksum 0x7c3e0a70, Offset: 0x438
 // Size: 0x5c
 function __init__() {
     level.additionalprimaryweapon_limit = 3;
@@ -36,8 +36,8 @@ function __init__() {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe20b6915, Offset: 0x4a0
+// Params 0, eflags: 0x0
+// Checksum 0xa43a21a7, Offset: 0x4a0
 // Size: 0x12c
 function enable_additional_primary_weapon_perk_for_level() {
     zm_perks::register_perk_basic_info("specialty_additionalprimaryweapon", "additionalprimaryweapon", 4000, %ZOMBIE_PERK_ADDITIONALPRIMARYWEAPON, getweapon("zombie_perk_bottle_additionalprimaryweapon"));
@@ -49,8 +49,8 @@ function enable_additional_primary_weapon_perk_for_level() {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
-// Checksum 0xeacd55a6, Offset: 0x5d8
+// Params 0, eflags: 0x0
+// Checksum 0xf5f7b29, Offset: 0x5d8
 // Size: 0xe0
 function additional_primary_weapon_precache() {
     if (isdefined(level.var_796aeab4)) {
@@ -65,24 +65,24 @@ function additional_primary_weapon_precache() {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
-// Checksum 0xeb234b9f, Offset: 0x6c0
+// Params 0, eflags: 0x0
+// Checksum 0x6c70af9, Offset: 0x6c0
 // Size: 0x34
 function additional_primary_weapon_register_clientfield() {
     clientfield::register("clientuimodel", "hudItems.perks.additional_primary_weapon", 1, 2, "int");
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 1, eflags: 0x1 linked
-// Checksum 0x8b943970, Offset: 0x700
+// Params 1, eflags: 0x0
+// Checksum 0x104f1cc7, Offset: 0x700
 // Size: 0x2c
 function additional_primary_weapon_set_clientfield(state) {
     self clientfield::set_player_uimodel("hudItems.perks.additional_primary_weapon", state);
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 4, eflags: 0x1 linked
-// Checksum 0x97dfe0fa, Offset: 0x738
+// Params 4, eflags: 0x0
+// Checksum 0x4e1e7c8b, Offset: 0x738
 // Size: 0xbc
 function additional_primary_weapon_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_mulekick_jingle";
@@ -97,7 +97,7 @@ function additional_primary_weapon_perk_machine_setup(use_trigger, perk_machine,
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x800
 // Size: 0x4
 function give_additional_primary_weapon_perk() {
@@ -105,8 +105,8 @@ function give_additional_primary_weapon_perk() {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 3, eflags: 0x1 linked
-// Checksum 0xb40091f4, Offset: 0x810
+// Params 3, eflags: 0x0
+// Checksum 0xbe89ae0c, Offset: 0x810
 // Size: 0x44
 function take_additional_primary_weapon_perk(b_pause, str_perk, str_result) {
     if (b_pause || str_result == str_perk) {
@@ -115,8 +115,8 @@ function take_additional_primary_weapon_perk(b_pause, str_perk, str_result) {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
-// Checksum 0x52556200, Offset: 0x860
+// Params 0, eflags: 0x0
+// Checksum 0xbd11f220, Offset: 0x860
 // Size: 0x1ec
 function function_9f037faa() {
     var_e213ec9b = level.weaponnone;
@@ -145,8 +145,8 @@ function function_9f037faa() {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 0, eflags: 0x1 linked
-// Checksum 0x5188ebd1, Offset: 0xa58
+// Params 0, eflags: 0x0
+// Checksum 0xccd52124, Offset: 0xa58
 // Size: 0x44
 function on_laststand() {
     if (self hasperk("specialty_additionalprimaryweapon")) {
@@ -155,8 +155,8 @@ function on_laststand() {
 }
 
 // Namespace zm_perk_additionalprimaryweapon
-// Params 1, eflags: 0x1 linked
-// Checksum 0xe552b3df, Offset: 0xaa8
+// Params 1, eflags: 0x0
+// Checksum 0x6a398694, Offset: 0xaa8
 // Size: 0x5c
 function function_81546dd1(var_f52f94ab) {
     if (isdefined(self.var_a6f78ce[var_f52f94ab])) {

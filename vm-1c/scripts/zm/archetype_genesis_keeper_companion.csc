@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/systems/fx_character;
-#using scripts/shared/system_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_6d577909;
 
@@ -16,7 +16,7 @@ function autoexec main() {
     ai::add_archetype_spawn_function("keeper_companion", &function_bfd27b96);
     clientfield::register("allplayers", "being_keeper_revived", 15000, 1, "int", &function_802744a7, 0, 0);
     clientfield::register("actor", "keeper_reviving", 15000, 1, "int", &function_a9b854ea, 0, 0);
-    clientfield::register("actor", "kc_effects", 15000, 1, "int", &function_4b50c64, 0, 0);
+    clientfield::register("actor", "kc_effects", 15000, 1, "int", &keeper_fx, 0, 0);
     clientfield::register("world", "kc_callbox_lights", 15000, 2, "int", &function_b945954d, 0, 0);
     clientfield::register("actor", "keeper_ai_death_effect", 15000, 1, "int", &function_2935ac4d, 0, 0);
     clientfield::register("vehicle", "keeper_ai_death_effect", 15000, 1, "int", &function_2935ac4d, 0, 0);
@@ -35,7 +35,7 @@ function autoexec main() {
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6c98c685, Offset: 0x898
 // Size: 0x1a6
 function function_b945954d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -64,7 +64,7 @@ function function_b945954d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_6d577909
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1c8e9184, Offset: 0xa48
 // Size: 0x24
 function function_bfd27b96(localclientnum) {
@@ -72,7 +72,7 @@ function function_bfd27b96(localclientnum) {
 }
 
 // Namespace namespace_6d577909
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x57f357c, Offset: 0xa78
 // Size: 0x130
 function function_8aaa4093(localclientnum) {
@@ -95,7 +95,7 @@ function function_8aaa4093(localclientnum) {
 }
 
 // Namespace namespace_6d577909
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ca10925, Offset: 0xbb0
 // Size: 0x130
 function function_55296393(localclientnum) {
@@ -118,10 +118,10 @@ function function_55296393(localclientnum) {
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9301d8a, Offset: 0xce8
 // Size: 0x184
-function function_4b50c64(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function keeper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval === 1) {
         self.var_2afcd501 = playfxontag(localclientnum, level._effect["dlc4/genesis/fx_keeperprot_underlit_amb"], self, "tag_origin");
         self.var_2a264f57 = playfxontag(localclientnum, level._effect["dlc4/genesis/fx_keeperprot_energy_ball"], self, "tag_weapon_right");
@@ -141,7 +141,7 @@ function function_4b50c64(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xa2bf5ce5, Offset: 0xe78
 // Size: 0xe4
 function private function_a9b854ea(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,7 +155,7 @@ function private function_a9b854ea(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0x2d7e6419, Offset: 0xf68
 // Size: 0xdc
 function private function_802744a7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -169,7 +169,7 @@ function private function_802744a7(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1f6f1fec, Offset: 0x1050
 // Size: 0xa8
 function keeper_thunderwall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -184,7 +184,7 @@ function keeper_thunderwall(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd6acde6e, Offset: 0x1100
 // Size: 0x98
 function keeper_thunderwall_360(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -198,7 +198,7 @@ function keeper_thunderwall_360(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4f612082, Offset: 0x11a0
 // Size: 0x1e8
 function function_2935ac4d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -223,7 +223,7 @@ function function_2935ac4d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_6d577909
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc4747bbf, Offset: 0x1390
 // Size: 0xec
 function function_fa8bf98f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -242,7 +242,7 @@ function function_fa8bf98f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_6d577909
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x71def7ab, Offset: 0x1488
 // Size: 0x58
 function new_timer(localclientnum) {
@@ -253,7 +253,7 @@ function new_timer(localclientnum) {
 }
 
 // Namespace namespace_6d577909
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc0822774, Offset: 0x14e8
 // Size: 0x68
 function function_ec23b7a7(localclientnum, entity) {
@@ -274,7 +274,7 @@ function get_time() {
 }
 
 // Namespace namespace_6d577909
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2707c0e, Offset: 0x1570
 // Size: 0xa
 function get_time_in_seconds() {

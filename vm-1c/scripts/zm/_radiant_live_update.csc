@@ -1,5 +1,5 @@
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
 
 #namespace radiant_live_udpate;
 
@@ -14,7 +14,7 @@
     }
 
     // Namespace radiant_live_udpate
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x689e53d2, Offset: 0xf8
     // Size: 0x1c
     function __init__() {
@@ -22,12 +22,12 @@
     }
 
     // Namespace radiant_live_udpate
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x536ea647, Offset: 0x120
     // Size: 0x62
     function scriptstruct_debug_render() {
         while (true) {
-            selected_struct = level waittill(#"liveupdate");
+            level waittill(#"liveupdate", selected_struct);
             if (isdefined(selected_struct)) {
                 level thread render_struct(selected_struct);
                 continue;
@@ -37,7 +37,7 @@
     }
 
     // Namespace radiant_live_udpate
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x595b7e89, Offset: 0x190
     // Size: 0x80
     function render_struct(selected_struct) {

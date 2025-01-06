@@ -1,17 +1,17 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/_util;
-#using scripts/shared/sound_shared;
-#using scripts/shared/util_shared;
 #using scripts/mp/gametypes/_globallogic_audio;
 #using scripts/mp/gametypes/_globallogic_utils;
 #using scripts/mp/killstreaks/_killstreaks;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/sound_shared;
 #using scripts/shared/system_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace teamops;
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8d9382d6, Offset: 0x290
 // Size: 0x80
 function function_ebba863f() {
@@ -25,7 +25,7 @@ function function_ebba863f() {
 }
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a383364, Offset: 0x318
 // Size: 0x47c
 function init() {
@@ -61,7 +61,7 @@ function init() {
 }
 
 // Namespace teamops
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3ea0880f, Offset: 0x7a0
 // Size: 0x90
 function getid(name) {
@@ -76,7 +76,7 @@ function getid(name) {
 }
 
 // Namespace teamops
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfeeff9d9, Offset: 0x838
 // Size: 0xa6
 function function_f8b6e626(name) {
@@ -93,7 +93,7 @@ function function_f8b6e626(name) {
 }
 
 // Namespace teamops
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe7e88403, Offset: 0x8e8
 // Size: 0x3bc
 function function_a2630ab8(name) {
@@ -133,7 +133,7 @@ function function_a2630ab8(name) {
 }
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7076c147, Offset: 0xcb0
 // Size: 0x158
 function function_a6c201ca() {
@@ -153,7 +153,7 @@ function function_a6c201ca() {
 }
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a380dc, Offset: 0xe10
 // Size: 0xe4
 function function_2f0859a2() {
@@ -167,7 +167,7 @@ function function_2f0859a2() {
 }
 
 // Namespace teamops
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4e480130, Offset: 0xf00
 // Size: 0x84
 function function_4c970571(event, player) {
@@ -178,7 +178,7 @@ function function_4c970571(event, player) {
 }
 
 // Namespace teamops
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x42bb0005, Offset: 0xf90
 // Size: 0x214
 function function_f0900ae5(event, player, team) {
@@ -202,7 +202,7 @@ function function_f0900ae5(event, player, team) {
 }
 
 // Namespace teamops
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x48cd8f19, Offset: 0x11b0
 // Size: 0x12c
 function function_3d345413(event, player, team) {
@@ -219,7 +219,7 @@ function function_3d345413(event, player, team) {
 }
 
 // Namespace teamops
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x387fc9f5, Offset: 0x12e8
 // Size: 0xe4
 function function_cfe86919(player, team) {
@@ -235,7 +235,7 @@ function function_cfe86919(player, team) {
 }
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x70b72ade, Offset: 0x13d8
 // Size: 0x6c
 function main() {
@@ -247,7 +247,7 @@ function main() {
 }
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8ebd6507, Offset: 0x1450
 // Size: 0x108
 function function_3640f8f4() {
@@ -268,7 +268,7 @@ function function_3640f8f4() {
 }
 
 // Namespace teamops
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x577855d9, Offset: 0x1560
 // Size: 0x162
 function function_4dd504b0() {
@@ -299,7 +299,7 @@ function function_4dd504b0() {
 }
 
 // Namespace teamops
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0xb32abd91, Offset: 0x16d0
 // Size: 0x15c
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {

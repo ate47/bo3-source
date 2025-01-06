@@ -1,11 +1,11 @@
-#using scripts/shared/postfx_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_5f11fb0b;
 
@@ -20,7 +20,7 @@ function autoexec main() {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe8a8eb94, Offset: 0x2e8
 // Size: 0xd2
 function player_cam_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -34,7 +34,7 @@ function player_cam_blur(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace namespace_5f11fb0b
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e51875, Offset: 0x3c8
 // Size: 0x88
 function function_db5afebe(localclientnum) {
@@ -49,7 +49,7 @@ function function_db5afebe(localclientnum) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1efe3c96, Offset: 0x458
 // Size: 0x114
 function player_cam_bubbles(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -67,7 +67,7 @@ function player_cam_bubbles(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace namespace_5f11fb0b
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb7cbdf4b, Offset: 0x578
 // Size: 0x94
 function player_cam_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -79,7 +79,7 @@ function player_cam_fire(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace namespace_5f11fb0b
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55732ad6, Offset: 0x618
 // Size: 0x34
 function burn_on_postfx() {
@@ -89,7 +89,7 @@ function burn_on_postfx() {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x536f65d4, Offset: 0x658
 // Size: 0x24
 function function_7a5c3cf3() {

@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_genesis_timer;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x220
 // Size: 0x4
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x393961b1, Offset: 0x230
 // Size: 0x64
 function __main__() {
@@ -32,7 +32,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_timer
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x10087577, Offset: 0x2a0
 // Size: 0x48
 function function_b94ee48a(var_6575414d, var_3bf16bb3, n_new_val, var_f16ed138, var_b54312de, str_field_name, var_ffbb7dc) {
@@ -40,7 +40,7 @@ function function_b94ee48a(var_6575414d, var_3bf16bb3, n_new_val, var_f16ed138, 
 }
 
 // Namespace zm_genesis_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5c64d2c9, Offset: 0x2f0
 // Size: 0x224
 function function_3ec869e2() {

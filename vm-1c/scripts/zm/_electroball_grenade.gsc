@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
-#using scripts/zm/_zm;
-#using scripts/zm/_zm_elemental_zombies;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_elemental_zombies;
 
 #namespace electroball_grenade;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd082b3c6, Offset: 0x4a0
 // Size: 0x1d4
 function __init__() {
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa069323f, Offset: 0x680
 // Size: 0xf4
 function register() {
@@ -55,7 +55,7 @@ function register() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb7e7a82, Offset: 0x780
 // Size: 0x1f8
 function function_b0f1e452() {
@@ -85,7 +85,7 @@ function function_b0f1e452() {
 }
 
 // Namespace electroball_grenade
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1dc745d6, Offset: 0x980
 // Size: 0xf4
 function function_f424c33d(watcher, owner) {
@@ -102,7 +102,7 @@ function function_f424c33d(watcher, owner) {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6f9fa867, Offset: 0xa80
 // Size: 0x74
 function setupkillcament() {
@@ -113,7 +113,7 @@ function setupkillcament() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2920a750, Offset: 0xb00
 // Size: 0x44
 function cleanupkillcamentondeath() {
@@ -122,7 +122,7 @@ function cleanupkillcamentondeath() {
 }
 
 // Namespace electroball_grenade
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd6755ce1, Offset: 0xb50
 // Size: 0x34
 function proximitydetonate(attacker, weapon, target) {
@@ -130,14 +130,14 @@ function proximitydetonate(attacker, weapon, target) {
 }
 
 // Namespace electroball_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1b01f084, Offset: 0xb90
 // Size: 0x112
 function watchproximitygrenadehitplayer(owner) {
     self endon(#"death");
     self setteam(owner.team);
     while (true) {
-        pos, normal, ent, surface = self waittill(#"grenade_bounce");
+        self waittill(#"grenade_bounce", pos, normal, ent, surface);
         if (isdefined(ent) && isplayer(ent) && surface != "riotshield") {
             if (level.teambased && ent.team == self.owner.team) {
                 continue;
@@ -163,14 +163,14 @@ function performhudeffects(position, distancetogrenade) {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc5c80df8, Offset: 0xdf8
 // Size: 0xe8
 function function_62ffcc2c() {
     self endon(#"death");
     self endon(#"disconnect");
     while (true) {
-        damage, eattacker, dir, point, type, model, tag, part, weapon, flags = self waittill(#"damage");
+        self waittill(#"damage", damage, eattacker, dir, point, type, model, tag, part, weapon, flags);
         if (weapon.name == "electroball_grenade") {
             self damageplayerinradius(eattacker);
         }
@@ -179,7 +179,7 @@ function function_62ffcc2c() {
 }
 
 // Namespace electroball_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd6e50ddb, Offset: 0xee8
 // Size: 0x1f4
 function damageplayerinradius(eattacker) {
@@ -233,7 +233,7 @@ function deleteentonownerdeath(owner) {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa0b40048, Offset: 0x1188
 // Size: 0x26
 function deleteentaftertime() {
@@ -243,7 +243,7 @@ function deleteentaftertime() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb723f0c8, Offset: 0x11b8
 // Size: 0x34
 function deleteentontimeout() {
@@ -253,7 +253,7 @@ function deleteentontimeout() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x61de7695, Offset: 0x11f8
 // Size: 0xa4
 function watch_death() {
@@ -268,7 +268,7 @@ function watch_death() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b03d475, Offset: 0x12a8
 // Size: 0x64
 function on_player_spawned() {
@@ -280,7 +280,7 @@ function on_player_spawned() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31fee244, Offset: 0x1318
 // Size: 0x44
 function on_ai_spawned() {
@@ -291,7 +291,7 @@ function on_ai_spawned() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x220ad969, Offset: 0x1368
 // Size: 0xa8
 function begin_other_grenade_tracking() {
@@ -300,7 +300,7 @@ function begin_other_grenade_tracking() {
     self notify(#"hash_854e75e1");
     self endon(#"hash_854e75e1");
     for (;;) {
-        grenade, weapon, cooktime = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon, cooktime);
         if (weapon.rootweapon.name == "electroball_grenade") {
             grenade thread watchproximitygrenadehitplayer(self);
         }
@@ -308,7 +308,7 @@ function begin_other_grenade_tracking() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x381721a4, Offset: 0x1418
 // Size: 0x218
 function function_cb55123a() {
@@ -317,16 +317,16 @@ function function_cb55123a() {
     self endon(#"delete");
     self waittill(#"grenade_bounce");
     while (true) {
-        var_82aacc64 = namespace_57695b4d::function_d41418b8();
+        var_82aacc64 = zm_elemental_zombie::function_d41418b8();
         var_82aacc64 = arraysortclosest(var_82aacc64, self.origin);
-        var_199ecc3a = namespace_57695b4d::function_4aeed0a5("sparky");
+        var_199ecc3a = zm_elemental_zombie::function_4aeed0a5("sparky");
         if (!isdefined(level.var_1ae26ca5) || var_199ecc3a < level.var_1ae26ca5) {
             if (!isdefined(level.var_a9284ac8) || gettime() - level.var_a9284ac8 >= 0.5) {
                 foreach (ai_zombie in var_82aacc64) {
                     dist_sq = distancesquared(self.origin, ai_zombie.origin);
                     if (dist_sq <= 9216 && ai_zombie.var_6c653628 !== 1 && ai_zombie.var_3531cf2b !== 1) {
                         ai_zombie clientfield::set("electroball_make_sparky", 1);
-                        ai_zombie namespace_57695b4d::function_1b1bb1b();
+                        ai_zombie zm_elemental_zombie::function_1b1bb1b();
                         level.var_a9284ac8 = gettime();
                         break;
                     }
@@ -338,7 +338,7 @@ function function_cb55123a() {
 }
 
 // Namespace electroball_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8ae465e, Offset: 0x1638
 // Size: 0xc4
 function function_658aacad() {
@@ -356,7 +356,7 @@ function function_658aacad() {
 }
 
 // Namespace electroball_grenade
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0x35fdc775, Offset: 0x1708
 // Size: 0xd0
 function function_f338543f(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {

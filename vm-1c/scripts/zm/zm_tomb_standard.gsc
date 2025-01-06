@@ -1,11 +1,11 @@
-#using scripts/zm/gametypes/_zm_gametype;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_game_module;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_game_module;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/gametypes/_zm_gametype;
 
 #namespace zm_tomb_standard;
 

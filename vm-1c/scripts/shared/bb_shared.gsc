@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace bb;
 
 // Namespace bb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3aae8d24, Offset: 0x218
 // Size: 0x24
 function init_shared() {
@@ -14,7 +14,7 @@ function init_shared() {
 }
 
 // Namespace bb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1292c834, Offset: 0x248
 // Size: 0x44
 function init() {
@@ -23,7 +23,7 @@ function init() {
 }
 
 // Namespace bb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeaeeda8, Offset: 0x298
 // Size: 0x1c
 function player_init() {
@@ -31,7 +31,7 @@ function player_init() {
 }
 
 // Namespace bb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa46f1e92, Offset: 0x2c0
 // Size: 0x7e
 function on_player_spawned() {
@@ -57,7 +57,7 @@ function on_player_disconnect() {
 }
 
 // Namespace bb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbde88803, Offset: 0x380
 // Size: 0x38
 function on_player_death() {
@@ -69,7 +69,7 @@ function on_player_death() {
 }
 
 // Namespace bb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xba180f58, Offset: 0x3c0
 // Size: 0xac
 function commit_spawn_data() {
@@ -81,7 +81,7 @@ function commit_spawn_data() {
 }
 
 // Namespace bb
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8c564503, Offset: 0x478
 // Size: 0x146
 function commit_weapon_data(spawnid, currentweapon, time0) {
@@ -102,7 +102,7 @@ function commit_weapon_data(spawnid, currentweapon, time0) {
 }
 
 // Namespace bb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8e22cb3c, Offset: 0x5c8
 // Size: 0x56
 function add_to_stat(statname, delta) {
@@ -112,7 +112,7 @@ function add_to_stat(statname, delta) {
 }
 
 // Namespace bb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbb0627d7, Offset: 0x628
 // Size: 0xd4
 function function_6a33da3c(var_758db14b) {
@@ -129,7 +129,7 @@ function function_6a33da3c(var_758db14b) {
 }
 
 // Namespace bb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c081c84, Offset: 0x708
 // Size: 0xec
 function function_543e7299(var_758db14b) {

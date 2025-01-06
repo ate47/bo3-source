@@ -1,17 +1,17 @@
-#using scripts/zm/gametypes/_globallogic_score;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/gametypes/_globallogic_score;
 
 #namespace zm_tomb_achievement;
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2832ffef, Offset: 0x4a8
 // Size: 0x84
 function init() {
@@ -23,7 +23,7 @@ function init() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc70cac1, Offset: 0x538
 // Size: 0xac
 function achievement_sound_func(var_43e4662) {
@@ -38,7 +38,7 @@ function achievement_sound_func(var_43e4662) {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x194e32cb, Offset: 0x5f0
 // Size: 0x15c
 function function_477a1c55() {
@@ -58,7 +58,7 @@ function function_477a1c55() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa54df963, Offset: 0x758
 // Size: 0xac
 function onplayerconnect() {
@@ -72,7 +72,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x696681c6, Offset: 0x810
 // Size: 0x44
 function function_c0e30c1f() {
@@ -84,7 +84,7 @@ function function_c0e30c1f() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3bd4dd9, Offset: 0x860
 // Size: 0x44
 function function_9463c8dc() {
@@ -96,7 +96,7 @@ function function_9463c8dc() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27539a04, Offset: 0x8b0
 // Size: 0x30
 function function_494fa6de() {
@@ -107,7 +107,7 @@ function function_494fa6de() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55a22d2f, Offset: 0x8e8
 // Size: 0x4c
 function function_b69ab1e6() {
@@ -120,7 +120,7 @@ function function_b69ab1e6() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x823957c6, Offset: 0x940
 // Size: 0x2c
 function function_f624535a() {
@@ -132,7 +132,7 @@ function function_f624535a() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ab4ac5e, Offset: 0x978
 // Size: 0x40
 function function_e337bcb3() {
@@ -144,7 +144,7 @@ function function_e337bcb3() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xae460701, Offset: 0x9c0
 // Size: 0x2c
 function function_814989cc() {
@@ -156,7 +156,7 @@ function function_814989cc() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x91647976, Offset: 0x9f8
 // Size: 0x50
 function function_6373ace7() {
@@ -168,7 +168,7 @@ function function_6373ace7() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1eca61fb, Offset: 0xa50
 // Size: 0x136
 function function_180fecea() {
@@ -196,7 +196,7 @@ function function_180fecea() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfe5ea9ea, Offset: 0xb90
 // Size: 0x6e
 function function_8d8c3a31() {
@@ -214,14 +214,14 @@ function function_8d8c3a31() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8538899, Offset: 0xc08
 // Size: 0xfe
 function function_ac3cfb4b() {
     self endon(#"disconnect");
     self endon(#"hash_f96b5911");
     while (true) {
-        w_weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", w_weapon);
         if (self.sessionstate != "playing") {
             continue;
         }
@@ -245,7 +245,7 @@ function function_ac3cfb4b() {
 }
 
 // Namespace zm_tomb_achievement
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc2d3c8a, Offset: 0xd10
 // Size: 0x76
 function function_c883541b() {

@@ -1,7 +1,7 @@
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace raps;
 
@@ -14,7 +14,7 @@ function autoexec main() {
 }
 
 // Namespace raps
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x3e063d2e, Offset: 0x198
 // Size: 0x124
 function adjust_side_death_dir_if_trace_fail(origin, side_dir, fxlength, up_dir) {
@@ -32,7 +32,7 @@ function adjust_side_death_dir_if_trace_fail(origin, side_dir, fxlength, up_dir)
 }
 
 // Namespace raps
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x60f476ed, Offset: 0x2c8
 // Size: 0x37c
 function do_side_death_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

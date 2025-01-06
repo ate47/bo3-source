@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace root_cairo;
 
 // Namespace root_cairo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f710e15, Offset: 0x358
 // Size: 0x24
 function main() {
@@ -17,7 +17,7 @@ function main() {
 }
 
 // Namespace root_cairo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2479f64, Offset: 0x388
 // Size: 0x94
 function init_clientfields() {
@@ -26,7 +26,7 @@ function init_clientfields() {
 }
 
 // Namespace root_cairo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xebc64784, Offset: 0x428
 // Size: 0x1e
 function function_ba0b35c() {
@@ -34,7 +34,7 @@ function function_ba0b35c() {
 }
 
 // Namespace root_cairo
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4b761066, Offset: 0x450
 // Size: 0x34e
 function function_889c4970(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -66,7 +66,7 @@ function function_889c4970(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace root_cairo
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3f4806d, Offset: 0x7a8
 // Size: 0x6c
 function function_ea552f44(localclientnum) {
@@ -76,7 +76,7 @@ function function_ea552f44(localclientnum) {
 }
 
 // Namespace root_cairo
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xed1bfbc2, Offset: 0x820
 // Size: 0x6c
 function function_9f362d5c(localclientnum) {
@@ -86,7 +86,7 @@ function function_9f362d5c(localclientnum) {
 }
 
 // Namespace root_cairo
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe6f7bf17, Offset: 0x898
 // Size: 0x6c
 function function_c969e4b5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

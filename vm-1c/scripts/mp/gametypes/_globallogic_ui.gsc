@@ -1,20 +1,20 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/killstreaks/_killstreaks;
-#using scripts/mp/bots/_bot;
 #using scripts/mp/_util;
-#using scripts/mp/gametypes/_spectating;
-#using scripts/mp/gametypes/_loadout;
-#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/bots/_bot;
 #using scripts/mp/gametypes/_globallogic;
-#using scripts/shared/util_shared;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/gametypes/_loadout;
+#using scripts/mp/gametypes/_spectating;
+#using scripts/mp/killstreaks/_killstreaks;
+#using scripts/mp/teams/_teams;
+#using scripts/shared/array_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/hud_util_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/util_shared;
 
 #namespace globallogic_ui;
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x2e0
 // Size: 0x4
 function init() {
@@ -22,7 +22,7 @@ function init() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6e6f810, Offset: 0x2f0
 // Size: 0x64
 function setupcallbacks() {
@@ -33,7 +33,7 @@ function setupcallbacks() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd3faa7c3, Offset: 0x360
 // Size: 0x27c
 function freegameplayhudelems() {
@@ -83,7 +83,7 @@ function freegameplayhudelems() {
 }
 
 // Namespace globallogic_ui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe71cffab, Offset: 0x5e8
 // Size: 0xc6
 function teamplayercountsequal(playercounts) {
@@ -101,7 +101,7 @@ function teamplayercountsequal(playercounts) {
 }
 
 // Namespace globallogic_ui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8135ad85, Offset: 0x6b8
 // Size: 0xda
 function teamwithlowestplayercount(playercounts, ignore_team) {
@@ -117,7 +117,7 @@ function teamwithlowestplayercount(playercounts, ignore_team) {
 }
 
 // Namespace globallogic_ui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x25e5050e, Offset: 0x7a0
 // Size: 0xa6
 function function_76c7989e(teamname, comingfrommenu) {
@@ -146,7 +146,7 @@ function function_76c7989e(teamname, comingfrommenu) {
 }
 
 // Namespace globallogic_ui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8daaa8ec, Offset: 0x850
 // Size: 0x6e4
 function menuautoassign(comingfrommenu) {
@@ -249,7 +249,7 @@ function menuautoassign(comingfrommenu) {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8ba63df, Offset: 0xf40
 // Size: 0xce
 function teamscoresequal() {
@@ -267,7 +267,7 @@ function teamscoresequal() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x461c38df, Offset: 0x1018
 // Size: 0xc4
 function teamwithlowestscore() {
@@ -282,7 +282,7 @@ function teamwithlowestscore() {
 }
 
 // Namespace globallogic_ui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa8dd0199, Offset: 0x10e8
 // Size: 0x74
 function pickteamfromscores(teams) {
@@ -296,7 +296,7 @@ function pickteamfromscores(teams) {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x50aafe1a, Offset: 0x1168
 // Size: 0xce
 function get_splitscreen_team() {
@@ -319,7 +319,7 @@ function get_splitscreen_team() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x483b5982, Offset: 0x1240
 // Size: 0xcc
 function updateobjectivetext() {
@@ -335,7 +335,7 @@ function updateobjectivetext() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd130293b, Offset: 0x1318
 // Size: 0x1c
 function closemenus() {
@@ -343,7 +343,7 @@ function closemenus() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57e9fbb8, Offset: 0x1340
 // Size: 0x1c4
 function beginclasschoice() {
@@ -368,7 +368,7 @@ function beginclasschoice() {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60589b5f, Offset: 0x1510
 // Size: 0x74
 function showmainmenuforteam() {
@@ -378,7 +378,7 @@ function showmainmenuforteam() {
 }
 
 // Namespace globallogic_ui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcea42cb3, Offset: 0x1590
 // Size: 0x254
 function menuteam(team) {
@@ -419,7 +419,7 @@ function menuteam(team) {
 }
 
 // Namespace globallogic_ui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x80d88fb6, Offset: 0x17f0
 // Size: 0x1a4
 function menuspectator() {
@@ -449,7 +449,7 @@ function menuspectator() {
 }
 
 // Namespace globallogic_ui
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4c12c3a7, Offset: 0x19a0
 // Size: 0x3cc
 function menuclass(response, forcedclass) {
@@ -514,7 +514,7 @@ function menuclass(response, forcedclass) {
 }
 
 // Namespace globallogic_ui
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde9a4cb0, Offset: 0x1d78
 // Size: 0x44
 function removespawnmessageshortly(delay) {

@@ -1,13 +1,13 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/doors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/doors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace containers;
 
@@ -16,7 +16,7 @@
 class ccontainer {
 
     // Namespace ccontainer
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x528395a8, Offset: 0x2f0
     // Size: 0x62
     function init_xmodel(str_xmodel, v_origin, v_angles) {
@@ -38,7 +38,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace containers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf834e5d, Offset: 0x460
 // Size: 0xda
 function __init__() {
@@ -52,7 +52,7 @@ function __init__() {
 }
 
 // Namespace containers
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf8ceee0c, Offset: 0x548
 // Size: 0x62
 function init() {
@@ -64,7 +64,7 @@ function init() {
 }
 
 // Namespace containers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9694457b, Offset: 0x5b8
 // Size: 0xd8
 function setup_container_scriptbundle(s_bundle, s_container_instance) {
@@ -78,7 +78,7 @@ function setup_container_scriptbundle(s_bundle, s_container_instance) {
 }
 
 // Namespace containers
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x42b40120, Offset: 0x698
 // Size: 0x114
 function container_update(c_container) {
@@ -87,13 +87,13 @@ function container_update(c_container) {
     targetname = c_container.m_s_container_instance.targetname;
     n_radius = s_bundle.trigger_radius;
     e_trigger = create_locker_trigger(c_container.m_s_container_instance.origin, n_radius, "Press [{+activate}] to open");
-    e_who = e_trigger waittill(#"trigger");
+    e_trigger waittill(#"trigger", e_who);
     e_trigger delete();
     scene::play(targetname, "targetname");
 }
 
 // Namespace containers
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdae2545c, Offset: 0x7b8
 // Size: 0x118
 function create_locker_trigger(v_pos, n_radius, str_message) {
@@ -120,7 +120,7 @@ function setup_general_container_bundle(str_targetname, str_intel_vo, str_narrat
     level flag::wait_till("all_players_spawned");
     e_trigger = create_locker_trigger(s_struct.origin, 64, "Press [{+activate}] to open");
     if (!isdefined(force_open) || force_open == 0) {
-        e_who = e_trigger waittill(#"trigger");
+        e_trigger waittill(#"trigger", e_who);
     } else {
         rand_time = randomfloatrange(1, 1.5);
         wait rand_time;
@@ -145,7 +145,7 @@ function setup_general_container_bundle(str_targetname, str_intel_vo, str_narrat
         e_collectable.angles = v_angles;
         wait 1;
         e_trigger = create_locker_trigger(s_struct.origin, 64, "Press [{+activate}] to pickup collectable");
-        e_who = e_trigger waittill(#"trigger");
+        e_trigger waittill(#"trigger", e_who);
         e_trigger delete();
         e_collectable delete();
     }
@@ -181,7 +181,7 @@ function setup_locker_double_doors(str_left_door_name, str_right_door_name, cent
 }
 
 // Namespace containers
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcda1c3c0, Offset: 0xdc0
 // Size: 0xc6
 function get_closest_ent_from_array(v_pos, a_ents) {
@@ -198,7 +198,7 @@ function get_closest_ent_from_array(v_pos, a_ents) {
 }
 
 // Namespace containers
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1171f6c3, Offset: 0xe90
 // Size: 0x1ac
 function create_locker_doors(e_left_door, e_right_door, door_open_angle, door_open_time) {

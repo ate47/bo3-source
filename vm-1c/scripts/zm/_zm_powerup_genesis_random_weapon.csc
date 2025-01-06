@@ -1,7 +1,7 @@
-#using scripts/zm/_zm_powerups;
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_powerups;
 
 #namespace zm_powerup_genesis_random_weapon;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_powerup_genesis_random_weapon
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55209953, Offset: 0x1c8
 // Size: 0x7c
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace zm_powerup_genesis_random_weapon
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcad2fce0, Offset: 0x250
 // Size: 0x6c
 function function_1913104f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,13 +1,13 @@
-#using scripts/mp/gametypes/_weaponobjects;
-#using scripts/mp/_util;
-#using scripts/shared/weapons/_weapons;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_weaponobjects;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
+#using scripts/shared/weapons/_weapons;
 
 #namespace pickup_items;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd0fabdda, Offset: 0x328
 // Size: 0x7c
 function __init__() {
@@ -32,7 +32,7 @@ function __init__() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6bfcc0b, Offset: 0x3b0
 // Size: 0x16
 function on_player_spawned() {
@@ -41,7 +41,7 @@ function on_player_spawned() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x876ac5c0, Offset: 0x3d0
 // Size: 0x20c
 function start_gametype() {
@@ -62,7 +62,7 @@ function start_gametype() {
 }
 
 // Namespace pickup_items
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x452a44f4, Offset: 0x5e8
 // Size: 0xa4
 function get_visual_for_trigger(trigger, pickup_models) {
@@ -75,7 +75,7 @@ function get_visual_for_trigger(trigger, pickup_models) {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x38e77883, Offset: 0x698
 // Size: 0x24
 function set_pickup_bobbing() {
@@ -83,7 +83,7 @@ function set_pickup_bobbing() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x63e049cb, Offset: 0x6c8
 // Size: 0x24
 function set_pickup_rotation() {
@@ -91,7 +91,7 @@ function set_pickup_rotation() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf865c6ad, Offset: 0x6f8
 // Size: 0x82
 function get_item_for_pickup() {
@@ -106,7 +106,7 @@ function get_item_for_pickup() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3769ff, Offset: 0x788
 // Size: 0x5c
 function cycle_item() {
@@ -117,7 +117,7 @@ function cycle_item() {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8d096e5a, Offset: 0x7f0
 // Size: 0xb0
 function get_item_from_string_ammo(perks_string) {
@@ -131,7 +131,7 @@ function get_item_from_string_ammo(perks_string) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xce2a4aba, Offset: 0x8a8
 // Size: 0xa8
 function get_item_from_string_damage(perks_string) {
@@ -145,7 +145,7 @@ function get_item_from_string_damage(perks_string) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x392fc599, Offset: 0x958
 // Size: 0xa8
 function get_item_from_string_health(perks_string) {
@@ -159,7 +159,7 @@ function get_item_from_string_health(perks_string) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xedf5f8c6, Offset: 0xa08
 // Size: 0xf8
 function get_item_from_string_perk(perks_string) {
@@ -178,7 +178,7 @@ function get_item_from_string_perk(perks_string) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3fa61b7d, Offset: 0xb08
 // Size: 0x128
 function get_item_from_string_weapon(weapon_and_attachments_string) {
@@ -194,7 +194,7 @@ function get_item_from_string_weapon(weapon_and_attachments_string) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa37da4c8, Offset: 0xc38
 // Size: 0xc2
 function get_item_from_string(item_string) {
@@ -213,7 +213,7 @@ function get_item_from_string(item_string) {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x937ffeb9, Offset: 0xd08
 // Size: 0xea
 function init_items_for_pickup() {
@@ -227,7 +227,7 @@ function init_items_for_pickup() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b46a5fe, Offset: 0xe00
 // Size: 0x5e
 function pickup_item_respawn_time() {
@@ -246,7 +246,7 @@ function pickup_item_respawn_time() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d084adc, Offset: 0xe68
 // Size: 0x6a
 function pickup_item_sound_pickup() {
@@ -265,7 +265,7 @@ function pickup_item_sound_pickup() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x925da523, Offset: 0xee0
 // Size: 0x6a
 function pickup_item_sound_respawn() {
@@ -284,7 +284,7 @@ function pickup_item_sound_respawn() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x474a8571, Offset: 0xf58
 // Size: 0xd4
 function pickup_item_init() {
@@ -299,7 +299,7 @@ function pickup_item_init() {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xef247afa, Offset: 0x1038
 // Size: 0x19c
 function on_touch(player) {
@@ -334,7 +334,7 @@ function on_touch(player) {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe93e3580, Offset: 0x11e0
 // Size: 0x9c
 function respawn_pickup() {
@@ -357,7 +357,7 @@ function respawn_all_pickups() {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe63049b8, Offset: 0x1320
 // Size: 0x34
 function on_touch_ammo(player) {
@@ -366,7 +366,7 @@ function on_touch_ammo(player) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd599552c, Offset: 0x1360
 // Size: 0x54
 function on_touch_damage(player) {
@@ -376,7 +376,7 @@ function on_touch_damage(player) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfe2e1091, Offset: 0x13c0
 // Size: 0x98
 function on_touch_health(player) {
@@ -392,7 +392,7 @@ function on_touch_health(player) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfcc959fd, Offset: 0x1460
 // Size: 0xa2
 function on_touch_perk(player) {
@@ -402,7 +402,7 @@ function on_touch_perk(player) {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f4819b3, Offset: 0x1510
 // Size: 0x12c
 function has_active_gadget() {
@@ -423,7 +423,7 @@ function has_active_gadget() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4850047d, Offset: 0x1648
 // Size: 0xc2
 function take_player_gadgets() {
@@ -436,7 +436,7 @@ function take_player_gadgets() {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3781f63e, Offset: 0x1718
 // Size: 0xd4
 function take_offhand_weapon(offhandslot) {
@@ -450,7 +450,7 @@ function take_offhand_weapon(offhandslot) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x66d0c71b, Offset: 0x17f8
 // Size: 0x3a
 function should_switch_to_pickup_weapon(weapon) {
@@ -464,7 +464,7 @@ function should_switch_to_pickup_weapon(weapon) {
 }
 
 // Namespace pickup_items
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4767a20b, Offset: 0x1840
 // Size: 0x2a8
 function on_touch_weapon(player) {

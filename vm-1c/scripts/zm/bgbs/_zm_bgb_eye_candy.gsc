@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_eye_candy;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfd7be37, Offset: 0x340
 // Size: 0x3fc
 function __init__() {
@@ -69,7 +69,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b229375, Offset: 0x748
 // Size: 0x34
 function validation() {
@@ -77,7 +77,7 @@ function validation() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc12d5e34, Offset: 0x788
 // Size: 0x1ec
 function activation() {
@@ -117,7 +117,7 @@ function activation() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb6f58f6f, Offset: 0x980
 // Size: 0x124
 function function_48adddeb(str_vision) {
@@ -136,7 +136,7 @@ function function_48adddeb(str_vision) {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbdff86a5, Offset: 0xab0
 // Size: 0x3c
 function function_b390826f() {
@@ -145,7 +145,7 @@ function function_b390826f() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4f368b9, Offset: 0xaf8
 // Size: 0x3c
 function function_3b5b1f1e() {
@@ -157,7 +157,7 @@ function function_3b5b1f1e() {
 }
 
 // Namespace zm_bgb_eye_candy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb50c618, Offset: 0xb40
 // Size: 0x32
 function function_67d0cc9f() {

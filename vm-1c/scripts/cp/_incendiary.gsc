@@ -1,16 +1,16 @@
-#using scripts/shared/_burnplayer;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_tacticalinsertion;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/killcam_shared;
-#using scripts/shared/entityheadicons_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/_burnplayer;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/entityheadicons_shared;
+#using scripts/shared/killcam_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_tacticalinsertion;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace incendiary;
 
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace incendiary
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa3bdc9fa, Offset: 0x4d8
 // Size: 0x124
 function init_shared() {
@@ -40,7 +40,7 @@ function init_shared() {
 /#
 
     // Namespace incendiary
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x92c4fe82, Offset: 0x608
     // Size: 0xfc
     function function_f981c352() {
@@ -55,7 +55,7 @@ function init_shared() {
 #/
 
 // Namespace incendiary
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8712ba9, Offset: 0x710
 // Size: 0x50
 function function_aad39157() {
@@ -64,7 +64,7 @@ function function_aad39157() {
 }
 
 // Namespace incendiary
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x43c46383, Offset: 0x768
 // Size: 0x74
 function function_8772b94d(watcher, player) {
@@ -76,7 +76,7 @@ function function_8772b94d(watcher, player) {
 }
 
 // Namespace incendiary
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd06908ac, Offset: 0x7e8
 // Size: 0x16c
 function function_ab966fda(owner) {
@@ -88,7 +88,7 @@ function function_ab966fda(owner) {
     killcament linkto(self);
     killcament setweapon(self.weapon);
     killcament killcam::store_killcam_entity_on_entity(self);
-    origin, normal, surface = self waittill(#"projectile_impact_explode");
+    self waittill(#"projectile_impact_explode", origin, normal, surface);
     killcament unlink();
     /#
         function_f981c352();
@@ -98,7 +98,7 @@ function function_ab966fda(owner) {
 }
 
 // Namespace incendiary
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6347e36c, Offset: 0x960
 // Size: 0x7e
 function function_5377f3a6(normal) {
@@ -111,7 +111,7 @@ function function_5377f3a6(normal) {
 }
 
 // Namespace incendiary
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc1dabfe9, Offset: 0x9e8
 // Size: 0x2ac
 function generatelocations(position, owner, normal, killcament) {
@@ -136,7 +136,7 @@ function generatelocations(position, owner, normal, killcament) {
 }
 
 // Namespace incendiary
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x9800964a, Offset: 0xca0
 // Size: 0xb6
 function function_8be43ae5(startpos, fxindex, fxcount, defaultdistance, rotation) {
@@ -147,7 +147,7 @@ function function_8be43ae5(startpos, fxindex, fxcount, defaultdistance, rotation
 }
 
 // Namespace incendiary
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x210a9029, Offset: 0xd60
 // Size: 0x526
 function spawnalllocs(owner, startpos, normal, multiplier, rotation, killcament, fxcount) {
@@ -200,7 +200,7 @@ function spawnalllocs(owner, startpos, normal, multiplier, rotation, killcament,
 /#
 
     // Namespace incendiary
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xea38398a, Offset: 0x1290
     // Size: 0xbc
     function incendiary_debug_line(from, to, color, depthtest, time) {
@@ -219,7 +219,7 @@ function spawnalllocs(owner, startpos, normal, multiplier, rotation, killcament,
 #/
 
 // Namespace incendiary
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xc4d4b028, Offset: 0x1358
 // Size: 0x282
 function damageeffectarea(owner, position, radius, height, killcament) {
@@ -257,7 +257,7 @@ function damageeffectarea(owner, position, radius, height, killcament) {
 }
 
 // Namespace incendiary
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x187e2900, Offset: 0x15e8
 // Size: 0x2f4
 function getpotentialtargets(owner) {
@@ -303,7 +303,7 @@ function getpotentialtargets(owner) {
 }
 
 // Namespace incendiary
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xed3616e7, Offset: 0x18e8
 // Size: 0x13c
 function trytoapplyfiredamage(target, owner, position, fireeffectarea, resetfiretime, killcament) {
@@ -319,7 +319,7 @@ function trytoapplyfiredamage(target, owner, position, fireeffectarea, resetfire
 }
 
 // Namespace incendiary
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xde4d35b7, Offset: 0x1a30
 // Size: 0x1a4
 function damageinfirearea(fireeffectarea, killcament, trace, position, resetfiretime) {
@@ -348,7 +348,7 @@ function damageinfirearea(fireeffectarea, killcament, trace, position, resetfire
 }
 
 // Namespace incendiary
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf358b7d9, Offset: 0x1be0
 // Size: 0x11e
 function sndfiredamage() {
@@ -369,7 +369,7 @@ function sndfiredamage() {
 }
 
 // Namespace incendiary
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5543a25e, Offset: 0x1d08
 // Size: 0x44
 function sndfiredamage_deleteent(ent) {
@@ -381,7 +381,7 @@ function sndfiredamage_deleteent(ent) {
 }
 
 // Namespace incendiary
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6b3693ed, Offset: 0x1d58
 // Size: 0xd0
 function hitpos(start, end, color) {
@@ -397,7 +397,7 @@ function hitpos(start, end, color) {
 }
 
 // Namespace incendiary
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x46eefbdf, Offset: 0x1e30
 // Size: 0x84
 function candofiredamage(killcament, victim, resetfiretime) {
@@ -411,7 +411,7 @@ function candofiredamage(killcament, victim, resetfiretime) {
 }
 
 // Namespace incendiary
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8a1547a9, Offset: 0x1ec0
 // Size: 0x40
 function resetfiredamage(entnum, time) {

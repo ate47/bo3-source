@@ -1,18 +1,18 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/_challenges;
-#using scripts/shared/_burnplayer;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_player;
 #using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/shared/_burnplayer;
 #using scripts/shared/abilities/gadgets/_gadget_clone;
-#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/weapons/_weapon_utils;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/challenges_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/weapons/_weapon_utils;
 
 #namespace globallogic_actor;
 
@@ -25,7 +25,7 @@ function autoexec init() {
 }
 
 // Namespace globallogic_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaf0bb128, Offset: 0x3a0
 // Size: 0x24
 function callback_actorspawned(spawner) {
@@ -33,7 +33,7 @@ function callback_actorspawned(spawner) {
 }
 
 // Namespace globallogic_actor
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0xbb7d9b4c, Offset: 0x3d0
 // Size: 0xc44
 function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, modelindex, surfacetype, vsurfacenormal) {
@@ -179,7 +179,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
 }
 
 // Namespace globallogic_actor
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x9c5bd188, Offset: 0x1020
 // Size: 0x18c
 function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -200,7 +200,7 @@ function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weap
 }
 
 // Namespace globallogic_actor
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x506a1b49, Offset: 0x11b8
 // Size: 0x3c
 function callback_actorcloned(original) {

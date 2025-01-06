@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/duplicaterender_mgr;
 #using scripts/codescripts/struct;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/system_shared;
 
 #namespace _gadget_clone_render;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_clone_render
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71194902, Offset: 0x258
 // Size: 0xd4
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 #namespace gadget_clone_render;
 
 // Namespace gadget_clone_render
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4609929, Offset: 0x338
 // Size: 0xa4
 function function_9bad5680(localclientnum) {

@@ -1,22 +1,22 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_amb;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_tomb_amb;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #using_animtree("generic");
 
 #namespace zm_tomb_quest_crypt;
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8a89fe7, Offset: 0x680
 // Size: 0x94
 function main() {
@@ -28,18 +28,18 @@ function main() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5059281b, Offset: 0x720
 // Size: 0xca
 function function_9f789b54() {
     var_d8c2b9bd = getentarray("crypt_puzzle_disc", "script_noteworthy");
-    foreach (var_5868c432 in var_d8c2b9bd) {
-        var_5868c432 util::delay(0.5, undefined, &function_f78a1a6c, 0);
+    foreach (disc in var_d8c2b9bd) {
+        disc util::delay(0.5, undefined, &function_f78a1a6c, 0);
     }
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf521c73f, Offset: 0x7f8
 // Size: 0x12c
 function function_31813267() {
@@ -56,7 +56,7 @@ function function_31813267() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6cddbd4a, Offset: 0x930
 // Size: 0x2bc
 function function_ac2cc469() {
@@ -92,7 +92,7 @@ function function_ac2cc469() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x983b703d, Offset: 0xbf8
 // Size: 0x10c
 function function_746282b3(a_ents) {
@@ -118,28 +118,28 @@ function function_746282b3(a_ents) {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaa1acf72, Offset: 0xd10
 // Size: 0x102
 function function_39524a5() {
-    var_5868c432 = getent("crypt_puzzle_disc_main", "targetname");
+    disc = getent("crypt_puzzle_disc_main", "targetname");
     gems = getentarray("crypt_gem", "script_noteworthy");
     foreach (gem in gems) {
-        gem linkto(var_5868c432);
+        gem linkto(disc);
         gem thread function_e99137c6();
     }
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b6498ef, Offset: 0xe20
 // Size: 0x10a
 function function_65f2169e() {
     var_d8c2b9bd = getentarray("crypt_puzzle_disc", "script_noteworthy");
     for (i = 1; i <= 4; i++) {
-        foreach (var_5868c432 in var_d8c2b9bd) {
-            if (var_5868c432.script_int === i) {
-                var_5868c432 function_f78a1a6c(1);
+        foreach (disc in var_d8c2b9bd) {
+            if (disc.script_int === i) {
+                disc function_f78a1a6c(1);
                 break;
             }
         }
@@ -148,7 +148,7 @@ function function_65f2169e() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbc46551b, Offset: 0xf38
 // Size: 0x7d4
 function function_e99137c6() {
@@ -193,7 +193,7 @@ function function_e99137c6() {
     self delete();
     var_2370450c setcandamage(1);
     while (true) {
-        damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weapon = var_2370450c waittill(#"damage");
+        var_2370450c waittill(#"damage", damage, attacker, direction_vec, point, mod, tagname, modelname, partname, weapon);
         if (weapon == w_weapon) {
             break;
         }
@@ -240,7 +240,7 @@ function function_e99137c6() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xea7c1173, Offset: 0x1718
 // Size: 0x11c
 function function_60de7457() {
@@ -256,7 +256,7 @@ function function_60de7457() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8c1c62ac, Offset: 0x1840
 // Size: 0x104
 function function_dadea124(var_d8c2b9bd) {
@@ -274,26 +274,26 @@ function function_dadea124(var_d8c2b9bd) {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x655d3709, Offset: 0x1950
 // Size: 0x5c
 function function_46d994bc(var_261dd588) {
-    var_5868c432 = getent("crypt_puzzle_disc_main", "targetname");
-    return (var_5868c432.position + level.var_a89ce290[var_261dd588]) % 4;
+    disc = getent("crypt_puzzle_disc_main", "targetname");
+    return (disc.position + level.var_a89ce290[var_261dd588]) % 4;
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x98c0c8a1, Offset: 0x19b8
 // Size: 0x10e
 function function_f73a5201(var_261dd588) {
     var_4b4ac40 = function_46d994bc(var_261dd588);
     var_d8c2b9bd = getentarray("crypt_puzzle_disc", "script_noteworthy");
-    foreach (var_5868c432 in var_d8c2b9bd) {
-        if (var_5868c432.targetname === "crypt_puzzle_disc_main") {
+    foreach (disc in var_d8c2b9bd) {
+        if (disc.targetname === "crypt_puzzle_disc_main") {
             continue;
         }
-        if (var_5868c432.position != var_4b4ac40) {
+        if (disc.position != var_4b4ac40) {
             return false;
         }
     }
@@ -301,7 +301,7 @@ function function_f73a5201(var_261dd588) {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc402872e, Offset: 0x1ad0
 // Size: 0x64
 function function_93f3ba53(b_clockwise) {
@@ -314,7 +314,7 @@ function function_93f3ba53(b_clockwise) {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x497f5ba8, Offset: 0x1b40
 // Size: 0xa4
 function function_f78a1a6c(b_on) {
@@ -335,24 +335,24 @@ function function_f78a1a6c(b_on) {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x40aaa704, Offset: 0x1bf0
 // Size: 0x124
 function function_53089652() {
     var_d8c2b9bd = getentarray("crypt_puzzle_disc", "script_noteworthy");
     var_7f582b31 = 0;
-    foreach (var_5868c432 in var_d8c2b9bd) {
-        if (!isdefined(var_5868c432.target)) {
+    foreach (disc in var_d8c2b9bd) {
+        if (!isdefined(disc.target)) {
             continue;
         }
-        var_5868c432.position = (var_7f582b31 + randomintrange(1, 3)) % 4;
-        var_7f582b31 = var_5868c432.position;
+        disc.position = (var_7f582b31 + randomintrange(1, 3)) % 4;
+        var_7f582b31 = disc.position;
     }
     function_dadea124(var_d8c2b9bd);
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87c4f173, Offset: 0x1d20
 // Size: 0x4c
 function function_bf093c24() {
@@ -362,7 +362,7 @@ function function_bf093c24() {
 }
 
 // Namespace zm_tomb_quest_crypt
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x81149237, Offset: 0x1d78
 // Size: 0x1de
 function function_865b0a10(var_4768a576, var_8305c467, b_clockwise) {
@@ -370,7 +370,7 @@ function function_865b0a10(var_4768a576, var_8305c467, b_clockwise) {
     var_8305c467 useanimtree(#generic);
     var_427f919 = getanimlength(generic%p7_fxanim_zm_ori_puzzle_switch_anim);
     while (true) {
-        e_triggerer = self waittill(#"trigger");
+        self waittill(#"trigger", e_triggerer);
         if (!level flag::get("disc_rotation_active")) {
             level flag::set("disc_rotation_active");
             var_8305c467 animscripted("lever_switch", var_8305c467.origin, var_8305c467.angles, "p7_fxanim_zm_ori_puzzle_switch_anim");

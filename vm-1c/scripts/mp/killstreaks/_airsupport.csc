@@ -1,8 +1,8 @@
-#using scripts/mp/_vehicle;
-#using scripts/mp/_util;
-#using scripts/mp/_rewindobjects;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_rewindobjects;
+#using scripts/mp/_util;
+#using scripts/mp/_vehicle;
+#using scripts/shared/util_shared;
 
 #namespace airsupport;
 
@@ -20,7 +20,7 @@ function planesounds(localclientnum, spawnsound, flybysound, flybysoundloop) {
 }
 
 // Namespace airsupport
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6a7b11fd, Offset: 0x2c8
 // Size: 0x24
 function getplanemodel(teamfaction) {
@@ -45,7 +45,7 @@ function planeturnleft(localclientnum, plane, yaw, halflife, starttime) {
 }
 
 // Namespace airsupport
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x71290a37, Offset: 0x3b8
 // Size: 0xa4e
 function planeturn(localclientnum, plane, yaw, halflife, starttime, isturningright) {

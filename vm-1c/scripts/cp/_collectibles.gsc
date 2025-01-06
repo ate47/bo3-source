@@ -1,12 +1,12 @@
-#using scripts/shared/util_shared;
 #using scripts/cp/_challenges;
+#using scripts/cp/_objectives;
 #using scripts/cp/_util;
 #using scripts/cp/gametypes/_save;
-#using scripts/cp/_objectives;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace collectibles;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2eb0b64, Offset: 0x380
 // Size: 0x40
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x973f638e, Offset: 0x3c8
 // Size: 0x1d2
 function __main__() {
@@ -87,7 +87,7 @@ function function_93523442(var_977e0f67, radius, offset) {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x5bacd759, Offset: 0x768
 // Size: 0x2a
 function private function_148c7e54() {
@@ -95,7 +95,7 @@ function private function_148c7e54() {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x976820ec, Offset: 0x7a0
 // Size: 0x1c4
 function on_player_spawned() {
@@ -118,7 +118,7 @@ function on_player_spawned() {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b028329, Offset: 0x970
 // Size: 0x1c
 function on_player_connect() {
@@ -141,7 +141,7 @@ function function_6ba0709f() {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ec59084, Offset: 0xa20
 // Size: 0x368
 function function_332e2cfd() {
@@ -178,7 +178,7 @@ function function_332e2cfd() {
 }
 
 // Namespace collectibles
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7b07f2f9, Offset: 0xd90
 // Size: 0xb8
 function private function_b963f25(mdl_collectible) {
@@ -193,7 +193,7 @@ function private function_b963f25(mdl_collectible) {
 }
 
 // Namespace collectibles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x50815f5b, Offset: 0xe50
 // Size: 0x33c
 function function_8765a33c(mdl_collectible) {
@@ -226,7 +226,7 @@ function function_8765a33c(mdl_collectible) {
 }
 
 // Namespace collectibles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3e3b4033, Offset: 0x1198
 // Size: 0x1cc
 function onuse(e_player) {
@@ -248,7 +248,7 @@ function onuse(e_player) {
 }
 
 // Namespace collectibles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7fcdce93, Offset: 0x1370
 // Size: 0xc
 function onbeginuse(e_player) {
@@ -256,7 +256,7 @@ function onbeginuse(e_player) {
 }
 
 // Namespace collectibles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x52865663, Offset: 0x1388
 // Size: 0xaa
 function function_ccb1e08d(map_name) {
@@ -276,7 +276,7 @@ function function_ccb1e08d(map_name) {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x55fc12c4, Offset: 0x1440
 // Size: 0x7e
 function function_3955ccef() {
@@ -289,7 +289,7 @@ function function_3955ccef() {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xcffd827f, Offset: 0x14c8
 // Size: 0xd2
 function private function_e1aad2b1() {
@@ -300,25 +300,25 @@ function private function_e1aad2b1() {
     if (isdefined(self) && self hascollectedallcollectibles()) {
         self setdstat("PlayerStatsList", "ALL_COLLECTIBLES_COLLECTED", "statValue", 1);
         self givedecoration("cp_medal_all_collectibles");
-        self notify(#"hash_52c9c74a", "CP_ALL_COLLECTIBLES");
+        self notify(#"give_achievement", "CP_ALL_COLLECTIBLES");
     }
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d58962f, Offset: 0x15a8
 // Size: 0xa4
 function function_a8d8b9c7() {
     assert(isplayer(self));
     if (self function_3955ccef()) {
         self setdstat("PlayerStatsByMap", getrootmapname(), "allCollectiblesCollected", 1);
-        self notify(#"hash_52c9c74a", "CP_MISSION_COLLECTIBLES");
+        self notify(#"give_achievement", "CP_MISSION_COLLECTIBLES");
     }
     self thread function_e1aad2b1();
 }
 
 // Namespace collectibles
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfb53950c, Offset: 0x1658
 // Size: 0x44
 function function_8acd43fd(var_5c0b5b64, value) {
@@ -326,7 +326,7 @@ function function_8acd43fd(var_5c0b5b64, value) {
 }
 
 // Namespace collectibles
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4bf1df55, Offset: 0x16a8
 // Size: 0x32
 function function_70b41d41(var_5c0b5b64) {
@@ -334,7 +334,7 @@ function function_70b41d41(var_5c0b5b64) {
 }
 
 // Namespace collectibles
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc9577c27, Offset: 0x16e8
 // Size: 0xa2
 function function_d100c544() {

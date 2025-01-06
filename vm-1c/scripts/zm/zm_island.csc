@@ -1,66 +1,66 @@
-#using scripts/zm/zm_island_zones;
-#using scripts/zm/zm_island_spider_ee_quest;
-#using scripts/zm/zm_island_side_ee_golden_bucket;
-#using scripts/zm/zm_island_side_ee_spore_hallucinations;
-#using scripts/zm/zm_island_side_ee_secret_maxammo;
-#using scripts/zm/zm_island_side_ee_good_thrasher;
-#using scripts/zm/zm_island_side_ee_doppleganger;
-#using scripts/zm/zm_island_side_ee_distant_monster;
-#using scripts/zm/zm_island_takeo_fight;
-#using scripts/zm/zm_island_skullweapon_quest;
-#using scripts/zm/zm_island_ww_quest;
-#using scripts/zm/zm_island_main_ee_quest;
-#using scripts/zm/_zm_weap_keeper_skull;
-#using scripts/zm/_zm_weap_mirg2000;
-#using scripts/zm/zm_island_ffotd;
-#using scripts/zm/zm_island_challenges;
-#using scripts/zm/zm_island_inventory;
-#using scripts/zm/zm_island_fx;
-#using scripts/zm/zm_island_spider_quest;
-#using scripts/zm/zm_island_pap_quest;
-#using scripts/zm/zm_island_portals;
-#using scripts/zm/zm_island_spores;
-#using scripts/zm/zm_island_transport;
-#using scripts/zm/zm_island_power;
-#using scripts/zm/zm_island_planting;
-#using scripts/zm/zm_island_traps;
-#using scripts/zm/zm_island_dogfights;
-#using scripts/zm/zm_island_craftables;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_empty_perk;
-#using scripts/zm/_zm_powerup_bonus_points_team;
+#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_spiders;
+#using scripts/zm/_zm_ai_thrasher;
+#using scripts/zm/_zm_pack_a_punch;
 #using scripts/zm/_zm_powerup_bonus_points_player;
-#using scripts/zm/_zm_powerup_island_seed;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_bonus_points_team;
 #using scripts/zm/_zm_powerup_carpenter;
 #using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_pack_a_punch;
-#using scripts/zm/zm_island_perks;
-#using scripts/zm/_zm_ai_thrasher;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/zm/craftables/_zm_craft_shield;
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_weap_island_shield;
-#using scripts/zm/zm_island_amb;
-#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_powerup_empty_perk;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_island_seed;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_bouncingbetty;
 #using scripts/zm/_zm_weap_controllable_spider;
 #using scripts/zm/_zm_weap_cymbal_monkey;
-#using scripts/zm/_zm_weap_bouncingbetty;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_ai_spiders;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_weap_island_shield;
+#using scripts/zm/_zm_weap_keeper_skull;
+#using scripts/zm/_zm_weap_mirg2000;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/craftables/_zm_craft_shield;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_island_amb;
+#using scripts/zm/zm_island_challenges;
+#using scripts/zm/zm_island_craftables;
+#using scripts/zm/zm_island_dogfights;
+#using scripts/zm/zm_island_ffotd;
+#using scripts/zm/zm_island_fx;
+#using scripts/zm/zm_island_inventory;
+#using scripts/zm/zm_island_main_ee_quest;
+#using scripts/zm/zm_island_pap_quest;
+#using scripts/zm/zm_island_perks;
+#using scripts/zm/zm_island_planting;
+#using scripts/zm/zm_island_portals;
+#using scripts/zm/zm_island_power;
+#using scripts/zm/zm_island_side_ee_distant_monster;
+#using scripts/zm/zm_island_side_ee_doppleganger;
+#using scripts/zm/zm_island_side_ee_golden_bucket;
+#using scripts/zm/zm_island_side_ee_good_thrasher;
+#using scripts/zm/zm_island_side_ee_secret_maxammo;
+#using scripts/zm/zm_island_side_ee_spore_hallucinations;
+#using scripts/zm/zm_island_skullweapon_quest;
+#using scripts/zm/zm_island_spider_ee_quest;
+#using scripts/zm/zm_island_spider_quest;
+#using scripts/zm/zm_island_spores;
+#using scripts/zm/zm_island_takeo_fight;
+#using scripts/zm/zm_island_transport;
+#using scripts/zm/zm_island_traps;
+#using scripts/zm/zm_island_ww_quest;
+#using scripts/zm/zm_island_zones;
 
 #namespace zm_island;
 
@@ -74,7 +74,7 @@ function autoexec opt_in() {
 }
 
 // Namespace zm_island
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1f89a3f9, Offset: 0x1b30
 // Size: 0x29c
 function main() {
@@ -97,7 +97,7 @@ function main() {
     zm_island_transport::init();
     zm_island_spores::init();
     zm_island_perks::init();
-    namespace_5f2c95ae::init();
+    zm_island_skullquest::init();
     zm_island_main_ee_quest::init_quest();
     zm_island_zones::init();
     zm_island_pap_quest::init();
@@ -119,7 +119,7 @@ function main() {
 }
 
 // Namespace zm_island
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaada0dc2, Offset: 0x1dd8
 // Size: 0x364
 function register_clientfields() {
@@ -139,7 +139,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_island
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95533335, Offset: 0x2148
 // Size: 0x34
 function include_weapons() {
@@ -148,7 +148,7 @@ function include_weapons() {
 }
 
 // Namespace zm_island
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfc5d7cdd, Offset: 0x2188
 // Size: 0x1112
 function setup_personality_character_exerts() {
@@ -267,7 +267,7 @@ function setup_personality_character_exerts() {
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1d1ed365, Offset: 0x32a8
 // Size: 0x7c
 function postfx_futz_mild(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -276,7 +276,7 @@ function postfx_futz_mild(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x55b5f4ef, Offset: 0x3330
 // Size: 0xde
 function water_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -294,7 +294,7 @@ function water_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x52d7e579, Offset: 0x3418
 // Size: 0x7c
 function function_58e931d1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -306,7 +306,7 @@ function function_58e931d1(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x759d7927, Offset: 0x34a0
 // Size: 0x7c
 function function_6e954d4(localclientnum) {
@@ -318,7 +318,7 @@ function function_6e954d4(localclientnum) {
 }
 
 // Namespace zm_island
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf59468bc, Offset: 0x3528
 // Size: 0x52
 function function_6fb5501(localclientnum) {
@@ -330,7 +330,7 @@ function function_6fb5501(localclientnum) {
 }
 
 // Namespace zm_island
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7fab9966, Offset: 0x3588
 // Size: 0x3c
 function function_738868d4(localclientnum) {
@@ -340,7 +340,7 @@ function function_738868d4(localclientnum) {
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x767f9287, Offset: 0x35d0
 // Size: 0xf4
 function function_346468e3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -358,7 +358,7 @@ function function_346468e3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5f01fd23, Offset: 0x36d0
 // Size: 0x54
 function on_localplayer_spawned(localclientnum) {
@@ -370,7 +370,7 @@ function on_localplayer_spawned(localclientnum) {
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x29ac8f53, Offset: 0x3730
 // Size: 0xbc
 function function_d6b43cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -397,7 +397,7 @@ function mapped_material_id(materialname) {
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xab0f059d, Offset: 0x3830
 // Size: 0xec
 function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -412,7 +412,7 @@ function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd9b3ed15, Offset: 0x3928
 // Size: 0x94
 function function_4a01cc4e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -424,7 +424,7 @@ function function_4a01cc4e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe9ee77a, Offset: 0x39c8
 // Size: 0x16c
 function set_heavy_web_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -449,7 +449,7 @@ function set_heavy_web_fade_material(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace zm_island
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa75dfb9b, Offset: 0x3b40
 // Size: 0xaa
 function function_be61cf5a() {
@@ -460,7 +460,7 @@ function function_be61cf5a() {
 }
 
 // Namespace zm_island
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb6e996fe, Offset: 0x3bf8
 // Size: 0x304
 function function_3a429aee() {
@@ -499,7 +499,7 @@ function function_3a429aee() {
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd960d244, Offset: 0x3f08
 // Size: 0x7c
 function force_stream_spiders(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -511,7 +511,7 @@ function force_stream_spiders(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa5b5d80d, Offset: 0x3f90
 // Size: 0x10c
 function force_stream_takeo_arms(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

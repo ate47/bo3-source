@@ -3,7 +3,7 @@
 #namespace voice_biodomes;
 
 // Namespace voice_biodomes
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbddbeb45, Offset: 0x2590
 // Size: 0x19c4
 function init_voice() {

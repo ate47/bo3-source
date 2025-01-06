@@ -1,12 +1,12 @@
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace singlelockap_guidance;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace singlelockap_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5be798ca, Offset: 0x260
 // Size: 0x24
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace singlelockap_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfacdcaab, Offset: 0x290
 // Size: 0x4c
 function on_player_spawned() {
@@ -38,7 +38,7 @@ function on_player_spawned() {
 }
 
 // Namespace singlelockap_guidance
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc2305dc3, Offset: 0x2e8
 // Size: 0x25c
 function clearaptarget(weapon, whom) {
@@ -78,14 +78,14 @@ function clearaptarget(weapon, whom) {
 }
 
 // Namespace singlelockap_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x91d5f765, Offset: 0x550
 // Size: 0x11e
 function function_c0677ebd() {
     self endon(#"disconnect");
     self endon(#"death");
     while (true) {
-        missile, weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", missile, weapon);
         if (weapon.lockontype == "AP Single") {
             foreach (target in self.multilocklist) {
                 if (isdefined(target.aptarget) && target.aplockfinalized) {
@@ -97,14 +97,14 @@ function function_c0677ebd() {
 }
 
 // Namespace singlelockap_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x64971312, Offset: 0x678
 // Size: 0x178
 function aptoggleloop() {
     self endon(#"disconnect");
     self endon(#"death");
     for (;;) {
-        weapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", weapon);
         while (weapon.lockontype == "AP Single") {
             abort = 0;
             while (!(self playerads() == 1)) {
@@ -130,7 +130,7 @@ function aptoggleloop() {
 }
 
 // Namespace singlelockap_guidance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe2d2772b, Offset: 0x7f8
 // Size: 0x53e
 function aplockloop(weapon) {
@@ -217,7 +217,7 @@ function aplockloop(weapon) {
 }
 
 // Namespace singlelockap_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6888913, Offset: 0xd40
 // Size: 0x2c
 function destroylockoncanceledmessage() {
@@ -251,7 +251,7 @@ function displaylockoncanceledmessage() {
 }
 
 // Namespace singlelockap_guidance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9532387b, Offset: 0xed8
 // Size: 0x53e
 function getbesttarget(weapon) {
@@ -316,7 +316,7 @@ function getbesttarget(weapon) {
 }
 
 // Namespace singlelockap_guidance
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1cec925f, Offset: 0x1420
 // Size: 0x60
 function targetinsertionsortcompare(a, b) {
@@ -330,7 +330,7 @@ function targetinsertionsortcompare(a, b) {
 }
 
 // Namespace singlelockap_guidance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8a706d32, Offset: 0x1488
 // Size: 0x52
 function insideapreticlenolock(target) {
@@ -339,7 +339,7 @@ function insideapreticlenolock(target) {
 }
 
 // Namespace singlelockap_guidance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6f08f229, Offset: 0x14e8
 // Size: 0x52
 function insideapreticlelocked(target) {
@@ -348,7 +348,7 @@ function insideapreticlelocked(target) {
 }
 
 // Namespace singlelockap_guidance
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4d53bd73, Offset: 0x1548
 // Size: 0x86
 function isstillvalidtarget(weapon, ent) {
@@ -368,7 +368,7 @@ function isstillvalidtarget(weapon, ent) {
 }
 
 // Namespace singlelockap_guidance
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x18b99623, Offset: 0x15d8
 // Size: 0xec
 function seekersound(alias, looping, id) {
@@ -388,7 +388,7 @@ function seekersound(alias, looping, id) {
 }
 
 // Namespace singlelockap_guidance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd9f4a47c, Offset: 0x16d0
 // Size: 0x180
 function locksighttest(target) {

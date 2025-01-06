@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace clientids;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace clientids
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe1e095dc, Offset: 0x128
 // Size: 0x44
 function __init__() {
@@ -22,7 +22,7 @@ function __init__() {
 }
 
 // Namespace clientids
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9337c0de, Offset: 0x178
 // Size: 0x10
 function init() {
@@ -30,7 +30,7 @@ function init() {
 }
 
 // Namespace clientids
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3af59814, Offset: 0x190
 // Size: 0x94
 function on_player_connect() {

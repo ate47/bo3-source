@@ -1,13 +1,13 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace _gadget_unstoppable_force;
 
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x696b3347, Offset: 0x440
 // Size: 0x6c
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4601b7b, Offset: 0x4b8
 // Size: 0x24
 function on_localplayer_shutdown(localclientnum) {
@@ -37,7 +37,7 @@ function on_localplayer_shutdown(localclientnum) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd388cba4, Offset: 0x4e8
 // Size: 0x202
 function function_8f92edb4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +58,7 @@ function function_8f92edb4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3f45a0ba, Offset: 0x6f8
 // Size: 0x11c
 function function_435df4ae(localclientnum) {
@@ -69,7 +69,7 @@ function function_435df4ae(localclientnum) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x36d6bd01, Offset: 0x820
 // Size: 0x3c
 function function_f8cd963(localclientnum) {
@@ -77,7 +77,7 @@ function function_f8cd963(localclientnum) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xad92a861, Offset: 0x868
 // Size: 0x3e
 function function_26d7266e(localclientnum) {
@@ -88,7 +88,7 @@ function function_26d7266e(localclientnum) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd6d4fab3, Offset: 0x8b0
 // Size: 0x62
 function function_4ba988e2(localclientnum) {
@@ -99,7 +99,7 @@ function function_4ba988e2(localclientnum) {
 }
 
 // Namespace _gadget_unstoppable_force
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb760393a, Offset: 0x920
 // Size: 0x190
 function function_7f9030dd(localclientnum) {

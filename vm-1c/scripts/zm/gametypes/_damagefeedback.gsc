@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
 
 #namespace damagefeedback;
 
@@ -14,7 +14,7 @@ function __init__() {
 }
 
 // Namespace damagefeedback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x260
 // Size: 0x4
 function main() {
@@ -22,7 +22,7 @@ function main() {
 }
 
 // Namespace damagefeedback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a5d1ac9, Offset: 0x270
 // Size: 0xd8
 function on_player_connect() {
@@ -38,7 +38,7 @@ function on_player_connect() {
 }
 
 // Namespace damagefeedback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd1f3c81d, Offset: 0x350
 // Size: 0x66
 function should_play_sound(mod) {
@@ -58,7 +58,7 @@ function should_play_sound(mod) {
 }
 
 // Namespace damagefeedback
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x2ecbf3a1, Offset: 0x3c0
 // Size: 0x270
 function updatedamagefeedback(mod, inflictor, perkfeedback) {
@@ -104,7 +104,7 @@ function updatedamagefeedback(mod, inflictor, perkfeedback) {
 }
 
 // Namespace damagefeedback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6f63d84d, Offset: 0x638
 // Size: 0x60
 function function_624a623b(mod, alert) {
@@ -144,7 +144,7 @@ function function_cffe043d(hitent) {
 }
 
 // Namespace damagefeedback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeea33415, Offset: 0x798
 // Size: 0x17e
 function function_4c506f90(hitent) {

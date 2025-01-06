@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/music_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_sing_blackstation_sound;
 

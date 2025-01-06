@@ -1,39 +1,39 @@
+#using scripts/codescripts/struct;
+#using scripts/cp/_accolades;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue;
+#using scripts/cp/cp_mi_eth_prologue_accolades;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
 #using scripts/cp/cp_prologue_player_sacrifice;
 #using scripts/cp/cp_prologue_robot_reveal;
 #using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/cp/cp_mi_eth_prologue;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/gametypes/_save;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_accolades;
-#using scripts/codescripts/struct;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace apc;
 
@@ -272,7 +272,7 @@ function function_4792c4cc() {
     }
     var_be61cb01 setcandamage(1);
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = var_be61cb01 waittill(#"damage");
+        var_be61cb01 waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         if (isdefined(weapon) && isdefined(weapon.name)) {
             if (weapon.name == "turret_bo3_mil_macv_gunner1" || weapon.name == "turret_bo3_mil_macv_gunner2" || weapon.name == "turret_bo3_mil_macv_gunner3" || weapon.name == "turret_bo3_mil_macv_gunner4") {
                 var_be61cb01 delete();
@@ -286,11 +286,11 @@ function function_4792c4cc() {
 // Params 2, eflags: 0x0
 // Checksum 0x48d617cb, Offset: 0x3010
 // Size: 0x1b2
-function function_50d6bf35(var_6c5c89e1, b_start) {
+function function_50d6bf35(str_node, b_start) {
     vehicle::add_spawn_function("apc", &function_c695b790, b_start);
     var_503961a8 = 0;
     var_9c9766b2 = 0;
-    if (var_6c5c89e1 == "nd_stall_start") {
+    if (str_node == "nd_stall_start") {
         level.apc = vehicle::simple_spawn_single("apc_stall");
         level.apc.animname = "apc";
         var_503961a8 = 1;
@@ -304,7 +304,7 @@ function function_50d6bf35(var_6c5c89e1, b_start) {
         level.apc setseatoccupied(4, 1);
     }
     level flag::wait_till("all_players_spawned");
-    level function_87f36425(var_6c5c89e1, b_start);
+    level function_87f36425(str_node, b_start);
     level function_faafa578();
     level thread function_38362d1e();
     level.apc thread function_8dc833e9(var_503961a8, var_9c9766b2);
@@ -386,8 +386,8 @@ function function_8dc833e9(var_503961a8, var_d74d752a) {
 // Params 2, eflags: 0x0
 // Checksum 0xf7ace21a, Offset: 0x3458
 // Size: 0xa2
-function function_87f36425(var_6c5c89e1, b_start) {
-    level thread function_2309bb98(var_6c5c89e1, b_start);
+function function_87f36425(str_node, b_start) {
+    level thread function_2309bb98(str_node, b_start);
     if (level.var_31aefea8 != "skipto_apc_rail_stall" && level.var_31aefea8 != "skipto_apc_rail") {
         level thread function_ade89a8a();
     }
@@ -877,7 +877,7 @@ function function_3ef12439() {
     self endon(#"hash_b6c30be8");
     self waittill(#"death");
     if (self.is_talking === 1) {
-        self waittill(#"hash_90f83311");
+        self waittill(#"done speaking");
     }
     level.var_2fd26037 dialog::say("hend_nice_fucking_shootin_0");
 }
@@ -1262,9 +1262,9 @@ function apc_crash() {
     level thread function_7fd9539();
     level cp_prologue_util::function_12ce22ee();
     level.var_2fd26037 thread vehicle::get_out();
-    foreach (var_e4463170 in level.a_ai_allies) {
-        if (isalive(var_e4463170)) {
-            var_e4463170 thread vehicle::get_out();
+    foreach (ai_ally in level.a_ai_allies) {
+        if (isalive(ai_ally)) {
+            ai_ally thread vehicle::get_out();
         }
     }
     level thread scene::play("cin_pro_17_01_robotdefend_vign_apc_exit_apc");
@@ -2260,9 +2260,9 @@ function function_a3024193(var_cf0e873a) {
 // Checksum 0x68b94045, Offset: 0x9a00
 // Size: 0x7b
 function function_beac5c93(n_index) {
-    foreach (var_e4463170 in level.var_681ad194) {
-        if (var_e4463170.var_19c9fb9b === n_index) {
-            var_e4463170 delete();
+    foreach (ai_ally in level.var_681ad194) {
+        if (ai_ally.var_19c9fb9b === n_index) {
+            ai_ally delete();
         }
     }
 }

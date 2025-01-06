@@ -1,22 +1,22 @@
-#using scripts/zm/zm_genesis_portals;
-#using scripts/zm/zm_genesis_challenges;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_ai_margwa_no_idgun;
-#using scripts/zm/_zm_ai_margwa_elemental;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_mocomp;
-#using scripts/shared/ai/zombie_utility;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/margwa;
+#using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/spawner_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_ai_margwa_elemental;
+#using scripts/zm/_zm_ai_margwa_no_idgun;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_genesis_challenges;
+#using scripts/zm/zm_genesis_portals;
 
 #namespace zm_genesis_margwa;
 
@@ -53,7 +53,7 @@ function autoexec init() {
 }
 
 // Namespace zm_genesis_margwa
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xdfab5d47, Offset: 0x710
 // Size: 0xa4
 function private function_e84ffe9c() {
@@ -64,7 +64,7 @@ function private function_e84ffe9c() {
 }
 
 // Namespace zm_genesis_margwa
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9b1db6b0, Offset: 0x7c0
 // Size: 0x4e
 function private function_96a94112(entity) {
@@ -75,7 +75,7 @@ function private function_96a94112(entity) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xbcbeb41a, Offset: 0x818
 // Size: 0x112
 function private function_9f065361(entity) {
@@ -91,7 +91,7 @@ function private function_9f065361(entity) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd3d1f905, Offset: 0x938
 // Size: 0x3c
 function private function_a5e64246(entity) {
@@ -100,7 +100,7 @@ function private function_a5e64246(entity) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x60060ea8, Offset: 0x980
 // Size: 0x3c
 function private function_a478da01(entity) {
@@ -109,7 +109,7 @@ function private function_a478da01(entity) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd263d8b3, Offset: 0x9c8
 // Size: 0xc4
 function private function_57c223eb() {
@@ -153,7 +153,7 @@ function private function_f05e4819() {
 }
 
 // Namespace zm_genesis_margwa
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x28caf8c0, Offset: 0xb68
 // Size: 0x2c
 function private function_e1f5236a() {
@@ -163,7 +163,7 @@ function private function_e1f5236a() {
 }
 
 // Namespace zm_genesis_margwa
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4ca03370, Offset: 0xba0
 // Size: 0x24
 function private function_c27412c6(player) {
@@ -171,7 +171,7 @@ function private function_c27412c6(player) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x4b1c6917, Offset: 0xbd0
 // Size: 0x64
 function private function_cc95e566() {
@@ -187,7 +187,7 @@ function private function_cc95e566() {
 }
 
 // Namespace zm_genesis_margwa
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x4b9cba47, Offset: 0xc40
 // Size: 0x16c
 function private function_df77c1c3(inflictor, attacker) {
@@ -212,7 +212,7 @@ function private function_df77c1c3(inflictor, attacker) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc3cd1678, Offset: 0xdb8
 // Size: 0x10c
 function private function_a8ffa66c(player) {
@@ -233,7 +233,7 @@ function private function_a8ffa66c(player) {
 }
 
 // Namespace zm_genesis_margwa
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xddae50c2, Offset: 0xed0
 // Size: 0x34
 function private function_f769285c() {
@@ -245,7 +245,7 @@ function private function_f769285c() {
 }
 
 // Namespace zm_genesis_margwa
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e1f3df3, Offset: 0xf10
 // Size: 0x32
 function function_2a03f05f() {

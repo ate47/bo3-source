@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/zm/zm_island;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_island;
 
 #namespace zm_island_cleanup;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4d917da7, Offset: 0x288
 // Size: 0x10
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2d0edf1f, Offset: 0x2a0
 // Size: 0x1c
 function __main__() {
@@ -38,7 +38,7 @@ function __main__() {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x13db4dcd, Offset: 0x2c8
 // Size: 0x29e
 function private cleanup_main() {
@@ -85,7 +85,7 @@ function private cleanup_main() {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x755c15a5, Offset: 0x570
 // Size: 0x2e4
 function do_cleanup_check(n_override_cleanup_dist) {
@@ -139,7 +139,7 @@ function do_cleanup_check(n_override_cleanup_dist) {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x531ff317, Offset: 0x860
 // Size: 0xdc
 function private delete_zombie_noone_looking() {
@@ -158,7 +158,7 @@ function private delete_zombie_noone_looking() {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xbccc6d01, Offset: 0x948
 // Size: 0x24
 function private function_cc0c7e36() {
@@ -167,7 +167,7 @@ function private function_cc0c7e36() {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x6f52d7f2, Offset: 0x978
 // Size: 0x1ec
 function private function_e89cc6dd() {
@@ -186,7 +186,7 @@ function private function_e89cc6dd() {
             level.var_5a487977[self.archetype][level.var_5a487977[self.archetype].size] = self.health;
         }
     }
-    self notify(#"hash_d4c32fa6");
+    self notify(#"enemy_cleaned_up");
     util::wait_network_frame();
     if (isalive(self)) {
         /#
@@ -200,7 +200,7 @@ function private function_e89cc6dd() {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xa6d8dcaa, Offset: 0xb70
 // Size: 0xd8
 function private player_can_see_me(player) {
@@ -216,7 +216,7 @@ function private player_can_see_me(player) {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x2689ee81, Offset: 0xc50
 // Size: 0xb4
 function private player_ahead_of_me(player) {
@@ -249,7 +249,7 @@ function get_escape_position() {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfc31ea47, Offset: 0xde8
 // Size: 0x11e
 function get_adjacencies_to_zone(str_zone) {
@@ -270,7 +270,7 @@ function get_adjacencies_to_zone(str_zone) {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x1c186094, Offset: 0xf10
 // Size: 0xd2
 function private get_wait_locations_in_zones(a_zones) {
@@ -282,7 +282,7 @@ function private get_wait_locations_in_zones(a_zones) {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x45b9f0ec, Offset: 0xff0
 // Size: 0xd6
 function private get_farthest_wait_location(a_wait_locations) {
@@ -302,7 +302,7 @@ function private get_farthest_wait_location(a_wait_locations) {
 }
 
 // Namespace zm_island_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4cb39629, Offset: 0x10d0
 // Size: 0x88
 function private get_wait_locations_in_zone(zone) {
@@ -315,7 +315,7 @@ function private get_wait_locations_in_zone(zone) {
 }
 
 // Namespace zm_island_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf32084ac, Offset: 0x1160
 // Size: 0xb4
 function get_escape_position_in_current_zone() {

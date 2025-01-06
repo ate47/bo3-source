@@ -1,16 +1,16 @@
-#using scripts/zm/zm_moon_fx;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/zm_moon_fx;
 
 #namespace zm_moon_amb;
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb755c0bb, Offset: 0x3f0
 // Size: 0x224
 function main() {
@@ -38,7 +38,7 @@ function main() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92f9139f, Offset: 0x620
 // Size: 0x74
 function function_c9207335() {
@@ -49,12 +49,12 @@ function function_c9207335() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1070b422, Offset: 0x6a0
 // Size: 0x94
 function function_60a32834() {
     while (true) {
-        trigplayer = self waittill(#"trigger");
+        self waittill(#"trigger", trigplayer);
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
@@ -67,7 +67,7 @@ function function_60a32834() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0bcd65d, Offset: 0x740
 // Size: 0xf8
 function function_d667714e() {
@@ -76,7 +76,7 @@ function function_d667714e() {
     level.var_eb526c90 = spawn(0, (0, 0, 0), "script_origin");
     level.var_9433cf5a = level.var_eb526c90 playloopsound(level.var_b6342abd, 2);
     while (true) {
-        location = level waittill(#"hash_51d7bc7c");
+        level waittill(#"hash_51d7bc7c", location);
         level.var_6d9d81aa = "mus_moon_underscore_" + location;
         if (level.var_6d9d81aa != level.var_b6342abd) {
             level thread function_b234849(level.var_6d9d81aa);
@@ -86,7 +86,7 @@ function function_d667714e() {
 }
 
 // Namespace zm_moon_amb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x100a67ac, Offset: 0x840
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
@@ -97,7 +97,7 @@ function function_b234849(var_6d9d81aa) {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c6db946, Offset: 0x8b0
 // Size: 0x44
 function function_113b7a0a() {
@@ -106,7 +106,7 @@ function function_113b7a0a() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x13c1fd6d, Offset: 0x900
 // Size: 0x54
 function function_1d63d7a0() {
@@ -115,7 +115,7 @@ function function_1d63d7a0() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcdc23848, Offset: 0x960
 // Size: 0x50
 function function_4d2d5d09() {
@@ -126,7 +126,7 @@ function function_4d2d5d09() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ba27082, Offset: 0x9b8
 // Size: 0xc4
 function function_b9bd35f2() {
@@ -141,7 +141,7 @@ function function_b9bd35f2() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xea103c44, Offset: 0xa88
 // Size: 0x80
 function function_67afcb21() {
@@ -155,7 +155,7 @@ function function_67afcb21() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19efca2a, Offset: 0xb10
 // Size: 0x98
 function function_64e4cc06() {
@@ -169,7 +169,7 @@ function function_64e4cc06() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1023490, Offset: 0xbb0
 // Size: 0x3c
 function function_1d9eafbb() {
@@ -179,7 +179,7 @@ function function_1d9eafbb() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60311460, Offset: 0xbf8
 // Size: 0x3c
 function function_72341f5c() {
@@ -189,7 +189,7 @@ function function_72341f5c() {
 }
 
 // Namespace zm_moon_amb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xff62ff43, Offset: 0xc40
 // Size: 0x8c
 function beam_fx_audio(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -199,7 +199,7 @@ function beam_fx_audio(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_moon_amb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x56b5b7cb, Offset: 0xcd8
 // Size: 0x12c
 function teleporter_audio_sfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -216,11 +216,11 @@ function teleporter_audio_sfx(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25176183, Offset: 0xe10
 // Size: 0x94
 function function_288468d5() {
-    level endon(#"hash_835c003b");
+    level endon(#"cafx");
     wait 0.5;
     if (isdefined(self.script_int) && isdefined(self.script_noteworthy)) {
         val = int(self.script_noteworthy) / 2;
@@ -230,18 +230,18 @@ function function_288468d5() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd73d372, Offset: 0xeb0
 // Size: 0x5c
 function function_42c1414a() {
-    level endon(#"hash_835c003b");
+    level endon(#"cafx");
     playsound(0, "evt_teleporter_warmup", self.origin);
     wait 2;
     playsound(0, "evt_teleporter_cooldown", self.origin);
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe06b14cc, Offset: 0xf18
 // Size: 0x154
 function function_58dad115() {
@@ -259,7 +259,7 @@ function function_58dad115() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf3d60071, Offset: 0x1078
 // Size: 0xdc
 function function_e8ef8289() {
@@ -275,7 +275,7 @@ function function_e8ef8289() {
 }
 
 // Namespace zm_moon_amb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa6c3d722, Offset: 0x1160
 // Size: 0x20e
 function function_6ce4d731(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -317,7 +317,7 @@ function function_6ce4d731(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_moon_amb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xaceadeca, Offset: 0x1378
 // Size: 0x4fa
 function function_19ebac5(zone, poweron) {
@@ -382,7 +382,7 @@ function function_19ebac5(zone, poweron) {
 }
 
 // Namespace zm_moon_amb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcb898fcd, Offset: 0x1880
 // Size: 0x18
 function function_6f441286(name) {
@@ -391,7 +391,7 @@ function function_6f441286(name) {
 }
 
 // Namespace zm_moon_amb
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfffdbd79, Offset: 0x18a0
 // Size: 0x6c
 function function_93c8dd7(ambientroom, ambientpackage, roomcollidercent) {
@@ -405,7 +405,7 @@ function function_93c8dd7(ambientroom, ambientpackage, roomcollidercent) {
 }
 
 // Namespace zm_moon_amb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2902f659, Offset: 0x1918
 // Size: 0x1d8
 function function_52553b46(ambientroom, e_trigger) {
@@ -428,7 +428,7 @@ function function_52553b46(ambientroom, e_trigger) {
 }
 
 // Namespace zm_moon_amb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb3f8da1d, Offset: 0x1af8
 // Size: 0xc
 function function_6b9d0090(ambientroom) {
@@ -436,7 +436,7 @@ function function_6b9d0090(ambientroom) {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52b755f9, Offset: 0x1b10
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -465,7 +465,7 @@ function startzmbspawnersoundloops() {
 }
 
 // Namespace zm_moon_amb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c512295, Offset: 0x1c78
 // Size: 0x16c
 function soundloopthink() {

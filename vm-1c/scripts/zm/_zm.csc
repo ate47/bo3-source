@@ -1,96 +1,96 @@
-#using scripts/zm/_zm_powerup_bonus_points_player;
-#using scripts/zm/bgbs/_zm_bgb_tone_death;
-#using scripts/zm/bgbs/_zm_bgb_soda_fountain;
-#using scripts/zm/bgbs/_zm_bgb_reign_drops;
-#using scripts/zm/bgbs/_zm_bgb_power_vacuum;
-#using scripts/zm/bgbs/_zm_bgb_idle_eyes;
-#using scripts/zm/bgbs/_zm_bgb_flavor_hexed;
-#using scripts/zm/bgbs/_zm_bgb_eye_candy;
-#using scripts/zm/bgbs/_zm_bgb_extra_credit;
-#using scripts/zm/bgbs/_zm_bgb_board_to_death;
-#using scripts/zm/bgbs/_zm_bgb_board_games;
-#using scripts/zm/bgbs/_zm_bgb_self_medication;
-#using scripts/zm/bgbs/_zm_bgb_round_robbin;
-#using scripts/zm/bgbs/_zm_bgb_profit_sharing;
-#using scripts/zm/bgbs/_zm_bgb_newtonian_negation;
-#using scripts/zm/bgbs/_zm_bgb_near_death_experience;
-#using scripts/zm/bgbs/_zm_bgb_mind_blown;
-#using scripts/zm/bgbs/_zm_bgb_bullet_boost;
-#using scripts/zm/bgbs/_zm_bgb_slaughter_slide;
-#using scripts/zm/bgbs/_zm_bgb_shopping_free;
-#using scripts/zm/bgbs/_zm_bgb_projectile_vomiting;
-#using scripts/zm/bgbs/_zm_bgb_disorderly_combat;
-#using scripts/zm/bgbs/_zm_bgb_crate_power;
-#using scripts/zm/bgbs/_zm_bgb_unbearable;
-#using scripts/zm/bgbs/_zm_bgb_temporal_gift;
-#using scripts/zm/bgbs/_zm_bgb_secret_shopper;
-#using scripts/zm/bgbs/_zm_bgb_fear_in_headlights;
-#using scripts/zm/bgbs/_zm_bgb_undead_man_walking;
-#using scripts/zm/bgbs/_zm_bgb_head_drama;
-#using scripts/zm/bgbs/_zm_bgb_fatal_contraption;
-#using scripts/zm/bgbs/_zm_bgb_crawl_space;
-#using scripts/zm/bgbs/_zm_bgb_whos_keeping_score;
-#using scripts/zm/bgbs/_zm_bgb_wall_power;
-#using scripts/zm/bgbs/_zm_bgb_unquenchable;
-#using scripts/zm/bgbs/_zm_bgb_sword_flay;
-#using scripts/zm/bgbs/_zm_bgb_stock_option;
-#using scripts/zm/bgbs/_zm_bgb_respin_cycle;
-#using scripts/zm/bgbs/_zm_bgb_pop_shocks;
-#using scripts/zm/bgbs/_zm_bgb_phoenix_up;
-#using scripts/zm/bgbs/_zm_bgb_perkaholic;
-#using scripts/zm/bgbs/_zm_bgb_on_the_house;
-#using scripts/zm/bgbs/_zm_bgb_now_you_see_me;
-#using scripts/zm/bgbs/_zm_bgb_lucky_crit;
-#using scripts/zm/bgbs/_zm_bgb_licensed_contractor;
-#using scripts/zm/bgbs/_zm_bgb_killing_time;
-#using scripts/zm/bgbs/_zm_bgb_kill_joy;
-#using scripts/zm/bgbs/_zm_bgb_in_plain_sight;
-#using scripts/zm/bgbs/_zm_bgb_impatient;
-#using scripts/zm/bgbs/_zm_bgb_immolation_liquidation;
-#using scripts/zm/bgbs/_zm_bgb_im_feelin_lucky;
-#using scripts/zm/bgbs/_zm_bgb_firing_on_all_cylinders;
-#using scripts/zm/bgbs/_zm_bgb_ephemeral_enhancement;
-#using scripts/zm/bgbs/_zm_bgb_dead_of_nuclear_winter;
-#using scripts/zm/bgbs/_zm_bgb_danger_closest;
-#using scripts/zm/bgbs/_zm_bgb_coagulant;
-#using scripts/zm/bgbs/_zm_bgb_cache_back;
-#using scripts/zm/bgbs/_zm_bgb_burned_out;
-#using scripts/zm/bgbs/_zm_bgb_arsenal_accelerator;
-#using scripts/zm/bgbs/_zm_bgb_arms_grace;
-#using scripts/zm/bgbs/_zm_bgb_armamental_accomplishment;
-#using scripts/zm/bgbs/_zm_bgb_anywhere_but_here;
-#using scripts/zm/bgbs/_zm_bgb_always_done_swiftly;
-#using scripts/zm/bgbs/_zm_bgb_alchemical_antithesis;
-#using scripts/zm/bgbs/_zm_bgb_aftertaste;
-#using scripts/zm/aats/_zm_aat_turned;
-#using scripts/zm/aats/_zm_aat_thunder_wall;
-#using scripts/zm/aats/_zm_aat_fire_works;
-#using scripts/zm/aats/_zm_aat_dead_wire;
-#using scripts/zm/aats/_zm_aat_blast_furnace;
-#using scripts/zm/_zm_zdraw;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_ffotd;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_demo;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_sticky_grenade;
-#using scripts/zm/_load;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/archetype_shared/archetype_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/archetype_shared/archetype_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/fx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_sticky_grenade;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_demo;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_ffotd;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerup_bonus_points_player;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_zdraw;
+#using scripts/zm/aats/_zm_aat_blast_furnace;
+#using scripts/zm/aats/_zm_aat_dead_wire;
+#using scripts/zm/aats/_zm_aat_fire_works;
+#using scripts/zm/aats/_zm_aat_thunder_wall;
+#using scripts/zm/aats/_zm_aat_turned;
+#using scripts/zm/bgbs/_zm_bgb_aftertaste;
+#using scripts/zm/bgbs/_zm_bgb_alchemical_antithesis;
+#using scripts/zm/bgbs/_zm_bgb_always_done_swiftly;
+#using scripts/zm/bgbs/_zm_bgb_anywhere_but_here;
+#using scripts/zm/bgbs/_zm_bgb_armamental_accomplishment;
+#using scripts/zm/bgbs/_zm_bgb_arms_grace;
+#using scripts/zm/bgbs/_zm_bgb_arsenal_accelerator;
+#using scripts/zm/bgbs/_zm_bgb_board_games;
+#using scripts/zm/bgbs/_zm_bgb_board_to_death;
+#using scripts/zm/bgbs/_zm_bgb_bullet_boost;
+#using scripts/zm/bgbs/_zm_bgb_burned_out;
+#using scripts/zm/bgbs/_zm_bgb_cache_back;
+#using scripts/zm/bgbs/_zm_bgb_coagulant;
+#using scripts/zm/bgbs/_zm_bgb_crate_power;
+#using scripts/zm/bgbs/_zm_bgb_crawl_space;
+#using scripts/zm/bgbs/_zm_bgb_danger_closest;
+#using scripts/zm/bgbs/_zm_bgb_dead_of_nuclear_winter;
+#using scripts/zm/bgbs/_zm_bgb_disorderly_combat;
+#using scripts/zm/bgbs/_zm_bgb_ephemeral_enhancement;
+#using scripts/zm/bgbs/_zm_bgb_extra_credit;
+#using scripts/zm/bgbs/_zm_bgb_eye_candy;
+#using scripts/zm/bgbs/_zm_bgb_fatal_contraption;
+#using scripts/zm/bgbs/_zm_bgb_fear_in_headlights;
+#using scripts/zm/bgbs/_zm_bgb_firing_on_all_cylinders;
+#using scripts/zm/bgbs/_zm_bgb_flavor_hexed;
+#using scripts/zm/bgbs/_zm_bgb_head_drama;
+#using scripts/zm/bgbs/_zm_bgb_idle_eyes;
+#using scripts/zm/bgbs/_zm_bgb_im_feelin_lucky;
+#using scripts/zm/bgbs/_zm_bgb_immolation_liquidation;
+#using scripts/zm/bgbs/_zm_bgb_impatient;
+#using scripts/zm/bgbs/_zm_bgb_in_plain_sight;
+#using scripts/zm/bgbs/_zm_bgb_kill_joy;
+#using scripts/zm/bgbs/_zm_bgb_killing_time;
+#using scripts/zm/bgbs/_zm_bgb_licensed_contractor;
+#using scripts/zm/bgbs/_zm_bgb_lucky_crit;
+#using scripts/zm/bgbs/_zm_bgb_mind_blown;
+#using scripts/zm/bgbs/_zm_bgb_near_death_experience;
+#using scripts/zm/bgbs/_zm_bgb_newtonian_negation;
+#using scripts/zm/bgbs/_zm_bgb_now_you_see_me;
+#using scripts/zm/bgbs/_zm_bgb_on_the_house;
+#using scripts/zm/bgbs/_zm_bgb_perkaholic;
+#using scripts/zm/bgbs/_zm_bgb_phoenix_up;
+#using scripts/zm/bgbs/_zm_bgb_pop_shocks;
+#using scripts/zm/bgbs/_zm_bgb_power_vacuum;
+#using scripts/zm/bgbs/_zm_bgb_profit_sharing;
+#using scripts/zm/bgbs/_zm_bgb_projectile_vomiting;
+#using scripts/zm/bgbs/_zm_bgb_reign_drops;
+#using scripts/zm/bgbs/_zm_bgb_respin_cycle;
+#using scripts/zm/bgbs/_zm_bgb_round_robbin;
+#using scripts/zm/bgbs/_zm_bgb_secret_shopper;
+#using scripts/zm/bgbs/_zm_bgb_self_medication;
+#using scripts/zm/bgbs/_zm_bgb_shopping_free;
+#using scripts/zm/bgbs/_zm_bgb_slaughter_slide;
+#using scripts/zm/bgbs/_zm_bgb_soda_fountain;
+#using scripts/zm/bgbs/_zm_bgb_stock_option;
+#using scripts/zm/bgbs/_zm_bgb_sword_flay;
+#using scripts/zm/bgbs/_zm_bgb_temporal_gift;
+#using scripts/zm/bgbs/_zm_bgb_tone_death;
+#using scripts/zm/bgbs/_zm_bgb_unbearable;
+#using scripts/zm/bgbs/_zm_bgb_undead_man_walking;
+#using scripts/zm/bgbs/_zm_bgb_unquenchable;
+#using scripts/zm/bgbs/_zm_bgb_wall_power;
+#using scripts/zm/bgbs/_zm_bgb_whos_keeping_score;
 
 #namespace zm;
 
@@ -142,7 +142,7 @@ function autoexec ignore_systems() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x30efbc66, Offset: 0x1cc0
 // Size: 0x3f4
 function init() {
@@ -219,7 +219,7 @@ function delay_for_clients_then_execute(func) {
 /#
 
     // Namespace zm
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbdf70b76, Offset: 0x2160
     // Size: 0x1b6
     function function_9fee0219() {
@@ -252,7 +252,7 @@ function delay_for_clients_then_execute(func) {
 #/
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b978554, Offset: 0x2320
 // Size: 0x11c
 function function_74cb963f() {
@@ -267,7 +267,7 @@ function function_74cb963f() {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x269e5211, Offset: 0x2448
 // Size: 0x1ac
 function function_27d0e46c(localclientnum) {
@@ -297,7 +297,7 @@ function function_27d0e46c(localclientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6ba54b0d, Offset: 0x2600
 // Size: 0x7c
 function player_umbrahotfixes(localclientnum) {
@@ -308,7 +308,7 @@ function player_umbrahotfixes(localclientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaaa20ab6, Offset: 0x2688
 // Size: 0x36
 function basic_player_connect(localclientnum) {
@@ -319,7 +319,7 @@ function basic_player_connect(localclientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x78fe4a60, Offset: 0x26c8
 // Size: 0x5c
 function force_update_player_clientfields(localclientnum) {
@@ -332,7 +332,7 @@ function force_update_player_clientfields(localclientnum) {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x2730
 // Size: 0x4
 function init_blocker_fx() {
@@ -340,7 +340,7 @@ function init_blocker_fx() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x585b51c4, Offset: 0x2740
 // Size: 0x136
 function init_riser_fx() {
@@ -360,7 +360,7 @@ function init_riser_fx() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd5279033, Offset: 0x2880
 // Size: 0x55c
 function init_clientfields() {
@@ -395,7 +395,7 @@ function init_clientfields() {
 }
 
 // Namespace zm
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4980c0b4, Offset: 0x2de8
 // Size: 0x44
 function box_monitor(clientnum, state, oldstate) {
@@ -405,13 +405,13 @@ function box_monitor(clientnum, state, oldstate) {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe4e3f2c4, Offset: 0x2e38
 // Size: 0x5a
 function zpo_listener() {
     while (true) {
         int = undefined;
-        int = level waittill(#"zpo");
+        level waittill(#"zpo", int);
         if (isdefined(int)) {
             level notify(#"power_on", int);
             continue;
@@ -421,13 +421,13 @@ function zpo_listener() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfed6339a, Offset: 0x2ea0
 // Size: 0x5a
 function zpoff_listener() {
     while (true) {
         int = undefined;
-        int = level waittill(#"zpoff");
+        level waittill(#"zpoff", int);
         if (isdefined(int)) {
             level notify(#"power_off", int);
             continue;
@@ -437,7 +437,7 @@ function zpoff_listener() {
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xff682800, Offset: 0x2f08
 // Size: 0x56
 function zombie_power_clientfield_on(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -447,7 +447,7 @@ function zombie_power_clientfield_on(localclientnum, oldval, newval, bnewent, bi
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x65cae13c, Offset: 0x2f68
 // Size: 0x56
 function zombie_power_clientfield_off(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -457,7 +457,7 @@ function zombie_power_clientfield_off(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8fd681ea, Offset: 0x2fc8
 // Size: 0x94
 function round_complete_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -466,7 +466,7 @@ function round_complete_time(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x51bb72f1, Offset: 0x3068
 // Size: 0x94
 function round_complete_num(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -475,7 +475,7 @@ function round_complete_num(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf3d61731, Offset: 0x3108
 // Size: 0x94
 function game_end_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -484,7 +484,7 @@ function game_end_time(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3bb9a4a2, Offset: 0x31a8
 // Size: 0x94
 function quest_complete_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -493,7 +493,7 @@ function quest_complete_time(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x24df764d, Offset: 0x3248
 // Size: 0x94
 function game_start_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -502,7 +502,7 @@ function game_start_time(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xecb384b5, Offset: 0x32e8
 // Size: 0x102
 function createzombieeyesinternal(localclientnum) {
@@ -528,7 +528,7 @@ function createzombieeyesinternal(localclientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf36f93b, Offset: 0x33f8
 // Size: 0x24
 function createzombieeyes(localclientnum) {
@@ -536,7 +536,7 @@ function createzombieeyes(localclientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x13f963a9, Offset: 0x3428
 // Size: 0x60
 function deletezombieeyes(localclientnum) {
@@ -597,7 +597,7 @@ function function_55e6ff0a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9a4af5ed, Offset: 0x37d0
 // Size: 0xcc
 function function_189bc7b4(localclientnum) {
@@ -613,7 +613,7 @@ function function_189bc7b4(localclientnum) {
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd44a2b10, Offset: 0x38a8
 // Size: 0x260
 function function_47cf4ac3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -644,7 +644,7 @@ function function_47cf4ac3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4e7a70f1, Offset: 0x3b10
 // Size: 0x7c
 function function_a67fb0bc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -653,7 +653,7 @@ function function_a67fb0bc(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x87cc82e5, Offset: 0x3b98
 // Size: 0x154
 function zombie_eyes_clientfield_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -673,7 +673,7 @@ function zombie_eyes_clientfield_cb(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb6e6aa2c, Offset: 0x3cf8
 // Size: 0xd4
 function zombie_zombie_keyline_render_clientfield_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -692,7 +692,7 @@ function zombie_zombie_keyline_render_clientfield_cb(localclientnum, oldval, new
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa327895a, Offset: 0x3dd8
 // Size: 0x1c
 function get_eyeball_on_luminance() {
@@ -703,7 +703,7 @@ function get_eyeball_on_luminance() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4d816df3, Offset: 0x3e00
 // Size: 0x1a
 function get_eyeball_off_luminance() {
@@ -714,7 +714,7 @@ function get_eyeball_off_luminance() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3bfa785e, Offset: 0x3e28
 // Size: 0x48
 function get_eyeball_color() {
@@ -729,7 +729,7 @@ function get_eyeball_color() {
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc9c33d0b, Offset: 0x3e78
 // Size: 0x5c
 function zombie_ragdoll_explode_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -739,7 +739,7 @@ function zombie_ragdoll_explode_cb(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x503b4312, Offset: 0x3ee0
 // Size: 0xb4
 function zombie_gut_explosion_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -754,7 +754,7 @@ function zombie_gut_explosion_cb(localclientnum, oldval, newval, bnewent, biniti
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2c45cc35, Offset: 0x3fa0
 // Size: 0x1e
 function init_zombie_explode_fx() {
@@ -762,7 +762,7 @@ function init_zombie_explode_fx() {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbbf4ebf6, Offset: 0x3fc8
 // Size: 0x114
 function zombie_wait_explode(localclientnum) {
@@ -786,7 +786,7 @@ function zombie_wait_explode(localclientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x966d6779, Offset: 0x40e8
 // Size: 0x3a
 function mark_piece_gibbed(piece_index) {
@@ -813,7 +813,7 @@ function has_gibbed_piece(piece_index) {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb0987d6a, Offset: 0x41a0
 // Size: 0x1e6
 function do_headshot_gib_fx() {
@@ -837,7 +837,7 @@ function do_headshot_gib_fx() {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc1e6a91b, Offset: 0x4390
 // Size: 0xac
 function do_gib_fx(tag) {
@@ -849,7 +849,7 @@ function do_gib_fx(tag) {
 }
 
 // Namespace zm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x12003a1d, Offset: 0x4448
 // Size: 0x22c
 function do_gib(model, tag) {
@@ -882,7 +882,7 @@ function do_gib(model, tag) {
 }
 
 // Namespace zm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x53be97ef, Offset: 0x4680
 // Size: 0xcc
 function do_hat_gib(model, tag) {
@@ -894,7 +894,7 @@ function do_hat_gib(model, tag) {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x270f64be, Offset: 0x4758
 // Size: 0x20
 function check_should_gib() {
@@ -905,7 +905,7 @@ function check_should_gib() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb04a2a36, Offset: 0x4780
 // Size: 0x3c
 function resetgibcounter() {
@@ -918,7 +918,7 @@ function resetgibcounter() {
 }
 
 // Namespace zm
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x15b437b9, Offset: 0x47c8
 // Size: 0x6fc
 function on_gib_event(localclientnum, type, locations) {
@@ -1114,7 +1114,7 @@ function zombie_vision_set_remove(str_visionset, flt_transition_time, int_client
 }
 
 // Namespace zm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60da8dfc, Offset: 0x5348
 // Size: 0xda
 function zombie_highest_vision_set_apply() {
@@ -1133,7 +1133,7 @@ function zombie_highest_vision_set_apply() {
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe95875e5, Offset: 0x5430
 // Size: 0x13e
 function handle_zombie_risers_foliage(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1152,7 +1152,7 @@ function handle_zombie_risers_foliage(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7b816927, Offset: 0x5578
 // Size: 0x13e
 function handle_zombie_risers_water(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1171,7 +1171,7 @@ function handle_zombie_risers_water(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8df561fe, Offset: 0x56c0
 // Size: 0x1be
 function handle_zombie_risers(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1197,7 +1197,7 @@ function handle_zombie_risers(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x18c23c07, Offset: 0x5888
 // Size: 0x1be
 function handle_zombie_risers_lowg(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1223,7 +1223,7 @@ function handle_zombie_risers_lowg(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace zm
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1b3b914, Offset: 0x5a50
 // Size: 0x326
 function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
@@ -1275,7 +1275,7 @@ function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x34aa64e8, Offset: 0x5d80
 // Size: 0x84
 function end_last_stand(clientnum) {
@@ -1287,7 +1287,7 @@ function end_last_stand(clientnum) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd875607, Offset: 0x5e10
 // Size: 0x178
 function last_stand_thread(clientnum) {
@@ -1314,7 +1314,7 @@ function last_stand_thread(clientnum) {
 }
 
 // Namespace zm
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1839cdce, Offset: 0x5f90
 // Size: 0x19e
 function last_stand_monitor(clientnum, state, oldstate) {
@@ -1347,7 +1347,7 @@ function last_stand_monitor(clientnum, state, oldstate) {
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8ab02a33, Offset: 0x6138
 // Size: 0x1b4
 function laststand(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1368,7 +1368,7 @@ function laststand(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace zm
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb29bd461, Offset: 0x62f8
 // Size: 0x14c
 function update_aat_hud(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

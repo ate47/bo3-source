@@ -1,16 +1,16 @@
-#using scripts/cp/cp_mi_cairo_infection_patch_c;
+#using scripts/codescripts/struct;
+#using scripts/cp/_load;
 #using scripts/cp/_siegebot_theia;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_cairo_infection_fx;
+#using scripts/cp/cp_mi_cairo_infection_patch_c;
 #using scripts/cp/cp_mi_cairo_infection_sgen_test_chamber;
 #using scripts/cp/cp_mi_cairo_infection_sim_reality_starts;
+#using scripts/cp/cp_mi_cairo_infection_sound;
 #using scripts/cp/cp_mi_cairo_infection_theia_battle;
 #using scripts/cp/cp_mi_cairo_infection_util;
-#using scripts/cp/cp_mi_cairo_infection_sound;
-#using scripts/cp/cp_mi_cairo_infection_fx;
-#using scripts/shared/util_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/cp/_load;
-#using scripts/cp/_util;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_infection;
 
@@ -20,7 +20,7 @@
 // Size: 0xc4
 function main() {
     init_clientfields();
-    util::function_57b966c8(&function_71f88fc, 11);
+    util::function_57b966c8(&force_streamer, 11);
     cp_mi_cairo_infection_fx::main();
     cp_mi_cairo_infection_sound::main();
     cp_mi_cairo_infection_theia_battle::main();
@@ -28,7 +28,7 @@ function main() {
     cp_mi_cairo_infection_sgen_test_chamber::main();
     load::main();
     util::waitforclient(0);
-    namespace_f397b667::function_7403e82b();
+    cp_mi_cairo_infection_patch_c::function_7403e82b();
 }
 
 // Namespace cp_mi_cairo_infection
@@ -43,7 +43,7 @@ function init_clientfields() {
 // Params 1, eflags: 0x0
 // Checksum 0x2289709a, Offset: 0x720
 // Size: 0x3da
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         forcestreamxmodel("veh_t7_mil_vtol_egypt_cabin_details_attch");

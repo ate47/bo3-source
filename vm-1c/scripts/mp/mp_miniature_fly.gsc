@@ -1,13 +1,13 @@
-#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/scene_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace mp_miniature_fly;
 
 // Namespace mp_miniature_fly
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc1431485, Offset: 0x1c0
+// Params 0, eflags: 0x0
+// Checksum 0xcd006c69, Offset: 0x1b8
 // Size: 0xc4
 function main() {
     scene::add_scene_func("p7_fxanim_mp_mini_fly_idle_01_bundle", &function_92ba15b6);
@@ -18,8 +18,8 @@ function main() {
 }
 
 // Namespace mp_miniature_fly
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa507032a, Offset: 0x290
+// Params 1, eflags: 0x0
+// Checksum 0xfb5c1a3b, Offset: 0x288
 // Size: 0xf4
 function function_92ba15b6(a_ents) {
     self endon(#"killed");
@@ -36,30 +36,30 @@ function function_92ba15b6(a_ents) {
 }
 
 // Namespace mp_miniature_fly
-// Params 1, eflags: 0x1 linked
-// Checksum 0x57a1f1ca, Offset: 0x390
+// Params 1, eflags: 0x0
+// Checksum 0x8b5ab8bf, Offset: 0x388
 // Size: 0x24
 function function_b66aa97f(a_ents) {
     self thread scene::play(a_ents);
 }
 
 // Namespace mp_miniature_fly
-// Params 1, eflags: 0x1 linked
-// Checksum 0x678e3c30, Offset: 0x3c0
+// Params 1, eflags: 0x0
+// Checksum 0x8df6a3cb, Offset: 0x3b8
 // Size: 0x8a
 function function_b6d62783(var_4f4f6520) {
     var_4f4f6520 notify(#"hash_b6d62783");
     var_4f4f6520 endon(#"hash_b6d62783");
     var_4f4f6520 waittill(#"damage");
-    playfxontag("dlc4/mp_mini/fx_fly_death", var_4f4f6520, "body_jnt");
+    playfx("dlc4/mp_mini/fx_fly_death", var_4f4f6520.origin);
     wait 0.05;
     var_4f4f6520 delete();
     self notify(#"killed");
 }
 
 // Namespace mp_miniature_fly
-// Params 1, eflags: 0x1 linked
-// Checksum 0xb2ff52a7, Offset: 0x458
+// Params 1, eflags: 0x0
+// Checksum 0xef46bf0e, Offset: 0x450
 // Size: 0xcc
 function function_e010169f(var_4f4f6520) {
     while (true) {

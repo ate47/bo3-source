@@ -3,7 +3,7 @@
 #namespace cp_mi_sing_blackstation_fx;
 
 // Namespace cp_mi_sing_blackstation_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52cbd27, Offset: 0x168
 // Size: 0x72
 function main() {

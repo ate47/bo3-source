@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/array_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_elemental_zombies;
 
 #namespace zm_shadow_zombie;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfc736e13, Offset: 0x408
 // Size: 0x24
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe77bbfa5, Offset: 0x438
 // Size: 0x8a
 function init_fx() {
@@ -40,7 +40,7 @@ function init_fx() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf52ffac4, Offset: 0x4d0
 // Size: 0x124
 function register_clientfields() {
@@ -51,7 +51,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x18e8e2ef, Offset: 0x600
 // Size: 0x98
 function function_ac1abcb6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -61,7 +61,7 @@ function function_ac1abcb6(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_shadow_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x651a5efb, Offset: 0x6a0
 // Size: 0x144
 function function_b3071651(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +81,7 @@ function function_b3071651(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_shadow_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc2ab0e57, Offset: 0x7f0
 // Size: 0xec
 function function_384150e9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -96,7 +96,7 @@ function function_384150e9(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_shadow_zombie
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf50f6103, Offset: 0x8e8
 // Size: 0x114
 function shadow_zombie_cursetrap_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -113,7 +113,7 @@ function shadow_zombie_cursetrap_fx(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm_shadow_zombie
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x98bcbf9a, Offset: 0xa08
 // Size: 0x18e
 function function_267f859f(localclientnum, fx_id, b_on, var_afcc5d76, str_tag) {

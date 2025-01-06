@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_ramses_sound;
 
@@ -27,7 +27,7 @@ function function_44f2e4b1() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_subway_horn", (7608, 1158, -415));
             break;
@@ -45,7 +45,7 @@ function function_e127e5d4() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_defibrillator", (7443, -1682, 74));
             break;

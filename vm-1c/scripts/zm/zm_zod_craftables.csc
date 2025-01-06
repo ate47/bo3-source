@@ -1,7 +1,7 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/zm_zod_quest;
 #using scripts/shared/clientfield_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/craftables/_zm_craftables;
+#using scripts/zm/zm_zod_quest;
 
 #namespace zm_zod_craftables;
 
@@ -52,8 +52,8 @@ function register_clientfields() {
     registerclientfield("world", "second_idgun" + "_" + "part_heart", 1, var_a0199abd, "int", &zm_utility::setsharedinventoryuimodels, 0, 1);
     registerclientfield("world", "second_idgun" + "_" + "part_skeleton", 1, var_a0199abd, "int", &zm_utility::setsharedinventoryuimodels, 0, 1);
     registerclientfield("world", "second_idgun" + "_" + "part_xenomatter", 1, var_a0199abd, "int", &zm_utility::setsharedinventoryuimodels, 0, 1);
-    foreach (var_f7af1630 in level.var_6f8e5f09) {
-        registerclientfield("world", "holder_of_" + var_f7af1630, 1, 3, "int", &zm_utility::setsharedinventoryuimodels, 0, 1);
+    foreach (character_name in level.var_6f8e5f09) {
+        registerclientfield("world", "holder_of_" + character_name, 1, 3, "int", &zm_utility::setsharedinventoryuimodels, 0, 1);
     }
     registerclientfield("world", "quest_state_" + "boxer", 1, 3, "int", &zm_zod_quest::function_b8553178, 0, 1);
     registerclientfield("world", "quest_state_" + "detective", 1, 3, "int", &zm_zod_quest::function_42da8b5f, 0, 1);

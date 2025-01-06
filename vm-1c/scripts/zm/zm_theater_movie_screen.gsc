@@ -1,17 +1,17 @@
-#using scripts/zm/zm_theater_amb;
-#using scripts/zm/zm_theater;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 #using scripts/zm/_zm_sidequests;
 #using scripts/zm/_zm_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/zm_theater;
+#using scripts/zm/zm_theater_amb;
 
 #namespace zm_theater_movie_screen;
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5481440d, Offset: 0x398
 // Size: 0x34
 function function_4675a945() {
@@ -20,7 +20,7 @@ function function_4675a945() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd7aca72a, Offset: 0x3d8
 // Size: 0xcc
 function function_bdabe901() {
@@ -94,7 +94,7 @@ function function_2e915265() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4d8083b8, Offset: 0x820
 // Size: 0xbc
 function function_a643b290() {
@@ -107,7 +107,7 @@ function function_a643b290() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc444409a, Offset: 0x8e8
 // Size: 0x2c4
 function function_fdb6bd42() {
@@ -132,7 +132,7 @@ function function_fdb6bd42() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x155000c5, Offset: 0xbb8
 // Size: 0xa0
 function function_a746b881(var_e54b650d, var_fdf99429) {
@@ -150,7 +150,7 @@ function function_a746b881(var_e54b650d, var_fdf99429) {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec88ec94, Offset: 0xc60
 // Size: 0x22c
 function function_ae207a39() {
@@ -173,7 +173,7 @@ function function_ae207a39() {
         self setcursorhint("HINT_NOICON");
     }
     level flag::wait_till("power_on");
-    who = self waittill(#"trigger");
+    self waittill(#"trigger", who);
     who playsound("zmb_reel_pickup");
     self.var_8d6195c7 hide();
     self triggerenable(0);
@@ -183,7 +183,7 @@ function function_ae207a39() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4ab87ed7, Offset: 0xe98
 // Size: 0x74
 function function_63d5f7f2(e_player) {
@@ -196,7 +196,7 @@ function function_63d5f7f2(e_player) {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa1c7f78a, Offset: 0xf18
 // Size: 0x240
 function function_6a294474() {
@@ -207,7 +207,7 @@ function function_6a294474() {
         var_846b23bf.script_string = "ps0";
     }
     while (true) {
-        who = var_d80866de waittill(#"trigger");
+        var_d80866de waittill(#"trigger", who);
         if (isdefined(who.var_3887989d) && isstring(who.var_3887989d)) {
             switch (who.var_3887989d) {
             case "ps1":
@@ -235,7 +235,7 @@ function function_6a294474() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x66f6031d, Offset: 0x1160
 // Size: 0x3c
 function function_11e8d57e() {
@@ -244,7 +244,7 @@ function function_11e8d57e() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x587ab918, Offset: 0x11a8
 // Size: 0x24
 function function_306059f8() {
@@ -252,7 +252,7 @@ function function_306059f8() {
 }
 
 // Namespace zm_theater_movie_screen
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4bb5f8ba, Offset: 0x11d8
 // Size: 0x4c
 function function_9b4925f5() {

@@ -1,18 +1,18 @@
-#using scripts/cp/_explosive_bolt;
-#using scripts/cp/_claymore;
-#using scripts/cp/_callbacks;
 #using scripts/cp/_burnplayer;
-#using scripts/shared/weapons/_sticky_grenade;
-#using scripts/shared/vehicles/_driving_fx;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/footsteps_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
+#using scripts/cp/_callbacks;
+#using scripts/cp/_claymore;
+#using scripts/cp/_explosive_bolt;
 #using scripts/shared/ai_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/footsteps_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_driving_fx;
+#using scripts/shared/weapons/_sticky_grenade;
 
 #namespace callback;
 
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9bedc0d2, Offset: 0x2e0
 // Size: 0x1c
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace callback
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x730783fa, Offset: 0x308
 // Size: 0xac
 function set_default_callbacks() {
@@ -47,7 +47,7 @@ function set_default_callbacks() {
 }
 
 // Namespace callback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x88dc56c9, Offset: 0x3c0
 // Size: 0x94
 function localclientconnect(localclientnum) {
@@ -62,7 +62,7 @@ function localclientconnect(localclientnum) {
 }
 
 // Namespace callback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa79090fd, Offset: 0x460
 // Size: 0xd4
 function playerspawned(localclientnum) {
@@ -79,7 +79,7 @@ function playerspawned(localclientnum) {
 }
 
 // Namespace callback
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xae349612, Offset: 0x540
 // Size: 0x28c
 function entityspawned(localclientnum) {
@@ -130,7 +130,7 @@ function entityspawned(localclientnum) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x27c5d29e, Offset: 0x7d8
 // Size: 0x14
 function creating_corpse(localclientnum, player) {

@@ -1,15 +1,15 @@
-#using scripts/mp/mp_shrine_sound;
-#using scripts/mp/mp_shrine_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_shrine_fx;
+#using scripts/mp/mp_shrine_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_shrine;
 
 // Namespace mp_shrine
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc804a76e, Offset: 0x1b8
+// Params 0, eflags: 0x0
+// Checksum 0x6373834c, Offset: 0x1b8
 // Size: 0x8c
 function main() {
     mp_shrine_fx::main();
@@ -22,8 +22,8 @@ function main() {
 }
 
 // Namespace mp_shrine
-// Params 2, eflags: 0x1 linked
-// Checksum 0xef875f19, Offset: 0x250
+// Params 2, eflags: 0x0
+// Checksum 0xdfb1ab2c, Offset: 0x250
 // Size: 0x9e
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -47,8 +47,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_shrine
-// Params 2, eflags: 0x1 linked
-// Checksum 0xd8591991, Offset: 0x2f8
+// Params 2, eflags: 0x0
+// Checksum 0x4ae1d2ab, Offset: 0x2f8
 // Size: 0x9e
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {

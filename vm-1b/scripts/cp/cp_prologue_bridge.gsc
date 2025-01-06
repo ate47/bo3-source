@@ -1,37 +1,37 @@
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/fx_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicleriders_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/cp/cp_prologue_cyber_soldiers;
-#using scripts/cp/cp_prologue_util;
-#using scripts/cp/cp_prologue_hangars;
-#using scripts/cp/cp_prologue_apc;
-#using scripts/cp/cp_mi_eth_prologue_accolades;
-#using scripts/cp/cp_mi_eth_prologue_sound;
-#using scripts/cp/cp_mi_eth_prologue_fx;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_eth_prologue_accolades;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/cp_prologue_cyber_soldiers;
+#using scripts/cp/cp_prologue_hangars;
+#using scripts/cp/cp_prologue_util;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicleriders_shared;
 
 #namespace jeep_alley;
 
@@ -332,9 +332,9 @@ function function_1e1e465e() {
     level thread namespace_21b2c1f2::function_b83aa9c5();
 }
 
-#namespace namespace_dc79b4d3;
+#namespace bridge_battle;
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbebe862f, Offset: 0x2570
 // Size: 0x42
@@ -345,7 +345,7 @@ function function_b86981e6() {
     level thread namespace_21b2c1f2::function_b83aa9c5();
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xc67cdc9, Offset: 0x25c0
 // Size: 0x32
@@ -354,7 +354,7 @@ function function_8e94cc65() {
     level flag::init("bridge_intro_chatter_done");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xd8e2b2dc, Offset: 0x2600
 // Size: 0x17a
@@ -378,7 +378,7 @@ function function_4cabc89a() {
     level.var_2fd26037.allowpain = 0;
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x82092de9, Offset: 0x2788
 // Size: 0x172
@@ -404,7 +404,7 @@ function function_57e7a8c9() {
     skipto::function_be8adfb8("skipto_bridge_battle");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xfd9cf36f, Offset: 0x2908
 // Size: 0x192
@@ -426,7 +426,7 @@ function function_cd931b6e() {
     spawner::simple_spawn("sp_bridge_secondary");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xf7fc9646, Offset: 0x2aa8
 // Size: 0x142
@@ -447,7 +447,7 @@ function function_39c16a4a() {
     self setgoal(var_257bbc01);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x18950bd5, Offset: 0x2bf8
 // Size: 0x52
@@ -458,7 +458,7 @@ function function_57ae876e() {
     spawn_manager::enable("bridge_reinforcement_spawner", 1);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x8c3c98ee, Offset: 0x2c58
 // Size: 0x16a
@@ -482,7 +482,7 @@ function function_d32d88c() {
     level thread function_5d5b8625();
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xd346c056, Offset: 0x2dd0
 // Size: 0x1a
@@ -491,7 +491,7 @@ function function_6e72a6d1() {
     level flag::set("bring_in_jeeps");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 1, eflags: 0x0
 // Checksum 0xb30abd6f, Offset: 0x2df8
 // Size: 0xc2
@@ -509,7 +509,7 @@ function function_7096928d(var_376507c0) {
     level flag::set("bridge_destruction_sequence");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 1, eflags: 0x0
 // Checksum 0x17451081, Offset: 0x2ec8
 // Size: 0x62
@@ -521,7 +521,7 @@ function function_da187c1b(var_edd777e6) {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x137aca61, Offset: 0x2f38
 // Size: 0x3a
@@ -530,7 +530,7 @@ function function_5d5b8625() {
     level.var_2fd26037 dialog::say("hend_only_way_across_the_0");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x385f0b81, Offset: 0x2f80
 // Size: 0x1a
@@ -539,7 +539,7 @@ function function_823e535e() {
     level flag::set("bridge_destruction_sequence");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x60152b11, Offset: 0x2fa8
 // Size: 0x22
@@ -548,7 +548,7 @@ function function_9069a713() {
     self turret::enable(1, 1);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xc6f8db96, Offset: 0x2fd8
 // Size: 0x32
@@ -557,7 +557,7 @@ function function_58b194a5() {
     spawner::simple_spawn("sp_bridge_sniper_right");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x29247689, Offset: 0x3018
 // Size: 0x7a
@@ -570,7 +570,7 @@ function function_2fdac05f() {
     level thread function_ec50ea55("bridge_battle_flatbed_right_2");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 2, eflags: 0x0
 // Checksum 0x2984b618, Offset: 0x30a0
 // Size: 0x52
@@ -582,7 +582,7 @@ function function_58377d0(vehiclename, name) {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 1, eflags: 0x0
 // Checksum 0x58b031a, Offset: 0x3100
 // Size: 0x6a
@@ -594,7 +594,7 @@ function function_ec50ea55(str_vehicle) {
     function_58377d0(vh_vehicle, "passenger1");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 1, eflags: 0x0
 // Checksum 0xb5c7d57a, Offset: 0x3178
 // Size: 0x112
@@ -617,7 +617,7 @@ function function_c4e1973c(vh_vehicle) {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xa9c94fc7, Offset: 0x3298
 // Size: 0x11a
@@ -644,7 +644,7 @@ function function_19d07c7a() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x955f43c2, Offset: 0x33c0
 // Size: 0x142
@@ -668,7 +668,7 @@ function function_45506c4a() {
     level.var_5d4087a6 dialog::say("mare_fuck_it_plan_b_0");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x2d106792, Offset: 0x3510
 // Size: 0x21b
@@ -697,7 +697,7 @@ function function_61ebf180() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x3c3c8e70, Offset: 0x3738
 // Size: 0xbb
@@ -711,7 +711,7 @@ function function_a34a09b4() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 1, eflags: 0x0
 // Checksum 0x98f1846a, Offset: 0x3800
 // Size: 0x42
@@ -719,7 +719,7 @@ function function_cefcd22a(a_ents) {
     level thread cp_prologue_util::function_2a0bc326(level.var_2fd26037.origin, 0.5, 1.5, 5000, 5, "damage_heavy");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x4e4b305d, Offset: 0x3850
 // Size: 0x412
@@ -733,34 +733,34 @@ function function_b61c8c58() {
     var_59ff07ee delete();
     var_57376852 = getent("bridge_damage_origin_1", "targetname");
     radiusdamage(var_57376852.origin, 450, 2000, 2000, undefined, "MOD_EXPLOSIVE");
-    level thread function_71e578b6();
+    level thread bridge_rumble();
     level waittill(#"hash_85385801");
     level thread scene::play("bridge_tent_02");
     var_33fc8d85 = getent("bridge_section_2", "targetname");
     var_33fc8d85 delete();
     var_3134ede9 = getent("bridge_damage_origin_2", "targetname");
     radiusdamage(var_3134ede9.origin, 450, 2000, 2000, undefined, "MOD_EXPLOSIVE");
-    level thread function_71e578b6();
+    level thread bridge_rumble();
     level waittill(#"hash_5f35dd98");
     var_dfa131c = getent("bridge_section_3", "targetname");
     var_dfa131c delete();
     var_b327380 = getent("bridge_damage_origin_3", "targetname");
     radiusdamage(var_b327380.origin, 450, 2000, 2000, undefined, "MOD_EXPLOSIVE");
-    level thread function_71e578b6();
+    level thread bridge_rumble();
     level waittill(#"hash_69473677");
     level thread scene::play("bridge_tent_03");
     var_e7f798b3 = getentarray("bridge_section_4", "targetname");
     array::run_all(var_e7f798b3, &delete);
     var_1543cc5f = getent("bridge_damage_origin_4", "targetname");
     radiusdamage(var_1543cc5f.origin, 800, 3000, 3000, undefined, "MOD_EXPLOSIVE");
-    level thread function_71e578b6();
+    level thread bridge_rumble();
     var_2bb8ffb8 = getentarray("bridge_macv_convoy1_vh", "targetname");
     var_bd827604 = struct::get("struct_macv_fx", "targetname");
     var_85d8db71 = arraygetclosest(var_bd827604.origin, var_2bb8ffb8);
     var_85d8db71 thread fx::play("fx_apc_fire", var_85d8db71.origin, var_85d8db71.angles, undefined, 1, "tag_origin");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 1, eflags: 0x0
 // Checksum 0x272ca8a6, Offset: 0x3c70
 // Size: 0x8b
@@ -772,7 +772,7 @@ function function_27bfa6a0(a_ents) {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x31c8734b, Offset: 0x3d08
 // Size: 0x31
@@ -782,18 +782,18 @@ function function_908069e9() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x6dd5a4d9, Offset: 0x3d48
 // Size: 0x93
-function function_71e578b6() {
+function bridge_rumble() {
     foreach (e_player in level.players) {
         e_player playrumbleonentity("tank_damage_heavy_mp");
         earthquake(0.3, 1, e_player.origin, 128);
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 2, eflags: 0x0
 // Checksum 0x7a730a5a, Offset: 0x3de8
 // Size: 0x6a
@@ -805,7 +805,7 @@ function function_1aacc8e6(truck, spawner) {
     spawn_manager::enable(spawner);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 3, eflags: 0x0
 // Checksum 0xefa03d39, Offset: 0x3e60
 // Size: 0x93
@@ -821,7 +821,7 @@ function function_bb86e135(var_2c566fb1, n_amount, n_delay) {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x7729c6ba, Offset: 0x3f00
 // Size: 0xd1
@@ -840,7 +840,7 @@ function function_9a998f4c() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x4acd12a9, Offset: 0x3fe0
 // Size: 0x42
@@ -849,7 +849,7 @@ function function_86b76a0b() {
     level.var_2fd26037 setgoal(var_415b1e24);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xf5cd23dd, Offset: 0x4030
 // Size: 0xf2
@@ -866,7 +866,7 @@ function function_373c3957() {
     self ai::set_ignoreme(0);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbb57ad73, Offset: 0x4130
 // Size: 0xf2
@@ -882,7 +882,7 @@ function function_462ad50a() {
     level function_ce74e624();
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x225b0721, Offset: 0x4230
 // Size: 0x122
@@ -902,7 +902,7 @@ function function_ce74e624() {
     level.var_5d4087a6 dialog::say("mare_move_up_move_up_0");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xcd1d5fc9, Offset: 0x4360
 // Size: 0x61
@@ -920,7 +920,7 @@ function function_ccb258c2() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x997c8e5e, Offset: 0x43d0
 // Size: 0x62
@@ -933,7 +933,7 @@ function function_ff7f8d6c() {
     level.var_1d513eb4 = 0;
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xc34142fc, Offset: 0x4440
 // Size: 0x1b2
@@ -960,7 +960,7 @@ function function_d092ac71() {
     objectives::complete("cp_waypoint_breadcrumb");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x15bd2bc9, Offset: 0x4600
 // Size: 0x15d
@@ -968,18 +968,18 @@ function function_40039059() {
     level.var_212db960 = getent("intelligence_building_entrance_blocker", "targetname");
     level.var_212db960.movedist = 300;
     level.var_212db960 movez(-1 * level.var_212db960.movedist, 0.05);
-    var_181a23a4 = getent("intelstation_entry_door_l", "targetname");
-    var_5c50a8aa = getent("intelstation_entry_door_r", "targetname");
-    playsoundatposition("evt_doorhack_dooropen", var_5c50a8aa.origin);
+    door_l = getent("intelstation_entry_door_l", "targetname");
+    door_r = getent("intelstation_entry_door_r", "targetname");
+    playsoundatposition("evt_doorhack_dooropen", door_r.origin);
     var_96ba651b = (54, 0, 0);
-    var_ebf82f1 = var_181a23a4.origin + var_96ba651b;
-    var_181a23a4 moveto(var_ebf82f1, 0.5);
-    var_ebf82f1 = var_5c50a8aa.origin - var_96ba651b;
-    var_5c50a8aa moveto(var_ebf82f1, 0.5);
-    var_181a23a4 waittill(#"movedone");
+    var_ebf82f1 = door_l.origin + var_96ba651b;
+    door_l moveto(var_ebf82f1, 0.5);
+    var_ebf82f1 = door_r.origin - var_96ba651b;
+    door_r moveto(var_ebf82f1, 0.5);
+    door_l waittill(#"movedone");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xe623b3d1, Offset: 0x4768
 // Size: 0x1ca
@@ -992,17 +992,17 @@ function function_43d4df76() {
         wait 0.1;
     }
     level.var_212db960 movez(level.var_212db960.movedist, 0.05);
-    var_181a23a4 = getent("intelstation_entry_door_l", "targetname");
-    var_5c50a8aa = getent("intelstation_entry_door_r", "targetname");
-    var_5c50a8aa playsound("evt_doorhack_doorclose");
+    door_l = getent("intelstation_entry_door_l", "targetname");
+    door_r = getent("intelstation_entry_door_r", "targetname");
+    door_r playsound("evt_doorhack_doorclose");
     var_96ba651b = (54, 0, 0);
-    var_ebf82f1 = var_181a23a4.origin - var_96ba651b;
-    var_181a23a4 moveto(var_ebf82f1, 0.5);
-    var_ebf82f1 = var_5c50a8aa.origin + var_96ba651b;
-    var_5c50a8aa moveto(var_ebf82f1, 0.5);
+    var_ebf82f1 = door_l.origin - var_96ba651b;
+    door_l moveto(var_ebf82f1, 0.5);
+    var_ebf82f1 = door_r.origin + var_96ba651b;
+    door_r moveto(var_ebf82f1, 0.5);
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x87b953f3, Offset: 0x4940
 // Size: 0x82
@@ -1015,7 +1015,7 @@ function function_d94fdf85() {
     ent playsound("evt_darkbattle_walla_surprise_oneshot");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x49518cb6, Offset: 0x49d0
 // Size: 0x34a
@@ -1063,7 +1063,7 @@ function function_3178e821() {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 2, eflags: 0x0
 // Checksum 0xb700811c, Offset: 0x4d28
 // Size: 0x111
@@ -1085,7 +1085,7 @@ function function_62f55bbc(var_6d8dbcae, var_bb290d08) {
     }
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 13, eflags: 0x0
 // Checksum 0xb69591e6, Offset: 0x4e48
 // Size: 0x6f
@@ -1093,7 +1093,7 @@ function function_3d8309dc(einflictor, eattacker, idamage, idflags, smeansofdeat
     return idamage * 5;
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x8956952f, Offset: 0x4ec0
 // Size: 0x42
@@ -1102,7 +1102,7 @@ function function_86ce62c8() {
     level dialog::remote("tayr_copy_that_rendezvou_0", undefined, "normal");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xa2aa323e, Offset: 0x4f10
 // Size: 0x7a
@@ -1117,7 +1117,7 @@ function function_8798d583() {
     level.var_5d4087a6 dialog::say("mare_that_drone_s_less_th_0");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0x765c3e95, Offset: 0x4f98
 // Size: 0x23
@@ -1126,7 +1126,7 @@ function function_951308f0() {
     level notify(#"hash_18d7e7c0");
 }
 
-// Namespace namespace_dc79b4d3
+// Namespace bridge_battle
 // Params 0, eflags: 0x0
 // Checksum 0xc07ff009, Offset: 0x4fc8
 // Size: 0xfa

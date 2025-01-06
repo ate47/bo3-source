@@ -1,12 +1,12 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_profit_sharing;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56cf753d, Offset: 0x2c8
 // Size: 0xf4
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x835a979a, Offset: 0x3c8
 // Size: 0x74
 function enable() {
@@ -45,7 +45,7 @@ function enable() {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x448
 // Size: 0x4
 function disable() {
@@ -53,7 +53,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x68b0a1b8, Offset: 0x458
 // Size: 0x82
 function function_677e212b() {
@@ -65,7 +65,7 @@ function function_677e212b() {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x487fe3a7, Offset: 0x4e8
 // Size: 0x236
 function add_to_player_score_override(n_points, str_awarded_by, var_1ed9bd9b) {
@@ -100,7 +100,7 @@ function add_to_player_score_override(n_points, str_awarded_by, var_1ed9bd9b) {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9cae7a35, Offset: 0x728
 // Size: 0xdc
 function function_ff41ae2d(e_player) {
@@ -117,7 +117,7 @@ function function_ff41ae2d(e_player) {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe52af0dc, Offset: 0x810
 // Size: 0x3e
 function function_3c1690be(e_player) {
@@ -126,7 +126,7 @@ function function_3c1690be(e_player) {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6534358c, Offset: 0x858
 // Size: 0x60
 function function_d1d595b5() {
@@ -139,7 +139,7 @@ function function_d1d595b5() {
 }
 
 // Namespace zm_bgb_profit_sharing
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd977b079, Offset: 0x8c0
 // Size: 0x3c
 function function_c0b35f9d() {

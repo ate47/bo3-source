@@ -1,5 +1,5 @@
-#using scripts/shared/filter_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/filter_shared;
 
 #namespace filter;
 

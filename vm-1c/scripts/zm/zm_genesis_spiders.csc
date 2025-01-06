@@ -1,7 +1,7 @@
-#using scripts/zm/_zm;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/zm/_zm;
 
 #namespace zm_genesis_spiders;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x148
 // Size: 0x4
 function __init__() {
@@ -22,7 +22,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a9bf9e7, Offset: 0x158
 // Size: 0x14
 function __main__() {
@@ -30,7 +30,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_spiders
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x178
 // Size: 0x4
 function register_clientfields() {

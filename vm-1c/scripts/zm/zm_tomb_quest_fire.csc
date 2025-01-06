@@ -1,14 +1,14 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_tomb_quest_fire;
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9f4233fc, Offset: 0x1a8
 // Size: 0x4c
 function main() {
@@ -16,7 +16,7 @@ function main() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7bec3a4f, Offset: 0x200
 // Size: 0x78
 function function_f53f6b0a(localclientnum) {
@@ -30,7 +30,7 @@ function function_f53f6b0a(localclientnum) {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x47660f45, Offset: 0x280
 // Size: 0x86
 function barbecue_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -43,7 +43,7 @@ function barbecue_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2ca25794, Offset: 0x310
 // Size: 0x8c
 function function_ebebc90(entity) {

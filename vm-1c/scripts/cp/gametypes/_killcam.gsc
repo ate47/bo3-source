@@ -1,16 +1,16 @@
-#using scripts/cp/_util;
-#using scripts/cp/_tacticalinsertion;
-#using scripts/cp/_challenges;
-#using scripts/cp/gametypes/_spectating;
-#using scripts/cp/gametypes/_globallogic_spawn;
-#using scripts/cp/gametypes/_globallogic;
-#using scripts/shared/weapons/_tacticalinsertion;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_challenges;
+#using scripts/cp/_tacticalinsertion;
+#using scripts/cp/_util;
+#using scripts/cp/gametypes/_globallogic;
+#using scripts/cp/gametypes/_globallogic_spawn;
+#using scripts/cp/gametypes/_spectating;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_tacticalinsertion;
 
 #namespace killcam;
 
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe6dedf18, Offset: 0x3d8
 // Size: 0x24
 function __init__() {
@@ -31,7 +31,7 @@ function __init__() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87884ff4, Offset: 0x408
 // Size: 0x7c
 function init() {
@@ -46,7 +46,7 @@ function init() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda0f617e, Offset: 0x490
 // Size: 0xba
 function init_final_killcam() {
@@ -59,7 +59,7 @@ function init_final_killcam() {
 }
 
 // Namespace killcam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdca19327, Offset: 0x558
 // Size: 0x44
 function init_final_killcam_team(team) {
@@ -68,7 +68,7 @@ function init_final_killcam_team(team) {
 }
 
 // Namespace killcam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9595bcf4, Offset: 0x5a8
 // Size: 0x112
 function clear_final_killcam_team(team) {
@@ -130,7 +130,7 @@ function erase_final_killcam() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf08cc071, Offset: 0xad0
 // Size: 0x24
 function final_killcam_waiter() {
@@ -146,7 +146,7 @@ function final_killcam_waiter() {
 // Checksum 0x7c8a4aaa, Offset: 0xb00
 // Size: 0x4c
 function post_round_final_killcam() {
-    if (isdefined(level.var_77929119) && level.var_77929119) {
+    if (isdefined(level.sidebet) && level.sidebet) {
         return;
     }
     level notify(#"play_final_killcam");
@@ -197,7 +197,7 @@ function function_ec4e2b9c() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd45124de, Offset: 0xd30
 // Size: 0x76
 function are_any_players_watching() {
@@ -212,7 +212,7 @@ function are_any_players_watching() {
 }
 
 // Namespace killcam
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0x6cd1ef81, Offset: 0xdb0
 // Size: 0x5b4
 function killcam(attackernum, targetnum, killcamentity, killcamentityindex, killcamentitystarttime, weapon, deathtime, deathtimeoffset, offsettime, respawn, maxtime, perks, killstreaks, attacker, body) {
@@ -297,7 +297,7 @@ function killcam(attackernum, targetnum, killcamentity, killcamentityindex, kill
 }
 
 // Namespace killcam
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x44c6fbf1, Offset: 0x1370
 // Size: 0x5c
 function set_entity(killcamentityindex, delayms) {
@@ -311,7 +311,7 @@ function set_entity(killcamentityindex, delayms) {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6509566a, Offset: 0x13d8
 // Size: 0x3a
 function wait_killcam_time() {
@@ -322,7 +322,7 @@ function wait_killcam_time() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x84e093ad, Offset: 0x1420
 // Size: 0x3a
 function function_6cc9650b() {
@@ -333,7 +333,7 @@ function function_6cc9650b() {
 }
 
 // Namespace killcam
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfade027c, Offset: 0x1468
 // Size: 0x12c
 function wait_final_killcam_slowdown(deathtime, starttime) {
@@ -369,7 +369,7 @@ function wait_skip_killcam_button() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac2f6520, Offset: 0x1638
 // Size: 0x3c
 function wait_team_change_end_killcam() {
@@ -397,7 +397,7 @@ function wait_skip_killcam_safe_spawn_button() {
 }
 
 // Namespace killcam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbfb906c7, Offset: 0x1708
 // Size: 0x6c
 function end(final) {
@@ -412,7 +412,7 @@ function end(final) {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8401c67e, Offset: 0x1780
 // Size: 0x52
 function check_for_abrupt_end() {
@@ -428,7 +428,7 @@ function check_for_abrupt_end() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28f547eb, Offset: 0x17e0
 // Size: 0x3c
 function spawned_killcam_cleanup() {
@@ -446,14 +446,14 @@ function spectator_killcam_cleanup(attacker) {
     self endon(#"end_killcam");
     self endon(#"disconnect");
     attacker endon(#"disconnect");
-    var_ce2fdf61 = attacker waittill(#"begin_killcam");
+    attacker waittill(#"begin_killcam", var_ce2fdf61);
     waittime = max(0, var_ce2fdf61 - self.deathtime - 50);
     wait waittime;
     self end(0);
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39fd27fa, Offset: 0x18d0
 // Size: 0x3c
 function function_548eaf1e() {
@@ -464,7 +464,7 @@ function function_548eaf1e() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9bb20333, Offset: 0x1918
 // Size: 0x44
 function function_5551058f() {
@@ -475,7 +475,7 @@ function function_5551058f() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4bef9f31, Offset: 0x1968
 // Size: 0x1a
 function cancel_use_button() {
@@ -491,7 +491,7 @@ function cancel_safe_spawn_button() {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca3a7481, Offset: 0x19b8
 // Size: 0x10
 function cancel_callback() {
@@ -516,7 +516,7 @@ function cancel_on_use() {
 }
 
 // Namespace killcam
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6e042f85, Offset: 0x1a38
 // Size: 0x11c
 function cancel_on_use_specific_button(pressingbuttonfunc, finishedfunc) {
@@ -550,7 +550,7 @@ function cancel_on_use_specific_button(pressingbuttonfunc, finishedfunc) {
 }
 
 // Namespace killcam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb4da148a, Offset: 0x1b60
 // Size: 0x57c
 function final_killcam(winner) {
@@ -622,7 +622,7 @@ function final_killcam(winner) {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2072a195, Offset: 0x20e8
 // Size: 0x2c
 function spawn_end_of_final_killcam() {
@@ -631,7 +631,7 @@ function spawn_end_of_final_killcam() {
 }
 
 // Namespace killcam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5cba60e3, Offset: 0x2120
 // Size: 0x30
 function is_entity_weapon(weapon) {
@@ -642,7 +642,7 @@ function is_entity_weapon(weapon) {
 }
 
 // Namespace killcam
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x738c0b1d, Offset: 0x2158
 // Size: 0x154
 function calc_time(weapon, entitystarttime, predelay, respawn, maxtime) {
@@ -672,7 +672,7 @@ function calc_time(weapon, entitystarttime, predelay, respawn, maxtime) {
 }
 
 // Namespace killcam
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6121d203, Offset: 0x22b8
 // Size: 0x80
 function calc_post_delay() {
@@ -720,7 +720,7 @@ function function_62ea5b06(respawn) {
 }
 
 // Namespace killcam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2d335697, Offset: 0x2508
 // Size: 0xc
 function function_a6953bec(camtime) {

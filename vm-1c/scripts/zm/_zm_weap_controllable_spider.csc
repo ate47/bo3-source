@@ -1,10 +1,10 @@
-#using scripts/zm/_util;
-#using scripts/shared/weapons/_bouncingbetty;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_bouncingbetty;
+#using scripts/zm/_util;
 
 #namespace controllable_spider;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace controllable_spider
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7d540efd, Offset: 0x200
 // Size: 0x9c
 function __init__(localclientnum) {
@@ -26,7 +26,7 @@ function __init__(localclientnum) {
 }
 
 // Namespace controllable_spider
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfcb6c022, Offset: 0x2a8
 // Size: 0xa2
 function player_cocooned_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

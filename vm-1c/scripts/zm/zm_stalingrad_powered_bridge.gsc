@@ -1,25 +1,25 @@
-#using scripts/zm/zm_stalingrad_util;
-#using scripts/zm/zm_stalingrad;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_load;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_stalingrad;
+#using scripts/zm/zm_stalingrad_util;
 
 #namespace zm_stalingrad_powered_bridge;
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf808aa81, Offset: 0x540
 // Size: 0x222
 function main() {
@@ -41,7 +41,7 @@ function main() {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xccf99edc, Offset: 0x770
 // Size: 0x7c
 function function_e457f1d() {
@@ -55,7 +55,7 @@ function function_e457f1d() {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x282db357, Offset: 0x7f8
 // Size: 0xc2
 function function_87d1b410(e_player) {
@@ -72,12 +72,12 @@ function function_87d1b410(e_player) {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf727e037, Offset: 0x8c8
 // Size: 0x134
 function function_5156e4d8() {
     while (true) {
-        e_player = self waittill(#"trigger");
+        self waittill(#"trigger", e_player);
         if (!level flag::get("bridge_in_use")) {
             if (e_player zm_score::can_player_purchase(500)) {
                 e_player clientfield::increment_to_player("interact_rumble");
@@ -97,7 +97,7 @@ function function_5156e4d8() {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc3bd44be, Offset: 0xa08
 // Size: 0x48c
 function activate_bridge(e_player) {
@@ -140,7 +140,7 @@ function activate_bridge(e_player) {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b1e7cce, Offset: 0xea0
 // Size: 0xfa
 function function_462efa3d() {
@@ -154,7 +154,7 @@ function function_462efa3d() {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x210ee80, Offset: 0xfa8
 // Size: 0xba
 function function_ef72d561() {
@@ -166,7 +166,7 @@ function function_ef72d561() {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeb5226d2, Offset: 0x1070
 // Size: 0x3ac
 function function_40ac3c12(e_player) {
@@ -201,7 +201,7 @@ function function_40ac3c12(e_player) {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x180789c9, Offset: 0x1428
 // Size: 0x102
 function function_e0c7ad1e(var_fa30b172, var_c83a1961) {
@@ -217,7 +217,7 @@ function function_e0c7ad1e(var_fa30b172, var_c83a1961) {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc2731b22, Offset: 0x1538
 // Size: 0x1fc
 function function_fce6cca8(str_side) {
@@ -244,7 +244,7 @@ function function_fce6cca8(str_side) {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xed56fac, Offset: 0x1740
 // Size: 0x20c
 function function_54227761(var_fa30b172, var_c83a1961, e_player) {
@@ -282,7 +282,7 @@ function function_54227761(var_fa30b172, var_c83a1961, e_player) {
 }
 
 // Namespace zm_stalingrad_powered_bridge
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5e77bd5c, Offset: 0x1958
 // Size: 0xdc
 function function_d2f913f5(str_side) {

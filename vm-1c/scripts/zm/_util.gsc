@@ -1,18 +1,18 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace util;
 
 /#
 
     // Namespace util
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa1fd40f2, Offset: 0x270
     // Size: 0x74
     function error(msg) {
@@ -100,7 +100,7 @@ function brush_throw() {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8d6618ce, Offset: 0x6c8
 // Size: 0x176
 function playsoundonplayers(sound, team) {
@@ -126,7 +126,7 @@ function playsoundonplayers(sound, team) {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf6a8c70, Offset: 0x848
 // Size: 0xa
 function get_player_height() {
@@ -154,7 +154,7 @@ function waitrespawnbutton() {
 }
 
 // Namespace util
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x393a04cd, Offset: 0x8f0
 // Size: 0x200
 function setlowermessage(text, time, var_452e72bb) {
@@ -227,7 +227,7 @@ function function_9468e63a(text, value, var_e51ab3d) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa108f191, Offset: 0xd28
 // Size: 0xf4
 function clearlowermessage(fadetime) {
@@ -415,7 +415,7 @@ function _playlocalsound(soundalias) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x260e7090, Offset: 0x1768
 // Size: 0x74
 function getotherteam(team) {
@@ -430,7 +430,7 @@ function getotherteam(team) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe633f130, Offset: 0x17e8
 // Size: 0x64
 function getteammask(team) {
@@ -441,7 +441,7 @@ function getteammask(team) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x68a95ee8, Offset: 0x1858
 // Size: 0xc4
 function getotherteamsmask(skip_team) {
@@ -493,7 +493,7 @@ function getfx(fx) {
 }
 
 // Namespace util
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd0c9770f, Offset: 0x1a98
 // Size: 0x92
 function set_dvar_if_unset(dvar, value, reset) {
@@ -600,7 +600,7 @@ function setobjectivehinttext(team, text) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe4e71209, Offset: 0x1e70
 // Size: 0x24
 function getobjectivetext(team) {
@@ -608,7 +608,7 @@ function getobjectivetext(team) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x337a7ca5, Offset: 0x1ea0
 // Size: 0x24
 function getobjectivescoretext(team) {
@@ -616,7 +616,7 @@ function getobjectivescoretext(team) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5c0b9bdd, Offset: 0x1ed0
 // Size: 0x24
 function getobjectivehinttext(team) {
@@ -634,7 +634,7 @@ function registerroundswitch(minvalue, maxvalue) {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x713c3392, Offset: 0x1f70
 // Size: 0x64
 function registerroundlimit(minvalue, maxvalue) {
@@ -644,7 +644,7 @@ function registerroundlimit(minvalue, maxvalue) {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa14bf1e8, Offset: 0x1fe0
 // Size: 0x64
 function registerroundwinlimit(minvalue, maxvalue) {
@@ -654,7 +654,7 @@ function registerroundwinlimit(minvalue, maxvalue) {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2003c062, Offset: 0x2050
 // Size: 0x84
 function registerscorelimit(minvalue, maxvalue) {
@@ -665,7 +665,7 @@ function registerscorelimit(minvalue, maxvalue) {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x36d23cf6, Offset: 0x20e0
 // Size: 0x84
 function registertimelimit(minvalue, maxvalue) {
@@ -676,7 +676,7 @@ function registertimelimit(minvalue, maxvalue) {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x11c9519d, Offset: 0x2170
 // Size: 0x64
 function registernumlives(minvalue, maxvalue) {
@@ -714,7 +714,7 @@ function ispressbuild() {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b41c029, Offset: 0x22c0
 // Size: 0x1c
 function isflashbanged() {
@@ -739,7 +739,7 @@ function domaxdamage(origin, attacker, inflictor, headshot, mod) {
 }
 
 // Namespace util
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xbfd0e975, Offset: 0x23b0
 // Size: 0x328
 function get_array_of_closest(org, array, excluders, max, maxdist) {

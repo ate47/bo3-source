@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_weapons;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
 #using scripts/shared/bots/_bot;
 #using scripts/shared/bots/_bot_combat;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/killstreaks_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_bot;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd54b1689, Offset: 0x238
 // Size: 0xc4
 function __init__() {
@@ -41,7 +41,7 @@ function __init__() {
 /#
 
     // Namespace zm_bot
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xb1f46eea, Offset: 0x308
     // Size: 0x1e8
     function function_6e62d3e3() {
@@ -74,7 +74,7 @@ function __init__() {
     }
 
     // Namespace zm_bot
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x18071df4, Offset: 0x4f8
     // Size: 0x64
     function on_bot_spawned() {
@@ -84,7 +84,7 @@ function __init__() {
     }
 
     // Namespace zm_bot
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x95d1e69, Offset: 0x568
     // Size: 0x64
     function debugmsg(var_69ae6753) {

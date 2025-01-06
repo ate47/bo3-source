@@ -1,5 +1,5 @@
-#using scripts/shared/exploder_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
 
 #namespace mp_apartments_lighting;
 

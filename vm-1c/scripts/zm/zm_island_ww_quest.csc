@@ -1,16 +1,16 @@
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
 
 #using_animtree("generic");
 
 #namespace zm_island_ww_quest;
 
 // Namespace zm_island_ww_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7410e9e2, Offset: 0x210
 // Size: 0x16c
 function init_quest() {
@@ -22,7 +22,7 @@ function init_quest() {
 }
 
 // Namespace zm_island_ww_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x46d171d6, Offset: 0x388
 // Size: 0x94
 function add_ww_to_box(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -33,7 +33,7 @@ function add_ww_to_box(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace zm_island_ww_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe2bddd9b, Offset: 0x428
 // Size: 0x6c
 function play_underwater_plant_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -41,7 +41,7 @@ function play_underwater_plant_fx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_island_ww_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6e9cc6a7, Offset: 0x4a0
 // Size: 0x6c
 function function_f0e89ab2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -49,7 +49,7 @@ function function_f0e89ab2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_ww_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4934485f, Offset: 0x518
 // Size: 0x6c
 function function_e9572f40(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -57,7 +57,7 @@ function function_e9572f40(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_ww_quest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd98ee7d8, Offset: 0x590
 // Size: 0xbc
 function function_6eb27bd9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

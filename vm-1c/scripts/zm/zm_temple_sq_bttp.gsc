@@ -1,17 +1,17 @@
-#using scripts/zm/zm_temple_sq_skits;
-#using scripts/zm/zm_temple_sq_brock;
-#using scripts/zm/zm_temple_sq;
-#using scripts/zm/_zm_sidequests;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/zm_temple_sq;
+#using scripts/zm/zm_temple_sq_brock;
+#using scripts/zm/zm_temple_sq_skits;
 
 #namespace zm_temple_sq_bttp;
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x830fafc7, Offset: 0x520
 // Size: 0xb4
 function init() {
@@ -21,7 +21,7 @@ function init() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x78374dee, Offset: 0x5e0
 // Size: 0xb4
 function init_stage() {
@@ -36,7 +36,7 @@ function init_stage() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xee9f00a7, Offset: 0x6a0
 // Size: 0x2c
 function function_9873f186() {
@@ -45,13 +45,13 @@ function function_9873f186() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d10cb84, Offset: 0x6d8
 // Size: 0xee
-function function_20f15b9() {
+function trap_trigger() {
     level endon(#"hash_20531487");
     while (true) {
-        amount, attacker, direction, point, var_e5f012d6, modelname, tagname = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, direction, point, var_e5f012d6, modelname, tagname);
         if (var_e5f012d6 == "MOD_EXPLOSIVE" || var_e5f012d6 == "MOD_EXPLOSIVE_SPLASH" || var_e5f012d6 == "MOD_GRENADE" || isplayer(attacker) && var_e5f012d6 == "MOD_GRENADE_SPLASH") {
             self.var_bbca234 notify(#"triggered", attacker);
             return;
@@ -60,7 +60,7 @@ function function_20f15b9() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x319f992a, Offset: 0x7d0
 // Size: 0x134
 function trap_thread() {
@@ -69,8 +69,8 @@ function trap_thread() {
     self.trigger.height = 72;
     self.trigger.radius = 32;
     self.trigger.var_bbca234 = self;
-    self.trigger thread function_20f15b9();
-    who = self waittill(#"triggered");
+    self.trigger thread trap_trigger();
+    self waittill(#"triggered", who);
     who thread zm_audio::create_and_play_dialog("eggs", "quest1", 7);
     self.trigger playsound("evt_sq_bttp_wood_explo");
     self ghost();
@@ -78,7 +78,7 @@ function trap_thread() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7b4b813d, Offset: 0x910
 // Size: 0x80
 function function_e3bf4adb() {
@@ -94,14 +94,14 @@ function function_e3bf4adb() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56da5f35, Offset: 0x998
 // Size: 0x1bc
 function function_8feeec3c() {
     hits = 0;
     self thread function_e3bf4adb();
     while (true) {
-        amount, attacker, dir, point, type = self waittill(#"damage");
+        self waittill(#"damage", amount, attacker, dir, point, type);
         self playsound("evt_sq_bttp_carve");
         if (type == "MOD_MELEE") {
             hits++;
@@ -125,7 +125,7 @@ function function_8feeec3c() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8a414554, Offset: 0xb60
 // Size: 0x156
 function function_87175782(tile) {
@@ -172,7 +172,7 @@ function function_87175782(tile) {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5e39524a, Offset: 0xcc0
 // Size: 0x1e4
 function function_7747c56() {
@@ -198,7 +198,7 @@ function function_7747c56() {
 }
 
 // Namespace zm_temple_sq_bttp
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9e6c47b2, Offset: 0xeb0
 // Size: 0x1e2
 function function_cc3f3f6a(success) {

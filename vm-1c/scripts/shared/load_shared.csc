@@ -1,15 +1,15 @@
+#using scripts/shared/_explode;
+#using scripts/shared/blood;
+#using scripts/shared/drown;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/fx_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/shared/water_surface;
 #using scripts/shared/weapons/_empgrenade;
 #using scripts/shared/weapons_shared;
-#using scripts/shared/_explode;
-#using scripts/shared/drown;
-#using scripts/shared/blood;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/water_surface;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/player_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/system_shared;
 
 #namespace load;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xeb152b63, Offset: 0x268
 // Size: 0x2c
 function __init__() {
@@ -35,7 +35,7 @@ function __init__() {
 /#
 
     // Namespace load
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbf1fdc1, Offset: 0x2a0
     // Size: 0x26
     function first_frame() {
@@ -47,7 +47,7 @@ function __init__() {
 #/
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcb85f097, Offset: 0x2d0
 // Size: 0x64
 function function_b018f2a7() {
@@ -58,7 +58,7 @@ function function_b018f2a7() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc008a629, Offset: 0x340
 // Size: 0x7c
 function art_review() {

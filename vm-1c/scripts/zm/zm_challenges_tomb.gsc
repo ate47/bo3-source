@@ -1,17 +1,17 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_equipment;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_challenges_tomb;
 
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc8210c8d, Offset: 0x4a0
 // Size: 0x174
 function __init__() {
@@ -44,7 +44,7 @@ function __init__() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39a5a152, Offset: 0x620
 // Size: 0x64
 function __main__() {
@@ -54,7 +54,7 @@ function __main__() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x56d4e630, Offset: 0x690
 // Size: 0x170
 function onplayerconnect() {
@@ -69,7 +69,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa1f8c61e, Offset: 0x808
 // Size: 0x200
 function onplayerspawned() {
@@ -100,7 +100,7 @@ function onplayerspawned() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcdfaf695, Offset: 0xa10
 // Size: 0x13c
 function stats_init() {
@@ -121,7 +121,7 @@ function stats_init() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe1e3a92, Offset: 0xb58
 // Size: 0x190
 function function_159cc09f(str_name, var_2fa4bcd3, str_hint, n_goal, var_73b23f8a, var_25295d79, var_83182b7d) {
@@ -150,7 +150,7 @@ function function_159cc09f(str_name, var_2fa4bcd3, str_hint, n_goal, var_73b23f8
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6b2b6294, Offset: 0xcf0
 // Size: 0x2d8
 function player_stats_init(n_index) {
@@ -184,7 +184,7 @@ function player_stats_init(n_index) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa2ca1301, Offset: 0xfd0
 // Size: 0x244
 function function_84b21c77(n_index) {
@@ -214,7 +214,7 @@ function function_84b21c77(n_index) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd251b990, Offset: 0x1220
 // Size: 0x34
 function function_db40117f(str_name) {
@@ -225,7 +225,7 @@ function function_db40117f(str_name) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc869cbaa, Offset: 0x1260
 // Size: 0x126
 function get_stat(var_d7f161b3, player) {
@@ -241,7 +241,7 @@ function get_stat(var_d7f161b3, player) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc1da97c, Offset: 0x1390
 // Size: 0x9c
 function function_6b433789(var_d7f161b3, n_increment) {
@@ -268,7 +268,7 @@ function set_stat(var_d7f161b3, n_set) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8ca23e83, Offset: 0x14b8
 // Size: 0x44
 function function_fbbc8608(str_hint, var_7ca2c2ae) {
@@ -276,7 +276,7 @@ function function_fbbc8608(str_hint, var_7ca2c2ae) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4eef580e, Offset: 0x1508
 // Size: 0x4cc
 function function_9b9cb71e(var_4d6f50a9) {
@@ -325,7 +325,7 @@ function function_9b9cb71e(var_4d6f50a9) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x979c8c8f, Offset: 0x19e0
 // Size: 0xcc
 function function_6f71437b(stat, player) {
@@ -347,7 +347,7 @@ function function_6f71437b(stat, player) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3c2fef19, Offset: 0x1ab8
 // Size: 0xb8
 function function_aa1a2ed4() {
@@ -360,7 +360,7 @@ function function_aa1a2ed4() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xffa1d1f9, Offset: 0x1b78
 // Size: 0x5aa
 function function_79ebf8a4(var_5d4e3783) {
@@ -417,7 +417,7 @@ function function_79ebf8a4(var_5d4e3783) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31cefc0e, Offset: 0x2130
 // Size: 0x2a4
 function function_a4d8ba61() {
@@ -455,7 +455,7 @@ function function_a4d8ba61() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7163c67b, Offset: 0x23e0
 // Size: 0x40
 function function_ce473431(player) {
@@ -467,7 +467,7 @@ function function_ce473431(player) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x30fb243d, Offset: 0x2428
 // Size: 0x544
 function function_11e941ed(player) {
@@ -539,14 +539,14 @@ function function_11e941ed(player) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x30fc7c97, Offset: 0x2978
 // Size: 0x290
 function function_2ade4ad9() {
     self endon(#"kill_trigger");
     s_team = level._challenges.s_team;
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (!zombie_utility::is_player_valid(player)) {
             continue;
         }
@@ -576,7 +576,7 @@ function function_2ade4ad9() {
 }
 
 // Namespace zm_challenges_tomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9b6fbd47, Offset: 0x2c10
 // Size: 0xbc
 function function_b57f4ca(player, var_5425da88) {
@@ -590,7 +590,7 @@ function function_b57f4ca(player, var_5425da88) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4c4f0ef1, Offset: 0x2cd8
 // Size: 0xe6
 function function_696ee824(var_26ef0df7) {
@@ -606,7 +606,7 @@ function function_696ee824(var_26ef0df7) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x46ef9a36, Offset: 0x2dc8
 // Size: 0x1e2
 function function_139222f7(player, var_b34e04c1, var_98916baa, param1) {
@@ -636,7 +636,7 @@ function function_139222f7(player, var_b34e04c1, var_98916baa, param1) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x31e82253, Offset: 0x2fb8
 // Size: 0x254
 function spawn_reward(player, var_5425da88) {
@@ -672,7 +672,7 @@ function spawn_reward(player, var_5425da88) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x99b65df1, Offset: 0x3218
 // Size: 0xd4
 function function_135bd5c3(n_timeout) {
@@ -692,7 +692,7 @@ function function_135bd5c3(n_timeout) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9465fb9b, Offset: 0x32f8
 // Size: 0x54
 function function_bfb87de6(n_delay, n_z, n_time) {
@@ -705,7 +705,7 @@ function function_bfb87de6(n_delay, n_z, n_time) {
 }
 
 // Namespace zm_challenges_tomb
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xde7e3a53, Offset: 0x3358
 // Size: 0xc6
 function function_aeb6a22b(var_a003a924, n_z, var_b1c5fa89, n_delay, n_timeout) {
@@ -732,7 +732,7 @@ function function_e3be24c2(player, var_4d6f50a9) {
 /#
 
     // Namespace zm_challenges_tomb
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe58f6653, Offset: 0x3460
     // Size: 0x9c
     function function_c4b30f14() {
@@ -745,7 +745,7 @@ function function_e3be24c2(player, var_4d6f50a9) {
     }
 
     // Namespace zm_challenges_tomb
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x67226673, Offset: 0x3508
     // Size: 0x80
     function function_eed01f76() {
@@ -760,7 +760,7 @@ function function_e3be24c2(player, var_4d6f50a9) {
     }
 
     // Namespace zm_challenges_tomb
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa884a870, Offset: 0x3590
     // Size: 0x4e0
     function function_10834033(n_index) {

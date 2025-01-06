@@ -1,18 +1,18 @@
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth_vo;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_level;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_debug;
-#using scripts/shared/stealth;
 #using scripts/cp/_util;
 #using scripts/cp/gametypes/_globallogic_score;
 #using scripts/shared/abilities/_ability_util;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_debug;
+#using scripts/shared/stealth_level;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_tagging;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_player;
 
@@ -53,7 +53,7 @@ function stop() {
 // Checksum 0x1a194f56, Offset: 0x4f8
 // Size: 0x42
 function reset() {
-    self.stealth.var_31bf1854 = undefined;
+    self.stealth.vo_deck = undefined;
     self.stealth.var_b9ae563d = undefined;
     self.stealth.var_23eafafa = undefined;
     self.stealth.var_9f4ce919 = [];
@@ -128,7 +128,7 @@ function function_ff057a95() {
         if (self playerads() > 0.3) {
             var_bd8fb968 = self function_1a9006bd("cybercom_hijack");
             eye = self geteye();
-            var_fd26df34 = anglestoforward(self getplayerangles());
+            eye_dir = anglestoforward(self getplayerangles());
             targets = getaiteamarray("axis");
             if (isdefined(level.stealth.var_581c13ae)) {
                 var_2680d17d = [];
@@ -149,8 +149,8 @@ function function_ff057a95() {
                 if (issentient(var_daf22616)) {
                     var_bbf94a49 = var_daf22616 geteye();
                 }
-                if (isdefined(var_daf22616.var_3bee9acf)) {
-                    var_80a7f288 = var_daf22616.var_3bee9acf;
+                if (isdefined(var_daf22616.stealth_callout)) {
+                    var_80a7f288 = var_daf22616.stealth_callout;
                 } else if (isvehicle(var_daf22616)) {
                     if (var_bd8fb968 && var_daf22616 isremotecontrol()) {
                         var_80a7f288 = "careful_hack";
@@ -162,7 +162,7 @@ function function_ff057a95() {
                     continue;
                 }
                 dir = vectornormalize(var_bbf94a49 - eye);
-                if (vectordot(var_fd26df34, dir) > 0.99) {
+                if (vectordot(eye_dir, dir) > 0.99) {
                     if (sighttracepassed(var_bbf94a49, eye, 0, undefined)) {
                         self stealth_vo::function_e3ae87b3(var_80a7f288);
                         self.stealth.var_9f4ce919[var_80a7f288] = 1;
@@ -318,7 +318,7 @@ function function_bb9ffa41() {
         }
         var_b69afa72 = kills;
         lastkilltime = gettime();
-        victim, smeansofdeath, weapon = self waittill(#"hash_c56ba9f7");
+        self waittill(#"killed_ai", victim, smeansofdeath, weapon);
         waittillframeend();
         if (isdefined(victim) && isdefined(victim.team) && victim.team != "axis") {
             self thread stealth_vo::function_e3ae87b3("fail_kill");
@@ -333,7 +333,7 @@ function function_bb9ffa41() {
             var_52ff854e = 0;
         }
         if (var_c839bf74 >= 2 && isdefined(smeansofdeath) && util::isbulletimpactmod(smeansofdeath)) {
-            self notify(#"hash_97df59d5");
+            self notify(#"double_kill");
         }
         var_52ff854e += var_c839bf74;
         if (!isdefined(self.stealth)) {

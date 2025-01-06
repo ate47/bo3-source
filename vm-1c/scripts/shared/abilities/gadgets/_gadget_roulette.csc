@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace gadget_roulette;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace gadget_roulette
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde03de54, Offset: 0x1c8
 // Size: 0x6c
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace gadget_roulette
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x58a93926, Offset: 0x240
 // Size: 0x54
 function function_abc7905(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -32,7 +32,7 @@ function function_abc7905(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace gadget_roulette
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1896b8f6, Offset: 0x2a0
 // Size: 0x8c
 function function_80a6323d(localclientnum, newval) {
@@ -46,7 +46,7 @@ function function_80a6323d(localclientnum, newval) {
 }
 
 // Namespace gadget_roulette
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2086fa7b, Offset: 0x338
 // Size: 0x74
 function on_localplayer_spawned(localclientnum) {

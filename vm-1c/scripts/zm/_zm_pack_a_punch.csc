@@ -1,14 +1,14 @@
-#using scripts/zm/_filter;
-#using scripts/shared/exploder_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/gib;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
 #using scripts/shared/flag_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
+#using scripts/zm/_filter;
 
 #namespace _zm_pack_a_punch;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c3915b8, Offset: 0x288
 // Size: 0x64
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace _zm_pack_a_punch
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8fdc16d5, Offset: 0x2f8
 // Size: 0xd4
 function pap_working_fx_handler(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -49,7 +49,7 @@ function pap_working_fx_handler(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace _zm_pack_a_punch
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x7efddba2, Offset: 0x3d8
 // Size: 0x14c
 function private pap_play_fx(localclientnum, n_piece_index, str_tag) {

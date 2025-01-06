@@ -1,26 +1,26 @@
-#using scripts/zm/zm_island_util;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_island_util;
 
 #namespace zm_island_side_ee_spore_hallucinations;
 
@@ -33,7 +33,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5b969e32, Offset: 0x4e8
 // Size: 0x116
 function __init__() {
@@ -49,7 +49,7 @@ function __init__() {
 /#
 
     // Namespace zm_island_side_ee_spore_hallucinations
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6fb9bff0, Offset: 0x608
     // Size: 0x1c
     function main() {
@@ -59,7 +59,7 @@ function __init__() {
 #/
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e40123b, Offset: 0x630
 // Size: 0x44
 function on_player_connected() {
@@ -68,7 +68,7 @@ function on_player_connected() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x73ebbde2, Offset: 0x680
 // Size: 0x24
 function on_player_spawned() {
@@ -77,7 +77,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x213284e0, Offset: 0x6b0
 // Size: 0x90
 function function_e58be395() {
@@ -96,7 +96,7 @@ function function_e58be395() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x63d0e2e4, Offset: 0x748
 // Size: 0x38
 function function_b200c473() {
@@ -110,7 +110,7 @@ function function_b200c473() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7268493c, Offset: 0x788
 // Size: 0xfc
 function function_51d3efd() {
@@ -130,7 +130,7 @@ function function_51d3efd() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd00b27ff, Offset: 0x890
 // Size: 0x14c
 function function_5d6bcf98() {
@@ -151,7 +151,7 @@ function function_5d6bcf98() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xebcb71dd, Offset: 0x9e8
 // Size: 0x4c
 function function_5d3a5f36() {
@@ -161,7 +161,7 @@ function function_5d3a5f36() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27cca0d3, Offset: 0xa40
 // Size: 0x7c
 function function_f0e36b57() {
@@ -173,7 +173,7 @@ function function_f0e36b57() {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a7450c2, Offset: 0xac8
 // Size: 0x44
 function hallucinate_bloody_walls(b_on) {
@@ -184,7 +184,7 @@ function hallucinate_bloody_walls(b_on) {
 }
 
 // Namespace zm_island_side_ee_spore_hallucinations
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe06f5d35, Offset: 0xb18
 // Size: 0x44
 function hallucinate_spooky_sounds(b_on) {
@@ -197,7 +197,7 @@ function hallucinate_spooky_sounds(b_on) {
 /#
 
     // Namespace zm_island_side_ee_spore_hallucinations
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xcf38628a, Offset: 0xb68
     // Size: 0xa4
     function function_c6d55b0d() {
@@ -210,7 +210,7 @@ function hallucinate_spooky_sounds(b_on) {
     }
 
     // Namespace zm_island_side_ee_spore_hallucinations
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xab39e749, Offset: 0xc18
     // Size: 0xfe
     function function_4c6daca1(cmd) {
@@ -235,7 +235,7 @@ function hallucinate_spooky_sounds(b_on) {
     }
 
     // Namespace zm_island_side_ee_spore_hallucinations
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x96b544d3, Offset: 0xd20
     // Size: 0xe2
     function function_ef6cd11(var_7156fcfa) {

@@ -1,18 +1,18 @@
-#using scripts/mp/bots/_bot_combat;
 #using scripts/mp/bots/_bot;
-#using scripts/shared/bots/bot_buttons;
-#using scripts/shared/bots/_bot_combat;
-#using scripts/shared/bots/_bot;
+#using scripts/mp/bots/_bot_combat;
 #using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/bots/_bot;
+#using scripts/shared/bots/_bot_combat;
+#using scripts/shared/bots/bot_buttons;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_8d1d9f92;
 
 // Namespace namespace_8d1d9f92
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfe20f631, Offset: 0x1c8
 // Size: 0x1c
 function init() {
@@ -20,7 +20,7 @@ function init() {
 }
 
 // Namespace namespace_8d1d9f92
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c5c965d, Offset: 0x1f0
 // Size: 0x544
 function function_eeb4665() {
@@ -78,7 +78,7 @@ function function_eeb4665() {
 }
 
 // Namespace namespace_8d1d9f92
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5c6b1d4, Offset: 0x740
 // Size: 0x4e
 function function_11d53bed(zone) {
@@ -89,7 +89,7 @@ function function_11d53bed(zone) {
 }
 
 // Namespace namespace_8d1d9f92
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9b949b38, Offset: 0x798
 // Size: 0x92
 function function_48256f6b(zone) {
@@ -101,7 +101,7 @@ function function_48256f6b(zone) {
 }
 
 // Namespace namespace_8d1d9f92
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5d98de95, Offset: 0x838
 // Size: 0x54
 function function_68c2701e(zone) {

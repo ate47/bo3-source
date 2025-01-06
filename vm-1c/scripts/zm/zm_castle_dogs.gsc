@@ -1,14 +1,14 @@
-#using scripts/zm/zm_castle_low_grav;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_ai_dogs;
-#using scripts/zm/_load;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_ai_dogs;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_castle_low_grav;
 
 #namespace zm_castle_dogs;
 
@@ -21,7 +21,7 @@ function autoexec init() {
 }
 
 // Namespace zm_castle_dogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4d9e405b, Offset: 0x240
 // Size: 0x1c
 function function_9f8cfcf5() {
@@ -29,7 +29,7 @@ function function_9f8cfcf5() {
 }
 
 // Namespace zm_castle_dogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x348f1244, Offset: 0x268
 // Size: 0x22c
 function dog_round_tracker() {
@@ -48,9 +48,9 @@ function dog_round_tracker() {
             level.var_1b7d7bb8 = 1;
             old_spawn_func = level.round_spawn_func;
             old_wait_func = level.round_wait_func;
-            namespace_cc5bac97::dog_round_start();
-            level.round_spawn_func = &namespace_cc5bac97::function_843b73a8;
-            level.round_wait_func = &namespace_cc5bac97::function_4ee7d855;
+            zm_ai_dogs::dog_round_start();
+            level.round_spawn_func = &zm_ai_dogs::function_843b73a8;
+            level.round_wait_func = &zm_ai_dogs::function_4ee7d855;
             level clientfield::set("castle_fog_bank_switch", 1);
             level.next_dog_round = level.round_number + randomintrange(7, 14);
             /#
@@ -60,7 +60,7 @@ function dog_round_tracker() {
         }
         if (level flag::get("dog_round")) {
             level clientfield::set("castle_fog_bank_switch", 0);
-            namespace_cc5bac97::dog_round_stop();
+            zm_ai_dogs::dog_round_stop();
             level.round_spawn_func = old_spawn_func;
             level.round_wait_func = old_wait_func;
             level.dog_round_count += 1;
@@ -69,7 +69,7 @@ function dog_round_tracker() {
 }
 
 // Namespace zm_castle_dogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ddb9281, Offset: 0x4a0
 // Size: 0x158
 function function_33aa4940() {
@@ -92,14 +92,14 @@ function function_33aa4940() {
         }
     }
     if (var_88369d66) {
-        namespace_cc5bac97::function_6fafe689(1);
+        zm_ai_dogs::function_6fafe689(1);
         level.zombie_total--;
     }
     return var_88369d66;
 }
 
 // Namespace zm_castle_dogs
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x729d73c, Offset: 0x600
 // Size: 0x13a
 function function_92e4eaff(var_70e0fe97, var_19764360) {
@@ -120,7 +120,7 @@ function function_92e4eaff(var_70e0fe97, var_19764360) {
 }
 
 // Namespace zm_castle_dogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7cac6e4f, Offset: 0x748
 // Size: 0x24
 function function_8cf500c9() {
@@ -128,7 +128,7 @@ function function_8cf500c9() {
 }
 
 // Namespace zm_castle_dogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x68bd90b0, Offset: 0x778
 // Size: 0x10c
 function function_1aaa22b5() {

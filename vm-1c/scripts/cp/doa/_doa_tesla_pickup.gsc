@@ -1,19 +1,19 @@
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_enemy;
+#using scripts/codescripts/struct;
+#using scripts/cp/_util;
 #using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_score;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
 #using scripts/cp/doa/_doa_utility;
-#using scripts/cp/_util;
 #using scripts/shared/array_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic_human");
 
@@ -329,7 +329,7 @@ function function_8c768539(player, note) {
     player endon(note);
     player endon(#"disconnect");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (level thread function_395fdfb8(guy, player)) {
             self.triggered = 1;
             break;

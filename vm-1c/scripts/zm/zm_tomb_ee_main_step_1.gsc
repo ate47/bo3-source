@@ -1,23 +1,23 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_ee_main;
-#using scripts/zm/zm_tomb_craftables;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_sidequests;
-#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai/zombie_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_craftables;
+#using scripts/zm/zm_tomb_ee_main;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_ee_main_step_1;
 
 // Namespace zm_tomb_ee_main_step_1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9491bd93, Offset: 0x280
 // Size: 0x54
 function init() {
@@ -25,7 +25,7 @@ function init() {
 }
 
 // Namespace zm_tomb_ee_main_step_1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7572f9a6, Offset: 0x2e0
 // Size: 0x14
 function init_stage() {
@@ -33,7 +33,7 @@ function init_stage() {
 }
 
 // Namespace zm_tomb_ee_main_step_1
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x392795d, Offset: 0x300
 // Size: 0x7c
 function function_7747c56() {
@@ -46,7 +46,7 @@ function function_7747c56() {
 }
 
 // Namespace zm_tomb_ee_main_step_1
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x342996aa, Offset: 0x388
 // Size: 0x1a
 function function_cc3f3f6a(success) {

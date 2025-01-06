@@ -1,10 +1,10 @@
-#using scripts/mp/_vehicle;
-#using scripts/mp/_util;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_util;
+#using scripts/mp/_vehicle;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace qrdrone;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace qrdrone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a198956, Offset: 0x3d0
 // Size: 0x284
 function __init__() {
@@ -36,7 +36,7 @@ function __init__() {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfb2023b2, Offset: 0x660
 // Size: 0x84
 function spawned(localclientnum) {
@@ -48,7 +48,7 @@ function spawned(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc64af6f3, Offset: 0x6f0
 // Size: 0x7c
 function statechange(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +58,7 @@ function statechange(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace qrdrone
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc5f2ab6c, Offset: 0x778
 // Size: 0x124
 function restartfx(localclientnum, blinkstage) {
@@ -85,7 +85,7 @@ function restartfx(localclientnum, blinkstage) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x26e2652, Offset: 0x8a8
 // Size: 0x7c
 function watchrestartfx(localclientnum) {
@@ -95,7 +95,7 @@ function watchrestartfx(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x25424073, Offset: 0x930
 // Size: 0x104
 function spawn_solid_fx(localclientnum) {
@@ -110,7 +110,7 @@ function spawn_solid_fx(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc2b54e8f, Offset: 0xa40
 // Size: 0x2c
 function spawn_blinking_fx(localclientnum) {
@@ -118,7 +118,7 @@ function spawn_blinking_fx(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7e25afa6, Offset: 0xa78
 // Size: 0x12c
 function blink_fx_and_sound(localclientnum, soundalias) {
@@ -142,7 +142,7 @@ function blink_fx_and_sound(localclientnum, soundalias) {
 }
 
 // Namespace qrdrone
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x101c5e13, Offset: 0xbb0
 // Size: 0x64
 function cleanupfx(localclientnum, handle) {
@@ -151,7 +151,7 @@ function cleanupfx(localclientnum, handle) {
 }
 
 // Namespace qrdrone
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x85c5bc61, Offset: 0xc20
 // Size: 0x52
 function start_blink(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -162,7 +162,7 @@ function start_blink(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace qrdrone
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7ad3dbf6, Offset: 0xc80
 // Size: 0x58
 function final_blink(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -173,7 +173,7 @@ function final_blink(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace qrdrone
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb067c9c9, Offset: 0xce0
 // Size: 0x9c
 function out_of_range_update(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -184,7 +184,7 @@ function out_of_range_update(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace qrdrone
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe7160056, Offset: 0xd88
 // Size: 0x144
 function loop_local_sound(localclientnum, alias, interval, fx) {
@@ -209,7 +209,7 @@ function loop_local_sound(localclientnum, alias, interval, fx) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa3b6eeb2, Offset: 0xed8
 // Size: 0xec
 function check_for_player_switch_or_time_jump(localclientnum) {
@@ -228,7 +228,7 @@ function check_for_player_switch_or_time_jump(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe6e462c8, Offset: 0xfd0
 // Size: 0x144
 function blink_light(localclientnum) {
@@ -252,13 +252,13 @@ function blink_light(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf0feac6e, Offset: 0x1120
 // Size: 0x108
 function collisionhandler(localclientnum) {
     self endon(#"entityshutdown");
     while (true) {
-        hip, hitn, hit_intensity = self waittill(#"veh_collision");
+        self waittill(#"veh_collision", hip, hitn, hit_intensity);
         driver_local_client = self getlocalclientdriver();
         if (isdefined(driver_local_client)) {
             player = getlocalplayer(driver_local_client);
@@ -274,7 +274,7 @@ function collisionhandler(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4ad9bfe8, Offset: 0x1230
 // Size: 0x98
 function enginestutterhandler(localclientnum) {
@@ -291,7 +291,7 @@ function enginestutterhandler(localclientnum) {
 }
 
 // Namespace qrdrone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b7a9d62, Offset: 0x12d0
 // Size: 0x126
 function getminimumflyheight() {
@@ -316,7 +316,7 @@ function getminimumflyheight() {
 }
 
 // Namespace qrdrone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e6ce98, Offset: 0x1400
 // Size: 0x2d4
 function qrdrone_watch_distance() {
@@ -357,7 +357,7 @@ function qrdrone_watch_distance() {
 }
 
 // Namespace qrdrone
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5856028a, Offset: 0x16e0
 // Size: 0x56
 function qrdrone_in_range() {
@@ -370,7 +370,7 @@ function qrdrone_in_range() {
 }
 
 // Namespace qrdrone
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb2debde, Offset: 0x1740
 // Size: 0xf8
 function qrdrone_staticfade(staticalpha, sndent, sid) {
@@ -390,7 +390,7 @@ function qrdrone_staticfade(staticalpha, sndent, sid) {
 }
 
 // Namespace qrdrone
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x37caa1c4, Offset: 0x1840
 // Size: 0x4c
 function qrdrone_staticstopondeath(sndent) {

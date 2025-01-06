@@ -1,43 +1,43 @@
-#using scripts/cp/_load;
-#using scripts/cp/_collectibles;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/cp_mi_sing_vengeance_patch;
-#using scripts/cp/cp_mi_sing_vengeance_safehouse;
-#using scripts/cp/cp_mi_sing_vengeance_market;
-#using scripts/cp/cp_mi_sing_vengeance_garage;
-#using scripts/cp/cp_mi_sing_vengeance_dogleg_2;
-#using scripts/cp/cp_mi_sing_vengeance_temple;
-#using scripts/cp/cp_mi_sing_vengeance_quadtank_alley;
-#using scripts/cp/cp_mi_sing_vengeance_dogleg_1;
-#using scripts/cp/cp_mi_sing_vengeance_killing_streets;
-#using scripts/cp/cp_mi_sing_vengeance_intro;
-#using scripts/cp/cp_mi_sing_vengeance_accolades;
-#using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/cp/cp_mi_sing_vengeance_sound;
-#using scripts/cp/cp_mi_sing_vengeance_fx;
-#using scripts/shared/stealth;
-#using scripts/shared/vehicles/_wasp;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/vehicles/_hunter;
-#using scripts/cp/_objectives;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/cp/_skipto;
-#using scripts/cp/_util;
-#using scripts/cp/_mobile_armory;
-#using scripts/cp/_ammo_cache;
-#using scripts/cp/_spawn_manager;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/cp/_oed;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_load;
+#using scripts/cp/_mobile_armory;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_vengeance_accolades;
+#using scripts/cp/cp_mi_sing_vengeance_dogleg_1;
+#using scripts/cp/cp_mi_sing_vengeance_dogleg_2;
+#using scripts/cp/cp_mi_sing_vengeance_fx;
+#using scripts/cp/cp_mi_sing_vengeance_garage;
+#using scripts/cp/cp_mi_sing_vengeance_intro;
+#using scripts/cp/cp_mi_sing_vengeance_killing_streets;
+#using scripts/cp/cp_mi_sing_vengeance_market;
+#using scripts/cp/cp_mi_sing_vengeance_patch;
+#using scripts/cp/cp_mi_sing_vengeance_quadtank_alley;
+#using scripts/cp/cp_mi_sing_vengeance_safehouse;
+#using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/cp/cp_mi_sing_vengeance_temple;
+#using scripts/cp/cp_mi_sing_vengeance_util;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_hunter;
+#using scripts/shared/vehicles/_quadtank;
+#using scripts/shared/vehicles/_wasp;
 
 #namespace cp_mi_sing_vengeance;
 
@@ -51,7 +51,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8be100d, Offset: 0x14e8
 // Size: 0x4bc
 function main() {
@@ -100,7 +100,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x245caa5e, Offset: 0x19b0
 // Size: 0xaa
 function precache() {
@@ -113,7 +113,7 @@ function precache() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xea4d93bc, Offset: 0x1a68
 // Size: 0x2a4
 function init_clientfields() {
@@ -134,7 +134,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69e89b61, Offset: 0x1d18
 // Size: 0xbc4
 function init_flags() {
@@ -235,7 +235,7 @@ function init_flags() {
 }
 
 // Namespace cp_mi_sing_vengeance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41f345b7, Offset: 0x28e8
 // Size: 0x538
 function function_673254cc() {

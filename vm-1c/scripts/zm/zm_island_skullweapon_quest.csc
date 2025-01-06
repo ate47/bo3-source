@@ -1,26 +1,26 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/craftables/_zm_craftables;
 
 #using_animtree("generic");
 
 #namespace zm_island_skullquest;
 
 // Namespace zm_island_skullquest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd237f9ca, Offset: 0x680
 // Size: 0x31c
 function init() {
@@ -38,7 +38,7 @@ function init() {
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2389690d, Offset: 0x9a8
 // Size: 0x6c
 function keeper_spawn_portals(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -47,7 +47,7 @@ function keeper_spawn_portals(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_skullquest
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb7e64cba, Offset: 0xa20
 // Size: 0x252
 function function_46df8306(localclientnum, str_name, b_on) {
@@ -76,7 +76,7 @@ function function_46df8306(localclientnum, str_name, b_on) {
 }
 
 // Namespace zm_island_skullquest
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x79b67a64, Offset: 0xc80
 // Size: 0x2b2
 function function_f58977cd(localclientnum, str_name, b_on) {
@@ -109,7 +109,7 @@ function function_f58977cd(localclientnum, str_name, b_on) {
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x34401ff1, Offset: 0xf40
 // Size: 0x5c
 function skullquest_ritual_1_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -117,7 +117,7 @@ function skullquest_ritual_1_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7ea0a920, Offset: 0xfa8
 // Size: 0x5c
 function skullquest_ritual_2_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -125,7 +125,7 @@ function skullquest_ritual_2_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x56e08271, Offset: 0x1010
 // Size: 0x5c
 function skullquest_ritual_3_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -133,7 +133,7 @@ function skullquest_ritual_3_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf0e869e6, Offset: 0x1078
 // Size: 0x5c
 function skullquest_ritual_4_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -141,7 +141,7 @@ function skullquest_ritual_4_fx(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace zm_island_skullquest
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x481f07cf, Offset: 0x10e0
 // Size: 0x49c
 function function_4dcbb3a6(localclientnum, var_f2e38849, var_a1e9c985) {
@@ -194,7 +194,7 @@ function function_4dcbb3a6(localclientnum, var_f2e38849, var_a1e9c985) {
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa81ab803, Offset: 0x1588
 // Size: 0xbe
 function skullquest_finish_start_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -209,7 +209,7 @@ function skullquest_finish_start_fx(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4f20ffda, Offset: 0x1650
 // Size: 0xbe
 function skullquest_finish_trail_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -224,7 +224,7 @@ function skullquest_finish_trail_fx(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3870ce87, Offset: 0x1718
 // Size: 0xbe
 function skullquest_finish_end_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -239,7 +239,7 @@ function skullquest_finish_end_fx(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd0b5e4d4, Offset: 0x17e0
 // Size: 0xbe
 function skullquest_finish_done_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -254,7 +254,7 @@ function skullquest_finish_done_glow_fx(localclientnum, oldval, newval, bnewent,
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4b7dc518, Offset: 0x18a8
 // Size: 0x29c
 function keeper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -291,7 +291,7 @@ function keeper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace zm_island_skullquest
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa5f91755, Offset: 0x1b50
 // Size: 0x214
 function ritual_attacker_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -322,7 +322,7 @@ function ritual_attacker_fx(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace zm_island_skullquest
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x858ea291, Offset: 0x1d70
 // Size: 0x1a8
 function function_267f859f(localclientnum, fx_id, b_on, var_afcc5d76, str_tag) {

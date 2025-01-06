@@ -1,11 +1,11 @@
-#using scripts/zm/craftables/_zm_craft_shield;
-#using scripts/zm/_zm_weap_riotshield;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_equipment;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_riotshield;
+#using scripts/zm/craftables/_zm_craft_shield;
 
 #namespace tomb_shield;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace tomb_shield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8b2512db, Offset: 0x278
 // Size: 0x7c
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace tomb_shield
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaabe1c15, Offset: 0x300
 // Size: 0x34
 function __main__() {

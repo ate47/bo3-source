@@ -1,7 +1,7 @@
+#using scripts/codescripts/struct;
+#using scripts/mp/teams/_teamset;
 #using scripts/mp/teams/_teamset_allies;
 #using scripts/mp/teams/_teamset_axis;
-#using scripts/mp/teams/_teamset;
-#using scripts/codescripts/struct;
 
 #namespace _teamset_multiteam;
 

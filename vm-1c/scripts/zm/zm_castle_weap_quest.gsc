@@ -1,24 +1,24 @@
-#using scripts/shared/ai_shared;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_util;
-#using scripts/zm/zm_castle_vo;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai/zombie_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_castle_vo;
 
 #using_animtree("zm_castle");
 
@@ -33,7 +33,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xee6081cf, Offset: 0xa10
 // Size: 0x2e8
 function __init__() {
@@ -65,7 +65,7 @@ function __init__() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb51f8491, Offset: 0xd00
 // Size: 0x3c
 function __main__() {
@@ -73,7 +73,7 @@ function __main__() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x49e64fec, Offset: 0xd48
 // Size: 0x252
 function function_d5070a46() {
@@ -102,13 +102,13 @@ function function_d5070a46() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33c0043, Offset: 0xfa8
 // Size: 0x12c
 function soul_catcher_state_manager() {
     wait 1;
     level clientfield::set(self.script_parameters, 7);
-    e_player = self waittill(#"first_zombie_killed_in_zone");
+    self waittill(#"first_zombie_killed_in_zone", e_player);
     level clientfield::set(self.script_parameters, 1);
     anim_length = getanimlength(zm_castle%rtrg_o_zm_dlc1_dragonhead_intro);
     e_player thread zm_castle_vo::function_ad27f488(anim_length);
@@ -121,7 +121,7 @@ function soul_catcher_state_manager() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x76b43303, Offset: 0x10e0
 // Size: 0x1c
 function function_162da110() {
@@ -129,7 +129,7 @@ function function_162da110() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x6d14a0eb, Offset: 0x1108
 // Size: 0x1b4
 function function_b57a0484(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime) {
@@ -154,7 +154,7 @@ function function_b57a0484(einflictor, attacker, idamage, smeansofdeath, sweapon
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x53a5424, Offset: 0x12c8
 // Size: 0xaa
 function function_1fba78c8() {
@@ -172,7 +172,7 @@ function function_1fba78c8() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xa8f1feb1, Offset: 0x1380
 // Size: 0x3f0
 function function_d712edd5(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -248,7 +248,7 @@ function function_5955ab6c() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb5c066b4, Offset: 0x1858
 // Size: 0x4c
 function function_edf4b761() {
@@ -259,7 +259,7 @@ function function_edf4b761() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x510b4979, Offset: 0x18b0
 // Size: 0x104
 function which_eating_anim() {
@@ -276,7 +276,7 @@ function which_eating_anim() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c15307a, Offset: 0x19c0
 // Size: 0x104
 function soul_catcher_check() {
@@ -303,7 +303,7 @@ function soul_catcher_check() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaaa7a358, Offset: 0x1ad0
 // Size: 0xbc
 function function_e775e6a4(var_63530679) {
@@ -328,7 +328,7 @@ function function_7b154c37() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1ba8
 // Size: 0x4
 function function_54af3e05() {
@@ -336,7 +336,7 @@ function function_54af3e05() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1bb8
 // Size: 0x4
 function function_b7dd8bb3() {
@@ -344,7 +344,7 @@ function function_b7dd8bb3() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7450503b, Offset: 0x1bc8
 // Size: 0x294
 function function_a01a53de() {
@@ -375,7 +375,7 @@ function function_a01a53de() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7c7b2cd, Offset: 0x1e68
 // Size: 0x160
 function function_9376cff9() {
@@ -401,7 +401,7 @@ function function_9376cff9() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c46ce70, Offset: 0x1fd0
 // Size: 0xf6
 function function_e464049a() {
@@ -412,7 +412,7 @@ function function_e464049a() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe54d7704, Offset: 0x20d0
 // Size: 0xe0
 function function_fb853e2c() {
@@ -431,7 +431,7 @@ function function_fb853e2c() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20b82f6f, Offset: 0x21b8
 // Size: 0xc0
 function function_71d4f620() {
@@ -442,14 +442,14 @@ function function_71d4f620() {
     var_890bca07 = getweapon("elemental_bow");
     var_d95a0cf3 = -1;
     while (var_d95a0cf3 != self.characterindex) {
-        var_d95a0cf3 = level waittill(#"bleed_out");
+        level waittill(#"bleed_out", var_d95a0cf3);
     }
     self.var_e8e28d9e = var_890bca07.maxammo;
     self.var_8f97fa0b = var_890bca07.clipsize;
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc80fa01c, Offset: 0x2280
 // Size: 0x1c
 function function_c9cdf051() {
@@ -457,7 +457,7 @@ function function_c9cdf051() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d3f38e3, Offset: 0x22a8
 // Size: 0xfc
 function function_bb60c970() {
@@ -475,7 +475,7 @@ function function_bb60c970() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x90a21b12, Offset: 0x23b0
 // Size: 0x80
 function function_65fb1c47(e_player) {
@@ -488,7 +488,7 @@ function function_65fb1c47(e_player) {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x86251b11, Offset: 0x2438
 // Size: 0x2b8
 function function_26e22a99() {
@@ -496,7 +496,7 @@ function function_26e22a99() {
     level endon(#"hash_1deaef05");
     self.stub thread zm_unitrigger::run_visibility_function_for_all_triggers();
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         if (e_who function_e464049a() || e_who function_9dfa159b()) {
             continue;
         }
@@ -527,7 +527,7 @@ function function_26e22a99() {
 }
 
 // Namespace zm_castle_weap_quest
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd8753211, Offset: 0x26f8
 // Size: 0xc6
 function function_9dfa159b() {

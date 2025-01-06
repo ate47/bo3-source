@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/bonuszm/_bonuszm;
 #using scripts/cp/bonuszm/_bonuszm_spawner_shared;
-#using scripts/codescripts/struct;
 
 #namespace bonuszmdata;
 
@@ -19,7 +19,7 @@ function autoexec function_dc036a7c() {
 }
 
 // Namespace bonuszmdata
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x494bd8b7, Offset: 0x680
 // Size: 0xe34
 function function_da5f2c0d(mapname, var_b0614bba) {
@@ -132,7 +132,7 @@ function function_da5f2c0d(mapname, var_b0614bba) {
 }
 
 // Namespace bonuszmdata
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2103e6, Offset: 0x14c0
 // Size: 0x1d6
 function function_9a6a6726() {
@@ -154,7 +154,7 @@ function function_9a6a6726() {
 }
 
 // Namespace bonuszmdata
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xca6321f4, Offset: 0x16a0
 // Size: 0xf86
 function function_97b4bacb(zombify, var_a621e856) {
@@ -419,7 +419,7 @@ function function_97b4bacb(zombify, var_a621e856) {
 }
 
 // Namespace bonuszmdata
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x632909f, Offset: 0x2630
 // Size: 0x20
 function function_15c7079(index) {
@@ -427,7 +427,7 @@ function function_15c7079(index) {
 }
 
 // Namespace bonuszmdata
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x44553725, Offset: 0x2658
 // Size: 0x194
 function private function_4542e087() {
@@ -443,7 +443,7 @@ function private function_4542e087() {
 }
 
 // Namespace bonuszmdata
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0xee8dc0e0, Offset: 0x27f8
 // Size: 0xd2
 function private function_e9d4a03e(walkpercent, runpercent, sprintpercent) {
@@ -458,7 +458,7 @@ function private function_e9d4a03e(walkpercent, runpercent, sprintpercent) {
 }
 
 // Namespace bonuszmdata
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x43fb351e, Offset: 0x28d8
 // Size: 0x7a
 function private function_fd2d1f37(levelonehealth, leveltwohealth, levelthreehealth) {
@@ -471,7 +471,7 @@ function private function_fd2d1f37(levelonehealth, leveltwohealth, levelthreehea
 }
 
 // Namespace bonuszmdata
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6139457d, Offset: 0x2960
 // Size: 0x52
 function private function_27fb20e1(chance) {

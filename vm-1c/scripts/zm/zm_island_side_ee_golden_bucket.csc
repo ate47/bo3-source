@@ -1,14 +1,14 @@
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
 
 #namespace zm_island_side_ee_golden_bucket;
 
 // Namespace zm_island_side_ee_golden_bucket
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1dfd866e, Offset: 0x1c8
 // Size: 0x94
 function init() {
@@ -17,7 +17,7 @@ function init() {
 }
 
 // Namespace zm_island_side_ee_golden_bucket
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xacd85009, Offset: 0x268
 // Size: 0x102
 function reveal_golden_bucket_planting_location(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -30,7 +30,7 @@ function reveal_golden_bucket_planting_location(localclientnum, oldval, newval, 
 }
 
 // Namespace zm_island_side_ee_golden_bucket
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf6678922, Offset: 0x378
 // Size: 0xc4
 function golden_bucket_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

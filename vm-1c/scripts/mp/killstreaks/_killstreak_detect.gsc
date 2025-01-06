@@ -1,10 +1,10 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/killstreaks/_killstreak_hacking;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/weapons/_proximity_grenade;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace killstreak_detect;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace killstreak_detect
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7913edc6, Offset: 0x228
 // Size: 0x124
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace killstreak_detect
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4880e7cb, Offset: 0x358
 // Size: 0x6c
 function killstreaktargetset(killstreakentity, offset) {

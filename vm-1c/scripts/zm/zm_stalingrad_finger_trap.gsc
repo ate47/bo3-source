@@ -1,22 +1,22 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/zm_stalingrad_vo;
-#using scripts/zm/zm_stalingrad_util;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_score;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/scene_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_stalingrad_util;
+#using scripts/zm/zm_stalingrad_vo;
 
 #namespace zm_stalingrad_finger_trap;
 
 // Namespace zm_stalingrad_finger_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd62c8d92, Offset: 0x3c0
 // Size: 0x64
 function main() {
@@ -27,7 +27,7 @@ function main() {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a7b180b, Offset: 0x430
 // Size: 0xb4
 function function_7715178d() {
@@ -39,7 +39,7 @@ function function_7715178d() {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x232797b3, Offset: 0x4f0
 // Size: 0x124
 function function_2d729696(a_ents) {
@@ -55,7 +55,7 @@ function function_2d729696(a_ents) {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7d967a72, Offset: 0x620
 // Size: 0x74
 function function_eeb24547() {
@@ -66,7 +66,7 @@ function function_eeb24547() {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf6d0e464, Offset: 0x6a0
 // Size: 0x150
 function function_512d92f4(e_player) {
@@ -89,7 +89,7 @@ function function_512d92f4(e_player) {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1df054e, Offset: 0x7f8
 // Size: 0x1c0
 function function_891da2d8() {
@@ -97,7 +97,7 @@ function function_891da2d8() {
         if (level flag::get("finger_trap_cooldown")) {
             level flag::wait_till_clear("finger_trap_cooldown");
         }
-        e_who = self waittill(#"trigger_activated");
+        self waittill(#"trigger_activated", e_who);
         if (!level flag::get("finger_trap_on") && !level flag::get("finger_trap_cooldown")) {
             if (!e_who zm_score::can_player_purchase(1500)) {
                 zm_utility::play_sound_at_pos("no_purchase", self.origin);
@@ -116,7 +116,7 @@ function function_891da2d8() {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe368b4f4, Offset: 0x9c0
 // Size: 0x13c
 function finger_trap_activate(var_3778532a) {
@@ -135,7 +135,7 @@ function finger_trap_activate(var_3778532a) {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x749c5d48, Offset: 0xb08
 // Size: 0x6c
 function function_88a65f39() {
@@ -146,13 +146,13 @@ function function_88a65f39() {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x93ea2543, Offset: 0xb80
 // Size: 0x1b0
 function function_f5af37c6(var_3778532a) {
     level endon(#"finger_trap_cooldown");
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         if (!(isdefined(e_who.var_bd3a4420) && e_who.var_bd3a4420)) {
             if (e_who.health <= 20000) {
                 if (!isplayer(e_who) && isdefined(var_3778532a)) {
@@ -175,7 +175,7 @@ function function_f5af37c6(var_3778532a) {
 }
 
 // Namespace zm_stalingrad_finger_trap
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x19714132, Offset: 0xd38
 // Size: 0x22
 function function_fe885d6b() {
@@ -187,7 +187,7 @@ function function_fe885d6b() {
 /#
 
     // Namespace zm_stalingrad_finger_trap
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4f86fd8a, Offset: 0xd68
     // Size: 0x94
     function function_ddb9991b() {
@@ -200,7 +200,7 @@ function function_fe885d6b() {
     }
 
     // Namespace zm_stalingrad_finger_trap
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa66c5527, Offset: 0xe08
     // Size: 0x52
     function function_fc99caf5() {

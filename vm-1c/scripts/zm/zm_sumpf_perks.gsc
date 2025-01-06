@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_sumpf_perks;
 
 // Namespace zm_sumpf_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7203552e, Offset: 0x408
 // Size: 0x432
 function function_980b3cd5() {
@@ -55,7 +55,7 @@ function function_980b3cd5() {
 }
 
 // Namespace zm_sumpf_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x458911a6, Offset: 0x848
 // Size: 0xe8
 function function_bede3562(e_machine) {
@@ -71,7 +71,7 @@ function function_bede3562(e_machine) {
 }
 
 // Namespace zm_sumpf_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6625fd84, Offset: 0x938
 // Size: 0x15e
 function function_1b58b796(str_trigger) {
@@ -97,7 +97,7 @@ function function_1b58b796(str_trigger) {
 }
 
 // Namespace zm_sumpf_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc574001, Offset: 0xaa0
 // Size: 0x24
 function function_17db950e() {
@@ -106,21 +106,21 @@ function function_17db950e() {
 }
 
 // Namespace zm_sumpf_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a82878b, Offset: 0xad0
 // Size: 0x110
 function function_25413096() {
-    var_b5609476 = self.script_sound;
+    perksacola = self.script_sound;
     if (!self.var_6ecf729b) {
         playsoundatposition("evt_electrical_surge", self.origin);
         if (!isdefined(self.var_7054d602)) {
             self.var_7054d602 = 0;
         }
-        if (isdefined(var_b5609476)) {
+        if (isdefined(perksacola)) {
             if (self.var_7054d602 == 0 && level.var_5738e0e5 == 0) {
                 self.var_7054d602 = 1;
-                self playsoundontag(var_b5609476, "tag_origin", "sound_done");
-                if (issubstr(var_b5609476, "sting")) {
+                self playsoundontag(perksacola, "tag_origin", "sound_done");
+                if (issubstr(perksacola, "sting")) {
                     wait 10;
                 } else if (isdefined(self.var_e1405ef7)) {
                     wait 60;
@@ -144,7 +144,7 @@ function function_6ce17236() {
 }
 
 // Namespace zm_sumpf_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa563579, Offset: 0xc48
 // Size: 0x178
 function function_cd5bc54f(start_location) {
@@ -172,7 +172,7 @@ function function_cd5bc54f(start_location) {
 }
 
 // Namespace zm_sumpf_perks
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfccb99c8, Offset: 0xdc8
 // Size: 0x18c
 function function_e91f62f2(machine, origin, entity) {
@@ -209,7 +209,7 @@ function function_e91f62f2(machine, origin, entity) {
 }
 
 // Namespace zm_sumpf_perks
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8ffdec1f, Offset: 0xf60
 // Size: 0x1b6
 function function_d3ab4c59(machine, origin) {
@@ -241,7 +241,7 @@ function function_d3ab4c59(machine, origin) {
 }
 
 // Namespace zm_sumpf_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfb4c0729, Offset: 0x1120
 // Size: 0xa34
 function function_5c025696(index) {

@@ -1,11 +1,11 @@
-#using scripts/shared/abilities/_ability_power;
 #using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
 #using scripts/shared/util_shared;
 
 #namespace ability_util;
 
 // Namespace ability_util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xed0af001, Offset: 0x140
 // Size: 0x48
 function gadget_is_type(slot, type) {
@@ -16,7 +16,7 @@ function gadget_is_type(slot, type) {
 }
 
 // Namespace ability_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd401017c, Offset: 0x190
 // Size: 0x76
 function gadget_slot_for_type(type) {
@@ -31,7 +31,7 @@ function gadget_slot_for_type(type) {
 }
 
 // Namespace ability_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd45622ec, Offset: 0x210
 // Size: 0x1a
 function function_7bf047db() {
@@ -39,7 +39,7 @@ function function_7bf047db() {
 }
 
 // Namespace ability_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1ee0ab7, Offset: 0x238
 // Size: 0x1a
 function gadget_combat_efficiency_enabled() {
@@ -50,7 +50,7 @@ function gadget_combat_efficiency_enabled() {
 }
 
 // Namespace ability_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3faf6fd, Offset: 0x260
 // Size: 0x94
 function gadget_combat_efficiency_power_drain(score) {
@@ -109,7 +109,7 @@ function gadget_power_reset(gadgetweapon) {
 }
 
 // Namespace ability_util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf48973f9, Offset: 0x4c8
 // Size: 0x33c
 function gadget_reset(gadgetweapon, changedclass, roundbased, firstround) {
@@ -137,7 +137,7 @@ function gadget_reset(gadgetweapon, changedclass, roundbased, firstround) {
 }
 
 // Namespace ability_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda8321d2, Offset: 0x810
 // Size: 0x1a
 function gadget_power_armor_on() {
@@ -145,7 +145,7 @@ function gadget_power_armor_on() {
 }
 
 // Namespace ability_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9807cfd6, Offset: 0x838
 // Size: 0x6e
 function gadget_is_active(gadgettype) {

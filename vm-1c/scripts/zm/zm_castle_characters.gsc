@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_castle_characters;
 
 // Namespace zm_castle_characters
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x748
 // Size: 0x4
 function precachecustomcharacters() {
@@ -16,7 +16,7 @@ function precachecustomcharacters() {
 }
 
 // Namespace zm_castle_characters
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5a5dd539, Offset: 0x758
 // Size: 0x24
 function initcharacterstartindex() {
@@ -37,7 +37,7 @@ function selectcharacterindextouse() {
 }
 
 // Namespace zm_castle_characters
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6ebaf324, Offset: 0x7d0
 // Size: 0x214
 function assign_lowest_unused_character_index() {
@@ -79,7 +79,7 @@ function assign_lowest_unused_character_index() {
 }
 
 // Namespace zm_castle_characters
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x535ad2a0, Offset: 0x9f0
 // Size: 0x2a4
 function givecustomcharacters() {
@@ -122,7 +122,7 @@ function givecustomcharacters() {
 }
 
 // Namespace zm_castle_characters
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd002341d, Offset: 0xca0
 // Size: 0x54
 function set_exert_id() {

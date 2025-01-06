@@ -1,12 +1,12 @@
-#using scripts/shared/audio_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace squad_control;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace squad_control
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4032903, Offset: 0x658
 // Size: 0x39c
 function __init__() {
@@ -49,7 +49,7 @@ function __init__() {
 }
 
 // Namespace squad_control
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4eb77184, Offset: 0xa00
 // Size: 0x27c
 function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -85,7 +85,7 @@ function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace squad_control
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2c2f2c53, Offset: 0xc88
 // Size: 0xcc
 function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -96,7 +96,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace squad_control
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc0dab579, Offset: 0xd60
 // Size: 0xf4
 function function_2636ef23(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -115,7 +115,7 @@ function function_2636ef23(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace squad_control
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb5a6f6e3, Offset: 0xe60
 // Size: 0xac
 function function_cffc9622(localclientnum) {
@@ -125,7 +125,7 @@ function function_cffc9622(localclientnum) {
 }
 
 // Namespace squad_control
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbcc6f4f8, Offset: 0xf18
 // Size: 0x64
 function function_50bf7fe9(localclientnum) {

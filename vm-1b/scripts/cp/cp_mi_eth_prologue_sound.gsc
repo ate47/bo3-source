@@ -1,7 +1,7 @@
-#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
 #using scripts/shared/music_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_eth_prologue_sound;
 
@@ -35,15 +35,15 @@ function function_b3c510e0() {
 // Checksum 0x4fd9fde, Offset: 0x3e8
 // Size: 0x9a
 function function_96d9cac5() {
-    var_a66f2065 = getent("amb_offices", "targetname");
-    if (isdefined(var_a66f2065)) {
-        var_a66f2065 playloopsound("amb_offices");
+    sound_org = getent("amb_offices", "targetname");
+    if (isdefined(sound_org)) {
+        sound_org playloopsound("amb_offices");
     }
     level waittill(#"hash_400d768d");
     level thread namespace_21b2c1f2::function_973b77f9();
-    if (isdefined(var_a66f2065)) {
-        var_a66f2065 stoploopsound();
-        playsoundatposition("amb_power_down", var_a66f2065.origin);
+    if (isdefined(sound_org)) {
+        sound_org stoploopsound();
+        playsoundatposition("amb_power_down", sound_org.origin);
     }
 }
 
@@ -77,7 +77,7 @@ function function_55f749fc() {
 function function_a4815b6c() {
     level endon(#"hash_8e1e9ee");
     level endon(#"game_ended");
-    level waittill(#"hash_62797210");
+    level waittill(#"siren");
     while (true) {
         wait 2;
         playsoundatposition("amb_troop_alarm", (3529, 427, -334));

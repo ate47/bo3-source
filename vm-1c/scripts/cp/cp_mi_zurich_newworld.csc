@@ -1,26 +1,26 @@
-#using scripts/cp/cp_mi_zurich_newworld_patch_c;
-#using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld_sound;
-#using scripts/cp/cp_mi_zurich_newworld_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/shared/audio_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld_fx;
+#using scripts/cp/cp_mi_zurich_newworld_patch_c;
+#using scripts/cp/cp_mi_zurich_newworld_sound;
+#using scripts/cp/cp_mi_zurich_newworld_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_zurich_newworld;
 
 // Namespace cp_mi_zurich_newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1d003013, Offset: 0xd68
 // Size: 0x94
 function main() {
-    util::function_57b966c8(&function_71f88fc, 10);
+    util::function_57b966c8(&force_streamer, 10);
     init_clientfields();
     cp_mi_zurich_newworld_fx::main();
     cp_mi_zurich_newworld_sound::main();
@@ -30,7 +30,7 @@ function main() {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdf4634b7, Offset: 0xe08
 // Size: 0x8dc
 function init_clientfields() {
@@ -69,10 +69,10 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1ece4ad5, Offset: 0x16f0
 // Size: 0x2be
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         break;
@@ -117,7 +117,7 @@ function function_71f88fc(n_zone) {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb31b7d20, Offset: 0x19b8
 // Size: 0x94
 function factory_exterior_vents(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -129,7 +129,7 @@ function factory_exterior_vents(local_client_num, oldval, newval, bnewent, binit
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x631cf453, Offset: 0x1a58
 // Size: 0xa4
 function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -139,7 +139,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x557bb92a, Offset: 0x1b08
 // Size: 0xcc
 function weakpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -153,7 +153,7 @@ function weakpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8fbb0d25, Offset: 0x1be0
 // Size: 0x64
 function name_diaz_wasp(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -163,7 +163,7 @@ function name_diaz_wasp(local_client_num, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfa0c5d1e, Offset: 0x1c50
 // Size: 0x84
 function chase_pedestrian_blockers(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -175,7 +175,7 @@ function chase_pedestrian_blockers(local_client_num, oldval, newval, bnewent, bi
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc6d7ec7b, Offset: 0x1ce0
 // Size: 0x272
 function function_1583bd50(localclientnum, var_f4d36bbd) {
@@ -206,7 +206,7 @@ function function_1583bd50(localclientnum, var_f4d36bbd) {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe6de1e94, Offset: 0x1f60
 // Size: 0x94
 function chase_train_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -218,7 +218,7 @@ function chase_train_rumble(localclientnum, oldval, newval, bnewent, binitialsna
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa4193bb8, Offset: 0x2000
 // Size: 0xcc
 function spinning_vent_fxanim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -232,7 +232,7 @@ function spinning_vent_fxanim(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x64854150, Offset: 0x20d8
 // Size: 0xcc
 function crane_fxanim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -246,7 +246,7 @@ function crane_fxanim(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbb8fc06d, Offset: 0x21b0
 // Size: 0x3c
 function ability_wheel_tutorial(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -254,7 +254,7 @@ function ability_wheel_tutorial(localclientnum, oldval, newval, bnewent, binitia
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xae6b064a, Offset: 0x21f8
 // Size: 0xac
 function underground_subway_debris(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -270,7 +270,7 @@ function underground_subway_debris(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xae206d12, Offset: 0x22b0
 // Size: 0xe4
 function inbound_igc_glass(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -289,7 +289,7 @@ function inbound_igc_glass(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc25c284b, Offset: 0x23a0
 // Size: 0x16a
 function train_robot_swing_glass_left(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -309,7 +309,7 @@ function train_robot_swing_glass_left(localclientnum, oldval, newval, bnewent, b
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7d382f42, Offset: 0x2518
 // Size: 0x16a
 function train_robot_swing_glass_right(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -329,7 +329,7 @@ function train_robot_swing_glass_right(localclientnum, oldval, newval, bnewent, 
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe413309, Offset: 0x2690
 // Size: 0x8c
 function function_54711778(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -340,7 +340,7 @@ function function_54711778(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa1fa10ca, Offset: 0x2728
 // Size: 0x8c
 function function_92f89bed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -351,7 +351,7 @@ function function_92f89bed(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfbbd417a, Offset: 0x27c0
 // Size: 0xe4
 function train_dropdown_glass(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -370,7 +370,7 @@ function train_dropdown_glass(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6c447fd1, Offset: 0x28b0
 // Size: 0x10c
 function train_lockdown_glass_left(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -390,7 +390,7 @@ function train_lockdown_glass_left(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfa08f401, Offset: 0x29c8
 // Size: 0xf2
 function train_lockdown_glass_right(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -408,7 +408,7 @@ function train_lockdown_glass_right(localclientnum, oldval, newval, bnewent, bin
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x951ada5a, Offset: 0x2ac8
 // Size: 0x142
 function train_lockdown_shutters_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -424,7 +424,7 @@ function train_lockdown_shutters_1(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x89aa7ec2, Offset: 0x2c18
 // Size: 0x8c
 function train_lockdown_shutters_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -435,7 +435,7 @@ function train_lockdown_shutters_2(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4c1bbe3e, Offset: 0x2cb0
 // Size: 0x8c
 function train_lockdown_shutters_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -446,7 +446,7 @@ function train_lockdown_shutters_3(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc4a2307d, Offset: 0x2d48
 // Size: 0x8c
 function train_lockdown_shutters_4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -457,7 +457,7 @@ function train_lockdown_shutters_4(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x117b8102, Offset: 0x2de0
 // Size: 0x8c
 function train_lockdown_shutters_5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -468,7 +468,7 @@ function train_lockdown_shutters_5(localclientnum, oldval, newval, bnewent, bini
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8559655e, Offset: 0x2e78
 // Size: 0x96
 function function_b758d8f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -482,7 +482,7 @@ function function_b758d8f(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf67fdfc, Offset: 0x2f18
 // Size: 0x1a4
 function function_965a6439(localclientnum) {
@@ -508,7 +508,7 @@ function function_965a6439(localclientnum) {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbb857e31, Offset: 0x30c8
 // Size: 0x3e4
 function function_a860cb86(localclientnum) {
@@ -561,7 +561,7 @@ function function_a860cb86(localclientnum) {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb0927fe1, Offset: 0x34b8
 // Size: 0xbc
 function function_a251bd0b(localclientnum, var_9881fa10) {
@@ -576,7 +576,7 @@ function function_a251bd0b(localclientnum, var_9881fa10) {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9adca36c, Offset: 0x3580
 // Size: 0x3ba
 function train_brake_flaps(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -621,7 +621,7 @@ function train_brake_flaps(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3475560b, Offset: 0x3948
 // Size: 0xf4
 function function_20e68acf(localclientnum) {
@@ -640,7 +640,7 @@ function function_20e68acf(localclientnum) {
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6bebaa4c, Offset: 0x3a48
 // Size: 0x274
 function function_2920b522(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -663,7 +663,7 @@ function function_2920b522(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_zurich_newworld
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x869ace88, Offset: 0x3cc8
 // Size: 0x10c
 function function_9eeb165f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

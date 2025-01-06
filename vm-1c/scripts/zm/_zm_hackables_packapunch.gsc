@@ -1,13 +1,13 @@
-#using scripts/zm/_zm_equip_hacker;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_equip_hacker;
 
 #namespace namespace_b03b0164;
 
 // Namespace namespace_b03b0164
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a95005a, Offset: 0x150
 // Size: 0x17c
 function function_7add387d() {
@@ -27,7 +27,7 @@ function function_7add387d() {
 }
 
 // Namespace namespace_b03b0164
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ea69ead, Offset: 0x2d8
 // Size: 0x88
 function function_13393d82() {
@@ -44,7 +44,7 @@ function function_13393d82() {
 }
 
 // Namespace namespace_b03b0164
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x73d40910, Offset: 0x368
 // Size: 0x46
 function function_e9bec753(hacker) {

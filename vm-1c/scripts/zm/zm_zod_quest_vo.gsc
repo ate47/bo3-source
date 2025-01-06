@@ -1,16 +1,16 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm;
-#using scripts/zm/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_zod_quest_vo;
 
 // Namespace zm_zod_quest_vo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1b0
 // Size: 0x4
 function function_ba281e3f() {
@@ -58,7 +58,7 @@ function function_16d66993(convo) {
 }
 
 // Namespace zm_zod_quest_vo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfb29d215, Offset: 0x3e8
 // Size: 0x3c
 function function_b80e4987() {
@@ -86,7 +86,7 @@ function function_b1c2ac2a(convo) {
         var_bede2506 = undefined;
         foreach (player in players) {
             if (isdefined(player)) {
-                switch (player.var_f7af1630) {
+                switch (player.character_name) {
                 case "Arlington":
                     var_4cd6b5cb = player;
                     break;

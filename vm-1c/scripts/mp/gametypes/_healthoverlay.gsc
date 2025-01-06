@@ -1,8 +1,8 @@
-#using scripts/mp/gametypes/_globallogic_player;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace healthoverlay;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa5bcc2ee, Offset: 0x1c0
 // Size: 0xdc
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x753d1a33, Offset: 0x2a8
 // Size: 0x50
 function init() {
@@ -40,7 +40,7 @@ function init() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x23849c3, Offset: 0x300
 // Size: 0x12
 function end_health_regen() {
@@ -48,7 +48,7 @@ function end_health_regen() {
 }
 
 // Namespace healthoverlay
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe47586d5, Offset: 0x320
 // Size: 0x554
 function player_health_regen() {
@@ -157,7 +157,7 @@ function player_health_regen() {
 }
 
 // Namespace healthoverlay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcca4f381, Offset: 0x880
 // Size: 0xee
 function decay_player_damages(decay) {
@@ -176,7 +176,7 @@ function decay_player_damages(decay) {
 }
 
 // Namespace healthoverlay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf1256a44, Offset: 0x978
 // Size: 0xe2
 function player_breathing_sound(healthcap) {
@@ -204,7 +204,7 @@ function player_breathing_sound(healthcap) {
 }
 
 // Namespace healthoverlay
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x51dacd77, Offset: 0xa68
 // Size: 0x12c
 function player_heartbeat_sound(healthcap) {

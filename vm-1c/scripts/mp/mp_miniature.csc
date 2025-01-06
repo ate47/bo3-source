@@ -1,15 +1,15 @@
-#using scripts/mp/mp_miniature_sound;
-#using scripts/mp/mp_miniature_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_miniature_fx;
+#using scripts/mp/mp_miniature_sound;
+#using scripts/shared/util_shared;
 
 #namespace mp_miniature;
 
 // Namespace mp_miniature
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdd0ff53e, Offset: 0x1c0
+// Params 0, eflags: 0x0
+// Checksum 0x30f192ab, Offset: 0x1c0
 // Size: 0x8c
 function main() {
     mp_miniature_fx::main();
@@ -22,8 +22,8 @@ function main() {
 }
 
 // Namespace mp_miniature
-// Params 2, eflags: 0x1 linked
-// Checksum 0x626266db, Offset: 0x258
+// Params 2, eflags: 0x0
+// Checksum 0x57658a1b, Offset: 0x258
 // Size: 0x7a
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
@@ -42,8 +42,8 @@ function dom_flag_base_fx_override(flag, team) {
 }
 
 // Namespace mp_miniature
-// Params 2, eflags: 0x1 linked
-// Checksum 0x87fcd6f4, Offset: 0x2e0
+// Params 2, eflags: 0x0
+// Checksum 0x77bcdf02, Offset: 0x2e0
 // Size: 0x7a
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {

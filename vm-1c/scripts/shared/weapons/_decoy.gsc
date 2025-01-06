@@ -1,14 +1,14 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/entityheadicons_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/entityheadicons_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace decoy;
 
 // Namespace decoy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc7475156, Offset: 0x240
 // Size: 0xdc
 function init_shared() {
@@ -21,7 +21,7 @@ function init_shared() {
 }
 
 // Namespace decoy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69cd926c, Offset: 0x328
 // Size: 0x88
 function function_590a0ae0() {
@@ -33,7 +33,7 @@ function function_590a0ae0() {
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbd5ce5c2, Offset: 0x3b8
 // Size: 0x12c
 function on_spawn(watcher, owner) {
@@ -57,7 +57,7 @@ function on_spawn(watcher, owner) {
 }
 
 // Namespace decoy
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x8621b3e, Offset: 0x4f0
 // Size: 0x2d4
 function move(owner, count, fire_time, var_8195a6f6, var_34e933d5) {
@@ -87,7 +87,7 @@ function move(owner, count, fire_time, var_8195a6f6, var_34e933d5) {
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc401c86c, Offset: 0x7d0
 // Size: 0x3c
 function destroy(watcher, owner) {
@@ -96,7 +96,7 @@ function destroy(watcher, owner) {
 }
 
 // Namespace decoy
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xb9d2828e, Offset: 0x818
 // Size: 0x44
 function detonate(attacker, weapon, target) {
@@ -105,7 +105,7 @@ function detonate(attacker, weapon, target) {
 }
 
 // Namespace decoy
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6c51e50d, Offset: 0x868
 // Size: 0x1a6
 function function_a63701dd(owner) {
@@ -141,7 +141,7 @@ function function_a63701dd(owner) {
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfc2f3047, Offset: 0xa18
 // Size: 0x64
 function function_9d51e5e4(owner, weapon) {
@@ -153,7 +153,7 @@ function function_9d51e5e4(owner, weapon) {
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9a06b8c9, Offset: 0xa88
 // Size: 0x158
 function function_c67d522d(owner, weapon) {
@@ -169,13 +169,13 @@ function function_c67d522d(owner, weapon) {
             var_935b3a39 = randomintrange(1, clipsize);
         }
         self thread move(owner, var_935b3a39, firetime, self.var_8195a6f6, self.var_34e933d5);
-        self function_c222ce7e(owner, weapon, firetime, var_935b3a39, 1);
+        self fire_burst(owner, weapon, firetime, var_935b3a39, 1);
         function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0);
     }
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4fed54e5, Offset: 0xbe8
 // Size: 0x140
 function function_fcf76115(owner, weapon) {
@@ -187,13 +187,13 @@ function function_fcf76115(owner, weapon) {
     while (true) {
         var_935b3a39 = randomintrange(1, clipsize);
         self thread move(owner, var_935b3a39, firetime, self.var_8195a6f6, self.var_34e933d5);
-        self function_c222ce7e(owner, weapon, firetime, var_935b3a39, 0);
+        self fire_burst(owner, weapon, firetime, var_935b3a39, 0);
         function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0);
     }
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe711d714, Offset: 0xd30
 // Size: 0x158
 function function_2d9e373e(owner, weapon) {
@@ -208,13 +208,13 @@ function function_2d9e373e(owner, weapon) {
     while (true) {
         var_935b3a39 = randomintrange(1, clipsize);
         self thread move(owner, var_935b3a39, firetime, self.var_8195a6f6, self.var_34e933d5);
-        self function_c222ce7e(owner, weapon, firetime, var_935b3a39, 0);
+        self fire_burst(owner, weapon, firetime, var_935b3a39, 0);
         function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0);
     }
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x12cbb3c7, Offset: 0xe90
 // Size: 0x180
 function function_660c06fa(owner, weapon) {
@@ -230,13 +230,13 @@ function function_660c06fa(owner, weapon) {
         var_935b3a39 = randomintrange(int(clipsize * 0.6), clipsize);
         interrupt = 0;
         self thread move(owner, var_935b3a39, firetime, self.var_8195a6f6, self.var_34e933d5);
-        self function_c222ce7e(owner, weapon, firetime, var_935b3a39, interrupt);
+        self fire_burst(owner, weapon, firetime, var_935b3a39, interrupt);
         function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0);
     }
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd88cbb05, Offset: 0x1018
 // Size: 0x150
 function function_3bf90541(owner, weapon) {
@@ -251,16 +251,16 @@ function function_3bf90541(owner, weapon) {
     while (true) {
         var_935b3a39 = randomintrange(1, clipsize);
         self thread move(owner, var_935b3a39, firetime, self.var_8195a6f6, self.var_34e933d5);
-        self function_c222ce7e(owner, weapon, firetime, var_935b3a39, 0);
+        self fire_burst(owner, weapon, firetime, var_935b3a39, 0);
         function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0);
     }
 }
 
 // Namespace decoy
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x12b29e4f, Offset: 0x1170
 // Size: 0xfe
-function function_c222ce7e(owner, weapon, firetime, count, interrupt) {
+function fire_burst(owner, weapon, firetime, count, interrupt) {
     var_5e25e2cd = count;
     if (interrupt) {
         var_5e25e2cd = int(count * randomfloatrange(0.6, 0.8));
@@ -274,7 +274,7 @@ function function_c222ce7e(owner, weapon, firetime, count, interrupt) {
 }
 
 // Namespace decoy
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xc5b877e2, Offset: 0x1278
 // Size: 0x74
 function function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0) {
@@ -286,7 +286,7 @@ function function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0) {
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5d8dceb4, Offset: 0x12f8
 // Size: 0x82
 function function_50198ce0(weapon, reloadtime) {
@@ -299,19 +299,19 @@ function function_50198ce0(weapon, reloadtime) {
 }
 
 // Namespace decoy
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8121e9e5, Offset: 0x1388
 // Size: 0x9c
 function function_dba6f0ce(owner, weapon) {
     self thread function_547d67b1();
     owner endon(#"disconnect");
     self endon(#"hash_deb9ad6f");
-    pos = self waittill(#"explode");
+    self waittill(#"explode", pos);
     level thread do_explosion(owner, pos, weapon, randomintrange(5, 10));
 }
 
 // Namespace decoy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27cbd27d, Offset: 0x1430
 // Size: 0x2e
 function function_547d67b1() {
@@ -323,7 +323,7 @@ function function_547d67b1() {
 }
 
 // Namespace decoy
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf18c82df, Offset: 0x1468
 // Size: 0x14e
 function do_explosion(owner, pos, weapon, count) {
@@ -337,7 +337,7 @@ function do_explosion(owner, pos, weapon, count) {
 }
 
 // Namespace decoy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1f6d0e4, Offset: 0x15c0
 // Size: 0xd6
 function function_b3d79ba3() {
@@ -351,7 +351,7 @@ function function_b3d79ba3() {
 }
 
 // Namespace decoy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac62a783, Offset: 0x16a0
 // Size: 0x2c
 function function_16cd8fc7() {
@@ -362,7 +362,7 @@ function function_16cd8fc7() {
 }
 
 // Namespace decoy
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x96bf3906, Offset: 0x16d8
 // Size: 0x130
 function function_96634b70() {
@@ -371,7 +371,7 @@ function function_96634b70() {
     self.var_8195a6f6 = int(vectortoangles((self.var_8d009e7f[0], self.var_8d009e7f[1], 0))[1]);
     up = (0, 0, 1);
     while (true) {
-        pos, normal = self waittill(#"grenade_bounce");
+        self waittill(#"grenade_bounce", pos, normal);
         dot = vectordot(normal, up);
         if (dot < 0.5 && dot > -0.5) {
             self.var_8195a6f6 = int(vectortoangles((normal[0], normal[1], 0))[1]);

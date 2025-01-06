@@ -1,15 +1,15 @@
-#using scripts/shared/ai/systems/fx_character;
-#using scripts/cp/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/shared/ai/systems/fx_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace lotus_util;
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf5ac2f75, Offset: 0x4e8
 // Size: 0x116
 function mobile_shop_fxanims(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -33,7 +33,7 @@ function mobile_shop_fxanims(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace lotus_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9c981778, Offset: 0x608
 // Size: 0x92
 function function_83b903a6(a_ents) {
@@ -43,7 +43,7 @@ function function_83b903a6(a_ents) {
 }
 
 // Namespace lotus_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca630c81, Offset: 0x6a8
 // Size: 0xcc
 function function_84d3f32a() {
@@ -78,7 +78,7 @@ function function_50d69c96(var_7f004376) {
 }
 
 // Namespace lotus_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3e3dc2de, Offset: 0x890
 // Size: 0x33c
 function function_5ffdcb9d(var_7f004376) {
@@ -108,7 +108,7 @@ function function_5ffdcb9d(var_7f004376) {
 }
 
 // Namespace lotus_util
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x5b010220, Offset: 0xbd8
 // Size: 0x334
 function function_eb04522d(n_z, a_items, n_max) {
@@ -191,7 +191,7 @@ function function_3e466373(var_6575414d, var_3a04fa7e, str_name, str_key) {
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb3ccf33c, Offset: 0x10b8
 // Size: 0xfc
 function function_b33fd8cd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -230,7 +230,7 @@ function function_536a14db(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace lotus_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xafacf853, Offset: 0x1290
 // Size: 0x330
 function function_74fb8848(localclientnum) {
@@ -256,7 +256,7 @@ function function_74fb8848(localclientnum) {
 }
 
 // Namespace lotus_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3647b509, Offset: 0x15c8
 // Size: 0x13c
 function function_9259cfc(n_index) {
@@ -276,7 +276,7 @@ function function_9259cfc(n_index) {
 }
 
 // Namespace lotus_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf2439156, Offset: 0x1710
 // Size: 0xfa
 function function_20e0d03e() {
@@ -300,7 +300,7 @@ function function_20e0d03e() {
 }
 
 // Namespace lotus_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ae51494, Offset: 0x1818
 // Size: 0x94
 function function_a62110e9() {
@@ -315,7 +315,7 @@ function function_a62110e9() {
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5ff8aabd, Offset: 0x18b8
 // Size: 0x16a
 function function_ace9894c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -332,7 +332,7 @@ function function_ace9894c(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3c11fb47, Offset: 0x1a30
 // Size: 0x64
 function postfx_futz(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -342,7 +342,7 @@ function postfx_futz(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7803399b, Offset: 0x1aa0
 // Size: 0xdc
 function postfx_ravens(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -358,7 +358,7 @@ function postfx_ravens(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5194c8dc, Offset: 0x1b88
 // Size: 0x7c
 function frost_post_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -370,7 +370,7 @@ function frost_post_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x16084e17, Offset: 0x1c10
 // Size: 0xc4
 function postfx_frozen_forest(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -385,7 +385,7 @@ function postfx_frozen_forest(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc374351d, Offset: 0x1ce0
 // Size: 0xbc
 function snow_fog(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -399,7 +399,7 @@ function snow_fog(localclientnum, oldval, newval, bnewent, binitialsnap, fieldna
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x945fb529, Offset: 0x1da8
 // Size: 0x172
 function player_frost_breath(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -422,7 +422,7 @@ function player_frost_breath(localclientnum, oldval, newval, bnewent, binitialsn
 }
 
 // Namespace lotus_util
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1393a58b, Offset: 0x1f28
 // Size: 0xda
 function hendricks_frost_breath(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

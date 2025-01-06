@@ -1,9 +1,9 @@
-#using scripts/mp/mp_rise_fx;
-#using scripts/mp/mp_rise_amb;
+#using scripts/codescripts/struct;
 #using scripts/mp/_load;
 #using scripts/mp/gametypes/_spawning;
+#using scripts/mp/mp_rise_amb;
+#using scripts/mp/mp_rise_fx;
 #using scripts/shared/compass;
-#using scripts/codescripts/struct;
 
 #namespace mp_rise;
 

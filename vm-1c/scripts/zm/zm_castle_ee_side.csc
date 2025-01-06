@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_castle_ee_side;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_castle_ee_side
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9e99a542, Offset: 0x348
 // Size: 0x154
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_castle_ee_side
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8665134f, Offset: 0x4a8
 // Size: 0x9c
 function clocktower_flash(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -39,7 +39,7 @@ function clocktower_flash(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_castle_ee_side
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcf7258a2, Offset: 0x550
 // Size: 0xec
 function sndUEB(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -53,7 +53,7 @@ function sndUEB(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname
 }
 
 // Namespace zm_castle_ee_side
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf12d3c0e, Offset: 0x648
 // Size: 0x13c
 function function_b3f0d569(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -69,7 +69,7 @@ function function_b3f0d569(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_ee_side
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdbeed443, Offset: 0x790
 // Size: 0x9c
 function plunger_charged_strike(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

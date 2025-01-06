@@ -1,19 +1,19 @@
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/cp/_hazard;
-#using scripts/cp/_dialog;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/doors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hazard;
+#using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/doors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace namespace_cba4cc55;
 
@@ -162,7 +162,7 @@ function function_8b31a9a3() {
 // Params 2, eflags: 0x0
 // Checksum 0x87179437, Offset: 0x938
 // Size: 0x141
-function function_36a6e271(var_a9fa335a, a_ai) {
+function function_36a6e271(should_delete, a_ai) {
     if (!isdefined(a_ai)) {
         a_ai = [];
     }
@@ -180,7 +180,7 @@ function function_36a6e271(var_a9fa335a, a_ai) {
             }
         }
         if (var_790129b == level.players.size && var_6c4dd462 == a_ai.size) {
-            if (isdefined(var_a9fa335a) && var_a9fa335a) {
+            if (isdefined(should_delete) && should_delete) {
                 self util::self_delete();
             }
             break;
@@ -291,7 +291,7 @@ function function_c2ee574f(var_ff608bc9, n_time) {
 // Size: 0x42
 function function_aef08215() {
     level endon(#"hash_c9e53487");
-    e_player = self waittill(#"trigger");
+    self waittill(#"trigger", e_player);
     level function_40077528(0.2, 2, self.origin, 5000);
 }
 
@@ -436,7 +436,7 @@ function round_up_to_ten(n_value) {
 // Params 4, eflags: 0x0
 // Checksum 0x49705dd, Offset: 0x1508
 // Size: 0xad
-function function_7073af93(str_anim, str_notetrack, func_callback, var_37004b6e) {
+function function_7073af93(str_anim, str_notetrack, func_callback, is_loop) {
     if (self != level) {
         self endon(#"death");
     }
@@ -446,7 +446,7 @@ function function_7073af93(str_anim, str_notetrack, func_callback, var_37004b6e)
         if (str_notify == str_notetrack) {
             self thread [[ func_callback ]]();
         }
-    } while (isdefined(var_37004b6e) && var_37004b6e && level flagsys::get(str_anim + "_playing"));
+    } while (isdefined(is_loop) && is_loop && level flagsys::get(str_anim + "_playing"));
 }
 
 // Namespace namespace_cba4cc55

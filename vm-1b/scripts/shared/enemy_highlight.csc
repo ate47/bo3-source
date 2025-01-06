@@ -1,7 +1,7 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_util;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace enemy_highlight;
 

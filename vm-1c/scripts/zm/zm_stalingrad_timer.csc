@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_timer;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x218
 // Size: 0x4
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe39bf422, Offset: 0x228
 // Size: 0x64
 function __main__() {
@@ -32,7 +32,7 @@ function __main__() {
 }
 
 // Namespace zm_stalingrad_timer
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9e44c41c, Offset: 0x298
 // Size: 0x48
 function function_b94ee48a(var_6575414d, var_3bf16bb3, n_new_val, var_f16ed138, var_b54312de, str_field_name, var_ffbb7dc) {
@@ -40,7 +40,7 @@ function function_b94ee48a(var_6575414d, var_3bf16bb3, n_new_val, var_f16ed138, 
 }
 
 // Namespace zm_stalingrad_timer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9c381c10, Offset: 0x2e8
 // Size: 0xde
 function function_3ec869e2() {

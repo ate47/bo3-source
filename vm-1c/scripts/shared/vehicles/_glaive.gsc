@@ -1,19 +1,19 @@
-#using scripts/shared/ai/margwa;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/animation_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/blackboard_vehicle;
+#using scripts/shared/ai/margwa;
 #using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_death_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/codescripts/struct;
 
 #using_animtree("generic");
 
@@ -21,7 +21,7 @@
 
 // Namespace glaive
 // Params 0, eflags: 0x2
-// Checksum 0xc65501a6, Offset: 0x490
+// Checksum 0xa11527fc, Offset: 0x490
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("glaive", &__init__, undefined, undefined);
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0x69361ae6, Offset: 0x4d0
+// Checksum 0xb691aeea, Offset: 0x4d0
 // Size: 0x5c
 function __init__() {
     vehicle::add_main_callback("glaive", &function_4178dbae);
@@ -38,7 +38,7 @@ function __init__() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0x7cb1107b, Offset: 0x538
+// Checksum 0xd0db9dac, Offset: 0x538
 // Size: 0x1fc
 function function_4178dbae() {
     self useanimtree(#generic);
@@ -70,7 +70,7 @@ function function_4178dbae() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0xc67725d3, Offset: 0x740
+// Checksum 0x858d585f, Offset: 0x740
 // Size: 0x108
 function defaultrole() {
     self vehicle_ai::init_state_machine_for_role("default");
@@ -87,7 +87,7 @@ function defaultrole() {
 
 // Namespace glaive
 // Params 1, eflags: 0x4
-// Checksum 0x76ea15bd, Offset: 0x850
+// Checksum 0xa618d061, Offset: 0x850
 // Size: 0x206
 function private function_cb8b2163(target) {
     if (!isdefined(target)) {
@@ -127,7 +127,7 @@ function private function_cb8b2163(target) {
 
 // Namespace glaive
 // Params 0, eflags: 0x4
-// Checksum 0xb97e2ba5, Offset: 0xa60
+// Checksum 0xf317b23f, Offset: 0xa60
 // Size: 0xda
 function private function_7ab362db() {
     var_e9ab3b34 = getaiteamarray("axis");
@@ -141,7 +141,7 @@ function private function_7ab362db() {
 
 // Namespace glaive
 // Params 0, eflags: 0x4
-// Checksum 0x23481364, Offset: 0xb48
+// Checksum 0xe2ae9d0d, Offset: 0xb48
 // Size: 0x158
 function private function_ad866c00() {
     self endon(#"death");
@@ -181,7 +181,7 @@ function private function_ad866c00() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0x9e73debc, Offset: 0xca8
+// Checksum 0xf33a2d4, Offset: 0xca8
 // Size: 0x68
 function function_6996ae57() {
     var_23d518cb = gettime() - self.starttime > self.var_7cc7e526 * 1000;
@@ -196,7 +196,7 @@ function function_6996ae57() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0xe1e666d2, Offset: 0xd18
+// Checksum 0x7f033140, Offset: 0xd18
 // Size: 0x136
 function function_1aae8db0() {
     if (isdefined(self.owner) && distancesquared(self.origin, self.owner.origin) > self.settings.var_1ca0fb66 * self.settings.var_1ca0fb66) {
@@ -215,7 +215,7 @@ function function_1aae8db0() {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
-// Checksum 0xaab219e8, Offset: 0xe58
+// Checksum 0xf8620b6e, Offset: 0xe58
 // Size: 0x2c
 function state_combat_enter(params) {
     self asmrequestsubstate("idle@movement");
@@ -223,7 +223,7 @@ function state_combat_enter(params) {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
-// Checksum 0xada6e9d5, Offset: 0xe90
+// Checksum 0x4d8510a7, Offset: 0xe90
 // Size: 0x664
 function state_combat_update(params) {
     self endon(#"change_state");
@@ -308,7 +308,7 @@ function state_combat_update(params) {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0x5dc2d6b9, Offset: 0x1500
+// Checksum 0x928fa15f, Offset: 0x1500
 // Size: 0x9e
 function function_ce82716() {
     if (isdefined(self.var_f23a98eb.archetype) && self.var_f23a98eb.archetype != "zombie") {
@@ -321,7 +321,7 @@ function function_ce82716() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0xb576a5b1, Offset: 0x15a8
+// Checksum 0xa42902e4, Offset: 0x15a8
 // Size: 0x2a4
 function function_3f19103d() {
     queryresult = positionquery_source_navigation(self.origin, 0, 100, 64, 8, self);
@@ -353,7 +353,7 @@ function function_3f19103d() {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
-// Checksum 0xab0f88e, Offset: 0x1858
+// Checksum 0xef9a546c, Offset: 0x1858
 // Size: 0xd6
 function function_6727edba(enemy) {
     self endon(#"change_state");
@@ -379,7 +379,7 @@ function function_6727edba(enemy) {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
-// Checksum 0x1902385b, Offset: 0x1938
+// Checksum 0x2bfd094c, Offset: 0x1938
 // Size: 0x46c
 function function_14d89a82(params) {
     self endon(#"change_state");
@@ -414,9 +414,9 @@ function function_14d89a82(params) {
             }
         }
     }
-    notetrack = self waittill(#"anim_notify");
+    self waittill(#"anim_notify", notetrack);
     while (!isdefined(notetrack) || notetrack != "end") {
-        notetrack = self waittill(#"anim_notify");
+        self waittill(#"anim_notify", notetrack);
     }
     self clientfield::set("glaive_blood_fx", 0);
     if (var_5ed1df9b) {
@@ -428,7 +428,7 @@ function function_14d89a82(params) {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
-// Checksum 0xcef14ae6, Offset: 0x1db0
+// Checksum 0x3a1f0cb2, Offset: 0x1db0
 // Size: 0x26
 function function_e25879ca(duration) {
     self endon(#"death");
@@ -438,7 +438,7 @@ function function_e25879ca(duration) {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0xf61aa770, Offset: 0x1de0
+// Checksum 0x8f9968f4, Offset: 0x1de0
 // Size: 0x3fc
 function function_bd13793a() {
     self endon(#"hash_6e5855cf");
@@ -484,7 +484,7 @@ function function_bd13793a() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0x6a191cec, Offset: 0x21e8
+// Checksum 0x6b31f08f, Offset: 0x21e8
 // Size: 0x364
 function function_7ffdbe09() {
     self thread function_11952f05();
@@ -529,25 +529,25 @@ function function_7ffdbe09() {
     if (isdefined(self.owner)) {
         self.origin = self.owner.origin + (0, 0, 40);
     }
-    self notify(#"hash_3de4334");
+    self notify(#"returned_to_owner");
     wait 2;
 }
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0xe7f1298f, Offset: 0x2558
+// Checksum 0x373944f1, Offset: 0x2558
 // Size: 0xb6
 function function_11952f05() {
     self endon(#"death");
     while (abs(self.origin[2] - self.owner.origin[2]) > 80 * 80 || isdefined(self.owner) && distance2dsquared(self.origin, self.owner.origin) > 80 * 80) {
         wait 0.1;
     }
-    self notify(#"hash_3de4334");
+    self notify(#"returned_to_owner");
 }
 
 // Namespace glaive
 // Params 0, eflags: 0x0
-// Checksum 0x6ce0f1cc, Offset: 0x2618
+// Checksum 0xe937d992, Offset: 0x2618
 // Size: 0x12a
 function function_adad389c() {
     self endon(#"death");
@@ -560,7 +560,7 @@ function function_adad389c() {
 
 // Namespace glaive
 // Params 4, eflags: 0x0
-// Checksum 0xb795b7da, Offset: 0x2750
+// Checksum 0x72c20d9d, Offset: 0x2750
 // Size: 0x26
 function function_226d16ed(einflictor, eattacker, smeansofdeath, weapon) {
     return false;
@@ -568,7 +568,7 @@ function function_226d16ed(einflictor, eattacker, smeansofdeath, weapon) {
 
 // Namespace glaive
 // Params 15, eflags: 0x0
-// Checksum 0x29abda7d, Offset: 0x2780
+// Checksum 0x28d9cd22, Offset: 0x2780
 // Size: 0x80
 function function_c6e986c3(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
     return true;

@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_29799936;
 
 // Namespace namespace_29799936
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb9d1f322, Offset: 0x2b8
 // Size: 0x20
 function main() {
@@ -17,7 +17,7 @@ function main() {
 }
 
 // Namespace namespace_29799936
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb362399e, Offset: 0x2e0
 // Size: 0x104
 function init_clientfields() {
@@ -28,7 +28,7 @@ function init_clientfields() {
 }
 
 // Namespace namespace_29799936
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9adeaff0, Offset: 0x3f0
 // Size: 0x1fa
 function function_e607bb59(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -59,7 +59,7 @@ function function_e607bb59(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_29799936
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdae23cc2, Offset: 0x5f8
 // Size: 0x106
 function function_df47f2bb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,7 +88,7 @@ function function_df47f2bb(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_29799936
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf15a9a87, Offset: 0x708
 // Size: 0xea
 function function_109ac1f6(a_ents) {
@@ -104,7 +104,7 @@ function function_109ac1f6(a_ents) {
 }
 
 // Namespace namespace_29799936
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2ffdc6ee, Offset: 0x800
 // Size: 0xba
 function function_3ccbd173(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -121,7 +121,7 @@ function function_3ccbd173(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_29799936
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f44d5af, Offset: 0x8c8
 // Size: 0xd4
 function function_8f4d8a35() {

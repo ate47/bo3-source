@@ -1,23 +1,23 @@
-#using scripts/zm/zm_tomb_vo;
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/zm_tomb_chamber;
-#using scripts/zm/_zm_utility;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/math_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/zm_tomb_chamber;
+#using scripts/zm/zm_tomb_utility;
+#using scripts/zm/zm_tomb_vo;
 
 #using_animtree("generic");
 
 #namespace zm_tomb_quest_fire;
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x618f4c36, Offset: 0x4a0
 // Size: 0x264
 function main() {
@@ -44,7 +44,7 @@ function main() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x92a0e9bb, Offset: 0x710
 // Size: 0x1c
 function onplayerconnect() {
@@ -52,7 +52,7 @@ function onplayerconnect() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x738
 // Size: 0x4
 function function_badc3cb5() {
@@ -60,7 +60,7 @@ function function_badc3cb5() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xadc536f8, Offset: 0x748
 // Size: 0x1bc
 function function_8487a3a2() {
@@ -87,7 +87,7 @@ function function_8487a3a2() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb7525111, Offset: 0x910
 // Size: 0x50
 function function_bcadff2d() {
@@ -98,7 +98,7 @@ function function_bcadff2d() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d61cae8, Offset: 0x968
 // Size: 0x6c
 function function_9467783d() {
@@ -115,7 +115,7 @@ function function_9467783d() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8a4fcae7, Offset: 0x9e0
 // Size: 0x6c
 function function_272fbe7a() {
@@ -127,7 +127,7 @@ function function_272fbe7a() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x16ebac00, Offset: 0xa58
 // Size: 0x9c
 function function_fd8c0680(e_volume) {
@@ -145,7 +145,7 @@ function function_fd8c0680(e_volume) {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9da2a6c7, Offset: 0xb00
 // Size: 0x266
 function function_cbc73b4c(e_volume) {
@@ -163,7 +163,7 @@ function function_cbc73b4c(e_volume) {
     var_7831da4e = 10000;
     while (!e_volume.var_4e7c813a) {
         e_volume flag::clear("flame_on");
-        v_point, e_projectile = level waittill(#"hash_d85b0552");
+        level waittill(#"hash_d85b0552", v_point, e_projectile);
         if (!zm_tomb_chamber::function_55f62409()) {
             continue;
         }
@@ -182,7 +182,7 @@ function function_cbc73b4c(e_volume) {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa4f2987e, Offset: 0xd70
 // Size: 0x17c
 function function_7cda1e4f() {
@@ -202,7 +202,7 @@ function function_7cda1e4f() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x34d262a5, Offset: 0xef8
 // Size: 0x8
 function function_8aada0a4() {
@@ -210,7 +210,7 @@ function function_8aada0a4() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xc4009e1a, Offset: 0xf08
 // Size: 0x194
 function function_6cc4ff94(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime) {
@@ -239,7 +239,7 @@ function function_6cc4ff94(einflictor, attacker, idamage, smeansofdeath, sweapon
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x354bc1f2, Offset: 0x10a8
 // Size: 0x64
 function function_c2d0bf44() {
@@ -252,7 +252,7 @@ function function_c2d0bf44() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b35ecf2, Offset: 0x1118
 // Size: 0x30c
 function function_dceec692(var_34868759) {
@@ -288,7 +288,7 @@ function function_dceec692(var_34868759) {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa11a0d0, Offset: 0x1430
 // Size: 0xa8
 function function_31040961() {
@@ -302,7 +302,7 @@ function function_31040961() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x888037d9, Offset: 0x14e0
 // Size: 0x15c
 function function_4c0b94bc() {
@@ -322,7 +322,7 @@ function function_4c0b94bc() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4d4ba2cb, Offset: 0x1648
 // Size: 0x13a
 function function_5b72f9c5() {
@@ -337,7 +337,7 @@ function function_5b72f9c5() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x27221a97, Offset: 0x1790
 // Size: 0x17a
 function function_5cf6e84a() {
@@ -358,7 +358,7 @@ function function_5cf6e84a() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x37e02513, Offset: 0x1918
 // Size: 0x2f0
 function function_601c220c() {
@@ -403,13 +403,13 @@ function function_601c220c() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcee9de5f, Offset: 0x1c10
 // Size: 0x9e
 function function_c1e34803() {
     self endon(#"disconnect");
     while (true) {
-        weapon, var_836ef144, n_radius, e_projectile, var_94351942 = self waittill(#"projectile_impact");
+        self waittill(#"projectile_impact", weapon, var_836ef144, n_radius, e_projectile, var_94351942);
         if (weapon == level.var_b0d8f1fe["staff_fire"].w_weapon) {
             level notify(#"hash_d85b0552", var_836ef144, e_projectile);
         }
@@ -417,7 +417,7 @@ function function_c1e34803() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x868c1ae8, Offset: 0x1cb8
 // Size: 0x24c
 function function_6fe3d250() {
@@ -446,7 +446,7 @@ function function_6fe3d250() {
 }
 
 // Namespace zm_tomb_quest_fire
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x26fcb8bd, Offset: 0x1f10
 // Size: 0x1a0
 function function_98b7d4b1() {
@@ -455,7 +455,7 @@ function function_98b7d4b1() {
     var_7831da4e = 4096;
     var_32bc7eba = level.var_b0d8f1fe["staff_fire"].w_weapon;
     while (true) {
-        v_point = level waittill(#"hash_d85b0552");
+        level waittill(#"hash_d85b0552", v_point);
         if (!function_8aada0a4()) {
             continue;
         }

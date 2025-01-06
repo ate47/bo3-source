@@ -1,15 +1,15 @@
-#using scripts/shared/ai/zombie_utility;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_flavor_hexed;
 
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_flavor_hexed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85b9d166, Offset: 0x280
 // Size: 0x54
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_flavor_hexed
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1c0336dd, Offset: 0x2e0
 // Size: 0x1c4
 function event() {
@@ -59,7 +59,7 @@ function event() {
 }
 
 // Namespace zm_bgb_flavor_hexed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x82b521a0, Offset: 0x4b0
 // Size: 0x84
 function function_9a45adfb(var_50f0f8bb) {
@@ -71,7 +71,7 @@ function function_9a45adfb(var_50f0f8bb) {
 }
 
 // Namespace zm_bgb_flavor_hexed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x218d34aa, Offset: 0x540
 // Size: 0x104
 function function_655e0571(var_50f0f8bb) {
@@ -80,7 +80,7 @@ function function_655e0571(var_50f0f8bb) {
     self endon(#"bgb_gumball_anim_give");
     self waittill("bgb_update_give_" + var_50f0f8bb);
     self notify("bgb_flavor_hexed_give_" + var_50f0f8bb);
-    var_1531e8c4, var_9a4acf7 = self waittill(#"bgb_update");
+    self waittill(#"bgb_update", var_1531e8c4, var_9a4acf7);
     if (var_9a4acf7 === var_50f0f8bb && self.var_c3a5a8.size) {
         var_df8558a0 = array::random(self.var_c3a5a8);
         self playsoundtoplayer("zmb_bgb_flavorhex", self);
@@ -90,7 +90,7 @@ function function_655e0571(var_50f0f8bb) {
 }
 
 // Namespace zm_bgb_flavor_hexed
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8ed1a3ad, Offset: 0x650
 // Size: 0x48
 function function_21f6c6f5(var_50f0f8bb) {

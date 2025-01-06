@@ -1,10 +1,10 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/systems/fx_character;
-#using scripts/shared/util_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace archetype_robot;
 
@@ -26,7 +26,7 @@ function autoexec precache() {
 }
 
 // Namespace archetype_robot
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ba98427, Offset: 0x338
 // Size: 0x164
 function __init__() {
@@ -42,7 +42,7 @@ function __init__() {
 #namespace robotclientutils;
 
 // Namespace robotclientutils
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x49e782e8, Offset: 0x4a8
 // Size: 0x1c
 function private robotsoldierspawnsetup(localclientnum) {
@@ -50,7 +50,7 @@ function private robotsoldierspawnsetup(localclientnum) {
 }
 
 // Namespace robotclientutils
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0xcad85f8b, Offset: 0x4d0
 // Size: 0x346
 function private robotlighting(localclientnum, entity, flicker, mindcontrolstate) {
@@ -101,7 +101,7 @@ function private robotlighting(localclientnum, entity, flicker, mindcontrolstate
 }
 
 // Namespace robotclientutils
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xe77a3cfe, Offset: 0x820
 // Size: 0x164
 function private robotlightshandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -121,7 +121,7 @@ function private robotlightshandler(localclientnum, oldvalue, newvalue, bnewent,
 }
 
 // Namespace robotclientutils
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xebb2d757, Offset: 0x990
 // Size: 0x13a
 function private robotemphandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -142,7 +142,7 @@ function private robotemphandler(localclientnum, oldvalue, newvalue, bnewent, bi
 }
 
 // Namespace robotclientutils
-// Params 7, eflags: 0x5 linked
+// Params 7, eflags: 0x4
 // Checksum 0xbbb3210f, Offset: 0xad8
 // Size: 0x114
 function private robotmindcontrolhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -158,7 +158,7 @@ function private robotmindcontrolhandler(localclientnum, oldvalue, newvalue, bne
 }
 
 // Namespace robotclientutils
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x334d8647, Offset: 0xbf8
 // Size: 0x102
 function robotmindcontrolexplosionhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

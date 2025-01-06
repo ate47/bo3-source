@@ -1,35 +1,35 @@
-#using scripts/mp/teams/_teams;
-#using scripts/mp/_util;
-#using scripts/mp/_challenges;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/gametypes/_spawning;
-#using scripts/mp/gametypes/_hud_message;
-#using scripts/mp/gametypes/_globallogic_utils;
-#using scripts/mp/gametypes/_globallogic_ui;
-#using scripts/mp/gametypes/_globallogic_score;
-#using scripts/mp/gametypes/_globallogic_player;
-#using scripts/mp/gametypes/_globallogic_defaults;
-#using scripts/mp/gametypes/_globallogic_audio;
-#using scripts/mp/gametypes/_globallogic;
 #using scripts/mp/_armor;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/killstreaks_shared;
+#using scripts/mp/_challenges;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_globallogic;
+#using scripts/mp/gametypes/_globallogic_audio;
+#using scripts/mp/gametypes/_globallogic_defaults;
+#using scripts/mp/gametypes/_globallogic_player;
+#using scripts/mp/gametypes/_globallogic_score;
+#using scripts/mp/gametypes/_globallogic_ui;
+#using scripts/mp/gametypes/_globallogic_utils;
+#using scripts/mp/gametypes/_hud_message;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/teams/_teams;
 #using scripts/shared/_oob;
+#using scripts/shared/abilities/_ability_player;
 #using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/rank_shared;
-#using scripts/shared/popups_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/demo_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/popups_shared;
+#using scripts/shared/rank_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace ball;
 
@@ -1094,7 +1094,7 @@ function ball_pass_watch() {
     self endon(#"death");
     self endon(#"drop_object");
     while (true) {
-        weapon = self waittill(#"ball_pass");
+        self waittill(#"ball_pass", weapon);
         if (!isdefined(self.pass_target)) {
             playerangles = self getplayerangles();
             playerangles = (math::clamp(playerangles[0], -85, 85), playerangles[1], playerangles[2]);
@@ -1135,7 +1135,7 @@ function ball_shoot_watch() {
     extra_pitch = getdvarfloat("scr_ball_shoot_extra_pitch", 0);
     force = getdvarfloat("scr_ball_shoot_force", 900);
     while (true) {
-        weapon = self waittill(#"weapon_fired");
+        self waittill(#"weapon_fired", weapon);
         if (weapon != getweapon("ball")) {
             continue;
         }
@@ -1170,7 +1170,7 @@ function ball_weapon_change_watch() {
         self waittill(#"weapon_change");
     }
     while (true) {
-        weapon, lastweapon = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", weapon, lastweapon);
         if (isdefined(weapon) && weapon.gadget_type == 14) {
             break;
         }
@@ -1261,7 +1261,7 @@ function ball_check_pass_kill_pickup(carryobj) {
     }
     carryobj.carrier endon(#"disconnect");
     timer thread timer_run(5);
-    attacker = carryobj.carrier waittill(#"death");
+    carryobj.carrier waittill(#"death", attacker);
     timer timer_cancel();
     if (!isdefined(attacker) || attacker != self) {
         return;
@@ -1391,7 +1391,7 @@ function ball_restore_contents() {
 // Size: 0x84
 function ball_on_projectile_hit_client(var_c7e075bf) {
     self endon(#"hash_4ae8aa2c");
-    player = self.projectile waittill(#"projectile_impact_player");
+    self.projectile waittill(#"projectile_impact_player", player);
     self.trigger notify(#"trigger", player);
     self.projectile notify(#"hash_e5e4f356");
     if (isdefined(var_c7e075bf)) {
@@ -1544,7 +1544,7 @@ function ball_physics_touch_cant_pickup_player(droppingplayer) {
     ball = self.visuals[0];
     trigger = self.trigger;
     while (true) {
-        player = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", player);
         if (isdefined(droppingplayer) && droppingplayer == player && player player_no_pickup_time()) {
             continue;
         }

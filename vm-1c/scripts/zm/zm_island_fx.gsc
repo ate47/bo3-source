@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_island_fx;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x8a0
 // Size: 0x4
 function __init__() {
@@ -21,7 +21,7 @@ function __init__() {
 }
 
 // Namespace zm_island_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd51bdd39, Offset: 0x8b0
 // Size: 0x3ae
 function main() {
@@ -62,7 +62,7 @@ function main() {
 }
 
 // Namespace zm_island_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xc68
 // Size: 0x4
 function precache() {

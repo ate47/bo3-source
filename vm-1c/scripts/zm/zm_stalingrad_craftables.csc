@@ -1,12 +1,12 @@
-#using scripts/zm/craftables/_zm_craftables;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/craftables/_zm_craftables;
 
 #namespace zm_stalingrad_craftables;
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x425546e5, Offset: 0x1b0
 // Size: 0x44
 function function_95743e9f() {
@@ -16,7 +16,7 @@ function function_95743e9f() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x701cdc63, Offset: 0x200
 // Size: 0x1c
 function function_3ebec56b() {
@@ -24,7 +24,7 @@ function function_3ebec56b() {
 }
 
 // Namespace zm_stalingrad_craftables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd67189d, Offset: 0x228
 // Size: 0x1d4
 function register_clientfields() {

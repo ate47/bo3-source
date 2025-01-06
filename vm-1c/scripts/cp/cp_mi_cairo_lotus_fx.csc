@@ -1,10 +1,10 @@
-#using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/fx_shared;
 
 #namespace cp_mi_cairo_lotus_fx;
 
 // Namespace cp_mi_cairo_lotus_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xde554ca3, Offset: 0x148
 // Size: 0x14
 function main() {
@@ -12,7 +12,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_lotus_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2414f55a, Offset: 0x168
 // Size: 0x56
 function function_f45953c() {

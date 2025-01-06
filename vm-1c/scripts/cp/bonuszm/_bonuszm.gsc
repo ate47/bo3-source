@@ -1,69 +1,69 @@
-#using scripts/cp/bonuszm/_bonuszm_zurich;
-#using scripts/cp/bonuszm/_bonuszm_vengeance;
+#using scripts/codescripts/struct;
+#using scripts/cp/_laststand;
+#using scripts/cp/_load;
+#using scripts/cp/_oed;
+#using scripts/cp/_util;
 #using scripts/cp/bonuszm/_bonuszm_aquifer;
+#using scripts/cp/bonuszm/_bonuszm_biodomes1;
 #using scripts/cp/bonuszm/_bonuszm_blackstation;
+#using scripts/cp/bonuszm/_bonuszm_data;
+#using scripts/cp/bonuszm/_bonuszm_dev;
+#using scripts/cp/bonuszm/_bonuszm_drops;
 #using scripts/cp/bonuszm/_bonuszm_infection;
-#using scripts/cp/bonuszm/_bonuszm_ramses;
 #using scripts/cp/bonuszm/_bonuszm_lotus;
+#using scripts/cp/bonuszm/_bonuszm_magicbox;
 #using scripts/cp/bonuszm/_bonuszm_newworld;
 #using scripts/cp/bonuszm/_bonuszm_prologue;
-#using scripts/cp/bonuszm/_bonuszm_biodomes1;
+#using scripts/cp/bonuszm/_bonuszm_ramses;
 #using scripts/cp/bonuszm/_bonuszm_sgen;
-#using scripts/cp/bonuszm/_bonuszm_zmsng;
-#using scripts/cp/bonuszm/_bonuszm_weapons;
-#using scripts/cp/bonuszm/_bonuszm_magicbox;
-#using scripts/cp/bonuszm/_bonuszm_spawner_shared;
-#using scripts/cp/bonuszm/_bonuszm_drops;
-#using scripts/cp/bonuszm/_bonuszm_data;
-#using scripts/cp/bonuszm/_bonuszm_util;
 #using scripts/cp/bonuszm/_bonuszm_sound;
-#using scripts/cp/bonuszm/_bonuszm_dev;
+#using scripts/cp/bonuszm/_bonuszm_spawner_shared;
+#using scripts/cp/bonuszm/_bonuszm_util;
+#using scripts/cp/bonuszm/_bonuszm_vengeance;
+#using scripts/cp/bonuszm/_bonuszm_weapons;
+#using scripts/cp/bonuszm/_bonuszm_zmsng;
 #using scripts/cp/bonuszm/_bonuszm_zombie;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/_laststand;
-#using scripts/cp/_util;
-#using scripts/cp/_oed;
-#using scripts/cp/_load;
-#using scripts/cp/cybercom/_cybercom_util;
-#using scripts/cp/cybercom/_cybercom_tactical_rig;
-#using scripts/cp/cybercom/_cybercom_gadget;
+#using scripts/cp/bonuszm/_bonuszm_zurich;
 #using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/gametypes/_globallogic_player;
+#using scripts/cp/cybercom/_cybercom_gadget;
+#using scripts/cp/cybercom/_cybercom_tactical_rig;
+#using scripts/cp/cybercom/_cybercom_util;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/tweakables_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
+#using scripts/cp/gametypes/_globallogic_player;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/_oob;
-#using scripts/shared/music_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/load_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/gameskill_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/containers_shared;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/shared;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/ammo_shared;
+#using scripts/shared/archetype_shared/archetype_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/clientids_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ammo_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/ai_shared;
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/archetype_shared/archetype_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/containers_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/gameskill_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/load_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/tweakables_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace bonuszm;
 
@@ -1009,7 +1009,7 @@ function function_9bc25e40() {
     level endon(#"bzmExtraZombieCleared");
     assert(level.var_a9e78bf7["<dev string:x28>"]);
     var_df4e4d0f = getnavfaceregion(self.origin, 64);
-    attacker = self waittill(#"death");
+    self waittill(#"death", attacker);
     if (!isdefined(self)) {
         return;
     }
@@ -1418,7 +1418,7 @@ function function_a608d09() {
 // Checksum 0xce053a16, Offset: 0x62b8
 // Size: 0x6c6
 function zombie_death_event(zombie) {
-    attacker = zombie waittill(#"death");
+    zombie waittill(#"death", attacker);
     time_of_death = gettime();
     if (isdefined(zombie)) {
         zombie stopsounds();
@@ -1759,12 +1759,12 @@ function function_11692fba() {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5438f43d, Offset: 0x7c88
 // Size: 0x172
-function function_88adb698(skiptoname, var_a50fa19f) {
+function function_88adb698(var_454219da, var_a50fa19f) {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }
-    assert(isdefined(skiptoname));
-    bonuszmdata::function_da5f2c0d(getdvarstring("mapname"), skiptoname);
+    assert(isdefined(var_454219da));
+    namespace_a432d965::function_da5f2c0d(getdvarstring("mapname"), var_454219da);
     if (!var_a50fa19f && level.var_a9e78bf7["onlyuseonstart"]) {
         level.var_a9e78bf7["extraspawns"] = 0;
     }
@@ -1807,7 +1807,7 @@ function function_5abd553b() {
     self endon(#"disconnect");
     self endon(#"death");
     while (true) {
-        var_455568c4 = self waittill(#"hash_62a3f030");
+        self waittill(#"hash_62a3f030", var_455568c4);
         array::add(level.var_9a25f386, var_455568c4);
     }
 }

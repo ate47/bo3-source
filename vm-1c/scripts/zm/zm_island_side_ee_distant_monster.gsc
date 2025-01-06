@@ -1,25 +1,25 @@
-#using scripts/zm/zm_island_util;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_island_util;
 
 #namespace zm_island_side_ee_distant_monster;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_side_ee_distant_monster
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x3e8
 // Size: 0x4
 function __init__() {
@@ -40,7 +40,7 @@ function __init__() {
 }
 
 // Namespace zm_island_side_ee_distant_monster
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbe0b4f08, Offset: 0x3f8
 // Size: 0x5c
 function main() {
@@ -60,7 +60,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_island_side_ee_distant_monster
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa4956a7d, Offset: 0x470
 // Size: 0x114
 function function_e94b80b9() {
@@ -80,7 +80,7 @@ function function_e94b80b9() {
 }
 
 // Namespace zm_island_side_ee_distant_monster
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25e29879, Offset: 0x590
 // Size: 0x1d4
 function function_549b07cb() {
@@ -107,7 +107,7 @@ function function_549b07cb() {
 /#
 
     // Namespace zm_island_side_ee_distant_monster
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xef872461, Offset: 0x770
     // Size: 0x6c
     function function_abe01b4d() {
@@ -118,7 +118,7 @@ function function_549b07cb() {
     }
 
     // Namespace zm_island_side_ee_distant_monster
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xbf55fbe2, Offset: 0x7e8
     // Size: 0x66
     function function_603ad7e1(cmd) {

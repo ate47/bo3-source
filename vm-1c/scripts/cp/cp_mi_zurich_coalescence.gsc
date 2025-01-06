@@ -1,30 +1,30 @@
-#using scripts/cp/cp_mi_zurich_coalescence_patch;
-#using scripts/cp/cp_mi_zurich_coalescence_sound;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_load;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_coalescence_accolades;
+#using scripts/cp/cp_mi_zurich_coalescence_clearing;
 #using scripts/cp/cp_mi_zurich_coalescence_fx;
 #using scripts/cp/cp_mi_zurich_coalescence_outro;
-#using scripts/cp/cp_mi_zurich_coalescence_root_cinematics;
-#using scripts/cp/cp_mi_zurich_coalescence_root_zurich;
-#using scripts/cp/cp_mi_zurich_coalescence_root_singapore;
+#using scripts/cp/cp_mi_zurich_coalescence_patch;
 #using scripts/cp/cp_mi_zurich_coalescence_root_cairo;
-#using scripts/cp/cp_mi_zurich_coalescence_clearing;
-#using scripts/cp/cp_mi_zurich_coalescence_zurich_server_room;
-#using scripts/cp/cp_mi_zurich_coalescence_zurich_sacrifice;
+#using scripts/cp/cp_mi_zurich_coalescence_root_cinematics;
+#using scripts/cp/cp_mi_zurich_coalescence_root_singapore;
+#using scripts/cp/cp_mi_zurich_coalescence_root_zurich;
+#using scripts/cp/cp_mi_zurich_coalescence_sound;
+#using scripts/cp/cp_mi_zurich_coalescence_util;
+#using scripts/cp/cp_mi_zurich_coalescence_zurich_city;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_hq;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_plaza_battle;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_rails;
+#using scripts/cp/cp_mi_zurich_coalescence_zurich_sacrifice;
+#using scripts/cp/cp_mi_zurich_coalescence_zurich_server_room;
 #using scripts/cp/cp_mi_zurich_coalescence_zurich_street;
-#using scripts/cp/cp_mi_zurich_coalescence_zurich_city;
-#using scripts/cp/cp_mi_zurich_coalescence_util;
-#using scripts/cp/cp_mi_zurich_coalescence_accolades;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_collectibles;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_zurich_coalescence;
 
@@ -38,7 +38,7 @@ function function_243693d4() {
 }
 
 // Namespace cp_mi_zurich_coalescence
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbd4bd025, Offset: 0xc70
 // Size: 0x234
 function main() {
@@ -72,7 +72,7 @@ function main() {
 }
 
 // Namespace cp_mi_zurich_coalescence
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd2c8647f, Offset: 0xeb0
 // Size: 0x124
 function init_clientfields() {
@@ -85,7 +85,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_zurich_coalescence
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b586f68, Offset: 0xfe0
 // Size: 0x614
 function function_673254cc() {
@@ -117,7 +117,7 @@ function function_673254cc() {
 }
 
 // Namespace cp_mi_zurich_coalescence
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x536589f2, Offset: 0x1600
 // Size: 0x24
 function init_level_vars() {
@@ -125,7 +125,7 @@ function init_level_vars() {
 }
 
 // Namespace cp_mi_zurich_coalescence
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce7f4080, Offset: 0x1630
 // Size: 0x404
 function flag_init() {

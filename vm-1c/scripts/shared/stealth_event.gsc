@@ -1,15 +1,15 @@
-#using scripts/shared/stealth_vo;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
 #using scripts/shared/stealth_behavior;
 #using scripts/shared/stealth_debug;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_event;
 
 // Namespace stealth_event
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e56cedd, Offset: 0x210
 // Size: 0xd4
 function init() {
@@ -35,7 +35,7 @@ function enabled() {
 }
 
 // Namespace stealth_event
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9adab0ab, Offset: 0x318
 // Size: 0x274
 function function_78e2e218() {
@@ -57,7 +57,7 @@ function function_78e2e218() {
 }
 
 // Namespace stealth_event
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20a6caa, Offset: 0x598
 // Size: 0x3a
 function function_b349369d() {
@@ -66,7 +66,7 @@ function function_b349369d() {
 }
 
 // Namespace stealth_event
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7632f097, Offset: 0x5e0
 // Size: 0x196
 function register_handler(eventname, func, var_8a0dd434) {
@@ -105,7 +105,7 @@ function register_handler(eventname, func, var_8a0dd434) {
 }
 
 // Namespace stealth_event
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5dcaad, Offset: 0x780
 // Size: 0x48
 function function_44782a56(eventname) {
@@ -117,53 +117,53 @@ function function_44782a56(eventname) {
 }
 
 // Namespace stealth_event
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4b18709b, Offset: 0x7d0
 // Size: 0x58
 function function_6a7aa4bf(eventname) {
     self endon(#"hash_2bbc4f84");
     while (true) {
-        arg1 = self waittill(eventname);
+        self waittill(eventname, arg1);
         self thread function_5b52d0d9(eventname, arg1);
     }
 }
 
 // Namespace stealth_event
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3ad7200b, Offset: 0x830
 // Size: 0x68
 function function_f8733584(eventname) {
     self endon(#"hash_2bbc4f84");
     while (true) {
-        arg1, arg2 = self waittill(eventname);
+        self waittill(eventname, arg1, arg2);
         self thread function_5b52d0d9(eventname, arg1, arg2);
     }
 }
 
 // Namespace stealth_event
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfb7e1ed0, Offset: 0x8a0
 // Size: 0x5c
 function function_551bd4f3() {
     self endon(#"stop_stealth");
-    arg1, arg2 = self waittill(#"death");
+    self waittill(#"death", arg1, arg2);
     self thread function_5b52d0d9("death", arg1, arg2);
 }
 
 // Namespace stealth_event
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe6778b0e, Offset: 0x908
 // Size: 0x78
 function function_1e75afed(eventname) {
     self endon(#"hash_2bbc4f84");
     while (true) {
-        arg1, arg2, arg3 = self waittill(eventname);
+        self waittill(eventname, arg1, arg2, arg3);
         self thread function_5b52d0d9(eventname, arg1, arg2, arg3);
     }
 }
 
 // Namespace stealth_event
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x56171fa8, Offset: 0x988
 // Size: 0x2c6
 function private function_5b52d0d9(eventname, arg1, arg2, arg3) {
@@ -201,7 +201,7 @@ function private function_5b52d0d9(eventname, arg1, arg2, arg3) {
 }
 
 // Namespace stealth_event
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa19e0de5, Offset: 0xc58
 // Size: 0x134
 function function_26f273e1(var_904f1fb9) {
@@ -225,7 +225,7 @@ function function_26f273e1(var_904f1fb9) {
 }
 
 // Namespace stealth_event
-// Params 11, eflags: 0x1 linked
+// Params 11, eflags: 0x0
 // Checksum 0x393acedc, Offset: 0xd98
 // Size: 0x26a
 function function_7dd521be(str_team, v_origin, radius, maxheightdiff, requiresight, eventname, arg1, arg2, arg3, arg4, arg5) {

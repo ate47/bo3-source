@@ -1,11 +1,11 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/sound_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/sound_shared;
+#using scripts/shared/util_shared;
 
 #namespace tabun;
 
 // Namespace tabun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6be7c8be, Offset: 0x390
 // Size: 0x2fc
 function init_shared() {
@@ -40,7 +40,7 @@ function init_shared() {
 }
 
 // Namespace tabun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6943bd01, Offset: 0x698
 // Size: 0x248
 function checkdvarupdates() {
@@ -64,12 +64,12 @@ function checkdvarupdates() {
 }
 
 // Namespace tabun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x319b862e, Offset: 0x8e8
 // Size: 0xd4
 function watchtabungrenadedetonation(owner) {
     self endon(#"trophy_destroyed");
-    position, surface = self waittill(#"explode");
+    self waittill(#"explode", position, surface);
     if (!isdefined(level.water_duds) || level.water_duds == 1) {
         if (isdefined(surface) && surface == "water") {
             return;
@@ -83,7 +83,7 @@ function watchtabungrenadedetonation(owner) {
 }
 
 // Namespace tabun
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x50b3fa68, Offset: 0x9c8
 // Size: 0x3f2
 function damageeffectarea(owner, position, radius, height, killcament) {
@@ -139,7 +139,7 @@ function damageeffectarea(owner, position, radius, height, killcament) {
 }
 
 // Namespace tabun
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xae633b96, Offset: 0xdc8
 // Size: 0x3b0
 function damageinpoisonarea(gaseffectarea, killcament, trace, position) {
@@ -192,7 +192,7 @@ function damageinpoisonarea(gaseffectarea, killcament, trace, position) {
 }
 
 // Namespace tabun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x874b0fe4, Offset: 0x1180
 // Size: 0x3c
 function deleteentonownerdeath(owner) {
@@ -202,7 +202,7 @@ function deleteentonownerdeath(owner) {
 }
 
 // Namespace tabun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xae128989, Offset: 0x11c8
 // Size: 0x24
 function watch_death() {
@@ -211,7 +211,7 @@ function watch_death() {
 }
 
 // Namespace tabun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5f3c9081, Offset: 0x11f8
 // Size: 0x1c
 function function_87a4a08b() {
@@ -219,7 +219,7 @@ function function_87a4a08b() {
 }
 
 // Namespace tabun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4323a513, Offset: 0x1220
 // Size: 0x1c
 function show_hud() {
@@ -227,7 +227,7 @@ function show_hud() {
 }
 
 // Namespace tabun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe0a0baa, Offset: 0x1248
 // Size: 0xcc
 function generatelocations(position, owner) {
@@ -244,7 +244,7 @@ function generatelocations(position, owner) {
 }
 
 // Namespace tabun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x75d904ff, Offset: 0x1320
 // Size: 0xcc
 function singlelocation(position, owner) {
@@ -256,7 +256,7 @@ function singlelocation(position, owner) {
 }
 
 // Namespace tabun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa81e5806, Offset: 0x13f8
 // Size: 0xd8
 function hitpos(start, end, color) {
@@ -272,7 +272,7 @@ function hitpos(start, end, color) {
 }
 
 // Namespace tabun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6533de4f, Offset: 0x14d8
 // Size: 0x976
 function spawnalllocs(owner, startpos) {
@@ -379,7 +379,7 @@ function spawnalllocs(owner, startpos) {
 }
 
 // Namespace tabun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xac500c34, Offset: 0x1e58
 // Size: 0xf4
 function playtabunsound(position) {
@@ -395,7 +395,7 @@ function playtabunsound(position) {
 }
 
 // Namespace tabun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfb735030, Offset: 0x1f58
 // Size: 0x2e2
 function setuptabunfx(owner, locations, count) {
@@ -427,7 +427,7 @@ function setuptabunfx(owner, locations, count) {
 }
 
 // Namespace tabun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3929658, Offset: 0x2248
 // Size: 0x100
 function getcenteroflocations(locations) {
@@ -446,7 +446,7 @@ function getcenteroflocations(locations) {
 }
 
 // Namespace tabun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9192584c, Offset: 0x2350
 // Size: 0x268
 function getcenter(locations) {
@@ -489,7 +489,7 @@ function getcenter(locations) {
 /#
 
     // Namespace tabun
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0x93c5b9bc, Offset: 0x25c0
     // Size: 0xbc
     function tabun_debug_line(from, to, color, depthtest, time) {

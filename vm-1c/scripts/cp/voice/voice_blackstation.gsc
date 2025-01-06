@@ -3,7 +3,7 @@
 #namespace voice_blackstation;
 
 // Namespace voice_blackstation
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd32f6f11, Offset: 0x3108
 // Size: 0x2084
 function init_voice() {

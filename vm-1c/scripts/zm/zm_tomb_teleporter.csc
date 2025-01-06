@@ -1,17 +1,17 @@
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #using_animtree("generic");
 
 #namespace zm_tomb_teleporter;
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaca97e60, Offset: 0x260
 // Size: 0x94
 function init() {
@@ -20,7 +20,7 @@ function init() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7784ded7, Offset: 0x300
 // Size: 0x2c
 function main() {
@@ -28,7 +28,7 @@ function main() {
 }
 
 // Namespace zm_tomb_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd3e25ce2, Offset: 0x338
 // Size: 0x106
 function function_a8255fab(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -64,7 +64,7 @@ function function_ffedfe48(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_tomb_teleporter
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe7ffb710, Offset: 0x538
 // Size: 0x172
 function function_dadd24b7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

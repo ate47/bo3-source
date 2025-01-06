@@ -1,10 +1,10 @@
-#using scripts/shared/ai/systems/fx_character;
-#using scripts/cp/_util;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/shared/ai/systems/fx_character;
+#using scripts/shared/array_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace lotus_util;
 

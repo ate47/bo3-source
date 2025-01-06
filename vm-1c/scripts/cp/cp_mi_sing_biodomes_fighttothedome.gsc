@@ -1,35 +1,35 @@
-#using scripts/cp/cp_mi_sing_biodomes_sound;
-#using scripts/cp/cp_mi_sing_biodomes_accolades;
-#using scripts/cp/cp_mi_sing_biodomes_cloudmountain;
-#using scripts/cp/cp_mi_sing_biodomes_util;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
 #using scripts/cp/_objectives;
 #using scripts/cp/_skipto;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
 #using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_biodomes_accolades;
+#using scripts/cp/cp_mi_sing_biodomes_cloudmountain;
+#using scripts/cp/cp_mi_sing_biodomes_sound;
+#using scripts/cp/cp_mi_sing_biodomes_util;
 #using scripts/cp/gametypes/_battlechatter;
-#using scripts/shared/vehicles/_hunter;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/colors_shared;
 #using scripts/shared/ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
 #using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_hunter;
 
 #namespace cp_mi_sing_biodomes_fighttothedome;
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x800
 // Size: 0x4
 function main() {
@@ -37,7 +37,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5988e8b3, Offset: 0x810
 // Size: 0x46c
 function objective_fighttothedome_init(str_objective, var_74cd64bc) {
@@ -87,7 +87,7 @@ function objective_fighttothedome_init(str_objective, var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9383bf7, Offset: 0xc88
 // Size: 0xb4
 function function_203a65ec(a_ents) {
@@ -98,7 +98,7 @@ function function_203a65ec(a_ents) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5a1a6a1c, Offset: 0xd48
 // Size: 0x84
 function function_e6379a2(var_74cd64bc) {
@@ -111,7 +111,7 @@ function function_e6379a2(var_74cd64bc) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2be2f13, Offset: 0xdd8
 // Size: 0x5c
 function function_76c56ee1() {
@@ -123,7 +123,7 @@ function function_76c56ee1() {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x56cd45d1, Offset: 0xe40
 // Size: 0x4c
 function function_868ce0d5(var_edc6e0e1) {
@@ -132,7 +132,7 @@ function function_868ce0d5(var_edc6e0e1) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x442b1c21, Offset: 0xe98
 // Size: 0x1bc
 function function_646d5121() {
@@ -159,7 +159,7 @@ function function_646d5121() {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8de6d159, Offset: 0x1060
 // Size: 0x7c
 function function_df8adf84(var_9200d3f9) {
@@ -170,7 +170,7 @@ function function_df8adf84(var_9200d3f9) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2296047d, Offset: 0x10e8
 // Size: 0x16c
 function function_f68b9e51() {
@@ -187,7 +187,7 @@ function function_f68b9e51() {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x51f1866e, Offset: 0x1260
 // Size: 0x10c
 function function_2ed72358(var_8df23e0a) {
@@ -202,7 +202,7 @@ function function_2ed72358(var_8df23e0a) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd192896b, Offset: 0x1378
 // Size: 0x84
 function function_c4de5eee(a_ents) {
@@ -213,7 +213,7 @@ function function_c4de5eee(a_ents) {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b2fd60e, Offset: 0x1408
 // Size: 0x6c
 function function_a0204230() {
@@ -225,7 +225,7 @@ function function_a0204230() {
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0xa55ab8dc, Offset: 0x1480
 // Size: 0xb4
 function function_daf71f6(e_inflictor, e_attacker, n_damage, n_dflags, str_means_of_death, w_weapon, v_point, v_dir, str_hit_loc, var_269779a, psoffsettime, var_fe8d5ebb) {
@@ -239,7 +239,7 @@ function function_daf71f6(e_inflictor, e_attacker, n_damage, n_dflags, str_means
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xb61a45a0, Offset: 0x1540
 // Size: 0x4c
 function objective_fighttothedome_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -248,7 +248,7 @@ function objective_fighttothedome_done(str_objective, var_74cd64bc, var_e4cd2b8b
 }
 
 // Namespace cp_mi_sing_biodomes_fighttothedome
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52b8668f, Offset: 0x1598
 // Size: 0x24
 function function_3d342090() {

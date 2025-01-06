@@ -1,34 +1,34 @@
-#using scripts/cp/cp_mi_sing_vengeance_sound;
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_vengeance_accolades;
 #using scripts/cp/cp_mi_sing_vengeance_quadtank_alley;
+#using scripts/cp/cp_mi_sing_vengeance_sound;
 #using scripts/cp/cp_mi_sing_vengeance_util;
-#using scripts/cp/_debug;
-#using scripts/shared/stealth_level;
-#using scripts/shared/gameobjects_shared;
 #using scripts/cp/gametypes/_save;
-#using scripts/shared/stealth_vo;
-#using scripts/shared/animation_shared;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
-#using scripts/cp/_util;
-#using scripts/cp/_spawn_manager;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_level;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_vo;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_445ee992;
 
@@ -104,8 +104,8 @@ function function_803e1db9(str_objective, var_74cd64bc) {
 // Checksum 0x2e6fe2e5, Offset: 0x17d8
 // Size: 0x8b
 function function_254de1e5() {
-    var_3ced446f = getaiteamarray("allies");
-    foreach (ally in var_3ced446f) {
+    a_allies = getaiteamarray("allies");
+    foreach (ally in a_allies) {
         if (isdefined(ally.remote_owner)) {
             ally delete();
         }
@@ -415,12 +415,12 @@ function function_e9e34547() {
     level.cafe_burning_54i_thug_a_ai thread namespace_63b4601c::function_394ba9b5(level.cafe_burning_54i_thug_b_ai);
     level.cafe_burning_54i_thug_b_ai thread namespace_63b4601c::function_394ba9b5(level.cafe_burning_54i_thug_a_ai);
     level.cafe_burning_54i_thug_a_ai thread namespace_63b4601c::function_d468b73d("death", array(level.cafe_burning_civ_01_ai, level.cafe_burning_civ_02_ai, level.cafe_burning_civ_03_ai), "cafe_burning_check_for_escape");
-    var_7f22fa2d = [];
-    var_7f22fa2d[0] = level.cafe_burning_54i_thug_a_ai;
-    var_7f22fa2d[1] = level.cafe_burning_54i_thug_b_ai;
-    level.cafe_burning_civ_01_ai thread function_dc4e86b5(var_7f22fa2d);
-    level.cafe_burning_civ_02_ai thread function_dc4e86b5(var_7f22fa2d);
-    level.cafe_burning_civ_03_ai thread function_dc4e86b5(var_7f22fa2d);
+    enemy_array = [];
+    enemy_array[0] = level.cafe_burning_54i_thug_a_ai;
+    enemy_array[1] = level.cafe_burning_54i_thug_b_ai;
+    level.cafe_burning_civ_01_ai thread function_dc4e86b5(enemy_array);
+    level.cafe_burning_civ_02_ai thread function_dc4e86b5(enemy_array);
+    level.cafe_burning_civ_03_ai thread function_dc4e86b5(enemy_array);
 }
 
 // Namespace namespace_445ee992
@@ -456,8 +456,8 @@ function function_558e4ac8() {
 // Params 2, eflags: 0x0
 // Checksum 0xc2b2f426, Offset: 0x2b80
 // Size: 0xcb
-function function_924af258(a_ents, var_fa34ed42) {
-    if (isdefined(var_fa34ed42)) {
+function function_924af258(a_ents, hide_me) {
+    if (isdefined(hide_me)) {
         foreach (ent in a_ents) {
             ent hide();
         }
@@ -616,14 +616,14 @@ function function_8ac1fffe() {
 // Params 1, eflags: 0x0
 // Checksum 0x2741453f, Offset: 0x3328
 // Size: 0xb3
-function function_dc4e86b5(var_7f22fa2d) {
+function function_dc4e86b5(enemy_array) {
     level endon(#"dogleg_1_end");
     level endon(#"stealth_discovered");
-    damage, attacker = self waittill(#"damage");
+    self waittill(#"damage", damage, attacker);
     if (isplayer(attacker)) {
-        foreach (enemy in var_7f22fa2d) {
+        foreach (enemy in enemy_array) {
             if (isdefined(enemy)) {
-                enemy thread stealth_level::function_959a64c9();
+                enemy thread stealth_level::wake_all();
             }
         }
     }

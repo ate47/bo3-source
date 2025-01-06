@@ -1,8 +1,8 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_microwavegun;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb583057f, Offset: 0x328
 // Size: 0x16c
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x852ba97, Offset: 0x4a0
 // Size: 0x7a
 function player_init() {
@@ -42,7 +42,7 @@ function player_init() {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdcaf4ba2, Offset: 0x528
 // Size: 0x68
 function function_d2c42bf0(localclientnum, tag, effect) {
@@ -52,7 +52,7 @@ function function_d2c42bf0(localclientnum, tag, effect) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x30d3c6f4, Offset: 0x598
 // Size: 0x66
 function function_3a02ff65(localclientnum, tag) {
@@ -63,7 +63,7 @@ function function_3a02ff65(localclientnum, tag) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf90a093, Offset: 0x608
 // Size: 0x17c
 function function_a5b034e9(localclientnum) {
@@ -94,7 +94,7 @@ function function_a5b034e9(localclientnum) {
 }
 
 // Namespace zm_weap_microwavegun
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1efa0c2, Offset: 0x790
 // Size: 0x166
 function function_40068206(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -122,7 +122,7 @@ function function_40068206(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_weap_microwavegun
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfc4397fe, Offset: 0x900
 // Size: 0x30e
 function function_c1551b70(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

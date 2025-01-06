@@ -1,5 +1,5 @@
-#using scripts/mp/teams/_teamset;
 #using scripts/codescripts/struct;
+#using scripts/mp/teams/_teamset;
 
 #namespace _teamset_allies;
 

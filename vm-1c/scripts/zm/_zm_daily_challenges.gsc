@@ -1,21 +1,21 @@
-#using scripts/zm/gametypes/_globallogic_score;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm;
-#using scripts/shared/flag_shared;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/table_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/table_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/gametypes/_globallogic_score;
 
 #namespace zm_daily_challenges;
 
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x624e1fbf, Offset: 0x8a8
 // Size: 0x84
 function __init__() {
@@ -39,7 +39,7 @@ function __init__() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcd33ab48, Offset: 0x938
 // Size: 0x34
 function __main__() {
@@ -48,7 +48,7 @@ function __main__() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdd753b4b, Offset: 0x978
 // Size: 0x96
 function on_connect() {
@@ -63,7 +63,7 @@ function on_connect() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52a51f75, Offset: 0xa18
 // Size: 0x1c
 function on_spawned() {
@@ -71,7 +71,7 @@ function on_spawned() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x87879af9, Offset: 0xa40
 // Size: 0x1ba
 function round_tracking() {
@@ -115,7 +115,7 @@ function round_tracking() {
 }
 
 // Namespace zm_daily_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x76520194, Offset: 0xc08
 // Size: 0x8e4
 function death_check_for_challenge_updates(e_attacker) {
@@ -292,13 +292,13 @@ function death_check_for_challenge_updates(e_attacker) {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9b5c95c, Offset: 0x14f8
 // Size: 0xd0
 function spent_points_tracking() {
     level endon(#"end_game");
     while (true) {
-        player, n_points = level waittill(#"spent_points");
+        level waittill(#"spent_points", player, n_points);
         player.a_daily_challenges[1] = player.a_daily_challenges[1] + n_points;
         player zm_stats::increment_challenge_stat("ZM_DAILY_SPEND_25K", n_points);
         player zm_stats::increment_challenge_stat("ZM_DAILY_SPEND_50K", n_points);
@@ -309,13 +309,13 @@ function spent_points_tracking() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x826c28cd, Offset: 0x15d0
 // Size: 0xd8
 function earned_points_tracking() {
     level endon(#"end_game");
     while (true) {
-        player, n_points = level waittill(#"earned_points");
+        level waittill(#"earned_points", player, n_points);
         if (level.zombie_vars[player.team]["zombie_point_scalar"] == 2) {
             player.a_daily_challenges[2] = player.a_daily_challenges[2] + n_points;
             player zm_stats::increment_challenge_stat("ZM_DAILY_EARN_5K_WITH_2X", n_points);
@@ -327,7 +327,7 @@ function earned_points_tracking() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1815350a, Offset: 0x16b0
 // Size: 0x68
 function challenge_ingame_time_tracking() {
@@ -342,7 +342,7 @@ function challenge_ingame_time_tracking() {
 }
 
 // Namespace zm_daily_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5ff13b97, Offset: 0x1720
 // Size: 0xec
 function increment_windows_repaired(s_barrier) {
@@ -365,7 +365,7 @@ function increment_windows_repaired(s_barrier) {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x9fdada64, Offset: 0x1818
 // Size: 0x96
 function private rebuild_timer() {
@@ -384,7 +384,7 @@ function private rebuild_timer() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x96c9415, Offset: 0x18b8
 // Size: 0xac
 function increment_magic_box() {
@@ -401,7 +401,7 @@ function increment_magic_box() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xceab98c9, Offset: 0x1970
 // Size: 0xca
 function increment_nuked_zombie() {
@@ -416,13 +416,13 @@ function increment_nuked_zombie() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x32b774bb, Offset: 0x1a48
 // Size: 0x70
 function perk_purchase_tracking() {
     self endon(#"disconnect");
     while (true) {
-        str_perk = self waittill(#"perk_purchased");
+        self waittill(#"perk_purchased", str_perk);
         self zm_stats::increment_challenge_stat("ZM_DAILY_PURCHASE_PERKS");
         /#
             debug_print("<dev string:x395>");
@@ -431,7 +431,7 @@ function perk_purchase_tracking() {
 }
 
 // Namespace zm_daily_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7beeb60b, Offset: 0x1ac0
 // Size: 0x68
 function perk_drink_tracking() {
@@ -448,7 +448,7 @@ function perk_drink_tracking() {
 /#
 
     // Namespace zm_daily_challenges
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x96518ae5, Offset: 0x1b30
     // Size: 0x24
     function debug_print(str_line) {
@@ -458,7 +458,7 @@ function perk_drink_tracking() {
 #/
 
 // Namespace zm_daily_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x46457839, Offset: 0x1b60
 // Size: 0x1fc
 function on_challenge_complete(params) {
@@ -479,7 +479,7 @@ function on_challenge_complete(params) {
 }
 
 // Namespace zm_daily_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7a5650f9, Offset: 0x1d68
 // Size: 0x4e
 function is_daily_challenge(n_challenge_index) {

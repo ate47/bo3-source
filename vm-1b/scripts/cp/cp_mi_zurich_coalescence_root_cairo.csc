@@ -1,9 +1,9 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/cp_mi_zurich_coalescence_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/scene_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
 
 #namespace root_cairo;
 
@@ -43,17 +43,17 @@ function function_889c4970(localclientnum, oldval, newval, bnewent, binitialsnap
             return;
         }
         level.var_fdb616fc = 1;
-        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_b_collapse_01_bundle", &namespace_8e9083ff::function_4dd02a03, "init", "cairo_root_client_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_b_collapse_01_bundle", &zurich_util::function_4dd02a03, "init", "cairo_root_client_cleanup");
         level thread scene::init("p7_fxanim_cp_zurich_cairo_b_collapse_01_bundle");
-        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_b_collapse_02_bundle", &namespace_8e9083ff::function_4dd02a03, "init", "cairo_root_client_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_b_collapse_02_bundle", &zurich_util::function_4dd02a03, "init", "cairo_root_client_cleanup");
         level thread scene::init("p7_fxanim_cp_zurich_cairo_b_collapse_02_bundle");
-        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_b_collapse_03_bundle", &namespace_8e9083ff::function_4dd02a03, "init", "cairo_root_client_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_b_collapse_03_bundle", &zurich_util::function_4dd02a03, "init", "cairo_root_client_cleanup");
         level thread scene::init("p7_fxanim_cp_zurich_cairo_b_collapse_03_bundle");
-        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_lightpole_bundle", &namespace_8e9083ff::function_4dd02a03, "init", "cairo_root_client_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_cairo_lightpole_bundle", &zurich_util::function_4dd02a03, "init", "cairo_root_client_cleanup");
         level thread scene::init("p7_fxanim_cp_zurich_cairo_lightpole_bundle");
-        scene::add_scene_func("p7_fxanim_cp_zurich_sinkhole_01_bundle", &namespace_8e9083ff::function_4dd02a03, "init", "cairo_root_client_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_sinkhole_01_bundle", &zurich_util::function_4dd02a03, "init", "cairo_root_client_cleanup");
         level thread scene::init("p7_fxanim_cp_zurich_sinkhole_01_bundle");
-        scene::add_scene_func("p7_fxanim_cp_zurich_sinkhole_02_bundle", &namespace_8e9083ff::function_4dd02a03, "init", "cairo_root_client_cleanup");
+        scene::add_scene_func("p7_fxanim_cp_zurich_sinkhole_02_bundle", &zurich_util::function_4dd02a03, "init", "cairo_root_client_cleanup");
         level thread scene::init("p7_fxanim_cp_zurich_sinkhole_02_bundle");
         var_84828c57 = getentarray(localclientnum, "cairo_client_building", "targetname");
         array::thread_all(var_84828c57, &function_ea552f44, localclientnum);

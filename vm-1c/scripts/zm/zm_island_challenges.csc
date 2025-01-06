@@ -1,17 +1,17 @@
-#using scripts/zm/_filter;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/filter_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_filter;
 
 #namespace zm_island_challenges;
 
 // Namespace zm_island_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6ff34a8a, Offset: 0x3c8
 // Size: 0x3cc
 function init() {
@@ -32,7 +32,7 @@ function init() {
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4e5f7fdc, Offset: 0x7a0
 // Size: 0xfc
 function pillar_challenge_0_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -46,7 +46,7 @@ function pillar_challenge_0_1(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc016f565, Offset: 0x8a8
 // Size: 0xfc
 function pillar_challenge_0_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -60,7 +60,7 @@ function pillar_challenge_0_2(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf1448737, Offset: 0x9b0
 // Size: 0xfc
 function pillar_challenge_0_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -74,7 +74,7 @@ function pillar_challenge_0_3(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8d043e1b, Offset: 0xab8
 // Size: 0xfc
 function pillar_challenge_1_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,7 +88,7 @@ function pillar_challenge_1_1(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x67b770ff, Offset: 0xbc0
 // Size: 0xfc
 function pillar_challenge_1_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -102,7 +102,7 @@ function pillar_challenge_1_2(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe617369c, Offset: 0xcc8
 // Size: 0xfc
 function pillar_challenge_1_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -116,7 +116,7 @@ function pillar_challenge_1_3(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x75ab2c3b, Offset: 0xdd0
 // Size: 0xfc
 function pillar_challenge_2_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -130,7 +130,7 @@ function pillar_challenge_2_1(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6c85c18b, Offset: 0xed8
 // Size: 0xfc
 function pillar_challenge_2_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -144,7 +144,7 @@ function pillar_challenge_2_2(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc4c01cc8, Offset: 0xfe0
 // Size: 0xfc
 function pillar_challenge_2_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -158,7 +158,7 @@ function pillar_challenge_2_3(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7277989b, Offset: 0x10e8
 // Size: 0xfc
 function pillar_challenge_3_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -172,7 +172,7 @@ function pillar_challenge_3_1(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x513ed6bc, Offset: 0x11f0
 // Size: 0xfc
 function pillar_challenge_3_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -186,7 +186,7 @@ function pillar_challenge_3_2(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5622176d, Offset: 0x12f8
 // Size: 0xfc
 function pillar_challenge_3_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -200,7 +200,7 @@ function pillar_challenge_3_3(localclientnum, oldval, newval, bnewent, binitials
 }
 
 // Namespace zm_island_challenges
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x9da02333, Offset: 0x1400
 // Size: 0xee
 function function_4aadb052(localclientnum, newval, n_challenge, var_2ca030e2) {
@@ -221,7 +221,7 @@ function function_4aadb052(localclientnum, newval, n_challenge, var_2ca030e2) {
 }
 
 // Namespace zm_island_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6098f423, Offset: 0x14f8
 // Size: 0x14c
 function function_4516da29(localclientnum, n_challenge) {
@@ -235,7 +235,7 @@ function function_4516da29(localclientnum, n_challenge) {
 }
 
 // Namespace zm_island_challenges
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xbfaaf255, Offset: 0x1650
 // Size: 0xbc
 function function_2fba808e(localclientnum, n_challenge, var_2ca030e2) {
@@ -249,7 +249,7 @@ function function_2fba808e(localclientnum, n_challenge, var_2ca030e2) {
 }
 
 // Namespace zm_island_challenges
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xfe92d449, Offset: 0x1718
 // Size: 0xbc
 function function_21cf53eb(localclientnum, n_challenge, var_2ca030e2) {
@@ -263,7 +263,7 @@ function function_21cf53eb(localclientnum, n_challenge, var_2ca030e2) {
 }
 
 // Namespace zm_island_challenges
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf5a33374, Offset: 0x17e0
 // Size: 0xbc
 function function_72573d3d(localclientnum, n_challenge, var_2ca030e2) {
@@ -277,7 +277,7 @@ function function_72573d3d(localclientnum, n_challenge, var_2ca030e2) {
 }
 
 // Namespace zm_island_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2fd8abca, Offset: 0x18a8
 // Size: 0xbc
 function challenge_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

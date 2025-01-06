@@ -1,8 +1,8 @@
 #using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
 #using scripts/shared/ai/systems/animation_state_machine_mocomp;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
 
 #namespace archetype_mocomps_utility;
 
@@ -34,7 +34,7 @@ function autoexec initadjusttocoverparams() {
 }
 
 // Namespace archetype_mocomps_utility
-// Params 19, eflags: 0x5 linked
+// Params 19, eflags: 0x4
 // Checksum 0x57fed533, Offset: 0x9e8
 // Size: 0x236
 function private _addadjusttocover(archetype, node, stance, rot2, rot32, rot3, rot36, rot6, rot69, rot9, rot98, rot8, rot87, rot7, rot47, rot4, rot14, rot1, rot21) {
@@ -68,7 +68,7 @@ function private _addadjusttocover(archetype, node, stance, rot2, rot32, rot3, r
 }
 
 // Namespace archetype_mocomps_utility
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0xf2da7e91, Offset: 0xc28
 // Size: 0x3ee
 function private _getadjusttocoverrotation(archetype, node, stance, angletonode) {
@@ -127,7 +127,7 @@ function private _getadjusttocoverrotation(archetype, node, stance, angletonode)
 }
 
 // Namespace archetype_mocomps_utility
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd8db1be4, Offset: 0x1020
 // Size: 0x180
 function private debuglocoexplosion(entity) {
@@ -147,7 +147,7 @@ function private debuglocoexplosion(entity) {
 }
 
 // Namespace archetype_mocomps_utility
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x5d486610, Offset: 0x11a8
 // Size: 0xfc
 function private mocompflankstandinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -161,7 +161,7 @@ function private mocompflankstandinit(entity, mocompanim, mocompanimblendouttime
 }
 
 // Namespace archetype_mocomps_utility
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xdd0d7f58, Offset: 0x12b0
 // Size: 0xbc
 function private mocomplocoexplosioninit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -175,7 +175,7 @@ function private mocomplocoexplosioninit(entity, mocompanim, mocompanimblendoutt
 }
 
 // Namespace archetype_mocomps_utility
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x87174ec9, Offset: 0x1378
 // Size: 0x2a8
 function private mocompadjusttocoverinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -199,7 +199,7 @@ function private mocompadjusttocoverinit(entity, mocompanim, mocompanimblendoutt
 }
 
 // Namespace archetype_mocomps_utility
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xeaaced7d, Offset: 0x1628
 // Size: 0x38c
 function private mocompadjusttocoverupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -229,7 +229,7 @@ function private mocompadjusttocoverupdate(entity, mocompanim, mocompanimblendou
 }
 
 // Namespace archetype_mocomps_utility
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xc5349406, Offset: 0x19c0
 // Size: 0x11a
 function private mocompadjusttocoverterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {

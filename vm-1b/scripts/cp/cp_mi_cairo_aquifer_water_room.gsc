@@ -1,33 +1,33 @@
-#using scripts/cp/cp_mi_cairo_aquifer_sound;
-#using scripts/cp/gametypes/_save;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/exploder_shared;
+#using scripts/codescripts/struct;
+#using scripts/cp/_debug;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hazard;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_cairo_aquifer_ambience;
 #using scripts/cp/cp_mi_cairo_aquifer_objectives;
+#using scripts/cp/cp_mi_cairo_aquifer_sound;
 #using scripts/cp/cp_mi_cairo_aquifer_utility;
-#using scripts/shared/fx_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/math_shared;
-#using scripts/cp/_hazard;
-#using scripts/shared/colors_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/hud_shared;
-#using scripts/shared/scene_shared;
+#using scripts/cp/gametypes/_save;
 #using scripts/shared/ai/systems/ai_interface;
-#using scripts/shared/array_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
 #using scripts/shared/flag_shared;
-#using scripts/codescripts/struct;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_objectives;
-#using scripts/cp/_dialog;
-#using scripts/cp/_debug;
-#using scripts/cp/_skipto;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
+#using scripts/shared/fx_shared;
+#using scripts/shared/hud_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_cairo_aquifer_water_room;
 
@@ -664,7 +664,7 @@ function function_a476832a(delay, duration) {
 function function_a05b1c8c() {
     closest = level.activeplayers[0];
     var_e34a3797 = [];
-    var_52aa09ce = getent("look_at_kane_origin", "targetname");
+    kane = getent("look_at_kane_origin", "targetname");
     var_be38fd90 = getent("door_trap_origin", "targetname");
     foreach (player in level.activeplayers) {
         if (distance(player.origin, var_be38fd90.origin) < -81) {
@@ -680,7 +680,7 @@ function function_a05b1c8c() {
         array::add(var_e34a3797, closest);
     }
     foreach (player in var_e34a3797) {
-        thread function_a0faf694(player, var_52aa09ce, var_be38fd90);
+        thread function_a0faf694(player, kane, var_be38fd90);
     }
 }
 
@@ -688,7 +688,7 @@ function function_a05b1c8c() {
 // Params 3, eflags: 0x0
 // Checksum 0x4e4d1946, Offset: 0x2ff8
 // Size: 0x1c2
-function function_a0faf694(var_4b70f64, var_52aa09ce, var_be38fd90) {
+function function_a0faf694(var_4b70f64, kane, var_be38fd90) {
     rotator = spawn("script_origin", var_4b70f64.origin);
     rotator.angles = var_4b70f64 getplayerangles();
     var_4b70f64 playerlinkto(rotator, undefined, 1, 0, 0, 0, 0);
@@ -697,9 +697,9 @@ function function_a0faf694(var_4b70f64, var_52aa09ce, var_be38fd90) {
         if (var_4b70f64.origin[1] < var_be38fd90.origin[1]) {
             rotator moveto(rotator.origin + (0, 40, 0), 0.3, 0.15, 0.15);
         }
-        rotator rotateto(vectortoangles(var_52aa09ce.origin - var_4b70f64.origin), 0.7, 0.3, 0.3);
+        rotator rotateto(vectortoangles(kane.origin - var_4b70f64.origin), 0.7, 0.3, 0.3);
     } else {
-        rotator rotateto(vectortoangles(var_52aa09ce.origin - player_eye), 0.7, 0.3, 0.3);
+        rotator rotateto(vectortoangles(kane.origin - player_eye), 0.7, 0.3, 0.3);
     }
     rotator waittill(#"rotatedone");
     var_4b70f64 unlink();

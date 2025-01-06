@@ -1,28 +1,28 @@
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/archetype_apothicon_fury;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/ai/zombie;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/aat_shared;
+#using scripts/shared/ai/archetype_apothicon_fury;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/zombie;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_genesis_apothicon_fury;
 
@@ -35,7 +35,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31d89297, Offset: 0x638
 // Size: 0xfc
 function __init__() {
@@ -52,7 +52,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95908dfb, Offset: 0x740
 // Size: 0x64
 function function_51dd865c() {
@@ -61,11 +61,11 @@ function function_51dd865c() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28527a94, Offset: 0x7b0
 // Size: 0x74
 function apothicon_fury_death() {
-    e_attacker = self waittill(#"death");
+    self waittill(#"death", e_attacker);
     if (isdefined(e_attacker) && isdefined(e_attacker.var_4d307aef)) {
         e_attacker.var_4d307aef++;
     }
@@ -75,7 +75,7 @@ function apothicon_fury_death() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x77605070, Offset: 0x830
 // Size: 0x208
 function function_21bbe70d(v_origin, v_angles, var_8d71b2b8) {
@@ -110,7 +110,7 @@ function function_21bbe70d(v_origin, v_angles, var_8d71b2b8) {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x6d3572c1, Offset: 0xa40
 // Size: 0x124
 function private function_7ba80ea7() {
@@ -133,7 +133,7 @@ function private function_7ba80ea7() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x5408839c, Offset: 0xb70
 // Size: 0xb8
 function private function_1be68e3f() {
@@ -152,7 +152,7 @@ function private function_1be68e3f() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x97e79d02, Offset: 0xc30
 // Size: 0xa0
 function function_ab27e73a() {
@@ -186,7 +186,7 @@ function function_16beb600(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd8
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x8ca681e2, Offset: 0xd88
 // Size: 0x494
 function function_b55fb314(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd83, var_3988ba7b) {
@@ -226,7 +226,7 @@ function function_b55fb314(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd8
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x38900f55, Offset: 0x1228
 // Size: 0x1c
 function function_2c871f46() {
@@ -234,7 +234,7 @@ function function_2c871f46() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7858aadf, Offset: 0x1250
 // Size: 0x118
 function function_e5e94978() {
@@ -259,7 +259,7 @@ function function_e5e94978() {
 }
 
 // Namespace zm_genesis_apothicon_fury
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3e2c8af1, Offset: 0x1370
 // Size: 0xa8
 function function_1dcdd145() {
@@ -277,7 +277,7 @@ function function_1dcdd145() {
 /#
 
     // Namespace zm_genesis_apothicon_fury
-    // Params 0, eflags: 0x5 linked
+    // Params 0, eflags: 0x4
     // Checksum 0xfa5d2dc8, Offset: 0x1420
     // Size: 0x44
     function private function_bc2e7a98() {
@@ -288,7 +288,7 @@ function function_1dcdd145() {
 #/
 
 // Namespace zm_genesis_apothicon_fury
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe7339969, Offset: 0x1470
 // Size: 0x6c6
 function private function_744725d0(cmd) {

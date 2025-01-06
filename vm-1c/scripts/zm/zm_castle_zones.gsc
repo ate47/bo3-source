@@ -1,19 +1,19 @@
-#using scripts/zm/zm_castle;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_load;
+#using scripts/codescripts/struct;
 #using scripts/shared/ai/zombie_utility;
-#using scripts/shared/scene_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
 #using scripts/shared/exploder_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_load;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_castle;
 
 #namespace zm_castle_zones;
 
 // Namespace zm_castle_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd893da8a, Offset: 0x838
 // Size: 0x9cc
 function init() {
@@ -104,7 +104,7 @@ function function_15166300() {
 }
 
 // Namespace zm_castle_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf001cdd4, Offset: 0x12e0
 // Size: 0x1a6
 function function_e9579b3e() {
@@ -129,7 +129,7 @@ function function_e9579b3e() {
 }
 
 // Namespace zm_castle_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe8c5082e, Offset: 0x1490
 // Size: 0x164
 function function_8ead5cf5() {
@@ -147,7 +147,7 @@ function function_8ead5cf5() {
 }
 
 // Namespace zm_castle_zones
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7e01306, Offset: 0x1600
 // Size: 0x19a
 function function_affecb53(var_405e4f24) {
@@ -169,7 +169,7 @@ function function_affecb53(var_405e4f24) {
 }
 
 // Namespace zm_castle_zones
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x59e55e6d, Offset: 0x17a8
 // Size: 0x236
 function function_48cfc7df(spot) {
@@ -206,7 +206,7 @@ function function_48cfc7df(spot) {
 }
 
 // Namespace zm_castle_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8c3c5793, Offset: 0x19e8
 // Size: 0x4c
 function function_27a6dd5f() {
@@ -218,7 +218,7 @@ function function_27a6dd5f() {
 }
 
 // Namespace zm_castle_zones
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6cb66b5, Offset: 0x1a40
 // Size: 0x4c
 function anchor_delete_watcher() {

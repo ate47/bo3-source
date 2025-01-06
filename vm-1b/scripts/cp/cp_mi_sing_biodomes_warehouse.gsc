@@ -1,40 +1,40 @@
-#using scripts/cp/_objectives;
-#using scripts/cp/_squad_control;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
+#using scripts/codescripts/struct;
 #using scripts/cp/_dialog;
-#using scripts/shared/ai/robot_phalanx;
-#using scripts/cp/cp_mi_sing_biodomes_sound;
-#using scripts/cp/cp_mi_sing_biodomes_accolades;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_squad_control;
+#using scripts/cp/_util;
 #using scripts/cp/cp_mi_sing_biodomes;
-#using scripts/cp/cp_mi_sing_biodomes_util;
+#using scripts/cp/cp_mi_sing_biodomes_accolades;
 #using scripts/cp/cp_mi_sing_biodomes_markets;
+#using scripts/cp/cp_mi_sing_biodomes_sound;
+#using scripts/cp/cp_mi_sing_biodomes_util;
+#using scripts/cp/cybercom/_cybercom_gadget;
+#using scripts/cp/cybercom/_cybercom_gadget_security_breach;
 #using scripts/cp/gametypes/_battlechatter;
 #using scripts/cp/gametypes/_save;
-#using scripts/cp/cybercom/_cybercom_gadget_security_breach;
-#using scripts/cp/cybercom/_cybercom_gadget;
-#using scripts/shared/vehicles/_siegebot;
 #using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai/robot_phalanx;
 #using scripts/shared/ai/warlord;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/compass;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/compass;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_siegebot;
 
 #namespace cp_mi_sing_biodomes_warehouse;
 
@@ -358,7 +358,7 @@ function function_6fb5d6ef() {
 function function_26edc5d7() {
     self endon(#"death");
     while (true) {
-        ai_guy = self waittill(#"trigger");
+        self waittill(#"trigger", ai_guy);
         if (isdefined(ai_guy.owner) && isplayer(ai_guy.owner) || isplayer(ai_guy)) {
             break;
         }
@@ -423,7 +423,7 @@ function function_89e35d86() {
     }
     level thread namespace_f1b4cbbc::function_973b77f9();
     objectives::show("cp_waypoint_breadcrumb");
-    level thread namespace_36171bd3::function_9c52a47e("pry_door");
+    level thread squad_control::function_9c52a47e("pry_door");
     level dialog::remote("kane_the_robots_should_be_0", 2);
     level waittill(#"hash_24ac1796");
     level flag::set("back_door_opened");
@@ -718,7 +718,7 @@ function function_994b4243() {
     self endon(#"back_door_opened");
     self endon(#"siegebot_alerted");
     self endon(#"death");
-    hijackingplayer = self waittill(#"ccom_lock_being_targeted");
+    self waittill(#"ccom_lock_being_targeted", hijackingplayer);
     trigger::use("trig_siegebot_alerted", "targetname");
 }
 
@@ -888,7 +888,7 @@ function function_5ecd2f63() {
 // Size: 0x42
 function function_db58f411() {
     var_526a0aed = getent("pry_door", "script_noteworthy");
-    level thread namespace_36171bd3::function_bb612155(var_526a0aed);
+    level thread squad_control::function_bb612155(var_526a0aed);
 }
 
 // Namespace cp_mi_sing_biodomes_warehouse
@@ -899,7 +899,7 @@ function function_3460d45c() {
     self endon(#"disconnect");
     level endon(#"hash_43a6ada4");
     while (true) {
-        var_52b4a338 = self waittill(#"clonedentity");
+        self waittill(#"clonedentity", var_52b4a338);
         self namespace_7cb6cd95::function_6c745562(getent("hijacked_vehicle_range", "targetname"));
     }
 }

@@ -1,11 +1,11 @@
-#using scripts/cp/_skipto;
 #using scripts/cp/_accolades;
+#using scripts/cp/_skipto;
 #using scripts/cp/gametypes/_save;
 
 #namespace decorations;
 
 // Namespace decorations
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbe24ebc8, Offset: 0x238
 // Size: 0xbe
 function function_25328f50(var_aeda862b) {
@@ -19,7 +19,7 @@ function function_25328f50(var_aeda862b) {
 }
 
 // Namespace decorations
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc88625d6, Offset: 0x300
 // Size: 0x124
 function function_59f1fa79(map_name) {
@@ -38,7 +38,7 @@ function function_59f1fa79(map_name) {
 }
 
 // Namespace decorations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x22b99d7, Offset: 0x430
 // Size: 0xf4
 function function_e72fc18() {
@@ -77,7 +77,7 @@ function function_59727018() {
 }
 
 // Namespace decorations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2a2060b, Offset: 0x5f0
 // Size: 0xa8
 function function_13cc355e() {
@@ -105,7 +105,7 @@ function function_7006b9ad() {
 }
 
 // Namespace decorations
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x758a52d6, Offset: 0x768
 // Size: 0x120
 function function_931263b1(difficulty) {
@@ -123,7 +123,7 @@ function function_931263b1(difficulty) {
 }
 
 // Namespace decorations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x13458d59, Offset: 0x890
 // Size: 0x6c
 function function_2bc66a34() {
@@ -134,7 +134,7 @@ function function_2bc66a34() {
 }
 
 // Namespace decorations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9417d87e, Offset: 0x908
 // Size: 0x21a
 function function_7b01cb74() {
@@ -169,7 +169,7 @@ function function_7b01cb74() {
 }
 
 // Namespace decorations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3716a6f, Offset: 0xb30
 // Size: 0x1de
 function function_6cd12a29() {
@@ -200,7 +200,7 @@ function function_6cd12a29() {
 }
 
 // Namespace decorations
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9ec2b837, Offset: 0xd18
 // Size: 0x4e
 function function_bea4ff57() {

@@ -1,10 +1,10 @@
-#using scripts/shared/callbacks_shared;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/compass;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/compass;
+#using scripts/shared/util_shared;
 
 #namespace mp_freerun_01;
 
@@ -59,7 +59,7 @@ function function_355278da() {
 // Size: 0x80
 function function_29d8b21() {
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (isplayer(player)) {
             self thread util::trigger_thread(player, &function_ba004d47, &function_93b59391);
         }

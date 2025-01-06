@@ -1,8 +1,8 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/systems/fx_character;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zodcompanionclientutils;
 

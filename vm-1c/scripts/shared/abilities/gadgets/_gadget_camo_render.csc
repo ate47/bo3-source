@@ -1,6 +1,6 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/duplicaterender_mgr;
 #using scripts/codescripts/struct;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/system_shared;
 
 #namespace _gadget_camo_render;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_camo_render
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xab0ec71b, Offset: 0x460
 // Size: 0x184
 function __init__() {
@@ -29,7 +29,7 @@ function __init__() {
 #namespace gadget_camo_render;
 
 // Namespace gadget_camo_render
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x29aa0b9f, Offset: 0x5f0
 // Size: 0xbc
 function forceon(local_client_num) {
@@ -42,7 +42,7 @@ function forceon(local_client_num) {
 }
 
 // Namespace gadget_camo_render
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc14d6820, Offset: 0x6b8
 // Size: 0x364
 function doreveal(local_client_num, direction) {

@@ -1,9 +1,9 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace empgrenade;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfed6fe21, Offset: 0x228
 // Size: 0x84
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81639193, Offset: 0x2b8
 // Size: 0x3c
 function on_player_spawned() {
@@ -36,7 +36,7 @@ function on_player_spawned() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xadc8ca9d, Offset: 0x300
 // Size: 0x228
 function monitorempgrenade() {
@@ -45,7 +45,7 @@ function monitorempgrenade() {
     self endon(#"killempmonitor");
     self.empendtime = 0;
     while (true) {
-        attacker, explosionpoint = self waittill(#"emp_grenaded");
+        self waittill(#"emp_grenaded", attacker, explosionpoint);
         if (!isalive(self) || self hasperk("specialty_immuneemp")) {
             continue;
         }
@@ -77,7 +77,7 @@ function monitorempgrenade() {
 }
 
 // Namespace empgrenade
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4d8b6d58, Offset: 0x530
 // Size: 0x334
 function applyemp(attacker, explosionpoint) {
@@ -130,7 +130,7 @@ function applyemp(attacker, explosionpoint) {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2543d7c5, Offset: 0x870
 // Size: 0x54
 function empgrenadedeathwaiter() {
@@ -144,7 +144,7 @@ function empgrenadedeathwaiter() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5157ef, Offset: 0x8d0
 // Size: 0x54
 function function_2be0d392() {
@@ -158,7 +158,7 @@ function function_2be0d392() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2b0a4b1b, Offset: 0x930
 // Size: 0x7c
 function checktoturnoffemp() {
@@ -174,7 +174,7 @@ function checktoturnoffemp() {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x191fb63, Offset: 0x9b8
 // Size: 0x54
 function shutdownemprebootindicatormenu() {
@@ -185,7 +185,7 @@ function shutdownemprebootindicatormenu() {
 }
 
 // Namespace empgrenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x76d92163, Offset: 0xa18
 // Size: 0x70
 function emprumbleloop(duration) {
@@ -199,7 +199,7 @@ function emprumbleloop(duration) {
 }
 
 // Namespace empgrenade
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x17d960f1, Offset: 0xa90
 // Size: 0xac
 function watchempexplosion(owner, weapon) {
@@ -207,12 +207,12 @@ function watchempexplosion(owner, weapon) {
     owner endon(#"team_changed");
     self endon(#"trophy_destroyed");
     owner addweaponstat(weapon, "used", 1);
-    origin, surface = self waittill(#"explode");
+    self waittill(#"explode", origin, surface);
     level empexplosiondamageents(owner, weapon, origin, 425, 1);
 }
 
 // Namespace empgrenade
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x7fbabb98, Offset: 0xb48
 // Size: 0x132
 function empexplosiondamageents(owner, weapon, origin, radius, damageplayers) {
@@ -229,7 +229,7 @@ function empexplosiondamageents(owner, weapon, origin, radius, damageplayers) {
 }
 
 // Namespace empgrenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x37e9f679, Offset: 0xc88
 // Size: 0xb0
 function begin_other_grenade_tracking() {
@@ -238,7 +238,7 @@ function begin_other_grenade_tracking() {
     self notify(#"hash_916b3972");
     self endon(#"hash_916b3972");
     for (;;) {
-        grenade, weapon, cooktime = self waittill(#"grenade_fire");
+        self waittill(#"grenade_fire", grenade, weapon, cooktime);
         if (grenade util::ishacked()) {
             continue;
         }

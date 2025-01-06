@@ -1,26 +1,26 @@
-#using scripts/zm/zm_challenges_tomb;
-#using scripts/zm/zm_tomb_vo;
+#using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_powerup_double_points;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_zombie_blood;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_utility;
 #using scripts/zm/_zm_weap_one_inch_punch;
 #using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_powerup_zombie_blood;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/zm_challenges_tomb;
+#using scripts/zm/zm_tomb_vo;
 
 #namespace zm_tomb_challenges;
 
 // Namespace zm_tomb_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc57866f3, Offset: 0x580
 // Size: 0x1c
 function challenges_init() {
@@ -28,7 +28,7 @@ function challenges_init() {
 }
 
 // Namespace zm_tomb_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3145d99a, Offset: 0x5a8
 // Size: 0x184
 function function_5abe71ac() {
@@ -51,18 +51,18 @@ function function_5abe71ac() {
 }
 
 // Namespace zm_tomb_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x60dc65b4, Offset: 0x738
 // Size: 0x58
 function function_f0cd0d99() {
     while (true) {
-        player, points = level waittill(#"spent_points");
+        level waittill(#"spent_points", player, points);
         player zm_challenges_tomb::function_6b433789("zc_points_spent", points);
     }
 }
 
 // Namespace zm_tomb_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbccb72c0, Offset: 0x798
 // Size: 0x9c
 function function_23b9880() {
@@ -74,7 +74,7 @@ function function_23b9880() {
 }
 
 // Namespace zm_tomb_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x47476cd2, Offset: 0x840
 // Size: 0x724
 function function_6b2cf8b5() {
@@ -92,7 +92,7 @@ function function_6b2cf8b5() {
     wait 1;
     self clientfield::set("foot_print_box_glow", 0);
     while (self.var_286a167f < n_souls_required) {
-        player = self waittill(#"hash_6c130b53");
+        self waittill(#"hash_6c130b53", player);
         self.var_286a167f++;
         if (self.var_286a167f == 1) {
             self thread scene::play("p7_fxanim_zm_ori_challenge_box_open_bundle", self);
@@ -157,13 +157,13 @@ function function_6b2cf8b5() {
 }
 
 // Namespace zm_tomb_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc06ae652, Offset: 0xf70
 // Size: 0x98
 function function_232e28db() {
     self endon(#"hash_d9c666c1");
     while (true) {
-        self waittill(#"hash_d1aaf42c");
+        self waittill(#"robot_foot_stomp");
         self scene::play("p7_fxanim_zm_ori_challenge_box_close_bundle", self);
         self clientfield::set("foot_print_box_glow", 0);
         self.var_286a167f = 0;
@@ -173,7 +173,7 @@ function function_232e28db() {
 }
 
 // Namespace zm_tomb_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x843af902, Offset: 0x1010
 // Size: 0x152
 function function_a93cf9ad(attacker) {
@@ -190,7 +190,7 @@ function function_a93cf9ad(attacker) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x693573fd, Offset: 0x1170
 // Size: 0x360
 function function_d1f64b7e(player, var_4d6f50a9) {
@@ -226,7 +226,7 @@ function function_d1f64b7e(player, var_4d6f50a9) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa8217238, Offset: 0x14d8
 // Size: 0x32
 function function_702e0edf(player, var_4d6f50a9) {
@@ -234,7 +234,7 @@ function function_702e0edf(player, var_4d6f50a9) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xded5b6d2, Offset: 0x1518
 // Size: 0x32
 function function_51587ba7(player, n_timeout) {
@@ -242,7 +242,7 @@ function function_51587ba7(player, n_timeout) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5da3c5b5, Offset: 0x1558
 // Size: 0x32
 function function_2bd3ec4f(player, n_timeout) {
@@ -250,7 +250,7 @@ function function_2bd3ec4f(player, n_timeout) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x88284733, Offset: 0x1598
 // Size: 0x2b0
 function function_20d46fd1(player, str_powerup, n_timeout) {
@@ -295,7 +295,7 @@ function function_20d46fd1(player, str_powerup, n_timeout) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3131f67f, Offset: 0x1850
 // Size: 0x240
 function function_7bd2fe26(player, var_4d6f50a9) {
@@ -324,7 +324,7 @@ function function_7bd2fe26(player, var_4d6f50a9) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9ba3b77e, Offset: 0x1a98
 // Size: 0x74
 function function_49e55229(player) {
@@ -336,7 +336,7 @@ function function_49e55229(player) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf644b7e0, Offset: 0x1b18
 // Size: 0x1c8
 function function_6fa5ca25(player, var_4d6f50a9) {
@@ -359,7 +359,7 @@ function function_6fa5ca25(player, var_4d6f50a9) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d3c8b16, Offset: 0x1ce8
 // Size: 0x62
 function function_f1627038(var_4d6f50a9) {
@@ -398,7 +398,7 @@ function function_e506c54b(player, var_4d6f50a9) {
 }
 
 // Namespace zm_tomb_challenges
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x319fb4e2, Offset: 0x1f60
 // Size: 0x1a
 function getweaponmodel(weapon) {

@@ -1,16 +1,16 @@
-#using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld_sound;
-#using scripts/cp/cp_mi_zurich_newworld_fx;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/shared/audio_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld_fx;
+#using scripts/cp/cp_mi_zurich_newworld_sound;
+#using scripts/cp/cp_mi_zurich_newworld_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace cp_mi_zurich_newworld;
 
@@ -19,7 +19,7 @@
 // Checksum 0x30f011bc, Offset: 0xd40
 // Size: 0x72
 function main() {
-    util::function_57b966c8(&function_71f88fc, 10);
+    util::function_57b966c8(&force_streamer, 10);
     init_clientfields();
     cp_mi_zurich_newworld_fx::main();
     cp_mi_zurich_newworld_sound::main();
@@ -70,7 +70,7 @@ function init_clientfields() {
 // Params 1, eflags: 0x0
 // Checksum 0xccf79f1e, Offset: 0x14b8
 // Size: 0x285
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         break;
@@ -498,7 +498,7 @@ function function_965a6439(localclientnum) {
             n_y = randomfloatrange(-100, 100);
             n_z = randomfloatrange(10, 100);
             self launchragdoll((n_x, n_y, n_z));
-            self thread namespace_ce0e5f06::function_52bc98a1(localclientnum);
+            self thread newworld_util::function_52bc98a1(localclientnum);
             break;
         }
         wait 0.05;
@@ -593,7 +593,7 @@ function train_brake_flaps(localclientnum, oldval, newval, bnewent, binitialsnap
         foreach (var_13f418 in var_a1ec3453) {
             var_13f418 rotatepitch(-90, 0.5);
             var_13f418 thread function_20e68acf(localclientnum);
-            var_13f418 thread namespace_ce0e5f06::function_ff1b6796(localclientnum);
+            var_13f418 thread newworld_util::function_ff1b6796(localclientnum);
             var_13f418 playloopsound("evt_airbreak_loop");
             var_13f418 playsound(0, "evt_airbreak_deploy");
             n_count++;

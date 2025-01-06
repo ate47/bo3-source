@@ -1,22 +1,22 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/killstreaks/_killstreak_bundles;
 #using scripts/mp/killstreaks/_killstreaks;
-#using scripts/shared/vehicle_death_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicle_shared;
 #using scripts/shared/ai/blackboard_vehicle;
 #using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/laststand_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/damagefeedback_shared;
 #using scripts/shared/flag_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/gameskill_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/statemachine_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/turret_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/statemachine_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/gameskill_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_death_shared;
+#using scripts/shared/vehicle_shared;
 
 #using_animtree("generic");
 
@@ -24,15 +24,15 @@
 
 // Namespace quadtank
 // Params 0, eflags: 0x2
-// Checksum 0xe564b4f4, Offset: 0x878
+// Checksum 0x839bce14, Offset: 0x868
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("quadtank", &__init__, undefined, undefined);
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8c5d2b1f, Offset: 0x8b8
+// Params 0, eflags: 0x0
+// Checksum 0xfcdae9c7, Offset: 0x8a8
 // Size: 0x8c
 function __init__() {
     vehicle::add_main_callback("quadtank", &function_58d90469);
@@ -41,8 +41,8 @@ function __init__() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x8601f6b, Offset: 0x950
+// Params 0, eflags: 0x0
+// Checksum 0x3549dd03, Offset: 0x940
 // Size: 0x42c
 function function_58d90469() {
     self useanimtree(#generic);
@@ -98,8 +98,8 @@ function function_58d90469() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x34652c5e, Offset: 0xd88
+// Params 0, eflags: 0x0
+// Checksum 0x2ceb8fdc, Offset: 0xd78
 // Size: 0x13c
 function function_28a3b4bc() {
     if (isdefined(level.players)) {
@@ -117,7 +117,7 @@ function function_28a3b4bc() {
 
 // Namespace quadtank
 // Params 0, eflags: 0x0
-// Checksum 0xd226ba0b, Offset: 0xed0
+// Checksum 0xaf4dc58f, Offset: 0xec0
 // Size: 0x20c
 function defaultrole() {
     self.state_machine = self vehicle_ai::init_state_machine_for_role("default");
@@ -136,7 +136,7 @@ function defaultrole() {
 
 // Namespace quadtank
 // Params 0, eflags: 0x0
-// Checksum 0x81b1fef5, Offset: 0x10e8
+// Checksum 0x28115de0, Offset: 0x10d8
 // Size: 0x30
 function function_a389866() {
     self vehicle_ai::set_state("off");
@@ -145,7 +145,7 @@ function function_a389866() {
 
 // Namespace quadtank
 // Params 0, eflags: 0x0
-// Checksum 0x761caa4e, Offset: 0x1120
+// Checksum 0xb32c917f, Offset: 0x1110
 // Size: 0x30
 function function_fefa9078() {
     self vehicle_ai::set_state("combat");
@@ -153,8 +153,8 @@ function function_fefa9078() {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0xa5454479, Offset: 0x1158
+// Params 1, eflags: 0x0
+// Checksum 0x1bc47607, Offset: 0x1148
 // Size: 0x1e4
 function state_off_enter(params) {
     self playsound("veh_quadtank_power_down");
@@ -179,8 +179,8 @@ function state_off_enter(params) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x4127a959, Offset: 0x1348
+// Params 1, eflags: 0x0
+// Checksum 0x364609c0, Offset: 0x1338
 // Size: 0x9c
 function state_off_exit(params) {
     self vehicle::lights_on();
@@ -192,8 +192,8 @@ function state_off_exit(params) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3d210615, Offset: 0x13f0
+// Params 0, eflags: 0x0
+// Checksum 0x9c171717, Offset: 0x13e0
 // Size: 0x128
 function function_4ebb4502() {
     self endon(#"death");
@@ -211,8 +211,8 @@ function function_4ebb4502() {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x858ddc78, Offset: 0x1520
+// Params 1, eflags: 0x0
+// Checksum 0xf2e06b61, Offset: 0x1510
 // Size: 0x1cc
 function function_f71fc8b7(params) {
     self endon(#"change_state");
@@ -241,8 +241,8 @@ function function_f71fc8b7(params) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0xd9c1f0f4, Offset: 0x16f8
+// Params 1, eflags: 0x0
+// Checksum 0xd1ec7a6a, Offset: 0x16e8
 // Size: 0xbc
 function state_scripted_update(params) {
     self endon(#"death");
@@ -256,8 +256,8 @@ function state_scripted_update(params) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x2b0c192a, Offset: 0x17c0
+// Params 1, eflags: 0x0
+// Checksum 0xa183df05, Offset: 0x17b0
 // Size: 0x1b4
 function state_driving_update(params) {
     self endon(#"death");
@@ -284,15 +284,15 @@ function state_driving_update(params) {
 
 // Namespace quadtank
 // Params 0, eflags: 0x0
-// Checksum 0x892b9683, Offset: 0x1980
+// Checksum 0xc392c632, Offset: 0x1970
 // Size: 0x24
 function function_86fe5c5e() {
     self setgoal(self.origin);
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x56dedde0, Offset: 0x19b0
+// Params 1, eflags: 0x0
+// Checksum 0x9e3cdf9f, Offset: 0x19a0
 // Size: 0x12e
 function state_combat_update(params) {
     self endon(#"death");
@@ -319,8 +319,8 @@ function state_combat_update(params) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x198ee9d2, Offset: 0x1ae8
+// Params 1, eflags: 0x0
+// Checksum 0x7be7ef57, Offset: 0x1ad8
 // Size: 0x54
 function state_combat_exit(params) {
     self notify(#"end_attack_thread");
@@ -330,8 +330,8 @@ function state_combat_exit(params) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7d503ab9, Offset: 0x1b48
+// Params 1, eflags: 0x0
+// Checksum 0xb429fc43, Offset: 0x1b38
 // Size: 0x25c
 function quadtank_death(params) {
     self endon(#"death");
@@ -365,8 +365,8 @@ function quadtank_death(params) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0xc75bbdba, Offset: 0x1db0
+// Params 1, eflags: 0x0
+// Checksum 0x23c03295, Offset: 0x1da0
 // Size: 0x20c
 function function_8ec0e22c(params) {
     self endon(#"death");
@@ -397,8 +397,8 @@ function function_8ec0e22c(params) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0xac6fd41d, Offset: 0x1fc8
+// Params 0, eflags: 0x0
+// Checksum 0x24e6b73d, Offset: 0x1fb8
 // Size: 0x36
 function function_fcd2c4ce() {
     if (self.trophy_down === 1) {
@@ -411,8 +411,8 @@ function function_fcd2c4ce() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0xe65b2d60, Offset: 0x2008
+// Params 0, eflags: 0x0
+// Checksum 0x6bbddb55, Offset: 0x1ff8
 // Size: 0x1c
 function trophy_destroyed() {
     if (self.var_de9eba31 >= 1) {
@@ -422,8 +422,8 @@ function trophy_destroyed() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x4af0ff6b, Offset: 0x2030
+// Params 0, eflags: 0x0
+// Checksum 0x69666629, Offset: 0x2020
 // Size: 0x42c
 function function_5d17667f() {
     self endon(#"death");
@@ -481,8 +481,8 @@ function function_5d17667f() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0xc78c8315, Offset: 0x2468
+// Params 0, eflags: 0x0
+// Checksum 0xad1385b7, Offset: 0x2458
 // Size: 0x262
 function function_ce00e5c0() {
     self endon(#"death");
@@ -528,8 +528,8 @@ function function_ce00e5c0() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0xb053b9db, Offset: 0x26d8
+// Params 0, eflags: 0x0
+// Checksum 0x98f8babe, Offset: 0x26c8
 // Size: 0x68
 function function_acb4f83c() {
     self function_d013f7fa((10, -90, 0), 1);
@@ -538,8 +538,8 @@ function function_acb4f83c() {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x1948f919, Offset: 0x2748
+// Params 1, eflags: 0x0
+// Checksum 0x9078d9e2, Offset: 0x2738
 // Size: 0x2c0
 function function_bcd490eb(var_dcf15942) {
     self endon(#"death");
@@ -582,8 +582,8 @@ function function_bcd490eb(var_dcf15942) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x90894a4c, Offset: 0x2a10
+// Params 1, eflags: 0x0
+// Checksum 0x40b22b1d, Offset: 0x2a00
 // Size: 0x74
 function function_e672a8ad(on) {
     if (on) {
@@ -596,8 +596,8 @@ function function_e672a8ad(on) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0xef488ab5, Offset: 0x2a90
+// Params 1, eflags: 0x0
+// Checksum 0xb2dfd05c, Offset: 0x2a80
 // Size: 0x44
 function function_6daea2f7(show) {
     if (show) {
@@ -608,13 +608,13 @@ function function_6daea2f7(show) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x49ac44db, Offset: 0x2ae0
+// Params 1, eflags: 0x0
+// Checksum 0xe8d9db4c, Offset: 0x2ad0
 // Size: 0x13c
 function function_bb3e5dc7(target) {
     self endon(#"change_state");
     self playsound("veh_quadtank_cannon_charge");
-    proj = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", proj);
     self thread function_af1bc2b1(proj);
     if (isdefined(target) && isdefined(proj)) {
         vel = proj getvelocity();
@@ -626,8 +626,8 @@ function function_bb3e5dc7(target) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x2f46b973, Offset: 0x2c28
+// Params 0, eflags: 0x0
+// Checksum 0xf39619d6, Offset: 0x2c18
 // Size: 0x5f0
 function function_9196ecf2() {
     self endon(#"death");
@@ -647,9 +647,9 @@ function function_9196ecf2() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0xa6b5a8da, Offset: 0x3220
-// Size: 0x56e
+// Params 0, eflags: 0x0
+// Checksum 0xa1460116, Offset: 0x3210
+// Size: 0x566
 function function_76333d5f() {
     self endon(#"death");
     self endon(#"end_attack_thread");
@@ -688,7 +688,7 @@ function function_76333d5f() {
                 vehicle_ai::setturrettarget(self.enemy, 0, (0, 0, 300));
             }
             wait 1;
-            msg = self util::waittill_any_timeout(2, "turret_on_target", "end_attack_thread");
+            msg = self util::waittill_any_timeout(2, "turret_on_target");
             if (isdefined(self.enemy) && distance2dsquared(self.origin, self.enemy.origin) > 350 * 350) {
                 fired = 0;
                 for (i = 0; i < 4 && isdefined(self.enemy); i++) {
@@ -717,8 +717,8 @@ function function_76333d5f() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x5d1bcf83, Offset: 0x3798
+// Params 0, eflags: 0x0
+// Checksum 0x8b398993, Offset: 0x3780
 // Size: 0x54
 function function_8334ee5f() {
     if (!isdefined(self.var_88858d28)) {
@@ -729,8 +729,8 @@ function function_8334ee5f() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x5990daf1, Offset: 0x37f8
+// Params 0, eflags: 0x0
+// Checksum 0xa960165b, Offset: 0x37e0
 // Size: 0x190
 function path_update_interrupt() {
     self endon(#"death");
@@ -768,7 +768,7 @@ function path_update_interrupt() {
 
 // Namespace quadtank
 // Params 0, eflags: 0x0
-// Checksum 0xb2c0e04d, Offset: 0x3990
+// Checksum 0xa29a6c89, Offset: 0x3978
 // Size: 0x50a
 function function_52951bdf() {
     self endon(#"death");
@@ -840,8 +840,8 @@ function function_52951bdf() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x353d35e1, Offset: 0x3ea8
+// Params 0, eflags: 0x0
+// Checksum 0x5883de76, Offset: 0x3e90
 // Size: 0x248
 function function_350cca63() {
     self endon(#"death");
@@ -879,8 +879,8 @@ function function_350cca63() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x440c2cb8, Offset: 0x40f8
+// Params 0, eflags: 0x0
+// Checksum 0x785ae5b1, Offset: 0x40e0
 // Size: 0xce
 function function_644777c8() {
     self endon(#"death");
@@ -897,8 +897,8 @@ function function_644777c8() {
 }
 
 // Namespace quadtank
-// Params 2, eflags: 0x1 linked
-// Checksum 0x8989c939, Offset: 0x41d0
+// Params 2, eflags: 0x0
+// Checksum 0xd228cfb, Offset: 0x41b8
 // Size: 0x438
 function function_867556e3(shoulddodamage, enemy) {
     if (!isalive(enemy) || distancesquared(enemy.origin, self.origin) > 270 * 270) {
@@ -939,8 +939,8 @@ function function_867556e3(shoulddodamage, enemy) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x2f6871a1, Offset: 0x4610
+// Params 0, eflags: 0x0
+// Checksum 0x8bac464e, Offset: 0x45f8
 // Size: 0x140
 function function_17b8332e() {
     self endon(#"death");
@@ -963,7 +963,7 @@ function function_17b8332e() {
 
 // Namespace quadtank
 // Params 1, eflags: 0x0
-// Checksum 0x8de346, Offset: 0x4758
+// Checksum 0x84b65c3d, Offset: 0x4740
 // Size: 0xbc
 function function_bf3a7a0d(index) {
     turret::disable(index);
@@ -979,13 +979,13 @@ function function_bf3a7a0d(index) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x62dd2574, Offset: 0x4820
+// Params 0, eflags: 0x0
+// Checksum 0x73edea08, Offset: 0x4808
 // Size: 0x88
 function function_1f11e44b() {
     self endon(#"death");
     while (true) {
-        player = self waittill(#"enter_vehicle");
+        self waittill(#"enter_vehicle", player);
         if (isdefined(player) && isplayer(player)) {
             player vehicle::update_damage_as_occupant(self.maxhealth - self.health, self.maxhealth);
         }
@@ -993,8 +993,8 @@ function function_1f11e44b() {
 }
 
 // Namespace quadtank
-// Params 15, eflags: 0x1 linked
-// Checksum 0x732cb15d, Offset: 0x48b0
+// Params 15, eflags: 0x0
+// Checksum 0x2bd53de3, Offset: 0x4898
 // Size: 0x210
 function function_efc2d52f(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
     if (isplayer(eattacker) && eattacker.usingvehicle && (eattacker == self || isdefined(eattacker) && eattacker.viewlockedentity === self)) {
@@ -1012,8 +1012,8 @@ function function_efc2d52f(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x57a5fe24, Offset: 0x4ac8
+// Params 1, eflags: 0x0
+// Checksum 0x9ebc0efd, Offset: 0x4ab0
 // Size: 0x54
 function function_ced547f7(team) {
     self.team = team;
@@ -1023,8 +1023,8 @@ function function_ced547f7(team) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0xec20e537, Offset: 0x4b28
+// Params 0, eflags: 0x0
+// Checksum 0x9d1b44dd, Offset: 0x4b10
 // Size: 0x42
 function function_dd8d3882() {
     if (isdefined(self.var_3ab5b78c)) {
@@ -1035,8 +1035,8 @@ function function_dd8d3882() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x5e7d1ac4, Offset: 0x4b78
+// Params 0, eflags: 0x0
+// Checksum 0xa736885e, Offset: 0x4b60
 // Size: 0x110
 function function_4d94f2a0() {
     self notify(#"hash_d27732d2");
@@ -1055,8 +1055,8 @@ function function_4d94f2a0() {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x13680eac, Offset: 0x4c90
+// Params 0, eflags: 0x0
+// Checksum 0x4a9269cc, Offset: 0x4c78
 // Size: 0x64
 function function_a093b43b() {
     if (!isdefined(self.var_3ab5b78c)) {
@@ -1067,7 +1067,7 @@ function function_a093b43b() {
 
 // Namespace quadtank
 // Params 1, eflags: 0x0
-// Checksum 0xa75b3040, Offset: 0x4d00
+// Checksum 0x89d91b32, Offset: 0x4ce8
 // Size: 0x4c
 function function_8440fad9(time) {
     self notify(#"hash_f7122e99");
@@ -1078,8 +1078,8 @@ function function_8440fad9(time) {
 }
 
 // Namespace quadtank
-// Params 2, eflags: 0x1 linked
-// Checksum 0xcd8be001, Offset: 0x4d58
+// Params 2, eflags: 0x0
+// Checksum 0x79c36cf5, Offset: 0x4d40
 // Size: 0x246
 function function_13b96489(v_target, n_index) {
     s_turret = turret::_get_turret_data(n_index);
@@ -1111,8 +1111,8 @@ function function_13b96489(v_target, n_index) {
 }
 
 // Namespace quadtank
-// Params 2, eflags: 0x1 linked
-// Checksum 0x86a3b0f3, Offset: 0x4fa8
+// Params 2, eflags: 0x0
+// Checksum 0xde63cc6d, Offset: 0x4f90
 // Size: 0x3e4
 function function_1870af4(a_potential_targets, n_index) {
     var_ee85b72c = mapfloat(0, 4, 800, 0, level.gameskill);
@@ -1166,8 +1166,8 @@ function function_1870af4(a_potential_targets, n_index) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x2f682639, Offset: 0x5398
+// Params 1, eflags: 0x0
+// Checksum 0x3ee291dd, Offset: 0x5380
 // Size: 0xc8
 function function_4c6ee4cc(state) {
     if (self.var_da1f4811 !== state) {
@@ -1183,8 +1183,8 @@ function function_4c6ee4cc(state) {
 }
 
 // Namespace quadtank
-// Params 0, eflags: 0x1 linked
-// Checksum 0x118b4702, Offset: 0x5468
+// Params 0, eflags: 0x0
+// Checksum 0x6ff38891, Offset: 0x5450
 // Size: 0x140
 function function_bda33f7a() {
     self endon(#"death");
@@ -1211,13 +1211,13 @@ function function_bda33f7a() {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5c11ff95, Offset: 0x55b0
+// Params 1, eflags: 0x0
+// Checksum 0x14e5e354, Offset: 0x5598
 // Size: 0x124
 function function_c73f719e(projectile) {
     self endon(#"entityshutdown");
     self endon(#"death");
-    projectile = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", projectile);
     distance = 1400;
     alias = "prj_quadtank_javelin_incoming";
     wait 5;
@@ -1237,13 +1237,13 @@ function function_c73f719e(projectile) {
 }
 
 // Namespace quadtank
-// Params 1, eflags: 0x1 linked
-// Checksum 0x623713e, Offset: 0x56e0
+// Params 1, eflags: 0x0
+// Checksum 0x824a9826, Offset: 0x56c8
 // Size: 0x124
 function function_af1bc2b1(projectile) {
     self endon(#"entityshutdown");
     self endon(#"death");
-    projectile = self waittill(#"weapon_fired");
+    self waittill(#"weapon_fired", projectile);
     distance = 900;
     var_7f2a8cb = "wpn_quadtank_railgun_fire_rocket_flux";
     players = level.players;

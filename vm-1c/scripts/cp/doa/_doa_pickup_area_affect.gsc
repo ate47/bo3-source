@@ -1,16 +1,16 @@
-#using scripts/shared/ai/zombie_vortex;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_player_utility;
-#using scripts/cp/doa/_doa_utility;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_utility;
+#using scripts/shared/ai/zombie_vortex;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #using_animtree("zombie_cymbal_monkey");
 
@@ -101,7 +101,7 @@ function teamShifterUpdate(player, origin) {
 function private function_963e13a0() {
     self endon(#"death");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isdefined(guy.var_bfd5bf9d) && guy.var_bfd5bf9d) {
             continue;
         }
@@ -204,7 +204,7 @@ function timeshifterupdate(player, origin) {
 function private function_78d20ce0() {
     self endon(#"death");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isdefined(guy.var_dd70dacd) && guy.var_dd70dacd) {
             continue;
         }
@@ -320,7 +320,7 @@ function function_2271edf2(player) {
 // Size: 0x40
 function function_254f3480(monkey) {
     monkey endon(#"death");
-    var_43605624 = level waittill(#"exit_taken");
+    level waittill(#"exit_taken", var_43605624);
     monkey notify(#"hash_2271edf2");
 }
 

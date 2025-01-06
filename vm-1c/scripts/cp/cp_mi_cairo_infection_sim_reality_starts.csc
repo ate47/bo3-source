@@ -1,14 +1,14 @@
-#using scripts/shared/scene_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/postfx_shared;
+#using scripts/shared/scene_shared;
 
 #namespace cp_mi_cairo_infection_sim_reality_starts;
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95d07426, Offset: 0x3b0
 // Size: 0x14
 function main() {
@@ -16,7 +16,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf5000fc, Offset: 0x3d0
 // Size: 0x43c
 function init_clientfields() {
@@ -38,7 +38,7 @@ function init_clientfields() {
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1f7abec8, Offset: 0x818
 // Size: 0x84
 function function_1d3b6fae(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -48,7 +48,7 @@ function function_1d3b6fae(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa7cf8500, Offset: 0x8a8
 // Size: 0x64
 function function_883e8035(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +58,7 @@ function function_883e8035(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xecc7db1a, Offset: 0x918
 // Size: 0x64
 function function_ae40fa9e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -68,7 +68,7 @@ function function_ae40fa9e(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9abee95a, Offset: 0x988
 // Size: 0x64
 function function_d4437507(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -78,7 +78,7 @@ function function_d4437507(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x66df0c3b, Offset: 0x9f8
 // Size: 0x64
 function function_ca321c28(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,7 +88,7 @@ function function_ca321c28(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xa1b3e543, Offset: 0xa68
 // Size: 0x7c
 function function_f0349691(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -99,7 +99,7 @@ function function_f0349691(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xfe1ac881, Offset: 0xaf0
 // Size: 0x64
 function function_c27ea863(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -109,7 +109,7 @@ function function_c27ea863(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3d882ca0, Offset: 0xb60
 // Size: 0xae
 function function_c0197ff(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -122,7 +122,7 @@ function function_c0197ff(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcb80b589, Offset: 0xc18
 // Size: 0xfc
 function function_fa9ecbf7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -138,7 +138,7 @@ function function_fa9ecbf7(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc3999d9e, Offset: 0xd20
 // Size: 0xf4
 function function_a34472c4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -154,7 +154,7 @@ function function_a34472c4(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdf7cba4d, Offset: 0xe20
 // Size: 0xd4
 function function_8e717c36(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -166,7 +166,7 @@ function function_8e717c36(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x546d9b38, Offset: 0xf00
 // Size: 0x74
 function function_9d61ff9d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -175,7 +175,7 @@ function function_9d61ff9d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xeff5380d, Offset: 0xf80
 // Size: 0x8c
 function function_972dc8a2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -189,7 +189,7 @@ function function_972dc8a2(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xbcd6914c, Offset: 0x1018
 // Size: 0xa4
 function function_8422b90b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -202,7 +202,7 @@ function function_8422b90b(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace cp_mi_cairo_infection_sim_reality_starts
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb3d40d34, Offset: 0x10c8
 // Size: 0x1f0
 function function_e43dc74b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,9 +1,9 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_board_to_death;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_board_to_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xad1708bc, Offset: 0x1b0
 // Size: 0x5c
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_board_to_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x283366a0, Offset: 0x218
 // Size: 0x1c
 function enable() {
@@ -35,7 +35,7 @@ function enable() {
 }
 
 // Namespace zm_bgb_board_to_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x240
 // Size: 0x4
 function disable() {
@@ -43,7 +43,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_board_to_death
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1c8c7534, Offset: 0x250
 // Size: 0x78
 function function_3c61f2df() {
@@ -51,14 +51,14 @@ function function_3c61f2df() {
     self endon(#"bled_out");
     self endon(#"bgb_update");
     while (true) {
-        s_window = self waittill(#"boarding_window");
+        self waittill(#"boarding_window", s_window);
         self bgb::do_one_shot_use();
         self thread function_64ea6cea(s_window);
     }
 }
 
 // Namespace zm_bgb_board_to_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x21a8fc74, Offset: 0x2d0
 // Size: 0x166
 function function_64ea6cea(s_window) {

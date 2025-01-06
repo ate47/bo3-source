@@ -1,7 +1,7 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/aat_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
 
 #namespace zm_aat_turned;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_aat_turned
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x392d117a, Offset: 0x1d0
 // Size: 0x8c
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace zm_aat_turned
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdf75bb67, Offset: 0x268
 // Size: 0x166
 function function_47a93e3e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

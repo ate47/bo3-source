@@ -1,27 +1,27 @@
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/ai/archetype_human_interface;
-#using scripts/shared/ai/archetype_human_locomotion;
+#using scripts/shared/ai/archetype_cover_utility;
+#using scripts/shared/ai/archetype_human_blackboard;
 #using scripts/shared/ai/archetype_human_cover;
 #using scripts/shared/ai/archetype_human_exposed;
-#using scripts/shared/ai/archetype_notetracks;
-#using scripts/shared/ai/archetype_human_blackboard;
+#using scripts/shared/ai/archetype_human_interface;
+#using scripts/shared/ai/archetype_human_locomotion;
 #using scripts/shared/ai/archetype_mocomps_utility;
-#using scripts/shared/ai/archetype_cover_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/destructible_character;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/archetype_notetracks;
+#using scripts/shared/ai/archetype_utility;
 #using scripts/shared/ai/systems/ai_blackboard;
-#using scripts/shared/util_shared;
-#using scripts/shared/gameskill_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/ai/systems/ai_interface;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/destructible_character;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/gameskill_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
 
 #namespace archetype_human;
 
@@ -40,7 +40,7 @@ function autoexec init() {
 }
 
 // Namespace archetype_human
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x80472732, Offset: 0x790
 // Size: 0x124
 function private archetypehumaninit() {
@@ -56,7 +56,7 @@ function private archetypehumaninit() {
 }
 
 // Namespace archetype_human
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xb6638b53, Offset: 0x8c0
 // Size: 0x12c
 function private archetypehumanblackboardinit() {
@@ -79,7 +79,7 @@ function private archetypehumanblackboardinit() {
 }
 
 // Namespace archetype_human
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x48a413f9, Offset: 0x9f8
 // Size: 0xdc
 function private archetypehumanonbehavecallback(entity) {
@@ -93,7 +93,7 @@ function private archetypehumanonbehavecallback(entity) {
 }
 
 // Namespace archetype_human
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x7c317abd, Offset: 0xae0
 // Size: 0x84
 function private archetypehumanonanimscriptedcallback(entity) {
@@ -104,7 +104,7 @@ function private archetypehumanonanimscriptedcallback(entity) {
 }
 
 // Namespace archetype_human
-// Params 8, eflags: 0x5 linked
+// Params 8, eflags: 0x4
 // Checksum 0xcb3b9b1b, Offset: 0xb70
 // Size: 0x310
 function private humangibkilledoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
@@ -152,7 +152,7 @@ function private trygibbinghead(entity, damage, hitloc, isexplosive) {
 }
 
 // Namespace archetype_human
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x47a97bbe, Offset: 0xf30
 // Size: 0x1cc
 function private trygibbinglimb(entity, damage, hitloc, isexplosive) {
@@ -183,7 +183,7 @@ function private trygibbinglimb(entity, damage, hitloc, isexplosive) {
 }
 
 // Namespace archetype_human
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x6553b96b, Offset: 0x1108
 // Size: 0x1fc
 function private trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
@@ -216,7 +216,7 @@ function private trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
 }
 
 // Namespace archetype_human
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0xf06bd2c0, Offset: 0x1310
 // Size: 0x1bc
 function damageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
@@ -239,7 +239,7 @@ function damageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, 
 #namespace humansoldierserverutils;
 
 // Namespace humansoldierserverutils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1d67b7a6, Offset: 0x14d8
 // Size: 0xa4
 function cqbattributecallback(entity, attribute, oldvalue, value) {
@@ -255,7 +255,7 @@ function cqbattributecallback(entity, attribute, oldvalue, value) {
 }
 
 // Namespace humansoldierserverutils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x811187b7, Offset: 0x1588
 // Size: 0x38
 function forcetacticalwalkcallback(entity, attribute, oldvalue, value) {
@@ -263,7 +263,7 @@ function forcetacticalwalkcallback(entity, attribute, oldvalue, value) {
 }
 
 // Namespace humansoldierserverutils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xcff08835, Offset: 0x15c8
 // Size: 0x6e
 function movemodeattributecallback(entity, attribute, oldvalue, value) {
@@ -278,7 +278,7 @@ function movemodeattributecallback(entity, attribute, oldvalue, value) {
 }
 
 // Namespace humansoldierserverutils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x95a7339e, Offset: 0x1640
 // Size: 0x64
 function useanimationoverridecallback(entity, attribute, oldvalue, value) {
@@ -290,7 +290,7 @@ function useanimationoverridecallback(entity, attribute, oldvalue, value) {
 }
 
 // Namespace humansoldierserverutils
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x8306d905, Offset: 0x16b0
 // Size: 0x1f2
 function vignettemodecallback(entity, attribute, oldvalue, value) {

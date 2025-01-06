@@ -1,11 +1,11 @@
-#using scripts/cp/_util;
-#using scripts/cp/gametypes/_spectating;
-#using scripts/cp/gametypes/_globallogic_ui;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/persistence_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/gametypes/_globallogic_ui;
+#using scripts/cp/gametypes/_spectating;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/persistence_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace teams;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xafe4d79, Offset: 0x318
 // Size: 0x3c
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4d87849, Offset: 0x360
 // Size: 0x224
 function init() {
@@ -59,7 +59,7 @@ function init() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdc65ab83, Offset: 0x590
 // Size: 0x1c
 function on_player_connect() {
@@ -67,7 +67,7 @@ function on_player_connect() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3cddbd8e, Offset: 0x5b8
 // Size: 0x1c
 function on_free_player_connect() {
@@ -75,7 +75,7 @@ function on_free_player_connect() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xca5bbfcb, Offset: 0x5e0
 // Size: 0x4c
 function on_joined_team() {
@@ -84,7 +84,7 @@ function on_joined_team() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a6c880a, Offset: 0x638
 // Size: 0x14
 function on_joined_spectators() {
@@ -92,7 +92,7 @@ function on_joined_spectators() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71f33ad3, Offset: 0x658
 // Size: 0x224
 function function_e7a40e44() {
@@ -127,7 +127,7 @@ function function_e7a40e44() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6d0c53c5, Offset: 0x888
 // Size: 0xe8
 function update_player_times() {
@@ -152,7 +152,7 @@ function update_player_times() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc3111a0d, Offset: 0x978
 // Size: 0x382
 function update_played_time() {
@@ -184,7 +184,7 @@ function update_played_time() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf88e0480, Offset: 0xd08
 // Size: 0x32
 function update_time() {
@@ -195,7 +195,7 @@ function update_time() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x37726b91, Offset: 0xd48
 // Size: 0xce
 function update_balance_dvar() {
@@ -239,7 +239,7 @@ function change(team) {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa4de2aed, Offset: 0xf98
 // Size: 0x170
 function count_players() {
@@ -261,7 +261,7 @@ function count_players() {
 }
 
 // Namespace teams
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99bfa1bf, Offset: 0x1110
 // Size: 0x1a0
 function track_free_played_time() {
@@ -290,7 +290,7 @@ function track_free_played_time() {
 }
 
 // Namespace teams
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xce01bf65, Offset: 0x12b8
 // Size: 0x74
 function function_37fd0a0f(team, weapon) {
@@ -331,7 +331,7 @@ function function_3370313c(teamref) {
 }
 
 // Namespace teams
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18c46d3f, Offset: 0x14a0
 // Size: 0xba
 function getenemyteam(player_team) {

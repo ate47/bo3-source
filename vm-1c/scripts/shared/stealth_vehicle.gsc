@@ -1,17 +1,17 @@
 #using scripts/shared/ai_shared;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth_event;
+#using scripts/shared/stealth;
 #using scripts/shared/stealth_aware;
 #using scripts/shared/stealth_debug;
-#using scripts/shared/stealth;
-#using scripts/shared/util_shared;
+#using scripts/shared/stealth_event;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_tagging;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_vehicle;
 
 // Namespace stealth_vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xabcf8c95, Offset: 0x1e8
 // Size: 0x124
 function init() {
@@ -38,7 +38,7 @@ function init() {
 }
 
 // Namespace stealth_vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x11f14a1b, Offset: 0x318
 // Size: 0x104
 function stop() {
@@ -54,7 +54,7 @@ function stop() {
 }
 
 // Namespace stealth_vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbb275ef2, Offset: 0x428
 // Size: 0x3c
 function reset() {
@@ -72,7 +72,7 @@ function enabled() {
 }
 
 // Namespace stealth_vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1ea3cdb, Offset: 0x498
 // Size: 0x8c
 function function_1664d989() {
@@ -85,7 +85,7 @@ function function_1664d989() {
 }
 
 // Namespace stealth_vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5c3e04a7, Offset: 0x530
 // Size: 0xc6
 function function_c5738439() {
@@ -94,7 +94,7 @@ function function_c5738439() {
     self ai::set_ignoreall(1);
     while (true) {
         weapon = undefined;
-        weapon, attacker = self waittill(#"cybercom_action");
+        self waittill(#"cybercom_action", weapon, attacker);
         if (isdefined(weapon)) {
             switch (weapon.name) {
             case "gadget_iff_override":
@@ -109,7 +109,7 @@ function function_c5738439() {
 }
 
 // Namespace stealth_vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4ad2a667, Offset: 0x600
 // Size: 0x158
 function function_6fceb02e(radius) {
@@ -132,7 +132,7 @@ function function_6fceb02e(radius) {
 }
 
 // Namespace stealth_vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc80dc4a9, Offset: 0x760
 // Size: 0x32
 function wake_up() {

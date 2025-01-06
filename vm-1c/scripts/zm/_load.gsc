@@ -1,56 +1,56 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_traps;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_power;
-#using scripts/zm/_zm_playerhealth;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_clone;
-#using scripts/zm/_zm_bot;
-#using scripts/zm/_zm_blockers;
-#using scripts/zm/_zm_behavior;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_callbacks;
-#using scripts/zm/_art;
-#using scripts/zm/gametypes/_weaponobjects;
-#using scripts/zm/gametypes/_spectating;
-#using scripts/zm/gametypes/_shellshock;
-#using scripts/zm/gametypes/_serversettings;
-#using scripts/zm/gametypes/_scoreboard;
-#using scripts/zm/gametypes/_clientids;
-#using scripts/zm/_util;
-#using scripts/zm/_destructible;
-#using scripts/zm/gametypes/_spawnlogic;
-#using scripts/zm/_zm;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/abilities/_ability_player;
-#using scripts/shared/archetype_shared/archetype_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/turret_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/serverfaceanim_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/_oob;
-#using scripts/shared/music_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/load_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/_oob;
+#using scripts/shared/abilities/_ability_player;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/archetype_shared/archetype_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/load_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/music_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/serverfaceanim_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/turret_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/zm/_art;
+#using scripts/zm/_callbacks;
+#using scripts/zm/_destructible;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_behavior;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_bot;
+#using scripts/zm/_zm_clone;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_playerhealth;
+#using scripts/zm/_zm_power;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_traps;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/gametypes/_clientids;
+#using scripts/zm/gametypes/_scoreboard;
+#using scripts/zm/gametypes/_serversettings;
+#using scripts/zm/gametypes/_shellshock;
+#using scripts/zm/gametypes/_spawnlogic;
+#using scripts/zm/gametypes/_spectating;
+#using scripts/zm/gametypes/_weaponobjects;
 
 #namespace load;
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x85a46ec4, Offset: 0x7c0
 // Size: 0x11c
 function main() {
@@ -69,7 +69,7 @@ function main() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4240b549, Offset: 0x8e8
 // Size: 0x23c
 function footsteps() {
@@ -96,7 +96,7 @@ function footsteps() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xb30
 // Size: 0x4
 function setup_traversals() {
@@ -104,7 +104,7 @@ function setup_traversals() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbe8a0915, Offset: 0xb40
 // Size: 0x94
 function start_intro_screen_zm() {
@@ -117,7 +117,7 @@ function start_intro_screen_zm() {
 }
 
 // Namespace load
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe474fa, Offset: 0xbe0
 // Size: 0xc4
 function register_clientfields() {

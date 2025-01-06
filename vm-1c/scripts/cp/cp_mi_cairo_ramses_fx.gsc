@@ -1,10 +1,10 @@
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
 
 #namespace cp_mi_cairo_ramses_fx;
 
 // Namespace cp_mi_cairo_ramses_fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x421c3635, Offset: 0x118
 // Size: 0x7e
 function main() {

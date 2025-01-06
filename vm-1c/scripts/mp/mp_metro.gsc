@@ -1,12 +1,12 @@
-#using scripts/mp/mp_metro_train;
-#using scripts/mp/mp_metro_sound;
-#using scripts/mp/mp_metro_fx;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/compass;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_metro_fx;
+#using scripts/mp/mp_metro_sound;
+#using scripts/mp/mp_metro_train;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/compass;
+#using scripts/shared/util_shared;
 
 #namespace mp_metro;
 

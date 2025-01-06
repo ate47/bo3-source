@@ -1,17 +1,17 @@
-#using scripts/mp/mp_conduit_sound;
-#using scripts/mp/mp_conduit_fx;
-#using scripts/mp/_util;
+#using scripts/codescripts/struct;
 #using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/mp_conduit_fx;
+#using scripts/mp/mp_conduit_sound;
 #using scripts/shared/compass;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace mp_conduit;
 
 // Namespace mp_conduit
-// Params 0, eflags: 0x1 linked
-// Checksum 0xa11ad5f5, Offset: 0x268
-// Size: 0x4e4
+// Params 0, eflags: 0x0
+// Checksum 0x5b1e7c1c, Offset: 0x1e0
+// Size: 0xac
 function main() {
     precache();
     mp_conduit_fx::main();
@@ -21,40 +21,19 @@ function main() {
     setdvar("compassmaxrange", "2100");
     level thread function_d9a32821();
     level function_c4a5736e();
-    var_32cbbad9 = spawn("script_model", (-2536.7, -150.932, 44));
-    var_32cbbad9.angles = (0, 90, 90);
-    var_32cbbad9 setmodel("p7_pallet_metal_military_01");
-    var_58ce3542 = spawn("script_model", (-2537.7, -113.432, 44));
-    var_58ce3542.angles = (0, 90, 90);
-    var_58ce3542 setmodel("p7_pallet_metal_military_01");
-    var_7ed0afab = spawn("script_model", (-2552.2, -150.432, 52));
-    var_7ed0afab.angles = (0, 90, 90);
-    var_7ed0afab setmodel("p7_pallet_metal_military_01");
-    var_a4d32a14 = spawn("script_model", (-2553.2, -112.932, 52));
-    var_a4d32a14.angles = (0, 90, 90);
-    var_a4d32a14 setmodel("p7_pallet_metal_military_01");
-    spawncollision("collision_bullet_wall_128x128x10", "collider", (38, -1031.5, 63), (0, 270, 0));
-    spawncollision("collision_bullet_wall_128x128x10", "collider", (-57, -1031.5, 63), (0, 270, 0));
-    spawncollision("collision_nosight_64x64x64", "collider", (320, 973.5, 82.5), (0, 0, 0));
-    spawncollision("collision_nosight_64x64x64", "collider", (-318.5, 973.5, 82.5), (0, 0, 0));
-    spawncollision("collision_nosight_32x32x32", "collider", (-576.5, 896, 77), (0, 0, 0));
-    spawncollision("collision_nosight_32x32x32", "collider", (-576.5, 896, 98), (0, 0, 0));
-    spawncollision("collision_nosight_32x32x32", "collider", (578.5, 899, 77), (0, 0, 0));
-    spawncollision("collision_nosight_32x32x32", "collider", (578.5, 899, 98), (0, 0, 0));
-    level.cleandepositpoints = array((2.38261, 270.152, 64.125), (1272.74, 958.804, 64.125), (-1235.76, 969.544, 64.125), (868.229, -915.133, -0.875));
 }
 
 // Namespace mp_conduit
-// Params 0, eflags: 0x1 linked
-// Checksum 0x99ec1590, Offset: 0x758
+// Params 0, eflags: 0x0
+// Checksum 0x99ec1590, Offset: 0x298
 // Size: 0x4
 function precache() {
     
 }
 
 // Namespace mp_conduit
-// Params 0, eflags: 0x1 linked
-// Checksum 0xaa5fbe7b, Offset: 0x768
+// Params 0, eflags: 0x0
+// Checksum 0x6a09524d, Offset: 0x2a8
 // Size: 0x188
 function function_d9a32821() {
     var_2f9b716b = getentarray("conduit_tower", "targetname");
@@ -74,8 +53,8 @@ function function_d9a32821() {
 }
 
 // Namespace mp_conduit
-// Params 0, eflags: 0x1 linked
-// Checksum 0x69e6982f, Offset: 0x8f8
+// Params 0, eflags: 0x0
+// Checksum 0x1023f224, Offset: 0x438
 // Size: 0x1be
 function function_c4a5736e() {
     var_23bf0ed = getentarray("conduit_train", "targetname");
@@ -95,8 +74,8 @@ function function_c4a5736e() {
 }
 
 // Namespace mp_conduit
-// Params 3, eflags: 0x1 linked
-// Checksum 0xfb1be27c, Offset: 0xac0
+// Params 3, eflags: 0x0
+// Checksum 0xb59d6cfb, Offset: 0x600
 // Size: 0xe8
 function function_730358f4(train, startpoint, endpoint) {
     while (true) {

@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace multi_extracam;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace multi_extracam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1be766f8, Offset: 0x198
 // Size: 0x2c
 function __init__(localclientnum) {
@@ -23,7 +23,7 @@ function __init__(localclientnum) {
 }
 
 // Namespace multi_extracam
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6f392e00, Offset: 0x1d0
 // Size: 0x196
 function multi_extracam_init(localclientnum) {

@@ -1,13 +1,13 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/shared/vehicle_ai_shared;
 #using scripts/shared/vehicle_shared;
-#using scripts/shared/ai_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/codescripts/struct;
 
 #namespace sm_initial_spawns;
 
@@ -113,7 +113,7 @@ function function_166a3348(var_61b5d65a) {
 // Size: 0x13b
 function function_c04f5659() {
     while (true) {
-        ent = self waittill(#"trigger");
+        self waittill(#"trigger", ent);
         if (isdefined(ent.sessionstate) && ent.sessionstate != "spectator") {
             break;
         }
@@ -242,7 +242,7 @@ function function_e55a5d84(i) {
 function function_7da79f81(var_cc525a1a) {
     self endon(#"death");
     while (true) {
-        node = self waittill(#"hash_8b1fd6a8");
+        self waittill(#"hash_8b1fd6a8", node);
         if (isdefined(node.script_wait_min) && (isdefined(node.script_wait) || isdefined(node.script_wait_max))) {
             node util::script_wait();
         }

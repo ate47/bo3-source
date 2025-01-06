@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/postfx_shared;
-#using scripts/shared/filter_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/postfx_shared;
 #using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace water_surface;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf3d74054, Offset: 0x208
 // Size: 0x7c
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace water_surface
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcab3eff, Offset: 0x290
 // Size: 0xd4
 function localplayer_spawned(localclientnum) {
@@ -47,7 +47,7 @@ function localplayer_spawned(localclientnum) {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x68b8f1f0, Offset: 0x370
 // Size: 0xd0
 function underwaterwatchbegin() {
@@ -55,7 +55,7 @@ function underwaterwatchbegin() {
     self endon(#"underwaterwatchbegin");
     self endon(#"entityshutdown");
     while (true) {
-        teleported = self waittill(#"underwater_begin");
+        self waittill(#"underwater_begin", teleported);
         if (teleported) {
             filter::disable_filter_water_sheeting(self, 1);
             stop_player_fx(self);
@@ -68,7 +68,7 @@ function underwaterwatchbegin() {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa38ac746, Offset: 0x448
 // Size: 0xd0
 function underwaterwatchend() {
@@ -76,7 +76,7 @@ function underwaterwatchend() {
     self endon(#"underwaterwatchend");
     self endon(#"entityshutdown");
     while (true) {
-        teleported = self waittill(#"underwater_end");
+        self waittill(#"underwater_end", teleported);
         if (teleported) {
             filter::disable_filter_water_sheeting(self, 1);
             stop_player_fx(self);
@@ -89,7 +89,7 @@ function underwaterwatchend() {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4984de9, Offset: 0x520
 // Size: 0x114
 function underwaterbegin() {
@@ -108,7 +108,7 @@ function underwaterbegin() {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd40a9332, Offset: 0x640
 // Size: 0xa4
 function underwaterend() {
@@ -153,7 +153,7 @@ function startwaterdive() {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e79a9e6, Offset: 0x948
 // Size: 0x214
 function startwatersheeting() {
@@ -178,7 +178,7 @@ function startwatersheeting() {
 }
 
 // Namespace water_surface
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3a588fe3, Offset: 0xb68
 // Size: 0x72
 function stop_player_fx(localclient) {

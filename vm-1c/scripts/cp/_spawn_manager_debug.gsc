@@ -1,13 +1,13 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/_spawn_manager;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace spawn_manager;
 
 /#
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x446e2b77, Offset: 0xd0
     // Size: 0x220
     function function_573de556() {
@@ -39,7 +39,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xf3c375e1, Offset: 0x2f8
     // Size: 0x636
     function function_6d2d8da0(var_9f308938, spawn_ai, max_ai, var_744eb752, var_699e3746) {
@@ -108,7 +108,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdf8555b3, Offset: 0x938
     // Size: 0x1c
     function on_player_connect() {
@@ -116,7 +116,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfbf28bc6, Offset: 0x960
     // Size: 0x328
     function function_2111823a() {
@@ -222,7 +222,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf35deb89, Offset: 0xf28
     // Size: 0xbcc
     function function_2adbfa39() {
@@ -433,7 +433,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4c007a0d, Offset: 0x1b00
     // Size: 0x57e
     function function_facd2f34() {
@@ -522,7 +522,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6ade33d8, Offset: 0x2088
     // Size: 0x1ac
     function function_5b99d8b8() {
@@ -534,7 +534,7 @@
         }
         self.spawners = self function_826b96e5();
         assert(self.count >= self.var_b7a63f07);
-        assert(self.count <= self.var_5a85f779);
+        assert(self.count <= self.count_max);
         assert(self.var_ee45dcd6 >= self.var_5fa59123);
         assert(self.var_ee45dcd6 <= self.var_e290d32d);
         assert(self.var_20149b34 <= self.var_ee45dcd6);
@@ -542,7 +542,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x35a09932, Offset: 0x2240
     // Size: 0x5c
     function function_fed43545(text) {
@@ -553,7 +553,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xce440999, Offset: 0x22a8
     // Size: 0x3c
     function function_f9e758e5() {
@@ -563,7 +563,7 @@
     }
 
     // Namespace spawn_manager
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8e345548, Offset: 0x22f0
     // Size: 0x144
     function function_10c561e2() {

@@ -3,7 +3,7 @@
 /#
 
     // Namespace debug_menu
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x4da4d193, Offset: 0x70
     // Size: 0xb8
     function add_menu(menu_name, title) {
@@ -20,12 +20,12 @@
     // Params 4, eflags: 0x0
     // Checksum 0x9c1b5cfb, Offset: 0x130
     // Size: 0x132
-    function add_menuoptions(menu_name, var_26a8b438, func, key) {
+    function add_menuoptions(menu_name, option_text, func, key) {
         if (!isdefined(level.menu_sys[menu_name].options)) {
             level.menu_sys[menu_name].options = [];
         }
         num = level.menu_sys[menu_name].options.size;
-        level.menu_sys[menu_name].options[num] = var_26a8b438;
+        level.menu_sys[menu_name].options[num] = option_text;
         level.menu_sys[menu_name].func[num] = func;
         if (isdefined(key)) {
             if (!isdefined(level.menu_sys[menu_name].var_330af417)) {
@@ -39,11 +39,11 @@
     // Params 5, eflags: 0x0
     // Checksum 0xab49b5d0, Offset: 0x270
     // Size: 0x176
-    function add_menu_child(parent_menu, var_43d33b65, var_5a160d62, var_43a34966, func) {
-        if (!isdefined(level.menu_sys[var_43d33b65])) {
-            add_menu(var_43d33b65, var_5a160d62);
+    function add_menu_child(parent_menu, child_menu, child_title, var_43a34966, func) {
+        if (!isdefined(level.menu_sys[child_menu])) {
+            add_menu(child_menu, child_title);
         }
-        level.menu_sys[var_43d33b65].parent_menu = parent_menu;
+        level.menu_sys[child_menu].parent_menu = parent_menu;
         if (!isdefined(level.menu_sys[parent_menu].children_menu)) {
             level.menu_sys[parent_menu].children_menu = [];
         }
@@ -52,7 +52,7 @@
         } else {
             size = var_43a34966;
         }
-        level.menu_sys[parent_menu].children_menu[size] = var_43d33b65;
+        level.menu_sys[parent_menu].children_menu[size] = child_menu;
         if (isdefined(func)) {
             if (!isdefined(level.menu_sys[parent_menu].children_func)) {
                 level.menu_sys[parent_menu].children_func = [];
@@ -70,7 +70,7 @@
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xdc9fd09d, Offset: 0x428
     // Size: 0x276
     function enable_menu(menu_name) {
@@ -98,7 +98,7 @@
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xb94bf3f, Offset: 0x6a8
     // Size: 0x128
     function disable_menu(menu_name) {
@@ -118,7 +118,7 @@
     }
 
     // Namespace debug_menu
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x8ab091b4, Offset: 0x7d8
     // Size: 0xcc
     function set_menu_hudelem(text, type, y_offset) {
@@ -137,7 +137,7 @@
     }
 
     // Namespace debug_menu
-    // Params 7, eflags: 0x1 linked
+    // Params 7, eflags: 0x0
     // Checksum 0xec09d14, Offset: 0x8b0
     // Size: 0x1d2
     function set_hudelem(text, x, y, scale, alpha, sort, debug_hudelem) {
@@ -178,7 +178,7 @@
     // Size: 0x820
     function menu_input() {
         while (true) {
-            keystring = level waittill(#"hash_69c6c918");
+            level waittill(#"hash_69c6c918", keystring);
             menu_name = level.menu_sys["<dev string:x66>"].menu_name;
             if (keystring == "<dev string:x95>" || keystring == "<dev string:x9d>") {
                 if (level.menu_cursor.current_pos > 0) {
@@ -283,7 +283,7 @@
     // Params 7, eflags: 0x0
     // Checksum 0xa83f6979, Offset: 0x1470
     // Size: 0x46c
-    function list_menu(list, x, y, scale, func, sort, var_4cd7cc92) {
+    function list_menu(list, x, y, scale, func, sort, start_num) {
         if (!isdefined(list) || list.size == 0) {
             return -1;
         }
@@ -308,33 +308,33 @@
             }
             hud_array[hud_array.size] = hud;
         }
-        if (isdefined(var_4cd7cc92)) {
-            function_bdb589d8(hud_array, list, var_4cd7cc92);
+        if (isdefined(start_num)) {
+            function_bdb589d8(hud_array, list, start_num);
         }
-        var_42618b51 = 0;
-        var_821d84b1 = 0;
+        current_num = 0;
+        old_num = 0;
         selected = 0;
         level.menu_list_selected = 0;
         if (isdefined(func)) {
-            [[ func ]](list[var_42618b51]);
+            [[ func ]](list[current_num]);
         }
         while (true) {
-            key = level waittill(#"hash_69c6c918");
+            level waittill(#"hash_69c6c918", key);
             level.menu_list_selected = 1;
             if (any_button_hit(key, "<dev string:x15c>")) {
                 break;
             } else if (key == "<dev string:xaf>" || key == "<dev string:xa5>") {
-                if (var_42618b51 >= list.size - 1) {
+                if (current_num >= list.size - 1) {
                     continue;
                 }
-                var_42618b51++;
-                function_bdb589d8(hud_array, list, var_42618b51);
+                current_num++;
+                function_bdb589d8(hud_array, list, current_num);
             } else if (key == "<dev string:x9d>" || key == "<dev string:x95>") {
-                if (var_42618b51 <= 0) {
+                if (current_num <= 0) {
                     continue;
                 }
-                var_42618b51--;
-                function_bdb589d8(hud_array, list, var_42618b51);
+                current_num--;
+                function_bdb589d8(hud_array, list, current_num);
             } else if (key == "<dev string:xc2>" || key == "<dev string:xb9>") {
                 selected = 1;
                 break;
@@ -343,10 +343,10 @@
                 break;
             }
             level notify(#"hash_c4916d91");
-            if (var_42618b51 != var_821d84b1) {
-                var_821d84b1 = var_42618b51;
+            if (current_num != old_num) {
+                old_num = current_num;
                 if (isdefined(func)) {
-                    [[ func ]](list[var_42618b51]);
+                    [[ func ]](list[current_num]);
                 }
             }
             wait 0.1;
@@ -355,12 +355,12 @@
             hud_array[i] destroy();
         }
         if (selected) {
-            return var_42618b51;
+            return current_num;
         }
     }
 
     // Namespace debug_menu
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0xc724ff64, Offset: 0x18e8
     // Size: 0xbe
     function function_bdb589d8(hud_array, list, num) {
@@ -420,7 +420,7 @@
     }
 
     // Namespace debug_menu
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xc8e901a6, Offset: 0x1c38
     // Size: 0xf0
     function hud_selector(x, y) {
@@ -436,7 +436,7 @@
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xe3862b1a, Offset: 0x1d30
     // Size: 0xc4
     function hud_selector_fade_out(time) {
@@ -455,7 +455,7 @@
     }
 
     // Namespace debug_menu
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x45385f29, Offset: 0x1e00
     // Size: 0x1a4
     function selection_error(msg, x, y) {
@@ -463,19 +463,19 @@
         hud setshader("<dev string:x17b>", 125, 20);
         hud.color = (0.5, 0, 0);
         hud.alpha = 0.7;
-        var_58f82c4b = set_hudelem(msg, x + 125, y, 1);
-        var_58f82c4b.color = (1, 0, 0);
+        error_hud = set_hudelem(msg, x + 125, y, 1);
+        error_hud.color = (1, 0, 0);
         if (!isdefined(hud.debug_hudelem)) {
             hud fadeovertime(3);
         }
         hud.alpha = 0;
-        if (!isdefined(var_58f82c4b.debug_hudelem)) {
-            var_58f82c4b fadeovertime(3);
+        if (!isdefined(error_hud.debug_hudelem)) {
+            error_hud fadeovertime(3);
         }
-        var_58f82c4b.alpha = 0;
+        error_hud.alpha = 0;
         wait 3.1;
         hud destroy();
-        var_58f82c4b destroy();
+        error_hud destroy();
     }
 
     // Namespace debug_menu
@@ -513,7 +513,7 @@
     }
 
     // Namespace debug_menu
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xe43fbaea, Offset: 0x2180
     // Size: 0xc2
     function new_hud(hud_name, msg, x, y, scale) {
@@ -529,7 +529,7 @@
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xdb331f61, Offset: 0x2250
     // Size: 0x94
     function function_f8a0189f(hud_name) {
@@ -544,7 +544,7 @@
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x9f867dca, Offset: 0x22f0
     // Size: 0x34
     function function_ef76706b(hud) {
@@ -690,7 +690,7 @@
     }
 
     // Namespace debug_menu
-    // Params 3, eflags: 0x1 linked
+    // Params 3, eflags: 0x0
     // Checksum 0x60843bd4, Offset: 0x2d80
     // Size: 0x2ec
     function function_8d7a3a66(var_847182fe, var_aa73fd67, var_476db3a8) {
@@ -703,7 +703,7 @@
         var_3eb3582a = [];
         word = "<dev string:x171>";
         while (true) {
-            button = level waittill(#"hash_b6282a51");
+            level waittill(#"hash_b6282a51", button);
             if (button == "<dev string:x164>" || button == "<dev string:x1c3>") {
                 word = "<dev string:x1cc>";
                 break;
@@ -732,7 +732,7 @@
     }
 
     // Namespace debug_menu
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xf5a974d8, Offset: 0x3078
     // Size: 0x5d4
     function function_5eabe035() {
@@ -787,7 +787,7 @@
     }
 
     // Namespace debug_menu
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x8bdca92c, Offset: 0x3658
     // Size: 0x54
     function function_561fa6f4() {
@@ -801,7 +801,7 @@
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x3d9a7869, Offset: 0x36b8
     // Size: 0x166
     function function_6a8744ed(letter) {
@@ -822,51 +822,51 @@
     }
 
     // Namespace debug_menu
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0xa0346b7c, Offset: 0x3828
     // Size: 0x84
-    function add_universal_button(var_38e2c1b9, name) {
-        if (!isdefined(level.u_buttons[var_38e2c1b9])) {
-            level.u_buttons[var_38e2c1b9] = [];
+    function add_universal_button(button_group, name) {
+        if (!isdefined(level.u_buttons[button_group])) {
+            level.u_buttons[button_group] = [];
         }
-        if (!isinarray(level.u_buttons[var_38e2c1b9], name)) {
-            level.u_buttons[var_38e2c1b9][level.u_buttons[var_38e2c1b9].size] = name;
+        if (!isinarray(level.u_buttons[button_group], name)) {
+            level.u_buttons[button_group][level.u_buttons[button_group].size] = name;
         }
     }
 
     // Namespace debug_menu
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xc9c28309, Offset: 0x38b8
     // Size: 0x22
-    function clear_universal_buttons(var_38e2c1b9) {
-        level.u_buttons[var_38e2c1b9] = [];
+    function clear_universal_buttons(button_group) {
+        level.u_buttons[button_group] = [];
     }
 
     // Namespace debug_menu
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0x22ec86c5, Offset: 0x38e8
     // Size: 0x1e0
-    function universal_input_loop(var_38e2c1b9, end_on, var_f343011, var_e97f2392, var_584b7e5c) {
+    function universal_input_loop(button_group, end_on, use_attackbutton, mod_button, var_584b7e5c) {
         level endon(end_on);
-        if (!isdefined(var_f343011)) {
-            var_f343011 = 0;
+        if (!isdefined(use_attackbutton)) {
+            use_attackbutton = 0;
         }
-        notify_name = var_38e2c1b9 + "<dev string:x249>";
-        buttons = level.u_buttons[var_38e2c1b9];
-        level.u_buttons_disable[var_38e2c1b9] = 0;
+        notify_name = button_group + "<dev string:x249>";
+        buttons = level.u_buttons[button_group];
+        level.u_buttons_disable[button_group] = 0;
         while (true) {
-            if (level.u_buttons_disable[var_38e2c1b9]) {
+            if (level.u_buttons_disable[button_group]) {
                 wait 0.05;
                 continue;
             }
-            if (isdefined(var_e97f2392) && !level.player buttonpressed(var_e97f2392)) {
+            if (isdefined(mod_button) && !level.player buttonpressed(mod_button)) {
                 wait 0.05;
                 continue;
             } else if (isdefined(var_584b7e5c) && level.player buttonpressed(var_584b7e5c)) {
                 wait 0.05;
                 continue;
             }
-            if (var_f343011 && level.player attackbuttonpressed()) {
+            if (use_attackbutton && level.player attackbuttonpressed()) {
                 level notify(notify_name, "<dev string:x259>");
                 wait 0.1;
                 continue;
@@ -886,24 +886,24 @@
     // Params 1, eflags: 0x0
     // Checksum 0x4ec99fc1, Offset: 0x3ad0
     // Size: 0x22
-    function function_49453b79(var_38e2c1b9) {
-        level.u_buttons_disable[var_38e2c1b9] = 1;
+    function function_49453b79(button_group) {
+        level.u_buttons_disable[button_group] = 1;
     }
 
     // Namespace debug_menu
     // Params 1, eflags: 0x0
     // Checksum 0xd9c67699, Offset: 0x3b00
     // Size: 0x26
-    function function_80a9c472(var_38e2c1b9) {
+    function function_80a9c472(button_group) {
         wait 1;
-        level.u_buttons_disable[var_38e2c1b9] = 0;
+        level.u_buttons_disable[button_group] = 0;
     }
 
     // Namespace debug_menu
-    // Params 2, eflags: 0x1 linked
+    // Params 2, eflags: 0x0
     // Checksum 0x11d4c4c4, Offset: 0x3b30
     // Size: 0x154
-    function any_button_hit(var_b7d2a5af, type) {
+    function any_button_hit(button_hit, type) {
         buttons = [];
         if (type == "<dev string:x15c>") {
             buttons[0] = "<dev string:x1fc>";
@@ -920,7 +920,7 @@
             buttons = level.buttons;
         }
         for (i = 0; i < buttons.size; i++) {
-            if (var_b7d2a5af == buttons[i]) {
+            if (button_hit == buttons[i]) {
                 return 1;
             }
         }

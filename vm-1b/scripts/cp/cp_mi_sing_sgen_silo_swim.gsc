@@ -1,29 +1,29 @@
-#using scripts/cp/cp_mi_sing_sgen_util;
-#using scripts/cp/cp_mi_sing_sgen_sound;
-#using scripts/cp/cp_mi_sing_sgen_accolades;
-#using scripts/cp/cp_mi_sing_sgen;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/shared/array_shared;
-#using scripts/cp/_util;
+#using scripts/codescripts/struct;
+#using scripts/cp/_dialog;
+#using scripts/cp/_hazard;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
 #using scripts/cp/_skipto;
 #using scripts/cp/_spawn_manager;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_hazard;
-#using scripts/cp/_dialog;
-#using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_sgen;
+#using scripts/cp/cp_mi_sing_sgen_accolades;
+#using scripts/cp/cp_mi_sing_sgen_sound;
+#using scripts/cp/cp_mi_sing_sgen_util;
+#using scripts/shared/array_shared;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace cp_mi_sing_sgen_silo_swim;
 
@@ -113,7 +113,7 @@ function function_adfc879d() {
     var_26e0d148 = (0, 30, 0);
     var_339ee53e = getent("trig_water_flow", "targetname");
     while (true) {
-        e_player = var_339ee53e waittill(#"trigger");
+        var_339ee53e waittill(#"trigger", e_player);
         v_velocity = e_player getvelocity();
         v_velocity += var_26e0d148;
         e_player setvelocity(v_velocity);
@@ -298,7 +298,7 @@ function function_26a0a902(str_type, s_start, var_253d1f97) {
         var_2d4569cf = self function_dabb79d8();
         if (isdefined(s_start)) {
             var_2d4569cf.targetname = "depth_charger_dive";
-            var_2d4569cf thread function_c51242e1(s_start, var_253d1f97);
+            var_2d4569cf thread handle_movement(s_start, var_253d1f97);
         } else {
             var_2d4569cf.targetname = "depth_charger_static";
             var_2d4569cf thread util::delay(randomfloatrange(0.5, 5), undefined, &function_607790f9, 5, 8, 18);
@@ -311,7 +311,7 @@ function function_26a0a902(str_type, s_start, var_253d1f97) {
         var_2d4569cf.origin = self.origin;
         var_2d4569cf.angles = self.angles;
         var_2d4569cf thread function_66b2e4a2();
-        var_2d4569cf thread function_c51242e1(s_start, var_253d1f97);
+        var_2d4569cf thread handle_movement(s_start, var_253d1f97);
         if (self.classname === "script_model") {
             self util::self_delete();
         }
@@ -358,7 +358,7 @@ function function_dabb79d8() {
 // Params 2, eflags: 0x0
 // Checksum 0x554e596a, Offset: 0x1e50
 // Size: 0x2aa
-function function_c51242e1(s_target, var_253d1f97) {
+function handle_movement(s_target, var_253d1f97) {
     self endon(#"death");
     self endon(#"hash_75409bb6");
     if (!isvehicle(self)) {
@@ -408,7 +408,7 @@ function function_c51242e1(s_target, var_253d1f97) {
 // Size: 0x7a
 function function_9e34c3b5() {
     self endon(#"death");
-    damage, e_attacker = self waittill(#"damage");
+    self waittill(#"damage", damage, e_attacker);
     if (isplayer(e_attacker)) {
         namespace_99202726::function_e85e2afd(e_attacker);
     }

@@ -1,7 +1,7 @@
 #using scripts/codescripts/struct;
-#using scripts/cp/_skipto;
-#using scripts/cp/_objectives;
 #using scripts/cp/_hacking;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
 #using scripts/shared/flag_shared;
 
 #namespace cp_mi_cairo_aquifer_hackobjs;

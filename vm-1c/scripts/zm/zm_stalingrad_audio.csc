@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/beam_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/beam_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_stalingrad_audio;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_stalingrad_audio
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2fcd0a30, Offset: 0x2e8
 // Size: 0x102
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_stalingrad_audio
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x95348088, Offset: 0x3f8
 // Size: 0x134
 function function_a50e0efb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -46,7 +46,7 @@ function function_a50e0efb(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_stalingrad_audio
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x6c8710d3, Offset: 0x538
 // Size: 0x10c
 function function_41eaf8b8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

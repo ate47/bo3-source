@@ -1,10 +1,10 @@
 #using scripts/cp/_skipto;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
 
 #namespace cache;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1dfcdc5a, Offset: 0x320
 // Size: 0xa4
 function __init__() {
@@ -28,7 +28,7 @@ function __init__() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf33394be, Offset: 0x3d0
 // Size: 0x80
 function function_af11d807() {
@@ -42,7 +42,7 @@ function function_af11d807() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95af93a6, Offset: 0x458
 // Size: 0x74
 function function_2b0d49bd() {
@@ -53,7 +53,7 @@ function function_2b0d49bd() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6db1becd, Offset: 0x4d8
 // Size: 0x260
 function function_2f6eaad8() {
@@ -65,7 +65,7 @@ function function_2f6eaad8() {
     var_b0fde15b sethintstring(%SCRIPT_AMMO_REFILL);
     var_b0fde15b setcursorhint("HINT_NOICON");
     while (true) {
-        e_player = var_b0fde15b waittill(#"trigger");
+        var_b0fde15b waittill(#"trigger", e_player);
         e_player disableweapons();
         e_player playsound("fly_ammo_crate_refill");
         wait 2;
@@ -83,7 +83,7 @@ function function_2f6eaad8() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc914fb1, Offset: 0x740
 // Size: 0x5c
 function function_5d73924() {
@@ -93,7 +93,7 @@ function function_5d73924() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe3eff64d, Offset: 0x7a8
 // Size: 0x588
 function function_5ad8638a() {
@@ -141,7 +141,7 @@ function function_5ad8638a() {
 }
 
 // Namespace cache
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6864b5, Offset: 0xd38
 // Size: 0x284
 function function_acb5494d() {
@@ -189,7 +189,7 @@ function function_acb5494d() {
     }
 
     // Namespace cache
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x7a265192, Offset: 0x1118
     // Size: 0x80
     function function_4fe8e0cc(tag) {

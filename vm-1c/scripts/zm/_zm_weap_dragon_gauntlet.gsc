@@ -1,29 +1,29 @@
 #using scripts/shared/abilities/_ability_player;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_death;
 #using scripts/shared/ai/systems/gib;
-#using scripts/zm/_zm;
-#using scripts/shared/vehicles/_dragon_whelp;
-#using scripts/zm/_zm_hero_weapon;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/throttle_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/throttle_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_dragon_whelp;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_hero_weapon;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_weap_dragon_gauntlet;
 
@@ -36,7 +36,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe29d5e01, Offset: 0x748
 // Size: 0x254
 function __init__() {
@@ -61,7 +61,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xc197e6f0, Offset: 0x9a8
 // Size: 0x1ec
 function private function_44774881() {
@@ -82,7 +82,7 @@ function private function_44774881() {
         self function_22d7caeb();
     }
     do {
-        weapon = self waittill(#"hash_b53927b");
+        self waittill(#"hash_b53927b", weapon);
     } while (weapon != self.var_207d01be);
     if (isdefined(self.var_85466cc5) && isdefined(self.var_85466cc5["dragon_gauntlet_flamethrower"])) {
         self setweaponammoclip(level.var_207d01be, self.var_85466cc5["dragon_gauntlet_flamethrower"]);
@@ -111,7 +111,7 @@ function reset_after_bleeding_out() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6188835, Offset: 0xbf8
 // Size: 0x54
 function function_421902c5() {
@@ -122,7 +122,7 @@ function function_421902c5() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a2a6b65, Offset: 0xc58
 // Size: 0x100
 function function_99a68dd() {
@@ -138,7 +138,7 @@ function function_99a68dd() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf5d3be02, Offset: 0xd60
 // Size: 0x18
 function function_36f6c07f(var_147067e4) {
@@ -146,7 +146,7 @@ function function_36f6c07f(var_147067e4) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x16735161, Offset: 0xd80
 // Size: 0x234
 function function_712b36f9(var_40c4a571) {
@@ -179,7 +179,7 @@ function function_712b36f9(var_40c4a571) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x81e25c37, Offset: 0xfc0
 // Size: 0xe4
 function function_b90c6ba(var_40c4a571) {
@@ -196,7 +196,7 @@ function function_b90c6ba(var_40c4a571) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7fc9f7d3, Offset: 0x10b0
 // Size: 0x1dc
 function function_f79afde0(var_dabe8ae8) {
@@ -223,7 +223,7 @@ function function_f79afde0(var_dabe8ae8) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x62d44725, Offset: 0x1298
 // Size: 0x174
 function function_d638417f(var_dabe8ae8) {
@@ -247,14 +247,14 @@ function function_d638417f(var_dabe8ae8) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdbf74e8b, Offset: 0x1418
 // Size: 0x200
 function weapon_change_watcher() {
     self endon(#"disconnect");
     self.var_f2a52896 = undefined;
     while (true) {
-        w_current, w_previous = self waittill(#"weapon_change");
+        self waittill(#"weapon_change", w_current, w_previous);
         if (w_current === level.var_207d01be) {
             if (self.var_f2a52896 === "wpn_t7_zmb_dlc3_gauntlet_dragon_elbow_upg_world") {
                 self detach(self.var_f2a52896, "J_Elbow_RI");
@@ -278,7 +278,7 @@ function weapon_change_watcher() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc371313e, Offset: 0x1620
 // Size: 0x11e
 function function_22a08c51(weapon) {
@@ -305,7 +305,7 @@ function function_22a08c51(weapon) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe640ffc0, Offset: 0x1748
 // Size: 0x23c
 function function_c0093887() {
@@ -344,7 +344,7 @@ function function_c0093887() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd82e75f2, Offset: 0x1990
 // Size: 0xa2
 function is_in_array(item, array) {
@@ -359,7 +359,7 @@ function is_in_array(item, array) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x73cfc544, Offset: 0x1a40
 // Size: 0x2a8
 function function_d7a4275d() {
@@ -404,7 +404,7 @@ function function_d7a4275d() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb2e9807c, Offset: 0x1cf0
 // Size: 0x120
 function function_62d6a233() {
@@ -427,7 +427,7 @@ function function_62d6a233() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x50d866a6, Offset: 0x1e18
 // Size: 0xfe
 function function_8e2014a0() {
@@ -441,7 +441,7 @@ function function_8e2014a0() {
     self notify(#"hash_e3575e9f");
     self endon(#"hash_e3575e9f");
     for (;;) {
-        weapon = self waittill(#"weapon_melee_juke");
+        self waittill(#"weapon_melee_juke", weapon);
         if (weapon === self.var_ae0fff53) {
             self playsound("zmb_rocketshield_start");
             self function_e7fe168a(weapon);
@@ -452,7 +452,7 @@ function function_8e2014a0() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5ebde3a, Offset: 0x1f20
 // Size: 0x180
 function function_e7fe168a(weapon) {
@@ -480,7 +480,7 @@ function function_e7fe168a(weapon) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3b1fc9f3, Offset: 0x20a8
 // Size: 0x32a
 function function_345e492a(damage_point, radius) {
@@ -493,10 +493,10 @@ function function_345e492a(damage_point, radius) {
         if (isdefined(enemy.var_96906507) && (!isdefined(enemy) || enemy.var_96906507)) {
             continue;
         }
-        var_fb942e9f = distancesquared(enemy.origin, damage_point);
+        range_sq = distancesquared(enemy.origin, damage_point);
         radius_sq = radius * radius;
         enemy.var_96906507 = 1;
-        if (var_fb942e9f > radius_sq) {
+        if (range_sq > radius_sq) {
             continue;
         }
         [[ level.var_af9cd4ca ]]->waitinqueue(enemy);
@@ -517,7 +517,7 @@ function function_345e492a(damage_point, radius) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xff348c9d, Offset: 0x23e0
 // Size: 0x35c
 function function_fa885ef2(e_player, ai_enemy) {
@@ -561,7 +561,7 @@ function function_fa885ef2(e_player, ai_enemy) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x47700a4d, Offset: 0x2748
 // Size: 0x174
 function function_2f36d185(weapon) {
@@ -587,7 +587,7 @@ function function_2f36d185(weapon) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xce863d25, Offset: 0x28c8
 // Size: 0xd0
 function function_cd7dbd9d(weapon) {
@@ -602,7 +602,7 @@ function function_cd7dbd9d(weapon) {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xce3abde3, Offset: 0x29a0
 // Size: 0x194
 function function_f5802b55() {
@@ -627,7 +627,7 @@ function function_f5802b55() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd7d9c291, Offset: 0x2b40
 // Size: 0x44
 function function_44ecb9cb() {
@@ -638,7 +638,7 @@ function function_44ecb9cb() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x39e3894, Offset: 0x2b90
 // Size: 0x44
 function function_1692b405() {
@@ -649,7 +649,7 @@ function function_1692b405() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f97b335, Offset: 0x2be0
 // Size: 0x8c
 function function_22d7caeb() {
@@ -665,7 +665,7 @@ function function_22d7caeb() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x880b5889, Offset: 0x2c78
 // Size: 0x70
 function function_b80d5548() {
@@ -680,7 +680,7 @@ function function_b80d5548() {
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 12, eflags: 0x1 linked
+// Params 12, eflags: 0x0
 // Checksum 0xbb41d809, Offset: 0x2cf0
 // Size: 0x256
 function function_cb315e40(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
@@ -713,7 +713,7 @@ function function_cb315e40(inflictor, attacker, damage, flags, meansofdeath, wea
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x527b208b, Offset: 0x2f50
 // Size: 0x104
 function function_d775fe77(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -724,7 +724,7 @@ function function_d775fe77(einflictor, attacker, idamage, smeansofdeath, weapon,
 }
 
 // Namespace zm_weap_dragon_gauntlet
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x6375ecb1, Offset: 0x3060
 // Size: 0x11c
 function function_cb6fb97(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -738,7 +738,7 @@ function function_cb6fb97(einflictor, attacker, idamage, smeansofdeath, weapon, 
 /#
 
     // Namespace zm_weap_dragon_gauntlet
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x5ffb6f76, Offset: 0x3188
     // Size: 0x748
     function function_a23fb854() {
@@ -819,7 +819,7 @@ function function_cb6fb97(einflictor, attacker, idamage, smeansofdeath, weapon, 
     }
 
     // Namespace zm_weap_dragon_gauntlet
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfc7184e3, Offset: 0x38d8
     // Size: 0x60
     function function_82f11e44() {
@@ -834,7 +834,7 @@ function function_cb6fb97(einflictor, attacker, idamage, smeansofdeath, weapon, 
     }
 
     // Namespace zm_weap_dragon_gauntlet
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x12f83ef8, Offset: 0x3940
     // Size: 0x2c
     function function_c2e5ffc1() {

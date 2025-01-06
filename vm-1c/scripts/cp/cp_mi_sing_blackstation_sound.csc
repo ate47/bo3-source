@@ -1,11 +1,11 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
 
 #namespace cp_mi_sing_blackstation_sound;
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6dfc0b30, Offset: 0x2c8
 // Size: 0x7c
 function main() {
@@ -15,7 +15,7 @@ function main() {
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd1f983d0, Offset: 0x350
 // Size: 0x27a
 function sndWindSystem(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -57,7 +57,7 @@ function sndWindSystem(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59984d, Offset: 0x5d8
 // Size: 0x54
 function function_d84ed3d1() {
@@ -71,7 +71,7 @@ function function_d84ed3d1() {
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x16549f41, Offset: 0x638
 // Size: 0x2c
 function function_87c8026c() {
@@ -79,7 +79,7 @@ function function_87c8026c() {
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1b8a0ce7, Offset: 0x670
 // Size: 0x504
 function function_ca589ae4() {
@@ -118,7 +118,7 @@ function function_ca589ae4() {
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd954f333, Offset: 0xb80
 // Size: 0x94
 function sndStationWalla(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -130,7 +130,7 @@ function sndStationWalla(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x646f98ce, Offset: 0xc20
 // Size: 0x12c
 function sndBlackStationSounds(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -143,7 +143,7 @@ function sndBlackStationSounds(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x608c6e71, Offset: 0xd58
 // Size: 0x47c
 function sndDrillWalla(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -180,7 +180,7 @@ function sndDrillWalla(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 }
 
 // Namespace cp_mi_sing_blackstation_sound
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x34dd995, Offset: 0x11e0
 // Size: 0x84
 function function_41d671f5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

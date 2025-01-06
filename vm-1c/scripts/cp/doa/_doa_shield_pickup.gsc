@@ -1,14 +1,14 @@
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_utility;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_utility;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_6df66aa5;
 
@@ -65,7 +65,7 @@ function boxingPickupUpdate() {
 // Size: 0x5c
 function function_fa8666fa() {
     self thread namespace_eaa992c::function_285a2999("boxing_stars");
-    corpse = self waittill(#"actor_corpse");
+    self waittill(#"actor_corpse", corpse);
     corpse thread namespace_eaa992c::function_285a2999("boxing_stars");
 }
 
@@ -126,7 +126,7 @@ function private function_80bf1f40(player, note, sfx, var_5e61e69d, mod, var_aa7
     }
     player endon(note);
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isplayer(guy)) {
             continue;
         }
@@ -318,7 +318,7 @@ function private function_5f0b5579(player) {
     player endon(#"disconnect");
     self endon(#"death");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isdefined(guy.var_d538832c) && guy.var_d538832c) {
             continue;
         }
@@ -459,7 +459,7 @@ function private function_92374630(player) {
     player endon(#"hash_1d724bbf");
     player endon(#"disconnect");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (isplayer(guy)) {
             continue;
         }

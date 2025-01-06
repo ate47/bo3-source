@@ -1,24 +1,24 @@
-#using scripts/zm/zm_moon_sq;
-#using scripts/zm/zm_moon_amb;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_sidequests;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_sidequests;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_moon_amb;
+#using scripts/zm/zm_moon_sq;
 
 #namespace zm_moon_sq_datalogs;
 
 // Namespace zm_moon_sq_datalogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xffae8298, Offset: 0x368
 // Size: 0x404
 function init() {
@@ -41,13 +41,13 @@ function init() {
         }
         log setmodel("p7_zm_moo_data_reel");
         log thread namespace_6e97c459::function_dd92f786("pickedup");
-        who = log waittill(#"pickedup");
+        log waittill(#"pickedup", who);
         playsoundatposition("fly_log_pickup", who.origin);
         who.var_459a83f3 = 1;
         log delete();
         who namespace_6e97c459::function_f72f765e("sq", "datalog");
         player thread namespace_6e97c459::function_dd92f786("placed", &function_a4bcd62c);
-        who = player waittill(#"placed");
+        player waittill(#"placed", who);
         who.var_459a83f3 = undefined;
         who namespace_6e97c459::function_9f2411a3("sq", "datalog");
         sound_ent = spawn("script_origin", player.origin);
@@ -61,7 +61,7 @@ function init() {
 }
 
 // Namespace zm_moon_sq_datalogs
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20a4eecd, Offset: 0x778
 // Size: 0x18
 function function_a4bcd62c() {

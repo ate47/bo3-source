@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace stalingrad_cleanup;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace stalingrad_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcb54c765, Offset: 0x230
 // Size: 0x10
 function __init__() {
@@ -26,7 +26,7 @@ function __init__() {
 }
 
 // Namespace stalingrad_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf3b1b5cc, Offset: 0x248
 // Size: 0x1c
 function __main__() {
@@ -42,7 +42,7 @@ function force_check_now() {
 }
 
 // Namespace stalingrad_cleanup
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x520c75e1, Offset: 0x290
 // Size: 0x20e
 function private cleanup_main() {
@@ -81,7 +81,7 @@ function private cleanup_main() {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x83c9465a, Offset: 0x4a8
 // Size: 0x274
 function do_cleanup_check(n_override_cleanup_dist) {
@@ -129,7 +129,7 @@ function do_cleanup_check(n_override_cleanup_dist) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x216e4666, Offset: 0x728
 // Size: 0x3cc
 function cleanup_zombie(var_1503b3f8) {
@@ -195,7 +195,7 @@ function cleanup_zombie(var_1503b3f8) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x28b3c664, Offset: 0xb00
 // Size: 0xd8
 function private player_can_see_me(player) {
@@ -211,7 +211,7 @@ function private player_can_see_me(player) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9047645f, Offset: 0xbe0
 // Size: 0xb4
 function private player_ahead_of_me(player) {
@@ -244,7 +244,7 @@ function get_escape_position() {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x59d63f4a, Offset: 0xd60
 // Size: 0x11e
 function get_adjacencies_to_zone(str_zone) {
@@ -265,7 +265,7 @@ function get_adjacencies_to_zone(str_zone) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6af466ae, Offset: 0xe88
 // Size: 0xd2
 function private get_wait_locations_in_zones(a_zones) {
@@ -277,7 +277,7 @@ function private get_wait_locations_in_zones(a_zones) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xae1ea513, Offset: 0xf68
 // Size: 0xd6
 function private get_farthest_wait_location(a_wait_locations) {
@@ -297,7 +297,7 @@ function private get_farthest_wait_location(a_wait_locations) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xdf5eeba0, Offset: 0x1048
 // Size: 0x88
 function private get_wait_locations_in_zone(zone) {
@@ -310,7 +310,7 @@ function private get_wait_locations_in_zone(zone) {
 }
 
 // Namespace stalingrad_cleanup
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x612642b6, Offset: 0x10d8
 // Size: 0x9c
 function get_escape_position_in_current_zone() {

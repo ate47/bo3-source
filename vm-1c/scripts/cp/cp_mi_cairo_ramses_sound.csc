@@ -1,11 +1,11 @@
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
 
 #namespace cp_mi_cairo_ramses_sound;
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb91f742b, Offset: 0x190
 // Size: 0x94
 function main() {
@@ -18,7 +18,7 @@ function main() {
 }
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6bd6aad4, Offset: 0x230
 // Size: 0xb4
 function function_44f2e4b1() {
@@ -27,7 +27,7 @@ function function_44f2e4b1() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_subway_horn", (7608, 1158, -415));
             break;
@@ -36,7 +36,7 @@ function function_44f2e4b1() {
 }
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x41f4937d, Offset: 0x2f0
 // Size: 0xb4
 function function_e127e5d4() {
@@ -45,7 +45,7 @@ function function_e127e5d4() {
         return;
     }
     while (true) {
-        who = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", who);
         if (who isplayer()) {
             playsound(0, "amb_defibrillator", (7443, -1682, 74));
             break;
@@ -66,7 +66,7 @@ function function_4d86d804() {
 }
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x35118413, Offset: 0x418
 // Size: 0x54
 function function_2d42a9f5() {
@@ -77,7 +77,7 @@ function function_2d42a9f5() {
 }
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc6106376, Offset: 0x478
 // Size: 0xc4
 function function_87ff2775() {
@@ -93,7 +93,7 @@ function function_87ff2775() {
 }
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2cb02fab, Offset: 0x548
 // Size: 0x188
 function function_1a72b50d() {
@@ -115,7 +115,7 @@ function function_1a72b50d() {
 }
 
 // Namespace cp_mi_cairo_ramses_sound
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf04aabce, Offset: 0x6d8
 // Size: 0x2c
 function function_929b684a() {

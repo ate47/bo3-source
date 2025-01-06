@@ -1,10 +1,10 @@
-#using scripts/zm/zm_zmhd_cleanup_mgr;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/zm_zmhd_cleanup_mgr;
 
 #namespace zm_moon_ai_astro;
 
@@ -73,7 +73,7 @@ function function_84b2ceb9() {
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         if (distancesquared(self.origin, players[i].origin) <= 640000) {
-            cansee = self namespace_2d028ffb::player_can_see_me(players[i]);
+            cansee = self zmhd_cleanup::player_can_see_me(players[i]);
             if (cansee) {
                 players[i] thread zm_audio::create_and_play_dialog("general", "astro_spawn");
                 return;

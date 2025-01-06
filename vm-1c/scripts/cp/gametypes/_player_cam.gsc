@@ -1,10 +1,10 @@
 #using scripts/cp/_util;
-#using scripts/shared/lui_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/math_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_5f11fb0b;
 
@@ -19,7 +19,7 @@ function autoexec main() {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0xf50df5cb, Offset: 0x608
 // Size: 0x3bc
 function function_8e835895(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -78,7 +78,7 @@ function function_812435e3() {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4bde5ec, Offset: 0xa28
 // Size: 0xb4
 function get_trace(old_position, new_position) {
@@ -91,7 +91,7 @@ function get_trace(old_position, new_position) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe46b84a8, Offset: 0xae8
 // Size: 0x44
 function function_b1d0850f(old_position, new_position) {
@@ -100,7 +100,7 @@ function function_b1d0850f(old_position, new_position) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb35b7462, Offset: 0xb38
 // Size: 0x56
 function function_e2d94882(old_position, new_position) {
@@ -112,7 +112,7 @@ function function_e2d94882(old_position, new_position) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc800ead1, Offset: 0xb98
 // Size: 0x32
 function is_falling(position) {
@@ -120,7 +120,7 @@ function is_falling(position) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 11, eflags: 0x1 linked
+// Params 11, eflags: 0x0
 // Checksum 0x7d4a3f96, Offset: 0xbd8
 // Size: 0x97c
 function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, var_f06dc6a2, var_b633f381, lookdir, var_213955be, var_956c7382) {
@@ -135,24 +135,24 @@ function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933b
     vector = position + forwarddir;
     if (isdefined(vdir)) {
         vdir *= -1;
-        var_544bbb55 = vectortoangles(vdir);
+        target_angles = vectortoangles(vdir);
     } else {
         vdir = (forwarddir[0], forwarddir[1], forwarddir[2]);
-        var_544bbb55 = vectortoangles(vdir);
+        target_angles = vectortoangles(vdir);
         vdir = (forwarddir[0], forwarddir[1], -1);
         vdir = vectornormalize(vdir);
     }
     if (isdefined(lookdir)) {
-        var_544bbb55 = vectortoangles(lookdir);
+        target_angles = vectortoangles(lookdir);
     }
     if (!isdefined(var_f06dc6a2)) {
-        var_f06dc6a2 = absangleclamp360(var_544bbb55[0]);
+        var_f06dc6a2 = absangleclamp360(target_angles[0]);
     }
     if (!isdefined(var_b633f381)) {
-        var_b633f381 = absangleclamp360(var_544bbb55[2]);
+        var_b633f381 = absangleclamp360(target_angles[2]);
     }
-    var_544bbb55 = (var_f06dc6a2, absangleclamp360(var_544bbb55[1]), var_b633f381);
-    angles = (absangleclamp360(var_544bbb55[0]), absangleclamp360(var_544bbb55[1]), angleclamp180(var_544bbb55[2]));
+    target_angles = (var_f06dc6a2, absangleclamp360(target_angles[1]), var_b633f381);
+    angles = (absangleclamp360(target_angles[0]), absangleclamp360(target_angles[1]), angleclamp180(target_angles[2]));
     if (isdefined(var_f40ed68d) && vdir[0] != 0) {
         var_505f8faa = 0;
     } else {
@@ -237,7 +237,7 @@ function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933b
 }
 
 // Namespace namespace_5f11fb0b
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2c93fdab, Offset: 0x1560
 // Size: 0xb4
 function function_956c7382(position) {
@@ -248,7 +248,7 @@ function function_956c7382(position) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9e2cf7a3, Offset: 0x1620
 // Size: 0x12c
 function function_a0c37dda(position, angles, var_956c7382) {
@@ -267,7 +267,7 @@ function function_a0c37dda(position, angles, var_956c7382) {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x951206bc, Offset: 0x1758
 // Size: 0x5e
 function function_22196132() {
@@ -279,7 +279,7 @@ function function_22196132() {
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xc88eb523, Offset: 0x17c0
 // Size: 0x1be
 function function_f05a5931(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -298,7 +298,7 @@ function function_f05a5931(einflictor, attacker, idamage, weapon, vdir, shitloc)
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xef110db8, Offset: 0x1988
 // Size: 0x1b6
 function function_6e880b57(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -317,7 +317,7 @@ function function_6e880b57(einflictor, attacker, idamage, weapon, vdir, shitloc)
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x52ee63a5, Offset: 0x1b48
 // Size: 0x1be
 function function_1e43c03b(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -336,7 +336,7 @@ function function_1e43c03b(einflictor, attacker, idamage, weapon, vdir, shitloc)
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x8c81e933, Offset: 0x1d10
 // Size: 0x32e
 function function_7a3707a6(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -366,7 +366,7 @@ function function_7a3707a6(einflictor, attacker, idamage, weapon, vdir, shitloc)
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xe8175737, Offset: 0x2048
 // Size: 0x196
 function function_1c006469(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -386,7 +386,7 @@ function function_1c006469(einflictor, attacker, idamage, weapon, vdir, shitloc)
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x40a51deb, Offset: 0x21e8
 // Size: 0x17a
 function function_514913aa(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -404,7 +404,7 @@ function function_514913aa(einflictor, attacker, idamage, weapon, vdir, shitloc)
 }
 
 // Namespace namespace_5f11fb0b
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xa01dca14, Offset: 0x2370
 // Size: 0x14e
 function function_fd6ad16(einflictor, attacker, idamage, weapon, vdir, shitloc) {

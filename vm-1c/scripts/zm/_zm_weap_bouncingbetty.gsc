@@ -1,11 +1,11 @@
-#using scripts/zm/_zm_placeable_mine;
-#using scripts/zm/_util;
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_bouncingbetty;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_bouncingbetty;
+#using scripts/shared/weapons/_weaponobjects;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_placeable_mine;
 
 #namespace bouncingbetty;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace bouncingbetty
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c2e6e41, Offset: 0x1f0
 // Size: 0xe4
 function __init__() {
@@ -37,7 +37,7 @@ function __init__() {
 }
 
 // Namespace bouncingbetty
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7d73c82a, Offset: 0x2e0
 // Size: 0x178
 function proximityweaponobjectdetonation_override(watcher) {
@@ -52,7 +52,7 @@ function proximityweaponobjectdetonation_override(watcher) {
         self thread [[ level.var_4382ca27 ]](watcher);
     }
     while (true) {
-        ent = damagearea waittill(#"trigger");
+        damagearea waittill(#"trigger", ent);
         if (!weaponobjects::proximityweaponobject_validtriggerentity(watcher, ent)) {
             continue;
         }

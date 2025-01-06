@@ -1,7 +1,7 @@
 #namespace animationselectortable;
 
 // Namespace animationselectortable
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9c7915c, Offset: 0x88
 // Size: 0xa6
 function registeranimationselectortableevaluator(functionname, functionptr) {

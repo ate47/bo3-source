@@ -1,5 +1,5 @@
-#using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace zombie_death;
 
@@ -17,7 +17,7 @@ function autoexec init_fire_fx() {
 }
 
 // Namespace zombie_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xeb2011aa, Offset: 0x1e8
 // Size: 0x5e
 function on_fire_timeout(localclientnum) {
@@ -31,7 +31,7 @@ function on_fire_timeout(localclientnum) {
 }
 
 // Namespace zombie_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdadb1011, Offset: 0x250
 // Size: 0x334
 function flame_death_fx(localclientnum) {
@@ -80,7 +80,7 @@ function flame_death_fx(localclientnum) {
 }
 
 // Namespace zombie_death
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9fdf39c8, Offset: 0x590
 // Size: 0x9c
 function randomize_array(array) {

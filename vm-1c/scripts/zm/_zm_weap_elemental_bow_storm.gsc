@@ -1,25 +1,25 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_weap_elemental_bow;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 #using scripts/zm/_util;
 #using scripts/zm/_zm_ai_mechz;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_elemental_bow;
+#using scripts/zm/_zm_weapons;
 
 #namespace _zm_weap_elemental_bow_storm;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x76fdfd5e, Offset: 0x5a0
 // Size: 0x1fc
 function __init__() {
@@ -50,7 +50,7 @@ function __init__() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x7a8
 // Size: 0x4
 function __main__() {
@@ -58,7 +58,7 @@ function __main__() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb17c36e8, Offset: 0x7b8
 // Size: 0x7c
 function function_ff153c1a() {
@@ -68,7 +68,7 @@ function function_ff153c1a() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xbf07875e, Offset: 0x840
 // Size: 0x184
 function function_e2bef70c(weapon, v_position, radius, attacker, normal) {
@@ -85,7 +85,7 @@ function function_e2bef70c(weapon, v_position, radius, attacker, normal) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x59abf387, Offset: 0x9d0
 // Size: 0x5da
 function function_578bf1ca(v_hit_pos, var_31d6c509, var_337b3336, var_94d13bd0) {
@@ -154,7 +154,7 @@ function function_578bf1ca(v_hit_pos, var_31d6c509, var_337b3336, var_94d13bd0) 
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x63e89598, Offset: 0xfb8
 // Size: 0x10c
 function function_8f86e6d5(var_7b58139b, e_player) {
@@ -169,7 +169,7 @@ function function_8f86e6d5(var_7b58139b, e_player) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1cebd033, Offset: 0x10d0
 // Size: 0x30
 function function_172d425(ai_enemy) {
@@ -177,7 +177,7 @@ function function_172d425(ai_enemy) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2e2b5929, Offset: 0x1108
 // Size: 0xae
 function function_2624b852() {
@@ -190,7 +190,7 @@ function function_2624b852() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x49ee32d3, Offset: 0x11c0
 // Size: 0x4b4
 function function_2d3e3c1b(e_player, var_337b3336, var_6e7a59eb, var_94d13bd0) {
@@ -257,7 +257,7 @@ function function_2d3e3c1b(e_player, var_337b3336, var_6e7a59eb, var_94d13bd0) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xc47e4446, Offset: 0x1680
 // Size: 0x29c
 function function_b6e08804(e_player, var_94d13bd0) {
@@ -295,7 +295,7 @@ function function_b6e08804(e_player, var_94d13bd0) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x4f824583, Offset: 0x1928
 // Size: 0xb4
 function function_8a5627f3(e_player, var_126c274b, var_337b3336) {
@@ -311,7 +311,7 @@ function function_8a5627f3(e_player, var_126c274b, var_337b3336) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x563572bd, Offset: 0x19e8
 // Size: 0xb4
 function function_70319d26(n_time) {
@@ -329,7 +329,7 @@ function function_70319d26(n_time) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdadfc946, Offset: 0x1aa8
 // Size: 0x194
 function function_23c30f35(e_player, var_126c274b, var_337b3336) {
@@ -357,7 +357,7 @@ function function_23c30f35(e_player, var_126c274b, var_337b3336) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf745b202, Offset: 0x1c48
 // Size: 0xfc
 function function_ef25be5(var_337b3336) {
@@ -377,7 +377,7 @@ function function_ef25be5(var_337b3336) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x22e7234d, Offset: 0x1d50
 // Size: 0xb8
 function function_bffbed67(e_player, var_337b3336) {
@@ -394,7 +394,7 @@ function function_bffbed67(e_player, var_337b3336) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x89973cdd, Offset: 0x1e10
 // Size: 0x28c
 function function_35612a9e(v_hit_pos) {
@@ -432,7 +432,7 @@ function function_35612a9e(v_hit_pos) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe68eec2e, Offset: 0x20a8
 // Size: 0x34
 function function_8a0ca69(e_player) {
@@ -440,7 +440,7 @@ function function_8a0ca69(e_player) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9b32b2b0, Offset: 0x20e8
 // Size: 0xc4
 function function_3f099cfa() {
@@ -456,7 +456,7 @@ function function_3f099cfa() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb7009cba, Offset: 0x21b8
 // Size: 0x4a6
 function function_50d5f4ab(e_player) {
@@ -510,7 +510,7 @@ function function_50d5f4ab(e_player) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x91737ce7, Offset: 0x2668
 // Size: 0x110
 function function_2f036bd6() {
@@ -528,7 +528,7 @@ function function_2f036bd6() {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc2b6acc9, Offset: 0x2780
 // Size: 0xe4
 function function_c9b501b8(var_34137522) {
@@ -555,7 +555,7 @@ function function_88b53a11(var_80242169, var_7c5a4ee4, var_3fee16b8) {
 }
 
 // Namespace _zm_weap_elemental_bow_storm
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x43cf860f, Offset: 0x2910
 // Size: 0x7c
 function function_3c763f48(str_weapon_name, v_source, v_destination) {

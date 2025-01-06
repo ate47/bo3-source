@@ -1,14 +1,14 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_castle_util;
 
 // Namespace zm_castle_util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x69792900, Offset: 0x180
 // Size: 0x15c
 function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_logic) {
@@ -35,7 +35,7 @@ function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_log
 }
 
 // Namespace zm_castle_util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x9c33223, Offset: 0x2e8
 // Size: 0x22
 function function_fcc6aab1(player) {
@@ -44,13 +44,13 @@ function function_fcc6aab1(player) {
 }
 
 // Namespace zm_castle_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x24b3b4a0, Offset: 0x318
 // Size: 0xbc
 function function_77c4e424() {
     self endon(#"death");
     while (true) {
-        player = self waittill(#"trigger");
+        self waittill(#"trigger", player);
         if (player zm_utility::in_revive_trigger()) {
             continue;
         }
@@ -67,7 +67,7 @@ function function_77c4e424() {
 }
 
 // Namespace zm_castle_util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xac5e3585, Offset: 0x3e0
 // Size: 0x1f4
 function function_fa7da172() {
@@ -96,15 +96,15 @@ function function_fa7da172() {
 /#
 
     // Namespace zm_castle_util
-    // Params 4, eflags: 0x1 linked
+    // Params 4, eflags: 0x0
     // Checksum 0xc51fadf6, Offset: 0x5e0
     // Size: 0x108
-    function function_8faf1d24(v_color, var_8882142e, n_scale, str_endon) {
+    function function_8faf1d24(v_color, str_print, n_scale, str_endon) {
         if (!isdefined(v_color)) {
             v_color = (0, 0, 255);
         }
-        if (!isdefined(var_8882142e)) {
-            var_8882142e = "<dev string:x28>";
+        if (!isdefined(str_print)) {
+            str_print = "<dev string:x28>";
         }
         if (!isdefined(n_scale)) {
             n_scale = 0.25;
@@ -120,13 +120,13 @@ function function_fa7da172() {
         }
         origin = self.origin;
         while (true) {
-            print3d(origin, var_8882142e, v_color, n_scale);
+            print3d(origin, str_print, v_color, n_scale);
             wait 0.1;
         }
     }
 
     // Namespace zm_castle_util
-    // Params 5, eflags: 0x1 linked
+    // Params 5, eflags: 0x0
     // Checksum 0xd3574411, Offset: 0x6f0
     // Size: 0x120
     function function_72260d3a(var_2fa24527, str_dvar, n_value, func, var_f0ee45c9) {

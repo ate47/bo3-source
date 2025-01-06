@@ -1,13 +1,13 @@
-#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
 #using scripts/shared/array_shared;
 #using scripts/shared/scene_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
 
 #namespace mp_miniature_ant;
 
 // Namespace mp_miniature_ant
-// Params 0, eflags: 0x1 linked
-// Checksum 0xdd704090, Offset: 0x180
+// Params 0, eflags: 0x0
+// Checksum 0xe13cf0ad, Offset: 0x178
 // Size: 0xe6
 function main() {
     level.var_5cba0818 = [];
@@ -23,8 +23,8 @@ function main() {
 }
 
 // Namespace mp_miniature_ant
-// Params 1, eflags: 0x1 linked
-// Checksum 0xee6a5266, Offset: 0x270
+// Params 1, eflags: 0x0
+// Checksum 0x744056f5, Offset: 0x268
 // Size: 0x14e
 function function_4f20813f(var_ba2f73bb) {
     level.var_6b3738f3[level.var_6b3738f3.size] = spawnstruct();
@@ -39,8 +39,8 @@ function function_4f20813f(var_ba2f73bb) {
 }
 
 // Namespace mp_miniature_ant
-// Params 1, eflags: 0x1 linked
-// Checksum 0x7f4a08cd, Offset: 0x3c8
+// Params 1, eflags: 0x0
+// Checksum 0xfc998a70, Offset: 0x3c0
 // Size: 0x1f8
 function function_4a46c01d(var_9cc495a4) {
     var_3e34d085 = [];
@@ -54,7 +54,7 @@ function function_4a46c01d(var_9cc495a4) {
         var_3e34d085[var_3e34d085.size] = struct::get(str_scene, "scriptbundlename");
     }
     while (true) {
-        waittime = randomintrange(9, 12);
+        waittime = randomintrange(3, 7);
         wait waittime;
         var_fe85e3de = array::random(var_3e34d085);
         var_b7a43bf0 = spawnstruct();
@@ -65,15 +65,14 @@ function function_4a46c01d(var_9cc495a4) {
 }
 
 // Namespace mp_miniature_ant
-// Params 1, eflags: 0x1 linked
-// Checksum 0xc75c61a9, Offset: 0x5c8
+// Params 1, eflags: 0x0
+// Checksum 0x23e4f657, Offset: 0x5c0
 // Size: 0x84
 function function_98d963dd(a_ents) {
     var_8b1cef3c = a_ents["ant"];
     var_8b1cef3c endon(#"death");
     var_8b1cef3c waittill(#"damage");
-    playfxontag("dlc4/mp_mini/fx_ant_death", var_8b1cef3c, "body_jnt");
-    wait 0.05;
+    playfx("dlc4/mp_mini/fx_ant_death", var_8b1cef3c.origin);
     var_8b1cef3c delete();
 }
 

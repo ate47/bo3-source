@@ -1,38 +1,38 @@
-#using scripts/zm/zm_sumpf_ffotd;
-#using scripts/zm/zm_sumpf_fx;
-#using scripts/zm/zm_sumpf_amb;
-#using scripts/zm/_zm_ai_dogs;
-#using scripts/zm/_zm_audio_zhd;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_weap_tesla;
-#using scripts/zm/_zm_weap_cymbal_monkey;
-#using scripts/zm/_zm_weap_bouncingbetty;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 #using scripts/zm/_load;
-#using scripts/zm/_zm_trap_electric;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_dogs;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_audio_zhd;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
+#using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_perk_widows_wine;
 #using scripts/zm/_zm_powerup_carpenter;
 #using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_deadshot;
-#using scripts/zm/_zm_bgb;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_perk_widows_wine;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_trap_electric;
+#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_weap_cymbal_monkey;
+#using scripts/zm/_zm_weap_tesla;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/zm_sumpf_amb;
+#using scripts/zm/zm_sumpf_ffotd;
+#using scripts/zm/zm_sumpf_fx;
 
 #namespace zm_sumpf;
 
@@ -46,7 +46,7 @@ function autoexec function_d9af860b() {
 }
 
 // Namespace zm_sumpf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbbfebb54, Offset: 0x650
 // Size: 0x244
 function main() {
@@ -72,7 +72,7 @@ function main() {
 }
 
 // Namespace zm_sumpf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8779ffe, Offset: 0x8a0
 // Size: 0x2c
 function function_794950d2(localclientnum) {
@@ -80,7 +80,7 @@ function function_794950d2(localclientnum) {
 }
 
 // Namespace zm_sumpf
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x37ce1928, Offset: 0x8d8
 // Size: 0x74
 function player_legs_hide(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -92,7 +92,7 @@ function player_legs_hide(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_sumpf
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8f01fc6b, Offset: 0x958
 // Size: 0x7c
 function function_166277c8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -104,7 +104,7 @@ function function_166277c8(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_sumpf
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x670a1bef, Offset: 0x9e0
 // Size: 0x74
 function function_f79e9b4f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -114,7 +114,7 @@ function function_f79e9b4f(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_sumpf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e44edf2, Offset: 0xa60
 // Size: 0x24
 function function_b211e563() {
@@ -123,7 +123,7 @@ function function_b211e563() {
 }
 
 // Namespace zm_sumpf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe985534, Offset: 0xa90
 // Size: 0x24
 function include_weapons() {
@@ -131,7 +131,7 @@ function include_weapons() {
 }
 
 // Namespace zm_sumpf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x423429e1, Offset: 0xac0
 // Size: 0xea
 function function_4e327cec() {
@@ -144,12 +144,12 @@ function function_4e327cec() {
 }
 
 // Namespace zm_sumpf
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdb50ee1b, Offset: 0xbb8
 // Size: 0x98
 function function_938d448f() {
     while (true) {
-        who = self waittill(#"trigger");
+        self waittill(#"trigger", who);
         if (who isplayer()) {
             if (!(isdefined(who.var_b115a3e6) && who.var_b115a3e6)) {
                 who.var_b115a3e6 = 1;
@@ -161,7 +161,7 @@ function function_938d448f() {
 }
 
 // Namespace zm_sumpf
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc3e91a56, Offset: 0xc58
 // Size: 0xac
 function function_387efde5(trigger) {

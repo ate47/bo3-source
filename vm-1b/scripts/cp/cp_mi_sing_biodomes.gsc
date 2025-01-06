@@ -1,48 +1,48 @@
-#using scripts/cp/cp_mi_sing_biodomes_util;
-#using scripts/cp/cp_mi_sing_biodomes_fighttothedome;
+#using scripts/codescripts/struct;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_dialog;
+#using scripts/cp/_load;
+#using scripts/cp/_mobile_armory;
+#using scripts/cp/_objectives;
+#using scripts/cp/_skipto;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/_squad_control;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_sing_biodomes_accolades;
 #using scripts/cp/cp_mi_sing_biodomes_cloudmountain;
-#using scripts/cp/cp_mi_sing_biodomes_warehouse;
+#using scripts/cp/cp_mi_sing_biodomes_fighttothedome;
+#using scripts/cp/cp_mi_sing_biodomes_fx;
+#using scripts/cp/cp_mi_sing_biodomes_init_spawn;
 #using scripts/cp/cp_mi_sing_biodomes_markets;
 #using scripts/cp/cp_mi_sing_biodomes_sound;
-#using scripts/cp/cp_mi_sing_biodomes_init_spawn;
-#using scripts/cp/cp_mi_sing_biodomes_fx;
-#using scripts/cp/cp_mi_sing_biodomes_accolades;
+#using scripts/cp/cp_mi_sing_biodomes_util;
+#using scripts/cp/cp_mi_sing_biodomes_warehouse;
 #using scripts/cp/cybercom/_cybercom;
-#using scripts/cp/_objectives;
-#using scripts/cp/_ammo_cache;
-#using scripts/cp/_util;
-#using scripts/cp/_squad_control;
-#using scripts/cp/_spawn_manager;
-#using scripts/cp/_skipto;
-#using scripts/cp/_load;
-#using scripts/cp/_dialog;
-#using scripts/cp/_mobile_armory;
-#using scripts/cp/_collectibles;
-#using scripts/shared/ai/archetype_warlord_interface;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/teamgather_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/lui_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/hud_message_shared;
-#using scripts/shared/gameobjects_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/colors_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/animation_shared;
-#using scripts/shared/ai_shared;
 #using scripts/cp/gametypes/_save;
-#using scripts/codescripts/struct;
+#using scripts/shared/ai/archetype_warlord_interface;
+#using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/hud_message_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/teamgather_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/visionset_mgr_shared;
 
 #namespace cp_mi_sing_biodomes;
 
@@ -91,16 +91,16 @@ function main() {
 // Size: 0x2e2
 function function_673254cc() {
     skipto::add("objective_igc", &objective_igc, undefined, &objective_igc_done);
-    skipto::function_d68e678e("objective_markets_start", &cp_mi_sing_biodomes_markets::function_768ccc86, undefined, &cp_mi_sing_biodomes_markets::function_1bc4d710);
-    skipto::function_d68e678e("objective_markets_rpg", &cp_mi_sing_biodomes_markets::function_df0ba879, undefined, &cp_mi_sing_biodomes_markets::function_c80a0733);
-    skipto::function_d68e678e("objective_markets2_start", &cp_mi_sing_biodomes_markets::function_bf0a0e50, undefined, &cp_mi_sing_biodomes_markets::function_4fd7cfe6);
-    skipto::function_d68e678e("objective_warehouse", &cp_mi_sing_biodomes_warehouse::function_98f8d85b, undefined, &cp_mi_sing_biodomes_warehouse::function_4d15fa71);
-    skipto::function_d68e678e("objective_cloudmountain", &cp_mi_sing_biodomes_cloudmountain::function_34f37fe, undefined, &cp_mi_sing_biodomes_cloudmountain::function_ace9f6d8);
-    skipto::function_d68e678e("objective_cloudmountain_level_2", &cp_mi_sing_biodomes_cloudmountain::function_8ce887a2, undefined, &cp_mi_sing_biodomes_cloudmountain::function_2013f39c);
+    skipto::function_d68e678e("objective_markets_start", &cp_mi_sing_biodomes_markets::objective_markets_start_init, undefined, &cp_mi_sing_biodomes_markets::objective_markets_start_done);
+    skipto::function_d68e678e("objective_markets_rpg", &cp_mi_sing_biodomes_markets::objective_markets_rpg_init, undefined, &cp_mi_sing_biodomes_markets::objective_markets_rpg_done);
+    skipto::function_d68e678e("objective_markets2_start", &cp_mi_sing_biodomes_markets::objective_markets2_start_init, undefined, &cp_mi_sing_biodomes_markets::objective_markets2_start_done);
+    skipto::function_d68e678e("objective_warehouse", &cp_mi_sing_biodomes_warehouse::objective_warehouse_init, undefined, &cp_mi_sing_biodomes_warehouse::objective_warehouse_done);
+    skipto::function_d68e678e("objective_cloudmountain", &cp_mi_sing_biodomes_cloudmountain::objective_cloudmountain_init, undefined, &cp_mi_sing_biodomes_cloudmountain::objective_cloudmountain_done);
+    skipto::function_d68e678e("objective_cloudmountain_level_2", &cp_mi_sing_biodomes_cloudmountain::function_8ce887a2, undefined, &cp_mi_sing_biodomes_cloudmountain::objective_cloudmountain_level_2_done);
     skipto::function_d68e678e("objective_turret_hallway", &cp_mi_sing_biodomes_cloudmountain::function_df51ef25, undefined, &cp_mi_sing_biodomes_cloudmountain::function_9cfbecff);
     skipto::function_d68e678e("objective_xiulan_vignette", &cp_mi_sing_biodomes_cloudmountain::function_e696b86c, undefined, &cp_mi_sing_biodomes_cloudmountain::function_6be20b72);
     skipto::add("objective_server_room_defend", &cp_mi_sing_biodomes_cloudmountain::function_8dacf956, undefined, &cp_mi_sing_biodomes_cloudmountain::function_9ed4c7c0);
-    skipto::function_d68e678e("objective_fighttothedome", &cp_mi_sing_biodomes_fighttothedome::function_af17c267, undefined, &cp_mi_sing_biodomes_fighttothedome::function_451af01d);
+    skipto::function_d68e678e("objective_fighttothedome", &cp_mi_sing_biodomes_fighttothedome::objective_fighttothedome_init, undefined, &cp_mi_sing_biodomes_fighttothedome::objective_fighttothedome_done);
     /#
         skipto::add_dev("<dev string:x28>", &function_1a9d89e5);
         skipto::add_dev("<dev string:x39>", &cp_mi_sing_biodomes_warehouse::function_5e699ca2);
@@ -283,7 +283,7 @@ function function_cef897cf(str_objective, var_23d9a41a) {
         var_85556b78[i].start_health = var_85556b78[i].health;
     }
     skipto::teleport_ai(str_objective, var_85556b78);
-    level thread namespace_36171bd3::function_e56e9d7d(var_85556b78);
+    level thread squad_control::function_e56e9d7d(var_85556b78);
 }
 
 // Namespace cp_mi_sing_biodomes
@@ -442,7 +442,7 @@ function function_9cebd80e() {
 function function_5cb44f79(var_d83ebd04, var_42c1bd32, var_ae7d184a) {
     var_56af50be = [];
     var_f6c5842 = spawner::simple_spawn_single("markets1_robot_vign");
-    var_f6c5842 namespace_36171bd3::function_eb13b9c0();
+    var_f6c5842 squad_control::function_eb13b9c0();
     if (isdefined(var_42c1bd32)) {
         var_56af50be[var_42c1bd32] = var_f6c5842;
     } else {
@@ -538,7 +538,7 @@ function function_c506a743(str_objective, var_23d9a41a) {
         robot.health = int(robot.health * 0.75);
         robot.start_health = robot.health;
     }
-    level namespace_36171bd3::function_e56e9d7d(a_squad);
+    level squad_control::function_e56e9d7d(a_squad);
 }
 
 // Namespace cp_mi_sing_biodomes
@@ -548,7 +548,7 @@ function function_c506a743(str_objective, var_23d9a41a) {
 function function_a673776d() {
     level flag::wait_till("turret1");
     if (isalive(level.turret_markets1)) {
-        level thread namespace_36171bd3::function_bb612155(level.turret_markets1);
+        level thread squad_control::function_bb612155(level.turret_markets1);
         level.turret_markets1 thread function_2a7e0c30();
     }
 }

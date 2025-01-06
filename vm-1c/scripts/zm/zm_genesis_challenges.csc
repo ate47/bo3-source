@@ -1,8 +1,8 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_genesis_challenges;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x69ac929c, Offset: 0x268
 // Size: 0x288
 function __init__() {
@@ -38,7 +38,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x104ba44a, Offset: 0x4f8
 // Size: 0xbc
 function function_4ff59189(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,7 +52,7 @@ function function_4ff59189(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xd57104c8, Offset: 0x5c0
 // Size: 0x226
 function function_1664174d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -77,7 +77,7 @@ function function_1664174d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5c046e5b, Offset: 0x7f0
 // Size: 0x6c
 function function_aae53847(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -85,7 +85,7 @@ function function_aae53847(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_genesis_challenges
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5a0cd566, Offset: 0x868
 // Size: 0xbc
 function function_2494cf3d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,6 +1,6 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
 #using scripts/shared/array_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace debug;
 
@@ -15,7 +15,7 @@
     }
 
     // Namespace debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6e21c650, Offset: 0x110
     // Size: 0x1c
     function __init__() {
@@ -23,7 +23,7 @@
     }
 
     // Namespace debug
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xad4bb121, Offset: 0x138
     // Size: 0x24a
     function debug_draw_tuning_sphere() {

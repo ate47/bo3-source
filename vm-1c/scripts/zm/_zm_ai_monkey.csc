@@ -1,6 +1,6 @@
+#using scripts/shared/ai_shared;
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/ai_shared;
 
 #namespace _zm_ai_monkey;
 
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _zm_ai_monkey
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf6fe3408, Offset: 0x170
 // Size: 0x8e
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace _zm_ai_monkey
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x19f02544, Offset: 0x208
 // Size: 0x24
 function private function_70fb871f(localclientnum) {
@@ -31,7 +31,7 @@ function private function_70fb871f(localclientnum) {
 }
 
 // Namespace _zm_ai_monkey
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2d016d55, Offset: 0x238
 // Size: 0x158
 function function_2e74dabc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

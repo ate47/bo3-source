@@ -1,24 +1,24 @@
-#using scripts/cp/cp_mi_zurich_coalescence_sound;
-#using scripts/cp/cp_mi_zurich_coalescence_fx;
-#using scripts/cp/cp_mi_zurich_coalescence_zurich_street;
-#using scripts/cp/cp_mi_zurich_coalescence_root_cairo;
-#using scripts/cp/cp_mi_zurich_coalescence_root_zurich;
-#using scripts/cp/cp_mi_zurich_coalescence_root_singapore;
-#using scripts/cp/cp_mi_zurich_coalescence_root_cinematics;
-#using scripts/cp/cp_mi_zurich_coalescence_clearing;
-#using scripts/cp/cp_mi_zurich_coalescence_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_util;
-#using scripts/cp/_load;
-#using scripts/shared/filter_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/util_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_load;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_coalescence_clearing;
+#using scripts/cp/cp_mi_zurich_coalescence_fx;
+#using scripts/cp/cp_mi_zurich_coalescence_root_cairo;
+#using scripts/cp/cp_mi_zurich_coalescence_root_cinematics;
+#using scripts/cp/cp_mi_zurich_coalescence_root_singapore;
+#using scripts/cp/cp_mi_zurich_coalescence_root_zurich;
+#using scripts/cp/cp_mi_zurich_coalescence_sound;
+#using scripts/cp/cp_mi_zurich_coalescence_util;
+#using scripts/cp/cp_mi_zurich_coalescence_zurich_street;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/filter_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #namespace cp_mi_zurich_coalescence;
 
@@ -28,13 +28,13 @@
 // Size: 0x102
 function main() {
     init_clientfields();
-    util::function_57b966c8(&function_71f88fc, 9);
+    util::function_57b966c8(&force_streamer, 9);
     cp_mi_zurich_coalescence_fx::main();
     cp_mi_zurich_coalescence_sound::main();
     namespace_bbb4ee72::main();
-    namespace_3d19ef22::main();
-    namespace_6a04e6cd::main();
-    namespace_73dbe018::main();
+    root_singapore::main();
+    root_zurich::main();
+    root_cairo::main();
     namespace_29799936::main();
     namespace_1beb9396::main();
     function_673254cc();
@@ -61,36 +61,36 @@ function init_clientfields() {
 // Checksum 0x4175d746, Offset: 0xd40
 // Size: 0x3ea
 function function_673254cc() {
-    skipto::add("zurich", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("intro_igc", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("intro_pacing", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("street", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("garage", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("rails", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("plaza_battle", &namespace_8e9083ff::function_5bcd68f2, undefined, &namespace_8e9083ff::function_3bf27f88);
-    skipto::add("hq", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("sacrifice", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("clearing_start", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("clearing_waterfall", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("clearing_path_choice", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("clearing_hub", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("root_zurich_start", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("root_zurich_vortex", &namespace_8e9083ff::function_5bcd68f2, undefined, &namespace_8e9083ff::function_3bf27f88);
-    skipto::add("clearing_hub_2", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("root_cairo_start", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("root_cairo_vortex", &namespace_8e9083ff::function_5bcd68f2, undefined, &namespace_8e9083ff::function_3bf27f88);
-    skipto::add("clearing_hub_3", &namespace_8e9083ff::function_5bcd68f2, undefined, &namespace_8e9083ff::function_3bf27f88);
-    skipto::add("root_singapore_start", &namespace_3d19ef22::function_5bcd68f2);
-    skipto::add("root_singapore_vortex", &namespace_3d19ef22::function_95b88092, undefined, &namespace_3d19ef22::skipto_end);
-    skipto::add("outro_movie", &namespace_8e9083ff::function_5bcd68f2);
-    skipto::add("server_interior", &namespace_8e9083ff::function_5bcd68f2);
+    skipto::add("zurich", &zurich_util::function_5bcd68f2);
+    skipto::add("intro_igc", &zurich_util::function_5bcd68f2);
+    skipto::add("intro_pacing", &zurich_util::function_5bcd68f2);
+    skipto::add("street", &zurich_util::function_5bcd68f2);
+    skipto::add("garage", &zurich_util::function_5bcd68f2);
+    skipto::add("rails", &zurich_util::function_5bcd68f2);
+    skipto::add("plaza_battle", &zurich_util::function_5bcd68f2, undefined, &zurich_util::function_3bf27f88);
+    skipto::add("hq", &zurich_util::function_5bcd68f2);
+    skipto::add("sacrifice", &zurich_util::function_5bcd68f2);
+    skipto::add("clearing_start", &zurich_util::function_5bcd68f2);
+    skipto::add("clearing_waterfall", &zurich_util::function_5bcd68f2);
+    skipto::add("clearing_path_choice", &zurich_util::function_5bcd68f2);
+    skipto::add("clearing_hub", &zurich_util::function_5bcd68f2);
+    skipto::add("root_zurich_start", &zurich_util::function_5bcd68f2);
+    skipto::add("root_zurich_vortex", &zurich_util::function_5bcd68f2, undefined, &zurich_util::function_3bf27f88);
+    skipto::add("clearing_hub_2", &zurich_util::function_5bcd68f2);
+    skipto::add("root_cairo_start", &zurich_util::function_5bcd68f2);
+    skipto::add("root_cairo_vortex", &zurich_util::function_5bcd68f2, undefined, &zurich_util::function_3bf27f88);
+    skipto::add("clearing_hub_3", &zurich_util::function_5bcd68f2, undefined, &zurich_util::function_3bf27f88);
+    skipto::add("root_singapore_start", &root_singapore::function_5bcd68f2);
+    skipto::add("root_singapore_vortex", &root_singapore::function_95b88092, undefined, &root_singapore::skipto_end);
+    skipto::add("outro_movie", &zurich_util::function_5bcd68f2);
+    skipto::add("server_interior", &zurich_util::function_5bcd68f2);
 }
 
 // Namespace cp_mi_zurich_coalescence
 // Params 1, eflags: 0x0
 // Checksum 0x974d0a79, Offset: 0x1138
 // Size: 0x309
-function function_71f88fc(n_zone) {
+function force_streamer(n_zone) {
     switch (n_zone) {
     case 1:
         break;
@@ -317,7 +317,7 @@ function clearing_hide_ferris_wheel(localclientnum, oldval, newval, bnewent, bin
 // Params 7, eflags: 0x0
 // Checksum 0xeb10cd86, Offset: 0x1db8
 // Size: 0x13b
-function function_b230d19c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function theater_fxanim_swap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     assert(isdefined(level.var_10d89562), "<dev string:x28>");
     if (newval == 1) {
         foreach (i, model in level.var_10d89562) {

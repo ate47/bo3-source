@@ -1,38 +1,38 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_pers_upgrades_system;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_perks;
-#using scripts/zm/_util;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_perks;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_pers_upgrades_system;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_perk_doubletap2;
 
 // Namespace zm_perk_doubletap2
 // Params 0, eflags: 0x2
-// Checksum 0x99801de0, Offset: 0x340
+// Checksum 0xfe3cdd3, Offset: 0x340
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_perk_doubletap2", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_doubletap2
-// Params 0, eflags: 0x1 linked
-// Checksum 0x307a5aac, Offset: 0x380
+// Params 0, eflags: 0x0
+// Checksum 0x7f94f4b7, Offset: 0x380
 // Size: 0x14
 function __init__() {
     function_67e7f8cd();
 }
 
 // Namespace zm_perk_doubletap2
-// Params 0, eflags: 0x1 linked
-// Checksum 0xbbeab13c, Offset: 0x3a0
+// Params 0, eflags: 0x0
+// Checksum 0x5b4c718f, Offset: 0x3a0
 // Size: 0xf4
 function function_67e7f8cd() {
     zm_perks::register_perk_basic_info("specialty_doubletap2", "doubletap", 2000, %ZOMBIE_PERK_DOUBLETAP, getweapon("zombie_perk_bottle_doubletap"));
@@ -43,8 +43,8 @@ function function_67e7f8cd() {
 }
 
 // Namespace zm_perk_doubletap2
-// Params 0, eflags: 0x1 linked
-// Checksum 0x93aa75ae, Offset: 0x4a0
+// Params 0, eflags: 0x0
+// Checksum 0xaed6a9f8, Offset: 0x4a0
 // Size: 0xe0
 function function_150621ef() {
     if (isdefined(level.var_54ded91b)) {
@@ -59,24 +59,24 @@ function function_150621ef() {
 }
 
 // Namespace zm_perk_doubletap2
-// Params 0, eflags: 0x1 linked
-// Checksum 0x492d32f, Offset: 0x588
+// Params 0, eflags: 0x0
+// Checksum 0x4c984806, Offset: 0x588
 // Size: 0x34
 function function_90c13e4d() {
     clientfield::register("clientuimodel", "hudItems.perks.doubletap2", 1, 2, "int");
 }
 
 // Namespace zm_perk_doubletap2
-// Params 1, eflags: 0x1 linked
-// Checksum 0x682b1fa0, Offset: 0x5c8
+// Params 1, eflags: 0x0
+// Checksum 0x4bb3f590, Offset: 0x5c8
 // Size: 0x2c
 function function_7a56affa(state) {
     self clientfield::set_player_uimodel("hudItems.perks.doubletap2", state);
 }
 
 // Namespace zm_perk_doubletap2
-// Params 4, eflags: 0x1 linked
-// Checksum 0xbbcebed8, Offset: 0x600
+// Params 4, eflags: 0x0
+// Checksum 0xa9a0aa0c, Offset: 0x600
 // Size: 0xbc
 function function_fa064ac(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_doubletap_jingle";

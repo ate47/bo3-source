@@ -1,8 +1,8 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/filter_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace blood;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace blood
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa02bb25c, Offset: 0x1f8
 // Size: 0xc4
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8b034714, Offset: 0x2c8
 // Size: 0x12c
 function localplayer_spawned(localclientnum) {
@@ -48,7 +48,7 @@ function localplayer_spawned(localclientnum) {
 }
 
 // Namespace blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x134c5b6b, Offset: 0x400
 // Size: 0x4c
 function function_d707564c(localclientnum) {
@@ -57,7 +57,7 @@ function function_d707564c(localclientnum) {
 }
 
 // Namespace blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x70d371a3, Offset: 0x458
 // Size: 0xfc
 function function_5cc93aa5(localclientnum) {
@@ -71,7 +71,7 @@ function function_5cc93aa5(localclientnum) {
 }
 
 // Namespace blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd70ee0da, Offset: 0x560
 // Size: 0x8c
 function function_14cd2c76(localclientnum) {
@@ -86,7 +86,7 @@ function function_14cd2c76(localclientnum) {
 }
 
 // Namespace blood
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa59d1b, Offset: 0x5f8
 // Size: 0x1dc
 function function_704ec8bf(localclientnum, playerhealth) {
@@ -118,7 +118,7 @@ function function_704ec8bf(localclientnum, playerhealth) {
 }
 
 // Namespace blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x99281da8, Offset: 0x7e0
 // Size: 0x1c4
 function function_2bd5d4ea(localclientnum) {
@@ -151,7 +151,7 @@ function function_2bd5d4ea(localclientnum) {
 }
 
 // Namespace blood
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xea9ec669, Offset: 0x9b0
 // Size: 0x3d0
 function function_ff801c5b(localclientnum) {
@@ -205,7 +205,7 @@ function function_ff801c5b(localclientnum) {
 }
 
 // Namespace blood
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc2ea4d1f, Offset: 0xd88
 // Size: 0xc4
 function setcontrollerlightbarcolorpulsing(localclientnum, color, pulserate) {

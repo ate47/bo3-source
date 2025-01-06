@@ -1,7 +1,7 @@
 #namespace blackboard;
 
 // Namespace blackboard
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x13510906, Offset: 0x80
 // Size: 0x11e
 function registerblackboardattribute(entity, attributename, defaultattributevalue, getterfunction) {
@@ -19,7 +19,7 @@ function registerblackboardattribute(entity, attributename, defaultattributevalu
 }
 
 // Namespace blackboard
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2bc848d0, Offset: 0x1a8
 // Size: 0x112
 function getblackboardattribute(entity, attributename) {
@@ -42,7 +42,7 @@ function getblackboardattribute(entity, attributename) {
 }
 
 // Namespace blackboard
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xd86dd684, Offset: 0x2c8
 // Size: 0x10c
 function setblackboardattribute(entity, attributename, attributevalue) {
@@ -61,7 +61,7 @@ function setblackboardattribute(entity, attributename, attributevalue) {
 }
 
 // Namespace blackboard
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3811a412, Offset: 0x3e0
 // Size: 0x54
 function createblackboardforentity(entity) {

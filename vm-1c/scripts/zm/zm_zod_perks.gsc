@@ -1,31 +1,31 @@
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_power;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_magicbox;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm;
-#using scripts/zm/_util;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/demo_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/demo_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_magicbox;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_power;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
+#using scripts/zm/_zm_zonemgr;
 
 #namespace zm_zod_perks;
 
 // Namespace zm_zod_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd342191d, Offset: 0x4f0
 // Size: 0x1f4
 function init() {
@@ -43,7 +43,7 @@ function init() {
 }
 
 // Namespace zm_zod_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfac6088e, Offset: 0x6f0
 // Size: 0x3f4
 function function_9a03e439() {
@@ -96,7 +96,7 @@ function function_9a03e439() {
 }
 
 // Namespace zm_zod_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0fd8dca, Offset: 0xaf0
 // Size: 0x2c
 function function_5508b348() {
@@ -105,7 +105,7 @@ function function_5508b348() {
 }
 
 // Namespace zm_zod_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb3fb7d4c, Offset: 0xb28
 // Size: 0x2c
 function function_4a2261fa() {
@@ -114,7 +114,7 @@ function function_4a2261fa() {
 }
 
 // Namespace zm_zod_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc7000354, Offset: 0xb60
 // Size: 0x2c
 function function_6753e7bb() {
@@ -123,7 +123,7 @@ function function_6753e7bb() {
 }
 
 // Namespace zm_zod_perks
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbf64466, Offset: 0xb98
 // Size: 0x34
 function function_55b919e6() {
@@ -132,7 +132,7 @@ function function_55b919e6() {
 }
 
 // Namespace zm_zod_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7b9b9062, Offset: 0xbd8
 // Size: 0x3c
 function function_e840e164(var_d80a2da2) {
@@ -141,7 +141,7 @@ function function_e840e164(var_d80a2da2) {
 }
 
 // Namespace zm_zod_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x75b15369, Offset: 0xc20
 // Size: 0x3c
 function function_588068b3(var_d80a2da2) {
@@ -150,7 +150,7 @@ function function_588068b3(var_d80a2da2) {
 }
 
 // Namespace zm_zod_perks
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd8053f79, Offset: 0xc68
 // Size: 0x3c
 function function_8b929f79(var_d80a2da2) {

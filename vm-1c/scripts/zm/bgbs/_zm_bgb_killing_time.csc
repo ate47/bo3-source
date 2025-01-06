@@ -1,10 +1,10 @@
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_utility;
 
 #namespace zm_bgb_killing_time;
 
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57de1a93, Offset: 0x218
 // Size: 0xcc
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x53c00ba2, Offset: 0x2f0
 // Size: 0x56
 function function_cf8c9fce(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -57,7 +57,7 @@ function function_2a30e2ca(localclientnum) {
 }
 
 // Namespace zm_bgb_killing_time
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x13eba211, Offset: 0x3e0
 // Size: 0xa4
 function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -71,7 +71,7 @@ function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_bgb_killing_time
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x4d0d7ef4, Offset: 0x490
 // Size: 0x54
 function private function_10dcbf51(localclientnum, fxobj) {

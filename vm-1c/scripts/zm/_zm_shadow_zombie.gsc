@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_elemental_zombies;
-#using scripts/zm/_zm_devgui;
 #using scripts/codescripts/struct;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/archetype_utility;
 #using scripts/shared/_burnplayer;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_elemental_zombies;
 
 #namespace zm_shadow_zombie;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95da11f4, Offset: 0x4e8
 // Size: 0x5c
 function __init__() {
@@ -46,7 +46,7 @@ function __init__() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd04281e1, Offset: 0x550
 // Size: 0xc4
 function private register_clientfields() {
@@ -57,7 +57,7 @@ function private register_clientfields() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1f1e85d, Offset: 0x620
 // Size: 0x12c
 function function_1b2b62b() {
@@ -76,7 +76,7 @@ function function_1b2b62b() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6857e524, Offset: 0x758
 // Size: 0x78
 function shadow_zombie_damage_fx() {
@@ -92,12 +92,12 @@ function shadow_zombie_damage_fx() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa834f1a7, Offset: 0x7d8
 // Size: 0x114
 function function_32a2f099() {
     ai_zombie = self;
-    attacker = ai_zombie waittill(#"death");
+    ai_zombie waittill(#"death", attacker);
     if (!isdefined(ai_zombie) || ai_zombie.nuked === 1) {
         return;
     }
@@ -112,7 +112,7 @@ function function_32a2f099() {
 }
 
 // Namespace zm_shadow_zombie
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa63440ea, Offset: 0x8f8
 // Size: 0x130
 function function_ada13668(v_origin, n_duration, var_526fc172) {
@@ -136,7 +136,7 @@ function function_ada13668(v_origin, n_duration, var_526fc172) {
 }
 
 // Namespace zm_shadow_zombie
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc3161b04, Offset: 0xa30
 // Size: 0x5c
 function private function_57b55fe1(n_duration) {
@@ -150,26 +150,26 @@ function private function_57b55fe1(n_duration) {
 }
 
 // Namespace zm_shadow_zombie
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9011c59a, Offset: 0xa98
 // Size: 0x1a2
-function private function_48fccb59(var_7478a6b4) {
-    if (!isdefined(var_7478a6b4)) {
-        var_7478a6b4 = undefined;
+function private function_48fccb59(struct_ref) {
+    if (!isdefined(struct_ref)) {
+        struct_ref = undefined;
     }
-    if (isdefined(var_7478a6b4)) {
+    if (isdefined(struct_ref)) {
         self.trigger = spawn("trigger_radius", self.origin, 2, 40, 50);
     } else {
         self.trigger = spawn("trigger_radius", self.origin, 2, 20, 25);
     }
     while (isdefined(self)) {
-        guy = self.trigger waittill(#"trigger");
+        self.trigger waittill(#"trigger", guy);
         if (isdefined(self)) {
             playfx(level._effect["cursetrap_explosion"], self.origin);
             guy playsound("zmb_zod_cursed_landmine_explode");
             guy dodamage(guy.health / 2, guy.origin, self, self);
-            if (isdefined(var_7478a6b4)) {
-                var_7478a6b4.active = 0;
+            if (isdefined(struct_ref)) {
+                struct_ref.active = 0;
             }
             if (isdefined(self.trigger)) {
                 self.trigger delete();
@@ -181,7 +181,7 @@ function private function_48fccb59(var_7478a6b4) {
 }
 
 // Namespace zm_shadow_zombie
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa1c4d687, Offset: 0xc48
 // Size: 0xda
 function function_ab84e253(v_origin, n_radius) {
@@ -197,7 +197,7 @@ function function_ab84e253(v_origin, n_radius) {
 /#
 
     // Namespace zm_shadow_zombie
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xed321119, Offset: 0xd30
     // Size: 0x228
     function function_71c88f2b() {

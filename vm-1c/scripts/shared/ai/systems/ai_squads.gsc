@@ -1,10 +1,10 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace aisquads;
 
@@ -13,7 +13,7 @@
 class squad {
 
     // Namespace squad
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4fa8a6ea, Offset: 0x248
     // Size: 0x28
     function constructor() {
@@ -23,7 +23,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xe3f2f60c, Offset: 0x480
     // Size: 0x88
     function think() {
@@ -39,7 +39,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x96aa4cc2, Offset: 0x410
     // Size: 0x68
     function removeaifromsqaud(ai) {
@@ -52,7 +52,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x4437eda6, Offset: 0x380
     // Size: 0x82
     function addaitosquad(ai) {
@@ -65,7 +65,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xfa8c37b4, Offset: 0x368
     // Size: 0xa
     function getmembers() {
@@ -73,7 +73,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xdc71063c, Offset: 0x350
     // Size: 0xa
     function getleader() {
@@ -81,7 +81,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x6b4d95d4, Offset: 0x338
     // Size: 0xa
     function getsquadbreadcrumb() {
@@ -89,7 +89,7 @@ class squad {
     }
 
     // Namespace squad
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x765756e1, Offset: 0x278
     // Size: 0xb4
     function addsquadbreadcrumbs(ai) {
@@ -113,7 +113,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace aisquads
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67aafbbe, Offset: 0x1d0
 // Size: 0x6c
 function __init__() {
@@ -123,7 +123,7 @@ function __init__() {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc47ace35, Offset: 0x700
 // Size: 0x38
 function private createsquad(squadname) {
@@ -132,7 +132,7 @@ function private createsquad(squadname) {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xb71a0bee, Offset: 0x740
 // Size: 0x38
 function private removesquad(squadname) {
@@ -142,7 +142,7 @@ function private removesquad(squadname) {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x19402e25, Offset: 0x780
 // Size: 0x18
 function private getsquad(squadname) {
@@ -150,7 +150,7 @@ function private getsquad(squadname) {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfc4fd04c, Offset: 0x7a0
 // Size: 0x5c
 function private thinksquad(squadname) {
@@ -165,7 +165,7 @@ function private thinksquad(squadname) {
 }
 
 // Namespace aisquads
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x7d4aac42, Offset: 0x808
 // Size: 0x54
 function private squadmemberdeath() {
@@ -176,7 +176,7 @@ function private squadmemberdeath() {
 }
 
 // Namespace aisquads
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x75d41fe9, Offset: 0x868
 // Size: 0x416
 function private squadmemberthink() {
@@ -245,7 +245,7 @@ function private squadmemberthink() {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x86ae2925, Offset: 0xc88
 // Size: 0xbc
 function isfollowingsquadleader(ai) {
@@ -262,7 +262,7 @@ function isfollowingsquadleader(ai) {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc03c3f11, Offset: 0xd50
 // Size: 0x76
 function issquadmember(ai) {
@@ -291,7 +291,7 @@ function issquadleader(ai) {
 }
 
 // Namespace aisquads
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x166f1a3, Offset: 0xe60
 // Size: 0x66
 function getsquadleader(ai) {

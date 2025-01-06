@@ -1,8 +1,8 @@
-#using scripts/zm/_util;
+#using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_util;
 
 #namespace shellshock;
 
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace shellshock
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x678fd677, Offset: 0x1d0
 // Size: 0x3c
 function __init__() {
@@ -24,7 +24,7 @@ function __init__() {
 }
 
 // Namespace shellshock
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x218
 // Size: 0x4
 function main() {
@@ -32,7 +32,7 @@ function main() {
 }
 
 // Namespace shellshock
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x11e3d09b, Offset: 0x228
 // Size: 0x12c
 function on_damage(cause, damage, weapon) {

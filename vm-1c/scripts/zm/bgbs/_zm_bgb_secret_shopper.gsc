@@ -1,12 +1,12 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_bgb;
+#using scripts/zm/_zm_score;
 #using scripts/zm/_zm_utility;
 #using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_bgb;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
 
 #namespace zm_bgb_secret_shopper;
 
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_bgb_secret_shopper
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd030a5f9, Offset: 0x1e8
 // Size: 0x64
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace zm_bgb_secret_shopper
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb9b1440, Offset: 0x258
 // Size: 0x78
 function enable() {
@@ -39,13 +39,13 @@ function enable() {
     self endon(#"bgb_update");
     bgb::function_650ca64(7);
     while (true) {
-        var_2757208f = self waittill(#"zm_bgb_secret_shopper");
+        self waittill(#"zm_bgb_secret_shopper", var_2757208f);
         var_2757208f thread function_127dc5ca(self);
     }
 }
 
 // Namespace zm_bgb_secret_shopper
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x57902796, Offset: 0x2d8
 // Size: 0x14
 function disable() {
@@ -53,7 +53,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_secret_shopper
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1b3f0ce1, Offset: 0x2f8
 // Size: 0x1a0
 function function_127dc5ca(player) {

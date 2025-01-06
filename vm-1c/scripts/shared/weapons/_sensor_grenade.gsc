@@ -1,19 +1,19 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_hacker_tool;
-#using scripts/shared/weapons/_decoy;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_decoy;
+#using scripts/shared/weapons/_hacker_tool;
+#using scripts/shared/weapons/_weaponobjects;
 
 #namespace sensor_grenade;
 
 // Namespace sensor_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2411ef02, Offset: 0x2d8
 // Size: 0x3c
 function init_shared() {
@@ -22,7 +22,7 @@ function init_shared() {
 }
 
 // Namespace sensor_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x18f9a9e5, Offset: 0x320
 // Size: 0xcc
 function function_cb111d01() {
@@ -37,7 +37,7 @@ function function_cb111d01() {
 }
 
 // Namespace sensor_grenade
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2e9313f0, Offset: 0x3f8
 // Size: 0x134
 function function_bdecb8fd(watcher, player) {
@@ -55,7 +55,7 @@ function function_bdecb8fd(watcher, player) {
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8d1c2086, Offset: 0x538
 // Size: 0x6c
 function function_5aadfa85(owner) {
@@ -69,7 +69,7 @@ function function_5aadfa85(owner) {
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2ea8088d, Offset: 0x5b0
 // Size: 0x74
 function function_ab966fda(owner) {
@@ -77,12 +77,12 @@ function function_ab966fda(owner) {
     self endon(#"delete");
     owner endon(#"death");
     owner endon(#"disconnect");
-    origin = self waittill(#"explode");
+    self waittill(#"explode", origin);
     function_32b1b0c7(origin + (0, 0, 1));
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5b0e9354, Offset: 0x630
 // Size: 0x1d2
 function function_32b1b0c7(origin) {
@@ -105,7 +105,7 @@ function function_32b1b0c7(origin) {
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8c6709b6, Offset: 0x810
 // Size: 0x5e
 function function_eaae596a(victim) {
@@ -118,7 +118,7 @@ function function_eaae596a(victim) {
 }
 
 // Namespace sensor_grenade
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x398e9f90, Offset: 0x878
 // Size: 0x82
 function function_e9649fd8(player, time) {
@@ -132,7 +132,7 @@ function function_e9649fd8(player, time) {
 }
 
 // Namespace sensor_grenade
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x28ff607b, Offset: 0x908
 // Size: 0x104
 function function_7750ac68(attacker, weapon, target) {
@@ -150,7 +150,7 @@ function function_7750ac68(attacker, weapon, target) {
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd2d17739, Offset: 0xa18
 // Size: 0x35a
 function function_288c9631(watcher) {
@@ -164,7 +164,7 @@ function function_288c9631(watcher) {
     while (true) {
         self.maxhealth = 100000;
         self.health = self.maxhealth;
-        damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction, point, type, tagname, modelname, partname, weapon, idflags);
         if (!isdefined(attacker) || !isplayer(attacker)) {
             continue;
         }
@@ -200,7 +200,7 @@ function function_288c9631(watcher) {
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1d7938fd, Offset: 0xd80
 // Size: 0x142
 function function_f4ccbeb2(owner) {
@@ -218,7 +218,7 @@ function function_f4ccbeb2(owner) {
 }
 
 // Namespace sensor_grenade
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3a67bfa, Offset: 0xed0
 // Size: 0x26
 function function_23685d89() {
@@ -226,7 +226,7 @@ function function_23685d89() {
 }
 
 // Namespace sensor_grenade
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2b8da758, Offset: 0xf00
 // Size: 0xf4
 function function_d7943f6b(sensor_grenade) {

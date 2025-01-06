@@ -1,36 +1,36 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_pers_upgrades_functions;
-#using scripts/zm/_zm_pers_upgrades;
-#using scripts/zm/_zm_melee_weapon;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_blockers;
-#using scripts/shared/ai/zombie_death;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/ai/zombie_death;
+#using scripts/shared/array_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_blockers;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_melee_weapon;
+#using scripts/zm/_zm_pers_upgrades;
+#using scripts/zm/_zm_pers_upgrades_functions;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_powerup_ww_grenade;
 
 // Namespace zm_powerup_ww_grenade
 // Params 0, eflags: 0x2
-// Checksum 0x6072768, Offset: 0x368
+// Checksum 0xd36f6c9a, Offset: 0x368
 // Size: 0x34
 function autoexec function_2dc19561() {
     system::register("zm_powerup_ww_grenade", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_ww_grenade
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3361d814, Offset: 0x3a8
+// Params 0, eflags: 0x0
+// Checksum 0xc4ae65d7, Offset: 0x3a8
 // Size: 0xdc
 function __init__() {
     zm_powerups::register_powerup("ww_grenade", &function_61dfda23);
@@ -44,8 +44,8 @@ function __init__() {
 }
 
 // Namespace zm_powerup_ww_grenade
-// Params 1, eflags: 0x1 linked
-// Checksum 0x5ca451f5, Offset: 0x490
+// Params 1, eflags: 0x0
+// Checksum 0x79ea64f5, Offset: 0x490
 // Size: 0x44
 function function_61dfda23(player) {
     level thread function_13ccb255(self, player);
@@ -53,8 +53,8 @@ function function_61dfda23(player) {
 }
 
 // Namespace zm_powerup_ww_grenade
-// Params 2, eflags: 0x1 linked
-// Checksum 0x6bd72d27, Offset: 0x4e0
+// Params 2, eflags: 0x0
+// Checksum 0x12de9328, Offset: 0x4e0
 // Size: 0x144
 function function_13ccb255(item, player) {
     if (!player laststand::player_is_in_laststand() && !(player.sessionstate == "spectator")) {
@@ -71,8 +71,8 @@ function function_13ccb255(item, player) {
 /#
 
     // Namespace zm_powerup_ww_grenade
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x5787ea35, Offset: 0x630
+    // Params 0, eflags: 0x0
+    // Checksum 0xcc671cc9, Offset: 0x630
     // Size: 0x7c
     function function_39ac3091() {
         level flagsys::wait_till("<dev string:x28>");
@@ -83,8 +83,8 @@ function function_13ccb255(item, player) {
     }
 
     // Namespace zm_powerup_ww_grenade
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x2f4519cf, Offset: 0x6b8
+    // Params 0, eflags: 0x0
+    // Checksum 0xd22e48ff, Offset: 0x6b8
     // Size: 0x38
     function function_2449723c() {
         if (isdefined(self.var_2654b40c)) {
@@ -97,8 +97,8 @@ function function_13ccb255(item, player) {
     }
 
     // Namespace zm_powerup_ww_grenade
-    // Params 1, eflags: 0x1 linked
-    // Checksum 0x534e7a40, Offset: 0x6f8
+    // Params 1, eflags: 0x0
+    // Checksum 0x68d49251, Offset: 0x6f8
     // Size: 0x110
     function function_dcedd7b5(cmd) {
         players = getplayers();

@@ -1,6 +1,6 @@
+#using scripts/codescripts/struct;
 #using scripts/mp/gametypes/_globallogic;
 #using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace dem;
 

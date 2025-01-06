@@ -1,14 +1,14 @@
-#using scripts/shared/system_shared;
-#using scripts/shared/abilities/_ability_util;
-#using scripts/shared/abilities/_ability_power;
+#using scripts/codescripts/struct;
 #using scripts/shared/abilities/_ability_player;
+#using scripts/shared/abilities/_ability_power;
+#using scripts/shared/abilities/_ability_util;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/duplicaterender_mgr;
+#using scripts/shared/filter_shared;
+#using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
 #using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/filter_shared;
-#using scripts/shared/duplicaterender_mgr;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/codescripts/struct;
 
 #namespace _gadget_shock_field;
 
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace _gadget_shock_field
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1c73c81, Offset: 0x2e0
 // Size: 0x58
 function __init__() {
@@ -30,7 +30,7 @@ function __init__() {
 }
 
 // Namespace _gadget_shock_field
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x73cf8c00, Offset: 0x340
 // Size: 0x58
 function is_local_player(localclientnum) {
@@ -43,7 +43,7 @@ function is_local_player(localclientnum) {
 }
 
 // Namespace _gadget_shock_field
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1f156b61, Offset: 0x3a0
 // Size: 0x150
 function function_281e2b38(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

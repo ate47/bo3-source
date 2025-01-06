@@ -1,14 +1,14 @@
+#using scripts/codescripts/struct;
 #using scripts/cp/doa/_doa_arena;
 #using scripts/cp/doa/_doa_player_utility;
 #using scripts/cp/doa/_doa_utility;
+#using scripts/shared/array_shared;
 #using scripts/shared/audio_shared;
-#using scripts/shared/music_shared;
-#using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/music_shared;
 #using scripts/shared/util_shared;
-#using scripts/codescripts/struct;
 
 #namespace namespace_b5c133c;
 
@@ -28,7 +28,7 @@ function init() {
 function musicsystem() {
     var_2a5f801d = spawn("script_origin", (0, 0, 0));
     while (true) {
-        type = level waittill(#"hash_ba37290e");
+        level waittill(#"hash_ba37290e", type);
         if (!isdefined(type)) {
             type = namespace_3ca3c537::function_d2d75f5d();
             level thread function_1a5a0c78();

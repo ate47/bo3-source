@@ -3,7 +3,7 @@
 #namespace voice_z_aquifer;
 
 // Namespace voice_z_aquifer
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2b2141dc, Offset: 0x1270
 // Size: 0xba4
 function init_voice() {

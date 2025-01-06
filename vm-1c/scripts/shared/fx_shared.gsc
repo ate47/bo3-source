@@ -1,7 +1,7 @@
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/exploder_shared;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace fx;
 
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace fx
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x190
 // Size: 0x4
 function __init__() {
@@ -31,7 +31,7 @@ function set_forward_and_up_vectors() {
 }
 
 // Namespace fx
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3c47be68, Offset: 0x220
 // Size: 0x50
 function get(fx) {
@@ -40,7 +40,7 @@ function get(fx) {
 }
 
 // Namespace fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb1486a1f, Offset: 0x278
 // Size: 0x144
 function create_effect(type, fxid) {
@@ -87,7 +87,7 @@ function create_oneshot_effect(fxid) {
 }
 
 // Namespace fx
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xc94b3312, Offset: 0x490
 // Size: 0x294
 function play(str_fx, v_origin, v_angles, time_to_delete_or_notify, b_link_to_self, str_tag, b_no_cull, b_ignore_pause_world) {
@@ -125,7 +125,7 @@ function play(str_fx, v_origin, v_angles, time_to_delete_or_notify, b_link_to_se
 }
 
 // Namespace fx
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x37468010, Offset: 0x730
 // Size: 0xbc
 function _play_fx_delete(ent, time_to_delete_or_notify) {

@@ -1,19 +1,19 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_stats;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm;
-#using scripts/shared/weapons_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/table_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/killstreaks_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/killstreaks_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/table_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons_shared;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_stats;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_attackables;
 
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xab6f11d8, Offset: 0x340
 // Size: 0x1a6
 function __init__() {
@@ -47,7 +47,7 @@ function __init__() {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x4f0
 // Size: 0x4
 function __main__() {
@@ -55,7 +55,7 @@ function __main__() {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1b7fe98, Offset: 0x500
 // Size: 0x15c
 function get_attackable() {
@@ -81,7 +81,7 @@ function get_attackable() {
 }
 
 // Namespace zm_attackables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x61fb08c, Offset: 0x668
 // Size: 0xd6
 function get_attackable_slot(entity) {
@@ -97,7 +97,7 @@ function get_attackable_slot(entity) {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd7af7903, Offset: 0x748
 // Size: 0xe4
 function private clear_slots() {
@@ -113,7 +113,7 @@ function private clear_slots() {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6e4e8d03, Offset: 0x838
 // Size: 0x38
 function activate() {
@@ -124,7 +124,7 @@ function activate() {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb70a0ad9, Offset: 0x878
 // Size: 0x10
 function deactivate() {
@@ -132,7 +132,7 @@ function deactivate() {
 }
 
 // Namespace zm_attackables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1522f874, Offset: 0x890
 // Size: 0x74
 function do_damage(damage) {
@@ -147,7 +147,7 @@ function do_damage(damage) {
 }
 
 // Namespace zm_attackables
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbf7f2ea3, Offset: 0x910
 // Size: 0x9c
 function attackable_callback(entity) {

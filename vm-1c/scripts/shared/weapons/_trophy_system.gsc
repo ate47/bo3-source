@@ -1,20 +1,20 @@
-#using scripts/shared/weapons/_weaponobjects;
-#using scripts/shared/weapons/_tacticalinsertion;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scoreevents_shared;
-#using scripts/shared/damagefeedback_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/challenges_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/challenges_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/damagefeedback_shared;
+#using scripts/shared/scoreevents_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/weapons/_tacticalinsertion;
+#using scripts/shared/weapons/_weaponobjects;
 
 #using_animtree("mp_trophy_system");
 
 #namespace trophy_system;
 
 // Namespace trophy_system
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x534f85df, Offset: 0x3f0
 // Size: 0x9c
 function init_shared() {
@@ -28,7 +28,7 @@ function init_shared() {
 }
 
 // Namespace trophy_system
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc0db9c85, Offset: 0x498
 // Size: 0x64
 function register() {
@@ -37,7 +37,7 @@ function register() {
 }
 
 // Namespace trophy_system
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x28c00d1d, Offset: 0x508
 // Size: 0x19c
 function createtrophysystemwatcher() {
@@ -63,7 +63,7 @@ function createtrophysystemwatcher() {
 }
 
 // Namespace trophy_system
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7607893b, Offset: 0x6b0
 // Size: 0x27c
 function ontrophysystemspawn(watcher, player) {
@@ -94,7 +94,7 @@ function ontrophysystemspawn(watcher, player) {
 }
 
 // Namespace trophy_system
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb05c3f98, Offset: 0x938
 // Size: 0x34
 function setreconmodeldeployed() {
@@ -104,17 +104,17 @@ function setreconmodeldeployed() {
 }
 
 // Namespace trophy_system
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17509010, Offset: 0x978
 // Size: 0x44
 function trophywatchhack() {
     self endon(#"death");
-    player = self waittill(#"hacked");
+    self waittill(#"hacked", player);
     self clientfield::set("trophy_system_state", 0);
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfcbd519b, Offset: 0x9c8
 // Size: 0xfc
 function ontrophysystemsmashed(attacker) {
@@ -131,7 +131,7 @@ function ontrophysystemsmashed(attacker) {
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe6ccf268, Offset: 0xad0
 // Size: 0x37a
 function trophyactive(owner) {
@@ -202,7 +202,7 @@ function trophyactive(owner) {
 }
 
 // Namespace trophy_system
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcb25feb4, Offset: 0xe58
 // Size: 0x14c
 function projectileexplode(projectile, trophy) {
@@ -238,7 +238,7 @@ function trophydestroytacinsert(tacinsert, trophy) {
 }
 
 // Namespace trophy_system
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x507a48cf, Offset: 0x10e8
 // Size: 0x104
 function trophysystemdetonate(attacker, weapon, target) {
@@ -254,7 +254,7 @@ function trophysystemdetonate(attacker, weapon, target) {
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xef86e522, Offset: 0x11f8
 // Size: 0x372
 function watchtrophysystemdamage(watcher) {
@@ -270,7 +270,7 @@ function watchtrophysystemdamage(watcher) {
     self setmaxhealth(self.maxhealth);
     attacker = undefined;
     while (true) {
-        damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
+        self waittill(#"damage", damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags);
         attacker = self [[ level.figure_out_attacker ]](attacker);
         if (!isplayer(attacker)) {
             continue;
@@ -307,7 +307,7 @@ function watchtrophysystemdamage(watcher) {
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4bfd03ad, Offset: 0x1578
 // Size: 0x24
 function ammo_scavenger(weapon) {
@@ -315,7 +315,7 @@ function ammo_scavenger(weapon) {
 }
 
 // Namespace trophy_system
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8690777a, Offset: 0x15a8
 // Size: 0x16
 function ammo_reset() {
@@ -324,7 +324,7 @@ function ammo_reset() {
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8cc2a621, Offset: 0x15c8
 // Size: 0x92
 function ammo_get(weapon) {
@@ -341,7 +341,7 @@ function ammo_get(weapon) {
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x93aa7869, Offset: 0x1668
 // Size: 0x50
 function ammo_weapon_pickup(ammo) {
@@ -356,7 +356,7 @@ function ammo_weapon_pickup(ammo) {
 }
 
 // Namespace trophy_system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3fa6de87, Offset: 0x16c0
 // Size: 0x24
 function ammo_weapon_hacked(ammo) {

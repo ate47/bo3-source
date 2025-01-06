@@ -4,7 +4,7 @@
 #namespace zombieinterface;
 
 // Namespace zombieinterface
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ea92298, Offset: 0x110
 // Size: 0xe4
 function registerzombieinterfaceattributes() {

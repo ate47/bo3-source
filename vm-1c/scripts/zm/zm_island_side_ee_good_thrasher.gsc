@@ -1,35 +1,35 @@
-#using scripts/zm/zm_island_util;
-#using scripts/zm/zm_island_spores;
-#using scripts/zm/_zm_zonemgr;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_shared;
+#using scripts/shared/ai/zombie_utility;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/drown;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/laststand_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/zm/_zm_ai_thrasher;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_equipment;
+#using scripts/zm/_zm_laststand;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
 #using scripts/zm/_zm_weap_keeper_skull;
 #using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_laststand;
-#using scripts/zm/_zm_equipment;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_ai_thrasher;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/zombie_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/laststand_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/drown;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_island_spores;
+#using scripts/zm/zm_island_util;
 
 #namespace zm_island_side_ee_good_thrasher;
 
@@ -42,7 +42,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x20ee8f39, Offset: 0x7c8
 // Size: 0x384
 function __init__() {
@@ -69,7 +69,7 @@ function __init__() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e165141, Offset: 0xb58
 // Size: 0xcc
 function main() {
@@ -84,7 +84,7 @@ function main() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x43f17568, Offset: 0xc30
 // Size: 0x1c
 function on_player_spawned() {
@@ -92,7 +92,7 @@ function on_player_spawned() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xc58
 // Size: 0x4
 function on_player_connected() {
@@ -100,7 +100,7 @@ function on_player_connected() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4c8db3f, Offset: 0xc68
 // Size: 0x94
 function function_4aee2763() {
@@ -114,7 +114,7 @@ function function_4aee2763() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe80fcfda, Offset: 0xd08
 // Size: 0x17c
 function function_ad9a2050() {
@@ -137,7 +137,7 @@ function function_ad9a2050() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf6d34b68, Offset: 0xe90
 // Size: 0x130
 function function_f3ed4502() {
@@ -145,7 +145,7 @@ function function_f3ed4502() {
     var_f7ecb00a = 0;
     level.var_564761a3.var_480b39a3 clientfield::set("spore_grows", 3);
     while (!(isdefined(var_f7ecb00a) && var_f7ecb00a)) {
-        n_damage, e_attacker, var_a3382de1, v_point, str_means_of_death, var_c4fe462, var_e64d69f9, var_c04aef90, w_weapon = self waittill(#"damage");
+        self waittill(#"damage", n_damage, e_attacker, var_a3382de1, v_point, str_means_of_death, var_c4fe462, var_e64d69f9, var_c04aef90, w_weapon);
         self.health = 10000;
         if (w_weapon.name === "hero_mirg2000_upgraded") {
             var_f7ecb00a = 1;
@@ -155,7 +155,7 @@ function function_f3ed4502() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc2f1cdc4, Offset: 0xfc8
 // Size: 0xfc
 function function_302fe6aa() {
@@ -172,7 +172,7 @@ function function_302fe6aa() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x844c81c7, Offset: 0x10d0
 // Size: 0x24
 function function_95caef47() {
@@ -180,7 +180,7 @@ function function_95caef47() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x21d58bf4, Offset: 0x1100
 // Size: 0xc6
 function function_4724011d(str_state) {
@@ -202,7 +202,7 @@ function function_4724011d(str_state) {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x330c5244, Offset: 0x11d0
 // Size: 0x1f4
 function function_c8310977() {
@@ -220,7 +220,7 @@ function function_c8310977() {
     mdl_mushroom_clip thread function_ecaf0cc6();
     while (true) {
         mdl_mushroom_clip.health = 10000;
-        n_damage, e_attacker, var_a3382de1, v_point, str_means_of_death, var_c4fe462, var_e64d69f9, var_c04aef90, w_weapon = mdl_mushroom_clip waittill(#"damage");
+        mdl_mushroom_clip waittill(#"damage", n_damage, e_attacker, var_a3382de1, v_point, str_means_of_death, var_c4fe462, var_e64d69f9, var_c04aef90, w_weapon);
         if (zm_utility::is_player_valid(e_attacker)) {
             mdl_mushroom_clip setcandamage(0);
             level thread function_4724011d("exploded");
@@ -230,7 +230,7 @@ function function_c8310977() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc2b8384f, Offset: 0x13d0
 // Size: 0x130
 function function_ecaf0cc6() {
@@ -251,7 +251,7 @@ function function_ecaf0cc6() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb738836c, Offset: 0x1508
 // Size: 0xa4
 function function_19f54a6f() {
@@ -265,7 +265,7 @@ function function_19f54a6f() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc90b3ccb, Offset: 0x15b8
 // Size: 0x134
 function function_784ed421() {
@@ -292,7 +292,7 @@ function function_784ed421() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xf48b5fd4, Offset: 0x16f8
 // Size: 0x29a
 function function_4c6beece(var_f9f788a6, b_hero_weapon, e_attacker) {
@@ -327,7 +327,7 @@ function function_4c6beece(var_f9f788a6, b_hero_weapon, e_attacker) {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8f515c99, Offset: 0x19a0
 // Size: 0x134
 function spore_cloud_fx(b_hero_weapon, s_org, var_f9f788a6) {
@@ -353,7 +353,7 @@ function spore_cloud_fx(b_hero_weapon, s_org, var_f9f788a6) {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x451e8327, Offset: 0x1ae0
 // Size: 0x80
 function function_cc07e4ad(var_66bbb0c0, s_org) {
@@ -364,7 +364,7 @@ function function_cc07e4ad(var_66bbb0c0, s_org) {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa0237cee, Offset: 0x1b68
 // Size: 0x4ec
 function function_c6cec92d(var_2cfe5148, b_hero_weapon, e_attacker) {
@@ -440,7 +440,7 @@ function function_c6cec92d(var_2cfe5148, b_hero_weapon, e_attacker) {
             if (!self isplayerunderwater()) {
                 self thread function_36f14fa1();
                 self thread function_7fa4a0dd();
-                self waittill(#"hash_59bc7047");
+                self waittill(#"coughing_complete");
             } else {
                 wait 3;
             }
@@ -452,13 +452,13 @@ function function_c6cec92d(var_2cfe5148, b_hero_weapon, e_attacker) {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaccebbf3, Offset: 0x2060
 // Size: 0x2b4
 function function_5115d0a7() {
     if (!(isdefined(level.var_564761a3.var_2d3405bf) && level.var_564761a3.var_2d3405bf) && !isalive(level.var_564761a3.var_1cd02afb)) {
         level.var_564761a3.var_2d3405bf = 1;
-        level.var_564761a3.var_1cd02afb = namespace_756d2c3d::function_8b323113(self, 0, 0);
+        level.var_564761a3.var_1cd02afb = zm_ai_thrasher::function_8b323113(self, 0, 0);
         for (n_wait = 5; n_wait > 0 && !isdefined(level.var_564761a3.var_1cd02afb); n_wait--) {
             wait 1;
         }
@@ -473,7 +473,7 @@ function function_5115d0a7() {
             if (zm_utility::is_player_valid(var_ab3b4634) && !level flag::exists("side_ee_good_thrasher_seen")) {
                 level flag::init("side_ee_good_thrasher_seen");
                 level flag::set("side_ee_good_thrasher_seen");
-                var_ab3b4634 notify(#"hash_a4a48b98");
+                var_ab3b4634 notify(#"player_saw_good_thrasher_creation");
             }
             level.var_564761a3.var_ff07b157.var_d7bb540a = 0;
         }
@@ -482,7 +482,7 @@ function function_5115d0a7() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb97a7bf2, Offset: 0x2320
 // Size: 0x134
 function function_8870fa6e() {
@@ -493,7 +493,7 @@ function function_8870fa6e() {
     self clientfield::set("good_thrasher_fx", 0);
     var_3cec36e5 = arraygetclosest(self.origin, level.activeplayers);
     if (zm_utility::is_player_valid(var_3cec36e5)) {
-        var_3cec36e5 notify(#"hash_52449593");
+        var_3cec36e5 notify(#"player_saw_good_thrasher_death");
     }
     if (isalive(self)) {
         self util::stop_magic_bullet_shield();
@@ -502,7 +502,7 @@ function function_8870fa6e() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8bec53c2, Offset: 0x2460
 // Size: 0x46
 function function_2b2a9b70() {
@@ -513,7 +513,7 @@ function function_2b2a9b70() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd9220a20, Offset: 0x24b0
 // Size: 0x70
 function function_d3e5e5f4() {
@@ -529,7 +529,7 @@ function function_d3e5e5f4() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f7c7e10, Offset: 0x2528
 // Size: 0x14c
 function function_365b46bb() {
@@ -577,7 +577,7 @@ function function_6001fb15() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x46925df1, Offset: 0x2770
 // Size: 0x5c
 function function_703ef5e8() {
@@ -589,7 +589,7 @@ function function_703ef5e8() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9631c9ba, Offset: 0x27d8
 // Size: 0x56
 function function_20ca7e14() {
@@ -602,7 +602,7 @@ function function_20ca7e14() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6ff9fec, Offset: 0x2838
 // Size: 0x66
 function function_36f14fa1() {
@@ -618,7 +618,7 @@ function function_36f14fa1() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6529de3a, Offset: 0x28a8
 // Size: 0x9a
 function function_7fa4a0dd() {
@@ -629,11 +629,11 @@ function function_7fa4a0dd() {
     self function_2ce1c95f();
     self util::waittill_any("fake_death", "death", "player_downed", "weapon_change_complete");
     self function_909c515f();
-    self notify(#"hash_59bc7047");
+    self notify(#"coughing_complete");
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x93fc057f, Offset: 0x2950
 // Size: 0x104
 function function_2ce1c95f() {
@@ -651,7 +651,7 @@ function function_2ce1c95f() {
 }
 
 // Namespace zm_island_side_ee_good_thrasher
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5ce2fe98, Offset: 0x2a60
 // Size: 0x1ac
 function function_909c515f() {
@@ -685,7 +685,7 @@ function function_909c515f() {
 /#
 
     // Namespace zm_island_side_ee_good_thrasher
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2734e4d, Offset: 0x2c18
     // Size: 0x5c
     function function_a0e0b4c2() {
@@ -695,7 +695,7 @@ function function_909c515f() {
     }
 
     // Namespace zm_island_side_ee_good_thrasher
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xd50d729a, Offset: 0x2c80
     // Size: 0x76
     function function_9eaf14a2(cmd) {

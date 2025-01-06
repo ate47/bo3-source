@@ -1,9 +1,9 @@
-#using scripts/zm/_filter;
+#using scripts/codescripts/struct;
 #using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
 #using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/_filter;
 
 #namespace zm_castle_tram;
 
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_castle_tram
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe0202e89, Offset: 0x2b8
 // Size: 0x174
 function __init__() {
@@ -41,7 +41,7 @@ function function_b84c3341(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_tram
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x162940b6, Offset: 0x4a0
 // Size: 0x84
 function function_19082f83() {
@@ -52,7 +52,7 @@ function function_19082f83() {
 }
 
 // Namespace zm_castle_tram
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9caa2046, Offset: 0x530
 // Size: 0xa4
 function function_2d89f1a7(var_e2026f3a, var_a97a56af) {
@@ -72,7 +72,7 @@ function function_2d89f1a7(var_e2026f3a, var_a97a56af) {
 }
 
 // Namespace zm_castle_tram
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x13841580, Offset: 0x5e0
 // Size: 0x74
 function function_1383302a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -80,7 +80,7 @@ function function_1383302a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_tram
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x9bd35b3a, Offset: 0x660
 // Size: 0xa4
 function tram_fuse_destroy(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -92,7 +92,7 @@ function tram_fuse_destroy(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle_tram
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcbf25b09, Offset: 0x710
 // Size: 0x2da
 function snd_tram(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -119,7 +119,7 @@ function snd_tram(localclientnum, oldval, newval, bnewent, binitialsnap, fieldna
 }
 
 // Namespace zm_castle_tram
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb1f8a7d8, Offset: 0x9f8
 // Size: 0x84
 function function_58a73de9() {
@@ -128,12 +128,12 @@ function function_58a73de9() {
 }
 
 // Namespace zm_castle_tram
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x22eddf39, Offset: 0xa88
 // Size: 0x90
 function function_60283937() {
     while (true) {
-        duration = level waittill(#"hash_dc18b3bb");
+        level waittill(#"hash_dc18b3bb", duration);
         if (duration == "long") {
             playsound(0, "evt_tram_motor_long", (342, 979, -121));
             continue;
@@ -143,7 +143,7 @@ function function_60283937() {
 }
 
 // Namespace zm_castle_tram
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x12c754a6, Offset: 0xb20
 // Size: 0x4c
 function function_8a2bbd06(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

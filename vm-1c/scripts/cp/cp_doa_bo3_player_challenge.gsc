@@ -1,35 +1,35 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_gibs;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_dev;
-#using scripts/cp/doa/_doa_fate;
-#using scripts/cp/doa/_doa_vehicle_pickup;
-#using scripts/cp/doa/_doa_chicken_pickup;
-#using scripts/cp/doa/_doa_pickups;
-#using scripts/cp/doa/_doa_arena;
-#using scripts/cp/doa/_doa_enemy;
-#using scripts/cp/doa/_doa_player_utility;
-#using scripts/cp/doa/_doa_utility;
-#using scripts/shared/flag_shared;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/vehicles/_quadtank;
-#using scripts/shared/math_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/cp/_util;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/cp/cp_doa_bo3_enemy;
-#using scripts/shared/lui_shared;
-#using scripts/shared/spawner_shared;
 #using scripts/codescripts/struct;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/flagsys_shared;
+#using scripts/cp/_util;
+#using scripts/cp/cp_doa_bo3_enemy;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_chicken_pickup;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_dev;
+#using scripts/cp/doa/_doa_enemy;
+#using scripts/cp/doa/_doa_fate;
+#using scripts/cp/doa/_doa_fx;
+#using scripts/cp/doa/_doa_gibs;
+#using scripts/cp/doa/_doa_pickups;
+#using scripts/cp/doa/_doa_player_utility;
+#using scripts/cp/doa/_doa_score;
+#using scripts/cp/doa/_doa_sfx;
+#using scripts/cp/doa/_doa_utility;
+#using scripts/cp/doa/_doa_vehicle_pickup;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/lui_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/vehicles/_quadtank;
 
 #using_animtree("critter");
 
@@ -924,7 +924,7 @@ function function_67b5ba67() {
     level endon(#"player_challenge_failure");
     level endon(#"hash_16154574");
     while (true) {
-        truck = var_efa02a6c waittill(#"trigger");
+        var_efa02a6c waittill(#"trigger", truck);
         if (truck.var_f71159da == level.doa.var_c93ed68a) {
             truck.var_bbda805b = 1;
             truck.var_f71159da = 0;
@@ -1037,7 +1037,7 @@ function function_c218114a() {
     var_6c0d141d = int(self.script_parameters);
     level function_bbb36dbe(var_6c0d141d);
     while (true) {
-        truck = self waittill(#"trigger");
+        self waittill(#"trigger", truck);
         truck.var_f71159da |= 1 << var_6c0d141d;
         /#
         #/
@@ -1135,7 +1135,7 @@ function function_fb199a7c() {
     var_df3be8f1 = getent(self.target, "targetname");
     self.gem = namespace_a7e6beb5::function_16237a19(self.origin, 1, 0, 0, 0, 5, self.script_noteworthy, undefined, 0, 0)[0];
     while (true) {
-        truck = var_df3be8f1 waittill(#"trigger");
+        var_df3be8f1 waittill(#"trigger", truck);
         if (isplayer(truck)) {
             continue;
         }
@@ -1508,7 +1508,7 @@ function trucksoccer_BlowTriggerThink(room) {
     self.org setmodel("tag_origin");
     self.org thread namespace_eaa992c::function_285a2999("blow_hole");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (!isdefined(guy)) {
             continue;
         }
@@ -1677,7 +1677,7 @@ function function_55e9043d() {
     level endon(#"player_challenge_failure");
     level endon(#"trucksoccer_rally_complete");
     while (true) {
-        left = level waittill(#"hash_c62f5087");
+        level waittill(#"hash_c62f5087", left);
         if (left == 50) {
             break;
         }
@@ -1824,8 +1824,8 @@ function function_dfbad276(number, startside) {
         spawn_point = (spawn_point.origin[0], spawn_point.origin[1], trace["position"][2]);
         trace = bullettrace(var_2d4a3b56.origin, var_2d4a3b56.origin + (0, 0, -500), 0, undefined);
         var_2d4a3b56 = (var_2d4a3b56.origin[0], var_2d4a3b56.origin[1], trace["position"][2]);
-        var_35edc664 = vectortoangles(var_2d4a3b56 - spawn_point);
-        desired_yaw = angleclamp180(var_35edc664[1]);
+        desired_angles = vectortoangles(var_2d4a3b56 - spawn_point);
+        desired_yaw = angleclamp180(desired_angles[1]);
         cow = spawn("script_model", spawn_point);
         cow.targetname = "cow";
         cow.angles = (0, desired_yaw + 90, 0);
@@ -1916,7 +1916,7 @@ function function_9cee4436(dest) {
 function function_d1dd8def(cow) {
     cow endon(#"death");
     while (true) {
-        guy = self waittill(#"trigger");
+        self waittill(#"trigger", guy);
         if (!isdefined(guy)) {
             continue;
         }
@@ -1960,7 +1960,7 @@ function function_d1dd8def(cow) {
 function function_3c416d7e() {
     self endon(#"death");
     while (true) {
-        damagetaken, attacker, dir, point, var_e5f012d6, model, tag, part, weapon, flags = self waittill(#"damage");
+        self waittill(#"damage", damagetaken, attacker, dir, point, var_e5f012d6, model, tag, part, weapon, flags);
         if (var_e5f012d6 == "MOD_PROJECTILE" || var_e5f012d6 == "MOD_GRENADE" || var_e5f012d6 == "MOD_CRUSH" || weapon == level.doa.var_69899304) {
             if (isdefined(attacker)) {
                 if (isdefined(attacker.owner)) {

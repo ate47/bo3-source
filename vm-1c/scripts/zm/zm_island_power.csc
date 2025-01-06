@@ -1,15 +1,15 @@
-#using scripts/zm/_zm_weapons;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_weapons;
 
 #namespace zm_island_power;
 
 // Namespace zm_island_power
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa58a8e1a, Offset: 0x258
 // Size: 0x16c
 function init() {
@@ -21,7 +21,7 @@ function init() {
 }
 
 // Namespace zm_island_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x5c8cebd, Offset: 0x3d0
 // Size: 0xdc
 function bucket_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -39,7 +39,7 @@ function bucket_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 }
 
 // Namespace zm_island_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xb2c01677, Offset: 0x4b8
 // Size: 0x3a4
 function power_switch_1_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -74,7 +74,7 @@ function power_switch_1_fx(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8315189e, Offset: 0x868
 // Size: 0x3a4
 function power_switch_2_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -109,7 +109,7 @@ function power_switch_2_fx(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_power
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3eb5843, Offset: 0xc18
 // Size: 0x1c0
 function function_5ae9f178(localclientnum, b_on) {
@@ -143,7 +143,7 @@ function function_5ae9f178(localclientnum, b_on) {
 }
 
 // Namespace zm_island_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x50bb08b9, Offset: 0xde0
 // Size: 0x84
 function function_8816d2aa(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,7 +155,7 @@ function function_8816d2aa(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_island_power
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x114b2009, Offset: 0xe70
 // Size: 0x84
 function power_plant_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -167,7 +167,7 @@ function power_plant_glow(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_island_power
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x77305cee, Offset: 0xf00
 // Size: 0x1c0
 function function_a88bde9b(localclientnum, b_on) {

@@ -1,23 +1,23 @@
-#using scripts/shared/stealth_status;
-#using scripts/shared/stealth_vo;
-#using scripts/shared/stealth_tagging;
-#using scripts/shared/stealth_level;
-#using scripts/shared/stealth_aware;
-#using scripts/shared/stealth_debug;
-#using scripts/shared/stealth;
 #using scripts/cp/_util;
 #using scripts/cp/gametypes/_globallogic_score;
 #using scripts/shared/abilities/_ability_util;
-#using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/shared/util_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/stealth;
+#using scripts/shared/stealth_aware;
+#using scripts/shared/stealth_debug;
+#using scripts/shared/stealth_level;
+#using scripts/shared/stealth_status;
+#using scripts/shared/stealth_tagging;
+#using scripts/shared/stealth_vo;
 #using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
 
 #namespace stealth_player;
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb2e4bbba, Offset: 0x3d8
 // Size: 0x15c
 function init() {
@@ -41,7 +41,7 @@ function init() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x540
 // Size: 0x4
 function stop() {
@@ -49,18 +49,18 @@ function stop() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1c8f92b5, Offset: 0x550
 // Size: 0x44
 function reset() {
-    self.stealth.var_31bf1854 = undefined;
+    self.stealth.vo_deck = undefined;
     self.stealth.var_b9ae563d = undefined;
     self.stealth.var_23eafafa = undefined;
     self.stealth.var_9f4ce919 = [];
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x65332852, Offset: 0x5a0
 // Size: 0x20
 function enabled() {
@@ -68,7 +68,7 @@ function enabled() {
 }
 
 // Namespace stealth_player
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa5d6612f, Offset: 0x5c8
 // Size: 0x24
 function function_f5f81ff0(detector, var_2eef6100) {
@@ -76,7 +76,7 @@ function function_f5f81ff0(detector, var_2eef6100) {
 }
 
 // Namespace stealth_player
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xab85d7c5, Offset: 0x5f8
 // Size: 0x232
 function function_cd81f5b8(detector, var_2eef6100) {
@@ -108,7 +108,7 @@ function function_cd81f5b8(detector, var_2eef6100) {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8f960a37, Offset: 0x838
 // Size: 0x498
 function function_ff057a95() {
@@ -128,7 +128,7 @@ function function_ff057a95() {
         if (self playerads() > 0.3) {
             var_bd8fb968 = self function_1a9006bd("cybercom_hijack");
             eye = self geteye();
-            var_fd26df34 = anglestoforward(self getplayerangles());
+            eye_dir = anglestoforward(self getplayerangles());
             targets = getaiteamarray("axis");
             if (isdefined(level.stealth.var_581c13ae)) {
                 var_2680d17d = [];
@@ -162,7 +162,7 @@ function function_ff057a95() {
                     continue;
                 }
                 dir = vectornormalize(var_bbf94a49 - eye);
-                if (vectordot(var_fd26df34, dir) > 0.99) {
+                if (vectordot(eye_dir, dir) > 0.99) {
                     if (sighttracepassed(var_bbf94a49, eye, 0, undefined)) {
                         self stealth_vo::function_e3ae87b3(var_80a7f288);
                         self.stealth.var_9f4ce919[var_80a7f288] = 1;
@@ -175,7 +175,7 @@ function function_ff057a95() {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x513419cb, Offset: 0xcd8
 // Size: 0x1f0
 function function_31218960(other) {
@@ -203,7 +203,7 @@ function function_31218960(other) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8ed6a0bc, Offset: 0xed0
 // Size: 0x15c
 function function_b9393d6c(awareness) {
@@ -227,7 +227,7 @@ function function_b9393d6c(awareness) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8eaec4d7, Offset: 0x1038
 // Size: 0x20
 function function_96e60fd0(detected) {
@@ -246,7 +246,7 @@ function function_f1c48da4() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95217a14, Offset: 0x10a0
 // Size: 0xec
 function function_1026b3f5() {
@@ -271,7 +271,7 @@ function function_1026b3f5() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33a3ab99, Offset: 0x1198
 // Size: 0x70
 function function_c438db7f() {
@@ -287,7 +287,7 @@ function function_c438db7f() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x384464c5, Offset: 0x1210
 // Size: 0xa8
 function function_7300ae66() {
@@ -304,7 +304,7 @@ function function_7300ae66() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xec73224e, Offset: 0x12c0
 // Size: 0x210
 function function_bb9ffa41() {
@@ -318,7 +318,7 @@ function function_bb9ffa41() {
         }
         var_b69afa72 = kills;
         lastkilltime = gettime();
-        victim, smeansofdeath, weapon = self waittill(#"hash_c56ba9f7");
+        self waittill(#"killed_ai", victim, smeansofdeath, weapon);
         waittillframeend();
         if (isdefined(victim) && isdefined(victim.team) && victim.team != "axis") {
             self thread stealth_vo::function_e3ae87b3("fail_kill");
@@ -333,7 +333,7 @@ function function_bb9ffa41() {
             var_52ff854e = 0;
         }
         if (var_c839bf74 >= 2 && isdefined(smeansofdeath) && util::isbulletimpactmod(smeansofdeath)) {
-            self notify(#"hash_97df59d5");
+            self notify(#"double_kill");
         }
         var_52ff854e += var_c839bf74;
         if (!isdefined(self.stealth)) {
@@ -347,7 +347,7 @@ function function_bb9ffa41() {
 }
 
 // Namespace stealth_player
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x213afb6f, Offset: 0x14d8
 // Size: 0x160
 function function_e507ced8(victim, smeansofdeath, weapon, killcount) {
@@ -372,7 +372,7 @@ function function_e507ced8(victim, smeansofdeath, weapon, killcount) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x24cdfe1c, Offset: 0x1640
 // Size: 0x11a
 function function_24319235(ignore) {
@@ -396,7 +396,7 @@ function function_24319235(ignore) {
 }
 
 // Namespace stealth_player
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x7ba4a30b, Offset: 0x1768
 // Size: 0xfc
 function function_3cd0dcd(e_other, bcansee, awareness) {
@@ -421,7 +421,7 @@ function function_3cd0dcd(e_other, bcansee, awareness) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xbc9dc6ed, Offset: 0x1870
 // Size: 0x6c
 function function_e6e6afd7(e_other) {
@@ -433,7 +433,7 @@ function function_e6e6afd7(e_other) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xef9e8bb4, Offset: 0x18e8
 // Size: 0xbc
 function function_6163610f(awareness) {
@@ -467,7 +467,7 @@ function function_a321c8e5() {
 }
 
 // Namespace stealth_player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4c2f4b61, Offset: 0x1a48
 // Size: 0x1c
 function function_21fabca() {
@@ -475,7 +475,7 @@ function function_21fabca() {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcd0e4c14, Offset: 0x1a70
 // Size: 0x7c
 function function_ca6a0809(enemy) {
@@ -487,7 +487,7 @@ function function_ca6a0809(enemy) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4745c0a9, Offset: 0x1af8
 // Size: 0x6b4
 function function_509ca7a6(enemy) {
@@ -544,7 +544,7 @@ function function_509ca7a6(enemy) {
 }
 
 // Namespace stealth_player
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe3891b8d, Offset: 0x21b8
 // Size: 0x294
 function function_3f6bd04c(enemy) {

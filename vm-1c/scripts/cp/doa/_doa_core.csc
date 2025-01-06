@@ -1,24 +1,24 @@
-#using scripts/shared/exploder_shared;
-#using scripts/shared/ai/zombie_vortex;
-#using scripts/shared/ai/systems/gib;
+#using scripts/codescripts/struct;
+#using scripts/cp/_util;
+#using scripts/cp/cp_doa_bo3_fx;
+#using scripts/cp/cp_doa_bo3_sound;
+#using scripts/cp/doa/_doa_arena;
+#using scripts/cp/doa/_doa_camera;
+#using scripts/cp/doa/_doa_core;
+#using scripts/cp/doa/_doa_fx;
 #using scripts/cp/doa/_doa_pickups;
 #using scripts/cp/doa/_doa_score;
-#using scripts/cp/doa/_doa_camera;
-#using scripts/cp/doa/_doa_arena;
 #using scripts/cp/doa/_doa_sfx;
-#using scripts/cp/doa/_doa_fx;
-#using scripts/cp/doa/_doa_core;
-#using scripts/cp/cp_doa_bo3_sound;
-#using scripts/cp/cp_doa_bo3_fx;
-#using scripts/cp/_util;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_vortex;
 #using scripts/shared/blood;
-#using scripts/shared/math_shared;
 #using scripts/shared/callbacks_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/player_shared;
 #using scripts/shared/clientfield_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/player_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace namespace_693feb87;
 
@@ -148,7 +148,7 @@ function function_d5eb029a() {
     level notify(#"hash_d5eb029a");
     level endon(#"hash_d5eb029a");
     while (true) {
-        playernum, newstate = level waittill(#"hash_aae01d5a");
+        level waittill(#"hash_aae01d5a", playernum, newstate);
         players = getplayers(0);
         foreach (player in players) {
             if (!isdefined(player.entnum)) {
@@ -1325,7 +1325,7 @@ function changecamera(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbefb77a3, Offset: 0x65e0
 // Size: 0xb8
-function fixCameraOn(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function function_bbb7743c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayers()[0];
     if (newval) {
         level.doa.var_20e9a021 = 1;
@@ -1340,7 +1340,7 @@ function fixCameraOn(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbe0e84ae, Offset: 0x66a0
 // Size: 0xb4
-function debugCamera(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function function_cee29ae7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.var_7a6087fd = newval;
     player = getlocalplayers()[0];
     if (level.var_7a6087fd == 1) {
@@ -1354,7 +1354,7 @@ function debugCamera(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5b01a10e, Offset: 0x6760
 // Size: 0x414
-function debugCameraPayload(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function function_cd844947(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     low = newval & 65535;
     high = newval >> 16;
     forward = anglestoforward(level.var_a32fbbc0);
@@ -1557,7 +1557,7 @@ function drawcylinder(pos, rad, height, frames, color) {
         color = (0, 0, 0);
     }
     /#
-        self endon(#"hash_f36da0a2");
+        self endon(#"stop_cylinder");
         self endon(#"entityshutdown");
         currad = rad;
         curheight = height;

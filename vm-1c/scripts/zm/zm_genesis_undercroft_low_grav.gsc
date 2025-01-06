@@ -1,27 +1,27 @@
-#using scripts/zm/zm_genesis_portals;
-#using scripts/zm/zm_genesis_zombie;
-#using scripts/zm/_zm_devgui;
-#using scripts/zm/_zm_zonemgr;
-#using scripts/zm/_zm_unitrigger;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_timer;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_audio;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_util;
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/systems/gib;
 #using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
 #using scripts/shared/clientfield_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/flag_shared;
 #using scripts/shared/flagsys_shared;
 #using scripts/shared/scene_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
 #using scripts/shared/system_shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/flag_shared;
-#using scripts/shared/exploder_shared;
-#using scripts/shared/array_shared;
-#using scripts/codescripts/struct;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
+#using scripts/zm/_util;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_devgui;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_timer;
+#using scripts/zm/_zm_unitrigger;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_zonemgr;
+#using scripts/zm/zm_genesis_portals;
+#using scripts/zm/zm_genesis_zombie;
 
 #namespace zm_genesis_undercroft_low_grav;
 
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe7b11716, Offset: 0x7d0
 // Size: 0x16e
 function __init__() {
@@ -49,7 +49,7 @@ function __init__() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7286d077, Offset: 0x948
 // Size: 0x1b4
 function __main__() {
@@ -74,7 +74,7 @@ function __main__() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x31bd156d, Offset: 0xb08
 // Size: 0x244
 function function_3fa7f11a() {
@@ -99,7 +99,7 @@ function function_3fa7f11a() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x89c8e24c, Offset: 0xd58
 // Size: 0x6c
 function function_ed0d48ca() {
@@ -111,7 +111,7 @@ function function_ed0d48ca() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7385ac27, Offset: 0xdd0
 // Size: 0x2f8
 function function_e49e9c09() {
@@ -123,7 +123,7 @@ function function_e49e9c09() {
     var_2e8e2853 = var_4de8678a.origin - (0, 0, 2);
     var_93f2a402 = var_4de8678a.origin;
     while (true) {
-        e_who = self waittill(#"trigger");
+        self waittill(#"trigger", e_who);
         var_4de8678a moveto(var_2e8e2853, 0.5);
         playsoundatposition("evt_stone_plate_down", var_4de8678a.origin);
         var_4de8678a waittill(#"movedone");
@@ -149,7 +149,7 @@ function function_e49e9c09() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfc9d4048, Offset: 0x10d0
 // Size: 0xf4
 function function_efcb9832() {
@@ -164,7 +164,7 @@ function function_efcb9832() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdaff1f72, Offset: 0x11d0
 // Size: 0x2ae
 function function_5f1fa8cd(n_duration) {
@@ -200,7 +200,7 @@ function function_5f1fa8cd(n_duration) {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfa6e2fa2, Offset: 0x1488
 // Size: 0xec
 function function_e1998cb5() {
@@ -217,7 +217,7 @@ function function_e1998cb5() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe549acfc, Offset: 0x1580
 // Size: 0x10c
 function function_3ccd9604() {
@@ -253,7 +253,7 @@ function function_f4766f6() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf17da384, Offset: 0x17c8
 // Size: 0x2b4
 function function_c3f6aa22() {
@@ -297,7 +297,7 @@ function function_c3f6aa22() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x94339071, Offset: 0x1a88
 // Size: 0x80
 function function_e997f73a() {
@@ -313,7 +313,7 @@ function function_e997f73a() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7397884a, Offset: 0x1b10
 // Size: 0x170
 function function_573a448e() {
@@ -335,13 +335,13 @@ function function_573a448e() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x52f483c4, Offset: 0x1c88
 // Size: 0x80
 function function_ba48ca38() {
     e_trig = getent("low_grav_tp_return", "targetname");
     while (true) {
-        e_who = e_trig waittill(#"trigger");
+        e_trig waittill(#"trigger", e_who);
         if (!isdefined(e_who.var_ee422cb0)) {
             e_who thread function_23f211e9();
         }
@@ -349,7 +349,7 @@ function function_ba48ca38() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x845d1354, Offset: 0x1d10
 // Size: 0xae
 function function_23f211e9() {
@@ -362,7 +362,7 @@ function function_23f211e9() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x53904da2, Offset: 0x1dc8
 // Size: 0x10a
 function function_c3e8e4a4() {
@@ -376,7 +376,7 @@ function function_c3e8e4a4() {
 }
 
 // Namespace zm_genesis_undercroft_low_grav
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2503e07, Offset: 0x1ee0
 // Size: 0x3c
 function function_e4e4f426() {
@@ -389,7 +389,7 @@ function function_e4e4f426() {
 /#
 
     // Namespace zm_genesis_undercroft_low_grav
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x20a43f1d, Offset: 0x1f28
     // Size: 0x38
     function function_2449723c() {
@@ -403,7 +403,7 @@ function function_e4e4f426() {
     }
 
     // Namespace zm_genesis_undercroft_low_grav
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x1e4e9d3f, Offset: 0x1f68
     // Size: 0x64
     function function_ab786717() {
@@ -414,7 +414,7 @@ function function_e4e4f426() {
     }
 
     // Namespace zm_genesis_undercroft_low_grav
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0xa5f1d4a4, Offset: 0x1fd8
     // Size: 0x76
     function function_e41a2453(cmd) {

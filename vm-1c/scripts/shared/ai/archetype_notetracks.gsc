@@ -1,13 +1,13 @@
-#using scripts/shared/ai_shared;
-#using scripts/shared/ai/systems/shared;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/systems/animation_state_machine_utility;
-#using scripts/shared/ai/systems/animation_state_machine_notetracks;
-#using scripts/shared/ai/systems/ai_blackboard;
-#using scripts/shared/ai/archetype_utility;
 #using scripts/shared/ai/archetype_human_cover;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/ai_blackboard;
+#using scripts/shared/ai/systems/animation_state_machine_notetracks;
+#using scripts/shared/ai/systems/animation_state_machine_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/systems/shared;
+#using scripts/shared/ai_shared;
 
 #namespace animationstatenetwork;
 
@@ -46,7 +46,7 @@ function autoexec registerdefaultnotetrackhandlerfunctions() {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x15562793, Offset: 0x880
 // Size: 0x64
 function private notetrackanimmovementstop(entity) {
@@ -56,7 +56,7 @@ function private notetrackanimmovementstop(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xae971b2d, Offset: 0x8f0
 // Size: 0x5c
 function private notetrackstaircasestep1(entity) {
@@ -66,7 +66,7 @@ function private notetrackstaircasestep1(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc0e3500, Offset: 0x958
 // Size: 0x6c
 function private notetrackstaircasestep2(entity) {
@@ -76,7 +76,7 @@ function private notetrackstaircasestep2(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xbe7e929d, Offset: 0x9d0
 // Size: 0x94
 function private notetrackdropguninternal(entity) {
@@ -90,7 +90,7 @@ function private notetrackdropguninternal(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc300680f, Offset: 0xa70
 // Size: 0x68
 function private notetrackattachknife(entity) {
@@ -101,7 +101,7 @@ function private notetrackattachknife(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xa3bb392a, Offset: 0xae0
 // Size: 0x64
 function private notetrackdetachknife(entity) {
@@ -112,7 +112,7 @@ function private notetrackdetachknife(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xca0aadc8, Offset: 0xb50
 // Size: 0x24
 function private notetrackhideweapon(entity) {
@@ -120,7 +120,7 @@ function private notetrackhideweapon(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x2ebcf9de, Offset: 0xb80
 // Size: 0x24
 function private notetrackshowweapon(entity) {
@@ -128,7 +128,7 @@ function private notetrackshowweapon(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x2d0caf1b, Offset: 0xbb0
 // Size: 0x24
 function private notetrackhideai(entity) {
@@ -136,7 +136,7 @@ function private notetrackhideai(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6038f3bc, Offset: 0xbe0
 // Size: 0x24
 function private notetrackshowai(entity) {
@@ -144,7 +144,7 @@ function private notetrackshowai(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xcc16f3ea, Offset: 0xc10
 // Size: 0xb4
 function private notetrackstartragdoll(entity) {
@@ -159,7 +159,7 @@ function private notetrackstartragdoll(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x210ee748, Offset: 0xcd0
 // Size: 0x4c
 function _delayedragdoll(entity) {
@@ -170,7 +170,7 @@ function _delayedragdoll(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa7c3b49f, Offset: 0xd28
 // Size: 0x54
 function notetrackstartragdollnodeath(entity) {
@@ -181,7 +181,7 @@ function notetrackstartragdollnodeath(entity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x989220d0, Offset: 0xd88
 // Size: 0x104
 function private notetrackfirebullet(animationentity) {
@@ -198,7 +198,7 @@ function private notetrackfirebullet(animationentity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x1b2c6e95, Offset: 0xe98
 // Size: 0x24
 function private notetrackdropgun(animationentity) {
@@ -206,7 +206,7 @@ function private notetrackdropgun(animationentity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfda9364, Offset: 0xec8
 // Size: 0x24
 function private notetrackdropshield(animationentity) {
@@ -214,7 +214,7 @@ function private notetrackdropshield(animationentity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x6729fe6e, Offset: 0xef8
 // Size: 0xd4
 function private notetrackgrenadethrow(animationentity) {
@@ -232,7 +232,7 @@ function private notetrackgrenadethrow(animationentity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x81c1a10b, Offset: 0xfd8
 // Size: 0x74
 function private notetrackmeleeunsync(animationentity) {
@@ -244,7 +244,7 @@ function private notetrackmeleeunsync(animationentity) {
 }
 
 // Namespace animationstatenetwork
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe786be4e, Offset: 0x1058
 // Size: 0x4c
 function private notetrackgibdisable(animationentity) {

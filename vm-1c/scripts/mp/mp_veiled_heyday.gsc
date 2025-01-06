@@ -1,18 +1,18 @@
-#using scripts/shared/scene_shared;
-#using scripts/shared/_oob;
-#using scripts/mp/mp_veiled_heyday_sound;
-#using scripts/mp/mp_veiled_heyday_fx;
-#using scripts/mp/gametypes/_spawnlogic;
-#using scripts/mp/_util;
-#using scripts/mp/_load;
-#using scripts/shared/util_shared;
-#using scripts/shared/compass;
 #using scripts/codescripts/struct;
+#using scripts/mp/_load;
+#using scripts/mp/_util;
+#using scripts/mp/gametypes/_spawnlogic;
+#using scripts/mp/mp_veiled_heyday_fx;
+#using scripts/mp/mp_veiled_heyday_sound;
+#using scripts/shared/_oob;
+#using scripts/shared/compass;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
 
 #namespace mp_veiled_heyday;
 
 // Namespace mp_veiled_heyday
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x275e14d8, Offset: 0x290
 // Size: 0x2f4
 function main() {
@@ -37,7 +37,7 @@ function main() {
 }
 
 // Namespace mp_veiled_heyday
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x590
 // Size: 0x4
 function precache() {
@@ -45,7 +45,7 @@ function precache() {
 }
 
 // Namespace mp_veiled_heyday
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc4090aca, Offset: 0x5a0
 // Size: 0xbc
 function function_706ce0e3() {
@@ -60,14 +60,14 @@ function function_706ce0e3() {
 }
 
 // Namespace mp_veiled_heyday
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc9f399ee, Offset: 0x668
 // Size: 0x90
 function watchkilltrigger() {
     level endon(#"game_ended");
     trigger = self;
     while (true) {
-        player = trigger waittill(#"trigger");
+        trigger waittill(#"trigger", player);
         player dodamage(1000, trigger.origin + (0, 0, 0), trigger, trigger, "none", "MOD_SUICIDE", 0);
     }
 }

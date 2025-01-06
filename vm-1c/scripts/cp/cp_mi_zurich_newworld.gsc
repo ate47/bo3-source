@@ -1,35 +1,35 @@
-#using scripts/cp/cp_mi_zurich_newworld_patch;
-#using scripts/cp/cp_mi_zurich_newworld_underground;
-#using scripts/cp/cp_mi_zurich_newworld_train;
-#using scripts/cp/cp_mi_zurich_newworld_rooftops;
-#using scripts/cp/cp_mi_zurich_newworld_lab;
-#using scripts/cp/cp_mi_zurich_newworld_factory;
-#using scripts/cp/cp_mi_zurich_newworld_accolades;
-#using scripts/cp/cp_mi_zurich_newworld_util;
-#using scripts/cp/cp_mi_zurich_newworld_sound;
-#using scripts/cp/cp_mi_zurich_newworld_fx;
-#using scripts/cp/gametypes/_save;
-#using scripts/cp/_util;
-#using scripts/cp/_skipto;
-#using scripts/cp/_oed;
-#using scripts/cp/_objectives;
-#using scripts/cp/_load;
-#using scripts/cp/_collectibles;
-#using scripts/cp/_ammo_cache;
-#using scripts/shared/vehicle_shared;
-#using scripts/shared/vehicle_ai_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/trigger_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
+#using scripts/cp/_ammo_cache;
+#using scripts/cp/_collectibles;
+#using scripts/cp/_load;
+#using scripts/cp/_objectives;
+#using scripts/cp/_oed;
+#using scripts/cp/_skipto;
+#using scripts/cp/_util;
+#using scripts/cp/cp_mi_zurich_newworld_accolades;
+#using scripts/cp/cp_mi_zurich_newworld_factory;
+#using scripts/cp/cp_mi_zurich_newworld_fx;
+#using scripts/cp/cp_mi_zurich_newworld_lab;
+#using scripts/cp/cp_mi_zurich_newworld_patch;
+#using scripts/cp/cp_mi_zurich_newworld_rooftops;
+#using scripts/cp/cp_mi_zurich_newworld_sound;
+#using scripts/cp/cp_mi_zurich_newworld_train;
+#using scripts/cp/cp_mi_zurich_newworld_underground;
+#using scripts/cp/cp_mi_zurich_newworld_util;
+#using scripts/cp/gametypes/_save;
+#using scripts/shared/ai_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/vehicle_ai_shared;
+#using scripts/shared/vehicle_shared;
 
 #namespace newworld;
 
@@ -43,7 +43,7 @@ function function_243693d4() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa751c7ef, Offset: 0xf08
 // Size: 0x1a4
 function main() {
@@ -72,7 +72,7 @@ function main() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa6c72487, Offset: 0x10b8
 // Size: 0x1e
 function init_fx() {
@@ -80,7 +80,7 @@ function init_fx() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb8c18419, Offset: 0x10e0
 // Size: 0x9f4
 function init_clientfields() {
@@ -140,7 +140,7 @@ function init_clientfields() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8cc348d6, Offset: 0x1ae0
 // Size: 0xa4
 function init_flags() {
@@ -152,7 +152,7 @@ function init_flags() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x137be0d3, Offset: 0x1b90
 // Size: 0xf4
 function function_4b0856b() {
@@ -165,7 +165,7 @@ function function_4b0856b() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b16a25f, Offset: 0x1c90
 // Size: 0x64
 function on_player_spawn() {
@@ -177,7 +177,7 @@ function on_player_spawn() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x893f3dff, Offset: 0x1d00
 // Size: 0x44
 function on_player_connect() {
@@ -188,7 +188,7 @@ function on_player_connect() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4cb9a9e9, Offset: 0x1d50
 // Size: 0x6f4
 function function_673254cc() {
@@ -223,7 +223,7 @@ function function_673254cc() {
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x71c446b, Offset: 0x2450
 // Size: 0xb4
 function function_efcad701() {
@@ -238,29 +238,29 @@ function function_efcad701() {
 }
 
 // Namespace newworld
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1235c211, Offset: 0x2510
 // Size: 0xb4
-function function_3840d81a(var_368248f2) {
+function function_3840d81a(nd_exit) {
     self endon(#"death");
     if (!isalive(self)) {
         return;
     }
     self ai::set_behavior_attribute("panic", 1);
     self playloopsound("vox_civ_panic_loop");
-    self ai::force_goal(var_368248f2, 8);
+    self ai::force_goal(nd_exit, 8);
     self waittill(#"goal");
     newworld_util::function_523cdc93(0);
 }
 
 // Namespace newworld
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x17b95347, Offset: 0x25d0
 // Size: 0x84
 function function_1554ffe9() {
     self endon(#"death");
     while (true) {
-        var_efb53e77 = self waittill(#"touch");
+        self waittill(#"touch", var_efb53e77);
         if (var_efb53e77.script_noteworthy === "civilian") {
             continue;
         }

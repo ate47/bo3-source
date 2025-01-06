@@ -1,25 +1,25 @@
-#using scripts/zm/_zm_devgui;
 #using scripts/codescripts/struct;
-#using scripts/shared/ai/zombie_utility;
-#using scripts/shared/ai/systems/gib;
-#using scripts/shared/ai/systems/debug;
-#using scripts/shared/ai/systems/blackboard;
-#using scripts/shared/ai/systems/behavior_tree_utility;
-#using scripts/shared/ai/archetype_utility;
-#using scripts/shared/animation_shared;
 #using scripts/shared/_burnplayer;
-#using scripts/shared/system_shared;
-#using scripts/shared/flagsys_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/array_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/spawner_shared;
-#using scripts/shared/scene_shared;
-#using scripts/shared/math_shared;
-#using scripts/shared/fx_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/callbacks_shared;
+#using scripts/shared/ai/archetype_utility;
+#using scripts/shared/ai/systems/behavior_tree_utility;
+#using scripts/shared/ai/systems/blackboard;
+#using scripts/shared/ai/systems/debug;
+#using scripts/shared/ai/systems/gib;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai_shared;
+#using scripts/shared/animation_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/flagsys_shared;
+#using scripts/shared/fx_shared;
+#using scripts/shared/math_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_devgui;
 
 #namespace zm_elemental_zombie;
 
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcf092cc1, Offset: 0x5f0
 // Size: 0x44
 function __init__() {
@@ -44,7 +44,7 @@ function __init__() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x7253fbc5, Offset: 0x640
 // Size: 0x124
 function private register_clientfields() {
@@ -57,7 +57,7 @@ function private register_clientfields() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0110717, Offset: 0x770
 // Size: 0x264
 function function_1b1bb1b() {
@@ -87,7 +87,7 @@ function function_1b1bb1b() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d8b369a, Offset: 0x9e0
 // Size: 0x174
 function function_f4defbc2() {
@@ -110,7 +110,7 @@ function function_f4defbc2() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd74a2c3f, Offset: 0xb60
 // Size: 0x78
 function function_2987b6dc() {
@@ -126,7 +126,7 @@ function function_2987b6dc() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8e85bd04, Offset: 0xbe0
 // Size: 0x78
 function function_d070bfba() {
@@ -142,12 +142,12 @@ function function_d070bfba() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4f30462b, Offset: 0xc60
 // Size: 0xec
 function function_d9226011() {
     ai_zombie = self;
-    attacker = ai_zombie waittill(#"death");
+    ai_zombie waittill(#"death", attacker);
     if (!isdefined(ai_zombie) || ai_zombie.nuked === 1) {
         return;
     }
@@ -158,12 +158,12 @@ function function_d9226011() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b319540, Offset: 0xd58
 // Size: 0x13c
 function function_e94aef80() {
     ai_zombie = self;
-    attacker = ai_zombie waittill(#"death");
+    ai_zombie waittill(#"death", attacker);
     if (!isdefined(ai_zombie) || ai_zombie.nuked === 1) {
         return;
     }
@@ -177,7 +177,7 @@ function function_e94aef80() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x4b4a28fc, Offset: 0xea0
 // Size: 0x74
 function function_e6cd7e78(damage, attacker, direction_vec, point, mod) {
@@ -187,7 +187,7 @@ function function_e6cd7e78(damage, attacker, direction_vec, point, mod) {
 }
 
 // Namespace zm_elemental_zombie
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x72bb41c7, Offset: 0xf20
 // Size: 0x64
 function function_d41418b8() {
@@ -197,7 +197,7 @@ function function_d41418b8() {
 }
 
 // Namespace zm_elemental_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdc4c9f9a, Offset: 0xf90
 // Size: 0x6c
 function function_c50e890f(type) {
@@ -207,7 +207,7 @@ function function_c50e890f(type) {
 }
 
 // Namespace zm_elemental_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x96918936, Offset: 0x1008
 // Size: 0x36
 function function_4aeed0a5(type) {
@@ -216,7 +216,7 @@ function function_4aeed0a5(type) {
 }
 
 // Namespace zm_elemental_zombie
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x2f762ef0, Offset: 0x1048
 // Size: 0x28
 function function_361f6caa(ai_zombie, type) {
@@ -224,7 +224,7 @@ function function_361f6caa(ai_zombie, type) {
 }
 
 // Namespace zm_elemental_zombie
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x735f2321, Offset: 0x1078
 // Size: 0x20
 function function_b804eb62(ai_zombie) {
@@ -234,7 +234,7 @@ function function_b804eb62(ai_zombie) {
 /#
 
     // Namespace zm_elemental_zombie
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xba93fa13, Offset: 0x10a0
     // Size: 0x44
     function function_f6901b6a() {
@@ -243,7 +243,7 @@ function function_b804eb62(ai_zombie) {
     }
 
     // Namespace zm_elemental_zombie
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x45688692, Offset: 0x10f0
     // Size: 0x28e
     function function_2d0e7f4(cmd) {

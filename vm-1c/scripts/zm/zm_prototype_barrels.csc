@@ -1,11 +1,11 @@
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/sound_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/callbacks_shared;
-#using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
+#using scripts/shared/array_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/sound_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
 
 #namespace zm_prototype_barrels;
 
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_prototype_barrels
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5333241a, Offset: 0x240
 // Size: 0x94
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace zm_prototype_barrels
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1e78a8b3, Offset: 0x2e0
 // Size: 0x84
 function function_66d46c7d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -37,7 +37,7 @@ function function_66d46c7d(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_prototype_barrels
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x3abebbd8, Offset: 0x370
 // Size: 0xac
 function function_b6fe19c5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

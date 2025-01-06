@@ -1,66 +1,66 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/ai/mechz;
+#using scripts/shared/audio_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/util_shared;
+#using scripts/shared/visionset_mgr_shared;
 #using scripts/zm/_electroball_grenade;
-#using scripts/zm/_zm_weap_elemental_bow_wolf_howl;
-#using scripts/zm/_zm_weap_elemental_bow_storm;
-#using scripts/zm/_zm_weap_elemental_bow_rune_prison;
-#using scripts/zm/_zm_weap_elemental_bow_demongate;
-#using scripts/zm/_zm_weap_elemental_bow;
-#using scripts/zm/_zm_ai_mechz;
-#using scripts/zm/zm_castle_pap_quest;
-#using scripts/zm/zm_castle_low_grav;
-#using scripts/zm/zm_castle_weap_quest_upgrade;
-#using scripts/zm/zm_castle_weap_quest;
-#using scripts/zm/zm_castle_tram;
-#using scripts/zm/zm_castle_teleporter;
-#using scripts/zm/zm_castle_rocket_trap;
-#using scripts/zm/zm_castle_perks;
-#using scripts/zm/zm_castle_fx;
-#using scripts/zm/zm_castle_flingers;
-#using scripts/zm/zm_castle_ffotd;
-#using scripts/zm/zm_castle_ee_side;
-#using scripts/zm/zm_castle_ee_bossfight;
-#using scripts/zm/zm_castle_ee;
-#using scripts/zm/zm_castle_death_ray_trap;
-#using scripts/zm/zm_castle_craftables;
-#using scripts/zm/zm_castle_amb;
-#using scripts/zm/_zm_powerup_weapon_minigun;
-#using scripts/zm/_zm_powerup_nuke;
-#using scripts/zm/_zm_powerup_insta_kill;
-#using scripts/zm/_zm_powerup_full_ammo;
-#using scripts/zm/_zm_powerup_free_perk;
-#using scripts/zm/_zm_powerup_fire_sale;
-#using scripts/zm/_zm_powerup_double_points;
-#using scripts/zm/_zm_powerup_castle_tram_token;
-#using scripts/zm/_zm_powerup_castle_demonic_rune;
-#using scripts/zm/_zm_powerup_carpenter;
-#using scripts/zm/_zm_perk_widows_wine;
-#using scripts/zm/_zm_perk_staminup;
-#using scripts/zm/_zm_perk_sleight_of_hand;
-#using scripts/zm/_zm_perk_random;
-#using scripts/zm/_zm_perk_quick_revive;
-#using scripts/zm/_zm_perk_juggernaut;
-#using scripts/zm/_zm_perk_electric_cherry;
-#using scripts/zm/_zm_perk_doubletap2;
-#using scripts/zm/_zm_perk_deadshot;
-#using scripts/zm/_zm_perk_additionalprimaryweapon;
-#using scripts/zm/_zm_weap_castle_rocketshield;
-#using scripts/zm/_zm_weap_gravityspikes;
-#using scripts/zm/_zm_weap_cymbal_monkey;
-#using scripts/zm/_zm_weap_bouncingbetty;
-#using scripts/zm/_zm_weapons;
-#using scripts/zm/_zm_utility;
-#using scripts/zm/_zm_trap_electric;
-#using scripts/zm/_zm_ai_dogs;
-#using scripts/zm/_zm;
 #using scripts/zm/_load;
+#using scripts/zm/_zm;
+#using scripts/zm/_zm_ai_dogs;
+#using scripts/zm/_zm_ai_mechz;
+#using scripts/zm/_zm_perk_additionalprimaryweapon;
+#using scripts/zm/_zm_perk_deadshot;
+#using scripts/zm/_zm_perk_doubletap2;
+#using scripts/zm/_zm_perk_electric_cherry;
+#using scripts/zm/_zm_perk_juggernaut;
+#using scripts/zm/_zm_perk_quick_revive;
+#using scripts/zm/_zm_perk_random;
+#using scripts/zm/_zm_perk_sleight_of_hand;
+#using scripts/zm/_zm_perk_staminup;
+#using scripts/zm/_zm_perk_widows_wine;
+#using scripts/zm/_zm_powerup_carpenter;
+#using scripts/zm/_zm_powerup_castle_demonic_rune;
+#using scripts/zm/_zm_powerup_castle_tram_token;
+#using scripts/zm/_zm_powerup_double_points;
+#using scripts/zm/_zm_powerup_fire_sale;
+#using scripts/zm/_zm_powerup_free_perk;
+#using scripts/zm/_zm_powerup_full_ammo;
+#using scripts/zm/_zm_powerup_insta_kill;
+#using scripts/zm/_zm_powerup_nuke;
+#using scripts/zm/_zm_powerup_weapon_minigun;
+#using scripts/zm/_zm_trap_electric;
+#using scripts/zm/_zm_utility;
+#using scripts/zm/_zm_weap_bouncingbetty;
+#using scripts/zm/_zm_weap_castle_rocketshield;
+#using scripts/zm/_zm_weap_cymbal_monkey;
+#using scripts/zm/_zm_weap_elemental_bow;
+#using scripts/zm/_zm_weap_elemental_bow_demongate;
+#using scripts/zm/_zm_weap_elemental_bow_rune_prison;
+#using scripts/zm/_zm_weap_elemental_bow_storm;
+#using scripts/zm/_zm_weap_elemental_bow_wolf_howl;
+#using scripts/zm/_zm_weap_gravityspikes;
+#using scripts/zm/_zm_weapons;
 #using scripts/zm/craftables/_zm_craft_shield;
 #using scripts/zm/craftables/_zm_craftables;
-#using scripts/shared/ai/mechz;
-#using scripts/shared/scene_shared;
-#using scripts/shared/visionset_mgr_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/clientfield_shared;
-#using scripts/shared/audio_shared;
-#using scripts/codescripts/struct;
+#using scripts/zm/zm_castle_amb;
+#using scripts/zm/zm_castle_craftables;
+#using scripts/zm/zm_castle_death_ray_trap;
+#using scripts/zm/zm_castle_ee;
+#using scripts/zm/zm_castle_ee_bossfight;
+#using scripts/zm/zm_castle_ee_side;
+#using scripts/zm/zm_castle_ffotd;
+#using scripts/zm/zm_castle_flingers;
+#using scripts/zm/zm_castle_fx;
+#using scripts/zm/zm_castle_low_grav;
+#using scripts/zm/zm_castle_pap_quest;
+#using scripts/zm/zm_castle_perks;
+#using scripts/zm/zm_castle_rocket_trap;
+#using scripts/zm/zm_castle_teleporter;
+#using scripts/zm/zm_castle_tram;
+#using scripts/zm/zm_castle_weap_quest;
+#using scripts/zm/zm_castle_weap_quest_upgrade;
 
 #namespace zm_castle;
 
@@ -82,7 +82,7 @@ function autoexec opt_in() {
 }
 
 // Namespace zm_castle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe3acf33f, Offset: 0x1738
 // Size: 0x27c
 function main() {
@@ -121,7 +121,7 @@ function main() {
 }
 
 // Namespace zm_castle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x25ab684f, Offset: 0x19c0
 // Size: 0x54
 function function_a81bfac6() {
@@ -132,7 +132,7 @@ function function_a81bfac6() {
 }
 
 // Namespace zm_castle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9d18d1d4, Offset: 0x1a20
 // Size: 0x34
 function include_weapons() {
@@ -141,7 +141,7 @@ function include_weapons() {
 }
 
 // Namespace zm_castle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b4f313a, Offset: 0x1a60
 // Size: 0x184
 function register_clientfields() {
@@ -154,7 +154,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_castle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xae742ad1, Offset: 0x1bf0
 // Size: 0x9c
 function function_893a7cdd() {
@@ -168,7 +168,7 @@ function function_893a7cdd() {
 }
 
 // Namespace zm_castle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x985cde5a, Offset: 0x1c98
 // Size: 0xe42
 function setup_personality_character_exerts() {
@@ -269,7 +269,7 @@ function setup_personality_character_exerts() {
 }
 
 // Namespace zm_castle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xf0e84355, Offset: 0x2ae8
 // Size: 0xe4
 function function_e9ccaf60(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -282,7 +282,7 @@ function function_e9ccaf60(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_castle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x72f91cdd, Offset: 0x2bd8
 // Size: 0x14c
 function snd_low_gravity_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -300,7 +300,7 @@ function snd_low_gravity_state(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_castle
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x47893ca4, Offset: 0x2d30
 // Size: 0x10e
 function castle_fog_bank_switch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

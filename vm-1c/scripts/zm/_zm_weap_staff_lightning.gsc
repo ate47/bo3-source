@@ -1,17 +1,17 @@
-#using scripts/zm/zm_tomb_utility;
-#using scripts/zm/_zm_weap_staff_common;
-#using scripts/zm/_zm_spawner;
-#using scripts/zm/_zm_score;
-#using scripts/zm/_zm_powerups;
-#using scripts/zm/_zm_net;
-#using scripts/zm/_zm_audio;
-#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/ai/zombie_shared;
-#using scripts/shared/util_shared;
-#using scripts/shared/system_shared;
-#using scripts/shared/flag_shared;
-#using scripts/shared/clientfield_shared;
+#using scripts/shared/ai/zombie_utility;
 #using scripts/shared/callbacks_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/system_shared;
+#using scripts/shared/util_shared;
+#using scripts/zm/_zm_audio;
+#using scripts/zm/_zm_net;
+#using scripts/zm/_zm_powerups;
+#using scripts/zm/_zm_score;
+#using scripts/zm/_zm_spawner;
+#using scripts/zm/_zm_weap_staff_common;
+#using scripts/zm/zm_tomb_utility;
 
 #namespace zm_weap_staff_lightning;
 
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa5ccbb62, Offset: 0x4c8
 // Size: 0x184
 function __init__() {
@@ -42,7 +42,7 @@ function __init__() {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7e4f50e1, Offset: 0x658
 // Size: 0x3c
 function onplayerspawned() {
@@ -52,13 +52,13 @@ function onplayerspawned() {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x33d3ff64, Offset: 0x6a0
 // Size: 0xf0
 function function_acd99507() {
     self endon(#"disconnect");
     while (true) {
-        e_projectile, str_weapon = self waittill(#"missile_fire");
+        self waittill(#"missile_fire", e_projectile, str_weapon);
         if (str_weapon.name == "staff_lightning_upgraded2" || str_weapon.name == "staff_lightning_upgraded3") {
             fire_angles = vectortoangles(self getweaponforwarddir());
             fire_origin = self getweaponmuzzlepoint();
@@ -68,7 +68,7 @@ function function_acd99507() {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa538717c, Offset: 0x798
 // Size: 0x2e
 function lightning_ball_wait(n_lifetime_after_move) {
@@ -79,7 +79,7 @@ function lightning_ball_wait(n_lifetime_after_move) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc03e7164, Offset: 0x7d0
 // Size: 0x36c
 function function_a8590978(var_177e8ec4, v_angles, str_weapon) {
@@ -123,7 +123,7 @@ function function_a8590978(var_177e8ec4, v_angles, str_weapon) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf2ccab03, Offset: 0xb48
 // Size: 0x118
 function staff_lightning_ball_kill_zombies(e_attacker) {
@@ -144,7 +144,7 @@ function staff_lightning_ball_kill_zombies(e_attacker) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe27d4559, Offset: 0xc68
 // Size: 0x122
 function staff_lightning_get_valid_targets(player, v_source) {
@@ -163,7 +163,7 @@ function staff_lightning_get_valid_targets(player, v_source) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6305d988, Offset: 0xd98
 // Size: 0x20
 function function_824c8a30(n_charge) {
@@ -176,7 +176,7 @@ function function_824c8a30(n_charge) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa261e509, Offset: 0xde0
 // Size: 0x72
 function function_fa6fe615(n_charge) {
@@ -196,7 +196,7 @@ function function_fa6fe615(n_charge) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa9c32486, Offset: 0xe60
 // Size: 0x30
 function function_c05b38ce(n_charge) {
@@ -212,7 +212,7 @@ function function_c05b38ce(n_charge) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb7e8382d, Offset: 0xeb8
 // Size: 0x6e
 function staff_lightning_is_target_valid(ai_zombie) {
@@ -229,7 +229,7 @@ function staff_lightning_is_target_valid(ai_zombie) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x5ffd488c, Offset: 0xf30
 // Size: 0x2ec
 function staff_lightning_ball_damage_over_time(e_source, e_target, e_attacker) {
@@ -273,7 +273,7 @@ function staff_lightning_ball_damage_over_time(e_source, e_target, e_attacker) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9dc306fd, Offset: 0x1228
 // Size: 0xbc
 function staff_lightning_arc_fx(e_source, ai_zombie) {
@@ -290,7 +290,7 @@ function staff_lightning_arc_fx(e_source, ai_zombie) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xfa1af81, Offset: 0x12f0
 // Size: 0xa4
 function function_39693792(player, str_weapon) {
@@ -315,7 +315,7 @@ function function_5cbd1b5a() {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xcd74b845, Offset: 0x13f0
 // Size: 0x6c
 function zombie_shock_eyes_network_safe(fx, entity, tag) {
@@ -327,7 +327,7 @@ function zombie_shock_eyes_network_safe(fx, entity, tag) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x543301e9, Offset: 0x1468
 // Size: 0x94
 function zombie_shock_eyes() {
@@ -342,7 +342,7 @@ function zombie_shock_eyes() {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0x881de97f, Offset: 0x1508
 // Size: 0xbe
 function function_953e408d(mod, hit_location, var_8a2b6fe5, player, amount, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -353,7 +353,7 @@ function function_953e408d(mod, hit_location, var_8a2b6fe5, player, amount, weap
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb1c4bf80, Offset: 0x15d0
 // Size: 0x60
 function function_e958695f(weapon) {
@@ -361,7 +361,7 @@ function function_e958695f(weapon) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8ed2b4c4, Offset: 0x1638
 // Size: 0x11c
 function function_7798d878(attacker) {
@@ -382,7 +382,7 @@ function function_7798d878(attacker) {
 }
 
 // Namespace zm_weap_staff_lightning
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf77813cd, Offset: 0x1760
 // Size: 0x118
 function stun_zombie() {
