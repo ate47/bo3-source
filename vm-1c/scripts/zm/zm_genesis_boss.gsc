@@ -47,7 +47,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x292cb0db, Offset: 0x5d8
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_boss", &__init__, &__main__, undefined);
 }
 

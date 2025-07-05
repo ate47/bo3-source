@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1bd3cb57, Offset: 0x208
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("flak_drone", &__init__, undefined, undefined);
 }
 

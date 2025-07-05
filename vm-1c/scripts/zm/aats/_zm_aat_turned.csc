@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf81d8648, Offset: 0x190
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_aat_turned", &__init__, undefined, undefined);
 }
 

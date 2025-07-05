@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xca70156d, Offset: 0x230
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("multilockap_guidance", &__init__, undefined, undefined);
 }
 

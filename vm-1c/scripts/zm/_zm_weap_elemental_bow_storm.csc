@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe5bf068, Offset: 0x538
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_storm", &__init__, undefined, undefined);
 }
 
@@ -48,7 +48,7 @@ function __init__() {
 // Checksum 0x6825c11e, Offset: 0x8f8
 // Size: 0x64
 function function_e73829fb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    self namespace_790026d5::function_3158b481(localclientnum, newval, "elem_storm_ambient_bow");
+    self zm_weap_elemental_bow::function_3158b481(localclientnum, newval, "elem_storm_ambient_bow");
 }
 
 // Namespace _zm_weap_elemental_bow_storm

@@ -32,7 +32,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbac84cb5, Offset: 0x708
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("mirg2000", &__init__, &__main__, undefined);
 }
 
@@ -41,12 +41,12 @@ function autoexec function_2dc19561() {
 // Checksum 0xfbc1135b, Offset: 0x750
 // Size: 0x1f4
 function __init__() {
-    level.var_5e75629a = getweapon("hero_mirg2000");
-    level.var_a367ea52 = getweapon("hero_mirg2000_1");
-    level.var_7d656fe9 = getweapon("hero_mirg2000_2");
-    level.var_a4052592 = getweapon("hero_mirg2000_upgraded");
-    level.var_5c210a9a = getweapon("hero_mirg2000_upgraded_1");
-    level.var_361e9031 = getweapon("hero_mirg2000_upgraded_2");
+    level.w_mirg2000 = getweapon("hero_mirg2000");
+    level.w_mirg2000_1 = getweapon("hero_mirg2000_1");
+    level.w_mirg2000_2 = getweapon("hero_mirg2000_2");
+    level.w_mirg2000_up = getweapon("hero_mirg2000_upgraded");
+    level.w_mirg2000_up_1 = getweapon("hero_mirg2000_upgraded_1");
+    level.w_mirg2000_up_2 = getweapon("hero_mirg2000_upgraded_2");
     clientfield::register("scriptmover", "plant_killer", 9000, getminbitcountfornum(4), "int");
     clientfield::register("vehicle", "mirg2000_spider_death_fx", 9000, 2, "int");
     clientfield::register("actor", "mirg2000_enemy_impact_fx", 9000, 2, "int");
@@ -87,32 +87,32 @@ function is_wonder_weapon(weapon, str_type) {
     }
     switch (str_type) {
     case "any":
-        if (weapon == level.var_5e75629a || weapon == level.var_a367ea52 || weapon == level.var_7d656fe9 || weapon == level.var_a4052592 || weapon == level.var_5c210a9a || weapon == level.var_361e9031) {
+        if (weapon == level.w_mirg2000 || weapon == level.w_mirg2000_1 || weapon == level.w_mirg2000_2 || weapon == level.w_mirg2000_up || weapon == level.w_mirg2000_up_1 || weapon == level.w_mirg2000_up_2) {
             return true;
         }
         break;
     case "default":
-        if (weapon == level.var_5e75629a || weapon == level.var_a367ea52 || weapon == level.var_7d656fe9) {
+        if (weapon == level.w_mirg2000 || weapon == level.w_mirg2000_1 || weapon == level.w_mirg2000_2) {
             return true;
         }
         break;
     case "default_charged_shot":
-        if (weapon == level.var_a367ea52 || weapon == level.var_7d656fe9) {
+        if (weapon == level.w_mirg2000_1 || weapon == level.w_mirg2000_2) {
             return true;
         }
         break;
     case "upgraded":
-        if (weapon == level.var_a4052592 || weapon == level.var_5c210a9a || weapon == level.var_361e9031) {
+        if (weapon == level.w_mirg2000_up || weapon == level.w_mirg2000_up_1 || weapon == level.w_mirg2000_up_2) {
             return true;
         }
         break;
     case "upgraded_charged_shot":
-        if (weapon == level.var_5c210a9a || weapon == level.var_361e9031) {
+        if (weapon == level.w_mirg2000_up_1 || weapon == level.w_mirg2000_up_2) {
             return true;
         }
         break;
     default:
-        if (weapon == level.var_5e75629a || weapon == level.var_a367ea52 || weapon == level.var_7d656fe9 || weapon == level.var_a4052592 || weapon == level.var_5c210a9a || weapon == level.var_361e9031) {
+        if (weapon == level.w_mirg2000 || weapon == level.w_mirg2000_1 || weapon == level.w_mirg2000_2 || weapon == level.w_mirg2000_up || weapon == level.w_mirg2000_up_1 || weapon == level.w_mirg2000_up_2) {
             return true;
         }
         break;
@@ -128,7 +128,7 @@ function function_a1fce678(var_2b568a63) {
     if (!isdefined(var_2b568a63)) {
         var_2b568a63 = 0;
     }
-    if (self hasweapon(level.var_a4052592)) {
+    if (self hasweapon(level.w_mirg2000_up)) {
         if (var_2b568a63) {
             if (self.chargeshotlevel > 2) {
                 n_range_sq = 22500;
@@ -170,7 +170,7 @@ function function_8734b840(v_start, v_end, n_range_sq, var_a8ed33a) {
 // Checksum 0x20d778ae, Offset: 0xdb0
 // Size: 0xb4
 function function_794992bd(player, v_pos) {
-    if (player hasweapon(level.var_a4052592)) {
+    if (player hasweapon(level.w_mirg2000_up)) {
         n_damage = 7000;
         var_a9fb62c6 = 2;
     } else {
@@ -359,7 +359,7 @@ function function_1e4094ac(v_position, var_d24bfa82) {
     if (isdefined(v_pos)) {
         var_31678178 = util::spawn_model("tag_origin", v_pos);
         var_31678178 endon(#"death");
-        if (self hasweapon(level.var_a4052592)) {
+        if (self hasweapon(level.w_mirg2000_up)) {
             var_a00b8053 = var_d24bfa82 + 1;
         } else {
             var_a00b8053 = var_d24bfa82 - 1;
@@ -509,7 +509,7 @@ function function_570d6f32(v_position, player) {
 function function_4a1cb794(player) {
     self endon(#"death");
     player endon(#"disconnect");
-    if (player hasweapon(level.var_a4052592)) {
+    if (player hasweapon(level.w_mirg2000_up)) {
         var_6d5757ae = 1;
     } else {
         var_6d5757ae = 0;
@@ -562,10 +562,10 @@ function function_4a1cb794(player) {
 function function_79504f13(ai_zombie, v_pos) {
     self endon(#"disconnect");
     ai_zombie endon(#"death");
-    if (self hasweapon(level.var_a4052592)) {
-        e_grenade = magicbullet(level.var_a4052592, v_pos, ai_zombie getcentroid());
+    if (self hasweapon(level.w_mirg2000_up)) {
+        e_grenade = magicbullet(level.w_mirg2000_up, v_pos, ai_zombie getcentroid());
     } else {
-        e_grenade = magicbullet(level.var_5e75629a, v_pos, ai_zombie getcentroid());
+        e_grenade = magicbullet(level.w_mirg2000, v_pos, ai_zombie getcentroid());
     }
     if (isdefined(e_grenade)) {
         e_grenade thread function_74a68c49(self, 1);
@@ -688,7 +688,7 @@ function function_d150c3fe(ai_zombie) {
             self thread function_3bc42e24(ai_zombie);
         }
         if (isdefined(ai_zombie.var_3940f450) && ai_zombie.var_3940f450) {
-            if (self hasweapon(level.var_a4052592)) {
+            if (self hasweapon(level.w_mirg2000_up)) {
                 ai_zombie clientfield::set("mirg2000_spider_death_fx", 2);
             } else {
                 ai_zombie clientfield::set("mirg2000_spider_death_fx", 1);

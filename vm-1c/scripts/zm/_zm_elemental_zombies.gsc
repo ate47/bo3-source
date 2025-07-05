@@ -27,7 +27,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1a2c8a6, Offset: 0x5b0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_elemental_zombie", &__init__, undefined, undefined);
 }
 

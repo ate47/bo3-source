@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x96bdbfe8, Offset: 0x380
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_nesting_dolls", &__init__, undefined, undefined);
 }
 

@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc6da96e3, Offset: 0x248
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("tomb_magicbox", &__init__, undefined, undefined);
 }
 

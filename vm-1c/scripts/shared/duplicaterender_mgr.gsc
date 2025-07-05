@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x25123d77, Offset: 0x138
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("duplicate_render", &__init__, undefined, undefined);
 }
 

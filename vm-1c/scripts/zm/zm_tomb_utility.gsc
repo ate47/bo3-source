@@ -2005,7 +2005,7 @@ function function_84442246(var_6c0518cd) {
             }
         }
     #/
-    if (!(isdefined(self.var_5fc3c5c7) && self.var_5fc3c5c7) && !self hasperk("specialty_widowswine")) {
+    if (!(isdefined(self.one_inch_punch_flag_has_been_init) && self.one_inch_punch_flag_has_been_init) && !self hasperk("specialty_widowswine")) {
         cur_weapon = self zm_utility::get_player_melee_weapon();
         var_d5fbf885 = getweapon("knife");
         self.var_27eb897c = 0;

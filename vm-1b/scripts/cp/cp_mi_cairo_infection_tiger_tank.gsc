@@ -25,7 +25,7 @@ class class_57d92933 {
 // Params 0, eflags: 0x2
 // Checksum 0x33d1e3af, Offset: 0x560
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("tiger_tank", &__init__, undefined, undefined);
 }
 

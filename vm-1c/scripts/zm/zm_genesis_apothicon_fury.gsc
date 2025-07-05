@@ -30,7 +30,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfb65af02, Offset: 0x5f8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_apothicon_fury", &__init__, undefined, undefined);
 }
 
@@ -78,7 +78,7 @@ function apothicon_fury_death() {
 // Params 3, eflags: 0x0
 // Checksum 0x77605070, Offset: 0x830
 // Size: 0x208
-function function_21bbe70d(v_origin, v_angles, var_8d71b2b8) {
+function spawn_apothicon_fury(v_origin, v_angles, var_8d71b2b8) {
     e_boss = spawnactor("spawner_zm_genesis_apothicon_fury", v_origin, v_angles, undefined, 1, 1);
     if (isdefined(e_boss)) {
         e_boss endon(#"death");
@@ -179,7 +179,7 @@ function function_16beb600(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd8
         var_8d71b2b8 = 0;
     }
     function_b55fb314(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd83, var_3988ba7b);
-    apothicon_fury = function_21bbe70d(var_13d4cd83, var_3988ba7b, var_8d71b2b8);
+    apothicon_fury = spawn_apothicon_fury(var_13d4cd83, var_3988ba7b, var_8d71b2b8);
     if (isdefined(apothicon_fury)) {
         return apothicon_fury;
     }
@@ -297,7 +297,7 @@ function private function_744725d0(cmd) {
         if (isdefined(queryresult) && queryresult.data.size > 0) {
             origin = queryresult.data[0].origin;
             angles = level.players[0].angles;
-            level thread function_21bbe70d(origin, angles, 1);
+            level thread spawn_apothicon_fury(origin, angles, 1);
         }
     } else if (cmd == "apothicon_fury_walk") {
         ais = getaiarchetypearray("apothicon_fury");

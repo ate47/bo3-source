@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6ef02cc3, Offset: 0x2a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("vortex", &__init__, undefined, undefined);
 }
 

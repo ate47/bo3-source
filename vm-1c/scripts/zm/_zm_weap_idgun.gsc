@@ -26,7 +26,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1fd0e74c, Offset: 0x2f8
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("idgun", &init, &main, undefined);
 }
 
@@ -35,7 +35,7 @@ function autoexec function_2dc19561() {
 // Checksum 0x3788b2ae, Offset: 0x340
 // Size: 0x44
 function init() {
-    callback::on_connect(&function_2bd571b9);
+    callback::on_connect(&watch_idgun_impact);
     zm::register_player_damage_callback(&function_b618ee82);
 }
 
@@ -98,7 +98,7 @@ function function_6fbe2b2c(v_vortex_origin) {
 // Params 0, eflags: 0x0
 // Checksum 0x24eef596, Offset: 0x580
 // Size: 0x170
-function function_2bd571b9() {
+function watch_idgun_impact() {
     self endon(#"disconnect");
     while (true) {
         self waittill(#"projectile_impact", weapon, position, radius, attacker, normal);

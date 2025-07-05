@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x15edfc, Offset: 0x128
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_aat_thunder_wall", &__init__, undefined, undefined);
 }
 

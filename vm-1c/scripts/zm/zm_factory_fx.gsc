@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4381e234, Offset: 0x778
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_factory_fx", &__init__, undefined, undefined);
 }
 

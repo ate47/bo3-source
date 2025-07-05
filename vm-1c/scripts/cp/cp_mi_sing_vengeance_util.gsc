@@ -38,7 +38,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xac6901d, Offset: 0xdc8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("enemy_highlight", &function_c7e2a7f7, undefined, undefined);
 }
 

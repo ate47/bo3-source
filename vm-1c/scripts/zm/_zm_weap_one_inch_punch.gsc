@@ -20,14 +20,14 @@
 function init() {
     clientfield::register("allplayers", "oneinchpunch_impact", 21000, 1, "int");
     clientfield::register("actor", "oneinchpunch_physics_launchragdoll", 21000, 1, "int");
-    level.var_653c9585 = getweapon("one_inch_punch");
-    level.var_4f241554 = getweapon("one_inch_punch_fire");
-    level.var_e27d2514 = getweapon("one_inch_punch_air");
-    level.var_590c486e = getweapon("one_inch_punch_lightning");
-    level.var_af96dd85 = getweapon("one_inch_punch_ice");
-    level.var_75ef78a0 = getweapon("one_inch_punch_upgraded");
-    level.var_9d7b544c = getweapon("zombie_one_inch_punch_flourish");
-    level.var_ee516197 = getweapon("zombie_one_inch_punch_upgrade_flourish");
+    level.w_one_inch_punch = getweapon("one_inch_punch");
+    level.w_one_inch_punch_fire = getweapon("one_inch_punch_fire");
+    level.w_one_inch_punch_air = getweapon("one_inch_punch_air");
+    level.w_one_inch_punch_lightning = getweapon("one_inch_punch_lightning");
+    level.w_one_inch_punch_ice = getweapon("one_inch_punch_ice");
+    level.w_one_inch_punch_upgraded = getweapon("one_inch_punch_upgraded");
+    level.w_one_inch_punch_flourish = getweapon("zombie_one_inch_punch_flourish");
+    level.w_one_inch_punch_flourish_upgraded = getweapon("zombie_one_inch_punch_upgrade_flourish");
     level._effect["oneinch_impact"] = "dlc5/tomb/fx_one_inch_punch_impact";
     level._effect["punch_knockdown_ground"] = "dlc5/zmb_weapon/fx_thundergun_knockback_ground";
     callback::on_connect(&function_d4260e2a);
@@ -57,49 +57,49 @@ function function_82aee9e9() {
 function function_3898d995() {
     self endon(#"disconnect");
     self endon(#"hash_9f6b45c1");
-    if (!(isdefined(self.var_5fc3c5c7) && self.var_5fc3c5c7)) {
+    if (!(isdefined(self.one_inch_punch_flag_has_been_init) && self.one_inch_punch_flag_has_been_init)) {
         self flag::init("melee_punch_cooldown");
     }
-    self.var_5fc3c5c7 = 1;
+    self.one_inch_punch_flag_has_been_init = 1;
     self.var_82aee9e9 = &function_82aee9e9;
     current_melee_weapon = self zm_utility::get_player_melee_weapon();
     self takeweapon(current_melee_weapon);
     if (isdefined(self.var_21412003) && self.var_21412003) {
         w_weapon = self getcurrentweapon();
         self zm_utility::disable_player_move_states(1);
-        self giveweapon(level.var_9d7b544c);
-        self switchtoweapon(level.var_9d7b544c);
+        self giveweapon(level.w_one_inch_punch_flourish);
+        self switchtoweapon(level.w_one_inch_punch_flourish);
         self util::waittill_any("player_downed", "weapon_change_complete");
         self switchtoweapon(w_weapon);
         self zm_utility::enable_player_move_states();
-        self takeweapon(level.var_9d7b544c);
-        if (self.var_b37dabd2 == "air") {
-            self giveweapon(level.var_e27d2514);
-            self zm_utility::set_player_melee_weapon(level.var_e27d2514);
-        } else if (self.var_b37dabd2 == "fire") {
-            self giveweapon(level.var_4f241554);
-            self zm_utility::set_player_melee_weapon(level.var_4f241554);
-        } else if (self.var_b37dabd2 == "ice") {
-            self giveweapon(level.var_af96dd85);
-            self zm_utility::set_player_melee_weapon(level.var_af96dd85);
-        } else if (self.var_b37dabd2 == "lightning") {
-            self giveweapon(level.var_590c486e);
-            self zm_utility::set_player_melee_weapon(level.var_590c486e);
+        self takeweapon(level.w_one_inch_punch_flourish);
+        if (self.str_punch_element == "air") {
+            self giveweapon(level.w_one_inch_punch_air);
+            self zm_utility::set_player_melee_weapon(level.w_one_inch_punch_air);
+        } else if (self.str_punch_element == "fire") {
+            self giveweapon(level.w_one_inch_punch_fire);
+            self zm_utility::set_player_melee_weapon(level.w_one_inch_punch_fire);
+        } else if (self.str_punch_element == "ice") {
+            self giveweapon(level.w_one_inch_punch_ice);
+            self zm_utility::set_player_melee_weapon(level.w_one_inch_punch_ice);
+        } else if (self.str_punch_element == "lightning") {
+            self giveweapon(level.w_one_inch_punch_lightning);
+            self zm_utility::set_player_melee_weapon(level.w_one_inch_punch_lightning);
         } else {
-            self giveweapon(level.var_75ef78a0);
-            self zm_utility::set_player_melee_weapon(level.var_75ef78a0);
+            self giveweapon(level.w_one_inch_punch_upgraded);
+            self zm_utility::set_player_melee_weapon(level.w_one_inch_punch_upgraded);
         }
     } else {
         w_weapon = self getcurrentweapon();
         self zm_utility::disable_player_move_states(1);
-        self giveweapon(level.var_9d7b544c);
-        self switchtoweapon(level.var_9d7b544c);
+        self giveweapon(level.w_one_inch_punch_flourish);
+        self switchtoweapon(level.w_one_inch_punch_flourish);
         self util::waittill_any("player_downed", "weapon_change_complete");
         self switchtoweapon(w_weapon);
         self zm_utility::enable_player_move_states();
-        self takeweapon(level.var_9d7b544c);
-        self giveweapon(level.var_653c9585);
-        self zm_utility::set_player_melee_weapon(level.var_653c9585);
+        self takeweapon(level.w_one_inch_punch_flourish);
+        self giveweapon(level.w_one_inch_punch);
+        self zm_utility::set_player_melee_weapon(level.w_one_inch_punch);
         self thread zm_audio::create_and_play_dialog("perk", "one_inch");
     }
     self thread function_3208147f();
@@ -129,7 +129,7 @@ function function_3208147f() {
         self clientfield::set("oneinchpunch_impact", 0);
         var_fdf687e6 = anglestoforward(self getplayerangles());
         var_86ec6694 = get_2d_yaw((0, 0, 0), var_fdf687e6);
-        if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.var_b37dabd2) && self.var_b37dabd2 == "air") {
+        if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.str_punch_element) && self.str_punch_element == "air") {
             var_cebbb65d *= 2;
         }
         a_zombies = getaispeciesarray(level.zombie_team, "all");
@@ -171,7 +171,7 @@ function function_a8ec9424(zombie, var_86ec6694) {
 // Checksum 0x441d9c5d, Offset: 0x10a8
 // Size: 0x20
 function function_3df205a3() {
-    return isdefined(self.damageweapon) && self.damageweapon == level.var_653c9585;
+    return isdefined(self.damageweapon) && self.damageweapon == level.w_one_inch_punch;
 }
 
 // Namespace _zm_weap_one_inch_punch
@@ -213,8 +213,8 @@ function function_e3515922(ai_zombie, n_mod) {
             if (n_damage >= ai_zombie.health) {
                 self thread function_bde291a1(ai_zombie);
                 self zm_utility::do_player_general_vox("kill", "one_inch_punch");
-                if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.var_b37dabd2)) {
-                    switch (self.var_b37dabd2) {
+                if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.str_punch_element)) {
+                    switch (self.str_punch_element) {
                     case "fire":
                         ai_zombie clientfield::set("fire_char_fx", 1);
                         break;
@@ -235,8 +235,8 @@ function function_e3515922(ai_zombie, n_mod) {
                 }
             } else {
                 self zm_score::player_add_points("damage_light");
-                if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.var_b37dabd2)) {
-                    switch (self.var_b37dabd2) {
+                if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.str_punch_element)) {
+                    switch (self.str_punch_element) {
                     case "fire":
                         ai_zombie clientfield::set("fire_char_fx", 1);
                         break;
@@ -288,7 +288,7 @@ function function_d4260e2a() {
     self endon(#"disconnect");
     while (true) {
         self waittill(#"bled_out");
-        self.var_5fc3c5c7 = 0;
+        self.one_inch_punch_flag_has_been_init = 0;
         self.var_82aee9e9 = undefined;
         if (self flag::exists("melee_punch_cooldown")) {
             self flag::delete("melee_punch_cooldown");

@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xdff43c91, Offset: 0x2f0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("gadget_resurrect", &__init__, undefined, undefined);
 }
 

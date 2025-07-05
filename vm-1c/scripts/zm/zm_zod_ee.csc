@@ -120,7 +120,7 @@ class class_b454dc63 {
 // Params 0, eflags: 0x2
 // Checksum 0x1604008a, Offset: 0x1168
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_ee", &__init__, undefined, undefined);
 }
 

@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x64c12f86, Offset: 0x1728
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("scoreevents", &__init__, undefined, undefined);
 }
 

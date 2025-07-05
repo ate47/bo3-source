@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa7bf911f, Offset: 0x2a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_wasp", &__init__, undefined, undefined);
 }
 

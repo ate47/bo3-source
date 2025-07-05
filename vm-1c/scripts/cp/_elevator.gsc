@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x484bd289, Offset: 0x2d8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("elevator", &__init__, undefined, undefined);
 }
 

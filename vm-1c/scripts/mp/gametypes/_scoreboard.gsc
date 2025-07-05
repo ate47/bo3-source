@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf1b52ed3, Offset: 0x130
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("scoreboard", &__init__, undefined, undefined);
 }
 

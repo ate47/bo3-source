@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x115d0a1f, Offset: 0x130
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("lightninggun", &__init__, undefined, undefined);
 }
 

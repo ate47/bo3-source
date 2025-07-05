@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x12975d65, Offset: 0x478
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_shrink_ray", &__init__, &__main__, undefined);
 }
 

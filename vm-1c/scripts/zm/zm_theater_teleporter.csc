@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbb6d6fbd, Offset: 0x380
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_theater_teleporter", &__init__, undefined, undefined);
 }
 

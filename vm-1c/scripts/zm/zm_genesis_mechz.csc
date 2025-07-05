@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf7c34f46, Offset: 0x2b0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_mechz", &__init__, undefined, undefined);
 }
 

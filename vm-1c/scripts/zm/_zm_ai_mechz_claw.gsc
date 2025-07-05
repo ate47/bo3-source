@@ -44,7 +44,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9ec616a5, Offset: 0x8a0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_mechz_claw", &__init__, &__main__, undefined);
 }
 

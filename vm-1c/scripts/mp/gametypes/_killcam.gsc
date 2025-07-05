@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5be83ac7, Offset: 0x4f0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("killcam", &__init__, undefined, undefined);
 }
 

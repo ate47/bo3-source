@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd24e8fb0, Offset: 0x3d8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("bot", &__init__, undefined, undefined);
 }
 

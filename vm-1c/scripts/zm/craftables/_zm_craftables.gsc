@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x66117b17, Offset: 0x850
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_craftables", &__init__, &__main__, undefined);
 }
 

@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe932100, Offset: 0x638
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_wolf_howl", &__init__, undefined, undefined);
 }
 
@@ -54,7 +54,7 @@ function __init__() {
 // Checksum 0xfc42ec1d, Offset: 0xb00
 // Size: 0x64
 function function_cb5344d7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    self namespace_790026d5::function_3158b481(localclientnum, newval, "wolf_howl_ambient_bow");
+    self zm_weap_elemental_bow::function_3158b481(localclientnum, newval, "wolf_howl_ambient_bow");
 }
 
 // Namespace _zm_weap_elemental_bow_wolf_howl

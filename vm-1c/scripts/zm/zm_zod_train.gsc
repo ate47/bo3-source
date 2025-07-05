@@ -1513,7 +1513,7 @@ class class_df2b89fb {
 // Params 0, eflags: 0x2
 // Checksum 0xbdd9c4ef, Offset: 0xce0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_train", &__init__, undefined, undefined);
 }
 

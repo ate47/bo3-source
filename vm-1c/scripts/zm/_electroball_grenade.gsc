@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xef440ea4, Offset: 0x460
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("electroball_grenade", &__init__, undefined, undefined);
 }
 

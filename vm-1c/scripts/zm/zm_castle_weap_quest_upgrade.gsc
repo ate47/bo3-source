@@ -37,7 +37,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbf54efbd, Offset: 0x2948
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_castle_weap_quest_upgrade", &__init__, &__main__, undefined);
 }
 
@@ -997,7 +997,7 @@ function function_1ae3933d(var_eae04066, s_fireplace) {
             level util::delay_notify(2, "rune_prison_postfx_end");
             return undefined;
         }
-        var_a7b8686c = level.var_c62829c7 namespace_790026d5::function_866906f(v_position, "elemental_bow_rune_prison", e_projectile, 32);
+        var_a7b8686c = level.var_c62829c7 zm_weap_elemental_bow::function_866906f(v_position, "elemental_bow_rune_prison", e_projectile, 32);
         if (isdefined(var_a7b8686c) && !zm_utility::check_point_in_enabled_zone(var_a7b8686c)) {
             var_a7b8686c = undefined;
         }

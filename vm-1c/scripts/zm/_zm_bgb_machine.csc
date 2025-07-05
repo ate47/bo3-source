@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe3ea3e58, Offset: 0x980
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("bgb_machine", &__init__, undefined, undefined);
 }
 

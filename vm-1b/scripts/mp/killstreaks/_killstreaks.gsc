@@ -60,7 +60,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8795ca45, Offset: 0xf08
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("killstreaks", &__init__, undefined, undefined);
 }
 

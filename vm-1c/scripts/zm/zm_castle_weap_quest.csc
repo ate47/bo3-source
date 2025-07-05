@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x62117a76, Offset: 0x878
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_castle_weap_quest", &__init__, undefined, undefined);
 }
 

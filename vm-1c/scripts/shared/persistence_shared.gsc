@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x49c3934f, Offset: 0x2e0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("persistence", &__init__, undefined, undefined);
 }
 

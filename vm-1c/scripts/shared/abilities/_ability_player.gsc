@@ -54,7 +54,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x15dada27, Offset: 0xba8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("ability_player", &__init__, undefined, undefined);
 }
 

@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6f82764f, Offset: 0x488
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("incendiary_grenade", &init_shared, undefined, undefined);
 }
 

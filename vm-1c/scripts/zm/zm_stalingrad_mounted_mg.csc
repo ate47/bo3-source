@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8989e3b4, Offset: 0x190
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_stalingrad_mounted_mg", &__init__, undefined, undefined);
 }
 

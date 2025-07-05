@@ -276,7 +276,7 @@ class class_d86d3a6 {
 // Params 0, eflags: 0x2
 // Checksum 0x2df759d0, Offset: 0x180
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("pda_hack", &__init__, undefined, undefined);
 }
 

@@ -27,7 +27,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4f5f348b, Offset: 0x5a0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_demongate", &__init__, &__main__, undefined);
 }
 
@@ -36,9 +36,9 @@ function autoexec function_2dc19561() {
 // Checksum 0x4c9c1d0a, Offset: 0x5e8
 // Size: 0x21c
 function __init__() {
-    level.var_edf1e590 = getweapon("elemental_bow_demongate");
-    level.var_e106fba5 = getweapon("elemental_bow_demongate4");
-    level.var_ecd0c077 = [];
+    level.w_bow_demongate = getweapon("elemental_bow_demongate");
+    level.w_bow_demongate_charged = getweapon("elemental_bow_demongate4");
+    level.a_demongate_chompers = [];
     clientfield::register("toplayer", "elemental_bow_demongate" + "_ambient_bow_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_demongate" + "_arrow_impact_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_demongate4" + "_arrow_impact_fx", 5000, 1, "int");
@@ -63,9 +63,9 @@ function __main__() {
 // Checksum 0x215a5e0c, Offset: 0x840
 // Size: 0x7c
 function function_71c07c9d() {
-    self thread namespace_790026d5::function_982419bb("elemental_bow_demongate");
-    self thread namespace_790026d5::function_ececa597("elemental_bow_demongate", "elemental_bow_demongate4");
-    self thread namespace_790026d5::function_7bc6b9d("elemental_bow_demongate", "elemental_bow_demongate4", &function_7e0efd7);
+    self thread zm_weap_elemental_bow::function_982419bb("elemental_bow_demongate");
+    self thread zm_weap_elemental_bow::function_ececa597("elemental_bow_demongate", "elemental_bow_demongate4");
+    self thread zm_weap_elemental_bow::function_7bc6b9d("elemental_bow_demongate", "elemental_bow_demongate4", &function_7e0efd7);
 }
 
 // Namespace _zm_weap_elemental_bow_demongate
@@ -115,7 +115,7 @@ function function_19575106(weapon, position, attacker, normal) {
     var_e1784c2b = util::spawn_model("tag_origin", position, var_884470ed);
     var_e1784c2b clientfield::set("demongate_portal_fx", 1);
     var_e1784c2b.var_a5e3922a = 1;
-    radiusdamage(position, 96, level.zombie_health, level.zombie_health, self, "MOD_UNKNOWN", level.var_e106fba5);
+    radiusdamage(position, 96, level.zombie_health, level.zombie_health, self, "MOD_UNKNOWN", level.w_bow_demongate_charged);
     wait 0.25;
     var_e1784c2b thread function_292e5297();
     if (getdvarint("splitscreen_playerCount") > 2) {
@@ -123,7 +123,7 @@ function function_19575106(weapon, position, attacker, normal) {
     } else {
         var_76d7100b = 2 * level.zombie_health;
     }
-    if (level.var_ecd0c077.size > 12) {
+    if (level.a_demongate_chompers.size > 12) {
         var_33efb6fa = 2;
     } else {
         var_33efb6fa = int((zombie_utility::get_current_zombie_count() + level.zombie_total) * level.zombie_health / var_76d7100b);
@@ -219,9 +219,9 @@ function function_a9eddc64(position, v_angles, n_count) {
     var_7119a95d.var_603f1f19 = 1;
     var_7119a95d thread function_1d3c583d();
     var_b194ff34 = 0;
-    var_5f2cce52 = level.var_ecd0c077.size - 12;
+    var_5f2cce52 = level.a_demongate_chompers.size - 12;
     if (var_5f2cce52 > 0) {
-        foreach (var_c7cc4fbd in level.var_ecd0c077) {
+        foreach (var_c7cc4fbd in level.a_demongate_chompers) {
             if (!var_c7cc4fbd flag::get("chomper_attacking") && !(isdefined(var_c7cc4fbd.var_e3146903) && var_c7cc4fbd.var_e3146903)) {
                 var_c7cc4fbd.n_timer = 3;
                 var_b194ff34++;
@@ -231,12 +231,12 @@ function function_a9eddc64(position, v_angles, n_count) {
             }
         }
     }
-    if (!isdefined(level.var_ecd0c077)) {
-        level.var_ecd0c077 = [];
-    } else if (!isarray(level.var_ecd0c077)) {
-        level.var_ecd0c077 = array(level.var_ecd0c077);
+    if (!isdefined(level.a_demongate_chompers)) {
+        level.a_demongate_chompers = [];
+    } else if (!isarray(level.a_demongate_chompers)) {
+        level.a_demongate_chompers = array(level.a_demongate_chompers);
     }
-    level.var_ecd0c077[level.var_ecd0c077.size] = var_7119a95d;
+    level.a_demongate_chompers[level.a_demongate_chompers.size] = var_7119a95d;
     return var_7119a95d;
 }
 
@@ -261,7 +261,7 @@ function function_308e6c6f() {
         self clientfield::set("demongate_chomper_fx", 0);
         wait 3;
         self notify(#"hash_16664ab4");
-        level.var_ecd0c077 = array::exclude(level.var_ecd0c077, self);
+        level.a_demongate_chompers = array::exclude(level.a_demongate_chompers, self);
         self delete();
     }
 }
@@ -390,7 +390,7 @@ function function_f9dd2ee2(e_player) {
 function function_b6e7ec91(e_player) {
     var_c32fcb8f = self.target_enemy.health;
     self function_5dee133f();
-    if (namespace_790026d5::function_5aec3adc(self.target_enemy)) {
+    if (zm_weap_elemental_bow::function_5aec3adc(self.target_enemy)) {
         var_aad66aa4 = randomintrange(1, 7);
         var_7364b0dd = self.target_enemy.missinglegs;
         self.target_enemy.var_98056717 = 1;
@@ -583,7 +583,7 @@ function function_67903a83(e_player) {
     } else {
         var_38fe557 = undefined;
     }
-    e_target dodamage(n_damage, e_target.origin, var_38fe557, var_38fe557, undefined, "MOD_UNKNOWN", 0, level.var_edf1e590);
+    e_target dodamage(n_damage, e_target.origin, var_38fe557, var_38fe557, undefined, "MOD_UNKNOWN", 0, level.w_bow_demongate);
     gibserverutils::gibhead(e_target);
 }
 
@@ -604,7 +604,7 @@ function function_3f57ba41(e_player) {
     } else {
         var_38fe557 = undefined;
     }
-    e_target dodamage(n_damage, e_target.origin, var_38fe557, var_38fe557, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_edf1e590);
+    e_target dodamage(n_damage, e_target.origin, var_38fe557, var_38fe557, undefined, "MOD_PROJECTILE_SPLASH", 0, level.w_bow_demongate);
     self waittill(#"hash_368634cd");
     e_target.var_bc9b5fbd = 0;
     e_target.var_98056717 = 0;
@@ -629,7 +629,7 @@ function function_99d2c8aa(e_player) {
     }
     a_ai_enemies = getaiteamarray(level.zombie_team);
     var_237d778f = arraysortclosest(a_ai_enemies, var_51b6a540, a_ai_enemies.size, 0, var_6f3820ea);
-    var_237d778f = array::filter(var_237d778f, 0, &namespace_790026d5::function_5aec3adc);
+    var_237d778f = array::filter(var_237d778f, 0, &zm_weap_elemental_bow::function_5aec3adc);
     var_237d778f = array::filter(var_237d778f, 0, &function_c994aef0, self);
     if (var_237d778f.size) {
         var_9183256c = var_237d778f[0];

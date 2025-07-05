@@ -39,7 +39,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcc01b180, Offset: 0x9f8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_shadowman", &__init__, undefined, undefined);
 }
 

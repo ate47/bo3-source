@@ -28,7 +28,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7aff6e3c, Offset: 0x600
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_stalingrad_audio", &__init__, undefined, undefined);
 }
 

@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4741742b, Offset: 0x260
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_burned_out", &__init__, undefined, "bgb");
 }
 

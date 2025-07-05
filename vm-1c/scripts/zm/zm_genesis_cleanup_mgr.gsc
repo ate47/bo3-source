@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x432acfad, Offset: 0x2b0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("genesis_cleanup", &__init__, &__main__, undefined);
 }
 

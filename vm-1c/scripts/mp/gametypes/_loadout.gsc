@@ -29,7 +29,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa024a300, Offset: 0xe08
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("loadout", &__init__, undefined, undefined);
 }
 

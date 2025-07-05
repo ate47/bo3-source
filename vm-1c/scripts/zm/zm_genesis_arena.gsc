@@ -749,7 +749,7 @@ class class_d90687be {
 // Params 0, eflags: 0x2
 // Checksum 0xbc2b76ac, Offset: 0x1e78
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_arena", &__init__, &__main__, undefined);
 }
 

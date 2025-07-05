@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xda4f7bfd, Offset: 0x488
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_staff_lightning", &__init__, undefined, undefined);
 }
 

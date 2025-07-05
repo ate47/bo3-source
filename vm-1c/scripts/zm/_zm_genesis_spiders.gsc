@@ -41,7 +41,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x478ddf65, Offset: 0x838
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_spiders", &__init__, &__main__, undefined);
 }
 
@@ -298,7 +298,7 @@ function function_7609fd9() {
         if (!(isdefined(self.deathpoints_already_given) && self.deathpoints_already_given)) {
             e_attacker zm_score::player_add_points("death_spider");
         }
-        if (isdefined(self.var_9ff8b6fb) && self.var_9ff8b6fb) {
+        if (isdefined(self.riotshield_death) && self.riotshield_death) {
             level notify(#"hash_92ad8590", e_attacker);
         }
         if (isdefined(level.hero_power_update)) {

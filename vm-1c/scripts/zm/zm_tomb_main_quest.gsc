@@ -1099,7 +1099,7 @@ function function_b57a0484(einflictor, attacker, idamage, smeansofdeath, sweapon
         return;
     }
     var_41666ff0 = 9000000;
-    if (isplayer(attacker) || sweapon == level.var_653c9585) {
+    if (isplayer(attacker) || sweapon == level.w_one_inch_punch) {
         if (!level flag::get("fire_puzzle_1_complete")) {
             zm_tomb_quest_fire::function_6cc4ff94(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime);
         }

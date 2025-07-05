@@ -25,7 +25,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x781be6ac, Offset: 0x570
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_equip_riotshield", &__init__, &__main__, undefined);
 }
 
@@ -199,19 +199,19 @@ function player_damage_shield(idamage, bheld, fromcode, smod) {
     }
     shieldhealth = damagemax;
     shielddamage = idamage;
-    var_9353b68a = 0;
+    rumbled = 0;
     if (fromcode) {
         shielddamage = 0;
     }
     shieldhealth = self damageriotshield(shielddamage);
     if (shieldhealth <= 0) {
-        if (!var_9353b68a) {
+        if (!rumbled) {
             self playrumbleonentity("damage_heavy");
             earthquake(1, 0.75, self.origin, 100);
         }
         self thread player_take_riotshield();
     } else {
-        if (!var_9353b68a) {
+        if (!rumbled) {
             self playrumbleonentity("damage_light");
             earthquake(0.5, 0.5, self.origin, 100);
         }
@@ -276,7 +276,7 @@ function riotshield_fling_zombie(player, fling_vec, index) {
     damage = 2500;
     self dodamage(damage, player.origin, player, player, "", "MOD_IMPACT");
     if (self.health < 1) {
-        self.var_9ff8b6fb = 1;
+        self.riotshield_death = 1;
         self startragdoll(1);
         self launchragdoll(fling_vec);
     }
@@ -310,8 +310,8 @@ function riotshield_knockdown_zombie(player, gib) {
     if (!isdefined(self) || !isalive(self)) {
         return;
     }
-    if (isdefined(self.var_7ee63f72)) {
-        self [[ self.var_7ee63f72 ]](player, gib);
+    if (isdefined(self.riotshield_knockdown_func)) {
+        self [[ self.riotshield_knockdown_func ]](player, gib);
     } else {
         self zombie_knockdown(player, gib);
     }

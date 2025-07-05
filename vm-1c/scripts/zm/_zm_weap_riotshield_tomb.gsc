@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3bc626a9, Offset: 0x230
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_tomb_shield", &__init__, &__main__, undefined);
 }
 

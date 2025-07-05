@@ -33,7 +33,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xed9a1d98, Offset: 0xb70
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("ramses_util", &__init__, undefined, undefined);
 }
 

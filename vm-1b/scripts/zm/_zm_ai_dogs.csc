@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xee03e876, Offset: 0x168
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_dogs", &__init__, undefined, undefined);
 }
 

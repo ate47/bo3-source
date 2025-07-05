@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x73d255ae, Offset: 0x6b0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("training_sim", &__init__, undefined, undefined);
 }
 

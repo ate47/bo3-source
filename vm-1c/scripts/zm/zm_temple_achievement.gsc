@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x85d44949, Offset: 0x1a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_temple_achievement", &__init__, undefined, undefined);
 }
 

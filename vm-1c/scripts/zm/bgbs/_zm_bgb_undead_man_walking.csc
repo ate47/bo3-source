@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xba2db1d1, Offset: 0x150
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_undead_man_walking", &__init__, undefined, undefined);
 }
 

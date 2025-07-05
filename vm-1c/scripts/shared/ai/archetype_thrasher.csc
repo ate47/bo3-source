@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb33a4207, Offset: 0x608
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("thrasher", &__init__, undefined, undefined);
 }
 

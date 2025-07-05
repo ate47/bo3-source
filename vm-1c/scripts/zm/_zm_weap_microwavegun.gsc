@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x85f96191, Offset: 0x650
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_microwavegun", &__init__, undefined, undefined);
 }
 
@@ -47,10 +47,10 @@ function __init__() {
     animationstatenetwork::registernotetrackhandlerfunction("explode", &function_f8d8850f);
     level thread function_e862b441();
     level.var_f5376ce = [];
-    level.var_12fcda98 = getweapon("microwavegun");
-    level.var_6ae86bb = getweapon("microwavegun_upgraded");
-    level.var_9c43352b = getweapon("microwavegundw");
-    level.var_5736548e = getweapon("microwavegundw_upgraded");
+    level.w_microwavegun = getweapon("microwavegun");
+    level.w_microwavegun_upgraded = getweapon("microwavegun_upgraded");
+    level.w_microwavegundw = getweapon("microwavegundw");
+    level.w_microwavegundw_upgraded = getweapon("microwavegundw_upgraded");
     callback::on_spawned(&on_player_spawned);
 }
 
@@ -73,13 +73,13 @@ function function_8f95fde5() {
     while (true) {
         self waittill(#"weapon_give", weapon);
         weapon = zm_weapons::get_nonalternate_weapon(weapon);
-        if (weapon == level.var_9c43352b || weapon == level.var_5736548e) {
+        if (weapon == level.w_microwavegundw || weapon == level.w_microwavegundw_upgraded) {
             self clientfield::set_player_uimodel("hudItems.showDpadLeft_WaveGun", 1);
             self.var_59dcbbd4 = zm_weapons::is_weapon_upgraded(weapon);
             self thread function_1402f75f();
             continue;
         }
-        if (!self zm_weapons::has_weapon_or_upgrade(level.var_9c43352b)) {
+        if (!self zm_weapons::has_weapon_or_upgrade(level.w_microwavegundw)) {
             self clientfield::set_player_uimodel("hudItems.showDpadLeft_WaveGun", 0);
             self clientfield::set_player_uimodel("hudItems.dpadLeftAmmo", 0);
             self notify(#"hash_e3517683");
@@ -101,9 +101,9 @@ function function_1402f75f() {
     while (true) {
         if (isdefined(self.var_59dcbbd4)) {
             if (self.var_59dcbbd4) {
-                ammocount = self getammocount(level.var_6ae86bb);
+                ammocount = self getammocount(level.w_microwavegun_upgraded);
             } else {
-                ammocount = self getammocount(level.var_12fcda98);
+                ammocount = self getammocount(level.w_microwavegun);
             }
             self clientfield::set_player_uimodel("hudItems.dpadLeftAmmo", ammocount);
         } else {
@@ -150,8 +150,8 @@ function function_4717127f() {
     for (;;) {
         self waittill(#"weapon_fired");
         currentweapon = self getcurrentweapon();
-        if (currentweapon == level.var_12fcda98 || currentweapon == level.var_6ae86bb) {
-            self thread function_50d51913(currentweapon == level.var_6ae86bb);
+        if (currentweapon == level.w_microwavegun || currentweapon == level.w_microwavegun_upgraded) {
+            self thread function_50d51913(currentweapon == level.w_microwavegun_upgraded);
         }
     }
 }
@@ -499,7 +499,7 @@ function function_760c6a2f() {
 // Checksum 0xf1972cee, Offset: 0x1f60
 // Size: 0x5c
 function function_c2925d0d() {
-    return self.damagemod != "MOD_GRENADE" && (self.damageweapon == level.var_12fcda98 || isdefined(self.damageweapon) && self.damageweapon == level.var_6ae86bb) && self.damagemod != "MOD_GRENADE_SPLASH";
+    return self.damagemod != "MOD_GRENADE" && (self.damageweapon == level.w_microwavegun || isdefined(self.damageweapon) && self.damageweapon == level.w_microwavegun_upgraded) && self.damagemod != "MOD_GRENADE_SPLASH";
 }
 
 // Namespace zm_weap_microwavegun
@@ -522,7 +522,7 @@ function function_972820f5() {
         if (!isdefined(result)) {
             continue;
         }
-        if ((result == "weapon_change" || result == "grenade_fire") && self getcurrentweapon() == level.var_12fcda98) {
+        if ((result == "weapon_change" || result == "grenade_fire") && self getcurrentweapon() == level.w_microwavegun) {
             self playloopsound("tesla_idle", 0.25);
             continue;
         }

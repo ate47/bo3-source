@@ -40,7 +40,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6df8f0e0, Offset: 0x1a18
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zurich_util", &__init__, undefined, undefined);
 }
 

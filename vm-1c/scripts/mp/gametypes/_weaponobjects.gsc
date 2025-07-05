@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x37a848ac, Offset: 0x1c8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("weaponobjects", &__init__, undefined, undefined);
 }
 

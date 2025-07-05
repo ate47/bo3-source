@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf8a69f56, Offset: 0x1b8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_staff", &__init__, undefined, undefined);
 }
 

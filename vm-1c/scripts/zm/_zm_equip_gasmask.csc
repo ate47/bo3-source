@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x712e7161, Offset: 0x1d8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_equip_gasmask", &__init__, undefined, undefined);
 }
 

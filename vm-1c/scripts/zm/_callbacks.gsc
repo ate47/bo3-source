@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8a9e0809, Offset: 0x1e8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("callback", &__init__, undefined, undefined);
 }
 

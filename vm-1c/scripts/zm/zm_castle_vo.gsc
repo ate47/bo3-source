@@ -28,7 +28,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xdc1a4324, Offset: 0x1998
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_castle_vo", &__init__, undefined, undefined);
 }
 
@@ -1507,7 +1507,7 @@ function function_2f2899c1(e_attacker) {
         return;
     }
     if (issubstr(self.damageweapon.name, "elemental_bow")) {
-        var_7cc997ac = namespace_790026d5::function_1796e73(self.damageweapon.name);
+        var_7cc997ac = zm_weap_elemental_bow::function_1796e73(self.damageweapon.name);
         switch (var_7cc997ac) {
         case "elemental_bow":
         case "elemental_bow4":
@@ -1519,7 +1519,7 @@ function function_2f2899c1(e_attacker) {
         case "elemental_bow_demongate":
         case "elemental_bow_demongate4":
             var_25c1c42e = "demongate_";
-            if (isdefined(level.var_ecd0c077) && level.var_ecd0c077.size > 5) {
+            if (isdefined(level.a_demongate_chompers) && level.a_demongate_chompers.size > 5) {
                 var_25c1c42e = "demongate_charged_";
             }
             var_a1235bb2 = "demongate";

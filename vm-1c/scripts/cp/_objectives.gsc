@@ -398,7 +398,7 @@ class class_1d3048b8 : class_60c78d95 {
 // Params 0, eflags: 0x2
 // Checksum 0xb5c7ab63, Offset: 0x2260
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("objectives", &__init__, undefined, undefined);
 }
 

@@ -26,7 +26,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9f8a924c, Offset: 0x538
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_wolf_howl", &__init__, &__main__, undefined);
 }
 
@@ -35,8 +35,8 @@ function autoexec function_2dc19561() {
 // Checksum 0xe30d834c, Offset: 0x580
 // Size: 0x24c
 function __init__() {
-    level.var_e93874ed = getweapon("elemental_bow_wolf_howl");
-    level.var_30611368 = getweapon("elemental_bow_wolf_howl4");
+    level.w_bow_wolf_howl = getweapon("elemental_bow_wolf_howl");
+    level.w_bow_wolf_howl_charged = getweapon("elemental_bow_wolf_howl4");
     clientfield::register("toplayer", "elemental_bow_wolf_howl" + "_ambient_bow_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_wolf_howl" + "_arrow_impact_fx", 5000, 1, "int");
     clientfield::register("scriptmover", "elemental_bow_wolf_howl4" + "_arrow_impact_fx", 5000, 1, "int");
@@ -64,9 +64,9 @@ function __main__() {
 // Size: 0xe4
 function function_b1b2ffc8() {
     self endon(#"disconnect");
-    self thread namespace_790026d5::function_982419bb("elemental_bow_wolf_howl");
-    self thread namespace_790026d5::function_ececa597("elemental_bow_wolf_howl", "elemental_bow_wolf_howl4", &function_9b74f1f4);
-    self thread namespace_790026d5::function_7bc6b9d("elemental_bow_wolf_howl", "elemental_bow_wolf_howl4", &function_dd4f7cba);
+    self thread zm_weap_elemental_bow::function_982419bb("elemental_bow_wolf_howl");
+    self thread zm_weap_elemental_bow::function_ececa597("elemental_bow_wolf_howl", "elemental_bow_wolf_howl4", &function_9b74f1f4);
+    self thread zm_weap_elemental_bow::function_7bc6b9d("elemental_bow_wolf_howl", "elemental_bow_wolf_howl4", &function_dd4f7cba);
     while (true) {
         self waittill(#"weapon_change", newweapon);
         if (newweapon.name === "elemental_bow_wolf_howl") {
@@ -256,7 +256,7 @@ function function_2abb74b7(e_player, var_8f0f462c, var_c807e383) {
     while (true) {
         var_ae2cfcc2 = getaiteamarray(level.zombie_team);
         var_7478bee7 = array::get_all_closest(var_28388a90.origin, var_ae2cfcc2, undefined, undefined, var_200ee8c9);
-        var_7478bee7 = array::filter(var_7478bee7, 0, &namespace_790026d5::function_5aec3adc);
+        var_7478bee7 = array::filter(var_7478bee7, 0, &zm_weap_elemental_bow::function_5aec3adc);
         var_7478bee7 = array::filter(var_7478bee7, 0, &function_e02cfeee);
         if (var_7478bee7.size) {
             var_718ba60a = var_28388a90.origin;
@@ -328,7 +328,7 @@ function function_3af108ec(e_player, ai_enemy, v_launch) {
         wait 0.1;
         ai_enemy clientfield::set("zombie_hit_by_wolf_howl_charge", 1);
     }
-    ai_enemy dodamage(ai_enemy.health, ai_enemy.origin, e_player, e_player, undefined, "MOD_UNKNOWN", 0, level.var_30611368);
+    ai_enemy dodamage(ai_enemy.health, ai_enemy.origin, e_player, e_player, undefined, "MOD_UNKNOWN", 0, level.w_bow_wolf_howl_charged);
     ai_enemy.var_a4557598 = 0;
     ai_enemy.var_98056717 = 0;
 }
@@ -380,8 +380,8 @@ function function_720f6454(var_63f884ec) {
         n_damage = 0;
     }
     if (n_damage > 0) {
-        self thread namespace_790026d5::function_d1e69389(var_63f884ec);
-        self dodamage(n_damage, self.origin, self, self, undefined, "MOD_UNKNOWN", 0, level.var_30611368);
+        self thread zm_weap_elemental_bow::function_d1e69389(var_63f884ec);
+        self dodamage(n_damage, self.origin, self, self, undefined, "MOD_UNKNOWN", 0, level.w_bow_wolf_howl_charged);
         wait 2.5;
         self.var_a4557598 = 0;
     }
@@ -399,7 +399,7 @@ function function_cd61021a(e_player, var_99c3dd59, var_28388a90) {
             var_3bb42832 = math::clamp(var_3bb42832, 0, level.var_f4dc2834);
         }
         n_damage = var_3bb42832 * 0.4 / 0.2;
-        var_99c3dd59 dodamage(n_damage, var_99c3dd59 getcentroid(), e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_30611368);
+        var_99c3dd59 dodamage(n_damage, var_99c3dd59 getcentroid(), e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.w_bow_wolf_howl_charged);
         var_e1664ef3 = var_99c3dd59 getcentroid() - anglestoforward(var_28388a90.angles) * 96;
         var_28388a90.origin = var_e1664ef3;
         wait 0.05;
@@ -420,7 +420,7 @@ function function_6b3aa15a(v_hit_pos, var_8f0f462c) {
     var_3c5572a7 notify(#"hash_6fd14a64");
     var_ae2cfcc2 = getaiteamarray(level.zombie_team);
     var_7478bee7 = array::get_all_closest(v_hit_pos, var_ae2cfcc2, undefined, undefined, 256);
-    var_7478bee7 = array::filter(var_7478bee7, 0, &namespace_790026d5::function_5aec3adc);
+    var_7478bee7 = array::filter(var_7478bee7, 0, &zm_weap_elemental_bow::function_5aec3adc);
     var_7478bee7 = array::filter(var_7478bee7, 0, &function_e02cfeee);
     foreach (ai_enemy in var_7478bee7) {
         ai_enemy thread function_720f6454(v_hit_pos);
@@ -521,15 +521,15 @@ function function_88bf0c4e(e_player, n_damage, var_7c5a4ee4, weapon) {
     self clientfield::set("wolf_howl_slow_snow_fx", 1);
     if (isdefined(level.zombie_vars[e_player.team]["zombie_insta_kill"]) && level.zombie_vars[e_player.team]["zombie_insta_kill"]) {
         if (self.archetype === "mechz") {
-            self dodamage(n_damage, var_7c5a4ee4, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_e93874ed);
+            self dodamage(n_damage, var_7c5a4ee4, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.w_bow_wolf_howl);
         } else {
-            self dodamage(self.health, self.origin, e_player, e_player, undefined, "MOD_UNKNOWN", 0, level.var_e93874ed);
+            self dodamage(self.health, self.origin, e_player, e_player, undefined, "MOD_UNKNOWN", 0, level.w_bow_wolf_howl);
         }
         return;
     }
     self thread function_f4397d8f();
     if (distance2dsquared(var_7c5a4ee4, self.origin) < 9216) {
-        self namespace_790026d5::function_d1e69389(var_7c5a4ee4);
+        self zm_weap_elemental_bow::function_d1e69389(var_7c5a4ee4);
     }
     n_timer = 0;
     var_55e8a42 = 1;

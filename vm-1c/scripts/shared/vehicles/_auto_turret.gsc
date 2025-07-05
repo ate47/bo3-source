@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb99d1daf, Offset: 0x380
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("auto_turret", &__init__, undefined, undefined);
 }
 

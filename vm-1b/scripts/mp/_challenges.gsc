@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfa677ee6, Offset: 0x9a0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("challenges", &__init__, undefined, undefined);
 }
 

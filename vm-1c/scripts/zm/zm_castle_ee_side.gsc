@@ -367,7 +367,7 @@ class class_d7100ae3 {
 // Params 0, eflags: 0x2
 // Checksum 0xff5bc96e, Offset: 0xcd8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_ee_side", &__init__, undefined, undefined);
 }
 

@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x84963374, Offset: 0x158
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("multi_extracam", &__init__, undefined, undefined);
 }
 

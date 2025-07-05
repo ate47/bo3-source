@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x83b9515a, Offset: 0x4b8
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_skull_turret", &__init__, &__main__, undefined);
 }
 

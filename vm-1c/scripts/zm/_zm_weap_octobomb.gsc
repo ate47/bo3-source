@@ -25,7 +25,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x51ace1ea, Offset: 0x628
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_octobomb", &__init__, &__main__, undefined);
 }
 

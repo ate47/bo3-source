@@ -188,7 +188,7 @@ class class_3f5d3dd7 {
 // Params 0, eflags: 0x2
 // Checksum 0x40bb9f1f, Offset: 0x340
 // Size: 0x2c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_stairs", undefined, &__main__, undefined);
 }
 

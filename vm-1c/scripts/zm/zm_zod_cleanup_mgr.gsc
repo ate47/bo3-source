@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xdfe025bc, Offset: 0x1d0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zod_cleanup", &__init__, &__main__, undefined);
 }
 

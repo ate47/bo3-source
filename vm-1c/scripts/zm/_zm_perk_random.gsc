@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4d68262a, Offset: 0x6d0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_perk_random", &__init__, &__main__, undefined);
 }
 

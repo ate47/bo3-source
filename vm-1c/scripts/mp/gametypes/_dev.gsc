@@ -32,7 +32,7 @@
     // Params 0, eflags: 0x2
     // Checksum 0xc847bbc1, Offset: 0x3e0
     // Size: 0x3c
-    function autoexec function_2dc19561() {
+    function autoexec __init__sytem__() {
         system::register("<dev string:x28>", &__init__, undefined, "<dev string:x2c>");
     }
 

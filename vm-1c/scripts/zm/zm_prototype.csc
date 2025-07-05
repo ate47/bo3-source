@@ -40,7 +40,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x98ee5ad8, Offset: 0x590
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_prototype", &__init__, undefined, undefined);
 }
 

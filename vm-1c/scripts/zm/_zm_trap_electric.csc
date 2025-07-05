@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1c36e2a2, Offset: 0x170
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_trap_electric", &__init__, undefined, undefined);
 }
 

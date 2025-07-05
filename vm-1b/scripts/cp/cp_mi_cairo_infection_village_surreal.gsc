@@ -32,7 +32,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x928ebd9b, Offset: 0x10a0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("infection_village_surreal", &__init__, undefined, undefined);
 }
 

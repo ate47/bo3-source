@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcfe6ee67, Offset: 0x318
 // Size: 0x2c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_transformer", undefined, &__main__, undefined);
 }
 

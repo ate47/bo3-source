@@ -708,10 +708,10 @@ function private function_ee090a93() {
             var_7ddc55f4 = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (5, 0, 20);
             var_a3ded05d = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (-5, 0, 20);
             var_31d76122 = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (0, 0, 15);
-            magicbullet(level.var_e106fba5, var_efe3c52f, var_99c3dd59 getcentroid(), level.activeplayers[0]);
-            magicbullet(level.var_791ba87b, var_7ddc55f4, var_99c3dd59 getcentroid(), level.activeplayers[0]);
-            magicbullet(level.var_5d4538da, var_a3ded05d, var_99c3dd59 getcentroid(), level.activeplayers[0]);
-            magicbullet(level.var_30611368, var_31d76122, var_99c3dd59 getcentroid(), level.activeplayers[0]);
+            magicbullet(level.w_bow_demongate_charged, var_efe3c52f, var_99c3dd59 getcentroid(), level.activeplayers[0]);
+            magicbullet(level.w_bow_rune_prison_charged, var_7ddc55f4, var_99c3dd59 getcentroid(), level.activeplayers[0]);
+            magicbullet(level.w_bow_storm_charged, var_a3ded05d, var_99c3dd59 getcentroid(), level.activeplayers[0]);
+            magicbullet(level.w_bow_wolf_howl_charged, var_31d76122, var_99c3dd59 getcentroid(), level.activeplayers[0]);
         }
     }
 
@@ -720,7 +720,7 @@ function private function_ee090a93() {
     // Checksum 0xdad1de02, Offset: 0x2bf0
     // Size: 0x5c
     function function_22cf3e9f(str_weapon_name, v_source, var_99c3dd59) {
-        magicbullet(level.var_791ba87b, v_source, var_99c3dd59 getcentroid(), level.activeplayers[0]);
+        magicbullet(level.w_bow_rune_prison_charged, v_source, var_99c3dd59 getcentroid(), level.activeplayers[0]);
     }
 
 #/

@@ -34,7 +34,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc1c1d955, Offset: 0xce0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("ball", &__init__, undefined, undefined);
 }
 

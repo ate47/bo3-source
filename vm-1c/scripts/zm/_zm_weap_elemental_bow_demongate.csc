@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x75e7af2, Offset: 0x630
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_demongate", &__init__, undefined, undefined);
 }
 
@@ -51,7 +51,7 @@ function __init__() {
 // Checksum 0xe3b3815b, Offset: 0xa18
 // Size: 0x64
 function function_da7a9948(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    self namespace_790026d5::function_3158b481(localclientnum, newval, "demongate_ambient_bow");
+    self zm_weap_elemental_bow::function_3158b481(localclientnum, newval, "demongate_ambient_bow");
 }
 
 // Namespace _zm_weap_elemental_bow_demongate

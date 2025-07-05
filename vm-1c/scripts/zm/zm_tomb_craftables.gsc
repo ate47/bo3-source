@@ -1504,7 +1504,7 @@ function function_53ad8621(player) {
                     var_5b7c5a14.var_ac4510c = player getweaponammostock(level.var_2b2f83e5);
                     var_5b7c5a14.var_45c5f54c = player getweaponammoclip(level.var_2b2f83e5);
                 }
-                if (has_weapon && !(isdefined(player.var_5fc3c5c7) && player.var_5fc3c5c7) && var_a904111d != 0 && !player hasperk("specialty_widowswine")) {
+                if (has_weapon && !(isdefined(player.one_inch_punch_flag_has_been_init) && player.one_inch_punch_flag_has_been_init) && var_a904111d != 0 && !player hasperk("specialty_widowswine")) {
                     cur_weapon = player getcurrentweapon();
                     if (isdefined(player.var_27eb897c) && cur_weapon != weapon && player.var_27eb897c) {
                         player zm_tomb_utility::function_84442246(0);

@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x12e3fc4c, Offset: 0x338
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("collectibles", &__init__, &__main__, undefined);
 }
 

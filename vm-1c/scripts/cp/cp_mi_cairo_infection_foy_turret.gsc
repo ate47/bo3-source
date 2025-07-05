@@ -152,7 +152,7 @@ class class_ce2d510 {
 // Params 0, eflags: 0x2
 // Checksum 0x9d57bf2b, Offset: 0x2a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("foy_turret", &__init__, undefined, undefined);
 }
 

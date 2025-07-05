@@ -8,23 +8,23 @@
 #using scripts/zm/_zm_equipment;
 #using scripts/zm/_zm_spawner;
 
-#namespace namespace_790026d5;
+#namespace zm_weap_elemental_bow;
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 0, eflags: 0x2
 // Checksum 0x3b284ff, Offset: 0x550
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 0, eflags: 0x0
 // Checksum 0x87ff24d9, Offset: 0x598
 // Size: 0x17c
 function __init__() {
-    level.var_be94cdb = getweapon("elemental_bow");
-    level.var_1a828a16 = getweapon("elemental_bow4");
+    level.w_bow_base = getweapon("elemental_bow");
+    level.w_bow_base_charged = getweapon("elemental_bow4");
     clientfield::register("toplayer", "elemental_bow" + "_ambient_bow_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow" + "_arrow_impact_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow4" + "_arrow_impact_fx", 5000, 1, "int");
@@ -35,7 +35,7 @@ function __init__() {
     [[ level.var_d6de2706 ]]->initialize(6, 0.1);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x720
 // Size: 0x4
@@ -43,7 +43,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 0, eflags: 0x0
 // Checksum 0xc7508d6e, Offset: 0x730
 // Size: 0x7c
@@ -53,7 +53,7 @@ function function_c45ac6ae() {
     self thread function_7bc6b9d("elemental_bow", "elemental_bow4", &function_65347b70);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 5, eflags: 0x0
 // Checksum 0xbac48c00, Offset: 0x7b8
 // Size: 0x15c
@@ -69,7 +69,7 @@ function function_65347b70(weapon, v_position, radius, attacker, normal) {
     attacker clientfield::set(var_2679aa6b + "_arrow_impact_fx", 1);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0x1ce6489d, Offset: 0x920
 // Size: 0x92
@@ -77,7 +77,7 @@ function function_83f44f5(ai_enemy, var_289e02fc) {
     return isalive(ai_enemy) && !(isdefined(ai_enemy.var_98056717) && ai_enemy.var_98056717) && bullettracepassed(ai_enemy getcentroid(), var_289e02fc + (0, 0, 48), 0, undefined);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0x565deb3c, Offset: 0x9c0
 // Size: 0x208
@@ -105,13 +105,13 @@ function function_7fba300(e_player, var_289e02fc) {
     if (isdefined(self)) {
         [[ level.var_d6de2706 ]]->waitinqueue(self);
         if (isdefined(self)) {
-            self dodamage(n_damage, self.origin, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_1a828a16);
+            self dodamage(n_damage, self.origin, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.w_bow_base_charged);
             self.var_98056717 = 0;
         }
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0x66b5a099, Offset: 0xbd0
 // Size: 0x210
@@ -147,7 +147,7 @@ function function_982419bb(var_6ab83514) {
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 3, eflags: 0x0
 // Checksum 0x66d4e32f, Offset: 0xde8
 // Size: 0xb0
@@ -167,7 +167,7 @@ function function_ececa597(var_6ab83514, var_8f9bdf29, var_5759faa5) {
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0xe5ddc2fa, Offset: 0xea0
 // Size: 0x1a4
@@ -181,7 +181,7 @@ function function_67b18bd9(str_weapon_name) {
     return false;
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0x8a308293, Offset: 0x1050
 // Size: 0x94
@@ -195,7 +195,7 @@ function function_db107e59(str_weapon_name) {
     return false;
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0x9bc1b69e, Offset: 0x10f0
 // Size: 0x248
@@ -236,7 +236,7 @@ function function_b252290e(str_weapon_name, var_93fff756) {
     return false;
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0x23eb5ae4, Offset: 0x1340
 // Size: 0x164
@@ -250,7 +250,7 @@ function function_ea37b2fe(str_weapon_name) {
     return false;
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 3, eflags: 0x0
 // Checksum 0xd10c3dc9, Offset: 0x14b0
 // Size: 0x1d0
@@ -277,7 +277,7 @@ function function_7bc6b9d(var_6ab83514, var_8f9bdf29, var_332bb697) {
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0x41d3eae0, Offset: 0x1688
 // Size: 0x6c
@@ -288,7 +288,7 @@ function function_d2e32ed2(var_48369d98, v_position) {
     array::thread_all(getaiarchetypearray("mechz"), &function_b78fcfc7, self, var_48369d98, v_position);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 3, eflags: 0x0
 // Checksum 0xd7b6423a, Offset: 0x1700
 // Size: 0x3f4
@@ -334,11 +334,11 @@ function function_b78fcfc7(e_player, var_48369d98, v_position) {
         }
         var_40955aed = var_3bb42832 * n_damage_percent / 0.2;
         var_40955aed *= var_c36342f3;
-        self dodamage(var_40955aed, self.origin, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_be94cdb);
+        self dodamage(var_40955aed, self.origin, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.w_bow_base);
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0x8e4a7efe, Offset: 0x1b00
 // Size: 0xbe
@@ -355,7 +355,7 @@ function function_dc4f8831(var_eaae98a2, var_c01c8d5c) {
     return n_damage_percent;
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0x6807d103, Offset: 0x1bc8
 // Size: 0x4c
@@ -364,7 +364,7 @@ function function_9c5946ba(weapon, v_position) {
     radiusdamage(v_position, 24, 1, 1, self, undefined, weapon);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0xfb081e1e, Offset: 0x1c20
 // Size: 0xd4
@@ -376,7 +376,7 @@ function function_5aec3adc(ai_enemy) {
     return isdefined(ai_enemy) && isalive(ai_enemy) && !ai_enemy isragdoll() && !(isdefined(ai_enemy.var_98056717) && ai_enemy.var_98056717) && !(isdefined(ai_enemy.var_d3c478a0) && ai_enemy.var_d3c478a0) && b_callback_result;
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0xff0a46ec, Offset: 0x1d00
 // Size: 0x2c8
@@ -416,7 +416,7 @@ function function_d1e69389(var_63f884ec) {
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 5, eflags: 0x0
 // Checksum 0xb12e88ca, Offset: 0x1fd0
 // Size: 0x262
@@ -450,7 +450,7 @@ function function_866906f(var_7c5a4ee4, str_weapon_name, var_3fee16b8, var_a5018
     return var_c6f6381a["position"];
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 3, eflags: 0x0
 // Checksum 0x467ba268, Offset: 0x2240
 // Size: 0x54
@@ -459,7 +459,7 @@ function function_99de7ff2(str_weapon_name, v_source, v_destination) {
     magicbullet(getweapon(str_weapon_name), v_source, v_destination, self);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 1, eflags: 0x0
 // Checksum 0x78a5427a, Offset: 0x22a0
 // Size: 0xfe

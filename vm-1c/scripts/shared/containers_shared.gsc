@@ -33,7 +33,7 @@ class ccontainer {
 // Params 0, eflags: 0x2
 // Checksum 0x75cf0da1, Offset: 0x420
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("containers", &__init__, undefined, undefined);
 }
 

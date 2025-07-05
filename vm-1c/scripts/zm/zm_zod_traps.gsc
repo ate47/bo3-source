@@ -458,7 +458,7 @@ class class_a32cae3d {
 // Params 0, eflags: 0x2
 // Checksum 0xb414e397, Offset: 0x528
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_traps", &__init__, undefined, undefined);
 }
 

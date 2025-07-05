@@ -25,7 +25,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x51e0ee53, Offset: 0x530
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_stalingrad_eye_beam_trap", &__init__, undefined, undefined);
 }
 

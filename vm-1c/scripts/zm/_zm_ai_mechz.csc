@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4d7f8d7a, Offset: 0xf8
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_mechz", &__init__, &__main__, undefined);
 }
 

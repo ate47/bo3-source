@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbd5fdc8b, Offset: 0x170
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("flashgrenades", &__init__, undefined, undefined);
 }
 

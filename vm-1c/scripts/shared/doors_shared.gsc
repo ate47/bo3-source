@@ -433,7 +433,7 @@ class cdoor {
 // Params 0, eflags: 0x2
 // Checksum 0xf1df7e63, Offset: 0x1e28
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("doors", &__init__, undefined, undefined);
 }
 

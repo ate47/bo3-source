@@ -52,7 +52,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc3ce1555, Offset: 0x3098
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("arena_defend", &__init__, undefined, undefined);
 }
 

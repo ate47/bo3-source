@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x59a4e969, Offset: 0xab8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("newworld_util", &__init__, undefined, undefined);
 }
 

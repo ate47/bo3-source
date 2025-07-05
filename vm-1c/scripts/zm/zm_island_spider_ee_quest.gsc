@@ -366,7 +366,7 @@ function function_2176e192() {
 // Checksum 0x18dd547, Offset: 0x1968
 // Size: 0x7a
 function function_bf0f2293(player) {
-    if (player hasweapon(level.var_99f2368e)) {
+    if (player hasweapon(level.w_controllable_spider)) {
         self sethintstring("");
         return 0;
     }
@@ -390,7 +390,7 @@ function function_2818665b() {
         if (!zm_utility::is_player_valid(e_who)) {
             continue;
         }
-        if (e_who hasweapon(level.var_99f2368e)) {
+        if (e_who hasweapon(level.w_controllable_spider)) {
             continue;
         }
         e_who notify(#"aquired_spider_equipment");

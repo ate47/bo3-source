@@ -28,7 +28,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x361863ef, Offset: 0x4a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_island_side_ee_spore_hallucinations", &__init__, undefined, undefined);
 }
 

@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xeb34bd10, Offset: 0x1b8
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("factory_cleanup", &__init__, &__main__, undefined);
 }
 

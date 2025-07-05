@@ -33,7 +33,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc76a15fe, Offset: 0x730
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_thrasher", &__init__, &__main__, undefined);
 }
 
@@ -559,7 +559,7 @@ function function_a716de1f() {
     self.var_87097485 = &function_a2c48487;
     self.var_8c38eef8 = &function_d95f74d1;
     self.var_67a1573a = &zm_behavior::zombieattackableobjectservice;
-    self.var_7ee63f72 = &function_a7b4c742;
+    self.riotshield_knockdown_func = &function_a7b4c742;
     self.var_7430d3e0 = &function_a7b4c742;
     self.tesla_damage_func = &function_bd6d26aa;
     self.var_466626c4 = &function_82522cfc;

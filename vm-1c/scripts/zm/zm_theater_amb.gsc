@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xdc89d6e2, Offset: 0x410
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_theater_amb", &__init__, undefined, undefined);
 }
 

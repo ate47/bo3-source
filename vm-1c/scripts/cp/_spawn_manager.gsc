@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x27fc78a0, Offset: 0x298
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("spawn_manager", &__init__, undefined, undefined);
 }
 

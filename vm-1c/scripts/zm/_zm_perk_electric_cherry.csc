@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x11ddf0bf, Offset: 0x380
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_perk_electric_cherry", &__init__, undefined, undefined);
 }
 

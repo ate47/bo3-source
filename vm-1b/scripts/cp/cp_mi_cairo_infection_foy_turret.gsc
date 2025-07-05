@@ -24,7 +24,7 @@ class class_6fd92933 {
 // Params 0, eflags: 0x2
 // Checksum 0xbf5b3d42, Offset: 0x298
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("foy_turret", &__init__, undefined, undefined);
 }
 

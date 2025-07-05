@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd66fdc7f, Offset: 0x330
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("visionset_mgr", &__init__, undefined, undefined);
 }
 

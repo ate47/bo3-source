@@ -36,7 +36,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x16288caf, Offset: 0xf38
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_island_takeo_fight", &__init__, undefined, undefined);
 }
 
@@ -1200,8 +1200,8 @@ function function_75275516() {
             player giveweapon(level.weaponriotshield);
             player thread zm_island_skullquest::function_458f50f2();
             wait 1;
-            player giveweapon(level.var_a4052592);
-            player givemaxammo(level.var_a4052592);
+            player giveweapon(level.w_mirg2000_up);
+            player givemaxammo(level.w_mirg2000_up);
             if (randomint(4) > 2) {
                 str_gun = array::random(array("<dev string:x34e>", "<dev string:x358>", "<dev string:x35f>", "<dev string:x36b>"));
             } else {

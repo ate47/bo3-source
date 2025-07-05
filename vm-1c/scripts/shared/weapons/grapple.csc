@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd9b8185f, Offset: 0x190
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("grapple", &__init__, undefined, undefined);
 }
 

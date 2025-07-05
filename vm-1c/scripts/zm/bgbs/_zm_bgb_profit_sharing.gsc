@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x349e44d2, Offset: 0x288
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_profit_sharing", &__init__, undefined, "bgb");
 }
 

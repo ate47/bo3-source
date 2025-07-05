@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa0328dbf, Offset: 0x140
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_arms_grace", &__init__, undefined, undefined);
 }
 

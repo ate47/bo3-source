@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb8e90cc1, Offset: 0x1a8
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("art", &__init__, undefined, undefined);
 }
 

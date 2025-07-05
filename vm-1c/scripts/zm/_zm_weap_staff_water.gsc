@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa6809fff, Offset: 0x4e0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_staff_water", &__init__, undefined, undefined);
 }
 

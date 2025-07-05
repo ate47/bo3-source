@@ -22,7 +22,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc858ee47, Offset: 0x520
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("gadget_clone", &__init__, undefined, undefined);
 }
 

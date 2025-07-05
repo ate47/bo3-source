@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x28e0e411, Offset: 0x208
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("helicopter_gunner", &__init__, undefined, undefined);
 }
 

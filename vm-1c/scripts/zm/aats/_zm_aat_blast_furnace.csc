@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd0f7f4e4, Offset: 0x208
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_aat_blast_furnace", &__init__, undefined, undefined);
 }
 

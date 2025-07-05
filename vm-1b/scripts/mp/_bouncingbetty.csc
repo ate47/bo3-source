@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7d9f3e04, Offset: 0x140
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("bouncingbetty", &__init__, undefined, undefined);
 }
 

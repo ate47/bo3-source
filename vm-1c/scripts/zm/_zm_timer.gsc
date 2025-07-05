@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc8eb4dfa, Offset: 0xe8
 // Size: 0x2c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_timer", undefined, &__main__, undefined);
 }
 

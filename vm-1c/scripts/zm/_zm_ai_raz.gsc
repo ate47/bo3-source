@@ -27,7 +27,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4b28842d, Offset: 0x550
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_raz", &__init__, &__main__, undefined);
 }
 

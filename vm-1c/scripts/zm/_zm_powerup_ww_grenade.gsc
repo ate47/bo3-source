@@ -24,7 +24,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd36f6c9a, Offset: 0x368
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_powerup_ww_grenade", &__init__, undefined, undefined);
 }
 

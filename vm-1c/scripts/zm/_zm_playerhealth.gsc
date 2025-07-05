@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x31e42b91, Offset: 0x2e8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_playerhealth", &__init__, undefined, undefined);
 }
 

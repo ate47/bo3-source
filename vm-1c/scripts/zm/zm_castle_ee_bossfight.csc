@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf14fc4f9, Offset: 0xc88
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_castle_ee_bossfight", &__init__, undefined, undefined);
 }
 

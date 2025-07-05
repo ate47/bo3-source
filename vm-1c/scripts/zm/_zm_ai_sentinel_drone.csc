@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4d561638, Offset: 0x500
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_sentinel_drone", &__init__, &__main__, undefined);
 }
 

@@ -36,7 +36,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6a13479b, Offset: 0x598
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("keeper_skull", &__init__, &__main__, undefined);
 }
 

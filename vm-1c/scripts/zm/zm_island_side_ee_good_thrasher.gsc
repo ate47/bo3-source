@@ -37,7 +37,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x41cb140a, Offset: 0x788
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_island_side_ee_good_thrasher", &__init__, undefined, undefined);
 }
 

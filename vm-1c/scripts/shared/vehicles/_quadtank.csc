@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x11649a0f, Offset: 0x230
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("quadtank", &__init__, undefined, undefined);
 }
 

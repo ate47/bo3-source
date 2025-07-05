@@ -253,7 +253,7 @@ class class_dafbfd8e {
 // Params 0, eflags: 0x2
 // Checksum 0xca80034, Offset: 0x4c0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("cp_mobile_magicbox", &__init__, &__main__, undefined);
 }
 

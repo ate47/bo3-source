@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x340c9d46, Offset: 0x300
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("vortex_shared", &__init__, &__main__, undefined);
 }
 

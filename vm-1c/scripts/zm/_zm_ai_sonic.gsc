@@ -26,7 +26,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x78099771, Offset: 0x6a8
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_ai_sonic", &__init__, &__main__, undefined);
 }
 

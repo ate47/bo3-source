@@ -69,7 +69,7 @@ function function_4aee6e96() {
                 inflictor.var_1d9d8a6e = 0;
                 inflictor.var_21412003 = 0;
             }
-            if (isdefined(self.completed_emerging_into_playable_area) && self.var_1c6bd2ab && inflictor.var_1d9d8a6e < 20 && isdefined(weapon) && weapon == level.var_653c9585 && self.completed_emerging_into_playable_area) {
+            if (isdefined(self.completed_emerging_into_playable_area) && self.var_1c6bd2ab && inflictor.var_1d9d8a6e < 20 && isdefined(weapon) && weapon == level.w_one_inch_punch && self.completed_emerging_into_playable_area) {
                 self clientfield::set("ee_zombie_fist_fx", 0);
                 self.var_1c6bd2ab = 0;
                 playsoundatposition("zmb_squest_punchtime_punched", self.origin);
@@ -118,11 +118,11 @@ function function_3bcfc005(v_origin, e_player) {
         e_player.var_21412003 = 1;
         foreach (mdl_staff in level.var_66561721) {
             if (e_player hasweapon(mdl_staff.w_weapon)) {
-                e_player.var_b37dabd2 = mdl_staff.w_weapon.element;
+                e_player.str_punch_element = mdl_staff.w_weapon.element;
             }
         }
-        if (!isdefined(e_player.var_b37dabd2)) {
-            e_player.var_b37dabd2 = "upgraded";
+        if (!isdefined(e_player.str_punch_element)) {
+            e_player.str_punch_element = "upgraded";
         }
         e_player thread _zm_weap_one_inch_punch::function_3898d995();
         e_player thread _zm_weap_one_inch_punch::function_3898d995();

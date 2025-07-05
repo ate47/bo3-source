@@ -29,7 +29,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x39b65e8d, Offset: 0x788
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_undercroft_low_grav", &__init__, &__main__, undefined);
 }
 

@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x67a2dff7, Offset: 0x118
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_powerup_fire_sale", &__init__, undefined, undefined);
 }
 

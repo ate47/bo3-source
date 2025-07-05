@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xecafcadd, Offset: 0x3e0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("ambient", &__init__, undefined, undefined);
 }
 

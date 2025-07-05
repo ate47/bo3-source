@@ -40,7 +40,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbab742b8, Offset: 0x948
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_power", &__init__, &__main__, undefined);
 }
 
@@ -931,7 +931,7 @@ function function_e467fa8d(s_spawn_pos) {
 // Checksum 0xbc024dfd, Offset: 0x3d80
 // Size: 0x1ac
 function function_779c1a49(s_spawn_pos, var_d24a63df) {
-    var_ecb2c615 = zm_genesis_apothicon_fury::function_21bbe70d(s_spawn_pos.origin, s_spawn_pos.angles, 0);
+    var_ecb2c615 = zm_genesis_apothicon_fury::spawn_apothicon_fury(s_spawn_pos.origin, s_spawn_pos.angles, 0);
     var_ecb2c615 ai::set_behavior_attribute("can_bamf", 0);
     var_ecb2c615 ai::set_behavior_attribute("can_juke", 0);
     var_ecb2c615.no_damage_points = 1;

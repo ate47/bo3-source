@@ -26,7 +26,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd8499016, Offset: 0x580
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_rune_prison", &__init__, &__main__, undefined);
 }
 
@@ -35,8 +35,8 @@ function autoexec function_2dc19561() {
 // Checksum 0xb1d54156, Offset: 0x5c8
 // Size: 0x22c
 function __init__() {
-    level.var_fb620116 = getweapon("elemental_bow_rune_prison");
-    level.var_791ba87b = getweapon("elemental_bow_rune_prison4");
+    level.w_bow_rune_prison = getweapon("elemental_bow_rune_prison");
+    level.w_bow_rune_prison_charged = getweapon("elemental_bow_rune_prison4");
     clientfield::register("toplayer", "elemental_bow_rune_prison" + "_ambient_bow_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_rune_prison" + "_arrow_impact_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_rune_prison4" + "_arrow_impact_fx", 5000, 1, "int");
@@ -62,9 +62,9 @@ function __main__() {
 // Checksum 0x32a563fb, Offset: 0x810
 // Size: 0x7c
 function function_4d344d97() {
-    self thread namespace_790026d5::function_982419bb("elemental_bow_rune_prison");
-    self thread namespace_790026d5::function_ececa597("elemental_bow_rune_prison", "elemental_bow_rune_prison4");
-    self thread namespace_790026d5::function_7bc6b9d("elemental_bow_rune_prison", "elemental_bow_rune_prison4", &function_c8b11b89);
+    self thread zm_weap_elemental_bow::function_982419bb("elemental_bow_rune_prison");
+    self thread zm_weap_elemental_bow::function_ececa597("elemental_bow_rune_prison", "elemental_bow_rune_prison4");
+    self thread zm_weap_elemental_bow::function_7bc6b9d("elemental_bow_rune_prison", "elemental_bow_rune_prison4", &function_c8b11b89);
 }
 
 // Namespace _zm_weap_elemental_bow_rune_prison
@@ -86,11 +86,11 @@ function function_c8b11b89(weapon, position, radius, attacker, normal) {
 function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8, var_df033097, var_8b30ffd9) {
     if (var_df033097) {
         e_player.var_d96b65c1 = &function_1ed3d96d;
-        v_spawn_pos = e_player namespace_790026d5::function_866906f(var_7c5a4ee4, str_weapon_name, var_3fee16b8, 48, e_player.var_d96b65c1);
+        v_spawn_pos = e_player zm_weap_elemental_bow::function_866906f(var_7c5a4ee4, str_weapon_name, var_3fee16b8, 48, e_player.var_d96b65c1);
         if (var_df033097) {
             var_289e02fc = isdefined(v_spawn_pos) ? v_spawn_pos : var_7c5a4ee4;
             var_852420bf = array::get_all_closest(var_289e02fc, getaiteamarray(level.zombie_team), undefined, undefined, 256);
-            var_852420bf = array::filter(var_852420bf, 0, &namespace_790026d5::function_5aec3adc);
+            var_852420bf = array::filter(var_852420bf, 0, &zm_weap_elemental_bow::function_5aec3adc);
             var_852420bf = array::filter(var_852420bf, 0, &function_71c4b12e, var_289e02fc);
             if (getdvarint("splitscreen_playerCount") > 2) {
                 var_852420bf = array::function_4097a53e(var_852420bf, 6);
@@ -127,7 +127,7 @@ function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8
     self thread function_378db90d(v_spawn_pos);
     if (isdefined(self) && isalive(self)) {
         if (isdefined(self.missinglegs) && (isdefined(self.isdog) && self.isdog || self.missinglegs)) {
-            self dodamage(self.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.var_791ba87b);
+            self dodamage(self.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.w_bow_rune_prison_charged);
         }
     }
     wait 1.8 + 0.07 * var_8b30ffd9;
@@ -147,23 +147,23 @@ function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8
             self.var_a320d911 = 0;
             self.var_98056717 = 0;
             self scene::stop("ai_zm_dlc1_soldat_runeprison_struggle_loop");
-            self dodamage(var_40955aed, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_791ba87b);
+            self dodamage(var_40955aed, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.w_bow_rune_prison_charged);
             self thread function_62837b3a();
         } else if (self.archetype === "zombie") {
             if (math::cointoss()) {
                 gibserverutils::gibhead(self);
                 self clientfield::set("runeprison_zombie_death_skull", 1);
             }
-            self dodamage(self.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.var_791ba87b);
+            self dodamage(self.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.w_bow_rune_prison_charged);
         }
         self setplayercollision(1);
         self unlink();
     }
     var_852420bf = array::get_all_closest(var_c8bd3127.origin, getaiteamarray(level.zombie_team), undefined, undefined, 96);
-    var_852420bf = array::filter(var_852420bf, 0, &namespace_790026d5::function_5aec3adc);
+    var_852420bf = array::filter(var_852420bf, 0, &zm_weap_elemental_bow::function_5aec3adc);
     var_852420bf = array::filter(var_852420bf, 0, &function_e381ab3a);
     foreach (var_b4aadf6b in var_852420bf) {
-        var_b4aadf6b dodamage(var_b4aadf6b.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.var_791ba87b);
+        var_b4aadf6b dodamage(var_b4aadf6b.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.w_bow_rune_prison_charged);
     }
     var_c8bd3127 clientfield::set("runeprison_rock_fx", 0);
     wait 6;
@@ -177,11 +177,11 @@ function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8
 function function_378db90d(v_pos) {
     wait 0.1;
     var_852420bf = array::get_all_closest(v_pos, getaiteamarray(level.zombie_team), undefined, undefined, 96);
-    var_852420bf = array::filter(var_852420bf, 0, &namespace_790026d5::function_5aec3adc);
+    var_852420bf = array::filter(var_852420bf, 0, &zm_weap_elemental_bow::function_5aec3adc);
     var_852420bf = array::filter(var_852420bf, 0, &function_cece5ffb);
     var_852420bf = array::function_4097a53e(var_852420bf, 2);
     foreach (var_b4aadf6b in var_852420bf) {
-        var_b4aadf6b thread namespace_790026d5::function_d1e69389(v_pos);
+        var_b4aadf6b thread zm_weap_elemental_bow::function_d1e69389(v_pos);
     }
 }
 
@@ -245,7 +245,7 @@ function function_5c74632() {
 // Checksum 0x14517aa7, Offset: 0x1630
 // Size: 0x1f4
 function function_48899f7(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8) {
-    v_spawn_pos = e_player namespace_790026d5::function_866906f(var_7c5a4ee4, str_weapon_name, var_3fee16b8, 32);
+    v_spawn_pos = e_player zm_weap_elemental_bow::function_866906f(var_7c5a4ee4, str_weapon_name, var_3fee16b8, 32);
     if (!isdefined(v_spawn_pos)) {
         return;
     }
@@ -255,7 +255,7 @@ function function_48899f7(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8)
     var_4275176f = [];
     while (n_timer < 3) {
         var_852420bf = array::get_all_closest(var_3c817f0d.origin, getaiteamarray(level.zombie_team), undefined, undefined, 48);
-        var_852420bf = array::filter(var_852420bf, 0, &namespace_790026d5::function_5aec3adc);
+        var_852420bf = array::filter(var_852420bf, 0, &zm_weap_elemental_bow::function_5aec3adc);
         var_852420bf = array::filter(var_852420bf, 0, &function_6a1a0b32, var_3c817f0d);
         array::thread_all(var_852420bf, &function_e7abbbb8, var_3c817f0d, e_player);
         wait 0.05;
@@ -294,13 +294,13 @@ function function_e7abbbb8(var_3c817f0d, e_player) {
     }
     self clientfield::set("runeprison_lava_geyser_dot_fx", 1);
     var_2a8dacd1 = n_max_damage * 0.3;
-    self dodamage(var_2a8dacd1, self.origin, e_player, e_player, undefined, str_mod, 0, level.var_fb620116);
+    self dodamage(var_2a8dacd1, self.origin, e_player, e_player, undefined, str_mod, 0, level.w_bow_rune_prison);
     var_c18df445 = n_max_damage * 0.1;
     while (n_timer < 6 && var_2a8dacd1 < n_max_damage) {
         var_e1fd6746 = randomfloatrange(0.4, 1);
         wait var_e1fd6746;
         n_timer += var_e1fd6746;
-        self dodamage(var_c18df445, self.origin, e_player, e_player, undefined, str_mod, 0, level.var_fb620116);
+        self dodamage(var_c18df445, self.origin, e_player, e_player, undefined, str_mod, 0, level.w_bow_rune_prison);
         var_2a8dacd1 += var_c18df445;
     }
     self clientfield::set("runeprison_lava_geyser_dot_fx", 0);

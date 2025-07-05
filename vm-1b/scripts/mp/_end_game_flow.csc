@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd9ddb46, Offset: 0x720
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("end_game_flow", &__init__, undefined, undefined);
 }
 

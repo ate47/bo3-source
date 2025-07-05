@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc244c572, Offset: 0x230
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_stalingrad_dragon_strike", &__init__, undefined, undefined);
 }
 

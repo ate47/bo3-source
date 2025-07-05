@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x87eb949e, Offset: 0x6d8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("spawning", &__init__, undefined, undefined);
 }
 

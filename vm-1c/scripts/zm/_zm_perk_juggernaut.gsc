@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x38036258, Offset: 0x3a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_perk_juggernaut", &__init__, undefined, undefined);
 }
 

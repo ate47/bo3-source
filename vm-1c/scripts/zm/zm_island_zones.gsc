@@ -27,7 +27,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x961b648d, Offset: 0xb58
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_island_zones", &__init__, undefined, undefined);
 }
 

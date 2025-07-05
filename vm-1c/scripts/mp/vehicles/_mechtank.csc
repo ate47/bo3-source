@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x29f14402, Offset: 0x168
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("mechtank", &__init__, undefined, undefined);
 }
 

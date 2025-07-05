@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xec834b91, Offset: 0x150
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_temporal_gift", &__init__, undefined, "bgb");
 }
 

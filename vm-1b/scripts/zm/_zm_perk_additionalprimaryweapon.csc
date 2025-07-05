@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3bc1b6f2, Offset: 0x1e0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_perk_additionalprimaryweapon", &__init__, undefined, undefined);
 }
 

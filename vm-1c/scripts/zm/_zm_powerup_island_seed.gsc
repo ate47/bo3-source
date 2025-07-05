@@ -28,7 +28,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8345bcdc, Offset: 0x468
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_powerup_island_seed", &__init__, undefined, undefined);
 }
 

@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6b716a28, Offset: 0x1d0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("shellshock", &__init__, undefined, undefined);
 }
 

@@ -165,7 +165,7 @@ function function_d9de7eb6(var_a3612ddd) {
     var_b538c87 = 0;
     while (isdefined(var_2b128827) && var_2b128827) {
         e_clip waittill(#"damage", n_damage, e_attacker, v_direction, v_point, str_mod, str_tag_name, str_model_name, var_829b9480, w_weapon);
-        if (w_weapon === level.var_5e75629a) {
+        if (w_weapon === level.w_mirg2000) {
             self playrumbleonentity("tank_damage_heavy_mp");
             self scene::play("p7_fxanim_zm_island_takeo_arm_gate" + var_a3612ddd + "_close_bundle", self);
             self thread scene::play("p7_fxanim_zm_island_takeo_arm_gate" + var_a3612ddd + "_bundle", self);
@@ -176,7 +176,7 @@ function function_d9de7eb6(var_a3612ddd) {
             }
             continue;
         }
-        if (w_weapon === level.var_a4052592) {
+        if (w_weapon === level.w_mirg2000_up) {
             self playrumbleonentity("zm_island_rumble_takeo_hall_vine_hit");
             earthquake(0.35, 0.5, self.origin, 325);
             self playsound("zmb_takeo_vox_roar_amrgate");

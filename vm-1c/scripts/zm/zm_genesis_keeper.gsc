@@ -44,7 +44,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbf3bcc08, Offset: 0x8a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_keeper", &__init__, undefined, undefined);
 }
 

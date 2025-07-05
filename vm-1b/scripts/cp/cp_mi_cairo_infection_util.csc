@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x925456a1, Offset: 0xab0
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("infection_util", &__init__, undefined, undefined);
 }
 

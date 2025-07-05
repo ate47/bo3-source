@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcb712a30, Offset: 0x1f8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("gadget_forced_malfunction", &__init__, undefined, undefined);
 }
 

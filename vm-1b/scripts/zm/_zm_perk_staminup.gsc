@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xed3ee007, Offset: 0x330
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_perk_staminup", &__init__, undefined, undefined);
 }
 

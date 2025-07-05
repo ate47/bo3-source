@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x40193374, Offset: 0x198
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("bowie_knife", &__init__, &__main__, undefined);
 }
 

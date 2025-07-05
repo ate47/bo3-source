@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb3e6a28a, Offset: 0x240
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("raps_mp", &__init__, undefined, undefined);
 }
 

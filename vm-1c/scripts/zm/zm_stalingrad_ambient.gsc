@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5d309f37, Offset: 0x298
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_stalingrad_ambient", &__init__, &__main__, undefined);
 }
 

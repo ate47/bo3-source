@@ -27,7 +27,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe73f7af1, Offset: 0x558
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow_storm", &__init__, &__main__, undefined);
 }
 
@@ -36,8 +36,8 @@ function autoexec function_2dc19561() {
 // Checksum 0x76fdfd5e, Offset: 0x5a0
 // Size: 0x1fc
 function __init__() {
-    level.var_16e90d5f = getweapon("elemental_bow_storm");
-    level.var_5d4538da = getweapon("elemental_bow_storm4");
+    level.w_bow_storm = getweapon("elemental_bow_storm");
+    level.w_bow_storm_charged = getweapon("elemental_bow_storm4");
     clientfield::register("toplayer", "elemental_bow_storm" + "_ambient_bow_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_storm" + "_arrow_impact_fx", 5000, 1, "int");
     clientfield::register("missile", "elemental_bow_storm4" + "_arrow_impact_fx", 5000, 1, "int");
@@ -62,9 +62,9 @@ function __main__() {
 // Checksum 0xb17c36e8, Offset: 0x7b8
 // Size: 0x7c
 function function_ff153c1a() {
-    self thread namespace_790026d5::function_982419bb("elemental_bow_storm");
-    self thread namespace_790026d5::function_ececa597("elemental_bow_storm", "elemental_bow_storm4");
-    self thread namespace_790026d5::function_7bc6b9d("elemental_bow_storm", "elemental_bow_storm4", &function_e2bef70c);
+    self thread zm_weap_elemental_bow::function_982419bb("elemental_bow_storm");
+    self thread zm_weap_elemental_bow::function_ececa597("elemental_bow_storm", "elemental_bow_storm4");
+    self thread zm_weap_elemental_bow::function_7bc6b9d("elemental_bow_storm", "elemental_bow_storm4", &function_e2bef70c);
 }
 
 // Namespace _zm_weap_elemental_bow_storm
@@ -74,12 +74,12 @@ function function_ff153c1a() {
 function function_e2bef70c(weapon, v_position, radius, attacker, normal) {
     self.var_a51c6ff2 = &function_3c763f48;
     if (issubstr(weapon.name, "elemental_bow_storm4")) {
-        var_d68af64c = self namespace_790026d5::function_866906f(v_position, weapon.name, attacker, 64, self.var_a51c6ff2);
+        var_d68af64c = self zm_weap_elemental_bow::function_866906f(v_position, weapon.name, attacker, 64, self.var_a51c6ff2);
         v_position = isdefined(var_d68af64c) ? var_d68af64c : v_position;
         self thread function_35612a9e(v_position + (0, 0, 48));
         return;
     }
-    var_d68af64c = self namespace_790026d5::function_866906f(v_position, weapon.name, attacker, 32, self.var_a51c6ff2);
+    var_d68af64c = self zm_weap_elemental_bow::function_866906f(v_position, weapon.name, attacker, 32, self.var_a51c6ff2);
     v_position = isdefined(var_d68af64c) ? var_d68af64c : v_position;
     self thread function_578bf1ca(v_position + (0, 0, 32), 3.6, attacker, 0);
 }
@@ -163,7 +163,7 @@ function function_8f86e6d5(var_7b58139b, e_player) {
     if (zm_utility::is_player_valid(e_player)) {
         var_1c7748 = array::get_all_closest(e_player.origin, var_1c7748);
     }
-    var_1c7748 = array::filter(var_1c7748, 0, &namespace_790026d5::function_5aec3adc);
+    var_1c7748 = array::filter(var_1c7748, 0, &zm_weap_elemental_bow::function_5aec3adc);
     var_1c7748 = array::filter(var_1c7748, 0, &function_172d425);
     return var_1c7748;
 }
@@ -233,7 +233,7 @@ function function_2d3e3c1b(e_player, var_337b3336, var_6e7a59eb, var_94d13bd0) {
             var_dfc0ef57 = 1;
         }
         if (var_79be6e3b > n_damage && !var_dfc0ef57) {
-            self dodamage(n_damage, self.origin, e_player, e_player, undefined, var_3cce4ae7, 0, level.var_16e90d5f);
+            self dodamage(n_damage, self.origin, e_player, e_player, undefined, var_3cce4ae7, 0, level.w_bow_storm);
             if (var_94d13bd0) {
                 var_b50659f2 = 1;
                 if (self.archetype === "mechz") {
@@ -266,7 +266,7 @@ function function_b6e08804(e_player, var_94d13bd0) {
     var_3cce4ae7 = "MOD_UNKNOWN";
     if (var_94d13bd0) {
         if (self.archetype === "zombie") {
-            if (namespace_790026d5::function_5aec3adc(self)) {
+            if (zm_weap_elemental_bow::function_5aec3adc(self)) {
                 self setplayercollision(0);
                 self.var_98056717 = 1;
                 self clientfield::set("elem_storm_shock_fx", 2);
@@ -288,7 +288,7 @@ function function_b6e08804(e_player, var_94d13bd0) {
         e_player.var_83a6b1fd++;
         e_player notify(#"zombie_zapped");
     }
-    var_2f7fd5db = var_94d13bd0 ? level.var_5d4538da : level.var_16e90d5f;
+    var_2f7fd5db = var_94d13bd0 ? level.w_bow_storm_charged : level.w_bow_storm;
     self dodamage(n_damage, self.origin, e_player, e_player, undefined, var_3cce4ae7, 0, var_2f7fd5db);
     self.var_789ebfb2 = 0;
     self setplayercollision(1);

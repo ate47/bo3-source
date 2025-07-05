@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7a1f1815, Offset: 0x150
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("aat", &__init__, undefined, undefined);
 }
 

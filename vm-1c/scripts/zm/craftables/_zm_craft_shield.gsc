@@ -22,7 +22,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1fd66332, Offset: 0x438
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_craft_shield", &__init__, &__main__, undefined);
 }
 

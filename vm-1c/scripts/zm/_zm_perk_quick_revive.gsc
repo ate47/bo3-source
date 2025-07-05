@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x31c9f1ad, Offset: 0x490
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_perk_quick_revive", &__init__, undefined, undefined);
 }
 

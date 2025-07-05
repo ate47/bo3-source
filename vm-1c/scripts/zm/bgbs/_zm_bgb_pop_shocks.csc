@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa4d4e6c6, Offset: 0x168
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_pop_shocks", &__init__, undefined, undefined);
 }
 

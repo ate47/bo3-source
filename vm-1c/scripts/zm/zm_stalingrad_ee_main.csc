@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd950b922, Offset: 0x670
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_stalingrad_ee_main", &__init__, undefined, undefined);
 }
 

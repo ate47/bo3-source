@@ -1120,35 +1120,35 @@ function function_ed06d487(s_powerup, e_player) {
                 setdvar("<dev string:x10b>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "<dev string:x32b>";
+                    player.str_punch_element = "<dev string:x32b>";
                     player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
             } else if (getdvarstring("<dev string:x17f>") == "<dev string:x328>") {
                 setdvar("<dev string:x17f>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "<dev string:x334>";
+                    player.str_punch_element = "<dev string:x334>";
                     player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
             } else if (getdvarstring("<dev string:x1e4>") == "<dev string:x328>") {
                 setdvar("<dev string:x1e4>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "<dev string:x338>";
+                    player.str_punch_element = "<dev string:x338>";
                     player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
             } else if (getdvarstring("<dev string:x24c>") == "<dev string:x328>") {
                 setdvar("<dev string:x24c>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "<dev string:x33d>";
+                    player.str_punch_element = "<dev string:x33d>";
                     player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
             } else if (getdvarstring("<dev string:x2b1>") == "<dev string:x328>") {
                 setdvar("<dev string:x2b1>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "<dev string:x341>";
+                    player.str_punch_element = "<dev string:x341>";
                     player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
             }

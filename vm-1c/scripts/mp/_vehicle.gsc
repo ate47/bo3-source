@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x118588f, Offset: 0xc98
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("vehicle", &__init__, undefined, undefined);
 }
 

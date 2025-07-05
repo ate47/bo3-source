@@ -34,7 +34,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9e699491, Offset: 0xdf0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_zod_sword", &__init__, &__main__, undefined);
 }
 

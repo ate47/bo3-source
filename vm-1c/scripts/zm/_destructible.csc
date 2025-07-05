@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x49ddcba0, Offset: 0x100
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("destructible", &__init__, undefined, undefined);
 }
 

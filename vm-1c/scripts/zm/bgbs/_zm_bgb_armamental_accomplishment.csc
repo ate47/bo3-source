@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2e8579, Offset: 0x160
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_armamental_accomplishment", &__init__, undefined, undefined);
 }
 

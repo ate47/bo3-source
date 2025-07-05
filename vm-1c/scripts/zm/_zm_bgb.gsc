@@ -32,7 +32,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x213594a4, Offset: 0x7c0
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("bgb", &__init__, &__main__, undefined);
 }
 
@@ -46,7 +46,7 @@ function private __init__() {
         return;
     }
     level.weaponbgbgrab = getweapon("zombie_bgb_grab");
-    level.var_c92b3b33 = getweapon("zombie_bgb_use");
+    level.weaponbgbuse = getweapon("zombie_bgb_use");
     level.bgb = [];
     clientfield::register("clientuimodel", "bgb_current", 1, 8, "int");
     clientfield::register("clientuimodel", "bgb_display", 1, 1, "int");
@@ -470,7 +470,7 @@ function private run_activation_func(bgb) {
 // Size: 0x2a
 function private bgb_get_gumball_anim_weapon(bgb, var_aad41617) {
     if (var_aad41617) {
-        return level.var_c92b3b33;
+        return level.weaponbgbuse;
     }
     return level.weaponbgbgrab;
 }
@@ -489,7 +489,7 @@ function private function_bb702b0a(bgb, var_aad41617) {
     if (weapon == level.weaponbgbgrab) {
         self playsound("zmb_bgb_powerup_default");
     }
-    if (weapon == level.var_c92b3b33) {
+    if (weapon == level.weaponbgbuse) {
         self clientfield::increment_to_player("bgb_blow_bubble");
     }
     return w_original;

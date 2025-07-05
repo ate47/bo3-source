@@ -48,7 +48,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe8ed90d1, Offset: 0x1440
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_ee_quest", &__init__, undefined, undefined);
 }
 

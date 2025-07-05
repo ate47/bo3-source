@@ -46,7 +46,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa9a80da0, Offset: 0x728
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_genesis_ai_spawning", &__init__, undefined, undefined);
 }
 
@@ -312,7 +312,7 @@ function function_3cf05b99() {
     }
     switch (str_ai) {
     case "apothicon_fury":
-        level thread function_21bbe70d();
+        level thread spawn_apothicon_fury();
         level notify(#"chaos_round_spawn_apothicon");
         break;
     case "keeper":
@@ -444,7 +444,7 @@ function function_77d3a18d() {
 // Params 0, eflags: 0x0
 // Checksum 0xc821ae2a, Offset: 0x1d00
 // Size: 0x286
-function function_21bbe70d() {
+function spawn_apothicon_fury() {
     a_players = getplayers();
     e_player = function_25a4a7d4();
     queryresult = positionquery_source_navigation(e_player.origin, 600, 800, -128, 20);
@@ -456,7 +456,7 @@ function function_21bbe70d() {
             str_zone = zm_zonemgr::get_zone_from_position(v_origin, 1);
             if (isdefined(str_zone) && level.zones[str_zone].is_active) {
                 function_1f0a0b52(v_origin);
-                var_ecb2c615 = zm_genesis_apothicon_fury::function_21bbe70d(v_origin, v_angles, 0);
+                var_ecb2c615 = zm_genesis_apothicon_fury::spawn_apothicon_fury(v_origin, v_angles, 0);
                 if (isdefined(var_ecb2c615)) {
                     level.zombie_total--;
                     level.var_c4336559["apothicon_fury"]--;
@@ -626,7 +626,7 @@ function function_fd8b24f5() {
     if (var_c0692329) {
         n_roll = randomint(100);
         if (n_roll < 50) {
-            function_21bbe70d();
+            spawn_apothicon_fury();
         } else {
             ai_zombie = function_f55d851b();
         }

@@ -26,7 +26,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x14749885, Offset: 0x6b0
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("siegebot_mp", &__init__, undefined, undefined);
 }
 

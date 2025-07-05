@@ -2,17 +2,17 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/system_shared;
 
-#namespace namespace_790026d5;
+#namespace zm_weap_elemental_bow;
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 0, eflags: 0x2
 // Checksum 0xa8d9c37c, Offset: 0x298
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("_zm_weap_elemental_bow", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 0, eflags: 0x0
 // Checksum 0x5c540656, Offset: 0x2d8
 // Size: 0x184
@@ -27,7 +27,7 @@ function __init__() {
     setdvar("bg_zm_dlc1_chargeShotMultipleBulletsForFullCharge", 2);
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 7, eflags: 0x0
 // Checksum 0xef15891c, Offset: 0x468
 // Size: 0x64
@@ -35,7 +35,7 @@ function function_5b4bf635(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_3158b481(localclientnum, newval, "elemental_bow_ambient_bow");
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 7, eflags: 0x0
 // Checksum 0x6df5b6aa, Offset: 0x4d8
 // Size: 0x74
@@ -45,7 +45,7 @@ function function_4e8aa99(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 7, eflags: 0x0
 // Checksum 0x236441c4, Offset: 0x558
 // Size: 0x74
@@ -55,7 +55,7 @@ function function_bdaa35c(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0xa80cffbf, Offset: 0x5d8
 // Size: 0xb2
@@ -69,7 +69,7 @@ function function_e5c5e30(localclientnum, str_fx_name) {
     self notify(#"hash_74395f6a");
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 3, eflags: 0x0
 // Checksum 0xdd9a91b9, Offset: 0x698
 // Size: 0x144
@@ -89,7 +89,7 @@ function function_3158b481(localclientnum, newval, str_fx_name) {
     }
 }
 
-// Namespace namespace_790026d5
+// Namespace zm_weap_elemental_bow
 // Params 2, eflags: 0x0
 // Checksum 0xf8f8fc47, Offset: 0x7e8
 // Size: 0x7c

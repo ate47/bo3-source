@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5e2961fa, Offset: 0x178
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("heatseekingmissile", &__init__, undefined, undefined);
 }
 

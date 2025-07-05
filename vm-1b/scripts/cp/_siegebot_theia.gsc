@@ -28,7 +28,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcdc49e6c, Offset: 0x660
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("siegebot_theia", &__init__, undefined, undefined);
 }
 

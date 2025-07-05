@@ -28,7 +28,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x57b348d5, Offset: 0x610
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_castle_rocketshield", &__init__, &__main__, undefined);
 }
 

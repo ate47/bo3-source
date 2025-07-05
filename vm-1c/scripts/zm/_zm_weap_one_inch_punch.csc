@@ -28,7 +28,7 @@ function oneinchpunch_impact(localclientnum, oldval, newval, bnewent, binitialsn
         level.var_57220446[self getentitynumber()] = gettime();
         self earthquake(0.5, 0.5, self.origin, 300);
         self playrumbleonentity(localclientnum, "damage_heavy");
-        if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.var_b37dabd2) && self.var_b37dabd2 == "air") {
+        if (isdefined(self.var_21412003) && self.var_21412003 && isdefined(self.str_punch_element) && self.str_punch_element == "air") {
             var_4383636a *= 2;
         }
         physicsexplosioncylinder(localclientnum, self.origin, var_4383636a, var_bf0c8e05, 1);

@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe30ef1f5, Offset: 0xe50
 // Size: 0x2a
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("globallogic_audio", &__init__, undefined, undefined);
 }
 

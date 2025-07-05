@@ -35,7 +35,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc756e12b, Offset: 0x700
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_weap_glaive", &__init__, undefined, undefined);
 }
 

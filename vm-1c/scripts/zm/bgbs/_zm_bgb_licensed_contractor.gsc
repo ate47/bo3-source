@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe47f214b, Offset: 0x180
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("zm_bgb_licensed_contractor", &__init__, undefined, "bgb");
 }
 

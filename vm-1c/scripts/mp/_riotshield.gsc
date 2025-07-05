@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd7fc2fcf, Offset: 0x1a8
 // Size: 0x34
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("riotshield", &__init__, undefined, undefined);
 }
 

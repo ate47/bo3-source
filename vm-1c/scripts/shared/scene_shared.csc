@@ -910,7 +910,7 @@ function get_existing_ent(clientnum, str_name) {
 // Params 0, eflags: 0x2
 // Checksum 0xce6a6039, Offset: 0x4750
 // Size: 0x3c
-function autoexec function_2dc19561() {
+function autoexec __init__sytem__() {
     system::register("scene", &__init__, &__main__, undefined);
 }
 
