@@ -40,8 +40,8 @@ function __init__() {
         level.laststand_update_clientfields[i] = "laststand_update" + i;
         clientfield::register("world", level.laststand_update_clientfields[i], 1, 5, "counter");
     }
-    if (!isdefined(level.var_a6179873)) {
-        level.var_a6179873 = &player_laststand;
+    if (!isdefined(level.playerlaststand_func)) {
+        level.playerlaststand_func = &player_laststand;
     }
     level.weaponrevivetool = getweapon("syrette");
     if (!isdefined(level.laststandpistol)) {
@@ -152,8 +152,8 @@ function playerlaststand(einflictor, attacker, idamage, smeansofdeath, weapon, v
     self thread player_last_stand_stats(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, delayoverride);
     bb::function_945c54c5("enter_last_stand", self);
     self recordmapevent(1, gettime(), self.origin, skipto::function_52c50cb8());
-    if (isdefined(level.var_a6179873)) {
-        [[ level.var_a6179873 ]](einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, delayoverride);
+    if (isdefined(level.playerlaststand_func)) {
+        [[ level.playerlaststand_func ]](einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, delayoverride);
     }
     self.health = 1;
     self.laststand = 1;

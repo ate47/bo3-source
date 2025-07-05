@@ -285,7 +285,7 @@ function spawn_robot(player, var_91089b66, n_spawn_delay) {
     level.var_f6c5842 = undefined;
     players = getplayers();
     if (players.size != 1 || !level flag::get("solo_game") || !(isdefined(players[0].waiting_to_revive) && players[0].waiting_to_revive)) {
-        level zm::function_481dd8eb();
+        level zm::checkforalldead();
     }
     level.var_47ef623d = 2000;
     var_91089b66 zm_unitrigger::run_visibility_function_for_all_triggers();

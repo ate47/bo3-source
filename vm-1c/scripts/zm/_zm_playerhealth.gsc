@@ -24,8 +24,8 @@ function autoexec __init__sytem__() {
 // Size: 0x33c
 function __init__() {
     clientfield::register("toplayer", "sndZombieHealth", 21000, 1, "int");
-    level.var_6a21f752 = &function_79977f70;
-    level.var_e88bb559 = &function_79977f70;
+    level.global_damage_func_ads = &function_79977f70;
+    level.global_damage_func = &function_79977f70;
     level.difficultytype[0] = "easy";
     level.difficultytype[1] = "normal";
     level.difficultytype[2] = "hardened";

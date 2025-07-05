@@ -45,7 +45,7 @@ function function_d83e4ca() {
         self.var_bf349207 = undefined;
     }
     if (isdefined(level.var_f4735dd3) && level.var_f4735dd3) {
-        self thread namespace_25f8c2ad::function_830c8552();
+        self thread zm_pers_upgrades_functions::function_830c8552();
     }
 }
 
@@ -127,7 +127,7 @@ function function_89ba29ee() {
 // Checksum 0x5bd2f3a9, Offset: 0x7d8
 // Size: 0x6c
 function function_934fdbad() {
-    if (isdefined(level.var_6e4e78c7) && level.var_6e4e78c7) {
+    if (isdefined(level.pers_upgrade_insta_kill) && level.pers_upgrade_insta_kill) {
         level.var_4cf213 = 2;
         level.var_2a6e5316 = 18;
         namespace_d93d7691::function_8562a0f6("insta_kill", &function_744187f0, "pers_insta_kill", level.var_4cf213, 0);
@@ -561,7 +561,7 @@ function function_27be4a71() {
     wait 0.5;
     while (true) {
         self waittill(#"hash_5e5bb250");
-        accuracy = self namespace_25f8c2ad::function_eac49a00();
+        accuracy = self zm_pers_upgrades_functions::function_eac49a00();
         if (accuracy > level.var_5d181faf) {
             break;
         }
@@ -618,7 +618,7 @@ function function_f7fb14e2() {
     /#
         iprintlnbold("<dev string:x15e>");
     #/
-    self thread namespace_25f8c2ad::function_85e94769();
+    self thread zm_pers_upgrades_functions::function_85e94769();
     wait 0.5;
     self.var_bf349207 = 1;
     while (true) {

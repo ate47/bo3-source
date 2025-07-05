@@ -35,11 +35,11 @@ function function_40206fdf() {
 // Checksum 0x7092ea6e, Offset: 0x810
 // Size: 0xa3
 function function_35d58a26() {
-    while (namespace_831a4a7c::function_5eb6e4d1().size == 0) {
+    while (doa_player_utility::function_5eb6e4d1().size == 0) {
         wait 0.05;
     }
     namespace_49107f3a::debugmsg("Hail to the King baby!");
-    foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+    foreach (player in doa_player_utility::function_5eb6e4d1()) {
         player thread function_92c840a6(1);
     }
 }
@@ -121,8 +121,8 @@ function function_a4d5519a(pickup) {
     if (self isinmovemode("ufo", "noclip")) {
         return;
     }
-    level thread namespace_49107f3a::debug_circle(pickup.origin + (0, 0, 20), 30, 3, namespace_831a4a7c::function_fea7ed75(self.entnum));
-    level thread namespace_49107f3a::debug_line(self.origin + (0, 0, 20), pickup.origin + (0, 0, 20), 3, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread namespace_49107f3a::debug_circle(pickup.origin + (0, 0, 20), 30, 3, doa_player_utility::function_fea7ed75(self.entnum));
+    level thread namespace_49107f3a::debug_line(self.origin + (0, 0, 20), pickup.origin + (0, 0, 20), 3, doa_player_utility::function_fea7ed75(self.entnum));
     yaw = namespace_49107f3a::function_fa8a86e8(self, pickup);
     if (!isdefined(yaw)) {
         return;
@@ -189,7 +189,7 @@ function function_a3bba13d() {
     namespace_49107f3a::debugmsg("DOA Soak Test [ON]");
     adddebugcommand("set bot_AllowMovement 0; set bot_PressAttackBtn 1; set bot_PressMeleeBtn 0; set scr_botsAllowKillstreaks 0; set bot_AllowGrenades 1");
     while (level.var_1575b6db) {
-        foreach (guy in namespace_831a4a7c::function_5eb6e4d1()) {
+        foreach (guy in doa_player_utility::function_5eb6e4d1()) {
             guy thread function_733651c();
             if (guy isinmovemode("ufo", "noclip")) {
                 wait 0.4;
@@ -218,7 +218,7 @@ function function_a3bba13d() {
         wait randomintrange(5, 20);
         if (level.doa.var_b1698a42.var_cadf4b04.size > 0) {
             i = 0;
-            foreach (guy in namespace_831a4a7c::function_5eb6e4d1()) {
+            foreach (guy in doa_player_utility::function_5eb6e4d1()) {
                 guy setorigin(level.doa.var_b1698a42.var_cadf4b04[i].origin);
                 i++;
             }
@@ -272,7 +272,7 @@ function function_c18f4e35() {
             setdvar("scr_doa_kingme_soak_think", 0);
             setdvar("scr_doa_soak_think", 1);
             namespace_49107f3a::debugmsg("Hail to the King baby!");
-            foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+            foreach (player in doa_player_utility::function_5eb6e4d1()) {
                 player thread function_92c840a6();
             }
         }
@@ -291,7 +291,7 @@ function function_c18f4e35() {
         namespace_49107f3a::debugmsg("Devgui Cmd-->" + cmd);
         switch (cmd) {
         case "outro":
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             for (i = 0; i < players.size; i++) {
                 players[i].doa.lives = 0;
                 players[i] dodamage(players[i].health + 100, players[i].origin);
@@ -333,14 +333,14 @@ function function_c18f4e35() {
             break;
         case "gem":
             namespace_49107f3a::debugmsg("Gem Launching!");
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             for (i = 0; i < players.size; i++) {
                 level thread namespace_a7e6beb5::function_16237a19(players[i].origin, 4, 10, 1, 1);
             }
             break;
         case "gemX":
             namespace_49107f3a::debugmsg("Gem Launching!");
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             scale = int(getdvarstring("scr_spawn_pickup"));
             for (i = 0; i < players.size; i++) {
                 level thread namespace_a7e6beb5::function_16237a19(players[i].origin, 1, 10, 1, 1, scale);
@@ -348,7 +348,7 @@ function function_c18f4e35() {
             break;
         case "king":
             namespace_49107f3a::debugmsg("Hail to the King baby!");
-            foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+            foreach (player in doa_player_utility::function_5eb6e4d1()) {
                 player thread function_92c840a6();
             }
             break;
@@ -362,7 +362,7 @@ function function_c18f4e35() {
                 level.doa.var_94073ca5 = getdvarstring("scr_spawn_room_name");
             }
             if (level.doa.var_161fb2a1 == 10) {
-                players = namespace_831a4a7c::function_5eb6e4d1();
+                players = doa_player_utility::function_5eb6e4d1();
                 for (i = 1; i < players.size; i++) {
                     if (players[i].doa.fate == 0) {
                         players[i] namespace_23f188a4::function_194ede2e(randomintrange(1, 5));
@@ -388,7 +388,7 @@ function function_c18f4e35() {
             type = getdvarint("scr_spawn_pickup");
             namespace_49107f3a::debugmsg("Fating you ->" + type);
             level.doa.var_5effb8dd = 1;
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             for (i = 0; i < players.size; i++) {
                 if (type < 10) {
                     players[i] namespace_23f188a4::function_194ede2e(type);
@@ -472,7 +472,7 @@ function function_c18f4e35() {
             break;
         case "kill":
             namespace_49107f3a::debugmsg("death has been notified ...");
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             if (players.size == 1) {
                 player = players[0];
             } else {
@@ -482,7 +482,7 @@ function function_c18f4e35() {
             break;
         case "kill_all":
             namespace_49107f3a::debugmsg("death to all...");
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             for (i = 0; i < players.size; i++) {
                 players[i] dodamage(players[i].health + 100, players[i].origin);
             }

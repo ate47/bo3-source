@@ -257,7 +257,7 @@ function player_add_points(event, mod, hit_location, var_ebd2ffea, zombie_team, 
         player_points -= split_player_points;
     }
     if (isdefined(level.var_cfce124) && level.var_cfce124) {
-        player_points = self namespace_25f8c2ad::function_e4398b36(player_points, event, mod, damage_weapon);
+        player_points = self zm_pers_upgrades_functions::function_e4398b36(player_points, event, mod, damage_weapon);
     }
     self add_to_player_score(player_points, 1, event);
     self.pers["score"] = self.score;

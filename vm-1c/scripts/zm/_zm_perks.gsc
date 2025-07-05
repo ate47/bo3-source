@@ -414,8 +414,8 @@ function vending_trigger_think() {
             }
         }
         current_cost = self.cost;
-        if (player namespace_25f8c2ad::function_dc08b4af()) {
-            current_cost = player namespace_25f8c2ad::function_4ef410da(current_cost);
+        if (player zm_pers_upgrades_functions::function_dc08b4af()) {
+            current_cost = player zm_pers_upgrades_functions::function_4ef410da(current_cost);
         }
         if (!player zm_score::can_player_purchase(current_cost)) {
             self playsound("evt_perk_deny");
@@ -462,10 +462,10 @@ function vending_trigger_post_think(player, perk) {
     }
     player notify(#"burp");
     if (isdefined(level.var_bac53324) && level.var_bac53324) {
-        player namespace_25f8c2ad::function_c7dbceb7();
+        player zm_pers_upgrades_functions::function_c7dbceb7();
     }
     if (isdefined(level.var_52f5a971) && level.var_52f5a971) {
-        player thread namespace_25f8c2ad::function_1425fc15();
+        player thread zm_pers_upgrades_functions::function_1425fc15();
     }
     if (isdefined(level.var_7b162f9e)) {
         player [[ level.var_7b162f9e ]](perk);
@@ -597,7 +597,7 @@ function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
         break;
     }
     if (isdefined(var_74f58142)) {
-        if (self namespace_25f8c2ad::function_dadedde6()) {
+        if (self zm_pers_upgrades_functions::function_dadedde6()) {
             var_74f58142 += level.var_eb469fd1;
         }
         self.maxhealth = var_74f58142;

@@ -126,14 +126,14 @@ function function_cb45f8b1(player, amount, type, point, weapon, direction_vec, t
         team = self._race_team;
     }
     if (isdefined(player.allow_zombie_to_target_ai) && player.allow_zombie_to_target_ai || !player util::is_ads()) {
-        [[ level.var_e88bb559 ]](type, self.damagelocation, point, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel);
+        [[ level.global_damage_func ]](type, self.damagelocation, point, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel);
         return false;
     }
     if (!zm_utility::bullet_attack(type)) {
-        [[ level.var_e88bb559 ]](type, self.damagelocation, point, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel);
+        [[ level.global_damage_func ]](type, self.damagelocation, point, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel);
         return false;
     }
-    [[ level.var_6a21f752 ]](type, self.damagelocation, point, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel);
+    [[ level.global_damage_func_ads ]](type, self.damagelocation, point, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel);
     return true;
 }
 
@@ -1494,7 +1494,7 @@ function zombie_damage(mod, hit_location, var_8a2b6fe5, player, amount, team, we
 // Params 14, eflags: 0x0
 // Checksum 0xa204560c, Offset: 0x6f90
 // Size: 0x28c
-function function_d0cf525a(mod, hit_location, var_8a2b6fe5, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
+function zombie_damage_ads(mod, hit_location, var_8a2b6fe5, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
     if (zm_utility::is_magic_bullet_shield_enabled(self)) {
         return;
     }
@@ -1656,7 +1656,7 @@ function zombie_death_event(zombie) {
             namespace_95add22b::function_290a4934(attacker, zombie.origin);
         }
         if (isdefined(level.var_2eafd286) && level.var_2eafd286) {
-            attacker namespace_25f8c2ad::function_8d1310c0(zombie, attacker);
+            attacker zm_pers_upgrades_functions::function_8d1310c0(zombie, attacker);
         }
         if (isdefined(zombie) && isdefined(zombie.damagelocation)) {
             if (zm_utility::is_headshot(zombie.damageweapon, zombie.damagelocation, zombie.damagemod)) {
@@ -1666,7 +1666,7 @@ function zombie_death_event(zombie) {
                 attacker zm_stats::increment_player_stat("headshots");
                 attacker zm_stats::increment_challenge_stat("ZOMBIE_HUNTER_KILL_HEADSHOT");
                 if (zm_utility::is_classic()) {
-                    attacker namespace_25f8c2ad::function_56da3688(time_of_death, zombie);
+                    attacker zm_pers_upgrades_functions::function_56da3688(time_of_death, zombie);
                 }
             } else {
                 attacker notify(#"zombie_death_no_headshot");
@@ -1686,7 +1686,7 @@ function zombie_death_event(zombie) {
         attacker zm_stats::increment_client_stat("kills");
         attacker zm_stats::increment_player_stat("kills");
         if (isdefined(level.var_cfce124) && level.var_cfce124) {
-            attacker namespace_25f8c2ad::function_b0f6b767();
+            attacker zm_pers_upgrades_functions::function_b0f6b767();
         }
         if (isdefined(zombie) && isdefined(zombie.damageweapon)) {
             attacker addweaponstat(zombie.damageweapon, "kills", 1);
@@ -1697,7 +1697,7 @@ function zombie_death_event(zombie) {
         if (isdefined(zombie.missinglegs) && isdefined(zombie) && zombie.missinglegs) {
             attacker zm_stats::increment_challenge_stat("ZOMBIE_HUNTER_KILL_CRAWLER");
         }
-        if (attacker namespace_25f8c2ad::function_2f3a2d06() || force_head_gib) {
+        if (attacker zm_pers_upgrades_functions::function_2f3a2d06() || force_head_gib) {
             zombie zombie_utility::zombie_head_gib();
         }
         if (isdefined(level.var_f4735dd3) && level.var_f4735dd3) {

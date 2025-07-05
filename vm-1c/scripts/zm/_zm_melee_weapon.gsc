@@ -443,7 +443,7 @@ function melee_weapon_think(weapon, cost, flourish_fn, vo_dialog_id, flourish_we
         }
         if (!player_has_weapon) {
             cost = self.stub.cost;
-            if (player namespace_25f8c2ad::function_dc08b4af()) {
+            if (player zm_pers_upgrades_functions::function_dc08b4af()) {
                 cost = int(cost / 2);
             }
             if (player zm_score::can_player_purchase(cost)) {

@@ -1687,7 +1687,7 @@ function function_4ce6d0ea() {
     level thread function_7e51c1d2();
     level notify(#"hash_e2918623");
     setdvar("scr_margwa_footstep_eq_radius", 0);
-    foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+    foreach (player in doa_player_utility::function_5eb6e4d1()) {
         player notify(#"hash_d28ba89d");
     }
     level thread namespace_49107f3a::function_c5f3ece8(%DOA_UNDERBOSS, undefined, 6, (1, 0, 0));
@@ -1731,7 +1731,7 @@ function private function_e8a17069() {
     while (true) {
         if (getdvarint("scr_doa_soak_think", 0)) {
             damage = int(self.maxhealth * randomfloatrange(0.1, 0.2));
-            attacker = namespace_831a4a7c::function_35f36dec(self.origin);
+            attacker = doa_player_utility::function_35f36dec(self.origin);
             self dodamage(damage, self.origin, attacker, attacker);
         }
         wait randomint(10);

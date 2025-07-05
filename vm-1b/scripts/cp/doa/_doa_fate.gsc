@@ -274,7 +274,7 @@ function private function_271ba816(var_26fc4461) {
         }
         guy.doa.p8_food_beer_bottle_02 = 1;
         if (guy.doa.fate == 0) {
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             var_16147667 = [];
             foreach (player in players) {
                 if (player == guy) {
@@ -329,7 +329,7 @@ function private function_271ba816(var_26fc4461) {
 // Checksum 0xcafbe276, Offset: 0x2030
 // Size: 0xaa
 function function_b6841741() {
-    level thread function_fd0b8976(%DOA_FATE_FIREPOWER, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FIREPOWER, 4, doa_player_utility::function_fea7ed75(self.entnum));
     self.doa.var_ca0a87c8 = getweapon("zombietron_deathmachine");
     self takeallweapons();
     self giveweapon(self.doa.var_ca0a87c8);
@@ -341,7 +341,7 @@ function function_b6841741() {
 // Checksum 0x73f870e, Offset: 0x20e8
 // Size: 0x5a
 function function_d30f9791() {
-    level thread function_fd0b8976(%DOA_FATE_FORTUNE, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FORTUNE, 4, doa_player_utility::function_fea7ed75(self.entnum));
     if (self.doa.multiplier < 2) {
         self.doa.multiplier = 2;
     }
@@ -352,7 +352,7 @@ function function_d30f9791() {
 // Checksum 0x7c6a481a, Offset: 0x2150
 // Size: 0x9a
 function function_2a2ab6f9() {
-    level thread function_fd0b8976(%DOA_FATE_FEET, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FEET, 4, doa_player_utility::function_fea7ed75(self.entnum));
     self.doa.var_1c03b6ad = level.doa.rules.var_b92b82b;
     self setmovespeedscale(level.doa.rules.var_b92b82b);
     self thread namespace_eaa992c::function_285a2999("fast_feet");
@@ -363,7 +363,7 @@ function function_2a2ab6f9() {
 // Checksum 0xb7ddd6c9, Offset: 0x21f8
 // Size: 0x52
 function function_4c552db8() {
-    level thread function_fd0b8976(%DOA_FATE_FRIENDSHIP, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FRIENDSHIP, 4, doa_player_utility::function_fea7ed75(self.entnum));
     self thread namespace_5e6c5d1f::function_d35a405a(level.doa.var_a7cfb7eb, 1);
 }
 
@@ -372,7 +372,7 @@ function function_4c552db8() {
 // Checksum 0x42eb9fbf, Offset: 0x2258
 // Size: 0x72
 function function_c8508847() {
-    level thread function_fd0b8976(%DOA_FATE_FORCE, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FORCE, 4, doa_player_utility::function_fea7ed75(self.entnum));
     if (self.doa.var_c5e98ad6 < 4) {
         self.doa.var_c5e98ad6 = 4;
     }
@@ -384,7 +384,7 @@ function function_c8508847() {
 // Checksum 0xfda03949, Offset: 0x22d8
 // Size: 0x82
 function function_47b8a2a2() {
-    level thread function_fd0b8976(%DOA_FATE_FORTITUDE, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FORTITUDE, 4, doa_player_utility::function_fea7ed75(self.entnum));
     if (self.doa.multiplier < 3) {
         self.doa.multiplier = 3;
     }
@@ -397,7 +397,7 @@ function function_47b8a2a2() {
 // Checksum 0x2cb7281d, Offset: 0x2368
 // Size: 0x72
 function function_78c32d42() {
-    level thread function_fd0b8976(%DOA_FATE_FAVOR, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FAVOR, 4, doa_player_utility::function_fea7ed75(self.entnum));
     self thread namespace_5e6c5d1f::function_d35a405a(level.doa.var_9505395a, 2, 1.5);
     self thread namespace_eaa992c::function_285a2999("fate2_awarded");
 }
@@ -407,7 +407,7 @@ function function_78c32d42() {
 // Checksum 0x65770322, Offset: 0x23e8
 // Size: 0xe2
 function function_8c9288de() {
-    level thread function_fd0b8976(%DOA_FATE_FURY, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_FURY, 4, doa_player_utility::function_fea7ed75(self.entnum));
     if (self.doa.bombs < 1) {
         self.doa.bombs = 1;
     }
@@ -423,7 +423,7 @@ function function_8c9288de() {
 // Checksum 0x9e7ddafd, Offset: 0x24d8
 // Size: 0x116
 function private function_78f27983(player) {
-    level thread function_fd0b8976(%DOA_FATE_BOOBY_PRIZE, 4, namespace_831a4a7c::function_fea7ed75(self.entnum));
+    level thread function_fd0b8976(%DOA_FATE_BOOBY_PRIZE, 4, doa_player_utility::function_fea7ed75(self.entnum));
     if (isdefined(player.doa.boss_damage)) {
         player thread namespace_a7e6beb5::function_ab651d00(player, "zombietron_extra_life");
         var_a72e62b4 = int(player.doa.boss_damage / 75000);
@@ -607,7 +607,7 @@ function doRoomOfJudgement() {
         namespace_cdb9a8fe::function_55762a85(namespace_3ca3c537::function_61d60e0b());
     }
     level thread namespace_49107f3a::set_lighting_state(3);
-    namespace_831a4a7c::function_82e3b1cb();
+    doa_player_utility::function_82e3b1cb();
     namespace_49107f3a::function_390adefe();
     level thread namespace_49107f3a::function_c5f3ece8(%DOA_RIGHTEOUS_ROOM, undefined, 6);
     level thread namespace_49107f3a::function_37fb5c23(%DOA_RIGHTEOUS_ROOM_CHOOSE);

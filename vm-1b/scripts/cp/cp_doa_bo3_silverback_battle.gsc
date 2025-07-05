@@ -117,7 +117,7 @@ function function_fc48f9f3() {
     level thread namespace_cdb9a8fe::function_87703158(1);
     var_e5c8b9e7 = level.doa.var_bc9b7c71;
     level.doa.var_bc9b7c71 = &function_8b1dfb44;
-    foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+    foreach (player in doa_player_utility::function_5eb6e4d1()) {
         player notify(#"hash_d28ba89d");
     }
     level thread namespace_49107f3a::function_c5f3ece8(%DOA_BOSS, undefined, 6, (1, 0, 0));
@@ -154,7 +154,7 @@ function function_fc48f9f3() {
         org delete();
         level clientfield::set("cameraHeight", 0);
     }
-    foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+    foreach (player in doa_player_utility::function_5eb6e4d1()) {
         player freezecontrols(0);
     }
     if (getdvarint("scr_boss_silverback_mech_enabled", 0)) {
@@ -184,7 +184,7 @@ function function_fc48f9f3() {
     wait 6.5;
     namespace_49107f3a::function_44eb090b();
     level.doa.var_635342b0 hide();
-    array::thread_all(getplayers(), &namespace_831a4a7c::function_82e3b1cb);
+    array::thread_all(getplayers(), &doa_player_utility::function_82e3b1cb);
     level thread namespace_a7e6beb5::function_c1869ec8();
     level thread namespace_49107f3a::clearallcorpses();
     if (isdefined(level.doa.var_6fb37836)) {
@@ -199,7 +199,7 @@ function function_fc48f9f3() {
     i = 0;
     foreach (player in getplayers()) {
         player namespace_cdb9a8fe::function_fe0946ac(var_249f9545[i].origin);
-        player thread namespace_831a4a7c::turnOnFlashlight(0);
+        player thread doa_player_utility::turnOnFlashlight(0);
         i++;
     }
     level namespace_49107f3a::set_lighting_state(2);
@@ -351,7 +351,7 @@ function private _silverbackGroundSpawn(delay) {
     silverback thread namespace_eaa992c::function_285a2999("player_trail_red");
     silverback thread namespace_eaa992c::function_285a2999("silverback_intro_trail1");
     silverback thread namespace_eaa992c::function_285a2999("silverback_intro_trail2");
-    player = namespace_831a4a7c::function_5eb6e4d1()[0];
+    player = doa_player_utility::function_5eb6e4d1()[0];
     if (isdefined(player)) {
         anim_ang = vectortoangles(player.origin - org2.origin);
         org2 rotateto((0, anim_ang[1], 0), 0.75);
@@ -635,7 +635,7 @@ function function_b3eb3a0b(params) {
             self playsound("zmb_simianaut_roar");
             self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_taunt");
             self waittillmatch(#"pissedoff", "end");
-            players = namespace_831a4a7c::function_5eb6e4d1();
+            players = doa_player_utility::function_5eb6e4d1();
             if (players.size == 1) {
                 self.favoriteenemy = players[0];
             } else {
@@ -855,7 +855,7 @@ function function_f61639be(dist) {
     self endon(#"death");
     distsq = dist * dist;
     while (isdefined(self)) {
-        players = namespace_831a4a7c::function_5eb6e4d1();
+        players = doa_player_utility::function_5eb6e4d1();
         foreach (player in players) {
             if (!isdefined(player)) {
                 continue;

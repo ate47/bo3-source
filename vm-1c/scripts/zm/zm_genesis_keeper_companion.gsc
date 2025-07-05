@@ -566,7 +566,7 @@ function function_ff7f239d(e_player, s_stub, var_2b8f773a) {
     }
     level thread function_1ee7eabb(level.var_e7aa252c);
     if (level.players.size != 1 || !level flag::get("solo_game") || !(isdefined(level.players[0].waiting_to_revive) && level.players[0].waiting_to_revive)) {
-        level zm::function_481dd8eb();
+        level zm::checkforalldead();
     }
     level.var_67d8db6f = 5000;
     s_stub zm_unitrigger::run_visibility_function_for_all_triggers();

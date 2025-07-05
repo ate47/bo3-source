@@ -146,7 +146,7 @@ function private bgb_end_game() {
             continue;
         }
         level flag::set("consumables_reported");
-        zm_utility::function_d691fa6("end_consumables_count", self.bgb_stats[bgb].bgb_used_this_game);
+        zm_utility::increment_zm_dash_counter("end_consumables_count", self.bgb_stats[bgb].bgb_used_this_game);
         self reportlootconsume(bgb, self.bgb_stats[bgb].bgb_used_this_game);
     }
     self flag::set("finished_reporting_consumables");
@@ -358,7 +358,7 @@ function sub_consumable_bgb(bgb) {
     }
     self.bgb_stats[bgb].bgb_used_this_game++;
     self flag::set("used_consumable");
-    zm_utility::function_d691fa6("consumables_used", 1);
+    zm_utility::increment_zm_dash_counter("consumables_used", 1);
     if (level flag::exists("first_consumables_used")) {
         level flag::set("first_consumables_used");
     }

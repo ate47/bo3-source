@@ -638,7 +638,7 @@ function function_68c8220(player) {
     ent = spawn("script_origin", (0, 0, 0));
     ent playloopsound("zmb_pickup_umbrella_loop");
     locations = namespace_49107f3a::function_308fa126(16);
-    amount = randomintrange(namespace_831a4a7c::function_5eb6e4d1().size * 3 + 4, namespace_831a4a7c::function_5eb6e4d1().size * 5 + 6);
+    amount = randomintrange(doa_player_utility::function_5eb6e4d1().size * 3 + 4, doa_player_utility::function_5eb6e4d1().size * 5 + 6);
     while (amount) {
         item = function_16237a19(locations[randomint(locations.size)] + (0, 0, 2200), 1, -128, 1, 1, 1, level.doa.var_9bf7e61b, undefined, 1, 0, 0)[0];
         if (isdefined(item)) {
@@ -1073,7 +1073,7 @@ function function_5bb8e0d1(var_742d8fb5, location) {
             }
             wait 5;
         }
-        players = namespace_831a4a7c::function_5eb6e4d1();
+        players = doa_player_utility::function_5eb6e4d1();
         lives = 0;
         for (i = 0; i < players.size; i++) {
             lives += players[i].doa.lives;
@@ -1128,7 +1128,7 @@ function function_967df2b6(pickupdef) {
         }
     }
     if (pickupdef.type == 7 || pickupdef.type == 19 || pickupdef.type == 6 || pickupdef.type == 34) {
-        foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+        foreach (player in doa_player_utility::function_5eb6e4d1()) {
             if (isdefined(player.doa.var_5a34cdc9)) {
                 return 0;
             }
@@ -1147,7 +1147,7 @@ function function_967df2b6(pickupdef) {
         if (isdefined(level.doa.margwa)) {
             return 0;
         }
-        foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+        foreach (player in doa_player_utility::function_5eb6e4d1()) {
             if (isdefined(player.doa.vehicle)) {
                 return 0;
             }
@@ -1197,7 +1197,7 @@ function function_d526f0bb() {
                 player thread globallogic_score::incpersstat("skulls", 1, 1, 1);
                 player.skulls++;
                 self thread namespace_1a381543::function_90118d8c("zmb_pickup_nurgle");
-                player namespace_831a4a7c::function_71dab8e8(self.var_25ffdef1);
+                player doa_player_utility::function_71dab8e8(self.var_25ffdef1);
                 self function_6b4a5f81(player);
                 break;
             case 1:
@@ -1212,38 +1212,38 @@ function function_d526f0bb() {
                 break;
             case 16:
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_weapon");
-                player namespace_831a4a7c::function_d5f89a15(self.def.var_bcc88c39, 1);
+                player doa_player_utility::function_d5f89a15(self.def.var_bcc88c39, 1);
                 player.special_weapon = getweapon(self.def.var_bcc88c39);
                 assert(isdefined(player.special_weapon));
                 break;
             case 10:
                 self thread namespace_1a381543::function_90118d8c("zmb_pickup_powerup");
-                player thread namespace_831a4a7c::function_f3748dcb();
+                player thread doa_player_utility::function_f3748dcb();
                 self function_6b4a5f81(player);
                 break;
             case 12:
                 self thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
-                player thread namespace_831a4a7c::function_ba145a39();
+                player thread doa_player_utility::function_ba145a39();
                 self function_6b4a5f81(player);
                 break;
             case 8:
                 if (!isdefined(self.player)) {
-                    foreach (guy in namespace_831a4a7c::function_5eb6e4d1()) {
-                        guy namespace_831a4a7c::function_6a52a347();
+                    foreach (guy in doa_player_utility::function_5eb6e4d1()) {
+                        guy doa_player_utility::function_6a52a347();
                     }
                 } else {
-                    player thread namespace_831a4a7c::function_6a52a347();
+                    player thread doa_player_utility::function_6a52a347();
                 }
                 self thread namespace_1a381543::function_90118d8c("zmb_pickup_generic");
                 self function_6b4a5f81(player);
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_life");
                 break;
             case 4:
-                player thread namespace_831a4a7c::function_832d21c2();
+                player thread doa_player_utility::function_832d21c2();
                 break;
             case 2:
                 player.doa.var_c2b9d7d0 = gettime() + int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_c05a9a3f) * 1000);
-                player namespace_831a4a7c::function_71dab8e8(int(getdvarint("scr_doa_weapon_increment_range", 1024) / getdvarint("scr_doa_weapon_increment", 64)) - 1);
+                player doa_player_utility::function_71dab8e8(int(getdvarint("scr_doa_weapon_increment_range", 1024) / getdvarint("scr_doa_weapon_increment", 64)) - 1);
                 player thread namespace_1a381543::function_90118d8c("zmb_pickup_ammo");
                 player thread function_322262ea();
                 break;
@@ -1538,7 +1538,7 @@ function function_80ed7f(var_cd2235d8) {
 // Size: 0x6a
 function function_9615d68f() {
     if (!isdefined(self.doa.var_a2d31b4a) || self.doa.var_a2d31b4a != self.doa.var_ca0a87c8.name) {
-        self namespace_831a4a7c::function_d5f89a15(self.doa.var_ca0a87c8.name);
+        self doa_player_utility::function_d5f89a15(self.doa.var_ca0a87c8.name);
     }
 }
 
@@ -1646,7 +1646,7 @@ function function_b33393b3() {
             self [[ self.var_77ebedb ]]();
         }
         if (function_295872fa(self)) {
-            foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+            foreach (player in doa_player_utility::function_5eb6e4d1()) {
                 if (!isdefined(player.doa.var_3df27425)) {
                     continue;
                 }
@@ -1709,7 +1709,7 @@ function function_411355c0(type, player, origin) {
         ai notify(#"hash_6dcbb83e");
         ai [[ var_f3cefb9b.initfunction ]](player);
         if (isdefined(player) && isdefined(ai)) {
-            ai.fx = "player_trail_" + namespace_831a4a7c::function_ee495f41(player.entnum);
+            ai.fx = "player_trail_" + doa_player_utility::function_ee495f41(player.entnum);
             ai thread namespace_eaa992c::function_285a2999(ai.fx);
         }
     }
@@ -1841,7 +1841,7 @@ function function_a40895ab() {
 // Size: 0xd7
 function function_b62ed8c1() {
     self.attractors = [];
-    foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+    foreach (player in doa_player_utility::function_5eb6e4d1()) {
         distsq = distancesquared(player.origin, self.origin);
         if (distsq < level.doa.rules.var_6a4387bb) {
             if (!isinarray(self.attractors, player)) {

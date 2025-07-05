@@ -141,7 +141,7 @@ function function_c81e1083(name) {
 function main() {
     level endon(#"doa_game_restart");
     foreach (player in getplayers()) {
-        player thread namespace_831a4a7c::function_7d7a7fde();
+        player thread doa_player_utility::function_7d7a7fde();
     }
     level thread function_d87cb356();
     function_542758d0();
@@ -206,7 +206,7 @@ function main() {
         if (isdefined(var_d2d5db8a) && var_d2d5db8a) {
             level thread namespace_3ca3c537::function_e88371e5();
         }
-        namespace_831a4a7c::function_82e3b1cb();
+        doa_player_utility::function_82e3b1cb();
         level notify(#"hash_31680c6");
         namespace_49107f3a::function_390adefe();
     }
@@ -268,7 +268,7 @@ function function_40bfe842(entnum) {
             return points[entnum].origin;
         }
     }
-    return namespace_831a4a7c::function_68ece679(entnum).origin;
+    return doa_player_utility::function_68ece679(entnum).origin;
 }
 
 // Namespace namespace_cdb9a8fe
@@ -299,7 +299,7 @@ function function_fe0946ac(spawn_origin, var_97887a95) {
         spawn_origin = function_40bfe842(self.entnum);
     }
     arenacenter = namespace_3ca3c537::function_61d60e0b();
-    self thread namespace_831a4a7c::function_7d7a7fde();
+    self thread doa_player_utility::function_7d7a7fde();
     foreach (guardian in self.doa.var_af875fb7) {
         if (isdefined(guardian)) {
             guardian forceteleport(spawn_origin + (randomintrange(-60, 60), randomintrange(-60, 60), 0), self.angles);
@@ -318,8 +318,8 @@ function function_fe0946ac(spawn_origin, var_97887a95) {
     self setplayerangles((0, angles[1], 0));
     self notify(#"hash_75f413cb");
     if (var_97887a95) {
-        self thread namespace_831a4a7c::function_b5843d4f(level.doa.var_458c27d == 3);
-        self thread namespace_831a4a7c::turnOnFlashlight(level.doa.var_458c27d == 3);
+        self thread doa_player_utility::function_b5843d4f(level.doa.var_458c27d == 3);
+        self thread doa_player_utility::turnOnFlashlight(level.doa.var_458c27d == 3);
     }
 }
 

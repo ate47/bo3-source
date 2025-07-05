@@ -36,7 +36,7 @@ function function_acd89108(note) {
 function function_7c5410c4() {
     self endon(#"hash_acd89108");
     self waittill(#"hash_7c5410c4");
-    foreach (player in namespace_831a4a7c::function_5eb6e4d1()) {
+    foreach (player in doa_player_utility::function_5eb6e4d1()) {
         if (isdefined(player.doa.timerhud)) {
             player closeluimenu(player.doa.timerhud);
             player.doa.timerhud = undefined;

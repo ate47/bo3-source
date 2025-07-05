@@ -440,7 +440,7 @@ function treasure_chest_think() {
             continue;
         }
         reduced_cost = undefined;
-        if (zm_utility::is_player_valid(user) && user namespace_25f8c2ad::function_dc08b4af()) {
+        if (zm_utility::is_player_valid(user) && user zm_pers_upgrades_functions::function_dc08b4af()) {
             reduced_cost = int(self.zombie_cost / 2);
         }
         if (isdefined(self.auto_open) && zm_utility::is_player_valid(user)) {
@@ -534,7 +534,7 @@ function treasure_chest_think() {
                 }
             }
             if (isdefined(level.var_55d2ea99) && level.var_55d2ea99) {
-                self namespace_25f8c2ad::function_61be7933(user, grabber);
+                self zm_pers_upgrades_functions::function_61be7933(user, grabber);
             }
             if (isdefined(grabber.is_drinking) && grabber.is_drinking > 0) {
                 wait 0.1;

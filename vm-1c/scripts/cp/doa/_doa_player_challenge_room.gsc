@@ -149,7 +149,7 @@ function function_15a0c9b5(room) {
         player notify(#"hash_d28ba89d");
     }
     wait 0.25;
-    namespace_cdb9a8fe::function_55762a85(namespace_831a4a7c::function_68ece679().origin);
+    namespace_cdb9a8fe::function_55762a85(doa_player_utility::function_68ece679().origin);
     level clientfield::set("flipCamera", 0);
     level clientfield::increment("killweather");
     level clientfield::increment("killfog");

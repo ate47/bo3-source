@@ -1670,10 +1670,10 @@ function weapon_spawn_think() {
             }
         }
         if (isdefined(level.var_f4735dd3) && level.var_f4735dd3) {
-            player_has_weapon = namespace_25f8c2ad::function_e8007b34(player_has_weapon, player, self.weapon);
+            player_has_weapon = zm_pers_upgrades_functions::function_e8007b34(player_has_weapon, player, self.weapon);
         }
         cost = get_weapon_cost(self.weapon);
-        if (player namespace_25f8c2ad::function_dc08b4af()) {
+        if (player zm_pers_upgrades_functions::function_dc08b4af()) {
             cost = int(cost / 2);
         }
         if (isdefined(player.check_override_wallbuy_purchase)) {
@@ -1701,7 +1701,7 @@ function weapon_spawn_think() {
                     }
                     weapon = self.weapon;
                     if (isdefined(level.var_f4735dd3) && level.var_f4735dd3) {
-                        weapon = namespace_25f8c2ad::function_11390813(player, weapon);
+                        weapon = zm_pers_upgrades_functions::function_11390813(player, weapon);
                     }
                     if (should_upgrade_weapon(player)) {
                         if (player can_upgrade_weapon(weapon)) {
@@ -1736,7 +1736,7 @@ function weapon_spawn_think() {
                 weapon = shared_ammo_weapon;
             }
             if (isdefined(level.var_f4735dd3) && level.var_f4735dd3) {
-                weapon = namespace_25f8c2ad::function_8c231229(player, weapon);
+                weapon = zm_pers_upgrades_functions::function_8c231229(player, weapon);
             }
             if (isdefined(self.stub.hacked) && self.stub.hacked) {
                 if (!player has_upgrade(weapon)) {
@@ -1750,9 +1750,9 @@ function weapon_spawn_think() {
                 ammo_cost = get_ammo_cost(weapon);
             }
             if (isdefined(player.var_698f7e["nube"]) && player.var_698f7e["nube"]) {
-                ammo_cost = namespace_25f8c2ad::function_3c5b1e58(player, self.weapon, ammo_cost);
+                ammo_cost = zm_pers_upgrades_functions::function_3c5b1e58(player, self.weapon, ammo_cost);
             }
-            if (player namespace_25f8c2ad::function_dc08b4af()) {
+            if (player zm_pers_upgrades_functions::function_dc08b4af()) {
                 ammo_cost = int(ammo_cost / 2);
             }
             if (player bgb::is_enabled("zm_bgb_secret_shopper") && !is_wonder_weapon(weapon)) {

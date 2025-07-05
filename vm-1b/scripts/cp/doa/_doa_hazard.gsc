@@ -255,7 +255,7 @@ function private function_70dbf276() {
                 spot = namespace_49107f3a::function_5ee38fe3(guy.origin, level.doa.arenas[level.doa.var_90873830].var_1d2ed40).origin;
                 break;
             default:
-                spot = namespace_831a4a7c::function_68ece679(guy.entnum).origin;
+                spot = doa_player_utility::function_68ece679(guy.entnum).origin;
                 break;
             }
             if (isplayer(guy)) {

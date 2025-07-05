@@ -243,8 +243,8 @@ function function_3a7c5eb3() {
     upgraded = 0;
     if (zombie_utility::is_player_valid(who)) {
         cost = self.zombie_cost;
-        if (who namespace_25f8c2ad::function_dc08b4af()) {
-            cost = who namespace_25f8c2ad::function_4ef410da(cost);
+        if (who zm_pers_upgrades_functions::function_dc08b4af()) {
+            cost = who zm_pers_upgrades_functions::function_4ef410da(cost);
             upgraded = 1;
         }
         if (who zm_score::can_player_purchase(cost)) {

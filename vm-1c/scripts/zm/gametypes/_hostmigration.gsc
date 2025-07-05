@@ -113,7 +113,7 @@ function locktimer() {
 function callback_hostmigration() {
     zm_utility::redo_link_changes();
     setslowmotion(1, 1, 0);
-    zm_utility::function_63f08cf();
+    zm_utility::upload_zm_dash_counters();
     level.hostmigrationreturnedplayercount = 0;
     if (level.gameended) {
         println("<dev string:x5f>" + gettime() + "<dev string:x7b>");

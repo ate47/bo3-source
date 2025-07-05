@@ -991,7 +991,7 @@ function function_465aa1d3(restart) {
             if (isdefined(level.var_5f225972) && level.var_5f225972) {
                 level thread zm_audio::sndmusicsystem_playstate("round_end");
             }
-            if (isdefined(level.var_50a71706) && level.var_50a71706) {
+            if (isdefined(level.no_end_game_check) && level.no_end_game_check) {
                 level thread zm::last_stand_revive();
                 level thread zm::spectators_respawn();
             } else if (1 != players.size) {

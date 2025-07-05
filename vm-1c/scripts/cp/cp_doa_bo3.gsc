@@ -219,7 +219,7 @@ function function_75772673(player) {
     self thread function_cd6da677(player);
     self thread function_cef7f9fd();
     self thread function_8e619e60(player);
-    color = namespace_831a4a7c::function_ee495f41(player.entnum);
+    color = doa_player_utility::function_ee495f41(player.entnum);
     trail = "gem_trail_" + color;
     self setplayercollision(0);
     self namespace_51bd792::droptoground(self.origin, trail, "turret_impact", 0, 0);
@@ -281,7 +281,7 @@ function function_89a2ffc4(player) {
     self.goalradius = 100;
     self.allowpain = 0;
     self.var_688f2d0c = &function_f45d4afc;
-    self namespace_eaa992c::function_285a2999("player_trail_" + namespace_831a4a7c::function_ee495f41(player.entnum));
+    self namespace_eaa992c::function_285a2999("player_trail_" + doa_player_utility::function_ee495f41(player.entnum));
     self.holdfire = 0;
     self.updatesight = 1;
     self setthreatbiasgroup("players");
@@ -391,7 +391,7 @@ function function_165c9bd0() {
             namespace_3ca3c537::function_ba9c838e();
             level thread util::set_lighting_state(3);
             namespace_cdb9a8fe::function_55762a85();
-            namespace_831a4a7c::function_82e3b1cb();
+            doa_player_utility::function_82e3b1cb();
         }
         level.doa.var_602737ab = undefined;
         level thread function_1de9db1b("silverback");
@@ -402,7 +402,7 @@ function function_165c9bd0() {
             namespace_3ca3c537::function_5af67667(namespace_3ca3c537::function_5835533a("cave"), 1);
             namespace_3ca3c537::function_ba9c838e();
             namespace_cdb9a8fe::function_55762a85();
-            namespace_831a4a7c::function_82e3b1cb();
+            doa_player_utility::function_82e3b1cb();
         }
         level.doa.var_bae65231 = undefined;
         level thread function_1de9db1b("margwa");

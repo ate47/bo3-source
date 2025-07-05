@@ -329,7 +329,7 @@ function doaUpdateToGoal(behaviortreeentity) {
         }
         if (time > self.var_dc3adfc7) {
             self.var_dc3adfc7 = time + -6;
-            closest = namespace_831a4a7c::function_35f36dec(self.origin);
+            closest = doa_player_utility::function_35f36dec(self.origin);
             if (isdefined(closest) && behaviortreeentity.enemy != closest) {
                 distsq = distancesquared(closest.origin, self.origin);
                 if (distsq <= -128 * -128) {
@@ -721,7 +721,7 @@ function function_7c435737() {
     self endon(#"death");
     self endon(#"hash_10fd80ee");
     while (isalive(self)) {
-        target = namespace_831a4a7c::function_35f36dec(self.origin);
+        target = doa_player_utility::function_35f36dec(self.origin);
         if (isdefined(target) && !(isdefined(self.ignoreall) && self.ignoreall)) {
             self setentitytarget(target);
         } else {

@@ -199,7 +199,7 @@ function onplayerdisconnect() {
         level thread [[ level.var_3dbc348c ]]();
     }
     self zm_laststand::add_weighted_down();
-    level zm::function_481dd8eb(self);
+    level zm::checkforalldead(self);
 }
 
 // Namespace zm_gametype
@@ -543,7 +543,7 @@ function menu_onmenuresponse() {
                     self zm_laststand::add_weighted_down();
                     self zm_stats::increment_client_stat("deaths");
                     self zm_stats::increment_player_stat("deaths");
-                    self namespace_25f8c2ad::function_3699cfb6();
+                    self zm_pers_upgrades_functions::function_3699cfb6();
                     level.host_ended_game = 1;
                     zm_game_module::function_e3c73203(1);
                     level notify(#"end_game");
@@ -555,7 +555,7 @@ function menu_onmenuresponse() {
             self zm_laststand::add_weighted_down();
             self zm_stats::increment_client_stat("deaths");
             self zm_stats::increment_player_stat("deaths");
-            self namespace_25f8c2ad::function_3699cfb6();
+            self zm_pers_upgrades_functions::function_3699cfb6();
             missionfailed();
         }
         if (response == "killserverpc") {

@@ -108,7 +108,7 @@ function player_last_stand_stats(einflictor, attacker, idamage, smeansofdeath, w
     if (level flag::get("solo_game") && !self.lives && getnumconnectedplayers() < 2) {
         self zm_stats::increment_client_stat("deaths");
         self zm_stats::increment_player_stat("deaths");
-        self namespace_25f8c2ad::function_3699cfb6();
+        self zm_pers_upgrades_functions::function_3699cfb6();
     }
 }
 
@@ -149,8 +149,8 @@ function playerlaststand(einflictor, attacker, idamage, smeansofdeath, weapon, v
         return;
     }
     self thread player_last_stand_stats(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration);
-    if (isdefined(level.var_a6179873)) {
-        [[ level.var_a6179873 ]](einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration);
+    if (isdefined(level.playerlaststand_func)) {
+        [[ level.playerlaststand_func ]](einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration);
     }
     self.health = 1;
     self.laststand = 1;
@@ -268,8 +268,8 @@ function laststand_disable_player_weapons() {
             }
         }
     }
-    if (isdefined(self.hadpistol) && self.hadpistol && isdefined(level.var_ea98d60f)) {
-        self [[ level.var_ea98d60f ]]();
+    if (isdefined(self.hadpistol) && self.hadpistol && isdefined(level.zombie_last_stand_pistol_memory)) {
+        self [[ level.zombie_last_stand_pistol_memory ]]();
     }
     if (!isdefined(self.laststandpistol)) {
         if (!isdefined(self.var_cfcd9f89)) {
@@ -301,8 +301,8 @@ function laststand_enable_player_weapons() {
     if (isdefined(self.hadpistol) && !self.hadpistol && isdefined(self.laststandpistol)) {
         self takeweapon(self.laststandpistol);
     }
-    if (isdefined(self.hadpistol) && self.hadpistol == 1 && isdefined(level.var_c725f229) && isdefined(self.laststandpistol)) {
-        [[ level.var_c725f229 ]]();
+    if (isdefined(self.hadpistol) && self.hadpistol == 1 && isdefined(level.zombie_last_stand_ammo_return) && isdefined(self.laststandpistol)) {
+        [[ level.zombie_last_stand_ammo_return ]]();
     }
     self enableweaponcycling();
     self enableoffhandweapons();
@@ -457,7 +457,7 @@ function bleed_out() {
     self clientfield::set("zmbLastStand", 0);
     self zm_stats::increment_client_stat("deaths");
     self zm_stats::increment_player_stat("deaths");
-    self namespace_25f8c2ad::function_3699cfb6();
+    self zm_pers_upgrades_functions::function_3699cfb6();
     self recordplayerdeathzombies();
     self.last_bleed_out_time = gettime();
     self zm_equipment::take();
@@ -874,7 +874,7 @@ function revive_get_revive_time(e_revivee) {
     if (self hasperk("specialty_quickrevive")) {
         revivetime /= 2;
     }
-    if (self namespace_25f8c2ad::function_d3c7ee5c()) {
+    if (self zm_pers_upgrades_functions::function_d3c7ee5c()) {
         revivetime *= 0.5;
     }
     if (isdefined(self.get_revive_time)) {
@@ -929,7 +929,7 @@ function revive_do_revive(e_revivee, w_reviver, w_revive_tool, t_secondary) {
     self.var_fca62492.alpha = 1;
     self.var_fca62492.color = (1, 1, 1);
     self.var_fca62492.hidewheninmenu = 1;
-    if (self namespace_25f8c2ad::function_d3c7ee5c()) {
+    if (self zm_pers_upgrades_functions::function_d3c7ee5c()) {
         self.var_fca62492.color = (0.5, 0.5, 1);
     }
     self.var_fca62492 settext(%ZOMBIE_REVIVING);
@@ -1070,7 +1070,7 @@ function revive_success(reviver, b_track_stats) {
     self reviveplayer();
     self zm_perks::function_78f42790("health_reboot", 1, 0);
     if (isdefined(self.var_698f7e["perk_lose"]) && self.var_698f7e["perk_lose"]) {
-        self thread namespace_25f8c2ad::function_ac62adf2();
+        self thread zm_pers_upgrades_functions::function_ac62adf2();
     }
     if (isdefined(b_track_stats) && !(isdefined(level.isresetting_grief) && level.isresetting_grief) && b_track_stats) {
         reviver.revives++;
@@ -1081,7 +1081,7 @@ function revive_success(reviver, b_track_stats) {
         reviver.var_8cc9518d = self.origin;
     }
     if (isdefined(b_track_stats) && zm_utility::is_classic() && b_track_stats) {
-        namespace_25f8c2ad::function_9c80877a(reviver);
+        zm_pers_upgrades_functions::function_9c80877a(reviver);
     }
     if (isdefined(b_track_stats) && b_track_stats) {
         reviver thread check_for_sacrifice();

@@ -50,7 +50,7 @@ function double_points_powerup(drop_item, player) {
     team = player.team;
     level thread zm_powerups::show_on_hud(team, "double_points");
     if (isdefined(level.var_10626b86) && level.var_10626b86) {
-        player thread namespace_25f8c2ad::function_bb9a6b2c();
+        player thread zm_pers_upgrades_functions::function_bb9a6b2c();
     }
     if (isdefined(level.current_game_module) && level.current_game_module == 2) {
         if (isdefined(player._race_team)) {

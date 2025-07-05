@@ -153,7 +153,7 @@ function function_a5821e05(time) {
     level thread function_1d62c13a();
     foreach (player in getplayers()) {
         player freezecontrols(1);
-        player thread namespace_831a4a7c::function_4519b17(1);
+        player thread doa_player_utility::function_4519b17(1);
     }
     level lui::screen_fade_out(time, "black");
     wait time;
@@ -186,7 +186,7 @@ function function_c85960dd(hold_black_time, unfreeze) {
     if (unfreeze) {
         foreach (player in getplayers()) {
             player freezecontrols(0);
-            player thread namespace_831a4a7c::function_4519b17(0);
+            player thread doa_player_utility::function_4519b17(0);
         }
     }
     level notify(#"hash_dec47e9f");

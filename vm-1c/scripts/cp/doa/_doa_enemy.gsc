@@ -348,7 +348,7 @@ function doaUpdateToGoal(behaviortreeentity) {
         if (time > behaviortreeentity.var_dc3adfc7) {
             behaviortreeentity.var_dc3adfc7 = time + 1500;
             if (behaviortreeentity.team == "axis") {
-                validtargets = arraycombine(getaiteamarray("team3"), namespace_831a4a7c::function_5eb6e4d1(), 0, 0);
+                validtargets = arraycombine(getaiteamarray("team3"), doa_player_utility::function_5eb6e4d1(), 0, 0);
                 if (isdefined(level.doa.var_1332e37a) && level.doa.var_1332e37a.size) {
                     validtargets = arraycombine(validtargets, level.doa.var_1332e37a, 0, 0);
                 }
@@ -357,7 +357,7 @@ function doaUpdateToGoal(behaviortreeentity) {
                 closest = arraygetclosest(behaviortreeentity.origin, getaiteamarray("axis"));
             }
             if (isdefined(closest) && behaviortreeentity.enemy != closest) {
-                if (namespace_831a4a7c::function_5eb6e4d1().size > 1 && isplayer(closest)) {
+                if (doa_player_utility::function_5eb6e4d1().size > 1 && isplayer(closest)) {
                     behaviortreeentity.favoriteenemy = closest;
                     behaviortreeentity setpersonalthreatbias(closest, 5000, 1.5);
                 } else {
@@ -777,7 +777,7 @@ function function_7c435737() {
     self endon(#"death");
     self endon(#"hash_10fd80ee");
     while (isalive(self)) {
-        target = namespace_831a4a7c::function_35f36dec(self.origin);
+        target = doa_player_utility::function_35f36dec(self.origin);
         if (isdefined(target) && !(isdefined(self.ignoreall) && self.ignoreall)) {
             self setentitytarget(target);
         } else {

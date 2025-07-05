@@ -222,14 +222,14 @@ function init() {
     }
     level.projectiles_should_ignore_world_pause = 1;
     level.player_out_of_playable_area_monitor = 1;
-    level.var_67a71cec = 1;
-    level.var_a3e1b821 = &function_67a71cec;
+    level.player_too_many_weapons_monitor = 1;
+    level.player_too_many_weapons_monitor_func = &function_67a71cec;
     level.player_too_many_players_check = 1;
     level.player_too_many_players_check_func = &player_too_many_players_check;
     level._use_choke_weapon_hints = 1;
     level._use_choke_blockers = 1;
     level.speed_change_round = 15;
-    level.var_46df529e = 0;
+    level.passed_introscreen = 0;
     if (!isdefined(level.custom_ai_type)) {
         level.custom_ai_type = [];
     }
@@ -442,7 +442,7 @@ function fade_out_intro_screen_zm(hold_black_time, fade_out_time, var_47f9982a) 
     level clientfield::set("sndZMBFadeIn", 1);
     lui::screen_fade_in(fade_out_time, undefined);
     wait 1.6;
-    level.var_46df529e = 1;
+    level.passed_introscreen = 1;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         if (isdefined(level.var_9f508948)) {
@@ -473,9 +473,9 @@ function fade_out_intro_screen_zm(hold_black_time, fade_out_time, var_47f9982a) 
 function function_4af767f3() {
     self setclientuivisibilityflag("hud_visible", 1);
     self setclientuivisibilityflag("weapon_hud_visible", 1);
-    if (!(isdefined(self.var_3aadb7ec) && self.var_3aadb7ec) && sessionmodeisonlinegame()) {
+    if (!(isdefined(self.seen_promo_anim) && self.seen_promo_anim) && sessionmodeisonlinegame()) {
         self luinotifyevent(%play_promo_anim, 0);
-        self.var_3aadb7ec = 1;
+        self.seen_promo_anim = 1;
     }
 }
 
@@ -589,11 +589,11 @@ function getallotherplayers() {
 function updateplayernum(player) {
     if (!isdefined(player.playernum)) {
         if (player.team == "allies") {
-            player.playernum = zm_utility::function_ecf6d352("_team1_num");
+            player.playernum = zm_utility::get_game_var("_team1_num");
             zm_utility::function_669b4ee("_team1_num", player.playernum + 1);
             return;
         }
-        player.playernum = zm_utility::function_ecf6d352("_team2_num");
+        player.playernum = zm_utility::get_game_var("_team2_num");
         zm_utility::function_669b4ee("_team2_num", player.playernum + 1);
     }
 }
@@ -619,8 +619,8 @@ function getfreespawnpoint(spawnpoints, player) {
             zm_utility::function_669b4ee("side_selection", 2);
         }
     }
-    side_selection = zm_utility::function_ecf6d352("side_selection");
-    if (zm_utility::function_ecf6d352("switchedsides")) {
+    side_selection = zm_utility::get_game_var("side_selection");
+    if (zm_utility::get_game_var("switchedsides")) {
         if (side_selection == 2) {
             side_selection = 1;
         } else if (side_selection == 1) {
@@ -708,7 +708,7 @@ function add_bots() {
         players[i] freezecontrols(0);
         println("<dev string:xe3>");
     }
-    level.var_168aa63a = 1;
+    level.numberbotsadded = 1;
     level flag::set("start_zombie_round_logic");
 }
 
@@ -737,9 +737,9 @@ function function_55942d64() {
 function post_all_players_connected() {
     level thread end_game();
     level flag::wait_till("start_zombie_round_logic");
-    zm_utility::function_d691fa6("start_per_game", 1);
-    zm_utility::function_d691fa6("start_per_player", level.players.size);
-    zm_utility::function_63f08cf();
+    zm_utility::increment_zm_dash_counter("start_per_game", 1);
+    zm_utility::increment_zm_dash_counter("start_per_player", level.players.size);
+    zm_utility::upload_zm_dash_counters();
     level.var_e656acd7 = level.players.size;
     println("<dev string:x112>", level.script, "<dev string:x125>", getplayers().size);
     level thread round_end_monitor();
@@ -759,7 +759,7 @@ function post_all_players_connected() {
 // Size: 0x34
 function start_zm_dash_counter_watchers() {
     level thread first_consumables_used_watcher();
-    level thread function_ba01dda6();
+    level thread players_reached_rounds_counter_watcher();
 }
 
 // Namespace zm
@@ -769,24 +769,24 @@ function start_zm_dash_counter_watchers() {
 function first_consumables_used_watcher() {
     level flag::init("first_consumables_used");
     level flag::wait_till("first_consumables_used");
-    zm_utility::function_d691fa6("first_consumables_used", 1);
-    zm_utility::function_63f08cf();
+    zm_utility::increment_zm_dash_counter("first_consumables_used", 1);
+    zm_utility::upload_zm_dash_counters();
 }
 
 // Namespace zm
 // Params 0, eflags: 0x0
 // Checksum 0x5438e105, Offset: 0x5a80
 // Size: 0xb2
-function function_ba01dda6() {
+function players_reached_rounds_counter_watcher() {
     while (true) {
         level waittill(#"start_of_round");
-        if (!isdefined(level.var_afb07d3e) && level.round_number >= 5) {
-            level.var_afb07d3e = 1;
-            zm_utility::function_d691fa6("reached_5", 1);
+        if (!isdefined(level.dash_counter_round_reached_5) && level.round_number >= 5) {
+            level.dash_counter_round_reached_5 = 1;
+            zm_utility::increment_zm_dash_counter("reached_5", 1);
         }
-        if (!isdefined(level.var_b4c367be) && level.round_number >= 10) {
-            level.var_b4c367be = 1;
-            zm_utility::function_d691fa6("reached_10", 1);
+        if (!isdefined(level.dash_counter_round_reached_10) && level.round_number >= 10) {
+            level.dash_counter_round_reached_10 = 1;
+            zm_utility::increment_zm_dash_counter("reached_10", 1);
             return;
         }
     }
@@ -1104,7 +1104,7 @@ function init_function_overrides() {
     level.callbackplayerdamage = &callback_playerdamage;
     level.overrideplayerdamage = &player_damage_override;
     level.callbackplayerkilled = &player_killed_override;
-    level.var_a6179873 = &player_laststand;
+    level.playerlaststand_func = &player_laststand;
     level.callbackplayerlaststand = &callback_playerlaststand;
     level.prevent_player_damage = &player_prevent_damage;
     level.callbackactorkilled = &actor_killed_override;
@@ -1114,12 +1114,12 @@ function init_function_overrides() {
     level.callbackvehicleradiusdamage = &globallogic_vehicle::callback_vehicleradiusdamage;
     level.custom_introscreen = &zombie_intro_screen;
     level.custom_intermission = &player_intermission;
-    level.var_e88bb559 = &zm_spawner::zombie_damage;
-    level.var_6a21f752 = &zm_spawner::function_d0cf525a;
+    level.global_damage_func = &zm_spawner::zombie_damage;
+    level.global_damage_func_ads = &zm_spawner::zombie_damage_ads;
     level.reset_clientdvars = &onplayerconnect_clientdvars;
     level.zombie_last_stand = &function_a47dc1dc;
-    level.var_ea98d60f = &function_49522263;
-    level.var_c725f229 = &function_24f27c;
+    level.zombie_last_stand_pistol_memory = &last_stand_save_pistol_ammo;
+    level.zombie_last_stand_ammo_return = &last_stand_restore_pistol_ammo;
     level.player_becomes_zombie = &zombify_player;
     level.validate_enemy_path_length = &zm_utility::default_validate_enemy_path_length;
 }
@@ -1187,8 +1187,8 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
             return;
         }
     }
-    if (isdefined(level.var_6e4e78c7) && level.var_6e4e78c7) {
-        self namespace_25f8c2ad::function_19d853ae(smeansofdeath, eattacker);
+    if (isdefined(level.pers_upgrade_insta_kill) && level.pers_upgrade_insta_kill) {
+        self zm_pers_upgrades_functions::pers_insta_kill_melee_swipe(smeansofdeath, eattacker);
     }
     if (isdefined(self.overrideplayerdamage)) {
         idamage = self [[ self.overrideplayerdamage ]](einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime);
@@ -1223,9 +1223,9 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
         shitloc = "torso_upper";
     }
     println("<dev string:x1f0>");
-    var_87cdb53f = 0;
+    wasdowned = 0;
     if (isplayer(self)) {
-        var_87cdb53f = !startedinlaststand && self laststand::player_is_in_laststand();
+        wasdowned = !startedinlaststand && self laststand::player_is_in_laststand();
     }
     /#
         if (isdefined(eattacker)) {
@@ -1235,7 +1235,7 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
         }
     #/
     self finishplayerdamagewrapper(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, vsurfacenormal);
-    bb::logdamage(eattacker, self, weapon, idamage, smeansofdeath, shitloc, self.health <= 0, var_87cdb53f);
+    bb::logdamage(eattacker, self, weapon, idamage, smeansofdeath, shitloc, self.health <= 0, wasdowned);
 }
 
 // Namespace zm
@@ -1415,18 +1415,18 @@ function onplayerconnect_clientdvars() {
 // Params 1, eflags: 0x0
 // Checksum 0x2c6fe200, Offset: 0x89a8
 // Size: 0xfe
-function function_481dd8eb(var_43bf5f75) {
+function checkforalldead(excluded_player) {
     players = getplayers();
     count = 0;
     for (i = 0; i < players.size; i++) {
-        if (isdefined(var_43bf5f75) && var_43bf5f75 == players[i]) {
+        if (isdefined(excluded_player) && excluded_player == players[i]) {
             continue;
         }
         if (!players[i] laststand::player_is_in_laststand() && !(players[i].sessionstate == "spectator")) {
             count++;
         }
     }
-    if (count == 0 && !(isdefined(level.var_50a71706) && level.var_50a71706)) {
+    if (count == 0 && !(isdefined(level.no_end_game_check) && level.no_end_game_check)) {
         level notify(#"end_game");
     }
 }
@@ -1475,8 +1475,8 @@ function onplayerspawned() {
         if (isdefined(level.player_out_of_playable_area_monitor) && level.player_out_of_playable_area_monitor) {
             self thread player_out_of_playable_area_monitor();
         }
-        if (isdefined(level.var_67a71cec) && level.var_67a71cec) {
-            self thread [[ level.var_a3e1b821 ]]();
+        if (isdefined(level.player_too_many_weapons_monitor) && level.player_too_many_weapons_monitor) {
+            self thread [[ level.player_too_many_weapons_monitor_func ]]();
         }
         if (isdefined(level.player_too_many_players_check) && level.player_too_many_players_check) {
             level thread [[ level.player_too_many_players_check_func ]]();
@@ -1977,7 +1977,7 @@ function player_laststand(einflictor, attacker, idamage, smeansofdeath, weapon, 
     currweapon = self getcurrentweapon();
     self addweaponstat(currweapon, "deathsDuringUse", 1);
     if (isdefined(self.var_698f7e["perk_lose"]) && self.var_698f7e["perk_lose"]) {
-        self namespace_25f8c2ad::function_b725835b();
+        self zm_pers_upgrades_functions::function_b725835b();
     }
     players = getplayers();
     if (players.size == 1 && level flag::get("solo_game")) {
@@ -2023,12 +2023,12 @@ function player_laststand(einflictor, attacker, idamage, smeansofdeath, weapon, 
 // Params 1, eflags: 0x0
 // Checksum 0x45e47e8, Offset: 0xaa00
 // Size: 0x1a4
-function function_ec9a829e(var_43bf5f75) {
+function function_ec9a829e(excluded_player) {
     for (i = 0; i < 10; i++) {
         wait 0.05;
         players = getplayers();
         foreach (player in players) {
-            if (player == var_43bf5f75 || !isdefined(player.var_30d551a2) || player zm_laststand::is_reviving_any()) {
+            if (player == excluded_player || !isdefined(player.var_30d551a2) || player zm_laststand::is_reviving_any()) {
                 continue;
             }
             /#
@@ -2347,7 +2347,7 @@ function function_21a82999(struct_array) {
 // Params 0, eflags: 0x0
 // Checksum 0xf27fd251, Offset: 0xbec0
 // Size: 0x26c
-function function_49522263() {
+function last_stand_save_pistol_ammo() {
     weapon_inventory = self getweaponslist(1);
     self.var_a95f4d82 = [];
     for (i = 0; i < weapon_inventory.size; i++) {
@@ -2376,7 +2376,7 @@ function function_49522263() {
 // Params 0, eflags: 0x0
 // Checksum 0x43fdcd2c, Offset: 0xc138
 // Size: 0x3ec
-function function_24f27c() {
+function last_stand_restore_pistol_ammo() {
     self.var_cd3f6e8f = level.weaponnone;
     if (!isdefined(self.var_a95f4d82)) {
         return;
@@ -3341,7 +3341,7 @@ function round_think(restart) {
             [[ level.round_end_custom_logic ]]();
         }
         players = getplayers();
-        if (isdefined(level.var_50a71706) && level.var_50a71706) {
+        if (isdefined(level.no_end_game_check) && level.no_end_game_check) {
             level thread last_stand_revive();
             level thread spectators_respawn();
         } else if (1 != players.size) {
@@ -4013,7 +4013,7 @@ function player_damage_override(einflictor, eattacker, idamage, idflags, smeanso
         return finaldamage;
     }
     if (players.size == 1 && level flag::get("solo_game")) {
-        if (isdefined(level.var_4cf8bbbd) && (isdefined(level.var_50a71706) && level.var_50a71706 || [[ level.var_4cf8bbbd ]]())) {
+        if (isdefined(level.var_4cf8bbbd) && (isdefined(level.no_end_game_check) && level.no_end_game_check || [[ level.var_4cf8bbbd ]]())) {
             return finaldamage;
         } else if (self.lives == 0 || !self hasperk("specialty_quickrevive")) {
             self.intermission = 1;
@@ -4021,7 +4021,7 @@ function player_damage_override(einflictor, eattacker, idamage, idflags, smeanso
     }
     var_c47bf847 = self.lives == 0 || players.size == 1 && level flag::get("solo_game") && !self hasperk("specialty_quickrevive");
     var_af50710b = players.size == 1 && (count > 1 || !level flag::get("solo_game"));
-    if ((var_c47bf847 || var_af50710b) && !(isdefined(level.var_50a71706) && level.var_50a71706)) {
+    if ((var_c47bf847 || var_af50710b) && !(isdefined(level.no_end_game_check) && level.no_end_game_check)) {
         level notify(#"stop_suicide_trigger");
         self allowprone(1);
         self thread zm_laststand::playerlaststand(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime);
@@ -4036,7 +4036,7 @@ function player_damage_override(einflictor, eattacker, idamage, idflags, smeanso
             self thread player_fake_death();
         }
     }
-    if (count == players.size && !(isdefined(level.var_50a71706) && level.var_50a71706)) {
+    if (count == players.size && !(isdefined(level.no_end_game_check) && level.no_end_game_check)) {
         if (players.size == 1 && level flag::get("solo_game")) {
             if (self.lives == 0 || !self hasperk("specialty_quickrevive")) {
                 self.lives = 0;
@@ -4116,7 +4116,7 @@ function wait_and_revive() {
         return;
     }
     if (isdefined(self.var_698f7e["perk_lose"]) && self.var_698f7e["perk_lose"]) {
-        self namespace_25f8c2ad::function_b725835b();
+        self zm_pers_upgrades_functions::function_b725835b();
     }
     self.waiting_to_revive = 1;
     self.lives--;
@@ -4142,7 +4142,7 @@ function wait_and_revive() {
     self zm_laststand::auto_revive(self);
     self.waiting_to_revive = 0;
     if (isdefined(self.var_698f7e["perk_lose"]) && self.var_698f7e["perk_lose"]) {
-        self thread namespace_25f8c2ad::function_ac62adf2();
+        self thread zm_pers_upgrades_functions::function_ac62adf2();
     }
 }
 
@@ -4415,7 +4415,7 @@ function round_end_monitor() {
         level waittill(#"end_of_round");
         demo::bookmark("zm_round_end", gettime(), undefined, undefined, 1);
         bbpostdemostreamstatsforround(level.round_number);
-        zm_utility::function_63f08cf();
+        zm_utility::upload_zm_dash_counters();
         wait 0.05;
     }
 }
@@ -4425,18 +4425,18 @@ function round_end_monitor() {
 // Checksum 0x21b849e7, Offset: 0x13aa8
 // Size: 0x114
 function function_c67c5c4a() {
-    zm_utility::function_d691fa6("end_per_game", 1);
-    zm_utility::function_d691fa6("end_per_player", level.players.size);
-    if (!(isdefined(level.var_afb07d3e) && level.var_afb07d3e)) {
-        zm_utility::function_d691fa6("end_less_5", 1);
-    } else if (!(isdefined(level.var_b4c367be) && level.var_b4c367be)) {
-        zm_utility::function_d691fa6("end_reached_5_less_10", 1);
+    zm_utility::increment_zm_dash_counter("end_per_game", 1);
+    zm_utility::increment_zm_dash_counter("end_per_player", level.players.size);
+    if (!(isdefined(level.dash_counter_round_reached_5) && level.dash_counter_round_reached_5)) {
+        zm_utility::increment_zm_dash_counter("end_less_5", 1);
+    } else if (!(isdefined(level.dash_counter_round_reached_10) && level.dash_counter_round_reached_10)) {
+        zm_utility::increment_zm_dash_counter("end_reached_5_less_10", 1);
     } else {
-        zm_utility::function_d691fa6("end_reached_10", 1);
+        zm_utility::increment_zm_dash_counter("end_reached_10", 1);
     }
     if (!zm_utility::is_solo_ranked_game()) {
         if (level.var_e656acd7 != level.players.size) {
-            zm_utility::function_d691fa6("end_player_count_diff", 1);
+            zm_utility::increment_zm_dash_counter("end_player_count_diff", 1);
         }
     }
 }
@@ -4463,7 +4463,7 @@ function end_game() {
             players[i] recordplayerdeathzombies();
             players[i] zm_stats::increment_player_stat("deaths");
             players[i] zm_stats::increment_client_stat("deaths");
-            players[i] namespace_25f8c2ad::function_3699cfb6();
+            players[i] zm_pers_upgrades_functions::function_3699cfb6();
         }
         if (isdefined(players[i].var_fca62492)) {
             players[i].var_fca62492 destroy();
@@ -5164,11 +5164,11 @@ function precache_zombie_leaderboards() {
 // Checksum 0x85d9b28b, Offset: 0x16790
 // Size: 0x1c8
 function zm_on_player_connect() {
-    if (level.var_46df529e) {
+    if (level.passed_introscreen) {
         self setclientuivisibilityflag("hud_visible", 1);
         self setclientuivisibilityflag("weapon_hud_visible", 1);
-        zm_utility::function_d691fa6("hotjoined", 1);
-        zm_utility::function_63f08cf();
+        zm_utility::increment_zm_dash_counter("hotjoined", 1);
+        zm_utility::upload_zm_dash_counters();
     }
     self flag::init("used_consumable");
     self thread zm_utility::function_d6ee2ab();
@@ -5192,8 +5192,8 @@ function zm_on_player_connect() {
 // Size: 0x44
 function function_ea9f4cdf() {
     thread function_785a0ae4();
-    zm_utility::function_d691fa6("left_midgame", 1);
-    zm_utility::function_63f08cf();
+    zm_utility::increment_zm_dash_counter("left_midgame", 1);
+    zm_utility::upload_zm_dash_counters();
 }
 
 // Namespace zm

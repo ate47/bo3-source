@@ -216,8 +216,8 @@ function door_buy() {
     if (zm_utility::is_player_valid(who)) {
         players = getplayers();
         cost = self.zombie_cost;
-        if (who namespace_25f8c2ad::function_dc08b4af()) {
-            cost = who namespace_25f8c2ad::function_4ef410da(cost);
+        if (who zm_pers_upgrades_functions::function_dc08b4af()) {
+            cost = who zm_pers_upgrades_functions::function_4ef410da(cost);
             upgraded = 1;
         }
         if (self._door_open == 1) {
@@ -1387,7 +1387,7 @@ function handle_post_board_repair_rewards(cost, zbarrier) {
     if (isdefined(self.pers["boards"]) && self.pers["boards"] % 10 == 0) {
         self zm_audio::create_and_play_dialog("general", "rebuild_boards");
     }
-    self namespace_25f8c2ad::function_66dcadff(zbarrier);
+    self zm_pers_upgrades_functions::function_66dcadff(zbarrier);
     self.rebuild_barrier_reward += cost;
     if (self.rebuild_barrier_reward < level.zombie_vars["rebuild_barrier_cap_per_round"]) {
         self zm_score::player_add_points("rebuild_board", cost);

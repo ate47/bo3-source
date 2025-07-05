@@ -342,8 +342,8 @@ function private function_c101a20e() {
             player.restore_max = current_weapon.maxammo;
             var_ca548511 = 1;
         }
-        if (player namespace_25f8c2ad::function_dc08b4af()) {
-            current_cost = player namespace_25f8c2ad::function_4ef410da(current_cost);
+        if (player zm_pers_upgrades_functions::function_dc08b4af()) {
+            current_cost = player zm_pers_upgrades_functions::function_4ef410da(current_cost);
         }
         if (!player zm_score::can_player_purchase(current_cost)) {
             self playsound("zmb_perks_packa_deny");

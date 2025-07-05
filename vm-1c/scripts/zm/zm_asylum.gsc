@@ -549,10 +549,10 @@ function function_91b06047(predictedspawn) {
 function function_290134d5(spawnpoints, player) {
     if (!isdefined(self.playernum)) {
         if (self.team == "allies") {
-            self.playernum = zm_utility::function_ecf6d352("_team1_num");
+            self.playernum = zm_utility::get_game_var("_team1_num");
             zm_utility::function_669b4ee("_team1_num", self.playernum + 1);
         } else {
-            self.playernum = zm_utility::function_ecf6d352("_team2_num");
+            self.playernum = zm_utility::get_game_var("_team2_num");
             zm_utility::function_669b4ee("_team2_num", self.playernum + 1);
         }
     }

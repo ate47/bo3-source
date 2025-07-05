@@ -166,7 +166,7 @@ function main() {
     level thread zm::register_sidequest("EOA", "ZOMBIE_TEMPLE_SIDEQUEST");
     level.poi_positioning_func = &function_11d6036e;
     level.powerup_fx_func = &function_9e1c8359;
-    level.var_a6179873 = &function_baa1d0c5;
+    level.playerlaststand_func = &function_baa1d0c5;
     level.zombie_total_set_func = &function_f10deff8;
     level.override_thundergun_damage_func = &zm_temple_traps::override_thundergun_damage_func;
     level thread zm_temple_power::function_4323754a();

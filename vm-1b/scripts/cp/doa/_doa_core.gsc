@@ -211,9 +211,9 @@ function on_player_spawned() {
     namespace_49107f3a::debugmsg("on_player_spawned-> " + (isdefined(self.name) ? self.name : "unk"));
     self thread initialblack();
     self.topdowncamera = 1;
-    self thread namespace_831a4a7c::function_138c35de();
-    self namespace_831a4a7c::function_7d7a7fde();
-    self namespace_831a4a7c::function_60123d1c();
+    self thread doa_player_utility::function_138c35de();
+    self doa_player_utility::function_7d7a7fde();
+    self doa_player_utility::function_60123d1c();
     self util::set_lighting_state();
     self notify(#"give_achievement", "CP_UNLOCK_DOA");
     if (level.doa.round_number >= 9) {
@@ -375,10 +375,10 @@ function function_555fb805() {
     level.weaponnone = getweapon("none");
     level.var_5890c17b = 0;
     level.spawnspectator = &function_688245f1;
-    level.callbackplayerkilled = &namespace_831a4a7c::function_3682cfe4;
-    level.callbackplayerdamage = &namespace_831a4a7c::function_bfbc53f4;
-    level.callbackplayerlaststand = &namespace_831a4a7c::function_f847ee8c;
-    level.var_a6179873 = &namespace_831a4a7c::function_f847ee8c;
+    level.callbackplayerkilled = &doa_player_utility::function_3682cfe4;
+    level.callbackplayerdamage = &doa_player_utility::function_bfbc53f4;
+    level.callbackplayerlaststand = &doa_player_utility::function_f847ee8c;
+    level.playerlaststand_func = &doa_player_utility::function_f847ee8c;
     level.callbackactordamage = &doa_enemy::function_2241fc21;
     level.callbackactorkilled = &doa_enemy::function_ff217d39;
     level.callbackvehicledamage = &doa_enemy::function_c26b6656;
@@ -533,7 +533,7 @@ function function_3e351f83(firsttime) {
     function_c7f824a();
     namespace_3ca3c537::init();
     namespace_3ca3c537::function_5af67667(level.doa.var_90873830);
-    namespace_831a4a7c::function_4db260cb();
+    doa_player_utility::function_4db260cb();
     namespace_cdb9a8fe::function_55762a85();
     namespace_d88e3a06::function_7a8a936b();
     namespace_3ca3c537::function_1c812a03();
@@ -560,14 +560,14 @@ function function_dc4ffe5c() {
         if (!level flag::get("doa_game_is_running")) {
             continue;
         }
-        players = namespace_831a4a7c::function_5eb6e4d1();
+        players = doa_player_utility::function_5eb6e4d1();
         curcount = players.size;
         if (curcount != var_97e9dd7) {
             namespace_49107f3a::debugmsg("Player Count change detected: " + curcount);
         }
         foreach (player in players) {
             player thread namespace_64c6b720::function_676edeb7();
-            player thread namespace_831a4a7c::updateweapon();
+            player thread doa_player_utility::updateweapon();
         }
     }
 }
@@ -597,7 +597,7 @@ function function_64a5cd5e() {
     namespace_d88e3a06::function_116bb43();
     namespace_49107f3a::function_1ced251e(1);
     foreach (player in getplayers()) {
-        player namespace_831a4a7c::function_7f33210a();
+        player doa_player_utility::function_7f33210a();
     }
     level clientfield::set("set_scoreHidden", 1);
     level clientfield::set("activateBanner", 0);
@@ -638,8 +638,8 @@ function function_688245f1() {
     self.psoffsettime = 0;
     self.friendlydamage = undefined;
     self.statusicon = "";
-    self namespace_831a4a7c::function_60123d1c();
-    spawnpoint = namespace_831a4a7c::function_68ece679();
+    self doa_player_utility::function_60123d1c();
+    spawnpoint = doa_player_utility::function_68ece679();
     self spawn(self.origin, self.angles);
     self thread namespace_cdb9a8fe::function_fe0946ac();
     self ghost();

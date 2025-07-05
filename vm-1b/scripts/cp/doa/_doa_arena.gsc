@@ -284,7 +284,7 @@ function function_e88371e5() {
 // Checksum 0xd95358a, Offset: 0x16b8
 // Size: 0x74c
 function private function_1c54aa82(room) {
-    players = namespace_831a4a7c::function_5eb6e4d1();
+    players = doa_player_utility::function_5eb6e4d1();
     playercount = players.size;
     level.doa.var_e9339daa = level.doa.var_90873830;
     level thread namespace_49107f3a::clearallcorpses();
@@ -308,7 +308,7 @@ function private function_1c54aa82(room) {
             }
         }
     }
-    namespace_831a4a7c::function_82e3b1cb();
+    doa_player_utility::function_82e3b1cb();
     room.cooloff = gettime() + 10 * 60000;
     level.doa.var_6f2c52d8 = 1;
     level thread namespace_49107f3a::set_lighting_state(0);

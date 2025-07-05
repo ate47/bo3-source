@@ -51,7 +51,7 @@ function insta_kill_powerup(drop_item, player) {
         return;
     }
     if (zm_utility::is_classic()) {
-        player thread namespace_25f8c2ad::function_a312b387();
+        player thread zm_pers_upgrades_functions::function_a312b387();
     }
     team = player.team;
     level thread zm_powerups::show_on_hud(team, "insta_kill");

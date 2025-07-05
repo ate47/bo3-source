@@ -27,8 +27,8 @@ function setskill(reset, var_4f8d5b23) {
         if (isdefined(level.var_6108a7cb) && level.var_6108a7cb) {
             return;
         }
-        level.var_6a21f752 = &function_79977f70;
-        level.var_e88bb559 = &function_79977f70;
+        level.global_damage_func_ads = &function_79977f70;
+        level.global_damage_func = &function_79977f70;
         level.var_6c56e098 = &function_79977f70;
         util::set_console_status();
         thread function_610dfe1();

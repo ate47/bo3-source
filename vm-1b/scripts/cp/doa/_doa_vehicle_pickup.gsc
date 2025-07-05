@@ -63,14 +63,14 @@ function function_f27a22c8(player, origin) {
     heli.vehaircraftcollisionenabled = 1;
     heli.health = 9999999;
     heli.team = player.team;
-    heli setmodel("veh_t7_drone_hunter_zombietron_" + namespace_831a4a7c::function_ee495f41(player.entnum));
+    heli setmodel("veh_t7_drone_hunter_zombietron_" + doa_player_utility::function_ee495f41(player.entnum));
     heli usevehicle(player, 0);
     heli makeunusable();
     heli setheliheightlock(1);
     heli.owner = player;
     heli.playercontrolled = 1;
     heli.var_aaffbea7 = 1;
-    player namespace_831a4a7c::function_4519b17(1);
+    player doa_player_utility::function_4519b17(1);
     heli thread function_254eefd6(player, int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_cd899ae7)));
     player waittill(#"hash_d28ba89d");
     player notify(#"doa_playerVehiclePickup");
@@ -136,11 +136,11 @@ function function_21af9396(player, origin) {
     siegebot.team = player.team;
     siegebot.owner = player;
     siegebot.playercontrolled = 1;
-    siegebot setmodel("zombietron_siegebot_mini_" + namespace_831a4a7c::function_ee495f41(player.entnum));
+    siegebot setmodel("zombietron_siegebot_mini_" + doa_player_utility::function_ee495f41(player.entnum));
     siegebot usevehicle(player, 0);
     siegebot makeunusable();
     siegebot.health = 9999999;
-    player namespace_831a4a7c::function_4519b17(1);
+    player doa_player_utility::function_4519b17(1);
     siegebot thread function_db948b3();
     siegebot thread function_569d8fe3();
     player notify(#"doa_playerVehiclePickup");
@@ -176,12 +176,12 @@ function function_1e663abe(player, origin) {
     var_e34a8df9.angles = player.angles;
     var_e34a8df9.team = player.team;
     var_e34a8df9.playercontrolled = 1;
-    var_e34a8df9 setmodel("veh_t7_drone_raps_zombietron_" + namespace_831a4a7c::function_ee495f41(player.entnum));
+    var_e34a8df9 setmodel("veh_t7_drone_raps_zombietron_" + doa_player_utility::function_ee495f41(player.entnum));
     var_e34a8df9.owner = player;
     var_e34a8df9 usevehicle(player, 0);
     var_e34a8df9 makeunusable();
     var_e34a8df9.health = 9999999;
-    player namespace_831a4a7c::function_4519b17(1);
+    player doa_player_utility::function_4519b17(1);
     player notify(#"doa_playerVehiclePickup");
     var_e34a8df9 thread function_254eefd6(player, int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_7196fe3d)));
     player waittill(#"hash_d28ba89d");
@@ -216,11 +216,11 @@ function function_e9f445ce(player, origin) {
     var_b22d6040.angles = player.angles;
     var_b22d6040.team = player.team;
     var_b22d6040.playercontrolled = 1;
-    var_b22d6040 setmodel("veh_t7_mil_tank_tiger_zombietron_" + namespace_831a4a7c::function_ee495f41(player.entnum));
+    var_b22d6040 setmodel("veh_t7_mil_tank_tiger_zombietron_" + doa_player_utility::function_ee495f41(player.entnum));
     var_b22d6040 usevehicle(player, 0);
     var_b22d6040 makeunusable();
     var_b22d6040.health = 9999999;
-    player namespace_831a4a7c::function_4519b17(1);
+    player doa_player_utility::function_4519b17(1);
     player notify(#"doa_playerVehiclePickup");
     var_b22d6040.owner = player;
     var_b22d6040 thread function_254eefd6(player, int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_8b15034d)));
@@ -247,8 +247,8 @@ function function_d460de4b() {
     if (!isdefined(self) || !isdefined(self.doa)) {
         return;
     }
-    self thread namespace_831a4a7c::function_7f33210a();
-    self thread namespace_831a4a7c::turnOnFlashlight(0);
+    self thread doa_player_utility::function_7f33210a();
+    self thread doa_player_utility::turnOnFlashlight(0);
     self thread namespace_eaa992c::turnofffx("boots");
     self thread namespace_eaa992c::turnofffx("slow_feet");
     self.doa.var_c2b9d7d0 = gettime();
@@ -263,9 +263,9 @@ function function_d460de4b() {
 function function_d41a4517() {
     self endon(#"disconnect");
     util::wait_network_frame();
-    self thread namespace_831a4a7c::turnplayershieldon();
-    self thread namespace_831a4a7c::turnOnFlashlight(level.doa.var_458c27d == 3);
-    self thread namespace_831a4a7c::function_b5843d4f(level.doa.var_458c27d == 3);
+    self thread doa_player_utility::turnplayershieldon();
+    self thread doa_player_utility::turnOnFlashlight(level.doa.var_458c27d == 3);
+    self thread doa_player_utility::function_b5843d4f(level.doa.var_458c27d == 3);
     if (isdefined(self.doa.slow_feet) && isdefined(self.doa) && self.doa.slow_feet) {
         self thread namespace_eaa992c::function_285a2999("slow_feet");
     }
@@ -289,7 +289,7 @@ function function_3b1b644d(var_85f85940) {
     } else {
         self setorigin(var_85f85940);
     }
-    self namespace_831a4a7c::function_4519b17(0);
+    self doa_player_utility::function_4519b17(0);
     self.doa.vehicle = undefined;
     self thread function_d41a4517();
 }

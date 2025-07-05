@@ -237,7 +237,7 @@ function private function_66efd1eb() {
         self.ignoreall = 1;
         self.favoriteenemy = undefined;
         self clearentitytarget();
-        allies = arraycombine(getaiteamarray("allies"), namespace_831a4a7c::function_5eb6e4d1(), 0, 0);
+        allies = arraycombine(getaiteamarray("allies"), doa_player_utility::function_5eb6e4d1(), 0, 0);
         for (i = 0; i < allies.size; i++) {
             player = allies[i];
             if (!isdefined(player) || !isalive(player)) {

@@ -326,7 +326,7 @@ function function_eabe8c0(player, var_a6f28f3b) {
     mini_turret laseroff();
     if (isdefined(player)) {
         time_left = gettime() + player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_7daebb69 * 1000);
-        fx = namespace_831a4a7c::function_ee495f41(player.entnum);
+        fx = doa_player_utility::function_ee495f41(player.entnum);
         mini_turret thread namespace_eaa992c::function_285a2999("player_trail_" + fx);
     } else {
         time_left = gettime() + level.doa.rules.var_7daebb69 * 1000;
@@ -387,7 +387,7 @@ function function_3ce8bf1c(player, origin) {
     sprinkler thread namespace_1a381543::function_90118d8c("evt_sprinkler_land");
     sprinkler thread namespace_eaa992c::function_285a2999("sprinkler_land");
     if (isdefined(player)) {
-        fx = namespace_831a4a7c::function_ee495f41(player.entnum);
+        fx = doa_player_utility::function_ee495f41(player.entnum);
         sprinkler thread namespace_eaa992c::function_285a2999("player_trail_" + fx);
     }
     physicsexplosionsphere(mark, -56, -128, 3);
@@ -479,7 +479,7 @@ function amwsPickupUpdate(player, origin) {
         amws.overridevehicledamage = &function_f3ee1c57;
     }
     if (isdefined(player)) {
-        fx = namespace_831a4a7c::function_ee495f41(player.entnum);
+        fx = doa_player_utility::function_ee495f41(player.entnum);
         amws thread namespace_eaa992c::function_285a2999("player_trail_" + fx);
     }
     level thread function_dfe832b7(time_left, note);
