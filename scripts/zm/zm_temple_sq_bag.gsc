@@ -591,6 +591,8 @@ function debug_gong()
     #/
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_temple_sq_bag
 // Params 0
 // Checksum 0xfb366661, Offset: 0x2030
@@ -603,7 +605,7 @@ function gong_wobble()
     }
     
     self.wobble_threaded = 1;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     
     while ( true )
     {

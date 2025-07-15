@@ -42,13 +42,15 @@ function __init__()
     clientfield::register( "vehicle", "sarah_minigun_spin", 1, 1, "int" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace siegebot_theia
 // Params 0
 // Checksum 0xad9b74f2, Offset: 0x738
 // Size: 0x32c
 function siegebot_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     blackboard::createblackboardforentity( self );
     self blackboard::registervehicleblackboardattributes();
     self.health = self.healthdefault;

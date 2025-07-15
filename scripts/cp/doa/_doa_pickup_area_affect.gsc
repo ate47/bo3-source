@@ -343,6 +343,8 @@ function function_d171e15a( player, origin )
     level thread zombie_vortex::start_timed_vortex( origin, 128, 9, 10, undefined, player, undefined, undefined, undefined, undefined, 2 );
 }
 
+#using_animtree( "zombie_cymbal_monkey" );
+
 // Namespace doa_area_affect
 // Params 2
 // Checksum 0xc93f1ff3, Offset: 0x1338
@@ -357,8 +359,8 @@ function monkeyUpdate( player, origin )
     monkey setmodel( level.doa.var_d6256e83 );
     monkey thread doa_fx::function_285a2999( doa_player_utility::function_e7e0aa7f( player.entnum ) );
     def = doa_pickups::function_bac08508( 11 );
-    monkey useanimtree( $zombie_cymbal_monkey );
-    monkey animscripted( "anim", monkey.origin, monkey.angles, %zombie_cymbal_monkey::o_monkey_bomb );
+    monkey useanimtree( #animtree );
+    monkey animscripted( "anim", monkey.origin, monkey.angles, %o_monkey_bomb );
     monkey.angles = ( 0, randomint( 360 ), 0 );
     monkey makesentient();
     monkey.threatbias = 0;

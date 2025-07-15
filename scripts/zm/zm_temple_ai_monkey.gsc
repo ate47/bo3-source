@@ -1637,6 +1637,8 @@ function monkey_ambient_spawn()
     self.monkey clientfield::set( "monkey_ragdoll", 1 );
 }
 
+#using_animtree( "critter" );
+
 // Namespace zm_temple_ai_monkey
 // Params 0
 // Checksum 0x9bec44d0, Offset: 0x4cc8
@@ -1647,7 +1649,7 @@ function monkey_ambient_idle()
     self endon( #"monkey_cleanup" );
     level flag::wait_till( "zm_temple_connected" );
     self.anim_spot notify( #"monkey_stop_loop" );
-    self useanimtree( $critter );
+    self useanimtree( #animtree );
     self animation::stop( 0.2 );
     self animation::play( "rtrg_ai_zm_dlc5_monkey_calm_idle_loop_03", self.v_starting_origin, self.var_2e8d47d3 );
 }

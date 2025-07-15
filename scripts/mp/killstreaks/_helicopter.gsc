@@ -239,6 +239,8 @@ function heli_path_graph()
     assert( isdefined( level.heli_crash_paths[ 0 ] ), "<dev string:x12d>" );
 }
 
+#using_animtree( "mp_vehicles" );
+
 // Namespace helicopter
 // Params 0
 // Checksum 0xaccdb620, Offset: 0x2058
@@ -286,7 +288,7 @@ function init()
     level.chopper_fx[ "fire" ][ "trail" ][ "large" ] = "killstreaks/fx_heli_smk_trail_engine";
     level._effect[ "heli_comlink_light" ][ "friendly" ] = "_debug/fx_debug_deleted_fx";
     level._effect[ "heli_comlink_light" ][ "enemy" ] = "_debug/fx_debug_deleted_fx";
-    level.helicomlinkbootupanim = %mp_vehicles::veh_anim_future_heli_gearup_bay_open;
+    level.helicomlinkbootupanim = %veh_anim_future_heli_gearup_bay_open;
     killstreaks::register( "helicopter_comlink", "helicopter_comlink", "killstreak_helicopter_comlink", "helicopter_used", &usekillstreakhelicopter, 1 );
     killstreaks::register_strings( "helicopter_comlink", &"KILLSTREAK_EARNED_HELICOPTER_COMLINK", &"KILLSTREAK_HELICOPTER_COMLINK_NOT_AVAILABLE", &"KILLSTREAK_HELICOPTER_COMLINK_INBOUND", undefined, &"KILLSTREAK_HELICOPTER_COMLINK_HACKED" );
     killstreaks::register_dialog( "helicopter_comlink", "mpl_killstreak_heli", "helicopterDialogBundle", "helicopterPilotDialogBundle", "friendlyHelicopter", "enemyHelicopter", "enemyHelicopterMultiple", "friendlyHelicopterHacked", "enemyHelicopterHacked", "requestHelicopter", "threatHelicopter" );

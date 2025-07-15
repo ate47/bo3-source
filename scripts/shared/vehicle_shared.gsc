@@ -1208,6 +1208,8 @@ function _vehicle_spawn( vspawner, from )
     return vehicle;
 }
 
+#using_animtree( "generic" );
+
 // Namespace vehicle
 // Params 1
 // Checksum 0xc6fecf87, Offset: 0x3888
@@ -1215,7 +1217,7 @@ function _vehicle_spawn( vspawner, from )
 function init( vehicle )
 {
     callback::callback( #"hash_bae82b92" );
-    vehicle useanimtree( $generic );
+    vehicle useanimtree( #animtree );
     
     if ( isdefined( vehicle.e_dyn_path ) )
     {

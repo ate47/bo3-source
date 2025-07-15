@@ -276,6 +276,8 @@ function function_c7e74d12()
     exploder::stop_exploder( "fxexp_602" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_temple_sq_lgs
 // Params 0
 // Checksum 0x4e25620, Offset: 0x10b8
@@ -352,7 +354,7 @@ function lgs_crystal()
     self.trigger notsolid();
     self.trigger.takedamage = 0;
     self notsolid();
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self.animname = "crystal";
     vehicle = getent( "crystal_mover", "targetname" );
     vehicle.origin = self.origin;

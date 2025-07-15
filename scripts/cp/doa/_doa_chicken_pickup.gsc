@@ -14,6 +14,8 @@
 
 #namespace doa_chicken;
 
+#using_animtree( "critter" );
+
 // Namespace doa_chicken
 // Params 1
 // Checksum 0x7f90afb1, Offset: 0x588
@@ -23,9 +25,9 @@ function function_cdfa9ce8( bird )
     bird notify( #"hash_cf62504" );
     bird endon( #"hash_cf62504" );
     bird endon( #"death" );
-    bird useanimtree( $critter );
-    curanim = %critter::a_chicken_react_up_down;
-    lastanim = %critter::a_chicken_idle_peck;
+    bird useanimtree( #animtree );
+    curanim = %a_chicken_react_up_down;
+    lastanim = %a_chicken_idle_peck;
     bird thread doa_sound::function_90118d8c( "zmb_dblshot_squawk" );
     
     while ( isdefined( bird ) )
@@ -37,27 +39,27 @@ function function_cdfa9ce8( bird )
         
         if ( isdefined( self.var_3424aae1 ) && self.var_3424aae1 )
         {
-            curanim = %critter::a_chicken_react_up_down;
+            curanim = %a_chicken_react_up_down;
             bird thread doa_sound::function_90118d8c( "zmb_dblshot_squawk" );
         }
         else if ( isdefined( self.var_a732885d ) && self.var_a732885d )
         {
-            curanim = %critter::a_chicken_react_up_down;
+            curanim = %a_chicken_react_up_down;
             bird thread doa_sound::function_90118d8c( "zmb_dblshot_squawk" );
         }
         else if ( isdefined( self.var_7d36ff94 ) && self.var_7d36ff94 )
         {
-            curanim = %critter::a_chicken_react_up_down;
+            curanim = %a_chicken_react_up_down;
             self.var_7d36ff94 = undefined;
             bird thread doa_sound::function_90118d8c( "zmb_dblshot_squawk" );
         }
         else if ( isdefined( self.var_efa2b784 ) && self.var_efa2b784 )
         {
-            curanim = %critter::a_chicken_react_to_front_notrans;
+            curanim = %a_chicken_react_to_front_notrans;
         }
         else if ( isdefined( self.is_moving ) && self.is_moving )
         {
-            curanim = %critter::a_chicken_run;
+            curanim = %a_chicken_run;
         }
         
         bird animscripted( "chicken_anim", bird.origin, bird.angles, curanim );
@@ -68,13 +70,13 @@ function function_cdfa9ce8( bird )
         switch ( randomint( 3 ) )
         {
             case 0:
-                curanim = %critter::a_chicken_idle_peck;
+                curanim = %a_chicken_idle_peck;
                 break;
             case 1:
-                curanim = %critter::a_chicken_idle_a;
+                curanim = %a_chicken_idle_a;
                 break;
             case 2:
-                curanim = %critter::a_chicken_idle;
+                curanim = %a_chicken_idle;
                 break;
         }
     }

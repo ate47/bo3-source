@@ -197,6 +197,8 @@ function boss_beam_state( localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
+#using_animtree( "zm_genesis" );
+
 // Namespace zm_genesis_boss
 // Params 1
 // Checksum 0x4d9719b2, Offset: 0x1408
@@ -215,7 +217,7 @@ function function_eec997a( localclientnum )
         level.var_f0444f1b[ localclientnum ] = spawn( localclientnum, s_loc.origin, "script_model" );
         level.var_f0444f1b[ localclientnum ].angles = s_loc.angles;
         level.var_f0444f1b[ localclientnum ] setmodel( "p7_zm_gen_dark_arena_sphere" );
-        level.var_f0444f1b[ localclientnum ] useanimtree( $zm_genesis );
+        level.var_f0444f1b[ localclientnum ] useanimtree( #animtree );
     }
     
     return level.var_f0444f1b[ localclientnum ];

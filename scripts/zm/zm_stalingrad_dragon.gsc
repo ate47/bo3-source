@@ -4403,6 +4403,8 @@ function function_a08562dc( scriptbundlename, var_4ee9a8c8, var_8d89a2d7 )
     self thread function_32faa6e1( 1 );
 }
 
+#using_animtree( "generic" );
+
 // Namespace dragon
 // Params 1
 // Checksum 0x4496bf7c, Offset: 0xf828
@@ -4417,7 +4419,7 @@ function function_719d5095( animname )
     harpoon = spawn( "script_model", origin );
     harpoon setmodel( "veh_t7_dlc3_mech_nikolai_harpoon_large" );
     harpoon.angles = angles;
-    harpoon useanimtree( $generic );
+    harpoon useanimtree( #animtree );
     playfxontag( "dlc3/stalingrad/fx_mech_wpn_harpoon_trail_vignette", harpoon, "tag_origin" );
     self util::waittill_notify_or_timeout( "fire_harpoon", 0.1 );
     harpoon animation::play( animname, align, undefined, 1, 0.1, 0.1, 0.8, 0 );

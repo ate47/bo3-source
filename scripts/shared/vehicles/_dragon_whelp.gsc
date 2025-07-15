@@ -34,13 +34,15 @@ function __init__()
     vehicle::add_main_callback( "dragon", &dragon_initialize );
 }
 
+#using_animtree( "generic" );
+
 // Namespace dragon
 // Params 0
 // Checksum 0x6e1fc824, Offset: 0x3a8
 // Size: 0x23c
 function dragon_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self.health = self.healthdefault;
     self vehicle::friendly_fire_shield();
     

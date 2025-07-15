@@ -360,6 +360,8 @@ function fire_sacrifice_death_clone( e_sacrifice_volume )
     clone delete();
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_quest_fire
 // Params 0
 // Checksum 0xfa11a0d0, Offset: 0x1430
@@ -374,7 +376,7 @@ function spawn_zombie_clone()
         clone attach( clone.headmodel, "", 1 );
     }
     
-    clone useanimtree( $generic );
+    clone useanimtree( #animtree );
     return clone;
 }
 

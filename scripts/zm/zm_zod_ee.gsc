@@ -3307,6 +3307,8 @@ function function_2a306df( n_val )
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_ee
 // Params 0
 // Checksum 0x675ff0b0, Offset: 0xb700
@@ -3324,7 +3326,7 @@ function function_c07e1993()
     level.shadowman.mdl_shadowman = spawn( "script_model", var_2e456dd1 );
     level.shadowman.mdl_shadowman.angles = var_7e1ba25f;
     level.shadowman.mdl_shadowman setmodel( "c_zom_zod_shadowman_tentacles_fb" );
-    level.shadowman.mdl_shadowman useanimtree( $generic );
+    level.shadowman.mdl_shadowman useanimtree( #animtree );
     level.shadowman.mdl_shadowman clientfield::set( "shadowman_fx", 1 );
     level.shadowman.mdl_shadowman playsound( "zmb_shadowman_tele_in" );
 }

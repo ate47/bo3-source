@@ -68,6 +68,8 @@ function on_player_connect()
     
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_shadowman
 // Params 4
 // Checksum 0x1894b472, Offset: 0xb00
@@ -95,7 +97,7 @@ function function_12e7164a( var_5b35973a, var_d250bd20, var_b7791b4b, var_32a562
     }
     
     self.mdl_shadowman = util::spawn_model( "c_zom_zod_shadowman_fb", self.origin, self.angles );
-    self.mdl_shadowman useanimtree( $generic );
+    self.mdl_shadowman useanimtree( #animtree );
     
     if ( !var_b7791b4b )
     {
@@ -153,7 +155,7 @@ function function_8888a532( var_5b35973a, var_d250bd20, var_2c1a0d8f, var_32a562
     }
     
     self.var_5afdc7fe = util::spawn_model( "c_zom_zod_shadowman_tentacles_fb", self.origin, self.angles );
-    self.var_5afdc7fe useanimtree( $generic );
+    self.var_5afdc7fe useanimtree( #animtree );
     self.var_5afdc7fe.health = 1000000;
     self.var_5afdc7fe clientfield::set( "shadowman_fx", 1 );
     
@@ -243,7 +245,7 @@ function function_f3805c8a( var_8f0a8b6a, str_script_noteworthy, a_s_moves, var_
     level.shadowman.mdl_shadowman = spawn( "script_model", var_2e456dd1 );
     level.shadowman.mdl_shadowman.angles = var_7e1ba25f;
     level.shadowman.mdl_shadowman setmodel( "c_zom_zod_shadowman_tentacles_fb" );
-    level.shadowman.mdl_shadowman useanimtree( $generic );
+    level.shadowman.mdl_shadowman useanimtree( #animtree );
     level.shadowman.mdl_shadowman setcandamage( 1 );
     level.shadowman.mdl_shadowman clientfield::set( "shadowman_fx", 1 );
     level.shadowman.mdl_shadowman playsound( "zmb_shadowman_tele_in" );

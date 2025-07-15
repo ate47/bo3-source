@@ -72,6 +72,8 @@ function power_cables_shader( localclientnum, oldval, newval, bnewent, binitials
     self mapshaderconstant( localclientnum, 0, "scriptVector2", 0, 0, 0, 0 );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_genesis_power
 // Params 7
 // Checksum 0xd3048bf4, Offset: 0x7c8
@@ -88,7 +90,7 @@ function corruption_tower( n_local_client, n_old, n_new, b_new_ent, b_initial_sn
     
     if ( !var_6bf7783a hasanimtree() )
     {
-        var_6bf7783a useanimtree( $generic );
+        var_6bf7783a useanimtree( #animtree );
     }
     
     if ( n_new <= 0 )

@@ -117,6 +117,8 @@ function __init__()
     flag::init( "set_ritual_key_vanish_flag" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_quest
 // Params 2
 // Checksum 0xeac280a8, Offset: 0x2178
@@ -190,7 +192,7 @@ function create_client_ritual_assembly( localclientnum, n_current_ritual )
     }
     
     level.main_quest[ localclientnum ][ n_current_ritual ].e_victim[ localclientnum ] setmodel( var_30040f63 );
-    level.main_quest[ localclientnum ][ n_current_ritual ].e_victim[ localclientnum ] useanimtree( $generic );
+    level.main_quest[ localclientnum ][ n_current_ritual ].e_victim[ localclientnum ] useanimtree( #animtree );
 }
 
 // Namespace zm_zod_quest
@@ -443,7 +445,7 @@ function ritual_state_internal( localclientnum, newval, n_current_ritual )
     
     if ( !mdl_ritual hasanimtree() )
     {
-        mdl_ritual useanimtree( $generic );
+        mdl_ritual useanimtree( #animtree );
     }
     
     mdl_memento = level.main_quest[ localclientnum ][ n_current_ritual ].e_memento[ localclientnum ];
@@ -451,7 +453,7 @@ function ritual_state_internal( localclientnum, newval, n_current_ritual )
     
     if ( !mdl_relic hasanimtree() )
     {
-        mdl_relic useanimtree( $generic );
+        mdl_relic useanimtree( #animtree );
     }
     
     mdl_victim = level.main_quest[ localclientnum ][ n_current_ritual ].e_victim[ localclientnum ];
@@ -913,7 +915,7 @@ function ritual_state_pap( localclientnum, oldval, newval, bnewent, binitialsnap
     
     if ( !var_c6f3f6c3 hasanimtree() )
     {
-        var_c6f3f6c3 useanimtree( $generic );
+        var_c6f3f6c3 useanimtree( #animtree );
     }
     
     str_name = get_name_from_ritual_clientfield_value( 5 );

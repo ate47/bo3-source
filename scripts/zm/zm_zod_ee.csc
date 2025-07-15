@@ -20,6 +20,8 @@
 
 #namespace zm_zod_ee;
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_ee
 // Method(s) 8 Total 8
 class capothigod
@@ -126,7 +128,7 @@ class capothigod
         self.var_dbea7369 = mdl_god;
         self.var_8d207f9b = var_bae1bdd7;
         self.var_dbea7369 util::waittill_dobj( localclientnum );
-        self.var_dbea7369 useanimtree( $generic );
+        self.var_dbea7369 useanimtree( #animtree );
         self.var_dbea7369 setanim( "p7_fxanim_zm_zod_apothicons_god_mouth_idle_anim", 1, 0, 1 );
     }
 
@@ -240,14 +242,14 @@ function function_f2a0dbdc( localclientnum, oldval, newval, bnewent, binitialsna
     
     if ( !mdl_ritual hasanimtree() )
     {
-        mdl_ritual useanimtree( $generic );
+        mdl_ritual useanimtree( #animtree );
     }
     
     mdl_victim = level.main_quest[ localclientnum ][ "pap" ].e_victim;
     
     if ( !mdl_victim hasanimtree() )
     {
-        mdl_victim useanimtree( $generic );
+        mdl_victim useanimtree( #animtree );
     }
     
     mdl_ritual show();
@@ -407,7 +409,7 @@ function function_a39c9866( localclientnum, var_fe2fb4b9, var_f471914b, n_charac
     
     if ( !s_keeper.model hasanimtree() )
     {
-        s_keeper.model useanimtree( $generic );
+        s_keeper.model useanimtree( #animtree );
     }
     
     if ( isdefined( s_keeper.model.sndloop ) )
@@ -726,7 +728,7 @@ function function_27e2b2cc( localclientnum )
         level.var_a9f994a9.var_8cf34592 = spawn( localclientnum, s_loc.origin, "script_model" );
         level.var_a9f994a9.var_8cf34592.angles = s_loc.angles;
         level.var_a9f994a9.var_8cf34592 setmodel( "p7_zm_zod_gateworm_large" );
-        level.var_a9f994a9.var_8cf34592 useanimtree( $generic );
+        level.var_a9f994a9.var_8cf34592 useanimtree( #animtree );
     }
     
     if ( !isdefined( level.var_a9f994a9.var_dbb35f4d ) )
@@ -735,7 +737,7 @@ function function_27e2b2cc( localclientnum )
         level.var_a9f994a9.var_dbb35f4d = spawn( localclientnum, s_loc.origin, "script_model" );
         level.var_a9f994a9.var_dbb35f4d.angles = s_loc.angles;
         level.var_a9f994a9.var_dbb35f4d setmodel( "p7_zm_zod_gateworm_large" );
-        level.var_a9f994a9.var_8cf34592 useanimtree( $generic );
+        level.var_a9f994a9.var_8cf34592 useanimtree( #animtree );
     }
 }
 
@@ -755,14 +757,14 @@ function ee_superworm_state( localclientnum, oldval, newval, bnewent, binitialsn
     
     if ( !level.var_a9f994a9.var_8cf34592 hasanimtree() )
     {
-        level.var_a9f994a9.var_8cf34592 useanimtree( $generic );
+        level.var_a9f994a9.var_8cf34592 useanimtree( #animtree );
     }
     
     level.var_a9f994a9.var_dbb35f4d util::waittill_dobj( localclientnum );
     
     if ( !level.var_a9f994a9.var_dbb35f4d hasanimtree() )
     {
-        level.var_a9f994a9.var_dbb35f4d useanimtree( $generic );
+        level.var_a9f994a9.var_dbb35f4d useanimtree( #animtree );
     }
     
     switch ( newval )

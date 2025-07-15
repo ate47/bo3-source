@@ -54,6 +54,8 @@ function autoexec __init__sytem__()
     system::register( "aquifer_util", &__init__, undefined, undefined );
 }
 
+#using_animtree( "generic" );
+
 // Namespace aquifer_util
 // Params 0
 // Checksum 0xba982737, Offset: 0x21a8
@@ -62,11 +64,11 @@ function __init__()
 {
     init_clientfields();
     anims = [];
-    anims[ anims.size ] = %generic::v_aqu_vtol_cockpit_close;
-    anims[ anims.size ] = %generic::v_aqu_vtol_cockpit_open;
-    anims[ anims.size ] = %generic::v_aqu_vtol_engine_hover;
-    anims[ anims.size ] = %generic::v_aqu_vtol_engine_fly;
-    anims[ anims.size ] = %generic::v_aqu_vtol_engine_idle;
+    anims[ anims.size ] = %v_aqu_vtol_cockpit_close;
+    anims[ anims.size ] = %v_aqu_vtol_cockpit_open;
+    anims[ anims.size ] = %v_aqu_vtol_engine_hover;
+    anims[ anims.size ] = %v_aqu_vtol_engine_fly;
+    anims[ anims.size ] = %v_aqu_vtol_engine_idle;
 }
 
 // Namespace aquifer_util
@@ -787,7 +789,7 @@ function function_14f37b59( section, start_time, dogfighter, var_eb969a93, spawn
     }
     
     veh = vehicle::simple_spawn_single( spawner );
-    veh useanimtree( $generic );
+    veh useanimtree( #animtree );
     veh.animtree = "generic";
     veh.crashtype = "explode";
     veh thread function_78e66c54();

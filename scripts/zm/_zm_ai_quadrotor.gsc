@@ -34,13 +34,15 @@ function __init__()
     #/
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_ai_quadrotor
 // Params 0
 // Checksum 0x9883ea80, Offset: 0x510
 // Size: 0x17c
 function quadrotor_think()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     target_set( self, ( 0, 0, 0 ) );
     self.health = self.healthdefault;
     self vehicle::friendly_fire_shield();

@@ -23,6 +23,8 @@
 
 #namespace frontend;
 
+#using_animtree( "generic" );
+
 // Namespace frontend
 // Method(s) 9 Total 9
 class cmegachewbuttons
@@ -178,7 +180,7 @@ class cmegachewbuttons
             
             if ( !mdl_button hasanimtree() )
             {
-                mdl_button useanimtree( $generic );
+                mdl_button useanimtree( #animtree );
             }
             
             if ( !isdefined( self.m_a_mdl_buttons ) )
@@ -1260,18 +1262,18 @@ class cmegachewfactory
         
         foreach ( mdl_gearbox in self.m_a_mdl_gearbox )
         {
-            mdl_gearbox useanimtree( $generic );
+            mdl_gearbox useanimtree( #animtree );
         }
         
         self.m_a_mdl_gear = getentarray( localclientnum, "ambient_gear", "targetname" );
         
         foreach ( mdl_gear in self.m_a_mdl_gear )
         {
-            mdl_gear useanimtree( $generic );
+            mdl_gear useanimtree( #animtree );
         }
         
         self.m_mdl_tube_front = getent( localclientnum, "tube_front", "targetname" );
-        self.m_mdl_tube_front useanimtree( $generic );
+        self.m_mdl_tube_front useanimtree( #animtree );
         level._effect[ "megachew_gumball_poof_out" ] = "ui/fx_megachew_ball_poof_01";
         level._effect[ "megachew_gumball_poof_blue" ] = "ui/fx_megachew_ball_poof_blue";
         level._effect[ "megachew_gumball_poof_green" ] = "ui/fx_megachew_ball_poof_green";
@@ -1377,7 +1379,7 @@ class cmegachewfactory
             
             if ( !mdl_dome hasanimtree() )
             {
-                mdl_dome useanimtree( $generic );
+                mdl_dome useanimtree( #animtree );
             }
             
             if ( !isdefined( self.m_a_mdl_domes ) )
@@ -1394,7 +1396,7 @@ class cmegachewfactory
             
             if ( !mdl_body hasanimtree() )
             {
-                mdl_body useanimtree( $generic );
+                mdl_body useanimtree( #animtree );
             }
             
             if ( !isdefined( self.m_a_mdl_bodies ) )
@@ -1411,7 +1413,7 @@ class cmegachewfactory
             
             if ( !mdl_door hasanimtree() )
             {
-                mdl_door useanimtree( $generic );
+                mdl_door useanimtree( #animtree );
             }
             
             if ( !isdefined( self.m_a_mdl_doors ) )
@@ -1434,7 +1436,7 @@ class cmegachewfactory
             
             if ( !mdl_ball hasanimtree() )
             {
-                mdl_ball useanimtree( $generic );
+                mdl_ball useanimtree( #animtree );
             }
             
             if ( !isdefined( self.m_a_mdl_balls ) )
@@ -2012,7 +2014,7 @@ class cmegachewcarousel
         
         if ( !self.m_mdl_carousel hasanimtree() )
         {
-            self.m_mdl_carousel useanimtree( $generic );
+            self.m_mdl_carousel useanimtree( #animtree );
         }
         
         if ( !isdefined( self.m_a_str_vat_contents ) )
@@ -2102,7 +2104,7 @@ class cmegachewvatdialset
             mdl_dial = spawn( localclientnum, v_origin, "script_model" );
             mdl_dial.angles = mdl_body gettagangles( str_tagname );
             mdl_dial setmodel( "p7_fxanim_zm_bgb_machine_dial_lrg_mod" );
-            mdl_dial useanimtree( $generic );
+            mdl_dial useanimtree( #animtree );
             
             if ( !isdefined( self.m_a_dials_large ) )
             {
@@ -2122,7 +2124,7 @@ class cmegachewvatdialset
             v_origin = mdl_dome gettagorigin( str_tagname );
             mdl_dial = spawn( localclientnum, v_origin, "script_model" );
             mdl_dial setmodel( "p7_fxanim_zm_bgb_machine_dial_sml_mod" );
-            mdl_dial useanimtree( $generic );
+            mdl_dial useanimtree( #animtree );
             mdl_dial.angles = mdl_dome gettagangles( str_tagname );
             
             if ( !isdefined( self.m_a_dials_small ) )
@@ -2155,7 +2157,7 @@ class cmegachewvatdialset
             v_origin = mdl_dome gettagorigin( str_tagname );
             mdl_dial = spawn( localclientnum, v_origin, "script_model" );
             mdl_dial setmodel( "p7_fxanim_zm_bgb_machine_dial_lrg_mod" );
-            mdl_dial useanimtree( $generic );
+            mdl_dial useanimtree( #animtree );
             mdl_dial.angles = mdl_dome gettagangles( str_tagname );
             
             if ( !isdefined( self.m_a_dials_large ) )
@@ -2175,7 +2177,7 @@ class cmegachewvatdialset
                 v_origin = mdl_dome gettagorigin( str_tagname );
                 mdl_dial = spawn( localclientnum, v_origin, "script_model" );
                 mdl_dial setmodel( "p7_fxanim_zm_bgb_machine_dial_sml_mod" );
-                mdl_dial useanimtree( $generic );
+                mdl_dial useanimtree( #animtree );
                 mdl_dial.angles = mdl_dome gettagangles( str_tagname );
                 
                 if ( !isdefined( self.m_a_dials_small ) )
@@ -2892,7 +2894,7 @@ function wait_for_black_market_notifies( localclientnum )
     level endon( #"blackmarket_closed" );
     camera_ent = struct::get( "mp_frontend_blackmarket" );
     crate = getent( localclientnum, "mp_frontend_blackmarket_crate", "targetname" );
-    crate useanimtree( $generic );
+    crate useanimtree( #animtree );
     crate clearanim( "o_loot_crate_idle", 0 );
     crate mapshaderconstant( localclientnum, 0, "scriptVector2", 0, 0, 0, 0 );
     

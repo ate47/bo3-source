@@ -30,13 +30,15 @@ function __init__()
     clientfield::register( "vehicle", "rocket_wasp_hijacked", 1, 1, "int" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace wasp
 // Params 0
 // Checksum 0xf1ecb962, Offset: 0x3d0
 // Size: 0x274
 function wasp_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     target_set( self, ( 0, 0, 0 ) );
     self.health = self.healthdefault;
     self vehicle::friendly_fire_shield();

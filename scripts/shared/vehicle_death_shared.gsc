@@ -242,6 +242,8 @@ function play_spinning_plane_sound()
     self stoploopsound( 0.02 );
 }
 
+#using_animtree( "generic" );
+
 // Namespace vehicle_death
 // Params 2
 // Checksum 0xdca0f9b2, Offset: 0xc30
@@ -277,7 +279,7 @@ function set_death_model( smodel, fdelay )
     
     if ( !isdefined( emodel.death_anim ) && isdefined( emodel.animtree ) )
     {
-        emodel clearanim( %generic::root, 0 );
+        emodel clearanim( %root, 0 );
     }
     
     if ( smodel != self.vehmodel )
@@ -1098,7 +1100,7 @@ function death_jolt( type )
     
     if ( isdefined( self.death_anim ) )
     {
-        self animscripted( "death_anim", self.origin, self.angles, self.death_anim, "normal", %generic::root, 1, 0 );
+        self animscripted( "death_anim", self.origin, self.angles, self.death_anim, "normal", %root, 1, 0 );
         self waittillmatch( #"death_anim", "end" );
         return;
     }

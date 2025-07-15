@@ -40,13 +40,15 @@ function __init__()
     clientfield::register( "vehicle", "quadtank_trophy_state", 1, 1, "int" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace quadtank
 // Params 0
 // Checksum 0x8601f6b, Offset: 0x950
 // Size: 0x42c
 function quadtank_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self enableaimassist();
     self setneargoalnotifydist( 50 );
     blackboard::createblackboardforentity( self );

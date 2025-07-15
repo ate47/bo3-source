@@ -502,6 +502,8 @@ function function_787f2b69( localclientnum )
     }
 }
 
+#using_animtree( "critter" );
+
 // Namespace cp_doa_bo3
 // Params 0
 // Checksum 0xbd477641, Offset: 0x26f8
@@ -509,8 +511,8 @@ function function_787f2b69( localclientnum )
 function function_a8eb710()
 {
     self endon( #"entityshutdown" );
-    self useanimtree( $critter );
-    self.animation = randomint( 2 ) ? %critter::a_water_buffalo_run_a : %critter::a_water_buffalo_run_b;
+    self useanimtree( #animtree );
+    self.animation = randomint( 2 ) ? %a_water_buffalo_run_a : %a_water_buffalo_run_b;
     self setanim( self.animation, 1, 0, 1 );
 }
 
@@ -526,6 +528,8 @@ function function_caf96f2d( localclientnum, oldval, newval, bnewent, binitialsna
     }
 }
 
+#using_animtree( "chicken_mech" );
+
 // Namespace cp_doa_bo3
 // Params 2
 // Checksum 0xcb822d64, Offset: 0x2810
@@ -536,7 +540,7 @@ function function_27542390( localclientnum, state )
     self notify( #"animstate" );
     self endon( #"animstate" );
     self.animstate = state;
-    self useanimtree( $chicken_mech );
+    self useanimtree( #animtree );
     
     while ( true )
     {
@@ -551,11 +555,11 @@ function function_27542390( localclientnum, state )
                 
                 break;
             case 1:
-                self.animation = %chicken_mech::a_chicken_mech_idle;
+                self.animation = %a_chicken_mech_idle;
                 self setanim( self.animation, 1, 0.2, 1 );
                 break;
             case 2:
-                self.animation = %chicken_mech::a_chicken_mech_lay_egg;
+                self.animation = %a_chicken_mech_lay_egg;
                 self setanimrestart( self.animation, 1, 0.2, 1 );
                 break;
             case 3:

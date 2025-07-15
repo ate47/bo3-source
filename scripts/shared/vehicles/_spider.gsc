@@ -45,6 +45,8 @@ function no_switch_on()
     return getdvarint( "debug_spider_noswitch", 0 ) === 1;
 }
 
+#using_animtree( "generic" );
+
 // Namespace spider
 // Params 0
 // Checksum 0x1952e919, Offset: 0x410
@@ -55,7 +57,7 @@ function spider_initialize()
     self.fovcosinebusy = 0;
     self.delete_on_death = 1;
     self.health = self.healthdefault;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self vehicle::friendly_fire_shield();
     assert( isdefined( self.scriptbundlesettings ) );
     self.settings = struct::get_script_bundle( "vehiclecustomsettings", self.scriptbundlesettings );

@@ -202,6 +202,8 @@ function loadequippedcharacteronmodel( localclientnum, data_struct, characterind
     return update( localclientnum, data_struct, params );
 }
 
+#using_animtree( "generic" );
+
 // Namespace character_customization
 // Params 7
 // Checksum 0xc01e0981, Offset: 0x1790
@@ -252,7 +254,7 @@ function update_model_attachment( localclientnum, data_struct, attached_model, s
                 
                 if ( !ent hasanimtree() )
                 {
-                    ent useanimtree( $generic );
+                    ent useanimtree( #animtree );
                 }
                 
                 ent.origin = data_struct.charactermodel.origin;
@@ -894,6 +896,8 @@ function get_character_helmet_colors( localclientnum, charactermode, characterin
     return colors;
 }
 
+#using_animtree( "all_player" );
+
 // Namespace character_customization
 // Params 1
 // Checksum 0xff379647, Offset: 0x3e88
@@ -902,7 +906,7 @@ function update_character_animation_tree_for_scene( charactermodel )
 {
     if ( !charactermodel hasanimtree() )
     {
-        charactermodel useanimtree( $all_player );
+        charactermodel useanimtree( #animtree );
     }
 }
 
@@ -1148,7 +1152,7 @@ function update_character_animation_and_attachments( localclientnum, data_struct
         
         if ( !data_struct.charactermodel hasanimtree() )
         {
-            data_struct.charactermodel useanimtree( $all_player );
+            data_struct.charactermodel useanimtree( #animtree );
         }
         
         data_struct.charactermodel thread play_intro_and_animation( params.anim_intro_name, params.anim_name, 0 );

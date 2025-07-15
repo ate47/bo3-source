@@ -39,6 +39,8 @@
 
 #namespace supplydrop;
 
+#using_animtree( "mp_vehicles" );
+
 // Namespace supplydrop
 // Params 0
 // Checksum 0x6f79795a, Offset: 0x1670
@@ -55,10 +57,10 @@ function init()
     level.crate_headicon_offset = ( 0, 0, 15 );
     level.supplydropdisarmcrate = &"KILLSTREAK_SUPPLY_DROP_DISARM_HINT";
     level.disarmingcrate = &"KILLSTREAK_SUPPLY_DROP_DISARMING_CRATE";
-    level.supplydropcarepackageidleanim = %mp_vehicles::o_drone_supply_care_idle;
-    level.supplydropcarepackagedropanim = %mp_vehicles::o_drone_supply_care_drop;
-    level.supplydropaitankidleanim = %mp_vehicles::o_drone_supply_agr_idle;
-    level.supplydropaitankdropanim = %mp_vehicles::o_drone_supply_agr_drop;
+    level.supplydropcarepackageidleanim = %o_drone_supply_care_idle;
+    level.supplydropcarepackagedropanim = %o_drone_supply_care_drop;
+    level.supplydropaitankidleanim = %o_drone_supply_agr_idle;
+    level.supplydropaitankdropanim = %o_drone_supply_agr_drop;
     clientfield::register( "helicopter", "supplydrop_care_package_state", 1, 1, "int" );
     clientfield::register( "helicopter", "supplydrop_ai_tank_state", 1, 1, "int" );
     clientfield::register( "vehicle", "supplydrop_care_package_state", 1, 1, "int" );

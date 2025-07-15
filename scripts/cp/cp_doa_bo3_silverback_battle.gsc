@@ -581,6 +581,8 @@ function private function_a733cd6a( mech )
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace bo3_silverback_battle
 // Params 0
 // Checksum 0x4dc976c4, Offset: 0x3150
@@ -590,7 +592,7 @@ function function_fb3b78fe()
     self endon( #"death" );
     level endon( #"hash_ae3ed999" );
     self.var_15a6bfe6 = 0;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     
     while ( true )
     {

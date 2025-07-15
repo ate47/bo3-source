@@ -141,6 +141,8 @@ function function_cf043736( s_ritual, var_cbdba0c5 )
     s_ritual.var_6a0d8b03 show();
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_sword
 // Params 3
 // Checksum 0x9b3a461f, Offset: 0x13e8
@@ -154,7 +156,7 @@ function function_4d020922( localclientnum, newval, n_character_index )
     
     if ( !s_ritual.e_keeper hasanimtree() )
     {
-        s_ritual.e_keeper useanimtree( $generic );
+        s_ritual.e_keeper useanimtree( #animtree );
     }
     
     s_ritual.e_keeper duplicate_render::set_dr_flag( "zod_ghost", 1 );
@@ -162,7 +164,7 @@ function function_4d020922( localclientnum, newval, n_character_index )
     
     if ( !s_ritual.e_egg hasanimtree() )
     {
-        s_ritual.e_egg useanimtree( $generic );
+        s_ritual.e_egg useanimtree( #animtree );
     }
     
     switch ( newval )

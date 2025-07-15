@@ -79,34 +79,36 @@ function __main__()
     array::thread_all( level.zombie_spawners, &spawner::add_spawn_function, &zombie_spawn_func );
 }
 
+#using_animtree( "zm_castle" );
+
 // Namespace zm_castle_weap_quest
 // Params 0
 // Checksum 0x49e64fec, Offset: 0xd48
 // Size: 0x252
 function create_anim_references_on_server()
 {
-    root = %zm_castle::root;
-    var_dd277883 = %zm_castle::o_zm_dlc1_dragonhead_intro;
-    var_160f7e80 = %zm_castle::o_zm_dlc1_dragonhead_outtro;
-    var_b86a93ed = %zm_castle::o_zm_dlc1_dragonhead_static;
-    dragonhead_pre_eat_l_2_r = %zm_castle::o_zm_dlc1_dragonhead_consume_pre_eat_l_2_r;
-    dragonhead_pre_eat_r_2_l = %zm_castle::o_zm_dlc1_dragonhead_consume_pre_eat_r_2_l;
+    root = %root;
+    var_dd277883 = %o_zm_dlc1_dragonhead_intro;
+    var_160f7e80 = %o_zm_dlc1_dragonhead_outtro;
+    var_b86a93ed = %o_zm_dlc1_dragonhead_static;
+    dragonhead_pre_eat_l_2_r = %o_zm_dlc1_dragonhead_consume_pre_eat_l_2_r;
+    dragonhead_pre_eat_r_2_l = %o_zm_dlc1_dragonhead_consume_pre_eat_r_2_l;
     var_917cf7dd = [];
-    var_917cf7dd[ 0 ] = %zm_castle::o_zm_dlc1_dragonhead_idle;
+    var_917cf7dd[ 0 ] = %o_zm_dlc1_dragonhead_idle;
     var_16db17aa = [];
-    var_16db17aa[ 0 ] = %zm_castle::o_zm_dlc1_dragonhead_idle_twitch_roar;
-    var_a56e33ce = %zm_castle::ai_zm_dlc1_dragonhead_zombie_impact;
-    var_bbe46e66 = %zm_castle::ai_zm_dlc1_dragonhead_zombie_rise;
+    var_16db17aa[ 0 ] = %o_zm_dlc1_dragonhead_idle_twitch_roar;
+    var_a56e33ce = %ai_zm_dlc1_dragonhead_zombie_impact;
+    var_bbe46e66 = %ai_zm_dlc1_dragonhead_zombie_rise;
     var_c7a1f434 = [];
-    var_c7a1f434[ "right" ] = %zm_castle::o_zm_dlc1_dragonhead_consume_pre_eat_r;
-    var_c7a1f434[ "left" ] = %zm_castle::o_zm_dlc1_dragonhead_consume_pre_eat_l;
-    var_c7a1f434[ "front" ] = %zm_castle::o_zm_dlc1_dragonhead_consume_pre_eat_f;
-    var_977975d2[ "right" ] = %zm_castle::o_zm_dlc1_dragonhead_consume_align_r;
-    var_977975d2[ "left" ] = %zm_castle::o_zm_dlc1_dragonhead_consume_align_l;
-    var_977975d2[ "front" ] = %zm_castle::o_zm_dlc1_dragonhead_consume_align_f;
-    var_d198ed8e[ "right" ] = %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_r;
-    var_d198ed8e[ "left" ] = %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l;
-    var_d198ed8e[ "front" ] = %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f;
+    var_c7a1f434[ "right" ] = %o_zm_dlc1_dragonhead_consume_pre_eat_r;
+    var_c7a1f434[ "left" ] = %o_zm_dlc1_dragonhead_consume_pre_eat_l;
+    var_c7a1f434[ "front" ] = %o_zm_dlc1_dragonhead_consume_pre_eat_f;
+    var_977975d2[ "right" ] = %o_zm_dlc1_dragonhead_consume_align_r;
+    var_977975d2[ "left" ] = %o_zm_dlc1_dragonhead_consume_align_l;
+    var_977975d2[ "front" ] = %o_zm_dlc1_dragonhead_consume_align_f;
+    var_d198ed8e[ "right" ] = %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_r;
+    var_d198ed8e[ "left" ] = %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l;
+    var_d198ed8e[ "front" ] = %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f;
 }
 
 // Namespace zm_castle_weap_quest
@@ -119,7 +121,7 @@ function soul_catcher_state_manager()
     level clientfield::set( self.script_parameters, 7 );
     self waittill( #"first_zombie_killed_in_zone", e_player );
     level clientfield::set( self.script_parameters, 1 );
-    anim_length = getanimlength( %zm_castle::rtrg_o_zm_dlc1_dragonhead_intro );
+    anim_length = getanimlength( %rtrg_o_zm_dlc1_dragonhead_intro );
     e_player thread zm_castle_vo::function_ad27f488( anim_length );
     wait anim_length;
     
@@ -242,22 +244,22 @@ function zombie_soul_catcher_death( einflictor, attacker, idamage, smeansofdeath
         level clientfield::set( var_56269cbf.script_parameters, 0 );
     }
     
-    var_f41bc81e = %zm_castle::ai_zm_dlc1_dragonhead_zombie_impact;
+    var_f41bc81e = %ai_zm_dlc1_dragonhead_zombie_impact;
     n_anim_time = getanimlength( var_f41bc81e ) + 0.2;
     wait n_anim_time;
     level clientfield::set( var_56269cbf.script_parameters, n_eating_anim );
     
     if ( n_eating_anim == 3 )
     {
-        var_a8b20b82 = getanimlength( %zm_castle::rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_f ) + getanimlength( %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f );
+        var_a8b20b82 = getanimlength( %rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_f ) + getanimlength( %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f );
     }
     else if ( n_eating_anim == 4 )
     {
-        var_a8b20b82 = getanimlength( %zm_castle::rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_r ) + getanimlength( %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_r );
+        var_a8b20b82 = getanimlength( %rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_r ) + getanimlength( %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_r );
     }
     else
     {
-        var_a8b20b82 = getanimlength( %zm_castle::rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_l ) + getanimlength( %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l );
+        var_a8b20b82 = getanimlength( %rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_l ) + getanimlength( %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l );
     }
     
     wait var_a8b20b82 - 0.5;
@@ -316,7 +318,7 @@ function get_correct_model_array()
 // Size: 0x4c
 function function_edf4b761()
 {
-    anim_length = getanimlength( %zm_castle::rtrg_o_zm_dlc1_dragonhead_intro );
+    anim_length = getanimlength( %rtrg_o_zm_dlc1_dragonhead_intro );
     wait anim_length;
     self notify( #"hash_f77f4f21" );
     self.is_eating = 0;

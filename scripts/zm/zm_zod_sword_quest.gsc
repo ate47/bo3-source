@@ -1542,13 +1542,15 @@ function function_ce7bc2ba()
     self thread function_3608024( b_is_active );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_sword
 // Params 1
 // Checksum 0x57998c2a, Offset: 0x5f60
 // Size: 0xd4
 function function_3608024( b_is_active )
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     
     if ( b_is_active )
     {

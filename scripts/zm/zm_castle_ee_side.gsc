@@ -677,6 +677,8 @@ function function_2db2bf79()
     }
 }
 
+#using_animtree( "zm_castle" );
+
 // Namespace zm_castle_ee_side
 // Params 0
 // Checksum 0x22706cc0, Offset: 0x1750
@@ -685,7 +687,7 @@ function function_e437a08f()
 {
     var_2c4303b6 = struct::get( "ee_music_box" );
     level.var_6d5fd229 = util::spawn_model( "p7_fxanim_zm_castle_music_box_mod", var_2c4303b6.origin, var_2c4303b6.angles );
-    level.var_6d5fd229 useanimtree( $zm_castle );
+    level.var_6d5fd229 useanimtree( #animtree );
 }
 
 // Namespace zm_castle_ee_side

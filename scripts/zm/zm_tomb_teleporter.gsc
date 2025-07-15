@@ -17,6 +17,8 @@
 
 #namespace zm_tomb_teleporter;
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_teleporter
 // Params 0
 // Checksum 0xd465d605, Offset: 0x760
@@ -39,7 +41,7 @@ function teleporter_init()
     
     foreach ( e_model in a_entrance_models )
     {
-        e_model useanimtree( $generic );
+        e_model useanimtree( #animtree );
         level.a_teleport_models[ e_model.script_int ] = e_model;
         e_model setignorepauseworld( 1 );
     }
@@ -50,7 +52,7 @@ function teleporter_init()
     
     foreach ( e_frame in a_portal_frames )
     {
-        e_frame useanimtree( $generic );
+        e_frame useanimtree( #animtree );
         e_frame ghost();
         level.a_portal_exit_frames[ e_frame.script_int ] = e_frame;
         e_frame thread scene::play( "p7_fxanim_zm_ori_portal_collapse_bundle", e_frame );
@@ -154,8 +156,8 @@ function run_chamber_exit( n_enum )
     s_portal.origin = e_portal_frame gettagorigin( "fx_portal_jnt" );
     s_portal.angles = e_portal_frame gettagangles( "fx_portal_jnt" );
     str_fx = zm_tomb_utility::get_teleport_fx_from_enum( n_enum );
-    collapse_time = getanimlength( %generic::p7_fxanim_zm_ori_portal_collapse_anim );
-    open_time = getanimlength( %generic::p7_fxanim_zm_ori_portal_open_anim );
+    collapse_time = getanimlength( %p7_fxanim_zm_ori_portal_collapse_anim );
+    open_time = getanimlength( %p7_fxanim_zm_ori_portal_open_anim );
     var_ff7119bc = undefined;
     
     switch ( s_portal.targetname )
@@ -242,8 +244,8 @@ function run_chamber_entrance_teleporter()
     level flag::init( "enable_teleporter_" + self.script_int );
     str_building_flag = "teleporter_building_" + self.script_int;
     level flag::init( str_building_flag );
-    collapse_time = getanimlength( %generic::p7_fxanim_zm_ori_portal_collapse_anim );
-    open_time = getanimlength( %generic::p7_fxanim_zm_ori_portal_open_anim );
+    collapse_time = getanimlength( %p7_fxanim_zm_ori_portal_collapse_anim );
+    open_time = getanimlength( %p7_fxanim_zm_ori_portal_open_anim );
     level flag::wait_till( "start_zombie_round_logic" );
     e_model thread scene::play( "p7_fxanim_zm_ori_portal_collapse_bundle", e_model );
     wait collapse_time;

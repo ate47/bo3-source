@@ -83,6 +83,8 @@ function on_player_spawned( localclientnum )
     }
 }
 
+#using_animtree( "mp_vehicles" );
+
 // Namespace helicopter
 // Params 0
 // Checksum 0xeb899463, Offset: 0x10a8
@@ -91,7 +93,7 @@ function setupanimtree()
 {
     if ( self hasanimtree() == 0 )
     {
-        self useanimtree( $mp_vehicles );
+        self useanimtree( #animtree );
     }
 }
 
@@ -196,7 +198,7 @@ function heli_comlink_bootup_anim( localclientnum, oldval, newval, bnewent, bini
     self endon( #"entityshutdown" );
     self endon( #"death" );
     self setupanimtree();
-    self setanim( %mp_vehicles::veh_anim_future_heli_gearup_bay_open, 1, 0, 1 );
+    self setanim( %veh_anim_future_heli_gearup_bay_open, 1, 0, 1 );
 }
 
 // Namespace helicopter
@@ -211,11 +213,11 @@ function supplydrop_care_package_state( localclientnum, oldval, newval, bnewent,
     
     if ( newval == 1 )
     {
-        self setanim( %mp_vehicles::o_drone_supply_care_idle, 1, 0, 1 );
+        self setanim( %o_drone_supply_care_idle, 1, 0, 1 );
         return;
     }
     
-    self setanim( %mp_vehicles::o_drone_supply_care_drop, 1, 0, 0.3 );
+    self setanim( %o_drone_supply_care_drop, 1, 0, 0.3 );
 }
 
 // Namespace helicopter
@@ -230,11 +232,11 @@ function supplydrop_ai_tank_state( localclientnum, oldval, newval, bnewent, bini
     
     if ( newval == 1 )
     {
-        self setanim( %mp_vehicles::o_drone_supply_agr_idle, 1, 0, 1 );
+        self setanim( %o_drone_supply_agr_idle, 1, 0, 1 );
         return;
     }
     
-    self setanim( %mp_vehicles::o_drone_supply_agr_drop, 1, 0, 0.3 );
+    self setanim( %o_drone_supply_agr_drop, 1, 0, 0.3 );
 }
 
 // Namespace helicopter

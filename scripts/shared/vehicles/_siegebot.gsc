@@ -33,13 +33,15 @@ function __init__()
     vehicle::add_main_callback( "siegebot", &siegebot_initialize );
 }
 
+#using_animtree( "generic" );
+
 // Namespace siegebot
 // Params 0
 // Checksum 0x34518660, Offset: 0x510
 // Size: 0x3d4
 function siegebot_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     blackboard::createblackboardforentity( self );
     self blackboard::registervehicleblackboardattributes();
     self.health = self.healthdefault;

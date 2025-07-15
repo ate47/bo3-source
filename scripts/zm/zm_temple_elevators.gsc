@@ -579,6 +579,8 @@ function geyser_trigger_dust_think()
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_temple_elevators
 // Params 0
 // Checksum 0xc1ede475, Offset: 0x1de8
@@ -586,7 +588,7 @@ function geyser_trigger_dust_think()
 function init_geyser_anims()
 {
     level.geyser_anims = [];
-    level.geyser_animtree = $generic;
+    level.geyser_animtree = #animtree;
 }
 
 // Namespace zm_temple_elevators

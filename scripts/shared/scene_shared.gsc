@@ -4497,6 +4497,8 @@ class cawarenesssceneobject : cscriptbundleobjectbase, csceneobject
 
 }
 
+#using_animtree( "all_player" );
+
 // Namespace scene
 // Params 1, eflags: 0x4
 // Checksum 0xcc50c126, Offset: 0xba0
@@ -4505,10 +4507,12 @@ function private prepare_player_model_anim( ent )
 {
     if ( !( ent.animtree === "all_player" ) )
     {
-        ent useanimtree( $all_player );
+        ent useanimtree( #animtree );
         ent.animtree = "all_player";
     }
 }
+
+#using_animtree( "generic" );
 
 // Namespace scene
 // Params 1, eflags: 0x4
@@ -4518,7 +4522,7 @@ function private prepare_generic_model_anim( ent )
 {
     if ( !( ent.animtree === "generic" ) )
     {
-        ent useanimtree( $generic );
+        ent useanimtree( #animtree );
         ent.animtree = "generic";
     }
 }

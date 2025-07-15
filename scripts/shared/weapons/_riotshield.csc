@@ -36,6 +36,8 @@ function shield_state_change( localclientnum, oldval, newval, bnewent, binitials
     }
 }
 
+#using_animtree( "mp_riotshield" );
+
 // Namespace riotshield
 // Params 2
 // Checksum 0x8d16bac6, Offset: 0x3b8
@@ -45,15 +47,15 @@ function riotshield_deploy_anim( localclientnum, instant )
     self endon( #"entityshutdown" );
     self thread watch_riotshield_damage();
     self util::waittill_dobj( localclientnum );
-    self useanimtree( $mp_riotshield );
+    self useanimtree( #animtree );
     
     if ( instant )
     {
-        self setanimtime( %mp_riotshield::o_riot_stand_deploy, 1 );
+        self setanimtime( %o_riot_stand_deploy, 1 );
     }
     else
     {
-        self setanim( %mp_riotshield::o_riot_stand_deploy, 1, 0, 1 );
+        self setanim( %o_riot_stand_deploy, 1, 0, 1 );
         playfxontag( localclientnum, level._effect[ "riotshield_dust" ], self, "tag_origin" );
     }
     
@@ -76,15 +78,15 @@ function watch_riotshield_damage()
     while ( true )
     {
         self waittill( #"damage", damage_loc, damage_type );
-        self useanimtree( $mp_riotshield );
+        self useanimtree( #animtree );
         
         if ( damage_type == "MOD_MELEE" || damage_type == "MOD_MELEE_WEAPON_BUTT" || damage_type == "MOD_MELEE_ASSASSINATE" )
         {
-            self setanim( %mp_riotshield::o_riot_stand_melee_front, 1, 0, 1 );
+            self setanim( %o_riot_stand_melee_front, 1, 0, 1 );
             continue;
         }
         
-        self setanim( %mp_riotshield::o_riot_stand_shot, 1, 0, 1 );
+        self setanim( %o_riot_stand_shot, 1, 0, 1 );
     }
 }
 
@@ -103,8 +105,8 @@ function riotshield_destroy_anim( localclientnum )
     
     wait 0.05;
     self playsound( localclientnum, "wpn_shield_destroy" );
-    self useanimtree( $mp_riotshield );
-    self setanim( %mp_riotshield::o_riot_stand_destroyed, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanim( %o_riot_stand_destroyed, 1, 0, 1 );
     wait 1;
     self setforcenotsimple();
 }

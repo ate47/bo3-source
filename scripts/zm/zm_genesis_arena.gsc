@@ -3185,6 +3185,8 @@ function function_5e9f49d2( str_name, n_duration, v_offset, b_reverse_dir, var_b
     }
 }
 
+#using_animtree( "zm_genesis" );
+
 // Namespace zm_genesis_arena
 // Params 5
 // Checksum 0x26d1d6f0, Offset: 0xaea8
@@ -3233,7 +3235,7 @@ function function_cc9c82c8( var_44622ece, n_duration, v_offset, b_reverse_dir, v
             break;
     }
     
-    var_21d644c useanimtree( $zm_genesis );
+    var_21d644c useanimtree( #animtree );
     var_21d644c thread animation::play( var_7146001e, undefined, undefined, 1 );
     v_origin = var_44622ece.origin;
     
@@ -4308,7 +4310,7 @@ function function_386f30f4()
     
     s_loc = struct::get( "boss_shadowman_4" );
     level.var_5b08e991 = util::spawn_model( "c_zom_dlc4_shadowman_fb", s_loc.origin, s_loc.angles );
-    level.var_5b08e991 useanimtree( $zm_genesis );
+    level.var_5b08e991 useanimtree( #animtree );
     level.var_5b08e991 clientfield::set( "shadowman_fx", 1 );
     level.var_5b08e991 playsound( "zmb_shadowman_tele_in" );
     level.var_5b08e991.health = 1000000;

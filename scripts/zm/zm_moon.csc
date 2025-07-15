@@ -415,6 +415,8 @@ function jump_pad_activate( clientnum )
     jump_pad_start_fx( clientnum );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_moon
 // Params 1
 // Checksum 0xee57f24b, Offset: 0x2fc8
@@ -435,7 +437,7 @@ function function_c00b8efb( clientnum )
         if ( isdefined( var_f5f4e9cc.script_noteworthy ) )
         {
             var_f5f4e9cc util::waittill_dobj( clientnum );
-            var_f5f4e9cc useanimtree( $generic );
+            var_f5f4e9cc useanimtree( #animtree );
             var_f5f4e9cc animscripted( "jump_pad", var_f5f4e9cc.origin, var_f5f4e9cc.angles, "p7_fxanim_zmhd_moon_jump_pad_lrg_anim" );
         }
     }

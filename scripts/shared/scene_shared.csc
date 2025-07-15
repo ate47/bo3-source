@@ -15,6 +15,8 @@
 
 #namespace scene;
 
+#using_animtree( "generic" );
+
 // Namespace scene
 // Method(s) 23 Total 27
 class csceneobject : cscriptbundleobjectbase
@@ -201,7 +203,7 @@ class csceneobject : cscriptbundleobjectbase
         {
             if ( !self._e_array[ clientnum ] hasanimtree() )
             {
-                self._e_array[ clientnum ] useanimtree( $generic );
+                self._e_array[ clientnum ] useanimtree( #animtree );
             }
         }
         

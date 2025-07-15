@@ -481,7 +481,7 @@ function function_f0a1682d( a_ents )
 // Params 1
 // Checksum 0x327ec5f5, Offset: 0x2280
 // Size: 0xa4
-function function_c1edfb09( a_ents )
+function raw\fulljap\sound\vox\scripted\zma\vox_plr_3_anim_pain_2_d_0.SN55.xenon.snd( a_ents )
 {
     a_ents[ "power_plant_water" ] waittill( #"hash_2acd8021" );
     exploder::exploder( self.str_exploder );

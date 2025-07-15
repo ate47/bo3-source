@@ -33,6 +33,8 @@
 
 #namespace zm_tomb_capture_zones;
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_capture_zones
 // Params 0
 // Checksum 0x2d63cbd3, Offset: 0x1328
@@ -55,24 +57,24 @@ function init_capture_zones()
     level flag::init( "power_on4" );
     level flag::init( "power_on5" );
     level flag::init( "power_on6" );
-    root = %generic::root;
-    i = %generic::p7_fxanim_zm_ori_pack_pc1_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_pc2_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_pc3_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_pc4_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_pc5_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_pc6_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_return_pc1_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_return_pc2_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_return_pc3_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_return_pc4_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_return_pc5_anim;
-    i = %generic::p7_fxanim_zm_ori_pack_return_pc6_anim;
-    i = %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim;
-    i = %generic::p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim;
-    i = %generic::p7_fxanim_zm_ori_monolith_inductor_release_anim;
-    i = %generic::p7_fxanim_zm_ori_monolith_inductor_shake_anim;
-    i = %generic::p7_fxanim_zm_ori_monolith_inductor_idle_anim;
+    root = %root;
+    i = %p7_fxanim_zm_ori_pack_pc1_anim;
+    i = %p7_fxanim_zm_ori_pack_pc2_anim;
+    i = %p7_fxanim_zm_ori_pack_pc3_anim;
+    i = %p7_fxanim_zm_ori_pack_pc4_anim;
+    i = %p7_fxanim_zm_ori_pack_pc5_anim;
+    i = %p7_fxanim_zm_ori_pack_pc6_anim;
+    i = %p7_fxanim_zm_ori_pack_return_pc1_anim;
+    i = %p7_fxanim_zm_ori_pack_return_pc2_anim;
+    i = %p7_fxanim_zm_ori_pack_return_pc3_anim;
+    i = %p7_fxanim_zm_ori_pack_return_pc4_anim;
+    i = %p7_fxanim_zm_ori_pack_return_pc5_anim;
+    i = %p7_fxanim_zm_ori_pack_return_pc6_anim;
+    i = %p7_fxanim_zm_ori_monolith_inductor_pull_anim;
+    i = %p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim;
+    i = %p7_fxanim_zm_ori_monolith_inductor_release_anim;
+    i = %p7_fxanim_zm_ori_monolith_inductor_shake_anim;
+    i = %p7_fxanim_zm_ori_monolith_inductor_idle_anim;
     level thread setup_capture_zones();
 }
 
@@ -2852,7 +2854,7 @@ function generator_state_turn_off()
 // Size: 0x3c
 function generator_turns_off_after_anim()
 {
-    wait getanimlength( %generic::p7_fxanim_zm_ori_generator_end_anim );
+    wait getanimlength( %p7_fxanim_zm_ori_generator_end_anim );
     self generator_state_off();
 }
 
@@ -2878,7 +2880,7 @@ function can_start_generator_power_up_anim()
     
     if ( !isdefined( self.n_time_start_anim ) )
     {
-        self.n_time_start_anim = getanimlength( %generic::p7_fxanim_zm_ori_generator_start_anim );
+        self.n_time_start_anim = getanimlength( %p7_fxanim_zm_ori_generator_start_anim );
     }
     
     return self.n_current_progress > self.n_last_progress && ( gettime() - self.n_time_started_generator ) * 0.001 > self.n_time_start_anim;

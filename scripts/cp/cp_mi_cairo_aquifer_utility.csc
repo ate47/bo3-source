@@ -669,6 +669,8 @@ function function_ae9fc4ae( localclientnum, oldval, newval, bnewent, binitialsna
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace aquifer_util
 // Params 7
 // Checksum 0x674d9f02, Offset: 0x2a58
@@ -680,10 +682,10 @@ function function_4aa99a51( localclientnum, oldval, newval, bnewent, binitialsna
         return;
     }
     
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     anims = [];
-    anims[ 0 ] = %generic::v_aqu_vtol_cockpit_close;
-    anims[ 1 ] = %generic::v_aqu_vtol_cockpit_open;
+    anims[ 0 ] = %v_aqu_vtol_cockpit_close;
+    anims[ 1 ] = %v_aqu_vtol_cockpit_open;
     assert( newval >= 0 && newval <= 1 );
     self setanim( anims[ newval ], 1, 0, 1 );
     self setanim( anims[ !newval ], 0, 0, 1 );
@@ -700,21 +702,21 @@ function function_c289f3ee( localclientnum, oldval, newval, bnewent, binitialsna
         return;
     }
     
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     anims = [];
-    anims[ 0 ] = %generic::v_aqu_vtol_engine_hover;
-    anims[ 1 ] = %generic::v_aqu_vtol_engine_fly;
+    anims[ 0 ] = %v_aqu_vtol_engine_hover;
+    anims[ 1 ] = %v_aqu_vtol_engine_fly;
     assert( newval >= 0 && newval <= 1 );
     self setanim( anims[ newval ], 1, 0, 1 );
     self setanim( anims[ !newval ], 0, 0, 1 );
     
     if ( newval == 0 )
     {
-        self setanim( %generic::v_aqu_vtol_engine_idle, 1, 0, 1 );
+        self setanim( %v_aqu_vtol_engine_idle, 1, 0, 1 );
         return;
     }
     
-    self setanim( %generic::v_aqu_vtol_engine_idle, 0, 0, 1 );
+    self setanim( %v_aqu_vtol_engine_idle, 0, 0, 1 );
 }
 
 // Namespace aquifer_util
@@ -1449,9 +1451,9 @@ function vtol_spawned( localclientnum )
     self.dogfighting = 0;
     self.no_highlight = 1;
     self thread function_c0623e13( localclientnum );
-    self useanimtree( $generic );
-    self setanim( %generic::v_aqu_vtol_engine_hover, 1, 0, 1 );
-    self setanim( %generic::v_aqu_vtol_engine_idle, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanim( %v_aqu_vtol_engine_hover, 1, 0, 1 );
+    self setanim( %v_aqu_vtol_engine_idle, 1, 0, 1 );
 }
 
 // Namespace aquifer_util

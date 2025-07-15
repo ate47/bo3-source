@@ -38,6 +38,8 @@ function __init__()
     clientfield::register( "toplayer", "bow_pickup_fx", 5000, 1, "int", &function_4e75b7c1, 0, 0 );
 }
 
+#using_animtree( "zm_castle" );
+
 // Namespace zm_castle_weap_quest
 // Params 0
 // Checksum 0xa1bd4bc4, Offset: 0xa00
@@ -65,9 +67,9 @@ function main()
     level.var_977975d2[ "left" ] = "cin_t7_ai_zm_dlc1_dragonhead_consume_l";
     level.var_977975d2[ "front" ] = "cin_t7_ai_zm_dlc1_dragonhead_consume_f";
     level.var_d198ed8e = [];
-    level.var_d198ed8e[ "right" ] = %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_r;
-    level.var_d198ed8e[ "left" ] = %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l;
-    level.var_d198ed8e[ "front" ] = %zm_castle::rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f;
+    level.var_d198ed8e[ "right" ] = %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_r;
+    level.var_d198ed8e[ "left" ] = %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l;
+    level.var_d198ed8e[ "front" ] = %rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f;
     level.var_93ad1521 = [];
     level.var_93ad1521[ 0 ] = "cin_t7_ai_zm_dlc1_dragonhead_idle";
     level.var_93ad1521[ 1 ] = "cin_t7_ai_zm_dlc1_dragonhead_idle_b";
@@ -76,7 +78,7 @@ function main()
     scene::add_scene_func( level.var_93ad1521[ 0 ], &function_8cce2397 );
     scene::add_scene_func( level.var_93ad1521[ 1 ], &function_8cce2397 );
     scene::add_scene_func( level.var_16db17aa[ 0 ], &function_def5820e );
-    level.var_f41bc81e = %zm_castle::ai_zm_dlc1_dragonhead_zombie_impact;
+    level.var_f41bc81e = %ai_zm_dlc1_dragonhead_zombie_impact;
     function_46c9cb0();
     util::waitforallclients();
     wait 1;
@@ -94,13 +96,13 @@ function main()
         for ( i = 0; i < level.var_f302359b.size ; i++ )
         {
             level.var_792780c0[ j ][ level.var_f302359b[ i ].script_parameters ] = getent( j, level.var_f302359b[ i ].script_label, "targetname" );
-            level.var_792780c0[ j ][ level.var_f302359b[ i ].script_parameters ] useanimtree( $zm_castle );
+            level.var_792780c0[ j ][ level.var_f302359b[ i ].script_parameters ] useanimtree( #animtree );
             level.var_792780c0[ j ][ level.var_f302359b[ i ].script_parameters ] flag::init( "dragon_far_right" );
             level.var_792780c0[ j ][ level.var_f302359b[ i ].script_parameters ] flag::init( "dragon_far_left" );
             level.var_792780c0[ j ][ level.var_f302359b[ i ].script_parameters ].var_7d382bfa = 1;
             level.var_3cc6503b[ j ][ level.var_f302359b[ i ].script_parameters ] = getent( j, level.var_f302359b[ i ].script_friendname, "targetname" );
             level.var_3cc6503b[ j ][ level.var_f302359b[ i ].script_parameters ] hide();
-            level.var_3cc6503b[ j ][ level.var_f302359b[ i ].script_parameters ] useanimtree( $zm_castle );
+            level.var_3cc6503b[ j ][ level.var_f302359b[ i ].script_parameters ] useanimtree( #animtree );
             level.var_abd9e961[ j ][ level.var_f302359b[ i ].script_parameters ] = getent( j, level.var_f302359b[ i ].script_label + "_mini", "targetname" );
         }
         
@@ -411,10 +413,10 @@ function function_90c151e6( localclientnum, oldval, newval, bnewent, binitialsna
         level.var_3cc6503b[ localclientnum ][ fieldname ] = m_body;
     }
     
-    m_body useanimtree( $zm_castle );
+    m_body useanimtree( #animtree );
     m_body.origin = self.origin;
     m_body show();
-    m_body clearanim( %zm_castle::root, 0.1 );
+    m_body clearanim( %root, 0.1 );
     m_body setanimrestart( level.var_f41bc81e, 1, 0.2, 1 );
     n_anim_time = getanimlength( level.var_f41bc81e ) / 1;
 }
@@ -508,7 +510,7 @@ function function_939ae9de( m_dragon, localclientnum, direction, var_3c6f5c75 )
         self.var_bbb1ef87 setmodel( "tag_origin" );
     }
     
-    self clearanim( %zm_castle::root, 0.2 );
+    self clearanim( %root, 0.2 );
     self setanimrestart( "ai_zm_dlc1_dragonhead_zombie_rise" );
     vec_dir = m_dragon.origin - self.origin;
     var_6ea7737a = vectorscale( vec_dir, 0.2 );

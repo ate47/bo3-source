@@ -222,13 +222,15 @@ function private parasite_target_selection()
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace parasite
 // Params 0
 // Checksum 0x7aa832e2, Offset: 0xb68
 // Size: 0x24c
 function parasite_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     blackboard::createblackboardforentity( self );
     self blackboard::registervehicleblackboardattributes();
     ai::createinterfaceforentity( self );

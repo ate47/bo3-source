@@ -21,6 +21,8 @@ function autoexec __init__sytem__()
     system::register( "vehicle", &__init__, undefined, undefined );
 }
 
+#using_animtree( "mp_vehicles" );
+
 // Namespace vehicle
 // Params 0
 // Checksum 0x4ac9bc32, Offset: 0xcd8
@@ -91,10 +93,10 @@ function __init__()
         }
     }
     
-    chopper_player_get_on_gun = %mp_vehicles::int_huey_gunner_on;
-    chopper_door_open = %mp_vehicles::v_huey_door_open;
-    chopper_door_open_state = %mp_vehicles::v_huey_door_open_state;
-    chopper_door_closed_state = %mp_vehicles::v_huey_door_close_state;
+    chopper_player_get_on_gun = %int_huey_gunner_on;
+    chopper_door_open = %v_huey_door_open;
+    chopper_door_open_state = %v_huey_door_open_state;
+    chopper_door_closed_state = %v_huey_door_close_state;
     killbrushes = getentarray( "water_killbrush", "targetname" );
     
     foreach ( brush in killbrushes )

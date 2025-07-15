@@ -29,6 +29,8 @@
 
 #namespace microwave_turret;
 
+#using_animtree( "mp_microwaveturret" );
+
 // Namespace microwave_turret
 // Params 0
 // Checksum 0x5964803c, Offset: 0x970
@@ -39,8 +41,8 @@ function init()
     killstreaks::register_strings( "microwave_turret", &"KILLSTREAK_EARNED_MICROWAVE_TURRET", &"KILLSTREAK_MICROWAVE_TURRET_NOT_AVAILABLE", &"KILLSTREAK_MICROWAVE_TURRET_INBOUND", undefined, &"KILLSTREAK_MICROWAVE_TURRET_HACKED", 0 );
     killstreaks::register_dialog( "microwave_turret", "mpl_killstreak_turret", "microwaveTurretDialogBundle", undefined, "friendlyMicrowaveTurret", "enemyMicrowaveTurret", "enemyMicrowaveTurretMultiple", "friendlyMicrowaveTurretHacked", "enemyMicrowaveTurretHacked", "requestMicrowaveTurret", "threatMicrowaveTurret" );
     killstreaks::register_remote_override_weapon( "microwave_turret", "microwave_turret" );
-    level.microwaveopenanim = %mp_microwaveturret::o_turret_guardian_open;
-    level.microwavecloseanim = %mp_microwaveturret::o_turret_guardian_close;
+    level.microwaveopenanim = %o_turret_guardian_open;
+    level.microwavecloseanim = %o_turret_guardian_close;
     clientfield::register( "vehicle", "turret_microwave_open", 1, 1, "int" );
     clientfield::register( "scriptmover", "turret_microwave_init", 1, 1, "int" );
     clientfield::register( "scriptmover", "turret_microwave_close", 1, 1, "int" );

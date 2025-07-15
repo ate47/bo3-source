@@ -2145,6 +2145,8 @@ function function_d0b5b3de()
     e_rocket = magicbullet( weapon, var_11fd5f3f.origin, var_6beedec9.origin );
 }
 
+#using_animtree( "generic" );
+
 // Namespace cp_mi_sing_biodomes_swamp
 // Params 0
 // Checksum 0x1bcb35c9, Offset: 0x8598
@@ -2153,7 +2155,7 @@ function hunter_callback()
 {
     self endon( #"death" );
     target_set( self, ( 0, 0, 0 ) );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self.health = self.healthdefault;
     self vehicle::friendly_fire_shield();
     self.takedamage = 0;

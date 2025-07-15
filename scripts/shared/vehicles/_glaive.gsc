@@ -36,13 +36,15 @@ function __init__()
     clientfield::register( "vehicle", "glaive_blood_fx", 1, 1, "int" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace glaive
 // Params 0
 // Checksum 0xd0db9dac, Offset: 0x538
 // Size: 0x1fc
 function glaive_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self.health = self.healthdefault;
     self vehicle::friendly_fire_shield();
     self setneargoalnotifydist( 50 );

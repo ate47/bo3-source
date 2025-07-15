@@ -54,6 +54,8 @@ function __main__()
     
 }
 
+#using_animtree( "zm_genesis" );
+
 // Namespace zm_genesis_shadowman
 // Params 4
 // Checksum 0x113788f1, Offset: 0x518
@@ -81,7 +83,7 @@ function function_8888a532( var_5b35973a, var_d250bd20, var_2c1a0d8f, var_32a562
     }
     
     self.var_94d7beef = util::spawn_model( "c_zom_dlc4_shadowman_fb", self.origin, self.angles );
-    self.var_94d7beef useanimtree( $zm_genesis );
+    self.var_94d7beef useanimtree( #animtree );
     self.var_94d7beef.health = 1000000;
     util::wait_network_frame();
     self.var_94d7beef clientfield::set( "shadowman_fx", 1 );

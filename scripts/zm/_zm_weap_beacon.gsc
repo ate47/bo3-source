@@ -331,6 +331,8 @@ function proximity_detonate( owner )
     }
 }
 
+#using_animtree( "zombie_beacon" );
+
 // Namespace _zm_weap_beacon
 // Params 4
 // Checksum 0xba2713de, Offset: 0x10c8
@@ -360,7 +362,7 @@ function player_throw_beacon( grenade, num_attractors, max_attract_dist, attract
         model = spawn( "script_model", grenade.origin + var_65f5946c );
         model endon( #"weapon_beacon_timeout" );
         model setmodel( "wpn_t7_zmb_hd_g_strike_world" );
-        model useanimtree( $zombie_beacon );
+        model useanimtree( #animtree );
         model linkto( grenade, "", var_65f5946c );
         model.angles = grenade.angles;
         model thread beacon_cleanup( grenade );
@@ -467,13 +469,13 @@ function player_throw_beacon( grenade, num_attractors, max_attract_dist, attract
 // Size: 0xb4
 function weapon_beacon_anims()
 {
-    n_time = getanimlength( %zombie_beacon::o_zm_dlc5_zombie_homing_deploy );
-    self animscripted( "beacon_deploy", self.origin, self.angles, %zombie_beacon::o_zm_dlc5_zombie_homing_deploy );
+    n_time = getanimlength( %o_zm_dlc5_zombie_homing_deploy );
+    self animscripted( "beacon_deploy", self.origin, self.angles, %o_zm_dlc5_zombie_homing_deploy );
     wait n_time;
     
     if ( isdefined( self ) )
     {
-        self animscripted( "beacon_spin", self.origin, self.angles, %zombie_beacon::o_zm_dlc5_zombie_homing_spin );
+        self animscripted( "beacon_spin", self.origin, self.angles, %o_zm_dlc5_zombie_homing_spin );
     }
 }
 

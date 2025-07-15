@@ -9,6 +9,8 @@
 
 #namespace bouncingbetty;
 
+#using_animtree( "bouncing_betty" );
+
 // Namespace bouncingbetty
 // Params 0
 // Checksum 0xc22a486c, Offset: 0x468
@@ -20,8 +22,8 @@ function init_shared()
     level._effect[ "fx_betty_enemy_light" ] = "weapon/fx_betty_light_orng";
     level.bettymindist = 20;
     level.bettystuntime = 1;
-    bettyexplodeanim = %bouncing_betty::o_spider_mine_detonate;
-    bettydeployanim = %bouncing_betty::o_spider_mine_deploy;
+    bettyexplodeanim = %o_spider_mine_detonate;
+    bettydeployanim = %o_spider_mine_deploy;
     level.bettyradius = getdvarint( "betty_detect_radius", 180 );
     level.bettyactivationdelay = getdvarfloat( "betty_activation_delay", 1 );
     level.bettygraceperiod = getdvarfloat( "betty_grace_period", 0 );
@@ -233,8 +235,8 @@ function spawnminemover()
     self endon( #"death" );
     self util::waittillnotmoving();
     self clientfield::set( "bouncingbetty_state", 2 );
-    self useanimtree( $bouncing_betty );
-    self setanim( %bouncing_betty::o_spider_mine_deploy, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanim( %o_spider_mine_deploy, 1, 0, 1 );
     minemover = spawn( "script_model", self.origin );
     minemover.angles = self.angles;
     minemover setmodel( "tag_origin" );

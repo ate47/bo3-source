@@ -127,6 +127,8 @@ function private function_98817801( localclientnum, thrasher, player )
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace thrasherclientutils
 // Params 3, eflags: 0x4
 // Checksum 0x13642a57, Offset: 0x8a0
@@ -141,7 +143,7 @@ function private function_4cf5760d( localclientnum, thrasher, player )
     eyeoffset = ( 0, 0, abs( abs( eyeposition[ 2 ] - player.origin[ 2 ] ) - 40 ) - 10 );
     thrasher.var_18fd72ff = spawn( localclientnum, thrasher.origin, "script_model" );
     thrasher.var_18fd72ff setmodel( "p7_fxanim_zm_island_thrasher_stomach_mod" );
-    thrasher.var_18fd72ff useanimtree( $generic );
+    thrasher.var_18fd72ff useanimtree( #animtree );
     var_8cfe2065 = 5;
     forwardoffset = anglestoforward( thrasher.var_18fd72ff.angles ) * var_8cfe2065;
     thrasher.var_18fd72ff.origin = getcamposbylocalclientnum( player.localclientnum ) - forwardoffset;

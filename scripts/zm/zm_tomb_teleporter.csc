@@ -53,6 +53,8 @@ function function_a8255fab( localclientnum, oldval, newval, bnewent, binitialsna
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_teleporter
 // Params 7
 // Checksum 0xb8cca17, Offset: 0x448
@@ -63,7 +65,7 @@ function function_ffedfe48( localclientnum, oldval, newval, bnewent, binitialsna
     
     if ( !( isdefined( self.var_76534568 ) && self.var_76534568 ) )
     {
-        self useanimtree( $generic );
+        self useanimtree( #animtree );
         self.var_76534568 = 1;
     }
     

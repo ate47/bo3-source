@@ -344,6 +344,8 @@ function giant_robot_intro_walk( n_robot_id )
     level notify( #"giant_robot_intro_complete" );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_giant_robot
 // Params 2
 // Checksum 0xdc703171, Offset: 0x2430
@@ -370,7 +372,7 @@ function giant_robot_start_walk( n_robot_id, b_has_hatch )
     {
         m_sole setcandamage( 1 );
         m_sole.health = 99999;
-        m_sole useanimtree( $generic );
+        m_sole useanimtree( #animtree );
         m_sole unlink();
     }
     
@@ -523,7 +525,7 @@ function sole_cleanup( m_sole )
     self endon( #"death" );
     self endon( #"giant_robot_stop" );
     util::wait_network_frame();
-    m_sole clearanim( %generic::root, 0 );
+    m_sole clearanim( %root, 0 );
     util::wait_network_frame();
     m_sole animscripted( "hatch_anim", m_sole.origin, m_sole.angles, "ai_zm_dlc5_zombie_giant_robot_hatch_close" );
 }
@@ -555,7 +557,7 @@ function giant_robot_foot_waittill_sole_shot( m_sole )
     level.gr_foot_hatch_closed[ self.giant_robot_id ] = 0;
     level clientfield::set( "play_foot_open_fx_robot_" + self.giant_robot_id, n_foot );
     m_sole animscripted( "hatch_anim", m_sole.origin, m_sole.angles, "ai_zm_dlc5_zombie_giant_robot_hatch_open" );
-    n_time = getanimlength( %generic::ai_zm_dlc5_zombie_giant_robot_hatch_open );
+    n_time = getanimlength( %ai_zm_dlc5_zombie_giant_robot_hatch_open );
     wait n_time;
     m_sole animscripted( "hatch_anim", m_sole.origin, m_sole.angles, "ai_zm_dlc5_zombie_giant_robot_hatch_open_idle" );
 }

@@ -262,6 +262,8 @@ function moon_be_start_capture()
     level thread moon_be_activate();
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_moon_sq_be
 // Params 0
 // Checksum 0x3d171c6a, Offset: 0x1160
@@ -281,7 +283,7 @@ function moon_be_activate()
     
     level._be = util::spawn_model( "p7_zm_moo_egg_black", road_start.origin, road_start.angles );
     level._be notsolid();
-    level._be useanimtree( $generic );
+    level._be useanimtree( #animtree );
     level._be.animname = "_be_";
     level._be playloopsound( "evt_sq_blackegg_loop", 1 );
     level._be.stopped = 0;

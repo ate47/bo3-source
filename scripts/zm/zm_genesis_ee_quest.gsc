@@ -808,6 +808,8 @@ function function_958fb16()
     }
 }
 
+#using_animtree( "zm_genesis" );
+
 // Namespace zm_genesis_ee_quest
 // Params 0
 // Checksum 0x758bb9eb, Offset: 0x4058
@@ -817,7 +819,7 @@ function function_43106b81()
     mdl_body = util::spawn_model( self.script_string, self.origin, ( 0, -90, 0 ) );
     mdl_body playsound( "zmb_main_reel3_body_appear" );
     mdl_body attach( "c_zom_dlc4_zombies_head2_fem", "", 1 );
-    mdl_body useanimtree( $zm_genesis );
+    mdl_body useanimtree( #animtree );
     mdl_body thread animation::play( "ai_zm_dlc4_sophia_death_pose" );
     level flag::wait_till( "b_target_done" );
     playsoundatposition( "vox_soph_sophia_scream_0", mdl_body.origin );

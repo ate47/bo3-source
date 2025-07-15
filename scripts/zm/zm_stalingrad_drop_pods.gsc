@@ -471,6 +471,8 @@ function function_9411a0ff()
     level.var_583e4a97.var_a622ee25 = 0;
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_stalingrad_drop_pod
 // Params 1
 // Checksum 0x9f67bfa8, Offset: 0x2868
@@ -511,7 +513,7 @@ function function_d1a91c4f( var_e7a36389 )
     level.var_8cc024f2.mdl_pod = spawn( "script_model", var_a57aee42 );
     mdl_pod = level.var_8cc024f2.mdl_pod;
     mdl_pod setmodel( "p7_fxanim_zm_stal_pack_a_punch_pod_mod" );
-    mdl_pod useanimtree( $generic );
+    mdl_pod useanimtree( #animtree );
     mdl_pod.angles = var_e7a36389.angles;
     
     foreach ( e_player in level.activeplayers )

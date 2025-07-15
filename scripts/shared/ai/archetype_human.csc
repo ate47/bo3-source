@@ -27,6 +27,8 @@ function autoexec main()
 
 #namespace humanclientutils;
 
+#using_animtree( "generic" );
+
 // Namespace humanclientutils
 // Params 7
 // Checksum 0xd40ee132, Offset: 0x1d8
@@ -41,7 +43,7 @@ function facialdialoguehandler( localclientnum, oldvalue, newvalue, bnewent, bin
     
     if ( isdefined( self.facialdialogueactive ) && self.facialdialogueactive )
     {
-        self clearanim( %generic::faces, 0 );
+        self clearanim( %faces, 0 );
     }
 }
 

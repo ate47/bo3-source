@@ -138,6 +138,8 @@ function function_f937236c( newval, var_ce864151 )
     self function_7c4c8c42( newval );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_capture_zones
 // Params 2
 // Checksum 0x1d22ecc4, Offset: 0x1790
@@ -164,7 +166,7 @@ function function_f424a041( str_name, localclientnumber )
     
     if ( !level.var_92a1717d[ localclientnumber ][ str_name ] hasanimtree() )
     {
-        level.var_92a1717d[ localclientnumber ][ str_name ] useanimtree( $generic );
+        level.var_92a1717d[ localclientnumber ][ str_name ] useanimtree( #animtree );
     }
     
     return level.var_92a1717d[ localclientnumber ][ str_name ];
@@ -836,10 +838,10 @@ function function_f35264ff()
     self notify( #"hash_3b22402e" );
     self endon( #"hash_765cfe11" );
     self function_4f226940();
-    self setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim, 1, 0.2 );
-    wait getanimlength( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim ) - 0.2;
-    self clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim, 0.2 );
-    self setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim, 1, 0.2 );
+    self setanim( %p7_fxanim_zm_ori_monolith_inductor_pull_anim, 1, 0.2 );
+    wait getanimlength( %p7_fxanim_zm_ori_monolith_inductor_pull_anim ) - 0.2;
+    self clearanim( %p7_fxanim_zm_ori_monolith_inductor_pull_anim, 0.2 );
+    self setanim( %p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim, 1, 0.2 );
     level.var_d7512031 = 1;
 }
 
@@ -855,12 +857,12 @@ function function_3f73ddc3( oldval )
     
     if ( oldval )
     {
-        self setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_release_anim, 1, 0.2 );
-        wait getanimlength( %generic::p7_fxanim_zm_ori_monolith_inductor_release_anim ) - 0.2;
+        self setanim( %p7_fxanim_zm_ori_monolith_inductor_release_anim, 1, 0.2 );
+        wait getanimlength( %p7_fxanim_zm_ori_monolith_inductor_release_anim ) - 0.2;
         self function_4f226940();
     }
     
-    self setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_idle_anim, 1, 0.2 );
+    self setanim( %p7_fxanim_zm_ori_monolith_inductor_idle_anim, 1, 0.2 );
     level.var_d7512031 = 0;
 }
 
@@ -876,16 +878,16 @@ function pap_monolith_ring_shake( localclientnumber, oldval, newval, bnewent, bi
     if ( newval == 1 )
     {
         m_ring function_4f226940();
-        m_ring setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_shake_anim, 1, 0.2 );
-        wait getanimlength( %generic::p7_fxanim_zm_ori_monolith_inductor_shake_anim ) - 0.2;
-        m_ring clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_shake_anim, 0.2 );
+        m_ring setanim( %p7_fxanim_zm_ori_monolith_inductor_shake_anim, 1, 0.2 );
+        wait getanimlength( %p7_fxanim_zm_ori_monolith_inductor_shake_anim ) - 0.2;
+        m_ring clearanim( %p7_fxanim_zm_ori_monolith_inductor_shake_anim, 0.2 );
         
         if ( level.var_d7512031 )
         {
-            m_ring setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim, 1, 0.2 );
-            wait getanimlength( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim ) - 0.2;
-            m_ring clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim, 0.2 );
-            m_ring setanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim, 1, 0.2 );
+            m_ring setanim( %p7_fxanim_zm_ori_monolith_inductor_pull_anim, 1, 0.2 );
+            wait getanimlength( %p7_fxanim_zm_ori_monolith_inductor_pull_anim ) - 0.2;
+            m_ring clearanim( %p7_fxanim_zm_ori_monolith_inductor_pull_anim, 0.2 );
+            m_ring setanim( %p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim, 1, 0.2 );
             return;
         }
         
@@ -899,11 +901,11 @@ function pap_monolith_ring_shake( localclientnumber, oldval, newval, bnewent, bi
 // Size: 0xcc
 function function_4f226940()
 {
-    self clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_anim, 0.2 );
-    self clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim, 0.2 );
-    self clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_release_anim, 0.2 );
-    self clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_shake_anim, 0.2 );
-    self clearanim( %generic::p7_fxanim_zm_ori_monolith_inductor_idle_anim, 0.2 );
+    self clearanim( %p7_fxanim_zm_ori_monolith_inductor_pull_anim, 0.2 );
+    self clearanim( %p7_fxanim_zm_ori_monolith_inductor_pull_idle_anim, 0.2 );
+    self clearanim( %p7_fxanim_zm_ori_monolith_inductor_release_anim, 0.2 );
+    self clearanim( %p7_fxanim_zm_ori_monolith_inductor_shake_anim, 0.2 );
+    self clearanim( %p7_fxanim_zm_ori_monolith_inductor_idle_anim, 0.2 );
 }
 
 // Namespace zm_tomb_capture_zones
@@ -957,7 +959,7 @@ function function_12a07195( localclientnumber )
     if ( !level.var_9920ede0[ localclientnumber ] hasanimtree() )
     {
         level.var_9920ede0[ localclientnumber ] mapshaderconstant( localclientnumber, 3, "scriptVector2", 0, 0, 0, 0 );
-        level.var_9920ede0[ localclientnumber ] useanimtree( $generic );
+        level.var_9920ede0[ localclientnumber ] useanimtree( #animtree );
     }
     
     return level.var_9920ede0[ localclientnumber ];
@@ -1106,13 +1108,13 @@ function function_5f50cf29()
 // Size: 0x134
 function function_7cc68e33()
 {
-    function_6784d594( 0, undefined, %generic::p7_fxanim_zm_ori_pack_return_pc1_anim );
-    function_6784d594( 1, %generic::p7_fxanim_zm_ori_pack_pc1_anim, %generic::p7_fxanim_zm_ori_pack_return_pc2_anim );
-    function_6784d594( 2, %generic::p7_fxanim_zm_ori_pack_pc2_anim, %generic::p7_fxanim_zm_ori_pack_return_pc3_anim );
-    function_6784d594( 3, %generic::p7_fxanim_zm_ori_pack_pc3_anim, %generic::p7_fxanim_zm_ori_pack_return_pc4_anim );
-    function_6784d594( 4, %generic::p7_fxanim_zm_ori_pack_pc4_anim, %generic::p7_fxanim_zm_ori_pack_return_pc5_anim );
-    function_6784d594( 5, %generic::p7_fxanim_zm_ori_pack_pc5_anim, %generic::p7_fxanim_zm_ori_pack_return_pc6_anim );
-    function_6784d594( 6, %generic::p7_fxanim_zm_ori_pack_pc6_anim, undefined );
+    function_6784d594( 0, undefined, %p7_fxanim_zm_ori_pack_return_pc1_anim );
+    function_6784d594( 1, %p7_fxanim_zm_ori_pack_pc1_anim, %p7_fxanim_zm_ori_pack_return_pc2_anim );
+    function_6784d594( 2, %p7_fxanim_zm_ori_pack_pc2_anim, %p7_fxanim_zm_ori_pack_return_pc3_anim );
+    function_6784d594( 3, %p7_fxanim_zm_ori_pack_pc3_anim, %p7_fxanim_zm_ori_pack_return_pc4_anim );
+    function_6784d594( 4, %p7_fxanim_zm_ori_pack_pc4_anim, %p7_fxanim_zm_ori_pack_return_pc5_anim );
+    function_6784d594( 5, %p7_fxanim_zm_ori_pack_pc5_anim, %p7_fxanim_zm_ori_pack_return_pc6_anim );
+    function_6784d594( 6, %p7_fxanim_zm_ori_pack_pc6_anim, undefined );
 }
 
 // Namespace zm_tomb_capture_zones
@@ -1224,7 +1226,7 @@ function function_cd49ce76( localclientnumber )
     
     if ( !level.var_6a68eb65[ localclientnumber ] hasanimtree() )
     {
-        level.var_6a68eb65[ localclientnumber ] useanimtree( $generic );
+        level.var_6a68eb65[ localclientnumber ] useanimtree( #animtree );
         level.var_6a68eb65[ localclientnumber ] mapshaderconstant( localclientnumber, 2, "ScriptVector0", 1 );
     }
     

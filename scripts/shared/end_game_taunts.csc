@@ -196,6 +196,8 @@ function previewtaunt( localclientnum, charactermodel, idleanimname, tauntanimna
     playtaunt( localclientnum, charactermodel, 0, idleanimname, tauntanimname, 0, 0 );
 }
 
+#using_animtree( "all_player" );
+
 // Namespace end_game_taunts
 // Params 7
 // Checksum 0x2bf2e78c, Offset: 0x2c78
@@ -224,7 +226,7 @@ function playtaunt( localclientnum, charactermodel, topplayerindex, idleanimname
     
     if ( !charactermodel hasanimtree() )
     {
-        charactermodel useanimtree( $all_player );
+        charactermodel useanimtree( #animtree );
     }
     
     charactermodel.playingtaunt = tauntanimname;
@@ -311,7 +313,7 @@ function playgesture( localclientnum, charactermodel, topplayerindex, idleanimna
     
     if ( !charactermodel hasanimtree() )
     {
-        charactermodel useanimtree( $all_player );
+        charactermodel useanimtree( #animtree );
     }
     
     charactermodel.playinggesture = 1;
@@ -1384,7 +1386,7 @@ function spawnplayermodel( localclientnum, targetname, origin, angles, bodymodel
     model attach( helmetmodel, "" );
     model setbodyrenderoptions( moderenderoptions, bodyrenderoptions, helmetrenderoptions, helmetrenderoptions );
     model hide();
-    model useanimtree( $all_player );
+    model useanimtree( #animtree );
     return model;
 }
 

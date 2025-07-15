@@ -27,6 +27,8 @@ function __init__()
     visionset_mgr::register_visionset_info( "turret_visionset", 1, 16, undefined, "mp_vehicles_turret" );
 }
 
+#using_animtree( "mp_autoturret" );
+
 // Namespace autoturret
 // Params 7
 // Checksum 0x56c9f524, Offset: 0x328
@@ -38,9 +40,9 @@ function turret_init_anim( localclientnum, oldval, newval, bnewent, binitialsnap
         return;
     }
     
-    self useanimtree( $mp_autoturret );
-    self setanimrestart( %mp_autoturret::o_turret_sentry_close, 1, 0, 1 );
-    self setanimtime( %mp_autoturret::o_turret_sentry_close, 1 );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_sentry_close, 1, 0, 1 );
+    self setanimtime( %o_turret_sentry_close, 1 );
 }
 
 // Namespace autoturret
@@ -54,8 +56,8 @@ function turret_open( localclientnum, oldval, newval, bnewent, binitialsnap, fie
         return;
     }
     
-    self useanimtree( $mp_autoturret );
-    self setanimrestart( %mp_autoturret::o_turret_sentry_deploy, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_sentry_deploy, 1, 0, 1 );
 }
 
 // Namespace autoturret
@@ -69,7 +71,7 @@ function turret_close_anim( localclientnum, oldval, newval, bnewent, binitialsna
         return;
     }
     
-    self useanimtree( $mp_autoturret );
-    self setanimrestart( %mp_autoturret::o_turret_sentry_close, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_sentry_close, 1, 0, 1 );
 }
 

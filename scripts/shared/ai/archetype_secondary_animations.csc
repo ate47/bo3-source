@@ -36,6 +36,8 @@ function private secondaryanimationsinit( localclientnum )
     self thread secondaryfacialanimationthink( localclientnum );
 }
 
+#using_animtree( "generic" );
+
 // Namespace archetype_secondary_animations
 // Params 1, eflags: 0x4
 // Checksum 0xf119293a, Offset: 0x4e0
@@ -44,7 +46,7 @@ function private on_entity_spawn( localclientnum )
 {
     if ( self hasdobj( localclientnum ) )
     {
-        self clearanim( %generic::faces, 0 );
+        self clearanim( %faces, 0 );
     }
     
     self._currentfacestate = "inactive";

@@ -323,6 +323,8 @@ function get_target_leading_pos()
     return position;
 }
 
+#using_animtree( "zombie_cymbal_monkey" );
+
 // Namespace _zm_weap_nesting_dolls
 // Params 3
 // Checksum 0x82d293df, Offset: 0x1300
@@ -336,7 +338,7 @@ function spawn_doll_model( id, index, parent )
     model_index = index + 1;
     model_name = "wpn_t7_zmb_hd_nesting_dolls_" + name + "_doll" + model_index + "_world";
     self.doll_model setmodel( model_name );
-    self.doll_model useanimtree( $zombie_cymbal_monkey );
+    self.doll_model useanimtree( #animtree );
     self.doll_model linkto( self );
     self.doll_model.angles = self.angles;
     self.doll_model thread nesting_dolls_cleanup( self );

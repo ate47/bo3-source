@@ -32,13 +32,15 @@ function __init__()
     vehicle::add_main_callback( "amws", &amws_initialize );
 }
 
+#using_animtree( "generic" );
+
 // Namespace amws
 // Params 0
 // Checksum 0x376b90e4, Offset: 0x450
 // Size: 0x274
 function amws_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     target_set( self, ( 0, 0, 0 ) );
     blackboard::createblackboardforentity( self );
     self blackboard::registervehicleblackboardattributes();

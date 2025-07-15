@@ -191,6 +191,8 @@ function hunter_spawndrones()
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace hunter
 // Params 0
 // Checksum 0xccb19683, Offset: 0xc20
@@ -198,7 +200,7 @@ function hunter_spawndrones()
 function hunter_initialize()
 {
     self endon( #"death" );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     target_set( self, ( 0, 0, 90 ) );
     ai::createinterfaceforentity( self );
     self.health = self.healthdefault;

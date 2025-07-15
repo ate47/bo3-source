@@ -31,6 +31,8 @@ function __init__()
     level thread streamerwatcher();
 }
 
+#using_animtree( "all_player" );
+
 // Namespace end_game_flow
 // Params 3
 // Checksum 0x6f52165, Offset: 0x490
@@ -45,7 +47,7 @@ function setanimationonmodel( localclientnum, charactermodel, topplayerindex )
         
         if ( !charactermodel hasanimtree() )
         {
-            charactermodel useanimtree( $all_player );
+            charactermodel useanimtree( #animtree );
         }
         
         charactermodel setanim( anim_name );

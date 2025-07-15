@@ -113,6 +113,8 @@ function update_distance_to_closest_emp( localclientnum, new_value )
     }
 }
 
+#using_animtree( "mp_emp_power_core" );
+
 // Namespace emp
 // Params 7
 // Checksum 0x42132b16, Offset: 0x660
@@ -126,9 +128,9 @@ function emp_turret_init( localclientnum, oldval, newval, bnewent, binitialsnap,
         return;
     }
     
-    self useanimtree( $mp_emp_power_core );
-    self setanimrestart( %mp_emp_power_core::o_turret_emp_core_deploy, 1, 0, 0 );
-    self setanimtime( %mp_emp_power_core::o_turret_emp_core_deploy, 0 );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_emp_core_deploy, 1, 0, 0 );
+    self setanimtime( %o_turret_emp_core_deploy, 0 );
 }
 
 // Namespace emp
@@ -178,15 +180,15 @@ function emp_turret_deploy_start( localclientnum, oldval, newval, bnewent, binit
 function emp_turret_deploy( localclientnum )
 {
     self endon( #"entityshutdown" );
-    self useanimtree( $mp_emp_power_core );
-    self setanimrestart( %mp_emp_power_core::o_turret_emp_core_deploy, 1, 0, 1 );
-    length = getanimlength( %mp_emp_power_core::o_turret_emp_core_deploy );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_emp_core_deploy, 1, 0, 1 );
+    length = getanimlength( %o_turret_emp_core_deploy );
     wait length * 0.75;
-    self useanimtree( $mp_emp_power_core );
-    self setanim( %mp_emp_power_core::o_turret_emp_core_spin, 1 );
+    self useanimtree( #animtree );
+    self setanim( %o_turret_emp_core_spin, 1 );
     self.fxhandle = playfxontag( localclientnum, "killstreaks/fx_emp_core", self, "tag_fx" );
     self thread cleanup_fx_on_shutdown( localclientnum, self.fxhandle );
     wait length * 0.25;
-    self setanim( %mp_emp_power_core::o_turret_emp_core_deploy, 0 );
+    self setanim( %o_turret_emp_core_deploy, 0 );
 }
 

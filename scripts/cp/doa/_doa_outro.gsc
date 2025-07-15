@@ -639,6 +639,8 @@ function function_5ec4f559( player )
     return model;
 }
 
+#using_animtree( "generic" );
+
 // Namespace doa_outro
 // Params 0
 // Checksum 0x95bfa4dc, Offset: 0x3840
@@ -646,7 +648,7 @@ function function_5ec4f559( player )
 function function_5e06cff2()
 {
     level endon( #"podiumalldone" );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self setmodel( level.doa.var_260a85f3[ randomint( level.doa.var_260a85f3.size ) ] );
     
     if ( !isdefined( self.script_noteworthy ) )
@@ -681,7 +683,7 @@ function function_7206982b()
     while ( true )
     {
         idleanim = self.animarray[ randomint( self.animarray.size ) ];
-        self animscripted( "zombieanim", self.origin, self.angles, idleanim, "normal", %generic::body, 1, 0.3, 0.3 );
+        self animscripted( "zombieanim", self.origin, self.angles, idleanim, "normal", %body, 1, 0.3, 0.3 );
         self waittillmatch( #"zombieanim", "end" );
     }
 }
@@ -717,8 +719,8 @@ function function_b8de7628()
 {
     level endon( #"podiumalldone" );
     self endon( #"death" );
-    var_2c143867 = array( %generic::ai_zombie_base_idle_ad_v1, %generic::ai_zombie_base_idle_au_v1, %generic::bo3_ai_zombie_attack_v1, %generic::bo3_ai_zombie_attack_v2, %generic::bo3_ai_zombie_attack_v3, %generic::bo3_ai_zombie_attack_v4, %generic::bo3_ai_zombie_attack_v6 );
-    var_6ac65424 = array( %generic::ai_zombie_doa_cheer_v1, %generic::ai_zombie_doa_cheer_v2, %generic::ai_zombie_doa_cheer_v3 );
+    var_2c143867 = array( %ai_zombie_base_idle_ad_v1, %ai_zombie_base_idle_au_v1, %bo3_ai_zombie_attack_v1, %bo3_ai_zombie_attack_v2, %bo3_ai_zombie_attack_v3, %bo3_ai_zombie_attack_v4, %bo3_ai_zombie_attack_v6 );
+    var_6ac65424 = array( %ai_zombie_doa_cheer_v1, %ai_zombie_doa_cheer_v2, %ai_zombie_doa_cheer_v3 );
     self.animarray = var_2c143867;
     self.var_b2f6b3b7 = "zombie_outro_mood_angry";
     
@@ -781,7 +783,7 @@ function function_fb3b78fe()
 {
     level endon( #"podiumalldone" );
     self endon( #"death" );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     
     while ( true )
     {
@@ -826,11 +828,11 @@ function function_e4d4b80( animation )
     level endon( #"podiumalldone" );
     self notify( #"hash_e4d4b80" );
     self endon( #"hash_e4d4b80" );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     
     while ( true )
     {
-        self animscripted( "podium", self.origin, self.angles, animation, "normal", %generic::body, 1, 0.5, 0.5 );
+        self animscripted( "podium", self.origin, self.angles, animation, "normal", %body, 1, 0.5, 0.5 );
         self waittillmatch( #"podium", "end" );
         self notify( #"animation_loop", animation );
     }
@@ -868,12 +870,12 @@ function function_d040f4a6( podium )
     level waittill( #"hash_314666df" );
     playermodel = podium.playermodel;
     playermodel.team = "axis";
-    playermodel useanimtree( $generic );
+    playermodel useanimtree( #animtree );
     playermodel solid();
     playermodel.takedamage = 1;
     level.doa.var_c12009c9 = podium.var_53538eb0;
     offset = playermodel.origin + ( 0, 0, 90 );
-    playermodel thread function_e4d4b80( %generic::ch_ram_05_02_block_nrc_vign_cheering_d_loop );
+    playermodel thread function_e4d4b80( %ch_ram_05_02_block_nrc_vign_cheering_d_loop );
     wait 3;
     playermodel thread doa_sound::function_90118d8c( "zmb_end_1stplace_1" );
     function_46882430( &"DOA_FIRST_PLACE", offset );
@@ -914,7 +916,7 @@ function function_1b6034b2( podium )
     level endon( #"podiumalldone" );
     level waittill( #"hash_314666df" );
     playermodel = podium.playermodel;
-    playermodel thread function_e4d4b80( %generic::ai_civ_base_cover_stn_pointidle );
+    playermodel thread function_e4d4b80( %ai_civ_base_cover_stn_pointidle );
     offset = playermodel.origin + ( 0, 0, 90 );
     wait 4;
     playermodel thread doa_sound::function_90118d8c( "zmb_end_2ndplace_1" );
@@ -953,7 +955,7 @@ function function_87082601( podium )
     level waittill( #"hash_314666df" );
     playermodel = podium.playermodel;
     offset = playermodel.origin + ( 0, 0, 90 );
-    playermodel thread function_e4d4b80( %generic::ai_civ_base_standidle_officer );
+    playermodel thread function_e4d4b80( %ai_civ_base_standidle_officer );
     wait 5;
     playermodel thread doa_sound::function_90118d8c( "zmb_end_3rdplace_1" );
     function_46882430( &"DOA_THIRD_PLACE", offset );
@@ -993,7 +995,7 @@ function function_b7bde10a( podium )
     playermodel = podium.playermodel;
     right = anglestoright( playermodel.angles );
     offset = playermodel.origin + ( 0, 0, 80 ) + 30 * right;
-    playermodel thread function_e4d4b80( %generic::ch_new_06_01_chase_vign_sitting_civs_right_civ01_loop );
+    playermodel thread function_e4d4b80( %ch_new_06_01_chase_vign_sitting_civs_right_civ01_loop );
     wait 6;
     playermodel thread doa_sound::function_90118d8c( "zmb_end_4thplace_1" );
     function_46882430( &"DOA_LAST_PLACE", offset );

@@ -164,13 +164,15 @@ function zm_mantle_over_40_move_speed_override()
     return traversealias;
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_tank
 // Params 0
 // Checksum 0xaf6d91fa, Offset: 0x1208
 // Size: 0x24
 function tankuseanimtree()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
 }
 
 /#

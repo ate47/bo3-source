@@ -349,6 +349,8 @@ function ai_activatesystemoverload( target, var_9bc2efcb, disabletimemsec )
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace cybercom_gadget_system_overload
 // Params 4
 // Checksum 0x7ede5a05, Offset: 0x1408
@@ -418,7 +420,7 @@ function system_overload( attacker, disabletimemsec, weapon, checkvalid )
     self thread function_53cfe88a();
     self orientmode( "face default" );
     self ai::set_behavior_attribute( "robot_lights", 1 );
-    self animscripted( "shutdown_anim", self.origin, self.angles, "ai_robot_base_" + type + "_shutdown", "normal", %generic::root, 1, 0.2 );
+    self animscripted( "shutdown_anim", self.origin, self.angles, "ai_robot_base_" + type + "_shutdown", "normal", %root, 1, 0.2 );
     self thread cybercom::stopanimscriptedonnotify( "damage_pain", "shutdown_anim", 1, attacker, weapon );
     self thread cybercom::stopanimscriptedonnotify( "notify_melee_damage", "shutdown_anim", 1, attacker, weapon );
     self thread cybercom::stopanimscriptedonnotify( "breakout_sysoverload_loop", "shutdown_anim", 0, attacker, weapon );

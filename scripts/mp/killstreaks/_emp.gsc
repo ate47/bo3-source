@@ -23,6 +23,8 @@
 
 #namespace emp;
 
+#using_animtree( "mp_emp_power_core" );
+
 // Namespace emp
 // Params 0
 // Checksum 0xdade4432, Offset: 0x6a8
@@ -46,8 +48,8 @@ function init()
     killstreaks::register_dialog( "emp", "mpl_killstreak_emp_activate", "empDialogBundle", undefined, "friendlyEmp", "enemyEmp", "enemyEmpMultiple", "friendlyEmpHacked", "enemyEmpHacked", "requestEmp", "threatEmp" );
     clientfield::register( "scriptmover", "emp_turret_init", 1, 1, "int" );
     clientfield::register( "vehicle", "emp_turret_deploy", 1, 1, "int" );
-    spinanim = %mp_emp_power_core::o_turret_emp_core_spin;
-    deployanim = %mp_emp_power_core::o_turret_emp_core_deploy;
+    spinanim = %o_turret_emp_core_spin;
+    deployanim = %o_turret_emp_core_deploy;
     callback::on_spawned( &onplayerspawned );
     callback::on_connect( &onplayerconnect );
     vehicle::add_main_callback( "emp_turret", &initturretvehicle );
@@ -164,17 +166,17 @@ function deployempturret( emp )
     player endon( #"joined_team" );
     player endon( #"joined_spectators" );
     emp endon( #"death" );
-    emp.vehicle useanimtree( $mp_emp_power_core );
-    emp.vehicle setanim( %mp_emp_power_core::o_turret_emp_core_deploy, 1 );
-    length = getanimlength( %mp_emp_power_core::o_turret_emp_core_deploy );
+    emp.vehicle useanimtree( #animtree );
+    emp.vehicle setanim( %o_turret_emp_core_deploy, 1 );
+    length = getanimlength( %o_turret_emp_core_deploy );
     emp.vehicle clientfield::set( "emp_turret_deploy", 1 );
     wait length * 0.75;
     emp.vehicle thread playempfx();
     emp.vehicle playsound( "mpl_emp_turret_activate" );
-    emp.vehicle setanim( %mp_emp_power_core::o_turret_emp_core_spin, 1 );
+    emp.vehicle setanim( %o_turret_emp_core_spin, 1 );
     player thread emp_jamenemies( emp, 0 );
     wait length * 0.25;
-    emp.vehicle clearanim( %mp_emp_power_core::o_turret_emp_core_deploy, 0 );
+    emp.vehicle clearanim( %o_turret_emp_core_deploy, 0 );
 }
 
 // Namespace emp

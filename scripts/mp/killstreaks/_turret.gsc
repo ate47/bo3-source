@@ -28,6 +28,8 @@
 
 #namespace turret;
 
+#using_animtree( "mp_autoturret" );
+
 // Namespace turret
 // Params 0
 // Checksum 0x576f3b4e, Offset: 0x8b0
@@ -43,8 +45,8 @@ function init()
     clientfield::register( "vehicle", "auto_turret_open", 1, 1, "int" );
     clientfield::register( "scriptmover", "auto_turret_init", 1, 1, "int" );
     clientfield::register( "scriptmover", "auto_turret_close", 1, 1, "int" );
-    level.autoturretopenanim = %mp_autoturret::o_turret_sentry_deploy;
-    level.autoturretcloseanim = %mp_autoturret::o_turret_sentry_close;
+    level.autoturretopenanim = %o_turret_sentry_deploy;
+    level.autoturretcloseanim = %o_turret_sentry_close;
     remote_weapons::registerremoteweapon( "autoturret", &"MP_REMOTE_USE_TURRET", &startturretremotecontrol, &endturretremotecontrol, 1 );
     vehicle::add_main_callback( "sentry_turret", &initturret );
     visionset_mgr::register_info( "visionset", "turret_visionset", 1, 81, 16, 1, &visionset_mgr::ramp_in_out_thread_per_player, 0 );

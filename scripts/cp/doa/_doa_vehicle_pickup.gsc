@@ -556,6 +556,8 @@ function function_3b1b644d( var_85f85940, vehicle )
     self.doa.var_ccf4ef81 = undefined;
 }
 
+#using_animtree( "chicken_mech" );
+
 // Namespace doa_vehicle
 // Params 1
 // Checksum 0xb454709e, Offset: 0x2318
@@ -565,8 +567,8 @@ function function_cdfa9ce8( bird )
     bird notify( #"hash_cf62504" );
     bird endon( #"hash_cf62504" );
     bird endon( #"death" );
-    bird useanimtree( $chicken_mech );
-    bird.animation = randomint( 2 ) ? %chicken_mech::a_chicken_mech_idle : %chicken_mech::a_chicken_mech_lay_egg;
+    bird useanimtree( #animtree );
+    bird.animation = randomint( 2 ) ? %a_chicken_mech_idle : %a_chicken_mech_lay_egg;
     
     while ( isdefined( bird ) )
     {

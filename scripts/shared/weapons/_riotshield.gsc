@@ -8,6 +8,8 @@
 
 #namespace riotshield;
 
+#using_animtree( "mp_riotshield" );
+
 // Namespace riotshield
 // Params 0
 // Checksum 0xabc8fb53, Offset: 0x540
@@ -23,12 +25,12 @@ function init_shared()
     level.stowedshieldmodel = "t6_wpn_shield_stow_world";
     level.carriedshieldmodel = "t6_wpn_shield_carry_world";
     level.detectshieldmodel = "t6_wpn_shield_carry_world_detect";
-    level.riotshielddestroyanim = %mp_riotshield::o_riot_stand_destroyed;
-    level.riotshielddeployanim = %mp_riotshield::o_riot_stand_deploy;
-    level.riotshieldshotanimfront = %mp_riotshield::o_riot_stand_shot;
-    level.riotshieldshotanimback = %mp_riotshield::o_riot_stand_shot_back;
-    level.riotshieldmeleeanimfront = %mp_riotshield::o_riot_stand_melee_front;
-    level.riotshieldmeleeanimback = %mp_riotshield::o_riot_stand_melee_back;
+    level.riotshielddestroyanim = %o_riot_stand_destroyed;
+    level.riotshielddeployanim = %o_riot_stand_deploy;
+    level.riotshieldshotanimfront = %o_riot_stand_shot;
+    level.riotshieldshotanimback = %o_riot_stand_shot_back;
+    level.riotshieldmeleeanimfront = %o_riot_stand_melee_front;
+    level.riotshieldmeleeanimback = %o_riot_stand_melee_back;
     level.riotshield_placement_zoffset = 26;
     thread register();
     callback::on_spawned( &on_player_spawned );
@@ -296,7 +298,7 @@ function spawnriotshieldcover( origin, angles )
     shield_ent.team = self.team;
     shield_ent setteam( self.team );
     shield_ent attachreconmodel( level.detectshieldmodel, self );
-    shield_ent useanimtree( $mp_riotshield );
+    shield_ent useanimtree( #animtree );
     shield_ent setscriptmoverflag( 0 );
     shield_ent disconnectpaths();
     return shield_ent;

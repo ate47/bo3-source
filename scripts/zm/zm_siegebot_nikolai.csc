@@ -34,13 +34,15 @@ function __init__()
     clientfield::register( "vehicle", "raps_landing", 12000, 1, "int", &raps_landing, 0, 0 );
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_siegebot_nikolai
 // Params 1
 // Checksum 0xd8240d81, Offset: 0x7e0
 // Size: 0x5c
 function on_spawned( localclientnum )
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self thread function_89d7e567( localclientnum );
     self thread function_48c3fc7d( localclientnum );
 }

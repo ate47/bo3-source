@@ -43,13 +43,15 @@ function __init__()
     callback::on_disconnect( &on_player_disconnected );
 }
 
+#using_animtree( "generic" );
+
 // Namespace siegebot
 // Params 0
 // Checksum 0xed5e485c, Offset: 0x828
 // Size: 0x49c
 function siegebot_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     blackboard::createblackboardforentity( self );
     self blackboard::registervehicleblackboardattributes();
     self.health = self.healthdefault;
@@ -1776,10 +1778,10 @@ function retract_left_arm()
     }
     
     self.left_arm_retracted = 1;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self clientfield::set( "siegebot_retract_left_arm", 1 );
-    self clearanim( %generic::ai_siegebot_base_mp_left_arm_extend, 0.2 );
-    self setanim( %generic::ai_siegebot_base_mp_left_arm_retract, 1 );
+    self clearanim( %ai_siegebot_base_mp_left_arm_extend, 0.2 );
+    self setanim( %ai_siegebot_base_mp_left_arm_retract, 1 );
 }
 
 // Namespace siegebot
@@ -1799,15 +1801,15 @@ function extend_left_arm()
     }
     
     self.left_arm_retracted = 0;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self clientfield::set( "siegebot_retract_left_arm", 0 );
-    self clearanim( %generic::ai_siegebot_base_mp_left_arm_retract, 0.2 );
-    self setanim( %generic::ai_siegebot_base_mp_left_arm_extend, 1, 0 );
+    self clearanim( %ai_siegebot_base_mp_left_arm_retract, 0.2 );
+    self setanim( %ai_siegebot_base_mp_left_arm_extend, 1, 0 );
     wait 0.1;
     
     if ( self.left_arm_retracted == 0 )
     {
-        self clearanim( %generic::ai_siegebot_base_mp_left_arm_extend, 0.1 );
+        self clearanim( %ai_siegebot_base_mp_left_arm_extend, 0.1 );
     }
 }
 
@@ -1828,10 +1830,10 @@ function retract_right_arm()
     }
     
     self.right_arm_retracted = 1;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self clientfield::set( "siegebot_retract_right_arm", 1 );
-    self clearanim( %generic::ai_siegebot_base_mp_right_arm_extend, 0.2 );
-    self setanim( %generic::ai_siegebot_base_mp_right_arm_retract, 1 );
+    self clearanim( %ai_siegebot_base_mp_right_arm_extend, 0.2 );
+    self setanim( %ai_siegebot_base_mp_right_arm_retract, 1 );
 }
 
 // Namespace siegebot
@@ -1851,15 +1853,15 @@ function extend_right_arm()
     }
     
     self.right_arm_retracted = 0;
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self clientfield::set( "siegebot_retract_right_arm", 0 );
-    self clearanim( %generic::ai_siegebot_base_mp_right_arm_retract, 0.2 );
-    self setanim( %generic::ai_siegebot_base_mp_right_arm_extend, 1 );
+    self clearanim( %ai_siegebot_base_mp_right_arm_retract, 0.2 );
+    self setanim( %ai_siegebot_base_mp_right_arm_extend, 1 );
     wait 0.1;
     
     if ( self.right_arm_retracted == 0 )
     {
-        self clearanim( %generic::ai_siegebot_base_mp_right_arm_extend, 0.1 );
+        self clearanim( %ai_siegebot_base_mp_right_arm_extend, 0.1 );
     }
 }
 

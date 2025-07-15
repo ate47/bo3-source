@@ -375,6 +375,8 @@ function sentinel_drone_beam_set_target_id( localclientnum, oldval, newval, bnew
     level.sentinel_drone_target_id[ newval ] = self;
 }
 
+#using_animtree( "generic" );
+
 // Namespace sentinel_drone
 // Params 7
 // Checksum 0xf588f741, Offset: 0x1a70
@@ -393,7 +395,7 @@ function sentinel_drone_beam_set_source_to_target( localclientnum, oldval, newva
     self.cameraambientfx = playfxontag( localclientnum, "dlc3/stalingrad/fx_sentinel_drone_eye_camera_lens_glow", self, "tag_flash" );
     self.camerascannerfx = playfxontag( localclientnum, "dlc3/stalingrad/fx_sentinel_drone_scanner_light_glow", self, "tag_flash" );
     sentinel_play_engine_fx( localclientnum, 1, 0 );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self setanim( "ai_zm_dlc3_sentinel_antenna_twitch" );
 }
 

@@ -2397,6 +2397,8 @@ function function_dfbad276( number, startside )
     }
 }
 
+#using_animtree( "critter" );
+
 // Namespace namespace_df93fc7c
 // Params 0
 // Checksum 0x1e11e6ba, Offset: 0x9410
@@ -2404,7 +2406,7 @@ function function_dfbad276( number, startside )
 function function_caf96f2d()
 {
     self endon( #"death" );
-    self useanimtree( $critter );
+    self useanimtree( #animtree );
     
     while ( true )
     {
@@ -2448,8 +2450,8 @@ function cow_deleter()
 function run_cow_run( dest )
 {
     self endon( #"death" );
-    self useanimtree( $critter );
-    self.animation = randomint( 2 ) ? %critter::a_water_buffalo_run_a : %critter::a_water_buffalo_run_b;
+    self useanimtree( #animtree );
+    self.animation = randomint( 2 ) ? %a_water_buffalo_run_a : %a_water_buffalo_run_b;
     self clientfield::set( "runcowanim", 1 );
     self thread cow_damage_watch();
     self moveto( dest, self.move_time, 0, 0 );

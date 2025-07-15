@@ -133,6 +133,8 @@ function elec_wall_tell( localclientnum, oldval, newval, bnewent, binitialsnap, 
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_genesis_arena
 // Params 7
 // Checksum 0x8e5c403e, Offset: 0x1410
@@ -156,7 +158,7 @@ function runeprison_rock_fx( localclientnum, oldval, newval, bnewent, binitialsn
             break;
         case 1:
             self.var_f8ac8c8b = util::spawn_model( localclientnum, "p7_fxanim_zm_bow_rune_prison_mod", self.origin, self.angles );
-            self.var_f8ac8c8b useanimtree( $generic );
+            self.var_f8ac8c8b useanimtree( #animtree );
             self.var_f8ac8c8b animation::play( "p7_fxanim_zm_bow_rune_prison_01_anim" );
             break;
     }
@@ -621,7 +623,7 @@ function function_244d3483( localclientnum )
         s_summoning_key = struct::get( "summoning_key", "targetname" );
         level.var_530ae70[ localclientnum ] = spawn( localclientnum, s_summoning_key.origin, "script_model" );
         level.var_530ae70[ localclientnum ] setmodel( "p7_fxanim_zm_zod_summoning_key_mod" );
-        level.var_530ae70[ localclientnum ] useanimtree( $generic );
+        level.var_530ae70[ localclientnum ] useanimtree( #animtree );
         level.var_530ae70[ localclientnum ] hide();
         var_3b86bdff = struct::get( "dark_arena_podium", "targetname" );
         v_fwd = anglestoforward( var_3b86bdff.angles );

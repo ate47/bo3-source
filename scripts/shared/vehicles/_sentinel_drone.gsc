@@ -159,13 +159,15 @@ function __init__()
     level._sentinel_system_critical_taunts[ level._sentinel_system_critical_taunts.size ] = "vox_valk_valkyrie_health_low_4";
 }
 
+#using_animtree( "generic" );
+
 // Namespace sentinel_drone
 // Params 0
 // Checksum 0x27cbfd69, Offset: 0x1348
 // Size: 0x58c
 function sentinel_drone_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     target_set( self, ( 0, 0, 0 ) );
     self.health = self.healthdefault;
     

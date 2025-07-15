@@ -1617,6 +1617,8 @@ function spawn_model( model_name, origin, angles, n_spawnflags, b_throttle )
     return model;
 }
 
+#using_animtree( "generic" );
+
 // Namespace util
 // Params 5
 // Checksum 0xd250ea5e, Offset: 0x41a8
@@ -1629,10 +1631,12 @@ function spawn_anim_model( model_name, origin, angles, n_spawnflags, b_throttle 
     }
     
     model = spawn_model( model_name, origin, angles, n_spawnflags, b_throttle );
-    model useanimtree( $generic );
+    model useanimtree( #animtree );
     model.animtree = "generic";
     return model;
 }
+
+#using_animtree( "all_player" );
 
 // Namespace util
 // Params 4
@@ -1646,7 +1650,7 @@ function spawn_anim_player_model( model_name, origin, angles, n_spawnflags )
     }
     
     model = spawn_model( model_name, origin, angles, n_spawnflags );
-    model useanimtree( $all_player );
+    model useanimtree( #animtree );
     model.animtree = "all_player";
     return model;
 }
@@ -2149,7 +2153,7 @@ function spawn_player_clone( player, animname )
     
     bodyrenderoptions = player getcharacterbodyrenderoptions();
     playerclone setbodyrenderoptions( bodyrenderoptions, bodyrenderoptions, bodyrenderoptions );
-    playerclone useanimtree( $all_player );
+    playerclone useanimtree( #animtree );
     
     if ( isdefined( animname ) )
     {

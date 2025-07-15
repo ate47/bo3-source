@@ -279,6 +279,8 @@ function private shadow_margwa_attack_portal_fx( localclientnum, oldval, newval,
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_ai_margwa_elemental
 // Params 1
 // Checksum 0xe59a765e, Offset: 0x1670
@@ -290,7 +292,7 @@ function function_894980af( localclientnum )
     
     if ( isdefined( skull ) )
     {
-        skull useanimtree( $generic );
+        skull useanimtree( #animtree );
         skull setanim( "ai_zm_dlc4_chomper_shadow_margwa_projectile" );
     }
 }

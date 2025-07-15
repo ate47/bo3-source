@@ -129,6 +129,8 @@ function turret_microwave_sound_updater()
     }
 }
 
+#using_animtree( "mp_microwaveturret" );
+
 // Namespace microwave_turret
 // Params 7
 // Checksum 0x9b853a42, Offset: 0x940
@@ -140,9 +142,9 @@ function microwave_init_anim( localclientnum, oldval, newval, bnewent, binitials
         return;
     }
     
-    self useanimtree( $mp_microwaveturret );
-    self setanimrestart( %mp_microwaveturret::o_turret_guardian_close, 1, 0, 1 );
-    self setanimtime( %mp_microwaveturret::o_turret_guardian_close, 1 );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_guardian_close, 1, 0, 1 );
+    self setanimtime( %o_turret_guardian_close, 1 );
 }
 
 // Namespace microwave_turret
@@ -153,17 +155,17 @@ function microwave_open( localclientnum, oldval, newval, bnewent, binitialsnap, 
 {
     if ( !newval )
     {
-        self useanimtree( $mp_microwaveturret );
-        self setanim( %mp_microwaveturret::o_turret_guardian_open, 0 );
-        self setanimrestart( %mp_microwaveturret::o_turret_guardian_close, 1, 0, 1 );
+        self useanimtree( #animtree );
+        self setanim( %o_turret_guardian_open, 0 );
+        self setanimrestart( %o_turret_guardian_close, 1, 0, 1 );
         self notify( #"beam_stop" );
         self notify( #"sound_stop" );
         return;
     }
     
-    self useanimtree( $mp_microwaveturret );
-    self setanim( %mp_microwaveturret::o_turret_guardian_close, 0 );
-    self setanimrestart( %mp_microwaveturret::o_turret_guardian_open, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanim( %o_turret_guardian_close, 0 );
+    self setanimrestart( %o_turret_guardian_open, 1, 0, 1 );
     self thread startmicrowavefx( localclientnum );
 }
 
@@ -178,8 +180,8 @@ function microwave_close_anim( localclientnum, oldval, newval, bnewent, binitial
         return;
     }
     
-    self useanimtree( $mp_microwaveturret );
-    self setanimrestart( %mp_microwaveturret::o_turret_guardian_close, 1, 0, 1 );
+    self useanimtree( #animtree );
+    self setanimrestart( %o_turret_guardian_close, 1, 0, 1 );
 }
 
 /#

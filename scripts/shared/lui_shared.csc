@@ -137,6 +137,8 @@ function addmenuexploders( menu_name, localclientnum, exploder )
     menu_data.exploders[ menu_data.exploders.size ] = exploder;
 }
 
+#using_animtree( "all_player" );
+
 // Namespace lui
 // Params 3
 // Checksum 0x22739eae, Offset: 0x878
@@ -154,7 +156,7 @@ function linktocustomcharacter( menu_name, localclientnum, target_name )
         model.targetname = target_name;
     }
     
-    model useanimtree( $all_player );
+    model useanimtree( #animtree );
     menu_data.custom_character = character_customization::create_character_data_struct( model, localclientnum );
     model hide();
 }

@@ -300,6 +300,8 @@ function private function_235008e3( entity )
     entity.stopshootingflametime = undefined;
 }
 
+#using_animtree( "mechz_claw" );
+
 // Namespace zm_ai_mechz_claw
 // Params 0, eflags: 0x4
 // Checksum 0xd1a9ed74, Offset: 0x12d0
@@ -319,7 +321,7 @@ function private function_1aacf7d4()
     self.m_claw setmodel( "c_t7_zm_dlchd_origins_mech_claw" );
     self.m_claw.angles = ang;
     self.m_claw linkto( self, "tag_claw" );
-    self.m_claw useanimtree( $mechz_claw );
+    self.m_claw useanimtree( #animtree );
     
     if ( isdefined( self.m_claw_damage_trigger ) )
     {
@@ -396,7 +398,7 @@ function private function_90832db7()
     
     if ( isdefined( self.m_claw ) )
     {
-        self.m_claw clearanim( %mechz_claw::root, 0.2 );
+        self.m_claw clearanim( %root, 0.2 );
         
         if ( isdefined( self.m_claw.fx_ent ) )
         {
@@ -426,11 +428,11 @@ function private function_90832db7()
                 self.m_claw stoploopsound( 1 );
                 self.m_claw.origin = v_claw_origin;
                 self.m_claw.angles = v_claw_angles;
-                self.m_claw clearanim( %mechz_claw::root, 0.2 );
+                self.m_claw clearanim( %root, 0.2 );
                 self.m_claw linkto( self, "tag_claw", ( 0, 0, 0 ) );
             }
             
-            self.m_claw setanim( %mechz_claw::ai_zombie_mech_grapple_arm_closed_idle, 1, 0.2, 1 );
+            self.m_claw setanim( %ai_zombie_mech_grapple_arm_closed_idle, 1, 0.2, 1 );
         }
     }
     
@@ -446,7 +448,7 @@ function private function_4208b4ec()
 {
     if ( isdefined( self.m_claw ) )
     {
-        self.m_claw setanim( %mechz_claw::ai_zombie_mech_grapple_arm_open_idle, 1, 0.2, 1 );
+        self.m_claw setanim( %ai_zombie_mech_grapple_arm_open_idle, 1, 0.2, 1 );
         
         if ( isdefined( self.m_claw.fx_ent ) )
         {
@@ -507,7 +509,7 @@ function private function_9bfd96c8( bopenclaw )
         
         if ( isdefined( bopenclaw ) && bopenclaw )
         {
-            self.m_claw setanim( %mechz_claw::ai_zombie_mech_grapple_arm_open_idle, 1, 0.2, 1 );
+            self.m_claw setanim( %ai_zombie_mech_grapple_arm_open_idle, 1, 0.2, 1 );
         }
     }
 }
@@ -713,7 +715,7 @@ function private function_672f9804()
     v_claw_angles = vectortoangles( self.origin - self.favoriteenemy.origin );
     self.fx_field |= 256;
     self clientfield::set( "mechz_fx", self.fx_field );
-    self.m_claw setanim( %mechz_claw::ai_zombie_mech_grapple_arm_open_idle, 1, 0, 1 );
+    self.m_claw setanim( %ai_zombie_mech_grapple_arm_open_idle, 1, 0, 1 );
     self.m_claw unlink();
     self.m_claw.fx_ent = spawn( "script_model", self.m_claw gettagorigin( "tag_claw" ) );
     self.m_claw.fx_ent.angles = self.m_claw gettagangles( "tag_claw" );
@@ -813,8 +815,8 @@ function private function_672f9804()
         }
     }
     
-    self.m_claw clearanim( %mechz_claw::root, 0.2 );
-    self.m_claw setanim( %mechz_claw::ai_zombie_mech_grapple_arm_closed_idle, 1, 0.2, 1 );
+    self.m_claw clearanim( %root, 0.2 );
+    self.m_claw setanim( %ai_zombie_mech_grapple_arm_closed_idle, 1, 0.2, 1 );
     wait 0.5;
     
     if ( isdefined( self.e_grabbed ) )
@@ -844,9 +846,9 @@ function private function_672f9804()
     
     self.m_claw.origin = v_claw_origin;
     self.m_claw.angles = v_claw_angles;
-    self.m_claw clearanim( %mechz_claw::root, 0.2 );
+    self.m_claw clearanim( %root, 0.2 );
     self.m_claw linkto( self, "tag_claw", ( 0, 0, 0 ) );
-    self.m_claw setanim( %mechz_claw::ai_zombie_mech_grapple_arm_closed_idle, 1, 0.2, 1 );
+    self.m_claw setanim( %ai_zombie_mech_grapple_arm_closed_idle, 1, 0.2, 1 );
     self.m_claw.fx_ent delete();
     self.m_claw.fx_ent = undefined;
     self.fx_field &= ~256;

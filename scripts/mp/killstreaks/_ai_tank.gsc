@@ -33,6 +33,8 @@
 
 #namespace ai_tank;
 
+#using_animtree( "mp_vehicles" );
+
 // Namespace ai_tank
 // Params 0
 // Checksum 0x374b2fd4, Offset: 0xcd0
@@ -61,10 +63,10 @@ function init()
     level.ai_tank_explode_fx = "killstreaks/fx_agr_explosion";
     level.ai_tank_crate_explode_fx = "killstreaks/fx_agr_drop_box";
     anims = [];
-    anims[ anims.size ] = %mp_vehicles::o_drone_tank_missile1_fire;
-    anims[ anims.size ] = %mp_vehicles::o_drone_tank_missile2_fire;
-    anims[ anims.size ] = %mp_vehicles::o_drone_tank_missile3_fire;
-    anims[ anims.size ] = %mp_vehicles::o_drone_tank_missile_full_reload;
+    anims[ anims.size ] = %o_drone_tank_missile1_fire;
+    anims[ anims.size ] = %o_drone_tank_missile2_fire;
+    anims[ anims.size ] = %o_drone_tank_missile3_fire;
+    anims[ anims.size ] = %o_drone_tank_missile_full_reload;
     
     if ( !isdefined( bundle.ksmainturretrecoilforcezoffset ) )
     {

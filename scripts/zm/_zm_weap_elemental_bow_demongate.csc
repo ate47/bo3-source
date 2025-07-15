@@ -135,6 +135,8 @@ function function_35e3ef91( localclientnum )
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace _zm_weap_elemental_bow_demongate
 // Params 7
 // Checksum 0x13859d7e, Offset: 0xe18
@@ -143,7 +145,7 @@ function demongate_wander_locomotion_anim( localclientnum, oldval, newval, bnewe
 {
     if ( !self hasanimtree() )
     {
-        self useanimtree( $generic );
+        self useanimtree( #animtree );
     }
     
     if ( newval )
@@ -160,7 +162,7 @@ function demongate_attack_locomotion_anim( localclientnum, oldval, newval, bnewe
 {
     if ( !self hasanimtree() )
     {
-        self useanimtree( $generic );
+        self useanimtree( #animtree );
     }
     
     if ( newval )

@@ -144,7 +144,7 @@ function main()
     level._uses_sticky_grenades = 1;
     level._uses_taser_knuckles = 1;
     scene::add_scene_func( "p7_fxanim_zm_island_power_plant_on_bundle", &zm_island_power::function_f0a1682d, "init" );
-    scene::add_scene_func( "p7_fxanim_zm_island_power_plant_on_bundle", &zm_island_power::function_c1edfb09, "play" );
+    scene::add_scene_func( "p7_fxanim_zm_island_power_plant_on_bundle", &zm_island_power::raw\fulljap\sound\vox\scripted\zma\vox_plr_3_anim_pain_2_d_0.SN55.xenon.snd, "play" );
     level.temporary_power_switch_logic = &zm_island_power::function_156f973e;
     level.var_7b5a9e65 = 120;
     level.var_7ccadaab = getdvarint( "loc_language" );

@@ -280,6 +280,8 @@ function function_ffcfbd77()
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_quest
 // Params 0
 // Checksum 0x39af3ff6, Offset: 0x2968
@@ -288,7 +290,7 @@ function setup_quest_key()
 {
     mdl_key = getent( "quest_key_pickup", "targetname" );
     mdl_key show();
-    mdl_key useanimtree( $generic );
+    mdl_key useanimtree( #animtree );
     mdl_key clientfield::set( "item_glow_fx", 1 );
     create_quest_key_pickup_unitrigger( mdl_key );
     mdl_key animation::play( "p7_fxanim_zm_zod_summoning_key_idle_anim" );
@@ -1771,7 +1773,7 @@ function watch_wallrun( var_e7fbc48, str_flag )
     t_wallrun triggerenable( 0 );
     t_wallrun thread monitor_wallrun_trigger();
     mdl_frieze = getent( str_model, "targetname" );
-    mdl_frieze useanimtree( $generic );
+    mdl_frieze useanimtree( #animtree );
     
     while ( true )
     {
@@ -2024,7 +2026,7 @@ function function_c3e5d4f( var_f7225255, b_on )
     }
     
     e_island = getent( "pap_chamber_middle_island_" + str_side, "targetname" );
-    e_island useanimtree( $generic );
+    e_island useanimtree( #animtree );
     e_clip = getent( "pap_chamber_middle_island_" + str_side + "_clip", "targetname" );
     
     if ( b_on )
@@ -2344,7 +2346,7 @@ function function_83c8b6e8()
     }
     
     var_eadb7e53 = getent( "pap_tentacle", "targetname" );
-    var_eadb7e53 useanimtree( $generic );
+    var_eadb7e53 useanimtree( #animtree );
     var_eadb7e53 ghost();
 }
 
@@ -2361,7 +2363,7 @@ function function_a6838c4f()
         var_eadb7e53.org_angles = var_eadb7e53.angles;
     }
     
-    var_eadb7e53 useanimtree( $generic );
+    var_eadb7e53 useanimtree( #animtree );
     level notify( #"pack_a_punch_on" );
 }
 
@@ -2386,7 +2388,7 @@ function function_5630c228( player, trigger, origin_offset, angles_offset )
     temp_ent = spawn( "script_model", var_eadb7e53.origin );
     temp_ent.angles = var_eadb7e53.angles;
     temp_ent setmodel( "tag_origin_animate" );
-    temp_ent useanimtree( $generic );
+    temp_ent useanimtree( #animtree );
     playsoundatposition( "zmb_zod_pap_activate", var_c7c7077b.origin );
     offsetdw = ( 3, 3, 3 );
     weoptions = 0;
@@ -2435,7 +2437,7 @@ function function_ea272f07( player, t_trigger, origin_offset, interact_offset )
     var_3acfce06 = spawn( "script_model", var_eadb7e53.origin );
     var_3acfce06.angles = var_eadb7e53.angles;
     var_3acfce06 setmodel( "tag_origin_animate" );
-    var_3acfce06 useanimtree( $generic );
+    var_3acfce06 useanimtree( #animtree );
     upoptions = 0;
     var_aa51a9ae = ( 3, 3, 3 );
     t_trigger.worldgun = zm_utility::spawn_buildkit_weapon_model( player, t_trigger.upgrade_weapon, zm_weapons::get_pack_a_punch_camo_index( undefined ), self.origin, self.angles );

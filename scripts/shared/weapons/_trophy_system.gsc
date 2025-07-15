@@ -11,6 +11,8 @@
 
 #namespace trophy_system;
 
+#using_animtree( "mp_trophy_system" );
+
 // Namespace trophy_system
 // Params 0
 // Checksum 0x534f85df, Offset: 0x3f0
@@ -20,8 +22,8 @@ function init_shared()
     level.trophylongflashfx = "weapon/fx_trophy_flash";
     level.trophydetonationfx = "weapon/fx_trophy_detonation";
     level.fx_trophy_radius_indicator = "weapon/fx_trophy_radius_indicator";
-    trophydeployanim = %mp_trophy_system::o_trophy_deploy;
-    trophyspinanim = %mp_trophy_system::o_trophy_spin;
+    trophydeployanim = %o_trophy_deploy;
+    trophyspinanim = %o_trophy_spin;
     level thread register();
     callback::on_spawned( &createtrophysystemwatcher );
 }
@@ -75,14 +77,14 @@ function ontrophysystemspawn( watcher, player )
     player endon( #"disconnect" );
     level endon( #"game_ended" );
     self endon( #"death" );
-    self useanimtree( $mp_trophy_system );
+    self useanimtree( #animtree );
     self weaponobjects::onspawnuseweaponobject( watcher, player );
     self.trophysystemstationary = 0;
     movestate = self util::waittillrollingornotmoving();
     
     if ( movestate == "rolling" )
     {
-        self setanim( %mp_trophy_system::o_trophy_deploy, 1 );
+        self setanim( %o_trophy_deploy, 1 );
         self clientfield::set( "trophy_system_state", 1 );
         self util::waittillnotmoving();
     }
@@ -92,8 +94,8 @@ function ontrophysystemspawn( watcher, player )
     self.ammo = player ammo_get( self.weapon );
     self thread trophyactive( player );
     self thread trophywatchhack();
-    self setanim( %mp_trophy_system::o_trophy_deploy, 0 );
-    self setanim( %mp_trophy_system::o_trophy_spin, 1 );
+    self setanim( %o_trophy_deploy, 0 );
+    self setanim( %o_trophy_spin, 1 );
     self clientfield::set( "trophy_system_state", 2 );
     self playsound( "wpn_trophy_deploy_start" );
     self playloopsound( "wpn_trophy_spin", 0.25 );

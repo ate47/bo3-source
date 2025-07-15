@@ -1137,6 +1137,8 @@ function waittill_mobile_shop_empty( str_name )
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace lotus_boss_battle
 // Params 0
 // Checksum 0x1efbdf7b, Offset: 0x5018
@@ -1146,7 +1148,7 @@ function gunship_logic()
     self endon( #"death" );
     level thread function_e0652cc();
     setsaveddvar( "vehicle_selfCollision", 1 );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self.n_health_min = self.health * 0.01;
     self.n_index_prev = 0;
     self.n_index_current = 0;

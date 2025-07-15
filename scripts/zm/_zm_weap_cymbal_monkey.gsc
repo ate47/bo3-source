@@ -177,6 +177,8 @@ function watch_for_dud( model, actor )
     }
 }
 
+#using_animtree( "zombie_cymbal_monkey" );
+
 // Namespace _zm_weap_cymbal_monkey
 // Params 2
 // Checksum 0xa8207c0f, Offset: 0x910
@@ -210,7 +212,7 @@ function watch_for_emp( model, actor )
     wait 0.15;
     self.attract_to_origin = 0;
     self zm_utility::deactivate_zombie_point_of_interest();
-    model clearanim( %zombie_cymbal_monkey::o_monkey_bomb, 0 );
+    model clearanim( %o_monkey_bomb, 0 );
     wait 1;
     self detonate();
     wait 1;
@@ -437,7 +439,7 @@ function player_throw_cymbal_monkey( grenade, num_attractors, max_attract_dist, 
         grenade hide();
         model = spawn( "script_model", grenade.origin );
         model setmodel( level.cymbal_monkey_model );
-        model useanimtree( $zombie_cymbal_monkey );
+        model useanimtree( #animtree );
         model linkto( grenade );
         model.angles = grenade.angles;
         model thread monkey_cleanup( grenade );
@@ -485,7 +487,7 @@ function player_throw_cymbal_monkey( grenade, num_attractors, max_attract_dist, 
                 }
                 
                 wait 0.1;
-                model animscripted( "cymbal_monkey_anim", grenade.origin, grenade.angles, %zombie_cymbal_monkey::o_monkey_bomb );
+                model animscripted( "cymbal_monkey_anim", grenade.origin, grenade.angles, %o_monkey_bomb );
             }
             
             if ( isdefined( clone ) )
@@ -774,7 +776,7 @@ function do_monkey_sound( model, info )
     
     if ( isdefined( model ) )
     {
-        model clearanim( %zombie_cymbal_monkey::o_monkey_bomb, 0.2 );
+        model clearanim( %o_monkey_bomb, 0.2 );
     }
     
     for ( i = 0; i < info.sound_attractors.size ; i++ )

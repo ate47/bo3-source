@@ -38,13 +38,15 @@ function __init__()
     vehicle::add_main_callback( "mechtank", &mechtank_initialize );
 }
 
+#using_animtree( "generic" );
+
 // Namespace mechtank
 // Params 0
 // Checksum 0x7e3e68f5, Offset: 0x420
 // Size: 0x12c
 function mechtank_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     self.targetoffset = ( 0, 0, 60 );
     self enableaimassist();
     self.fovcosine = 0;

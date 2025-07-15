@@ -1054,6 +1054,8 @@ function charging_station_spawner()
     }
 }
 
+#using_animtree( "generic" );
+
 // Namespace cp_mi_sing_sgen_dark_battle
 // Params 0
 // Checksum 0xbf34770b, Offset: 0x4e68
@@ -1061,7 +1063,7 @@ function charging_station_spawner()
 function charging_station_fake_spawner_think()
 {
     n_x_offset = self.origin[ 0 ] + randomintrange( 64, 200 );
-    self.mdl_robot useanimtree( $generic );
+    self.mdl_robot useanimtree( #animtree );
     self.mdl_robot animscripted( "idle_robot01", self.origin, self.angles + ( 0, 180, 0 ), "ch_sgen_16_01_charging_station_aie_idle_robot01" );
     var_602f3c61 = 0;
     

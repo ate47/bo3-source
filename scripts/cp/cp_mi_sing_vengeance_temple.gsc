@@ -685,11 +685,11 @@ function function_f1c7b73f( trigger )
 // Params 2
 // Checksum 0xeaa41b3d, Offset: 0x3ad8
 // Size: 0x14c
-function function_620fbb8a( var_7cd99f10, e_volume )
+function function_620fbb8a( raw\italian\sound\vox\scripted\pla\vox_pla_kls_cobra_enemy_03.SN65.xenon.snd, e_volume )
 {
     a_ai = [];
     
-    foreach ( ai in var_7cd99f10 )
+    foreach ( ai in raw\italian\sound\vox\scripted\pla\vox_pla_kls_cobra_enemy_03.SN65.xenon.snd )
     {
         if ( isdefined( ai ) && isalive( ai ) && ai istouching( e_volume ) )
         {

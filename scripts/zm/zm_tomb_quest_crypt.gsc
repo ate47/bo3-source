@@ -58,6 +58,8 @@ function chamber_disc_puzzle_init()
     chamber_discs_randomize();
 }
 
+#using_animtree( "generic" );
+
 // Namespace zm_tomb_quest_crypt
 // Params 0
 // Checksum 0x6cddbd4a, Offset: 0x930
@@ -89,7 +91,7 @@ function chamber_disc_run()
         self thread chamber_disc_move_to_position();
     }
     
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     
     if ( !isdefined( self.script_int ) )
     {
@@ -450,8 +452,8 @@ function chamber_disc_switch_spark()
 function chamber_disc_trigger_run( e_disc, e_lever, b_clockwise )
 {
     discs_to_rotate = array( e_disc );
-    e_lever useanimtree( $generic );
-    n_anim_time = getanimlength( %generic::p7_fxanim_zm_ori_puzzle_switch_anim );
+    e_lever useanimtree( #animtree );
+    n_anim_time = getanimlength( %p7_fxanim_zm_ori_puzzle_switch_anim );
     
     while ( true )
     {

@@ -1,5 +1,7 @@
 #namespace scripted;
 
+#using_animtree( "generic" );
+
 // Namespace scripted
 // Params 0
 // Checksum 0x31c6455e, Offset: 0x98
@@ -9,7 +11,7 @@ function main()
     self endon( #"death" );
     self notify( #"killanimscript" );
     self notify( #"clearsuppressionattack" );
-    self.codescripted[ "root" ] = %generic::body;
+    self.codescripted[ "root" ] = %body;
     self endon( #"end_sequence" );
     self.a.script = "scripted";
     self waittill( #"killanimscript" );

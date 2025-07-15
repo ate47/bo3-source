@@ -29,13 +29,15 @@ function __init__()
     vehicle::add_main_callback( "counteruav", &counteruav_initialize );
 }
 
+#using_animtree( "generic" );
+
 // Namespace counteruav
 // Params 0
 // Checksum 0x9251c15c, Offset: 0x278
 // Size: 0x188
 function counteruav_initialize()
 {
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     target_set( self, ( 0, 0, 0 ) );
     self.health = self.healthdefault;
     self vehicle::friendly_fire_shield();

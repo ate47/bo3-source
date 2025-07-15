@@ -51,6 +51,8 @@ function spawned( localclientnum, killstreak_duration )
     self.killstreakbundle = level.aitankkillstreakbundle;
 }
 
+#using_animtree( "mp_vehicles" );
+
 // Namespace ai_tank
 // Params 7
 // Checksum 0xe91f8a15, Offset: 0x690
@@ -62,26 +64,26 @@ function missile_fire( localclientnum, oldval, newval, bnewent, binitialsnap, fi
     
     if ( self hasanimtree() == 0 )
     {
-        self useanimtree( $mp_vehicles );
+        self useanimtree( #animtree );
     }
     
     missiles_loaded = newval;
     
     if ( newval == 2 )
     {
-        self setanimrestart( %mp_vehicles::o_drone_tank_missile1_fire, 1, 0, 0.5 );
+        self setanimrestart( %o_drone_tank_missile1_fire, 1, 0, 0.5 );
     }
     else if ( newval == 1 )
     {
-        self setanimrestart( %mp_vehicles::o_drone_tank_missile2_fire, 1, 0, 0.5 );
+        self setanimrestart( %o_drone_tank_missile2_fire, 1, 0, 0.5 );
     }
     else if ( newval == 0 )
     {
-        self setanimrestart( %mp_vehicles::o_drone_tank_missile3_fire, 1, 0, 0.5 );
+        self setanimrestart( %o_drone_tank_missile3_fire, 1, 0, 0.5 );
     }
     else if ( newval == 3 )
     {
-        self setanimrestart( %mp_vehicles::o_drone_tank_missile_full_reload, 1, 0, 1 );
+        self setanimrestart( %o_drone_tank_missile_full_reload, 1, 0, 1 );
     }
     
     if ( missiles_loaded <= 3 )

@@ -75,6 +75,8 @@ function trophy_state_change_recon( localclientnum, oldval, newval, bnewent, bin
     }
 }
 
+#using_animtree( "mp_trophy_system" );
+
 // Namespace trophy_system
 // Params 1
 // Checksum 0x5ac8d53d, Offset: 0x420
@@ -82,8 +84,8 @@ function trophy_state_change_recon( localclientnum, oldval, newval, bnewent, bin
 function trophy_rolling_anim( localclientnum )
 {
     self endon( #"entityshutdown" );
-    self useanimtree( $mp_trophy_system );
-    self setanim( %mp_trophy_system::o_trophy_deploy, 1 );
+    self useanimtree( #animtree );
+    self setanim( %o_trophy_deploy, 1 );
 }
 
 // Namespace trophy_system
@@ -93,8 +95,8 @@ function trophy_rolling_anim( localclientnum )
 function trophy_stationary_anim( localclientnum )
 {
     self endon( #"entityshutdown" );
-    self useanimtree( $mp_trophy_system );
-    self setanim( %mp_trophy_system::o_trophy_deploy, 0 );
-    self setanim( %mp_trophy_system::o_trophy_spin, 1 );
+    self useanimtree( #animtree );
+    self setanim( %o_trophy_deploy, 0 );
+    self setanim( %o_trophy_spin, 1 );
 }
 

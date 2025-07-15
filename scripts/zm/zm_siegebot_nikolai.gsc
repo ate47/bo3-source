@@ -67,6 +67,8 @@ function __init__()
     level thread aat::register_immunity( "zm_aat_turned", "raps", 1, 1, 1 );
 }
 
+#using_animtree( "generic" );
+
 // Namespace siegebot_nikolai
 // Params 0
 // Checksum 0xfc5fe919, Offset: 0xe20
@@ -75,7 +77,7 @@ function siegebot_initialize()
 {
     self flag::init( "halt_thread_gun" );
     level.raps_spawners = getentarray( "zombie_raps_spawner", "targetname" );
-    self useanimtree( $generic );
+    self useanimtree( #animtree );
     blackboard::createblackboardforentity( self );
     self blackboard::registervehicleblackboardattributes();
     self.health = self.healthdefault;

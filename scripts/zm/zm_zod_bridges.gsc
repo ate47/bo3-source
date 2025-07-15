@@ -13,6 +13,8 @@
 
 #namespace zm_zod_bridges;
 
+#using_animtree( "generic" );
+
 // Namespace zm_zod_bridges
 // Method(s) 7 Total 7
 class cbridge
@@ -55,10 +57,10 @@ class cbridge
         
         foreach ( e_blocker in self.m_a_e_blockers )
         {
-            e_blocker setanim( %generic::p7_fxanim_zm_zod_gate_scissor_short_open_anim );
+            e_blocker setanim( %p7_fxanim_zm_zod_gate_scissor_short_open_anim );
         }
         
-        self.m_e_walkway setanim( %generic::p7_fxanim_zm_zod_beast_bridge_open_anim );
+        self.m_e_walkway setanim( %p7_fxanim_zm_zod_beast_bridge_open_anim );
         self.m_e_walkway setvisibletoall();
         self.m_e_pull_target setinvisibletoall();
         self.m_e_pull_target clientfield::set( "bminteract", 0 );
@@ -112,10 +114,10 @@ class cbridge
         
         foreach ( e_blocker in self.m_a_e_blockers )
         {
-            e_blocker useanimtree( $generic );
+            e_blocker useanimtree( #animtree );
         }
         
-        self.m_e_walkway useanimtree( $generic );
+        self.m_e_walkway useanimtree( #animtree );
         self.m_e_pull_target setgrapplabletype( 3 );
         array::add( level.beast_mode_targets, self.m_e_pull_target, 0 );
         self.m_e_pull_target clientfield::set( "bminteract", 3 );

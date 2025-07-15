@@ -135,31 +135,33 @@ function clone_actor_animate( animtype )
     }
 }
 
+#using_animtree( "zm_ally" );
+
 // Namespace zm_clone
 // Params 1
 // Checksum 0x853f6af0, Offset: 0x6b0
 // Size: 0x12e
 function clone_mover_animate( animtype )
 {
-    self useanimtree( $zm_ally );
+    self useanimtree( #animtree );
     
     switch ( animtype )
     {
         case "laststand":
-            self setanim( %zm_ally::pb_laststand_idle );
+            self setanim( %pb_laststand_idle );
             break;
         case "afterlife":
-            self setanim( %zm_ally::pb_afterlife_laststand_idle );
+            self setanim( %pb_afterlife_laststand_idle );
             break;
         case "chair":
-            self setanim( %zm_ally::ai_actor_elec_chair_idle );
+            self setanim( %ai_actor_elec_chair_idle );
             break;
         case "falling":
-            self setanim( %zm_ally::pb_falling_loop );
+            self setanim( %pb_falling_loop );
             break;
         case "idle":
         default:
-            self setanim( %zm_ally::pb_stand_alert );
+            self setanim( %pb_stand_alert );
             break;
     }
 }
