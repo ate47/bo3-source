@@ -1,2 +1,0 @@
-#using scripts/codescripts/struct;
-

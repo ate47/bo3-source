@@ -13,8 +13,5 @@ Pools dumped ([List of all the pools](https://github.com/ate47/t8-atian-menu/blo
 | rawfile                 | 47  | `/`                                 |
 | stringtable             | 48  | `/`                                 |
 | structuredtable         | 49  | `/`                                 |
-| scriptparsetree\*       | 54  | `/vm-VM/`                           |
+| scriptparsetree\*       | 54  | `/`                                 |
 | scriptbundle            | 69  | `/scriptbundle/`                    |
-
-
-\* I don't why, but the game has scripts with 2 different VMs loaded. `vm-1c` are the scripts used by the game.

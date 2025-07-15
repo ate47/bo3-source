@@ -1,0 +1,32 @@
+#using scripts/codescripts/struct;
+#using scripts/shared/system_shared;
+
+#namespace pineapple_gun;
+
+// Namespace pineapple_gun
+// Params 0, eflags: 0x2
+// Checksum 0xaebb47a8, Offset: 0xc8
+// Size: 0x34
+function autoexec __init__sytem__()
+{
+    system::register( "pineapple_gun", &__init__, undefined, undefined );
+}
+
+// Namespace pineapple_gun
+// Params 0
+// Checksum 0x99ec1590, Offset: 0x108
+// Size: 0x4
+function __init__()
+{
+    
+}
+
+// Namespace pineapple_gun
+// Params 1
+// Checksum 0xfc2260d9, Offset: 0x118
+// Size: 0xc
+function watch_bolt_detonation( owner )
+{
+    
+}
+
