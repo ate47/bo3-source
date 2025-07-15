@@ -26,7 +26,7 @@ class csceneobject : cscriptbundleobjectbase
     // Params 0
     // Checksum 0xeaf1916d, Offset: 0x800
     // Size: 0x2c
-    function constructor()
+    constructor()
     {
         self._b_spawnonce_used = 0;
         self._is_valid = 1;
@@ -628,7 +628,7 @@ class cscene : cscriptbundlebase
     // Params 0
     // Checksum 0x2beff95f, Offset: 0x2700
     // Size: 0x30
-    function constructor()
+    constructor()
     {
         self._n_object_id = 0;
         self._str_state = "";

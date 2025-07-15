@@ -34,7 +34,7 @@ class czmtrain
     // Params 0
     // Checksum 0x1aa5265d, Offset: 0x1ce0
     // Size: 0x226
-    function constructor()
+    constructor()
     {
         self.m_vh_train = undefined;
         self.m_s_trigger = undefined;

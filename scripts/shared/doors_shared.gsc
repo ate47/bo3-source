@@ -14,7 +14,7 @@ class cdoor
     // Params 0
     // Checksum 0x9f3f54b6, Offset: 0x230
     // Size: 0x34
-    function constructor()
+    constructor()
     {
         self.m_n_trigger_height = 80;
         self.m_override_swing_angle = undefined;
@@ -26,7 +26,7 @@ class cdoor
     // Params 0
     // Checksum 0x8da9aea7, Offset: 0x270
     // Size: 0x2c
-    function destructor()
+    destructor()
     {
         if ( isdefined( self.m_e_trigger ) )
         {

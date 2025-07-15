@@ -85,7 +85,7 @@ class cscriptbundlebase
     // Params 0
     // Checksum 0xac1989e2, Offset: 0x540
     // Size: 0x1c
-    function constructor()
+    constructor()
     {
         self._a_objects = [];
         self._testing = 0;

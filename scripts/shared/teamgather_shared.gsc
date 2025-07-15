@@ -22,7 +22,7 @@ class cteamgather
     // Params 0
     // Checksum 0x582a1c21, Offset: 0x590
     // Size: 0x74
-    function constructor()
+    constructor()
     {
         self.e_gameobject = undefined;
         self.n_font_scale = 2;

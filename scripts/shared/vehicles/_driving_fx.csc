@@ -11,7 +11,7 @@ class vehiclewheelfx
     // Params 0
     // Checksum 0xf9540fa9, Offset: 0x500
     // Size: 0x24
-    function constructor()
+    constructor()
     {
         self.name = "";
         self.tag_name = "";
@@ -129,7 +129,7 @@ class groundfx
     // Params 0
     // Checksum 0xa01b94ae, Offset: 0x230
     // Size: 0x1c
-    function constructor()
+    constructor()
     {
         self.id = undefined;
         self.handle = -1;
@@ -198,7 +198,7 @@ class vehicle_camera_fx
     // Params 0
     // Checksum 0xfc47a4e4, Offset: 0xbd8
     // Size: 0x54
-    function constructor()
+    constructor()
     {
         self.quake_time_min = 0.5;
         self.quake_time_max = 1;

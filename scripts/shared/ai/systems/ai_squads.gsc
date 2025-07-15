@@ -17,7 +17,7 @@ class squad
     // Params 0
     // Checksum 0x4fa8a6ea, Offset: 0x248
     // Size: 0x28
-    function constructor()
+    constructor()
     {
         self.squadleader = 0;
         self.squadmembers = [];

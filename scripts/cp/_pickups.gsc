@@ -29,7 +29,7 @@ class cpickupitem : cbaseinteractable
     // Params 0
     // Checksum 0x6ee9770b, Offset: 0x3c8
     // Size: 0xe6
-    function constructor()
+    constructor()
     {
         self.m_n_respawn_time = 1;
         self.m_n_respawn_rounds = 0;
@@ -271,7 +271,7 @@ class cbaseinteractable
     // Params 0
     // Checksum 0xf8b46e77, Offset: 0x12b0
     // Size: 0x7c
-    function constructor()
+    constructor()
     {
         self.m_isfunctional = 1;
         self.m_ishackable = 0;

@@ -43,7 +43,7 @@ class cziplinegate
     // Params 0
     // Checksum 0xfe72b3b1, Offset: 0x7598
     // Size: 0x14c
-    function constructor()
+    constructor()
     {
         self.m_a_gate = getentarray( "gate_tree_1a", "targetname" );
         self.m_str_targetname = self.m_a_gate[ 0 ].targetname;

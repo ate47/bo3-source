@@ -38,7 +38,7 @@ class animationadjustmentinfoz
     // Params 0
     // Checksum 0xbc354e48, Offset: 0x18d8
     // Size: 0x1c
-    function constructor()
+    constructor()
     {
         self.adjustmentstarted = 0;
         self.readjustmentstarted = 0;
@@ -62,7 +62,7 @@ class animationadjustmentinfoxy
     // Params 0
     // Checksum 0xaf212837, Offset: 0x19a0
     // Size: 0x10
-    function constructor()
+    constructor()
     {
         self.adjustmentstarted = 0;
     }

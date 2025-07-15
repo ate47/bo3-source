@@ -16,7 +16,7 @@ class chackableobject
     // Params 0
     // Checksum 0xefc64391, Offset: 0x1d0
     // Size: 0x80
-    function constructor()
+    constructor()
     {
         self.m_is_functional = 1;
         self.m_is_hackable = 0;
@@ -33,7 +33,7 @@ class chackableobject
     // Params 0
     // Checksum 0xf9b0c4b0, Offset: 0x258
     // Size: 0x14
-    function destructor()
+    destructor()
     {
         clean_up();
     }

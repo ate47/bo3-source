@@ -14,7 +14,7 @@ class phalanx
     // Params 0
     // Checksum 0x6e402192, Offset: 0x18c8
     // Size: 0x40
-    function constructor()
+    constructor()
     {
         self.sentienttiers_ = [];
         self.startsentientcount_ = 0;

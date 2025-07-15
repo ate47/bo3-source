@@ -24,7 +24,7 @@ class ctigertank
     // Params 0
     // Checksum 0x1922c70f, Offset: 0x628
     // Size: 0x16c
-    function constructor()
+    constructor()
     {
         self.m_str_state = "none";
         self.m_str_state_last = "";

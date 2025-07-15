@@ -14,7 +14,7 @@ class robotphalanx
     // Params 0
     // Checksum 0x739fba53, Offset: 0x1780
     // Size: 0x58
-    function constructor()
+    constructor()
     {
         self.tier1robots_ = [];
         self.tier2robots_ = [];

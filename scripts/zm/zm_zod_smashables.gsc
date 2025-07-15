@@ -25,7 +25,7 @@ class csmashable
     // Params 0
     // Checksum 0xc1bb7744, Offset: 0x448
     // Size: 0x28
-    function constructor()
+    constructor()
     {
         self.m_a_callbacks = [];
         self.m_a_b_parameters = [];

@@ -44,7 +44,7 @@ class class_78f8bb8
     // Params 0
     // Checksum 0xe30eefd5, Offset: 0x4f80
     // Size: 0x28
-    function constructor()
+    constructor()
     {
         self.var_2db009f1 = gettime();
         self.var_8e6eac66 = 0;

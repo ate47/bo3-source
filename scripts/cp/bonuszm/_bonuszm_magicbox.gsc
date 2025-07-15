@@ -31,7 +31,7 @@ class class_dafbfd8e
     // Params 0
     // Checksum 0x199d3232, Offset: 0xa30
     // Size: 0x10
-    function constructor()
+    constructor()
     {
         self.var_2bcbe272 = 0;
     }

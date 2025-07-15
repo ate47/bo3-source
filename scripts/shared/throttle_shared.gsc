@@ -9,7 +9,7 @@ class throttle
     // Params 0
     // Checksum 0xe3809695, Offset: 0xc0
     // Size: 0x38
-    function constructor()
+    constructor()
     {
         self.queue_ = [];
         self.processed_ = 0;
